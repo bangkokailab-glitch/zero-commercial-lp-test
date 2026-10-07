@@ -1,0 +1,277 @@
+/* Licensed Morisawa web delivery only; no font binaries are stored here.
+   Font-only companion rules follow the original stylesheet order and media queries.
+   Sizes, layout, copy, artwork, Latin display faces and motion remain unchanged.
+   R and B are separate delivered families; weight alone does not select B. */
+:root {
+  --zero-shingo-regular: "mfw-pshingopr6n-regular", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  --zero-shingo-bold: "mfw-pshingopr6n-bold", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+body { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); font-synthesis: none; }
+:where(h1,h2,h3,h4,h5,h6,b,strong,th) { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+:where(button,input,select,textarea) { font-family: var(--zero-text-face); }
+
+/* style.css */
+body { font-family: var(--zero-text-face); }
+.bold { --zero-text-face: var(--zero-shingo-bold) !important; font-family: var(--zero-text-face) !important; }
+.meiryo { font-family: var(--zero-text-face); }
+h2:not(.avoid), h3:not(.avoid), h4:not(.avoid) { font-family: var(--zero-text-face); }
+.avoid { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+.cta-ribbon { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.cta-top-txt { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.cta-first-offer__eyebrow { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.cta-first-offer__lead { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.cta-first-offer__benefit h2 { font-family: var(--zero-text-face); }
+.cta-first-offer__benefit p { font-family: var(--zero-text-face); }
+.cta-first-offer__button { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.cta-first-offer__button span { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+.cta-first-offer__note { font-family: var(--zero-text-face); }
+.lines { font-family: var(--zero-text-face); }
+p.copyTxt { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+table { font-family: var(--zero-text-face); }
+table th { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.orange-th { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.story-box { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.blue-r-box { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.blue { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.movie-box p { font-family: var(--zero-text-face); }
+.step-txt { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.arrow-bg { font-family: var(--zero-text-face); }
+.step-each { font-family: var(--zero-text-face); }
+label.question, .answer { font-family: var(--zero-text-face); }
+label.question { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+@media screen and (max-width: 768px) {
+.white-box label:not(.question) { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.white-box label:not(.question)::after { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.sp-bold { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.about-txt { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.name { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+}
+
+/* custom.css */
+.cta-offer .cta-ribbon { font-family: var(--zero-text-face); }
+.cta-offer__button { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.cta-offer__button-text strong { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+@media screen and (max-width: 768px) {
+.cta-offer__button::after { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+}
+.secret-cover-roadmap__eyebrow { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.secret-cover-roadmap__subtitle { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.secret-cover-intro p:last-child { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.secret-cover-editorial__rail { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.secret-cover-editorial__eyebrow { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.secret-cover-editorial__title strong { font-family: var(--zero-text-face); }
+.secret-cover-editorial__subtitle { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.secret-cover-editorial__phases { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* secret-cover-a.css */
+#secret .secret-cover-a { font-family: var(--zero-text-face); }
+#secret .secret-cover-a__kicker { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .secret-cover-a__phases { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .secret-cover-a__description p + p { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* marketing-flow-3c.css */
+#marketing-flow-final > .wrap > #marketing-flow-final-title { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#marketing-flow-final .marketing-flow-lead-copy p { font-family: var(--zero-text-face); }
+#marketing-flow-final .marketing-flow-lead-copy p:first-child { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#marketing-flow-final .marketing-flow-white-title { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#marketing-flow-final .marketing-flow-topics h4 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#marketing-flow-final .marketing-flow-bridge h4 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#marketing-flow-final .marketing-flow-bridge a { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+@media (max-width: 767px) {
+#marketing-flow-final .marketing-flow-lead-copy p:first-child { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+}
+
+/* pricing-flow-20260919.css */
+#price .pricing-stage-flow li { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-audience { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-toggle { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-copy-frame tbody th { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-closing-copy { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-next-copy { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-market-stats span { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-market-stats small { font-family: inherit; }
+#price .pricing-free-eligibility strong { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price, #price button, #price summary, #price input, #price textarea, #price select { font-family: var(--zero-text-face); }
+#price .pricing-copy-frame > p, #price .pricing-copy-frame article p, #price .pricing-copy-frame li, #price .pricing-disclosure-body p, #price .pricing-plan-full-detail p, #price .pricing-plan-full-detail li { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#price .zero-pricing-frame.pricing-copy-frame > h3 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-copy-frame > h4, #price .pricing-flow-phases > h4 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-card .zero-plan-price, #price .pricing-plan-card .zero-plan-price strong, #price .pricing-plan-card .zero-plan-price span { font-family: var(--zero-text-face); }
+#price .pricing-plan-card .zero-plan-price strong { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-card .zero-plan-price span { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-disclosure > summary { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-free-sample figcaption { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-faq > summary { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-card .zero-plan-price { font-family: var(--zero-text-face); }
+#price .pricing-plan-card .zero-plan-price strong { font-family: inherit; }
+#price .pricing-plan-card .zero-plan-price span { font-family: inherit; }
+#price .pricing-plan-more { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price, #price button, #price summary { font-family: var(--zero-text-face); }
+#price .pricing-copy-frame > p, #price .pricing-copy-frame article p, #price .pricing-copy-frame li, #price .pricing-disclosure-body p, #price .pricing-plan-full-detail p, #price .pricing-plan-full-detail li { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#price .zero-pricing-frame.pricing-copy-frame > h3 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-copy-frame > h4, #price .pricing-flow-phases > h4 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-card .zero-plan-price, #price .pricing-plan-card .zero-plan-price strong, #price .pricing-plan-card .zero-plan-price span { font-family: var(--zero-text-face); }
+#price .pricing-plan-card .zero-plan-ribbon, #price .pricing-service-item h4, #price .pricing-free-grid article > h4, #price .pricing-plan-full-detail h5, #price .pricing-disclosure-body h5 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-service-disclosure > summary, #price .pricing-faq > summary, #price .pricing-flow-disclosure strong { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-faq > div p { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+@media (min-width: 768px) {
+#price .pricing-plan-more.pricing-plan-trigger { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+}
+@media (max-width: 767px) {
+#price .pricing-service-disclosure > summary, #price .pricing-faq > summary, #price .pricing-flow-disclosure strong { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-more.pricing-plan-trigger { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+}
+#price .pricing-flow-step-content h4 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+@media (max-width: 0px) {
+#price .pricing-stage-flow li > span { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-recommended { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-card .pricing-plan-meta .zero-plan-price strong { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-card .pricing-plan-meta .zero-plan-price span { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-meta .pricing-plan-audience { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-scope > h5 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-stages small { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-fit h5 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-fit li { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pricing-plan-more.pricing-plan-trigger { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+}
+
+/* pricing-final-b-20260920.css */
+#price .pfb-subhead > span { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pfb-table tbody th { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pfb-audience li::before, #price .pfb-transposed-audience li::before { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pfb-notes li::before { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* secrets-renovation.css */
+#secret .secrets-renovated .underline-ttl { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .secrets-white > h4 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .secrets-subtitle { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .secrets-figure figcaption { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .secrets-node:not(:last-child)::after { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .secrets-closing p { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .secrets-details summary { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret-03 .secret03-voice-table caption { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret-03 .secret03-persona-quote { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret-03 .secret03-journey-flow { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+:is(#secret-02, #secret-03) .secret-scope-note::before { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* secret06-design.css */
+#secret-06 .secret06-visual-example figcaption { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#secret #secrets-box-397-panel .secret06-fv-caption { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+
+/* secret07-design.css */
+#secret #secret-07 .secret07-diagram figcaption { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+
+/* secret08-design.css */
+#secret #secret-08 .secret08-diagram > figcaption { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-card > h6 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-card dt { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-flow strong { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-diagram .secret08-note { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-diagram .secret08-relation { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-diagram .secret08-label { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-entry > li { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-diagram .secret08-mini-title { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-formula .secret08-operator { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-description > summary { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret #secret-08 .secret08-support-list strong { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* secret09-design.css */
+#secret #secret-09 .secret09-figure figcaption { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+
+/* secret10-design.css */
+#secret #secret-10 .secret10-overview figcaption { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* mobile-reading.css */
+@media (max-width: 768px) {
+#copy .copy-h2 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#copy .copyTxt, #secret .secret-cover-a__description p { font-family: var(--zero-text-face); }
+#copy .copyTxt { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#secret .secret-cover-a__kicker, #secret .secret-cover-a__phases { font-family: var(--zero-text-face); }
+:is(#marketing-flow-final, #price, #about) { font-family: var(--zero-text-face); }
+#secret .secrets-renovated[class] :is(h2, h3, h4, h5, h6), :is(#marketing-flow-final, #price, #about)[class] :is(h2, h3, h4, h5, h6), #marketing-flow-final > .wrap > #marketing-flow-final-title, #price .step-right-txt > .font23, #price label.question { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#marketing-flow-final :is(p, .marketing-flow-intro strong), #price :is(.zero-pricing-intro, .zero-plan > p:last-child, .zero-option-item p, .zero-option-item strong), #price :is(.step-right-txt p:not(.font23), .step-right-txt .font12, .answer), #about :is(.about-txt p, .about-txt .font23, .name, .merit-list li) { font-family: inherit; }
+#price .zero-table-swipe-hint { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price label.question { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#about .about-txt { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#about .about-txt .font23 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+}
+
+/* secrets-accordion.css */
+#secret .secrets-toggle { font-family: inherit; }
+@media (max-width: 768px) {
+#secret.secrets-accordion-ready .secrets-toggle { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret.secrets-accordion-ready .secrets-toggle-indicator { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+}
+
+/* sticky-consultation.css */
+.sticky-consultation__label { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* offer-gold.css */
+.cta.cta-offer--gold { font-family: var(--zero-text-face); }
+.cta.cta-offer--gold .cta-ribbon { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.offer-gold__label { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.offer-gold__step h3 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.offer-gold__step h3 strong { font-family: var(--zero-text-face); }
+.offer-gold__step p { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+.cta-offer--gold .cta-offer__lead { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+
+/* offer-proposal-red.css */
+.cta.cta-offer--gold .offer-proposal__card { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.cta.cta-offer--gold .offer-proposal__card h3 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.cta.cta-offer--gold .offer-proposal__card p { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+.cta.cta-offer--gold .offer-proposal__note { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* final-layout-20260920.css */
+.zero-trust-highlight, #copy .ylw-bg { --zero-text-face: var(--zero-shingo-bold) !important; font-family: var(--zero-text-face) !important; }
+.zero-trust-highlight strong, #copy .ylw-bg strong { font-family: var(--zero-text-face) !important; }
+#price .pricing-flow-mobile-toggle { font-family: inherit; }
+#price .pricing-flow-mobile-title { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#marketing-flow-final :is(.marketing-flow-intro p, .marketing-flow-white-box > p, .marketing-flow-topics p, .marketing-flow-support > p), #price :is(.pfb-head p, .pfb-lead), #price .pfb-comparison-table tbody tr:not(.pfb-price):not(.pfb-audience) td, #price .pfb-comparison-table-mobile td:not(.pfb-transposed-price):not(.pfb-transposed-audience), #price .pfb-service-table tbody td:nth-child(3), #price .pfb-operation-table tbody tr:not(.pfb-price) td, #price .pfb-operation-table-mobile td:not(.pfb-transposed-price), #price .pricing-free-frame p:not(.pricing-free-form-note):not(.pricing-free-final-note), #price .pricing-flow-step-content p, #price .pricing-faq > div p { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#price .pfb-service-table tbody td:nth-child(2) > b { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+@media (max-width: 768px) {
+#price .pricing-flow-mobile-title { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#price .pfb-notes-toggle { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+}
+#marketing-flow-final :is(#strategy-expansion-title, .marketing-flow-white-title, .marketing-flow-topics h4, .marketing-flow-bridge h4) { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* secret01-purpose-examples.css */
+:is(#secrets-box-44-panel, #secrets-box-397-panel) .lp-purpose-type { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+:is(#secrets-box-44-panel, #secrets-box-397-panel) .lp-purpose-name { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+:is(#secrets-box-44-panel, #secrets-box-397-panel) .lp-purpose-design-note { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+:is(#secrets-box-44-panel, #secrets-box-397-panel) .lp-purpose-action { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+:is(#secrets-box-44-panel, #secrets-box-397-panel) .lp-purpose-arrow { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+:is(#secrets-box-44-panel, #secrets-box-397-panel) .lp-purpose-emphasis { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* secret04-big-idea.css */
+#secret-04 .secret04-legacy-intro .secret-txt p { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-311-panel .secret-scope-note::before { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* inline */
+body section.cta > a.zero-phone-free { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* secret02-ltv-diagrams.css */
+:is(#secret-01, #secret-02) .secrets-panel :is(p, li) :is(strong, b) { --zero-text-face: var(--zero-shingo-bold) !important; font-family: var(--zero-text-face) !important; }
+#secrets-box-89-panel .secret02-calculation-steps h6 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-89-panel .secret02-ltv-table caption { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-89-panel .secret02-ltv-table thead th { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-89-panel .secret02-ltv-table tbody th, #secrets-box-89-panel .secret02-ltv-table tfoot th { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-89-panel .secret02-ltv-table tbody td:last-child { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-89-panel .secret02-ltv-table tfoot { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-132-panel .secret02-kpi-table caption { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-132-panel .secret02-kpi-table thead th { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-132-panel .secret02-kpi-table tbody th, #secrets-box-132-panel .secret02-kpi-table tfoot th { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-132-panel .secret02-kpi-table tfoot { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secrets-box-89-panel .secret02-transition-copy, #secret-02-ending .secret02-transition-copy { --zero-text-face: var(--zero-shingo-bold) !important; font-family: var(--zero-text-face) !important; }
+#secret-02 .secret02-black-bold, #secret-02 mark.zero-trust-highlight .secret02-black-bold { --zero-text-face: var(--zero-shingo-bold) !important; font-family: var(--zero-text-face) !important; }
+
+/* secret04-megacure-story.css */
+#secret .megacure-story--approved .story-box { font-family: var(--zero-text-face); }
+#secret .megacure-story--approved .story-note .story-note-category { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#secret .megacure-story--approved .story-note-heading { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .megacure-story--approved .story-note .story-note-copy { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .megacure-story--approved .story-note-copy strong { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret #secrets-box-328-panel .megacure-story-scope::before { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+
+/* The mobile signature inherits a regular family but retains its bold weight. */
+@media (max-width: 768px) {
+  #about .name { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+}
