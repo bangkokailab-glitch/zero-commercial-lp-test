@@ -176,6 +176,8 @@
 .zero-hero-wipe::after {content:"";position:absolute;z-index:2;top:var(--hero-wipe-top,.15em);left:0;right:0;height:var(--hero-wipe-height,.8em);background:#fff;transform:scaleX(0);transform-origin:left;pointer-events:none}
 .zero-hero-display::after {background:#ff2028}
 .zero-hero-signature::after {background:#fff}
+.zero-hero-intro .zero-hero-wipe {--hero-reveal-duration:650ms}
+.zero-hero-intro .zero-hero-wipe::after {top:.08em;height:calc(100% - .16em)}
 #mv .zero-hero-stat strong {min-width:3ch;font-variant-numeric:tabular-nums;text-align:center}
 #mv .zero-hero-stat strong[data-count-to="13"] {min-width:2ch}
 @keyframes zero-hero-wipe-bar {
@@ -185,10 +187,19 @@
   100% {transform:scaleX(0);transform-origin:right}
 }
 @keyframes zero-hero-wipe-copy {0%,48%{opacity:0}49%,100%{opacity:1}}
+@keyframes zero-hero-signature-background {0%,48%{background-color:transparent}49%,100%{background-color:#fff}}
+@keyframes zero-hero-banner-reveal {0%{opacity:0;clip-path:inset(0 100% 0 0)}1%{opacity:1}100%{opacity:1;clip-path:inset(0)}}
+@keyframes zero-hero-stats-reveal {from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion:no-preference) {
-  #mv.hero-motion-pending .zero-hero-wipe__content {opacity:0}
-  #mv.hero-is-animating .zero-hero-wipe::after {animation:zero-hero-wipe-bar 900ms cubic-bezier(.65,0,.35,1) var(--hero-reveal-delay,0ms) both}
-  #mv.hero-is-animating .zero-hero-wipe__content {animation:zero-hero-wipe-copy 900ms linear var(--hero-reveal-delay,0ms) both}
+  #mv.hero-motion-pending .zero-hero-signature {background-color:transparent}
+  #mv.hero-motion-pending .zero-hero-wipe__content,
+  #mv.hero-motion-pending .zero-hero-legacy-banner>svg,
+  #mv.hero-motion-pending .zero-hero-stats {opacity:0}
+  #mv.hero-is-animating .zero-hero-wipe::after {animation:zero-hero-wipe-bar var(--hero-reveal-duration,900ms) cubic-bezier(.65,0,.35,1) var(--hero-reveal-delay,0ms) both}
+  #mv.hero-is-animating .zero-hero-wipe__content {animation:zero-hero-wipe-copy var(--hero-reveal-duration,900ms) linear var(--hero-reveal-delay,0ms) both}
+  #mv.hero-is-animating .zero-hero-signature {animation:zero-hero-signature-background 900ms linear var(--hero-reveal-delay,0ms) both}
+  #mv.hero-is-animating .zero-hero-legacy-banner>svg {animation:zero-hero-banner-reveal 500ms cubic-bezier(.2,.7,.3,1) var(--hero-banner-delay,980ms) both}
+  #mv.hero-is-animating .zero-hero-stats {animation:zero-hero-stats-reveal 450ms ease var(--hero-stats-delay,2540ms) both}
 }
 @media(max-width:768px){
  #mv.video-bg{padding:12px 0 26px}

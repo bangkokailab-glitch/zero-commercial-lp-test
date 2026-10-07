@@ -1,5 +1,5 @@
 /* Campaign9: preserve approved copy and height, add a right-hand chevron. */
-.cta.cta-offer--gold { --campaign-frame-width:min(1000px, calc(100% - 24px)); isolation:isolate; overflow:clip; padding:20px 0 16px; background:#181818; color:#fff; }
+.cta.cta-offer--gold { --campaign-frame-width:min(1000px, calc(100% - 24px)); isolation:isolate; overflow:clip; padding:20px 0 16px; background:#080808; color:#fff; }
 .cta.cta-offer--gold > :not(.shared-hero-background) { position:relative; z-index:1; }
 .cta.cta-offer--gold .cta-ribbon {
   container-type:inline-size;
@@ -8,7 +8,7 @@
   width:var(--campaign-frame-width);
   height:auto;
   min-height:0;
-  aspect-ratio:821.78 / 106.94;
+  aspect-ratio:821.78 / 96.246;
   padding:0;
   margin:0 auto 8px;
   font-family:var(--zero-shingo-bold);

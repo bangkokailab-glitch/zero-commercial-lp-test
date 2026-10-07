@@ -8,7 +8,7 @@
   const played = new WeakSet();
   const pending = new Map();
   const frames = new Map();
-  const animations = [];
+  let revealTimer;
   let observer;
   let started = false;
   if (!motion.matches && !document.hidden) {
@@ -24,7 +24,7 @@
   }
   function stopMotion() {
     hero.classList.remove('hero-is-animating', 'hero-motion-pending');
-    animations.forEach(animation => animation.cancel());
+    clearTimeout(revealTimer);
     counters.forEach(finishCounter);
     observer?.disconnect();
   }
@@ -55,14 +55,19 @@
     const rect = hero.getBoundingClientRect();
     const inView = rect.bottom > 0 && rect.top < innerHeight;
     const startedAt = performance.now();
+    // Desktop: two lead-in lines, audience, diagonal strip, story, title,
+    // signature, then proof. Mobile omits the intro and starts at the strip.
+    const mobile = matchMedia('(max-width:768px)').matches;
+    const offset = mobile ? 0 : 980;
+    const delays = {'intro-1':0,'intro-2':260,audience:520,story:offset+380,title:offset+700,signature:offset+1020};
+    hero.querySelectorAll('[data-hero-step]').forEach(element => {
+      element.style.setProperty('--hero-reveal-delay', `${delays[element.dataset.heroStep]}ms`);
+    });
+    hero.style.setProperty('--hero-banner-delay', `${offset}ms`);
+    hero.style.setProperty('--hero-stats-delay', `${offset+1560}ms`);
     if (inView) {
       hero.classList.add('hero-is-animating');
-      [...hero.querySelectorAll('.zero-hero-intro>p,.zero-hero-legacy-banner')].forEach((element, index) => {
-        animations.push(element.animate([{opacity:0,translate:'0 12px'}, {opacity:1,translate:'0 0'}], {
-          duration:600,delay:index*100,easing:'cubic-bezier(.2,.7,.3,1)',fill:'backwards'
-        }));
-      });
-      setTimeout(() => hero.classList.remove('hero-is-animating'), 1650);
+      revealTimer = setTimeout(() => hero.classList.remove('hero-is-animating'), offset+2110);
     }
     if ('IntersectionObserver' in window) {
       observer = new IntersectionObserver(entries => {
@@ -70,7 +75,7 @@
           if (!entry.isIntersecting) return;
           const counter = entry.target.querySelector('[data-count-to]');
           const index = counters.indexOf(counter);
-          const delay = Math.max(0, (inView ? 1050 : 0) - (performance.now() - startedAt)) + index * 170;
+          const delay = Math.max(0, (inView ? offset+1650 : 0) - (performance.now() - startedAt)) + index * 170;
           count(counter, delay);
           observer.unobserve(entry.target);
         });
@@ -83,6 +88,8 @@
   motion.addEventListener('change', event => { if (event.matches) stopMotion(); });
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
+      hero.classList.remove('hero-is-animating', 'hero-motion-pending');
+      clearTimeout(revealTimer);
       for (const counter of [...pending.keys(), ...frames.keys()]) finishCounter(counter);
     }
   });

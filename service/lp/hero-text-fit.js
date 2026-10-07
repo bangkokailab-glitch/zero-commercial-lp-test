@@ -7,6 +7,9 @@
   if (!context) return;
   const wipes = [...document.querySelectorAll('#mv .zero-hero-wipe')];
   const fitWipe = wipe => {
+    // Intro lines include highlights, different font sizes and emphasis dots;
+    // their local CSS uses the whole line box instead of one font's ink metrics.
+    if (wipe.closest('.zero-hero-intro')) return;
     const content = wipe.querySelector('.zero-hero-wipe__content');
     if (!content) return;
     const style = getComputedStyle(content);
