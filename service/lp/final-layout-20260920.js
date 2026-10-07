@@ -233,16 +233,7 @@
 
   function setupHeadingReveals() {
     const selectors = [
-      '#secret-01 > .wrap > h3',
-      '#secret-02 > .wrap > h3',
-      '#secret-03 > .wrap > h3',
-      '#secret-04 > .wrap > h3',
-      '#secret-05 > .wrap > h3',
-      '#secret-06 > .wrap > h3',
-      '#secret-07 > .wrap > h3',
-      '#secret-08 > .wrap > h3',
-      '#secret-09 > .wrap > h3',
-      '#secret-10 > .wrap > h3',
+      // Secret headings now use the shared bar wipe in content-reveal.js.
       '#marketing-flow-final-title',
       '#price > .wrap > h2',
       '#about > .wrap > h2'
@@ -255,8 +246,8 @@
 
   function setupDiagramReveal() {
     if (reduced.matches || typeof IntersectionObserver !== 'function') return;
-    const diagrams = Array.from(document.querySelectorAll('#marketing-flow-final .marketing-flow-diagram, #secret .secrets-renovated figure'));
-    const closings = Array.from(document.querySelectorAll('#secret .secrets-closing'));
+    const diagrams = Array.from(document.querySelectorAll('#marketing-flow-final .marketing-flow-diagram'));
+    const closings = Array.from(document.querySelectorAll('#secret .secrets-closing:not(.secrets-closing--text)'));
     diagrams.forEach(diagram => diagram.classList.add('zero-diagram-reveal'));
     closings.forEach(closing => closing.classList.add('zero-closing-reveal'));
     const observer = new IntersectionObserver(entries => {
