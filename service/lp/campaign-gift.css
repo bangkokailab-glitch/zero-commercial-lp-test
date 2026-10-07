@@ -1,11 +1,11 @@
-/* Campaign8: a quieter ribbon and a compact, equal-size two-line CTA. */
-.cta.cta-offer--gold { isolation:isolate; overflow:hidden; padding:20px 0 16px; background:#071224; color:#fff; }
-.cta.cta-offer--gold > :not(.moon-scene) { position:relative; z-index:1; }
+/* Campaign9: preserve approved copy and height, add a right-hand chevron. */
+.cta.cta-offer--gold { --campaign-frame-width:min(1000px, calc(100% - 24px)); isolation:isolate; overflow:clip; padding:20px 0 16px; background:#181818; color:#fff; }
+.cta.cta-offer--gold > :not(.shared-hero-background) { position:relative; z-index:1; }
 .cta.cta-offer--gold .cta-ribbon {
   container-type:inline-size;
   scroll-margin-top:120px;
   display:block;
-  width:min(1000px, calc(100% - 24px));
+  width:var(--campaign-frame-width);
   height:auto;
   min-height:0;
   aspect-ratio:821.78 / 106.94;
@@ -25,11 +25,12 @@
   letter-spacing:.055em;
 }
 .cta.cta-offer--gold .cta-ribbon > span > span { text-emphasis:none; -webkit-text-emphasis:none; }
-.cta.cta-offer--gold .offer-proposal { width:min(1000px, calc(100% - 48px)); padding:0; margin:18px auto 0; }
+/* Match the gold front face exactly, not the ribbon's hanging tails. */
+.cta.cta-offer--gold .offer-proposal { width:calc(var(--campaign-frame-width) * .8763); padding:0; margin:18px 0 0 calc((100% - var(--campaign-frame-width)) / 2 + var(--campaign-frame-width) * .0667); }
 .cta.cta-offer--gold .offer-gift {
   position:relative;
   display:block;
-  padding:15px 24px;
+  padding:15px 84px;
   border:3px solid #fff;
   border-radius:8px;
   background:#e50920;
@@ -46,37 +47,41 @@
 .cta.cta-offer--gold .offer-gift::after { content:none; }
 .cta.cta-offer--gold .offer-gift:hover { background:#ce0017; }
 .cta.cta-offer--gold .offer-gift:focus-visible { outline:3px solid #fff; outline-offset:5px; }
-.offer-gift__copy { display:flex; flex-direction:column; align-items:center; gap:8px; font-size:32px; line-height:1.55; letter-spacing:.035em; }
+.offer-gift__copy { display:flex; flex-direction:column; align-items:center; gap:8px; font-size:32px; line-height:1.55; letter-spacing:.035em; transform-origin:center; animation:proposal-copy-pop 3.2s ease-in-out infinite paused; }
 .offer-gift__line { display:block; font:inherit; white-space:nowrap; }
 .offer-gift__plus { display:inline-block; margin-inline:.15em; font-size:.65em; vertical-align:.08em; }
-.offer-gift__arrows { display:inline-block; margin-left:.18em; font-family:Arial,sans-serif; font-size:.7em; letter-spacing:-.14em; vertical-align:.1em; animation:proposal-arrows 2.4s ease-in-out infinite paused; }
+.offer-gift__arrows { position:absolute; right:24px; top:50%; display:block; width:56px; height:auto; margin:0; fill:none; stroke:#fff; stroke-width:3.5; stroke-linecap:square; stroke-linejoin:miter; transform:translateY(-50%); animation:proposal-arrows 2.4s ease-in-out infinite paused; }
 .cta.cta-offer--gold .offer-gift.is-in-view,
+.offer-gift.is-in-view .offer-gift__copy,
 .offer-gift.is-in-view .offer-gift__arrows { animation-play-state:running; }
 .cta.cta-offer--gold .offer-gift:is(:hover, :focus-visible),
+.offer-gift:is(:hover, :focus-visible) .offer-gift__copy,
 .offer-gift:is(:hover, :focus-visible) .offer-gift__arrows { animation-play-state:paused; }
 @keyframes proposal-float { 0%,100% { transform:translateY(3px); } 50% { transform:translateY(-3px); } }
-@keyframes proposal-arrows { 0%,55%,100% { transform:none; } 75% { transform:translateX(3px); } }
+@keyframes proposal-arrows { 0%,55%,100% { transform:translate(0,-50%); } 75% { transform:translate(4px,-50%); } }
+@keyframes proposal-copy-pop { 0%,52%,100% { transform:scale(1); } 64% { transform:scale(1.055); } 74% { transform:scale(1.015); } 84% { transform:scale(1.035); } 94% { transform:scale(1); } }
 .cta.cta-offer--gold .offer-proposal__note {
   width:fit-content; max-width:100%; margin:14px auto 0; padding:5px 12px;
-  background:#071224c9; color:#fff;
+  background:#111c; color:#fff;
   font-family:var(--zero-shingo-regular); font-size:14px; line-height:1.7; text-align:center; text-wrap:balance;
 }
 @media(max-width:1000px) and (min-width:769px) { .offer-gift__copy { font-size:30px; } }
 @media(max-width:768px) {
   html.gift-cta-overlaps-floating .sticky-consultation:not(:focus-within) { opacity:0; visibility:hidden; pointer-events:none; }
-  .cta.cta-offer--gold { padding:12px 0; }
-  .cta.cta-offer--gold .cta-ribbon { width:calc(100% - 12px); margin-bottom:8px; scroll-margin-top:72px; }
-  .cta.cta-offer--gold .offer-proposal { width:calc(100% - 32px); max-width:600px; margin-top:14px; }
-  .cta.cta-offer--gold .offer-gift { padding:24px 10px; border-width:2px; }
+  .cta.cta-offer--gold { --campaign-frame-width:calc(100% - 12px); padding:12px 0; }
+  .cta.cta-offer--gold .cta-ribbon { margin-bottom:8px; scroll-margin-top:72px; }
+  .cta.cta-offer--gold .offer-proposal { margin-top:14px; }
+  .cta.cta-offer--gold .offer-gift { padding:24px 44px 24px 12px; border-width:2px; }
   .offer-gift__copy { font-size:19px; letter-spacing:.015em; }
+  .offer-gift__arrows { right:10px; width:30px; }
   .cta.cta-offer--gold .offer-proposal__note { margin-top:12px; padding:5px 7px; font-size:11px; line-height:1.7; }
 }
 @media(min-width:480px) and (max-width:768px) {
   .cta.cta-offer--gold .offer-gift { padding-block:18px; }
   .offer-gift__copy { font-size:24px; }
 }
-@media(max-width:374px) { .offer-gift__copy { font-size:18px; } }
-@media(max-width:339px) { .offer-gift__copy { font-size:16px; } }
+@media(max-width:374px) { .offer-gift__copy { font-size:17px; } }
+@media(max-width:339px) { .offer-gift__copy { font-size:15px; } }
 @media(prefers-reduced-motion:reduce) {
-  .cta.cta-offer--gold .offer-gift,.offer-gift__arrows { animation:none; transition:none; }
+  .cta.cta-offer--gold .offer-gift,.offer-gift__copy,.offer-gift__arrows { animation:none; transition:none; }
 }

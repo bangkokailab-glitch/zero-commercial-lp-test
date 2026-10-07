@@ -1,0 +1,9 @@
+/* Restore the original dark hero artwork across the hero and first offer. */
+.hero-offer-journey { position:relative; display:flow-root; isolation:isolate; overflow:clip; background:#181818; }
+.hero-offer-journey > #mv,.hero-offer-journey > .cta { position:relative; z-index:1; background:transparent; }
+.hero-offer-journey #mv::before,.hero-offer-journey #mv::after { display:none; }
+.shared-hero-background { position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; background:#181818; }
+.shared-hero-background.is-viewport-pinned { bottom:auto; height:100vh; height:100lvh; will-change:transform; }
+.shared-hero-background > img,.shared-hero-background > video { position:absolute; inset:0; display:block; width:100%; height:100%; max-width:none; margin:0; object-fit:cover; object-position:center; }
+.shared-hero-background::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,.7); }
+@media(prefers-reduced-motion:reduce) { .shared-hero-background > video { visibility:hidden; } }
