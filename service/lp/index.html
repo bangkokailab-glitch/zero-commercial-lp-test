@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="secret07-design.css?v=20260928-approved">
 <link rel="stylesheet" href="secret08-design.css?v=20260929-support">
 <link rel="stylesheet" href="secret09-design.css?v=20261001-finish">
-<link rel="stylesheet" href="secret10-design.css?v=20261003-market-expansion">
+<link rel="stylesheet" href="secret10-design.css?v=20261007-transparent">
     <link rel="stylesheet" href="mobile-reading.css?20260920-about-portrait-11">
     <link rel="stylesheet" href="secrets-accordion.css?20260918-turquoise-2">
     <script src="secrets-accordion.js?20260929-secret08-support" defer></script>
@@ -65,7 +65,7 @@
     <link rel="stylesheet" href="final-layout-20260920.css?v=20260923-closing-slide">
     <link rel="stylesheet" href="secret01-purpose-examples.css?v=20260927-shared-examples">
     <link rel="stylesheet" href="secret04-big-idea.css?v=20260926-3">
-    <script src="final-layout-20260920.js?v=16-1" defer></script>
+    <script src="final-layout-20260920.js?v=20261007-text" defer></script>
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/lazysizes.min.js" defer></script>
 <script>
@@ -103,6 +103,7 @@
 @media(max-width:768px){#secret-05 #secret05-copy-flow-figure{width:100%;max-width:950px;margin:18px auto;}#secret-05 #secrets-message-title-panel .secret-scope-note{padding:14px;margin:20px 0;font-size:15px;}}
 </style>
 <link rel="stylesheet" href="morisawa-typography.css?v=20261007-2">
+<link rel="stylesheet" href="text-upgrade-20261007.css?v=20261007-1">
 </head>
 <body>
     <div id="container">
@@ -166,23 +167,20 @@
         </div>
 
         <section id="mv" class="video-bg">
-            <img src="images/mvTxt1.svg" class="mvTxt1 wow fadein delay pc" alt="コンバージョン率の高いランディングページを作りたい 売れない商品・サービスを売れるようにしたい こんなお悩みの経営者様へ">
-            <h1 class="mv-primary-title">
-            <picture>
-                <source media="(min-width: 768px)" class="mvTxt2 wow fadein delay" srcset="images/mvTxt2.svg">
-            <img src="images/sp/mvTxt2.min.svg" class="mvTxt2 wow fadein delay" alt="売れるZERO式ランディングページ制作">
-            </picture>
-            </h1>
-            <picture>
-                <source media="(min-width: 768px)" class="wow fadein" srcset="images/mvTxt3.svg">
-                    <img src="images/sp/mvTxt3.svg" class="mvTxt3 wow fadein delay" alt="ランディングページ制作実績300社突破・ホームページ実績120社突破・リスティング広告運用実績80社突破">
-                </picture>
+            <div class="zero-hero-content">
+<div class="zero-hero-intro"><p><mark>コンバージョン率の高い</mark>ランディングページを作りたい…<br>売れない商品・サービスを<mark>売れるようにしたい…</mark></p><p class="zero-hero-audience">こんなお悩みの経営者様へ</p></div>
+<div class="zero-hero-legacy-banner"><img src="images/mvTxt2.svg" alt="300社を超えるLP改善実績から生まれた"></div>
+<p class="zero-hero-story"><span>売れるストーリー</span>を脚本・演出。</p>
+<svg class="zero-text-effect-defs" width="0" height="0" aria-hidden="true"><defs><filter id="zero-ink-wear" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="7" result="noise"/><feColorMatrix in="noise" type="luminanceToAlpha"/><feComponentTransfer><feFuncA type="discrete" tableValues="0 0 0 1 1 1 1 1"/></feComponentTransfer><feComposite in="SourceGraphic" operator="in"/></filter></defs></svg>
+<h1 class="mv-primary-title"><span class="zero-hero-display">LANDING PAGE</span><span class="zero-hero-signature">ZERO式ランディングページ制作</span></h1>
+<div class="zero-hero-stats"><div class="zero-hero-stat"><svg viewBox="0 0 64 60" aria-hidden="true"><rect x="5" y="5" width="38" height="27" rx="1"/><path d="M24 32v10M14 42h20M49 12l9 2-5 25-9-2z"/></svg><p>ランディングページ<br>制作実績</p><div><strong>300</strong><span>社突破</span></div></div><div class="zero-hero-stat"><svg viewBox="0 0 64 60" aria-hidden="true"><path d="M15 3h23l9 10v42H15zM38 3v11h9M22 23h18M22 30h18M22 37h18M22 44h18"/></svg><p>ホームページ<br>制作実績</p><div><strong>120</strong><span>社突破</span></div></div><div class="zero-hero-stat"><svg viewBox="0 0 64 60" aria-hidden="true"><path d="M30 5v25h25A25 25 0 1 1 30 5z"/><path d="M37 0v22h22A25 25 0 0 0 37 0z"/></svg><p>リスティング広告<br>運用実績</p><div><strong>80</strong><span>社突破</span></div></div></div>
+</div>
             <video preload="metadata" src="images/mv.mp4" poster="images/mv-img.jpg" autoplay loop muted playsinline>
             </video>
         </section>
 
         <section class="cta cta-offer cta-offer--gold" aria-labelledby="first-offer-title">
-            <h2 class="cta-ribbon" id="first-offer-title"><picture><source media="(max-width: 767px)" srcset="images/offer-copy-ribbon-sp-20260920.svg?v=20260920-center-1"><img src="images/offer-copy-ribbon-pc-20260920.svg?v=20260920-center-1" width="960" height="125" alt="LPを最後まで読んでいただいた方へ"></picture></h2>
+            <h2 class="cta-ribbon" id="first-offer-title"><span>今なら無料提案キャンペーン実施中</span></h2>
             <div class="offer-gold__gallery" role="region" aria-roledescription="カルーセル" aria-label="ZEROのLP制作実績を自動表示しています">
                 <div class="offer-gold__track">
                     <figure class="offer-gold__sample offer-gold__sample--tender"><img src="images/offer-fv-tender-top-432.webp" width="432" height="834" alt="保育士求人LPの制作実績" decoding="async" draggable="false"></figure>
@@ -195,11 +193,11 @@
             <div class="offer-proposal">
                 <div class="offer-proposal__grid">
                     <div class="offer-proposal__card">
-                        <h3>無料でLP構成案をご提案</h3>
+                        <h3><span>無料で</span><em>LP構成案</em><span>をご提案</span></h3>
                         <p>何をどの順番で伝えるのかを整理</p>
                     </div>
                     <div class="offer-proposal__card">
-                        <h3>無料でデザイン1案をご提案</h3>
+                        <h3><span>無料で</span><em>デザイン1案</em><span>をご提案</span></h3>
                         <p>ファーストビューのデザインと<br>メインコピーを具体化</p>
                     </div>
                 </div>
@@ -311,65 +309,29 @@
                     </picture>
                 </div>
             </div>
-            <div class="wrap pc">
-            <div class="work-box work1">
-                <figure><img class="lazyload" data-src="images/jisseki1-img.png" alt="ウォーターサーバー「CoolQoo」のLP制作事例"></figure>
-                <div class="conv"><img class="lazyload wow fadein" data-src="images/jisseki1-1.svg" alt=""></div>
-                <p>メリットの訴求とストーリー構成の改善により、成約率の改善をした事例です。<br>
+            <div class="works-text-cases">
+<article class="work-case"><header><h3>実績<span>1</span></h3><div class="work-case__metrics"><p class="work-case__context">リスティング広告・DSP広告　月額200万運用時</p><p class="work-case__cvr">コンバージョン率 <span>0.45<small>%</small></span><i aria-label="から">→</i><strong>1.22<small>%</small></strong></p></div></header><div class="work-case__layout"><figure><img class="lazyload" data-src="images/jisseki1-img.png" alt="ウォーターサーバー「CoolQoo」のLP制作事例"></figure><div class="work-case__body"><p class="work-case__lift">コンバージョン率<strong>2.71<small>倍UP</small></strong></p><h4><span>『定額使い放題のウォーターサーバー』訴求で</span><strong>3か月で月間80件以上の</strong>反響獲得！</h4><p>メリットの訴求とストーリー構成の改善により、成約率の改善をした事例です。<br>
                     イラストと図解を使用し、複雑なウォーターサーバーの仕組みを解説することで、<span class="ylw-bg">ウォーターサーバーを乗り換えない理由を無くすこと</span>を意識しました。<br>
                     また、同時にDSP広告とリスティング広告のアカウント改善及びバナー改善を行い、成約率を2倍以上に引き上げました。
-                    </p>
-            </div>
-            <div class="work-box work2">
-                <figure><img class="lazyload" data-src="images/jisseki2-img.png" alt="携帯型水素水生成器「AURORA」のLP制作事例"></figure>
-                <div class="conv"><img class="lazyload wow fadein" data-src="images/jisseki2-1.svg" alt=""></div>
-                <p>六角水のタンブラーがあることの認知の拡大と、六角水の体への効能と、六角水のメリットをわかりやすく説明。<br>
+                    </p></div></div></article>
+<article class="work-case"><header><h3>実績<span>2</span></h3><div class="work-case__metrics"><p class="work-case__context">リスティング・フェイスブック広告　月額70万運用時</p><p class="work-case__cvr">コンバージョン率 <span>0.45<small>%</small></span><i aria-label="から">→</i><strong>1.52<small>%</small></strong></p></div></header><div class="work-case__layout"><figure><img class="lazyload" data-src="images/jisseki2-img.png" alt="携帯型水素水生成器「AURORA」のLP制作事例"></figure><div class="work-case__body"><p class="work-case__lift">コンバージョン率<strong>3.37<small>倍UP</small></strong></p><h4><span>テレビ広告に合わせリスティング広告配信にて</span><strong>3か月で月間400個以上の</strong>販売実績！</h4><p>六角水のタンブラーがあることの認知の拡大と、六角水の体への効能と、六角水のメリットをわかりやすく説明。<br>
                     テレビショッピングの放送に合わせて、リスティング・YDN・GDNメインでセグメント配信し、大きく販売数を引き上げることができた事例です。<br>
-                    <span class="ylw-bg">他メディアで広告を打つ場合は、リスティング広告配信を同時配信する</span>ことにより、低コストで＋アルファの獲得数を大きく伸ばすことができるんです！</p>
-            </div>
-
-            <div class="work-box work3">
-                <figure><img class="lazyload" data-src="images/jisseki3-img.png" alt="オーガニックエッセンシャルオイル「tahia」のLP制作事例"></figure>
-                <div class="conv"><img class="lazyload wow fadein" data-src="images/jisseki3-1.svg" alt=""></div>
-                <p>メイン画像ではオーガニック感とみずみずしさを表現し、間接的に香りの鮮度感を訴求。あまり長くせず、シンプルに商品の魅力を訴求したページを作りました。<br>
+                    <span class="ylw-bg">他メディアで広告を打つ場合は、リスティング広告配信を同時配信する</span>ことにより、低コストで＋アルファの獲得数を大きく伸ばすことができるんです！</p></div></div></article>
+<article class="work-case"><header><h3>実績<span>3</span></h3><div class="work-case__metrics"><p class="work-case__cvr">コンバージョン率 <span>0.62<small>%</small></span><i aria-label="から">→</i><strong>0.98<small>%</small></strong></p></div></header><div class="work-case__layout"><figure><img class="lazyload" data-src="images/jisseki3-img.png" alt="オーガニックエッセンシャルオイル「tahia」のLP制作事例"></figure><div class="work-case__body"><p class="work-case__lift">コンバージョン率<strong>1.58<small>倍UP</small></strong></p><h4><span>全く売れなかった商品が</span><strong>ランディングページ改善して</strong>売れる商品へ</h4><p>メイン画像ではオーガニック感とみずみずしさを表現し、間接的に香りの鮮度感を訴求。あまり長くせず、シンプルに商品の魅力を訴求したページを作りました。<br>
                     また、リスティング広告のリンク先をホームページからランディングページに変更し、成約率を最大1.58倍まで引き上げました。<br>
-                    <span class="ylw-bg">通常のホームページで広告を打つよりもランディングページで広告を打つ</span>ほうが遥かに成約率の改善ができるんです！</p>
-            </div>
-
-            <div class="work-box work4">
-                <figure><img class="lazyload" data-src="images/jisseki4-img.png" alt="保育士求人「テンダーラビングケアサービス」のLP制作事例"></figure>
-                <div class="conv"><img class="lazyload wow fadein" data-src="images/jisseki4-1.svg" alt=""></div>
-                <div class="work-txt">
-                    <p>保育士の仕事は肉体労働の割に給与が安いという現状を踏まえて、多数ある案件を強みにしたストーリー作りで、大きく成約率を改善した事例です。<br><br>
+                    <span class="ylw-bg">通常のホームページで広告を打つよりもランディングページで広告を打つ</span>ほうが遥かに成約率の改善ができるんです！</p></div></div></article>
+<article class="work-case"><header><h3>実績<span>4</span></h3><div class="work-case__metrics"><p class="work-case__context">リスティング広告　月額50万運用時</p><p class="work-case__cvr">コンバージョン率 <span>0.55<small>%</small></span><i aria-label="から">→</i><strong>0.92<small>%</small></strong></p></div></header><div class="work-case__layout"><figure><img class="lazyload" data-src="images/jisseki4-img.png" alt="保育士求人「テンダーラビングケアサービス」のLP制作事例"></figure><div class="work-case__body"><p class="work-case__lift">コンバージョン率<strong>1.67<small>倍UP</small></strong></p><h4><span>PC・スマホのLP改善により、</span><strong>CPAを大きくコスト削減！</strong></h4><p>保育士の仕事は肉体労働の割に給与が安いという現状を踏まえて、多数ある案件を強みにしたストーリー作りで、大きく成約率を改善した事例です。<br><br>
     
-                        また、BtoC向け商材の場合はスマートフォンが非常に重要になるため、<span class="ylw-bg">スマホ最適化を徹底することにより簡単に成約率の改善ができる</span>んです！</p>
-                </div>
-            </div>
-
-            <div class="work-box work5">
-                <figure><img class="lazyload" data-src="images/jisseki5-img.png" alt="相続税申告の無料小冊子を案内するLP制作事例"></figure>
-                <div class="conv"><img class="lazyload wow fadein" data-src="images/jisseki5-1.svg" alt=""></div>
-                <div class="work-txt">
-                    <p>通常のお問い合わせではなかなか反響を獲得できなかったため、冊子プレゼントの2ステップマーケティングに切り替えて、新たにLPを制作。小冊子の内容を少し紹介し、あえて、疑問を残すことで大きく成約率の改善に成功した事例です。<br>
-                        <span class="ylw-bg">コンバージョンのハードルが高い場合は2ステップマーケティングに切り替え</span>て、アウトバンドマーケティングをしていくことが非常に重要なんです！</p>
-                </div>
-            </div>
-        </div>
-        <div class="sp jisseki-wrapper">
-            <div class="wrap jisseki-box sp">
-                <img class="lazyload" data-src="images/sp/work1.png" alt="ウォーターサーバー「CoolQoo」のLP制作事例">
-                <img class="lazyload" data-src="images/sp/work2.png" alt="携帯型水素水生成器「AURORA」のLP制作事例">
-                <img class="lazyload" data-src="images/sp/work3.png" alt="オーガニックエッセンシャルオイル「tahia」のLP制作事例">
-                <img class="lazyload" data-src="images/sp/work4.png" alt="保育士求人「テンダーラビングケアサービス」のLP制作事例">
-                <img class="lazyload" data-src="images/sp/work5.png" alt="相続税申告の無料小冊子を案内するLP制作事例">
-            </div>
-        </div>
+                        また、BtoC向け商材の場合はスマートフォンが非常に重要になるため、<span class="ylw-bg">スマホ最適化を徹底することにより簡単に成約率の改善ができる</span>んです！</p></div></div></article>
+<article class="work-case"><header><h3>実績<span>5</span></h3><div class="work-case__metrics"><p class="work-case__context">リスティング広告　月額30万運用時</p><p class="work-case__cvr">コンバージョン率 <span>0.45<small>%</small></span><i aria-label="から">→</i><strong>1.78<small>%</small></strong></p></div></header><div class="work-case__layout"><figure><img class="lazyload" data-src="images/jisseki5-img.png" alt="相続税申告の無料小冊子を案内するLP制作事例"></figure><div class="work-case__body"><p class="work-case__lift">コンバージョン率<strong>3.95<small>倍UP</small></strong></p><h4><span>2ステップマーケティングで</span><strong>見込み顧客を低コストで</strong>獲得！</h4><p>通常のお問い合わせではなかなか反響を獲得できなかったため、冊子プレゼントの2ステップマーケティングに切り替えて、新たにLPを制作。小冊子の内容を少し紹介し、あえて、疑問を残すことで大きく成約率の改善に成功した事例です。<br>
+                        <span class="ylw-bg">コンバージョンのハードルが高い場合は2ステップマーケティングに切り替え</span>て、アウトバンドマーケティングをしていくことが非常に重要なんです！</p></div></div></article>
+</div>
         </section>
 
         <section id="copy" class="video-bg">
             <div class="copy-txt">
-            <img class="copy1 lazyload wow fadein pc" data-src="images/copy1.svg" alt="売れない理由はランディングページにある!?">
-            <h2 class="copy-h2 wow fadein delay"><span class="copy-h2__label">ランディングページの制作・改善が<br class="sp">最も費用対効果が高い<span class="copy-h2__term">マーケティング手法</span></span></h2>
+            <div class="zero-copy-legacy-banner"><img src="images/copy1.svg" alt="リスティング広告を打っても商品が売れない"></div><p class="zero-copy-title">売れない理由は<br class="sp">ランディングページにある!?</p><div class="zero-copy-equation"><div><strong>アクセス</strong><span>SEO・PPC広告</span></div><b>×</b><div><strong>成約率</strong><span>WEBページ</span></div><b>＝</b><div><strong>お問合せ</strong><span>売上・反響数</span></div></div>
+            <h2 class="copy-h2"><span class="copy-h2__label">ランディングページの制作・改善が<br class="sp">最も費用対効果が高い<span class="copy-h2__term">マーケティング手法</span></span></h2>
             <p class="copyTxt">ランディングページの成約率が低いのは穴の開いたバケツで水を汲むようなものです。<br class="pc">
                 ランディングページの訪問者数を増やすためには、PPC広告やSEOがどうしても必要となりますが、<br class="pc">
                 広告に掛けられる予算は限られているかと思います。<br class="pc">
@@ -386,11 +348,7 @@
                 <div class="secret-cover-a__content">
                     <p class="secret-cover-a__kicker">LP制作・集客・改善・多言語展開</p>
                     <img class="secret-cover-a__logo" src="secret-cover-white-designs/legacy-logo-centered.svg" alt="ZERO">
-                    <h2 id="secret-cover-title" class="secret-cover-a__title">
-                        <span class="secret-cover-a__sr-only">売れるZERO式ランディングページ制作 10の秘訣</span>
-                        <img class="secret-cover-a__title-art" src="secret-cover-white-designs/legacy-title.svg" alt="" aria-hidden="true">
-                        <span class="secret-cover-a__lockup" aria-hidden="true"><img class="secret-cover-a__ten" src="secret-number-designs/10-brush.svg" alt=""><img class="secret-cover-a__hiketsu" src="secret-cover-white-designs/legacy-hiketsu-centered.svg" alt=""></span>
-                    </h2>
+                    <h2 id="secret-cover-title" class="secret-cover-a__title"><span class="secret-cover-a__live-title">売れるZERO式<br>ランディングページ制作</span><span class="secret-cover-a__live-lockup"><b>10</b><span>の秘訣</span></span></h2>
                     <p class="secret-cover-a__phases">設計 <i>｜</i> 制作 <i>｜</i> 集客・改善・多言語展開</p>
                     <div class="secret-cover-a__description"><p>ランディングページで成果を上げるためには、<br class="secret-cover-a__pc">目的、ターゲット、競合、構成、コピー、デザイン、集客、公開後の改善まで<br class="secret-cover-a__pc">考える必要があります。</p><p>ここでは、LP制作と活用に必要な全体像を<br class="secret-cover-a__pc">「10の秘訣」としてご紹介します。</p></div>
                     <a class="secret-cover-a__cue" href="#secret-01" aria-label="秘訣01へ進む"></a>
@@ -408,7 +366,8 @@
 <p data-source-index="39">では、商品の説明を決まったセールスの型に当てはめて並べただけのLPと、一流の営業マンとしてのLPは、一体、何が違うのでしょうか。</p>
 <p data-source-index="40"><mark class="zero-trust-highlight"><strong>その違いを生むのは、LPを作る担当者がどれだけの熱量を持って商材と顧客に本気で向き合い、売るための戦略を設計できるかです。</strong></mark></p>
 <p>この先では、<strong>LP制作会社として13年の経験を持つZERO</strong>が「一流の営業マン」となるLPをどのように作り上げるのか、初心者の方にもわかりやすく、10の秘訣に沿って徹底的に解説していきます。</p>
-<p>最後までお読みいただくことで、<strong>商品・サービスの魅力をどう伝え、自社の売上を伸ばすためにLPで取り組むべきことの全体像と、具体的な進め方</strong>がわかります。</p><div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-01-sp.svg" width="312" height="193"><img src="images/secrets-closing-centered/closing-01-pc.svg" width="950" height="188" loading="lazy" decoding="async" alt="担当者が商材に向き合う熱量が、LPのCVRを変える。 私たちが作るのは、商品の価値を伝える「一流の営業マン」です。"></picture><span class="secrets-closing-bg" aria-hidden="true">SALESMAN</span><p data-source-index="42" class="secrets-closing-yellow">担当者が商材に向き合う熱量が、LPのCVRを変える。</p><p data-source-index="43" class="secrets-closing-blue">私たちが作るのは、商品の価値を伝える「一流の営業マン」です。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-44"><h4 class="font30" id="secrets-box-44" data-source-index="44"><button class="secrets-toggle" id="secrets-box-44-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-44-panel" disabled><span class="secrets-toggle-copy">売る・予約を取る・見込み客を集める。<br>目的から、LPの型を選ぶべし。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-44-panel" aria-labelledby="secrets-box-44"><p data-source-index="64"><strong class="zero-trust-highlight">あなたの商品・サービスは、初めて訪れたお客様が、その場で購入を決められるものですか？</strong></p>
+<p>最後までお読みいただくことで、<strong>商品・サービスの魅力をどう伝え、自社の売上を伸ばすためにLPで取り組むべきことの全体像と、具体的な進め方</strong>がわかります。</p>
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">SALESMAN</span><p data-source-index="42" class="secrets-closing-yellow">担当者が商材に向き合う熱量が、LPのCVRを変える。</p><p data-source-index="43" class="secrets-closing-blue">私たちが作るのは、商品の価値を伝える「一流の営業マン」です。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-44"><h4 class="font30" id="secrets-box-44" data-source-index="44"><button class="secrets-toggle" id="secrets-box-44-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-44-panel" disabled><span class="secrets-toggle-copy">売る・予約を取る・見込み客を集める。<br>目的から、LPの型を選ぶべし。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-44-panel" aria-labelledby="secrets-box-44"><p data-source-index="64"><strong class="zero-trust-highlight">あなたの商品・サービスは、初めて訪れたお客様が、その場で購入を決められるものですか？</strong></p>
 <p>すぐに購入できる商品もあれば、まずは相談したり、体験したりしてから決めたいサービスもあります。<br>そのため、商品やお客様に合った入口を考えることが大切です。</p>
 <p><strong class="zero-trust-highlight">LPは目的に応じたさまざまな型があります。</strong></p>
 <p>以下は、ZEROがこれまでに手がけたLPの制作事例です。<br><strong class="zero-trust-highlight">それぞれのページが、最後にどのような行動を促しているか</strong>に注目してご覧ください。</p>
@@ -463,7 +422,8 @@
 <p data-source-index="77">また、最初に設定した目的を、そのまま正解だと決めつけないことも重要です。<br>分析や公開後の検証結果によっては、商品購入型から問い合わせ型へ、問い合わせ型からリード獲得型へ切り替えるなど、LPの目的と型そのものを見直す必要があります。</p>
 <p data-source-index="78">最終的な目的が売上を増やすことであっても、そこへ至る入口は一つではありません。</p>
 <p data-source-index="79"><strong class="lp-purpose-emphasis">ZEROでは、300社以上のLP制作・改善実績</strong>をもとに、ご希望の型をそのまま制作するだけでなく、申し込みから購入・契約までの道筋を考え、必要であれば<strong class="lp-purpose-emphasis">「何を申し込んでもらうLPにするのか」</strong>という目的の設計から改めてご提案します。</p>
-<p data-source-index="80">では、<strong class="zero-trust-highlight">選んだ入口から売上・利益につなげるために、問い合わせ1件にどれだけの価値があり、何件の申し込みが必要になるのでしょうか。</strong><br>次の秘訣では、LTVとKPIをもとに、顧客獲得にかけられる費用と、目標達成に必要な受注・問い合わせ・アクセス数を考えていきます。</p><div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-02-sp.svg" width="312" height="164"><img src="images/secrets-closing-centered/closing-02-pc.svg" width="950" height="188" loading="lazy" decoding="async" alt="LPの型は、見た目の好みや最初の思い込みで決めない。 顧客・競合・自社を知り、売上につながる入口を見極めます。"></picture><span class="secrets-closing-bg" aria-hidden="true">PURPOSE</span><p data-source-index="82" class="secrets-closing-yellow">LPの型は、見た目の好みや最初の思い込みで決めない。</p><p data-source-index="83" class="secrets-closing-blue">顧客・競合・自社を知り、売上につながる入口を見極めます。</p></div></div></section></div></section>
+<p data-source-index="80">では、<strong class="zero-trust-highlight">選んだ入口から売上・利益につなげるために、問い合わせ1件にどれだけの価値があり、何件の申し込みが必要になるのでしょうか。</strong><br>次の秘訣では、LTVとKPIをもとに、顧客獲得にかけられる費用と、目標達成に必要な受注・問い合わせ・アクセス数を考えていきます。</p>
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">PURPOSE</span><p data-source-index="82" class="secrets-closing-yellow">LPの型は、見た目の好みや最初の思い込みで決めない。</p><p data-source-index="83" class="secrets-closing-blue">顧客・競合・自社を知り、売上につながる入口を見極めます。</p></div></div></section></div></section>
 <section id="secret-02" class="secret-box black-dot secrets-renovated" aria-labelledby="secret-title-2"><div class="wrap"><figure><img src="images/reason2.svg" alt="02" width="200" height="135.1" loading="lazy" decoding="async" class="img-tag"></figure><h3 id="secret-title-2" class="underline-ttl font33" data-source-index="84">LP制作の前に、CVの先にある売上と利益まで計算する</h3><p data-source-index="85">LTVとKPIを使って、問い合わせ1件に使える広告費と、そこから見込める利益を整理します。<br>売上・利益目標に必要な問い合わせ件数を、根拠を持って決める方法がわかります。</p>
 
 
@@ -507,7 +467,8 @@
 <p>実際に計算するときは、自社の来店率・契約率・再契約率を使います。<br>データが足りない部分は仮定として置き、結果がわかったら更新していきましょう。</p>
 <p>通販のリピート購入や定期購入、スクールの継続受講、企業向けサービスの契約更新・追加発注も、同じ考え方です。<br><strong class="zero-trust-highlight">大切なのは、初回の売上だけで広告を判断せず、その後の取引と費用まで含めて、利益が残るかを確認することです。</strong></p>
 <p>では、このサロンで月15件の本コース契約を目指すなら、何件の問い合わせと、いくらの広告費が必要でしょうか。<br>次は、<strong class="secret02-black-bold">目標から逆算して必要な集客数と予算を出し、利益を残せるかを確かめる手順</strong>を見ていきましょう。</p>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-03-sp.svg" width="312" height="164"><img src="images/secrets-closing-centered/closing-03-pc.svg" width="950" height="188" loading="lazy" decoding="async" alt="目先の数字に、騙されるな。 問い合わせ1件から、最終的にいくらの利益が残るのかまで計算する。"></picture><span class="secrets-closing-bg" aria-hidden="true">LIFETIME VALUE</span><p data-source-index="130" class="secrets-closing-yellow">目先の数字に、騙されるな。</p><p data-source-index="131" class="secrets-closing-blue">問い合わせ1件から、最終的にいくらの利益が残るのかまで計算する。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-132"><h4 class="font30" id="secrets-box-132" data-source-index="132"><button class="secrets-toggle" id="secrets-box-132-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-132-panel" disabled><span class="secrets-toggle-copy">目標を、必要な問い合わせ数まで落とし込む。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-132-panel" aria-labelledby="secrets-box-132"><p>前の例では、初回体験からコース契約・再契約まで含めた、お客様1人の売上を考えました。<br>次は、同じサロンで「<strong>目標を達成するには、何件の問い合わせが必要か</strong>」を計算してみましょう。</p>
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">LIFETIME VALUE</span><p data-source-index="130" class="secrets-closing-yellow">目先の数字に、騙されるな。</p><p data-source-index="131" class="secrets-closing-blue">問い合わせ1件から、最終的にいくらの利益が残るのかまで計算する。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-132"><h4 class="font30" id="secrets-box-132" data-source-index="132"><button class="secrets-toggle" id="secrets-box-132-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-132-panel" disabled><span class="secrets-toggle-copy">目標を、必要な問い合わせ数まで落とし込む。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-132-panel" aria-labelledby="secrets-box-132"><p>前の例では、初回体験からコース契約・再契約まで含めた、お客様1人の売上を考えました。<br>次は、同じサロンで「<strong>目標を達成するには、何件の問い合わせが必要か</strong>」を計算してみましょう。</p>
 <p><strong class="zero-trust-highlight">売上目標を掲げるだけでなく、集めるべき問い合わせ数と、必要な広告予算まで具体的にします。</strong></p>
 <h5 class="secrets-subtitle">本コースを月15件契約するには、何人の来店が必要？</h5>
 <p>今回は、12万円の本コースを、1か月に15件契約することを目標にします。<br>新規のコース契約額では180万円です。</p>
@@ -585,7 +546,8 @@
 <h5 data-source-index="173" class="secrets-subtitle secret02-transition-copy">必要な数字は見えた。では、どうすればお客様に選ばれるのか。</h5>
 <p data-source-index="174">目標を達成するには、お客様が「他社ではなく、ここに申し込みたい」と思う理由が必要です。</p>
 <p data-source-index="177">次は、<strong class="zero-trust-highlight secret02-black-bold">顧客・競合・自社の「3C分析」から、自社の強みを「選ばれる理由」に変える方法</strong>を解説します。<br>誰に、何を伝えればよいかが見えてきます。</p>
-</div><div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-04-sp.svg" width="312" height="193"><img src="images/secrets-closing-centered/closing-04-pc.svg" width="950" height="188" loading="lazy" decoding="async" alt="CV数を、感覚や希望だけで決めない。 LTVと売上目標から、必要な受注・問い合わせ・アクセス数を逆算する。"></picture><span class="secrets-closing-bg" aria-hidden="true">KPI</span><p data-source-index="151" class="secrets-closing-yellow">CV数を、感覚や希望だけで決めない。</p><p data-source-index="152" class="secrets-closing-blue">LTVと売上目標から、必要な受注・問い合わせ・アクセス数を逆算する。</p></div></div></section></div></section>
+</div>
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">KPI</span><p data-source-index="151" class="secrets-closing-yellow">CV数を、感覚や希望だけで決めない。</p><p data-source-index="152" class="secrets-closing-blue">LTVと売上目標から、必要な受注・問い合わせ・アクセス数を逆算する。</p></div></div></section></div></section>
 <section id="secret-03" class="secret-box black-dot secrets-renovated" aria-labelledby="secret-title-3"><div class="wrap"><figure><img src="images/reason3.svg" alt="03" width="200" height="135.1" loading="lazy" decoding="async" class="img-tag"></figure><h3 id="secret-title-3" class="underline-ttl font33" data-source-index="178">徹底力の３C分析マーケティング</h3><div class="flex-wrapper secret03-legacy-intro"><figure><img class="sp-float" src="images/reason1-img.svg" alt="顧客・競合・自社の3C分析" width="346" height="322" loading="lazy" decoding="async"></figure><div class="secret-txt"><p class="font23 mb55 bold">3C分析とは<br><span class="ylw-bg-through">「顧客(customer)」 <br class="sp">「競合(competitor)」&nbsp;<br>「自社(company)」</span><br class="sp">の頭文字です。<br>自社の戦略に活かすため<br class="sp">この順番で行います。</p><p>顧客分析の結果に基づき競合分析を行い、<br class="pc">競合分析の結果に基づき自社分析を行います。あくまで起点は顧客。<br>それに対して自社の現状はどうなのかを分析することで<br class="pc">成果に繋がるランディングページ戦略を組み立てることができます。</p></div></div>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-195"><h4 class="font30" id="secrets-box-195" data-source-index="195"><button class="secrets-toggle" id="secrets-box-195-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-195-panel" disabled><span class="secrets-toggle-copy">顧客分析｜属性だけでなく、買う理由と迷う理由まで捉える</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-195-panel" aria-labelledby="secrets-box-195"><p data-source-index="196"><strong class="zero-trust-highlight">「商品の良さを伝えているのに、なぜお客様は申し込まないのでしょうか？」</strong></p>
 <p>歯のホワイトニング商品を販売しているクライアントから、このようなご相談をいただいたことがあります。</p>
@@ -626,7 +588,8 @@
 <p class="secret03-compact-list">・調査や人物像に、根拠があるか<br>・確認できた事実と、仮説を分けているか<br>・購入や契約をためらう疑問に、LPで答えられるか</p>
 <p>ここまで整理すると、顧客分析が、実際のLPの構成や文章につながります。</p>
 <div class="secret03-next-step"><p>お客様が求めていることが分かったら、次は「ほかの商品・サービスと比べて、なぜ自社を選ぶのか」を考えます。</p><p>お客様は何を比べ、何を決め手に申し込むのでしょうか。<br>次は、競合の訴求・価格・口コミから、<strong class="zero-trust-highlight">お客様が比較するポイントと、自社が選ばれる理由を見つける方法</strong>を徹底的に解説します。</p></div>
-<p class="secret-scope-note">この章ではZEROの調査・分析の考え方を解説しています。<br>標準範囲はプランごとに異なり、デザイン・コーディングプランはご提供情報のみを使用して独自調査を行いません。<br>マーケティングプランでは、ペルソナ・検討心理・カスタマージャーニーを整理します。<br>ZERO式LP制作プランでは、合意した調査範囲に沿って商材に適した口コミ・Q&amp;A・SNS等も確認します。</p><div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-05-sp.svg" width="312" height="193"><img src="images/secrets-closing-centered/closing-05-pc.svg" width="950" height="188" loading="lazy" decoding="async" alt="属性の向こうにある、買う理由と迷う理由を見つける。 一人の気持ちを深く知り、LPで答えるべき疑問を掘り起こす。"></picture><span class="secrets-closing-bg" aria-hidden="true">ZERO METHOD</span><p data-addition-id="text-first-20260918-195-yellow" class="secrets-closing-yellow">属性の向こうにある、買う理由と迷う理由を見つける。</p><p data-addition-id="text-first-20260918-195-blue" class="secrets-closing-blue">一人の気持ちを深く知り、LPで答えるべき疑問を掘り起こす。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-244"><h4 class="font30" id="secrets-box-244" data-source-index="244"><button class="secrets-toggle" id="secrets-box-244-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-244-panel" disabled><span class="secrets-toggle-copy">競合分析｜お客様が比較するポイントと、選ばれる理由を見つける</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-244-panel" aria-labelledby="secrets-box-244">
+<p class="secret-scope-note">この章ではZEROの調査・分析の考え方を解説しています。<br>標準範囲はプランごとに異なり、デザイン・コーディングプランはご提供情報のみを使用して独自調査を行いません。<br>マーケティングプランでは、ペルソナ・検討心理・カスタマージャーニーを整理します。<br>ZERO式LP制作プランでは、合意した調査範囲に沿って商材に適した口コミ・Q&amp;A・SNS等も確認します。</p>
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">ZERO METHOD</span><p data-addition-id="text-first-20260918-195-yellow" class="secrets-closing-yellow">属性の向こうにある、買う理由と迷う理由を見つける。</p><p data-addition-id="text-first-20260918-195-blue" class="secrets-closing-blue">一人の気持ちを深く知り、LPで答えるべき疑問を掘り起こす。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-244"><h4 class="font30" id="secrets-box-244" data-source-index="244"><button class="secrets-toggle" id="secrets-box-244-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-244-panel" disabled><span class="secrets-toggle-copy">競合分析｜お客様が比較するポイントと、選ばれる理由を見つける</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-244-panel" aria-labelledby="secrets-box-244">
 <p><strong class="zero-trust-highlight">「短時間で使える」と聞いても、それだけで「自分でも続けられそう」と思えるとは限りません。</strong></p>
 <p>使う時間は短くても、毎回の準備や片付けが面倒だったらどうでしょうか。<br>前章で考えた「自宅で無理なくケアを続けたい」というお客様は、使用時間だけでなく、生活に取り入れるまでの手間も気にするかもしれません。</p>
 <p>競合の商品は、何を魅力として伝えているのか。<br>それに対して、利用者は何を評価し、どこに負担を感じているのか。</p>
@@ -679,7 +642,8 @@
 <p class="secret-scope-note">マーケティングプランでの競合調査は、公開LP・ホームページの確認が標準範囲です。<br>ZERO式LP制作プランでは、合意した調査範囲に沿って口コミ等も確認します。<br>実際の調査対象・媒体・収集件数は、商材や情報量を踏まえて事前に定めます。</p>
 <div class="secret03-next-step"><p>比較される条件が見えたら、次は、自社がその期待にどう応えられるかを確認します。<br>社内では当たり前だと思っていた特徴が、お客様にとっては選ぶ理由になるかもしれません。</p>
 <p>次は、<strong class="zero-trust-highlight">自社の特徴と裏付けを整理し、お客様に選ばれる理由から、LPの訴求軸・コンセプトを定める方法</strong>を見ていきましょう。</p></div>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-06-sp.svg" width="312" height="193"><img src="images/secrets-closing-centered/closing-06-pc.svg" width="950" height="188" loading="lazy" decoding="async" alt="まねるべき表現ではなく、選ばれる条件を探す。 比較と口コミから、ユーザーが求める価値と、満たされていない期待を見つける。"></picture><span class="secrets-closing-bg" aria-hidden="true">ZERO METHOD</span><p data-addition-id="text-first-20260918-244-yellow" class="secrets-closing-yellow">まねるべき表現ではなく、選ばれる条件を探す。</p><p data-addition-id="text-first-20260918-244-blue" class="secrets-closing-blue">比較と口コミから、ユーザーが求める価値と、満たされていない期待を見つける。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-265"><h4 class="font30" id="secrets-box-265" data-source-index="265"><button class="secrets-toggle" id="secrets-box-265-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-265-panel" disabled><span class="secrets-toggle-copy">自社分析｜社内の「当たり前」を、お客様に選ばれる理由へ。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-265-panel" aria-labelledby="secrets-box-265">
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">ZERO METHOD</span><p data-addition-id="text-first-20260918-244-yellow" class="secrets-closing-yellow">まねるべき表現ではなく、選ばれる条件を探す。</p><p data-addition-id="text-first-20260918-244-blue" class="secrets-closing-blue">比較と口コミから、ユーザーが求める価値と、満たされていない期待を見つける。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-265"><h4 class="font30" id="secrets-box-265" data-source-index="265"><button class="secrets-toggle" id="secrets-box-265-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-265-panel" disabled><span class="secrets-toggle-copy">自社分析｜社内の「当たり前」を、お客様に選ばれる理由へ。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-265-panel" aria-labelledby="secrets-box-265">
 <p><strong class="zero-trust-highlight">「他社と何が違うのですか？」と聞かれたら、何と答えますか？</strong></p>
 <p>「高品質です」「使いやすいです」「サポートが充実しています」。<br>それだけでは、お客様は自分にとって何がよいのか、判断できません。</p>
 <p>一方、社内では当たり前の使い方や対応が、お客様の探している価値かもしれません。<br><strong class="zero-trust-highlight">この章では、自社の情報から「選ばれる理由」を見つけ、LPで何を主役にするかを決めていきます。</strong></p>
@@ -716,7 +680,8 @@
 <p><strong class="zero-trust-highlight">伝える価値が決まることと、その価値に興味を持ってもらえることは、同じではありません。</strong></p>
 <p>次章では、<strong class="zero-trust-highlight">調べ抜いた情報から「ビッグアイデア」を生む考え方と、その切り口をLP全体のストーリーへつなげる方法</strong>を解説します。<br>掲載しているLPを見ながら、冒頭で何を伝え、どの順番で疑問に答えていくのかを確認していきましょう。</p>
 <p class="secret-scope-note">マインドマップの作成は、ZERO式LP制作プランの対応範囲です。<br>マーケティングプランでは、自社の価値を要点として整理し、訴求軸・コンセプト・次章のビッグアイデアを一つの資料にまとめます。マインドマップの作成は含みません。</p>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-07-sp.svg" width="312" height="222"><img src="images/secrets-closing-centered/closing-07-pc.svg" width="950" height="233" loading="lazy" decoding="async" alt="調べて終わりではない。選ばれる理由が見えるまで、考え抜く。 顧客・競合・自社を深く知り、LPの訴求軸とコンセプトを定めます。"></picture><span class="secrets-closing-bg" aria-hidden="true">STRATEGY</span><p data-source-index="305" class="secrets-closing-yellow">調べて終わりではない。<br>選ばれる理由が見えるまで、考え抜く。</p><p data-source-index="306" class="secrets-closing-blue">顧客・競合・自社を深く知り、LPの訴求軸とコンセプトを定めます。</p></div></div></section></div></section>
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">STRATEGY</span><p data-source-index="305" class="secrets-closing-yellow">調べて終わりではない。<br>選ばれる理由が見えるまで、考え抜く。</p><p data-source-index="306" class="secrets-closing-blue">顧客・競合・自社を深く知り、LPの訴求軸とコンセプトを定めます。</p></div></div></section></div></section>
 <section id="secret-04" class="secret-box black-dot secrets-renovated" aria-labelledby="secret-title-4"><div class="wrap"><figure><img src="images/reason4.svg" alt="04" width="200" height="135.11" loading="lazy" decoding="async" class="img-tag"></figure><h3 id="secret-title-4" class="underline-ttl font33" data-source-index="307">売れる完璧なストーリーを脚本</h3>
 <div class="flex-wrapper secret04-legacy-intro"><figure><img src="images/reason2-img.svg" alt="モニターと書類で表すLPのストーリー設計" width="267.7" height="182.27" loading="lazy" decoding="async"></figure><div class="secret-txt"><p data-source-index="308">調査で見つけた価値から、興味を引く切り口と、納得して申し込めるストーリーを考えます。<br>ビッグアイデアの生み方と、伝える情報を並べる順序がわかります。</p></div></div>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-311"><h4 class="font30" id="secrets-box-311" data-source-index="311"><button class="secrets-toggle" id="secrets-box-311-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-311-panel" disabled><span class="secrets-toggle-copy">調べ抜いた情報から、商品の見え方を変えるビッグアイデアを生む</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-311-panel" aria-labelledby="secrets-box-311">
@@ -744,8 +709,9 @@
 <p><strong class="zero-trust-highlight">選んだ切り口・採用理由・裏付け資料・未確認事項を残し、構成づくりへ引き継ぎます。</strong></p>
 <p class="secret-scope-note">マーケティングプランでは、顧客理解と自社分析から訴求軸・コンセプト・ビッグアイデアを設計し、戦略資料にまとめます。<br>ZERO式LP制作プランでは、事前に合意した調査範囲を踏まえて設計します。</p>
 <div class="secret04-next-step"><p>興味を持っても、申し込みを決めるまでには「自分にも合う？」「どう使う？」「費用や購入条件は？」という疑問が続きます。</p><p><strong class="zero-trust-highlight">次は、実際の歯のホワイトニング商品のLPで、「何を、どの順番で伝えるか」を見ていきましょう。</strong></p><p>「笑顔が自慢の私になる」という期待を、どう納得につなげているのか。ファーストビューから申し込みまで、各パートの役割と構成の考え方を解説します。</p></div>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-08-sp.svg" width="312" height="222"><img src="images/secrets-closing-centered/closing-08-pc.svg" width="950" height="233" loading="lazy" decoding="async" alt="調べ抜いた情報がつながると、商品の新しい見せ方が見えてくる。 その価値を「欲しい」に変える、ビッグアイデアを生み出します。"></picture><span class="secrets-closing-bg" aria-hidden="true">BIG IDEA</span><p data-source-index="326" class="secrets-closing-yellow">調べ抜いた情報がつながると、商品の新しい見せ方が見えてくる。</p><p data-source-index="327" class="secrets-closing-blue">その価値を「欲しい」に変える、ビッグアイデアを生み出します。</p></div>
-</div></section><section class="white-box secrets-white megacure-story-section" aria-labelledby="secrets-box-328"><h4 class="font30" id="secrets-box-328" data-source-index="328"><button class="secrets-toggle" id="secrets-box-328-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-328-panel" disabled><span class="secrets-toggle-copy">3C分析と検索キーワードに合わせたストーリーを設計する</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-328-panel" aria-labelledby="secrets-box-328">
+
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">BIG IDEA</span><p data-source-index="326" class="secrets-closing-yellow">調べ抜いた情報がつながると、商品の新しい見せ方が見えてくる。</p><p data-source-index="327" class="secrets-closing-blue">その価値を「欲しい」に変える、ビッグアイデアを生み出します。</p></div></div></section><section class="white-box secrets-white megacure-story-section" aria-labelledby="secrets-box-328"><h4 class="font30" id="secrets-box-328" data-source-index="328"><button class="secrets-toggle" id="secrets-box-328-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-328-panel" disabled><span class="secrets-toggle-copy">3C分析と検索キーワードに合わせたストーリーを設計する</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-328-panel" aria-labelledby="secrets-box-328">
 <p class="megacure-story-intro">前章では、顧客の願い・比較条件・商品の特徴から、ビッグアイデアを考えました。<br>ここでは、その考え方を実際の歯のホワイトニング商品のLPに照らして見ていきます。<br><br><strong class="zero-trust-highlight">分析した情報をどこで使い、なぜその順番で見せるのか。</strong><br>12のパートから、構成の意図と、ユーザーに感じてもらいたい気持ちを解説します。</p>
 <div class="secrets-legacy-story megacure-story megacure-story--approved"><div class="story-each story-each--1" data-story-step="1">
 <figure class="story-creative"><span class="story-shot" style="--source-width:100.000000%;--edge-offset:0.000000%" data-trim-left="0" data-trim-right="0"><img src="images/megacure-story-approved-20260926/01-first-view.png" alt="歯のホワイトニング商品のLP構成例 1：ファーストビュー" width="806" height="1154" loading="lazy" decoding="async"></span></figure>
@@ -800,15 +766,16 @@
 <div class="blue-r-box"><figure><img src="images/icon1.svg" alt="" loading="lazy" decoding="async"></figure><span>ユーザーが求めている情報を</span></div>
 <div class="blue-r-box"><figure><img src="images/icon2.svg" alt="" loading="lazy" decoding="async"></figure><span>わかりやすく伝えたい順序で</span></div>
 <div class="blue-r-box"><figure><img src="images/icon3.svg" alt="" loading="lazy" decoding="async"></figure><span>わかりやすい画像で伝えることで</span></div>
-<div class="secrets-closing secrets-closing--image megacure-story-conclusion">
-<picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/megacure-story-approved-20260926/story-closing-sp.png" width="312" height="222"><img src="images/megacure-story-approved-20260926/story-closing-pc.png" width="950" height="193" loading="lazy" decoding="async" alt="3C分析で、選ばれる理由を見つける。ビッグアイデアから、伝わるLPをつくる。その設計で、成約率を大きく改善する。"></picture>
+
+</div>
+
+
+<div class="secrets-closing secrets-closing--text">
+
 <span class="secrets-closing-bg" aria-hidden="true">STORY</span>
 <p class="secrets-closing-yellow">3C分析で、選ばれる理由を見つける。ビッグアイデアから、伝わるLPをつくる。</p>
 <p class="secrets-closing-blue">その設計で、成約率を大きく改善する。</p>
-</div>
-</div>
-
-</div></section>
+</div></div></section>
 </div></section>
 <section id="secret-05" class="secret-box black-dot secrets-renovated" aria-labelledby="secret-title-5"><div class="wrap"><figure><img src="images/reason5.svg" alt="05" width="200" height="135.11" loading="lazy" decoding="async" class="img-tag"></figure><h3 id="secret-title-5" class="underline-ttl font33" data-source-index="349">一人のお客様に向き合い、心を動かす言葉を書く</h3><p data-source-index="351">読む人の悩みに向き合い、商品の特徴を「自分に役立つ」と感じられる言葉に変えます。<br>興味から理解、納得、行動へとつなぐ文章の書き方がわかります。</p>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-354"><h4 class="font30" id="secrets-box-354" data-source-index="354"><button class="secrets-toggle" id="secrets-box-354-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-354-panel" disabled><span class="secrets-toggle-copy">商品の特徴を並べず、あの人の悩みに答える。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-354-panel" aria-labelledby="secrets-box-354">
@@ -837,7 +804,8 @@
 <p><strong class="zero-trust-highlight">相手に届くコピーは、その人が知りたいことに、具体的な言葉で答えることから始まります。</strong></p>
 <p>では、その答えをどうつなげれば、「もう少し読んでみよう」「ここに相談してみよう」と感じてもらえるのでしょうか。</p>
 <p>次は、<strong class="zero-trust-highlight">読む理由から行動する理由へ、一文ずつ気持ちをつなぐ書き方</strong>を見ていきましょう。</p>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-10-sp.svg" width="312" height="164"><img src="images/secrets-closing-centered/closing-10-pc.svg" width="950" height="151" loading="lazy" decoding="async" alt="商品の特徴を、あの人が選ぶ理由へ。 言いたいことを並べず、読み手が知りたいことに答える。"></picture><span class="secrets-closing-bg" aria-hidden="true">ZERO METHOD</span><p data-approved-id="secret05-20260918-1-closing-1" class="secrets-closing-yellow">商品の特徴を、あの人が選ぶ理由へ。</p><p data-approved-id="secret05-20260918-1-closing-2" class="secrets-closing-blue">言いたいことを並べず、読み手が知りたいことに答える。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-363"><h4 class="font30" id="secrets-box-363" data-source-index="363"><button class="secrets-toggle" id="secrets-box-363-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-363-panel" disabled><span class="secrets-toggle-copy">読む理由から、行動する理由へ。一文ずつ気持ちをつなぐ。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-363-panel" aria-labelledby="secrets-box-363">
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">ZERO METHOD</span><p data-approved-id="secret05-20260918-1-closing-1" class="secrets-closing-yellow">商品の特徴を、あの人が選ぶ理由へ。</p><p data-approved-id="secret05-20260918-1-closing-2" class="secrets-closing-blue">言いたいことを並べず、読み手が知りたいことに答える。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-363"><h4 class="font30" id="secrets-box-363" data-source-index="363"><button class="secrets-toggle" id="secrets-box-363-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-363-panel" disabled><span class="secrets-toggle-copy">読む理由から、行動する理由へ。一文ずつ気持ちをつなぐ。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-363-panel" aria-labelledby="secrets-box-363">
 <p><strong class="zero-trust-highlight">必要な情報は書いてある。それでも、お客様が途中で読むのをやめてしまうのは、なぜでしょうか。</strong></p>
 <p>一つひとつの説明が正しくても、読み手が次に知りたいことへつながっていなければ、疑問が残ります。<br>前章では、お客様の不安に答える言葉を考えました。<br><strong class="zero-trust-highlight">ここでは、その答えから生まれる次の疑問へ文章をつなぎ、「もう少し読みたい」「相談してみたい」につなげる方法を見ていきましょう。</strong></p>
 <h5 class="secrets-subtitle">① 冒頭で、自分に関係があることと、読むメリットを伝える。</h5>
@@ -860,7 +828,8 @@
 <p><strong class="zero-trust-highlight">何を相談でき、連絡後にどう進むのか。次の一歩が分かるところまで、言葉を整えます。</strong></p>
 <p>ここまでで、読む理由から行動する理由まで、文章をつなぐ考え方が見えてきました。<br>では、この流れに当てはめれば、それだけで相手に届く原稿になるのでしょうか。</p>
 <p><strong class="zero-trust-highlight">文章の流れが整っていても、その人の状況に合わない一言が残っているかもしれません。</strong><br>次は、下書きをそのまま完成にせず、担当者自身が一人のお客様を思い浮かべ、届く言葉へ磨き上げる姿勢についてお伝えします。</p>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-11-sp.svg" width="312" height="222"><img src="images/secrets-closing-centered/closing-11-pc.svg" width="950" height="233" loading="lazy" decoding="async" alt="「自分のことだ」から、「もっと知りたい」、そして行動へ。 読む理由をつくり、疑問に答え、行動した後の未来まで伝える。"></picture><span class="secrets-closing-bg" aria-hidden="true">ZERO METHOD</span><p data-approved-id="secret05-20260918-2-closing-1" class="secrets-closing-yellow">「自分のことだ」から、「もっと知りたい」、そして行動へ。</p><p data-approved-id="secret05-20260918-2-closing-2" class="secrets-closing-blue">読む理由をつくり、疑問に答え、行動した後の未来まで伝える。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-message-title"><h4 id="secrets-message-title" class="secrets-message-title"><button class="secrets-toggle" id="secrets-message-title-toggle" type="button" aria-expanded="true" aria-controls="secrets-message-title-panel" disabled><span class="secrets-toggle-copy">最後は、自分の手で。相手に届く言葉に、魂を込める。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-message-title-panel" aria-labelledby="secrets-message-title"><p><strong class="zero-trust-highlight">文章の流れは整った。それでも、読み手が「ここに頼もう」と思えないのは、なぜでしょうか。</strong></p>
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">ZERO METHOD</span><p data-approved-id="secret05-20260918-2-closing-1" class="secrets-closing-yellow">「自分のことだ」から、「もっと知りたい」、そして行動へ。</p><p data-approved-id="secret05-20260918-2-closing-2" class="secrets-closing-blue">読む理由をつくり、疑問に答え、行動した後の未来まで伝える。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-message-title"><h4 id="secrets-message-title" class="secrets-message-title"><button class="secrets-toggle" id="secrets-message-title-toggle" type="button" aria-expanded="true" aria-controls="secrets-message-title-panel" disabled><span class="secrets-toggle-copy">最後は、自分の手で。相手に届く言葉に、魂を込める。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-message-title-panel" aria-labelledby="secrets-message-title"><p><strong class="zero-trust-highlight">文章の流れは整った。それでも、読み手が「ここに頼もう」と思えないのは、なぜでしょうか。</strong></p>
 <p>説明する順番が正しくても、肝心な疑問が残っていたり、作り手にしか分からない言葉が使われていたりすることがあります。</p>
 <p>最後に必要なのは、文章をきれいにすることだけではありません。<br><strong class="zero-trust-highlight">画面の向こうにいる一人を思い浮かべ、その人が迷う言葉を、判断できる言葉へ直すことです。</strong></p>
 <h5 class="secrets-subtitle">① 書き手ではなく、初めて読むお客様の立場で読み返す。</h5>
@@ -883,8 +852,9 @@
 
 <p>ここまでで、読み手の疑問に答える言葉と、読み進めてもらう流れが整いました。<br>では、その価値を最初の画面で伝え、続きを読みたくなるLPにするには、どうすればよいのでしょうか。</p>
 <p><strong class="zero-trust-highlight">次の秘訣では、ファーストビューで興味を引き、漫画・イラスト・図解で理解を深めるデザインの工夫を解説します。</strong></p>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-12-sp.svg" width="312" height="164"><img src="images/secrets-closing-centered/closing-12-pc.svg" width="950" height="188" loading="lazy" decoding="async" alt="この一文を読んだとき、あの人は何を思うだろう。 その人に届く言葉になるまで、自分の手で、魂を込めて書く。"></picture><span class="secrets-closing-bg" aria-hidden="true">COPYWRITING</span><p data-source-index="391" class="secrets-closing-yellow">この一文を読んだとき、あの人は何を思うだろう。</p><p data-source-index="392" class="secrets-closing-blue">その人に届く言葉になるまで、自分の手で、魂を込めて書く。</p></div>
-</div></section></div></section>
+
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">COPYWRITING</span><p data-source-index="391" class="secrets-closing-yellow">この一文を読んだとき、あの人は何を思うだろう。</p><p data-source-index="392" class="secrets-closing-blue">その人に届く言葉になるまで、自分の手で、魂を込めて書く。</p></div></div></section></div></section>
 <section id="secret-06" class="secret-box black-dot secrets-renovated" aria-labelledby="secret-title-6"><div class="wrap"><figure><img src="images/reason6.svg" alt="06" width="200" height="135.11" loading="lazy" decoding="async" class="img-tag"></figure><h3 id="secret-title-6" class="underline-ttl font33" data-source-index="393">選ばれる理由が直感的に伝わる、購買意欲をかき立てるデザイン</h3><p data-source-index="395">考え抜いた構成とコピーを、「読んでみたい」「なるほど」と感じるデザインへ。<br>ファーストビューで興味を引き、漫画・イラスト・図解で理解を深める工夫を見ていきましょう。</p>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-397"><h4 class="font30" id="secrets-box-397" data-source-index="397"><button class="secrets-toggle" id="secrets-box-397-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-397-panel" disabled><span class="secrets-toggle-copy">ランディングページはファーストビューが命</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-397-panel" aria-labelledby="secrets-box-397">
 <p><strong class="zero-trust-highlight">商品のパッケージやお店の外観を見て、「なんとなく良さそう」と感じたことはありませんか？</strong></p>
@@ -938,7 +908,8 @@
 <p>ただし、制作段階の判断だけで成果は保証できません。<br>公開後の反応も確かめ、必要に応じて見直します。</p>
 <p><strong class="zero-trust-highlight">ファーストビューは、すべてを説明する場所ではなく、その先を読む理由をつくる入口です。</strong></p>
 <p>では、興味を持ったお客様に、商品の仕組みや魅力をどう分かりやすく届ければよいのでしょうか。<br><strong class="zero-trust-highlight">次は、漫画・イラスト・図解を使い、読む負担を減らしながら理解を深める工夫を見ていきましょう。</strong></p>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-13-sp.svg" width="312" height="193"><img src="images/secrets-closing-centered/closing-13-pc.svg" width="950" height="188" loading="lazy" decoding="async" alt="「なんとなく良さそう」を、偶然に任せない。 コピーとデザインで、商品の魅力が伝わる「営業マンの顔」をつくります。"></picture><span class="secrets-closing-bg" aria-hidden="true">FIRST VIEW</span><p data-source-index="424" class="secrets-closing-yellow">「なんとなく良さそう」を、偶然に任せない。</p><p data-source-index="425" class="secrets-closing-blue">コピーとデザインで、商品の魅力が伝わる「営業マンの顔」をつくります。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-426"><h4 class="font30" id="secrets-box-426" data-source-index="426"><button class="secrets-toggle" id="secrets-box-426-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-426-panel" disabled><span class="secrets-toggle-copy">見出しと画像で惹きつけ、漫画・イラスト・図解で理解を深める</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-426-panel" aria-labelledby="secrets-box-426">
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">FIRST VIEW</span><p data-source-index="424" class="secrets-closing-yellow">「なんとなく良さそう」を、偶然に任せない。</p><p data-source-index="425" class="secrets-closing-blue">コピーとデザインで、商品の魅力が伝わる「営業マンの顔」をつくります。</p></div></div></section><section class="white-box secrets-white" aria-labelledby="secrets-box-426"><h4 class="font30" id="secrets-box-426" data-source-index="426"><button class="secrets-toggle" id="secrets-box-426-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-426-panel" disabled><span class="secrets-toggle-copy">見出しと画像で惹きつけ、漫画・イラスト・図解で理解を深める</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-426-panel" aria-labelledby="secrets-box-426">
 <p><strong class="zero-trust-highlight">気になる商品なのに、説明が長くて読むのをやめたことはありませんか？</strong></p>
 <p>ファーストビューで興味を持っても、その先が文字ばかりでは、読み進める負担になります。<br>見出しで要点をつかみ、画像でイメージし、気になった説明を読む。<br>流し読みでも内容を追えるように、言葉と画像の役割を分けます。</p>
 <p>では、漫画・イラスト・図解は、どう使い分ければよいのでしょうか。<br>同じ宅配クリーニングを題材に、表現による伝わり方の違いを見てみましょう。</p>
@@ -970,7 +941,8 @@
 <p><strong class="zero-trust-highlight">何を伝えたいかで表現を選ぶ。<br>それが、飾りではなく、理解を助ける画像を作るための基準です。</strong></p>
 <p>ただし、分かりやすい画像でも、スマホで文字が読めなかったり、表示に時間がかかったりすれば、十分に役立ちません。</p>
 <p><strong class="zero-trust-highlight">次の秘訣では、読みやすさ・表示速度・申し込み導線を整え、考え抜いたコピーとデザインを、実際に使いやすいLPへ仕上げる方法を解説します。</strong></p>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/closing-14-laundry-sp.svg" width="312" height="193"><img src="images/closing-14-laundry-pc.svg" width="950" height="188" loading="lazy" decoding="async" alt="伝わらない価値は、選ぶ理由にならない。 漫画・イラスト・図解で、商品の魅力を「見てわかる」に変えます。"></picture><span class="secrets-closing-bg" aria-hidden="true">VISUAL</span><p data-source-index="453" class="secrets-closing-yellow">伝わらない価値は、選ぶ理由にならない。</p><p data-source-index="454" class="secrets-closing-blue">漫画・イラスト・図解で、商品の魅力を「見てわかる」に変えます。</p></div></div></section></div></section>
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">VISUAL</span><p data-source-index="453" class="secrets-closing-yellow">伝わらない価値は、選ぶ理由にならない。</p><p data-source-index="454" class="secrets-closing-blue">漫画・イラスト・図解で、商品の魅力を「見てわかる」に変えます。</p></div></div></section></div></section>
 <section id="secret-07" class="secret-box black-dot secrets-renovated" aria-labelledby="secret-title-7"><div class="wrap"><figure><img src="images/reason7.svg" alt="07" width="200" height="135.11" loading="lazy" decoding="async" class="img-tag"></figure><h3 id="secret-title-7" class="underline-ttl font33">スマホを軸に、閲覧から申し込みまで作り込むLP構築</h3><div class="secret07-intro">
 <p><strong class="zero-trust-highlight">興味を持ったのに、文字が読みにくい。<br>相談したいのに、申し込み方が分からない。<br>そんな理由でページを閉じたことはありませんか？</strong></p>
 <p>前章では、コピーとデザインで商品の魅力を伝える方法を考えました。<br>ここでは、その内容をお客様が無理なく読み、納得して行動できる状態に整えます。</p>
@@ -987,7 +959,8 @@
 <p>もちろん、スマホだけを見ればよいわけではありません。<br>仕事中にPCで比較する人もいれば、移動中にスマホで調べる人もいます。</p>
 <p><strong class="zero-trust-highlight">秘訣3で考えた「あの人」が、どんな場面で、何を使って検討するのか。<br>その閲覧環境に合わせて、PC・スマホそれぞれの見せ方を整えます。</strong></p>
 <p>読みやすく整えた内容も、表示されるまで待たされては届きません。<br>次に確認するのは、ページを開いた瞬間の使い心地です。</p>
-</div></section>
+
+<div class="secrets-closing secrets-closing--text"><p class="secrets-closing-yellow">画面に収まるかではなく、拡大せずに内容を理解できるか。</p><p class="secrets-closing-blue">閲覧環境に合わせて、PC・スマホそれぞれの見せ方を整えます。</p></div></div></section>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-510"><h4 class="font30" id="secrets-box-510"><button class="secrets-toggle" id="secrets-box-510-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-510-panel" disabled><span class="secrets-toggle-copy">② せっかく集めたお客様を、表示待ちで逃さない。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-510-panel" aria-labelledby="secrets-box-510">
 <p><strong class="zero-trust-highlight">広告や検索から訪れたお客様に、最初に見せたいのは「読み込み中の画面」ではありません。</strong></p>
 <p>写真・漫画・イラストは、商品の魅力を伝える大切な素材です。<br>一方で、必要以上に重い画像や演出を増やすと、表示を待つ負担につながります。</p>
@@ -995,7 +968,8 @@
 <p>確認するのは、表示までの時間だけではありません。<br>読み込みの途中で文章やボタンの位置がずれないか。<br>スクロールやタップをしても、操作が妨げられないか。<br>完成した画面だけでなく、表示される途中の状態まで確かめます。</p>
 <p><strong class="zero-trust-highlight">伝えるために作り込んだコピーとデザインを、待たせず、操作を邪魔せず届ける。<br>そこまでが、LPを形にする仕事です。</strong></p>
 <p>スムーズに読めて、「相談してみたい」と思ってもらえた。<br>その気持ちを受け止めるために、最後は申し込みまでの流れを整えます。</p>
-</div></section>
+
+<div class="secrets-closing secrets-closing--text"><p class="secrets-closing-yellow">作り込んだコピーとデザインを、待たせずに届ける。</p><p class="secrets-closing-blue">読み込みから操作まで、LPの使い心地を整えます。</p></div></div></section>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-524"><h4 class="font30" id="secrets-box-524"><button class="secrets-toggle" id="secrets-box-524-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-524-panel" disabled><span class="secrets-toggle-copy">③ ボタンを置くだけでなく、申し込みを終えられる導線をつくる。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-524-panel" aria-labelledby="secrets-box-524">
 <p><strong class="zero-trust-highlight">押した先で何が起こるか分からないボタンは、お客様を迷わせます。</strong></p>
 <p>資料を受け取るのか、相談を申し込むのか、予約日時を選ぶのか。<br>ボタンの言葉と、その先の画面を一致させます。</p>
@@ -1018,7 +992,8 @@
 <p>コピーで興味を持ち、デザインで理解し、迷わず相談できる。<br>それぞれを別々に考えるのではなく、一人のお客様の行動としてつなげます。</p>
 <p>ただし、使いやすいLPができても、必要としている人に届かなければ、その魅力は伝わりません。</p>
 <p><strong class="zero-trust-highlight">次の秘訣では、このLPに「誰を、どこから集めるか」を考えます。<br>SEO・広告・SNSとLPをつなぎ、商品の価値が伝わる集客の道筋を設計します。</strong></p>
-</div></section></div></section>
+
+<div class="secrets-closing secrets-closing--text"><p class="secrets-closing-yellow">読める、使える、申し込める。</p><p class="secrets-closing-blue">一人のお客様の行動として、申し込みまでをつなげます。</p></div></div></section></div></section>
 <section id="secret-08" class="secret-box black-dot secrets-renovated" aria-labelledby="secret-title-8"><div class="wrap"><figure><img src="images/reason8.svg" alt="08" width="200" height="135.11" loading="lazy" decoding="async" class="img-tag"></figure><h3 id="secret-title-8" class="underline-ttl font33">商材とお客様に合う集客を選び、作ったLPを必要としている人へ。</h3>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-572"><h4 class="font30" id="secrets-box-572"><button class="secrets-toggle" id="secrets-box-572-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-572-panel" disabled><span class="secrets-toggle-copy">どこから、どんなお客様を集めるかを、LPとセットで考える。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-572-panel" aria-labelledby="secrets-box-572">
 <p><strong class="zero-trust-highlight">LPが完成したら、誰に、どうやって見てもらえばよいのでしょうか。</strong><br>ここは、LPを成果につなげるために重要な章です。<br>集客方法の特徴とLPの役割を図で整理し、<strong class="zero-trust-highlight">自社で優先する施策と、必要なページ</strong>を考えます。</p>
@@ -1053,7 +1028,8 @@
 <p>提供・対応にかかる費用と、固定費をまかなう分、残したい利益を考えて、CPA（問い合わせ1件を獲得する広告費）の目標を決めます。<br>必要な件数・予算の計算は秘訣②へ。<br>実際の契約率や費用、回収までの期間を確認し、仮定は結果に合わせて更新します。</p>
 <p>早く集客したい場合や、継続発信の体制がない場合は、広告を優先する選択もあります。<br>ただし、計算上の見込みだけで予算を増やさず、実際の反応を確かめます。</p>
 <p><strong class="zero-trust-highlight">相手に合わせた入口と予算が決まったら、次は伝え方です。<br>先ほど触れた記事LP・動画LPで、サービスを知るきっかけをどう作るのか。<br>具体例で見ていきましょう。</strong></p>
-</div></section>
+
+<div class="secrets-closing secrets-closing--text"><p class="secrets-closing-yellow">集める人数だけでなく、受注と採算まで考える。</p><p class="secrets-closing-blue">相手に合わせた入口と予算で、LPへつなぎます。</p></div></div></section>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-597"><h4 class="font30" id="secrets-box-597"><button class="secrets-toggle" id="secrets-box-597-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-597-panel" disabled><span class="secrets-toggle-copy">記事LP・動画LPで、「自分に関係がある」と気づいてもらう。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-597-panel" aria-labelledby="secrets-box-597">
 <p><strong class="zero-trust-highlight">気になる投稿を見つけた人に、何を読んでもらい、何を見てもらえば、購入を考えるきっかけになるのでしょうか。</strong><br>ここでは、記事LPのつなぎ方と、動画を使った3つのアプローチを紹介します。<br>自社のブランドや制作できる内容に合わせて、どこから試すかが分かります。</p>
 <p><strong class="zero-trust-highlight">広告であることを隠すのではなく、広告だと分かっていても、読みたい・見たい内容を作ります。</strong></p>
@@ -1090,7 +1066,8 @@
 <p><strong class="zero-trust-highlight">ZEROでは、販売用LPに加え、記事LP・動画LPも制作できます。</strong><br>情報商材を扱う事業者や個人で集客する方からも、企画・執筆をご相談いただいています。</p>
 <p><strong class="zero-trust-highlight">LP制作時の3C分析を活かし、記事・動画で生まれる興味と、販売用LPで伝える価値をそろえます。</strong><br>お客様の悩み・競合との違い・自社の強みを共通の土台に、媒体や理解度に合わせて切り口と伝える順番を設計します。<br><strong>既存のLPや分析資料を活かした集客も、ZEROへご相談ください。</strong></p>
 <p><strong class="zero-trust-highlight">伝える手法が決まったら、次は届ける場所です。<br>次の白枠では、すでに商品やサービスを探している人へ届ける検索広告を解説します。</strong></p>
-</div></section>
+
+<div class="secrets-closing secrets-closing--text"><p class="secrets-closing-yellow">自分に関係があると気づく入口をつくる。</p><p class="secrets-closing-blue">記事LP・動画LPから、商品の価値を伝えるLPへつなげます。</p></div></div></section>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-643"><h4 class="font30" id="secrets-box-643"><button class="secrets-toggle" id="secrets-box-643-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-643-panel" disabled><span class="secrets-toggle-copy">リスティング広告で、探している人を、答えのあるLPへ案内する。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-643-panel" aria-labelledby="secrets-box-643">
 <p><strong class="zero-trust-highlight">「そのサービスを探している人」に、見つけてもらう方法があります。</strong><br>ここでは、検索広告からLPへ案内する流れと、自社で取り組むかを判断する3つの条件を整理します。</p>
 <p>リスティング広告のうち、検索結果に表示されるものが<strong class="zero-trust-highlight">検索連動型広告</strong>です。<br>商品やサービスに関する検索に合わせて、広告を届けます。</p>
@@ -1104,7 +1081,8 @@
 <p><strong class="zero-trust-highlight">優先候補にする条件は、検索されているか・依頼につながる検索か・費用が合うかの3点です。</strong><br>B2B・B2Cを問わず、秘訣②の採算と照らして判断します。<br>検索が少ない商材や競争が強い分野では、別の入口も組み合わせます。</p>
 <p>商談や社内検討が続くB2Bでは、クリック・問い合わせ件数に加え、有効な商談・受注まで確認します。</p>
 <p><strong class="zero-trust-highlight">検索広告と並行して、役立つ情報から見つけてもらう入口も育てられます。<br>次は、SEO・AI検索につながる情報の整え方です。</strong></p>
-</div></section>
+
+<div class="secrets-closing secrets-closing--text"><p class="secrets-closing-yellow">探している人に、答えのあるLPを届ける。</p><p class="secrets-closing-blue">検索意図と採算に合わせて、広告とLPを設計します。</p></div></div></section>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-667"><h4 class="font30" id="secrets-box-667"><button class="secrets-toggle" id="secrets-box-667-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-667-panel" disabled><span class="secrets-toggle-copy">SEO・AI検索で、お客様の疑問に答える情報を、相談につなげる。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-667-panel" aria-labelledby="secrets-box-667">
 <p><strong class="zero-trust-highlight">商品名を知る前に、悩みや疑問から調べ始めるお客様もいます。</strong><br>ここでは、検索から見つけてもらう記事と、相談につなげるLPの関係を整理します。<br>どんな情報を発信し、どこへ案内すればよいかが分かります。</p>
 <p><strong class="zero-trust-highlight">SEO</strong>は、検索エンジンが内容を理解しやすくし、検索した人が必要な情報を見つけやすくする取り組みです。<br><strong class="zero-trust-highlight">コンテンツSEO</strong>では、疑問に答える記事や事例を整え、検索からの集客につなげます。<br><strong class="zero-trust-highlight">AIO</strong>は、AIの回答で情報を参照・紹介してもらうことを意識した取り組みを指す言葉です。</p>
@@ -1121,7 +1099,8 @@
 <p>専門知識や現場の事例は、商品を選ぶ材料になります。<br>導入条件や他の方法との違いを調べてから相談するB2Bでも、考え方は同じです。</p>
 <p>GoogleのAI検索でも、SEOの基本は引き続き重要です。<br>ただし、検索上位やAIによる紹介・引用は保証されません。<br><strong class="zero-trust-highlight">企画・取材・更新には時間と費用がかかるため、早く集客したい場合は、広告と並行して育てる方法もあります。</strong></p>
 <p><strong class="zero-trust-highlight">検索への答えを用意する一方で、まだ検索していない人に気づいてもらう方法もあります。<br>次は、SNSやディスプレイ広告の選び方です。</strong></p>
-</div></section>
+
+<div class="secrets-closing secrets-closing--text"><p class="secrets-closing-yellow">疑問に答える情報を、次の判断につなげる。</p><p class="secrets-closing-blue">記事とLPをつなぎ、理解を深められる入口を育てます。</p></div></div></section>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-699"><h4 class="font30" id="secrets-box-699"><button class="secrets-toggle" id="secrets-box-699-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-699-panel" disabled><span class="secrets-toggle-copy">SNSで接点を広げ、検討中の人には、もう一度判断材料を届ける。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4><div class="secrets-panel" id="secrets-box-699-panel" aria-labelledby="secrets-box-699">
 <p><strong class="zero-trust-highlight">検索されるのを待つだけでなく、こちらから知ってもらう方法もあります。</strong><br>ここでは、SNSの運用と広告、ディスプレイ広告、リマーケティングを整理します。<br>自社のお客様に、どこで何を見せ、どのLPへ案内するかを考えられるようにします。</p>
 <h5 class="secrets-subtitle">SNS運用は、継続した発信で接点と信頼を育てる。</h5>
@@ -1160,7 +1139,8 @@
 </aside>
 <aside class="secret08-scope" aria-label="プランごとの対応範囲"><p><b>プランごとの対応範囲</b></p><p>記事LP・動画LP、広告運用、SEO・SNSの継続運用は、LP制作とは別途のお見積もりです。<br>対応媒体・制作量・運用内容と、広告媒体費を含む必要な費用は、ご契約前に明確にします。</p></aside>
 <p><strong class="zero-trust-highlight">集客方法を選んだら、次は実際の反応です。<br>次の秘訣では、どこで迷い、何が申し込みを妨げているかを調べ、LPを改善する方法を解説します。</strong></p>
-</div></section></div></section>
+
+<div class="secrets-closing secrets-closing--text"><p class="secrets-closing-yellow">誰に何を伝えるかを、LPと集客で一貫させる。</p><p class="secrets-closing-blue">商材・予算・体制に合わせて、必要な施策を選びます。</p></div></div></section></div></section>
 <section id="secret-09" class="secret-box black-dot secrets-renovated" aria-labelledby="secret-title-9"><div class="wrap">
 <figure><img src="images/reason9.svg" alt="09" width="200" height="135.11" loading="lazy" decoding="async" class="img-tag"></figure>
 <h3 id="secret-title-9" class="underline-ttl font33">制作してからが本当の勝負。分析とA/Bテストで、LPの成果を磨く。</h3>
@@ -1181,9 +1161,10 @@
 <p><strong class="zero-trust-highlight">コピーを比べるなら、画像やデザインはそろえる。<br>ファーストビューを比べるなら、本文・料金・申し込み条件はそろえる。</strong><br>「何の違いを確かめたいか」を先に決め、関係のない箇所を一緒に変えないようにします。</p>
 <p>比較前に、成果として数える行動と計測方法、必要なデータ量や終了の基準を決めます。<br>同じ時期に比較し、流入元や端末の偏りも確認します。<br><strong class="zero-trust-highlight">数件の申し込みや一時的な差だけで、勝ち負けを決めません。</strong><br>必要なデータ量は元の成約率や確かめたい差で変わるため、十分に集まらなければ判断を保留します。</p>
 <p>訪問者が少ない場合は、先に計測漏れやフォームの不具合を確認します。<br>細かなA/Bテストを無理に続けず、流入を確保するか、検証するテーマを絞るかを考えます。</p>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-26-sp.svg" width="312" height="164"><img src="images/secrets-closing-centered/closing-26-pc.svg" width="950" height="151" loading="lazy" decoding="async" alt="訴求の正解を、好みや思い込みで決めない。 ユーザーの反応とデータから、選ばれる切り口を見つける。"></picture><span class="secrets-closing-bg" aria-hidden="true">TEST</span><p data-source-index="787" class="secrets-closing-yellow">訴求の正解を、好みや思い込みで決めない。</p><p data-source-index="788" class="secrets-closing-blue">ユーザーの反応とデータから、選ばれる切り口を見つける。</p></div>
+
 <p><strong class="zero-trust-highlight">入口の反応だけでは、LPの途中で迷う理由までは分かりません。<br>次は、ページ内の行動から、見直す箇所を探します。</strong></p>
-</div></section>
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">TEST</span><p data-source-index="787" class="secrets-closing-yellow">訴求の正解を、好みや思い込みで決めない。</p><p data-source-index="788" class="secrets-closing-blue">ユーザーの反応とデータから、選ばれる切り口を見つける。</p></div></div></section>
 <section class="white-box secrets-white" aria-labelledby="secrets-box-789">
 <h4 class="font30" id="secrets-box-789"><button class="secrets-toggle" id="secrets-box-789-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-789-panel" disabled><span class="secrets-toggle-copy">行動データから迷う箇所を探し、一つずつ改善する。</span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h4>
 <div class="secrets-panel" id="secrets-box-789-panel" aria-labelledby="secrets-box-789">
@@ -1211,12 +1192,13 @@
 <p><strong>プランごとの対応範囲</strong></p>
 <p>公開後のアクセス解析、改善案の作成、LP改修、A/Bテストなどの継続的な運用改善にも対応しています。<br>LP制作とは別途のご契約となり、改修内容・検証範囲・ツール費用は事前に確認します。</p>
 </aside>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-27-sp.svg" width="312" height="164"><img src="images/secrets-closing-centered/closing-27-pc.svg" width="950" height="151" loading="lazy" decoding="async" alt="一箇所ずつ確かめ、成果につながる理由を積み上げる。 作って終わらず、「一流の営業マン」を育て続ける。"></picture><span class="secrets-closing-bg" aria-hidden="true">IMPROVEMENT</span><p data-source-index="830" class="secrets-closing-yellow">一箇所ずつ確かめ、成果につながる理由を積み上げる。</p><p data-source-index="831" class="secrets-closing-blue">作って終わらず、「一流の営業マン」を育て続ける。</p></div>
+
 <div class="secrets-ending" id="secret-09-ending">
 <p>検証を重ねて、お客様に選ばれる理由が見えてきたら。<br>その価値を必要としている人は、今の業界や日本語圏の中だけでしょうか。</p>
 <p><strong class="zero-trust-highlight">次の秘訣では、改善で得た学びを活かし、別の業界や海外市場へLPを展開する考え方を解説します。</strong></p>
 </div>
-</div></section></div></section>
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">IMPROVEMENT</span><p data-source-index="830" class="secrets-closing-yellow">一箇所ずつ確かめ、成果につながる理由を積み上げる。</p><p data-source-index="831" class="secrets-closing-blue">作って終わらず、「一流の営業マン」を育て続ける。</p></div></div></section></div></section>
 <section id="secret-10" class="secret-box black-dot secrets-renovated" aria-labelledby="secret-title-10">
 <div class="wrap">
 <figure><img src="images/reason10.svg" alt="10" width="200" height="135.11" loading="lazy" decoding="async" class="img-tag"></figure>
@@ -1245,7 +1227,8 @@
 <p><strong class="zero-trust-highlight">LP・記事・動画・広告で、誰に何を伝えるかを一貫させます。</strong><br>公開後はアクセス解析やA/Bテストで改善し、申し込みだけでなく、受注や採算まで確かめます。</p>
 <p>反応が弱ければ、広告やLPだけでなく、顧客像や訴求の見立てにも戻ります。<br><strong class="zero-trust-highlight">分析と検証で得た学びを、次の市場でも活かせる資産として残します。</strong></p>
 <p class="secret10-slide"><strong class="zero-trust-highlight">では、今のお客様に評価されている強みは、ほかの業界の困りごとにも役立たないでしょうか。</strong></p>
-</div>
+
+<div class="secrets-closing secrets-closing--text"><p class="secrets-closing-yellow">市場を広げる前に、選ばれる売り方を磨く。</p><p class="secrets-closing-blue">分析と検証で得た学びを、次の市場へつなげます。</p></div></div>
 </section>
 
 <section class="white-box secrets-white" aria-labelledby="secrets-box-839">
@@ -1256,9 +1239,10 @@
 <p>例えば、飲食店向けの予約管理サービスを、美容サロンへ展開する場合を考えます。<br>「予約対応の負担を減らす」という価値は共通していても、サロンでは施術時間や担当スタッフに合わせた予約管理が必要になるかもしれません。</p>
 <p><strong class="zero-trust-highlight">新しい業界の顧客・競合・提供条件を確認し、役立つ強みを、その相手に伝わる言葉へ変えます。</strong><br>必要な機能に対応できるかを確かめたうえで、利用場面・導入メリット・比較材料を見直し、業界に合うLPと広告を作ります。</p>
 <p>これまでの分析を活かしながら、新しい業界の反応も検証する。<br>ZEROは、業界名や写真を差し替えるだけでなく、<strong>その業界で選ばれる理由を考えるところから、追加LPの制作を支援します。</strong></p>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-28-sp.svg" width="312" height="164"><img src="images/secrets-closing-centered/closing-28-pc.svg" width="950" height="151" loading="lazy" decoding="async" alt="商品の可能性を、今の業界だけで決めない。 別の業界の課題に応えるLPで、新たな顧客を開拓する。"></picture><span class="secrets-closing-bg" aria-hidden="true">NEW MARKET</span><p data-source-index="861" class="secrets-closing-yellow">商品の可能性を、今の業界だけで決めない。</p><p data-source-index="862" class="secrets-closing-blue">別の業界の課題に応えるLPで、新たな顧客を開拓する。</p></div>
+
 <p class="secret10-slide"><strong class="zero-trust-highlight">広げられるのは、業界だけではありません。<br>次は、日本語では届けられていなかったお客様へ、言葉と文化の壁を越えて伝えます。</strong></p>
-</div>
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">NEW MARKET</span><p data-source-index="861" class="secrets-closing-yellow">商品の可能性を、今の業界だけで決めない。</p><p data-source-index="862" class="secrets-closing-blue">別の業界の課題に応えるLPで、新たな顧客を開拓する。</p></div></div>
 </section>
 
 <section class="white-box secrets-white" aria-labelledby="secrets-box-863">
@@ -1278,12 +1262,13 @@
 <p><strong>制作・展開の対応範囲</strong></p>
 <p>別業界向けの追加LP、記事LP・動画LP、多言語対応、広告運用、継続的な改善は、制作プランとは別途の対応となります。<br>必要な市場調査・翻訳・ネイティブチェック・デザイン調整などの範囲と費用は、ご契約前に確認します。</p>
 </aside>
-<div class="secrets-closing secrets-closing--image"><picture class="secrets-closing-art"><source media="(max-width: 768px)" srcset="images/secrets-closing-centered/closing-29-sp.svg" width="312" height="164"><img src="images/secrets-closing-centered/closing-29-pc.svg" width="950" height="188" loading="lazy" decoding="async" alt="日本で磨いた価値を、日本語の届く範囲だけで終わらせない。 商品の価値を伝える「一流の営業マン」を、世界へ広げる。"></picture><span class="secrets-closing-bg" aria-hidden="true">GLOBAL</span><p data-source-index="898" class="secrets-closing-yellow">日本で磨いた価値を、日本語の届く範囲だけで終わらせない。</p><p data-source-index="899" class="secrets-closing-blue">商品の価値を伝える「一流の営業マン」を、世界へ広げる。</p></div>
+
 <div class="secrets-ending" id="secret-10-ending">
 <p>ここまでの全体戦略を踏まえて、まず何から取り組み、どこを自社で準備し、どこからZEROに任せるか。<br>その判断ができるよう、次に料金と対応範囲を整理します。</p>
 <p><strong class="zero-trust-highlight">3つのLP制作プランと、集客・改善・多言語展開の追加サービスをご確認ください。</strong></p>
 </div>
-</div>
+
+<div class="secrets-closing secrets-closing--text"><span class="secrets-closing-bg" aria-hidden="true">GLOBAL</span><p data-source-index="898" class="secrets-closing-yellow">日本で磨いた価値を、日本語の届く範囲だけで終わらせない。</p><p data-source-index="899" class="secrets-closing-blue">商品の価値を伝える「一流の営業マン」を、世界へ広げる。</p></div></div>
 </section>
 </div>
 </section>
@@ -1577,7 +1562,7 @@
         </section>
 
         <section class="cta cta-offer cta-offer--gold" aria-labelledby="offer-final-title">
-            <h2 class="cta-ribbon" id="offer-final-title"><picture><source media="(max-width: 767px)" srcset="images/offer-copy-ribbon-sp-20260920.svg?v=20260920-center-1"><img src="images/offer-copy-ribbon-pc-20260920.svg?v=20260920-center-1" width="960" height="125" alt="LPを最後まで読んでいただいた方へ"></picture></h2>
+            <h2 class="cta-ribbon" id="offer-final-title"><span>今なら無料提案キャンペーン実施中</span></h2>
             <div class="offer-gold__gallery" role="region" aria-roledescription="カルーセル" aria-label="ZEROのLP制作実績を自動表示しています">
                 <div class="offer-gold__track">
                     <figure class="offer-gold__sample offer-gold__sample--tender"><img src="images/offer-fv-tender-top-432.webp" width="432" height="834" alt="保育士求人LPの制作実績" loading="lazy" decoding="async" draggable="false"></figure>
@@ -1590,11 +1575,11 @@
             <div class="offer-proposal">
                 <div class="offer-proposal__grid">
                     <div class="offer-proposal__card">
-                        <h3>無料でLP構成案をご提案</h3>
+                        <h3><span>無料で</span><em>LP構成案</em><span>をご提案</span></h3>
                         <p>何をどの順番で伝えるのかを整理</p>
                     </div>
                     <div class="offer-proposal__card">
-                        <h3>無料でデザイン1案をご提案</h3>
+                        <h3><span>無料で</span><em>デザイン1案</em><span>をご提案</span></h3>
                         <p>ファーストビューのデザインと<br>メインコピーを具体化</p>
                     </div>
                 </div>
@@ -1679,20 +1664,7 @@
             });
         });
     </script>
-    <script type="text/javascript">
-        if (window.matchMedia( "(max-width: 768px)" ).matches) {
-        $(document).ready(function(){
-            $('.jisseki-box.sp').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-                prevArrow: '<button type="button" class="slick-prev"><img src="images/sp/arrow-left.svg" alt="前へ"></img></button>',
-                nextArrow: '<button type="button" class="slick-next"><img src="images/sp/arrow-right.svg" alt="次へ"></img></button>',
-                });
-            });
-        } else {}
-        </script>
+
     <script>
     (function () {
       document.querySelectorAll('.lp-purpose-slider .lp-purpose-grid').forEach(function (track) {

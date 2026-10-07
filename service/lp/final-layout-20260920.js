@@ -256,7 +256,7 @@
   function setupDiagramReveal() {
     if (reduced.matches || typeof IntersectionObserver !== 'function') return;
     const diagrams = Array.from(document.querySelectorAll('#marketing-flow-final .marketing-flow-diagram, #secret .secrets-renovated figure'));
-    const closings = Array.from(document.querySelectorAll('#secret .secrets-closing--image'));
+    const closings = Array.from(document.querySelectorAll('#secret .secrets-closing'));
     diagrams.forEach(diagram => diagram.classList.add('zero-diagram-reveal'));
     closings.forEach(closing => closing.classList.add('zero-closing-reveal'));
     const observer = new IntersectionObserver(entries => {
