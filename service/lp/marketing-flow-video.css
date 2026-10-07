@@ -1,0 +1,86 @@
+/* Same footage, poster and 70% dark overlay as #copy; scoped to the strategy. */
+#marketing-flow-final.video-bg {
+  --secret-ground: #000;
+  --secret-dot: transparent;
+  --secret-ink: #fff;
+  position: relative;
+  display: block;
+  isolation: isolate;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+
+/* Explicit local layers prevent the legacy fixed video from escaping this section. */
+#marketing-flow-final.video-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url(images/mv-img.jpg) center center / cover no-repeat;
+  pointer-events: none;
+}
+
+#marketing-flow-final.video-bg > .marketing-flow-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100%;
+  background: url(images/mv-img.jpg) center center / cover no-repeat;
+  pointer-events: none;
+}
+
+#marketing-flow-final.video-bg .marketing-flow-video {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+#marketing-flow-final.video-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, .7);
+  pointer-events: none;
+}
+
+#marketing-flow-final.video-bg > .wrap {
+  position: relative;
+  z-index: 3;
+}
+
+/* Keep the diagram, authored text, typography and existing reading spacing. */
+#marketing-flow-final.video-bg .marketing-flow-diagram {
+  background: transparent;
+  padding: 0;
+}
+
+#marketing-flow-final.video-bg .marketing-flow-white-box {
+  background: transparent;
+  color: #fff;
+  border: 0;
+  box-shadow: none;
+}
+
+#marketing-flow-final.video-bg .marketing-flow-white-box :is(h3, h4, p, strong, span, a) {
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #marketing-flow-final.video-bg .marketing-flow-video {
+    display: none;
+  }
+}

@@ -1,0 +1,123 @@
+/* Selected pricing design B. All rules are scoped to the replacement block. */
+#price .pricing-final-b{width:100%;padding:32px 25px 10px;color:#252120;background:#fff}
+#price .pricing-final-b *{box-sizing:border-box}
+#price .pfb-head{width:100%;margin:0 auto 48px;text-align:center}
+#price .pfb-head h3{width:100%;margin:0 0 24px!important;padding:0 0 15px!important;border:0!important;border-bottom:2px solid #20aebd!important;text-align:center;font-size:30px;line-height:1.4}
+#price .pfb-head p{margin:10px 0;text-align:left;font-size:16px;line-height:1.9}
+#price .pfb-block{margin-top:60px}
+#price .pfb-block:first-of-type{margin-top:0}
+#price .pfb-subhead{display:flex;width:100%;margin:0 0 20px;padding:0 0 15px;border:0;border-bottom:2px solid #20aebd;align-items:center;justify-content:center;gap:10px;text-align:center}
+#price .pfb-subhead>span{display:grid;width:36px;height:36px;margin:0;flex:0 0 36px;place-items:center;border-radius:50%;background:#ed6411;color:#fff;font-size:12px;font-weight:800}
+#price .pfb-subhead h4{width:auto;margin:0!important;padding:0!important;border:0!important;text-align:center;font-size:27px;line-height:1.4}
+#price .pfb-legend{margin:0 0 14px;text-align:left;font-size:14px}
+#price .pfb-lead{margin:-2px 0 22px;text-align:left;font-size:16px;line-height:1.8}
+
+#price .pfb-table-scroll{position:relative;width:100%;overflow-x:auto;border:0;border-radius:0;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+#price .pfb-table-scroll--mobile{display:none}
+#price .pfb-table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;font-size:14px;line-height:1.6}
+#price .pfb-table th,#price .pfb-table td{padding:15px 14px;border:1px solid #d3d3d3;vertical-align:top;text-align:left}
+#price .pfb-table thead th{position:relative;padding:19px 14px;background:#272727;color:#fff;font-size:15px;text-align:center;vertical-align:middle}
+#price .pfb-table thead th:first-child{text-align:left}
+#price .pfb-table tbody th{background:#292929;color:#fff;font-weight:750}
+#price .pfb-table tbody tr:nth-child(even) td{background:#f8f8f7}
+#price .pfb-comparison-table thead th:first-child{width:21%}
+#price .pfb-comparison-table thead th:not(:first-child){width:26.333%}
+#price .pfb-comparison-table tbody td:nth-child(3){background:#edf5ff}
+#price .pfb-comparison-table tbody tr:nth-child(even) td:nth-child(3){background:#e6f1ff}
+#price .pfb-price td{text-align:center;vertical-align:middle;background:#fff4e9!important}
+#price .pfb-price td:nth-child(3){background:#e3f1ff!important}
+#price .pfb-price strong,#price .pfb-price td>b,#price .pfb-transposed-price strong,#price .pfb-transposed-price>b{display:inline-block;color:#ed6411;font-size:22px;white-space:nowrap}
+#price .pfb-price small,#price .pfb-transposed-price small{display:block;font-size:11px}
+#price .pfb-audience td{background:#fffaf4!important}
+#price .pfb-audience td:nth-child(3){background:#e9f4ff!important}
+#price .pfb-audience h5,#price .pfb-transposed-audience h5{display:inline-block;margin:0 0 10px;padding:4px 11px;border-radius:999px;background:#ffeadf;color:#ed6411;font-size:12px;line-height:1.45}
+#price .pfb-audience td:nth-child(3) h5{background:#dcecff;color:#0875e5}
+#price .pfb-audience td:nth-child(4) h5{background:#e8e8e8;color:#222}
+#price .pfb-audience ul,#price .pfb-transposed-audience ul{margin:0;padding:0;list-style:none}
+#price .pfb-audience li,#price .pfb-transposed-audience li{position:relative;margin:7px 0;padding-left:25px;line-height:1.65}
+#price .pfb-audience li::before,#price .pfb-transposed-audience li::before{position:absolute;top:.1em;left:0;display:grid;width:18px;height:18px;place-items:center;border-radius:50%;background:#ed6411;color:#fff;content:"✓";font-size:11px;font-weight:900;line-height:1}
+#price .pfb-audience td:nth-child(3) li::before{background:#0875e5}
+#price .pfb-audience td:nth-child(4) li::before{background:#222}
+#price .pfb-recommended{background:#0875e5!important}
+#price .pfb-recommended-label,#price .pfb-recommended-name{display:block;position:static;margin:0;padding:0;transform:none;white-space:normal}
+#price .pfb-recommended-label{margin-bottom:5px;color:#dbeeff;font-size:11px;line-height:1.3}
+#price .pfb-recommended-name{color:#fff;font-size:15px;line-height:1.45}
+
+#price .pfb-service-table thead th:first-child{width:24%}
+#price .pfb-service-table thead th:first-child{text-align:center}
+#price .pfb-service-table thead th:nth-child(2){width:20%}
+#price .pfb-service-table td:nth-child(2){color:#ed6411;text-align:center;white-space:nowrap}
+#price .pfb-operation-table thead th:first-child{width:22%}
+#price .pfb-operation-table thead th:not(:first-child){width:39%}
+
+#price .pfb-notes{margin-top:22px;padding:24px 28px;border:1px solid #ddd;border-left:8px solid #292929;background:#fff}
+#price .pfb-notes h5{margin:0 0 14px;text-align:center;font-size:18px}
+#price .pfb-notes ul{margin:0;padding:0;list-style:none}
+#price .pfb-notes li{position:relative;margin:8px 0;padding-left:1.1em;text-align:left;font-size:13px;line-height:1.85}
+#price .pfb-notes li::before{position:absolute;left:0;content:"・";font-weight:800}
+#price .pfb-swipe{display:none}
+
+@media(max-width:767px){
+  #price .pricing-final-b{width:100%;padding:28px 12px 8px!important}
+  #price .pfb-head{margin-bottom:42px}
+  #price .pfb-head h3{margin-bottom:20px!important;padding-bottom:16px!important;font-size:25px}
+  #price .pfb-head p{font-size:16px;line-height:1.9}
+  #price .pfb-block{margin-top:52px}
+  #price .pfb-subhead{display:block;margin-bottom:17px;padding-bottom:14px}
+  #price .pfb-subhead>span{width:35px;height:35px;margin:0 auto 6px}
+  #price .pfb-subhead h4{width:100%;font-size:22px}
+  #price .pfb-legend{font-size:13px;line-height:1.8}
+  #price .pfb-lead{font-size:16px;line-height:1.85}
+  #price .pfb-swipe{display:flex;width:max-content;margin:0 0 10px auto;padding:4px 12px;align-items:center;gap:8px;border-radius:999px;background:#1f1f1f;color:#fff;font-size:13px}
+  #price .pfb-swipe b{display:inline-block;color:#ffd25a;font-size:20px;animation:pfb-swipe 1.6s ease-in-out infinite}
+  @keyframes pfb-swipe{0%,100%{transform:translateX(-5px)}50%{transform:translateX(5px)}}
+
+  #price .pfb-enhanced .pfb-table-scroll--desktop{display:none}
+  #price .pfb-enhanced .pfb-table-scroll--mobile{display:block}
+  #price .pricing-final-b:not(.pfb-enhanced) :is(.pfb-comparison-table,.pfb-operation-table){min-width:900px}
+  #price .pfb-table{width:max-content;min-width:100%;table-layout:fixed;font-size:15px}
+  #price .pfb-table th,#price .pfb-table td{padding:14px 12px}
+  #price .pfb-table thead th{position:sticky;top:0;z-index:4;font-size:15px;white-space:normal;overflow-wrap:anywhere}
+  #price .pfb-table thead th:first-child,#price .pfb-table tbody th{position:sticky;left:0;z-index:5;box-shadow:4px 0 8px rgba(0,0,0,.09)}
+  #price .pfb-table thead th:first-child{z-index:7}
+
+  #price .pfb-comparison-table-mobile thead th:first-child,#price .pfb-comparison-table-mobile tbody th{width:132px;min-width:132px;max-width:132px;padding-left:9px;padding-right:9px;overflow-wrap:anywhere}
+  #price .pfb-comparison-table-mobile thead th:first-child{text-align:center}
+  #price .pfb-comparison-table-mobile thead th:not(:first-child),#price .pfb-comparison-table-mobile tbody td{width:220px;min-width:220px;max-width:220px}
+  #price .pfb-comparison-table-mobile tbody th{text-align:center;vertical-align:middle}
+  #price .pfb-comparison-table-mobile tbody td{background:#fff}
+  #price .pfb-comparison-table-mobile tbody tr:nth-child(even) td{background:#edf5ff}
+  #price .pfb-comparison-table-mobile .pfb-transposed-price{text-align:center;vertical-align:middle;background:#fff4e9!important}
+  #price .pfb-comparison-table-mobile .pfb-transposed-audience h5{display:none}
+  #price .pfb-comparison-table-mobile .pfb-mobile-recommended th{background:#0875e5}
+  #price .pfb-comparison-table-mobile .pfb-mobile-recommended td{background:#edf5ff}
+  #price .pfb-comparison-table-mobile .pfb-mobile-recommended .pfb-transposed-price{background:#e3f1ff!important}
+  #price .pfb-comparison-table-mobile .pfb-mobile-recommended .pfb-transposed-audience li::before{background:#0875e5}
+
+  #price .pfb-operation-table-mobile thead th:first-child,#price .pfb-operation-table-mobile tbody th{width:132px;min-width:132px;max-width:132px;padding-left:9px;padding-right:9px;overflow-wrap:anywhere}
+  #price .pfb-operation-table-mobile thead th:first-child{text-align:center}
+  #price .pfb-operation-table-mobile thead th:not(:first-child),#price .pfb-operation-table-mobile tbody td{width:220px;min-width:220px;max-width:220px}
+  #price .pfb-operation-table-mobile thead th:last-child,#price .pfb-operation-table-mobile tbody td:last-child{width:300px;min-width:300px;max-width:300px}
+  #price .pfb-operation-table-mobile tbody th{text-align:center;vertical-align:middle}
+  #price .pfb-operation-table-mobile .pfb-transposed-price{text-align:center;vertical-align:middle;background:#fff4e9!important}
+  #price .pfb-operation-table-mobile .pfb-transposed-price>b{max-width:100%;white-space:normal;overflow-wrap:anywhere;font-size:18px;line-height:1.55}
+
+  #price .pfb-service-table{width:720px;min-width:720px}
+  #price .pfb-service-table thead th:first-child{width:160px}
+  #price .pfb-service-table thead th:nth-child(2){width:145px}
+  #price .pfb-service-table thead th:nth-child(3){width:415px}
+  #price .pfb-price strong,#price .pfb-price td>b,#price .pfb-transposed-price strong,#price .pfb-transposed-price>b{font-size:21px}
+  #price .pfb-notes{padding:20px 17px}
+  #price .pfb-notes li{font-size:15px;line-height:1.85}
+}
+
+@media(max-width:374px){
+  #price .pricing-final-b{padding-left:12px;padding-right:12px}
+  #price .pfb-head p{font-size:15.5px}
+  #price .pfb-table{font-size:14.5px}
+  #price .pfb-comparison-table-mobile thead th:first-child,#price .pfb-comparison-table-mobile tbody th{width:124px;min-width:124px;max-width:124px}
+  #price .pfb-comparison-table-mobile thead th:not(:first-child),#price .pfb-comparison-table-mobile tbody td{width:214px;min-width:214px;max-width:214px}
+  #price .pfb-operation-table-mobile thead th:first-child,#price .pfb-operation-table-mobile tbody th{width:124px;min-width:124px;max-width:124px}
+  #price .pfb-operation-table-mobile thead th:not(:first-child),#price .pfb-operation-table-mobile tbody td{width:214px;min-width:214px;max-width:214px}
+  #price .pfb-notes li{font-size:14.5px}
+}

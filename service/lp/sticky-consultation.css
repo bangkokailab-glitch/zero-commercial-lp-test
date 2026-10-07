@@ -1,0 +1,53 @@
+/* Reuse the approved campaign CTA; only its fixed placement and subtle movement are new. */
+.sticky-consultation {
+  position: fixed;
+  z-index: 900;
+  inset: auto 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 12px max(12px, env(safe-area-inset-right)) max(16px, calc(env(safe-area-inset-bottom) + 8px)) max(12px, env(safe-area-inset-left));
+  pointer-events: none;
+}
+.sticky-consultation[hidden] { display: none !important; }
+.sticky-consultation .sticky-consultation__link {
+  width: 100%;
+  max-width: 652px;
+  margin: 0;
+  pointer-events: auto;
+}
+.has-sticky-consultation { scroll-padding-bottom: var(--sticky-consultation-space, calc(132px + env(safe-area-inset-bottom, 0px))); }
+.has-sticky-consultation body { padding-bottom: 0; }
+.has-sticky-consultation footer.black-dot {
+  padding-bottom: calc(15px + var(--sticky-consultation-space, calc(132px + env(safe-area-inset-bottom, 0px))));
+  background-color: #000;
+  background-image: radial-gradient(#3e3a39 33%, transparent 33%);
+  background-position: 0 0;
+  background-size: 4px 4px;
+}
+
+@media (max-width: 1000px) {
+  .has-sticky-consultation footer.black-dot {
+    padding-bottom: calc(1.5vw + var(--sticky-consultation-space, calc(132px + env(safe-area-inset-bottom, 0px))));
+  }
+}
+
+/* Individual translate leaves the existing hover/transform effects untouched. */
+@keyframes zero-cta-float {
+  0%, 100% { translate: 0 3px; }
+  50% { translate: 0 -3px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #container a:is(.cta-offer__button, .zero-pricing-cta, .cta-btn),
+  .sticky-consultation .sticky-consultation__link {
+    animation: zero-cta-float 3.2s ease-in-out infinite;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #container a:is(.cta-offer__button, .zero-pricing-cta, .cta-btn),
+  .sticky-consultation .sticky-consultation__link {
+    animation: none;
+    translate: none;
+  }
+}

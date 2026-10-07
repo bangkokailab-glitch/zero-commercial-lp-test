@@ -1,0 +1,330 @@
+/* Smartphone reading settings, matched to the approved secrets typography.
+   Desktop, campaign CTAs, prices and image lettering stay unchanged. */
+.zero-table-swipe-hint { display: none; }
+#about .about-message-wrap { display: contents; }
+#about .about-support-message { display: contents; }
+#about .merit-silhouette { display: none; }
+@media (max-width: 768px) {
+  #marketing-flow-final > .wrap > .secrets-flow-subtitle { display: none; }
+  /* The pre-secrets explanation and cover use the same readable body scale.
+     Keep the existing artwork; let the sections grow instead of clipping copy. */
+  #copy {
+    height: auto;
+    min-height: 0;
+    padding-bottom: 28px;
+    scroll-margin-top: 70px;
+  }
+  #copy .copy-txt {
+    position: relative;
+    width: calc(100% - 48px);
+    margin-inline: auto;
+  }
+  #copy .copy-h2 {
+    position: relative;
+    box-sizing: border-box;
+    width: calc(100% + 48px);
+    height: auto;
+    margin: 0 -24px;
+    padding: calc((100vw - 24px) * .53206) 12px 0;
+    background: none;
+    font-size: clamp(13px, 4vw, 20px);
+    font-weight: 700;
+    line-height: 1.65;
+    letter-spacing: normal;
+    text-align: center;
+  }
+  #copy .copy-h2::before {
+    content: '';
+    position: absolute;
+    inset: 0 12px auto;
+    /* Crop the SVG to x=68.31..1068.31 and stop at the old caption's y=532.06. */
+    height: calc((100vw - 24px) * .53206);
+    background: url(images/sp/copy.svg) right top / 106.831% auto no-repeat;
+    pointer-events: none;
+  }
+  #copy .copy-h2__label {
+    display: block;
+    /* The artwork and caption share the same centered, 12px page gutters. */
+    width: 100%;
+    padding: 8px;
+    background: #a44b0e;
+    white-space: nowrap;
+    text-wrap: nowrap;
+  }
+  #copy .copy-h2__term { white-space: nowrap; }
+  #copy .copyTxt,
+  #secret .secret-cover-a__description p {
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+    font-size: 17px;
+    line-height: 1.9;
+    letter-spacing: normal;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+  #copy .copyTxt { margin-top: 24px; font-weight: 400; }
+  #copy .copyTxt br,
+  #secret .secret-cover-a__pc { display: none; }
+  #secret .secret-cover-a { height: auto; min-height: 0; }
+  #secret .secret-cover-a__content {
+    box-sizing: border-box;
+    width: calc(100% - 48px);
+    height: auto;
+    padding: 28px 0 32px;
+  }
+  #secret .secret-cover-a__content > * { flex-shrink: 0; }
+  #secret .secret-cover-a__kicker,
+  #secret .secret-cover-a__phases {
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    letter-spacing: normal;
+  }
+  #secret .secret-cover-a__phases { gap: 2px 4px; }
+  #secret .secret-cover-a__description { margin-top: 24px; }
+  #secret .secret-cover-a__description p { text-align: center; }
+  #secret .secret-cover-a__description p + p { margin-top: 1em; }
+  #secret .secret-cover-a__cue { margin-top: 20px; }
+
+  :is(#marketing-flow-final, #price, #about) {
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+    font-size: 17px;
+    line-height: 1.9;
+    letter-spacing: normal;
+    overflow-wrap: anywhere;
+  }
+  :is(#marketing-flow-final, #price, #about),
+  :is(#marketing-flow-final, #price, #about) * { box-sizing: border-box; }
+
+  :is(#marketing-flow-final, #price, #about) > .wrap {
+    width: calc(100% - 24px);
+    max-width: 640px;
+    min-width: 0;
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
+  /* All heading levels use the same 20px / 33px reference heading. */
+  #secret .secrets-renovated[class] :is(h2, h3, h4, h5, h6),
+  :is(#marketing-flow-final, #price, #about)[class] :is(h2, h3, h4, h5, h6),
+  #marketing-flow-final > .wrap > #marketing-flow-final-title,
+  #price .step-right-txt > .font23,
+  #price label.question {
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.65;
+    letter-spacing: normal;
+    overflow-wrap: anywhere;
+  }
+
+  :is(#marketing-flow-final, #price, #about) > .wrap > .underline-ttl {
+    padding: 26px 0 22px;
+    margin-bottom: 28px;
+  }
+  #price, #about { scroll-margin-top: 72px; }
+  #marketing-flow-final .marketing-flow-white-box,
+  #price .white-box,
+  #about .merit-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 12px 8px;
+    margin: 0 auto 32px;
+  }
+  #marketing-flow-final .marketing-flow-white-title,
+  #price .white-box > :is(h2, h3),
+  #about .merit-box > h3 {
+    display: block;
+    width: auto;
+    max-width: none;
+    margin: 0 -12px 28px;
+    padding: 0 16px 20px;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  /* Keep this closing heading on its two authored lines, including at 360px. */
+  #about[class] .merit-box > h3 {
+    padding-inline: 8px;
+    font-size: clamp(14px, calc((100vw - 40px) / 20), 20px);
+    line-height: 1.65;
+    white-space: nowrap;
+    text-wrap: nowrap;
+    overflow-wrap: normal;
+  }
+
+  /* Actual copy, including notes and prices' descriptive text, never shrinks with vw. */
+  #marketing-flow-final :is(p, .marketing-flow-intro strong),
+  #price :is(.zero-pricing-intro, .zero-plan > p:last-child, .zero-option-item p, .zero-option-item strong),
+  #price :is(.step-right-txt p:not(.font23), .step-right-txt .font12, .answer),
+  #about :is(.about-txt p, .about-txt .font23, .name, .merit-list li) {
+    font-family: inherit;
+    font-size: 17px;
+    line-height: 1.9;
+    letter-spacing: normal;
+    text-align: left;
+  }
+  #marketing-flow-final p,
+  #price :is(.zero-pricing-intro, .zero-plan > p:last-child),
+  #about .about-txt p { margin: 0 0 1.5em; }
+  #marketing-flow-final .marketing-flow-topics article { display: block; padding: 24px 0; }
+  #marketing-flow-final .marketing-flow-topics h4 { margin-bottom: 12px; }
+  #marketing-flow-final .marketing-flow-support .marketing-flow-note { font-size: 17px; line-height: 1.9; }
+  #marketing-flow-final .marketing-flow-bridge a { font-size: 17px; line-height: 1.9; min-height: 44px; }
+
+  #price .zero-plan { padding: 20px 0 28px; }
+  #price .zero-plan-ribbon { white-space: normal; }
+  #price .zero-process { flex-wrap: wrap; gap: 18px 12px; margin-bottom: 24px; }
+  #price .zero-process li { flex: 0 0 calc(50% - 6px); font-size: 17px; line-height: 1.65; }
+  #price .zero-process-icon { font-size: 22px; }
+  #price .zero-table-swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 0 12px;
+    color: #4b4b4b;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+  }
+  #price .zero-table-swipe-hint img { display: block; width: 88px; height: 55px; margin: 0; }
+  #price .zero-comparison-scroll {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #777 #ededed;
+  }
+  #price .zero-plan-comparison table { min-width: 680px; font-size: 17px; line-height: 1.9; }
+  #price .zero-plan-comparison :is(th, td) { font-size: 17px; line-height: 1.9; padding: 12px; }
+  #price .zero-option-list { display: block; }
+  #price .zero-option-item { padding: 24px 0; gap: 12px; }
+  #price .zero-option-item h4 { margin-bottom: 8px; }
+  #price .zero-option-item p { margin: 10px 0 0; }
+  /* Explicit values preserve the pre-existing CTA size despite the parent type reset. */
+  #price .zero-pricing-cta { font-size: clamp(13px,3.8vw,17px); line-height: 1.6; letter-spacing: normal; }
+
+  /* Long steps grow with their copy; existing arrows and round icons remain. */
+  #price .flow-box > .flow-ttl { padding-left: 68px; padding-right: 16px; min-height: 64px; }
+  #price .flow-ttl::before { width: 40px; height: 40px; top: 3px; left: 16px; }
+  #price .step-each {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    margin: 0;
+    padding: 24px 0;
+  }
+  #price .step-each + .step-each { border-top: 1px solid #19bbc7; }
+  #price .steps { width: 36px; margin: 0; }
+  #price .steps img { width: 100%; height: auto; }
+  #price .step-right { display: block; min-width: 0; padding: 0; border: 0; }
+  #price .step-right-txt { width: auto; min-width: 0; }
+  #price .step-right-txt > .font23 { padding-right: 48px; min-height: 40px; margin-bottom: 14px !important; }
+  #price .step-icon { position: absolute; top: 24px; right: 0; width: 38px; height: 38px; margin: 0; }
+  #price .step-icon img { width: 24px; max-height: 28px; }
+
+  #price label.question {
+    height: auto;
+    min-height: 64px;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 16px 36px 16px 38px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  #price label.question img { position: absolute; width: 18px; height: 22px; left: 10px; top: 22px; margin: 0; }
+  #price .question::before, #price .question::after { width: 16px; right: 12px; }
+  #price .answer { height: auto; padding: 6px 4px 24px; }
+  #price .aclabel:checked + label + .content { padding-bottom: 24px; }
+
+  /* Rejoin the original portrait and readable copy using a matching float silhouette. */
+  #about .about-box {
+    --about-panel-width: min(calc(100vw - 24px), 640px);
+    --about-portrait-canvas-width: clamp(520px, 145vw, 624px);
+    --about-portrait-height: calc(var(--about-portrait-canvas-width) * 1.1);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+    padding: 20px 0 0;
+    margin-bottom: 32px;
+    background-color: #000;
+    background-image: none;
+  }
+  #about .about-txt {
+    position: static;
+    width: auto;
+    margin: 0;
+    padding: 0 12px;
+    font-weight: 400;
+    background: #000;
+  }
+  #about .about-txt > picture { display: block; margin: 0 -12px 20px; padding: 0 12px; background: #000; }
+  #about .about-support-message {
+    position: relative;
+    display: flow-root;
+    isolation: isolate;
+    background: #000;
+  }
+  #about .about-support-message::before {
+    content: '';
+    float: right;
+    width: 50%;
+    height: var(--about-portrait-height);
+    margin-top: clamp(120px, 38vw, 165px);
+    /* Keep the upper copy full-width, then follow the head, shoulders and suit. */
+    shape-outside: polygon(100% 0, 100% 100%, 0 100%, 0 86%, 8% 76%, 16% 66%, 24% 56%, 30% 48%, 42% 38%, 100% 38%);
+    shape-margin: 10px;
+    pointer-events: none;
+  }
+  #about .about-support-message::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: auto;
+    bottom: 0;
+    right: -32px;
+    display: block;
+    width: 70%;
+    height: var(--about-portrait-height);
+    background-image: url(images/sp/about-bg.jpg);
+    background-size: var(--about-portrait-canvas-width) auto;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 15%, #000 96%, transparent 100%), linear-gradient(to right, transparent 0, #000 24%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to bottom, transparent 0, #000 15%, #000 96%, transparent 100%), linear-gradient(to right, transparent 0, #000 24%);
+    mask-composite: intersect;
+    pointer-events: none;
+  }
+  #about .about-ttl { width: 100%; max-width: 100%; height: auto; margin-bottom: 0; }
+  #about .about-txt p { margin-bottom: 1em; }
+  #about .about-txt p:last-child { margin-bottom: 0; }
+  #about .about-txt p br { display: none; }
+  #about .about-txt .font23 { font-weight: 700; }
+  #about .about-box > .name { position: static; order: 2; margin: 0; padding: 12px 20px 14px 12px; text-align: right; }
+  #about .merit-box > h3 { margin-bottom: 20px; }
+  #about .merit-list { display: flow-root; margin: 0; padding: 0; }
+  #about .merit-list li { padding-left: 28px; margin-bottom: 8px; }
+  #about .merit-list li:last-child { margin-bottom: 8px; }
+  #about .merit-list li::before { width: 18px; height: 14px; top: 10px; bottom: auto; margin: 0; }
+  #about .merit-list::before { display: none; }
+  #about .merit-silhouette {
+    display: block;
+    float: right;
+    width: clamp(48px, 15vw, 72px);
+    aspect-ratio: 107.19 / 382.24;
+    margin: 0 0 8px 12px;
+    background: url(images/merit.svg) center / contain no-repeat;
+    /* Reserve the image rectangle plus its left margin, only while it floats. */
+    shape-outside: none;
+    pointer-events: none;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  /* Wider screens need fewer lines: avoid a long empty tail below the list. */
+  #about .merit-silhouette { width: 48px; }
+}

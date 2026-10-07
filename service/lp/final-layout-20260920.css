@@ -1,0 +1,489 @@
+/* Final section rhythm and responsive reading controls. */
+
+/* Give the three main entrances the same rhythm without changing their type. */
+:is(#marketing-flow-final, #price, #about) {
+  --section-entry-top: 54px;
+  --section-title-rule-gap: 30px;
+  --section-entry-content-gap: 40px;
+  padding-top: 0;
+}
+#marketing-flow-final.black-dot { padding-top: 0; }
+:is(#marketing-flow-final, #price, #about) > .wrap > .underline-ttl,
+#marketing-flow-final > .wrap > #marketing-flow-final-title {
+  margin-top: 0;
+  margin-bottom: var(--section-entry-content-gap);
+  padding-top: var(--section-entry-top);
+  padding-bottom: var(--section-title-rule-gap);
+}
+
+/* The diagram stays visible without JavaScript and only animates on first entry. */
+#marketing-flow-final .zero-diagram-reveal.is-revealed:not(.is-reveal-complete),
+#secret .secrets-renovated .zero-diagram-reveal.is-revealed:not(.is-reveal-complete) {
+  animation: zero-diagram-enter .8s cubic-bezier(.22, .61, .36, 1) both;
+}
+@keyframes zero-diagram-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Outlined PC/SP artwork preserves the approved closing copy and its native type. */
+#secret .secrets-closing--image {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+#secret .secrets-closing--image > .secrets-closing-bg,
+#secret .secrets-closing--image > p { display: none; }
+#secret .secrets-closing-art,
+#secret .secrets-closing-art img { display: block; width: 100%; max-width: 100%; height: auto; margin: 0; }
+#secret .zero-closing-reveal.is-revealed:not(.is-reveal-complete) .secrets-closing-art {
+  animation: zero-closing-enter 1.2s ease both;
+}
+@keyframes zero-closing-enter {
+  from { transform: translate3d(-100%, 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+/* The approved secret chapters finish with an 80px visual gap on PC. */
+@media (min-width: 769px) {
+  #works { padding-bottom: 80px; }
+  #works > .wrap.pc > .work-box:last-child { margin-bottom: 0; }
+  #marketing-flow-final.black-dot { padding-bottom: 40px; }
+  #marketing-flow-final .marketing-flow-white-box { margin-bottom: 40px; }
+  #price { padding-bottom: 80px; }
+  #price .pricing-faq-frame { margin-bottom: 0; }
+  #about.grey-dot { padding-bottom: 80px; }
+  #about .merit-box { margin-bottom: 0; }
+}
+
+/* Bring the explanation closer to the diagram without crowding it. */
+#marketing-flow-final .marketing-flow-diagram { margin-bottom: 12px; }
+#marketing-flow-final #strategy-expansion-title {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 18px;
+}
+#marketing-flow-final .marketing-flow-topics h4 span {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+  place-items: center;
+  border-radius: 50%;
+  background: #ed6411;
+  color: #fff !important;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Sentence-level emphasis for the research, strategy and support that build trust. */
+.zero-trust-highlight,
+#copy .ylw-bg {
+  padding: 0 .08em;
+  background: #fff34f;
+  color: #111 !important;
+  font-weight: 800 !important;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.zero-trust-highlight strong,
+#copy .ylw-bg strong { color: inherit !important; font-weight: inherit !important; }
+
+/* The mobile disclosures use one shared, calm motion language. */
+.zero-smooth-panel.is-animating { overflow: hidden; }
+
+/* The production flow is an exclusive accordion on both PC and mobile. */
+#price .pricing-flow-list--static > li.is-mobile-flow-ready {
+  display: block;
+  padding: 0;
+  border-bottom: 1px solid #19bbc7;
+}
+#price .is-mobile-flow-ready > .pricing-flow-number-image,
+#price .is-mobile-flow-ready > img,
+#price .is-mobile-flow-ready > .pricing-flow-step-content > h4 { display: none; }
+#price .pricing-flow-mobile-toggle {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 82px;
+  padding: 12px 62px 12px 14px;
+  grid-template-columns: 90px 48px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  border: 0;
+  background: #f5f5f5;
+  color: #231815;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+#price .pricing-flow-mobile-toggle:focus-visible { outline: 3px solid #171717; outline-offset: -3px; }
+#price .pricing-flow-mobile-toggle .pricing-flow-number-image { display: block; width: 90px; height: 42px; }
+#price .pricing-flow-mobile-toggle > img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 50%;
+  background: #20aebd;
+  object-fit: contain;
+}
+#price .pricing-flow-mobile-title {
+  min-width: 0;
+  color: #009bb1;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+#price .pricing-flow-mobile-indicator {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+#price .pricing-flow-mobile-indicator::before,
+#price .pricing-flow-mobile-indicator::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 4px;
+  width: 16px;
+  height: 2px;
+  background: #20aebd;
+  transition: transform .24s ease;
+}
+#price .pricing-flow-mobile-indicator::after { transform: rotate(90deg); }
+#price .pricing-flow-mobile-toggle[aria-expanded="true"] .pricing-flow-mobile-indicator::after { transform: rotate(0); }
+#price .is-mobile-flow-ready > .pricing-flow-step-content {
+  width: 100%;
+  padding: 24px 22px 28px;
+  text-align: left;
+}
+
+/* Match normal explanatory copy to the secret-body reading scale. */
+#marketing-flow-final :is(.marketing-flow-intro p, .marketing-flow-white-box > p, .marketing-flow-topics p, .marketing-flow-support > p),
+#price :is(.pfb-head p, .pfb-lead),
+#price .pfb-comparison-table tbody tr:not(.pfb-price):not(.pfb-audience) td,
+#price .pfb-comparison-table-mobile td:not(.pfb-transposed-price):not(.pfb-transposed-audience),
+#price .pfb-service-table tbody td:nth-child(3),
+#price .pfb-operation-table tbody tr:not(.pfb-price) td,
+#price .pfb-operation-table-mobile td:not(.pfb-transposed-price),
+#price .pricing-free-frame p:not(.pricing-free-form-note):not(.pricing-free-final-note),
+#price .pricing-flow-step-content p,
+#price .pricing-faq > div p {
+  font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+#marketing-flow-final :is(.marketing-flow-intro p, .marketing-flow-white-box > p, .marketing-flow-topics p, .marketing-flow-support > p),
+#price .pfb-head p,
+#price .pricing-free-frame p:not(.pricing-free-form-note):not(.pricing-free-final-note),
+#price .pricing-flow-step-content p,
+#price .pricing-faq > div p { margin-top: 0; margin-bottom: 30px; }
+#price :is(.pricing-flow-step-content, .pricing-faq > div) p:last-child { margin-bottom: 0; }
+#price .pfb-lead { margin-top: 0; margin-bottom: 22px; }
+#price .pfb-service-table tbody td:nth-child(2) > b {
+  display: inline-block;
+  color: #ed6411;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+#price .pfb-notes-toggle { display: none; }
+
+@media (min-width: 701px) and (min-height: 761px) {
+  #secret .secret-cover-a { height: min(660px, calc(100svh - 68px)); min-height: 620px; }
+  #secret .secret-cover-a__content { padding-block: 22px; }
+  #secret .secret-cover-a__lockup { height: 148px; margin: 10px 0 10px; }
+  #secret .secret-cover-a__phases { margin-top: 8px; }
+  #secret .secret-cover-a__description { margin-top: 18px; }
+  #secret .secret-cover-a__description p + p { margin-top: 15px; }
+  #secret .secret-cover-a__cue { margin-top: 15px; }
+}
+
+/* Desktop cover: let the approved artwork and copy determine the page height. */
+@media (min-width: 769px) {
+  #secret .secret-cover-a { height: auto; min-height: 0; }
+  #secret .secret-cover-a__content { height: auto; padding-block: 56px; }
+  #secret .secret-cover-a__content > * { flex-shrink: 0; }
+  #secret .secret-cover-a__lockup { height: auto; margin: 28px 0 0; }
+  #secret .secret-cover-a__phases { margin-top: 36px; }
+  #secret .secret-cover-a__description { margin-top: 40px; }
+  #secret .secret-cover-a__description p { font-size: clamp(17px, 1.35vw, 19px); line-height: 1.95; }
+  #secret .secret-cover-a__description p + p { margin-top: 30px; }
+  #secret .secret-cover-a__cue { margin-top: 32px; }
+}
+
+@media (max-width: 768px) {
+  html,
+  body { touch-action: pan-x pan-y; }
+
+  :is(#marketing-flow-final, #price, #about) {
+    --section-entry-top: 30px;
+    --section-title-rule-gap: 22px;
+    --section-entry-content-gap: 28px;
+  }
+
+  /* The approved secret chapters finish with a 68px visual gap on mobile. */
+  #works { padding-bottom: 21px; }
+  #marketing-flow-final.black-dot { padding-bottom: 36px; }
+  #marketing-flow-final .marketing-flow-white-box { margin-bottom: 32px; }
+  #price { padding-bottom: 36px; }
+  #price .pricing-faq-frame { margin-bottom: 32px; }
+  #about.grey-dot { padding-bottom: 36px; }
+  #about .merit-box { margin-bottom: 32px; }
+
+  /* Anchor the unscaled portrait to the supporting paragraph, not the preceding strategy copy. */
+  #about .about-support-message {
+    height: var(--about-message-visible-height, auto);
+    min-height: 0;
+    overflow: hidden;
+  }
+  #about .about-support-message::before {
+    height: calc(var(--about-portrait-canvas-width) * .835);
+    margin-top: 0;
+    shape-outside: polygon(40% 0, 100% 0, 100% 100%, 0 100%, 0 55%, 8% 45%, 20% 35%, 40% 25%);
+  }
+  #about .about-support-message::after {
+    top: calc(var(--about-portrait-canvas-width) * -.265);
+    bottom: auto;
+    height: calc(100% + var(--about-portrait-canvas-width) * .265);
+    background-position: right calc(var(--about-portrait-canvas-width) * -.4184815);
+    clip-path: inset(calc(var(--about-portrait-canvas-width) * .265) 0 0 0);
+  }
+
+  #marketing-flow-final .marketing-flow-diagram { margin-bottom: 8px; }
+  #marketing-flow-final #strategy-expansion-title {
+    padding-top: 8px;
+    padding-bottom: 14px;
+  }
+  #marketing-flow-final .marketing-flow-topics h4 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: left;
+  }
+  #marketing-flow-final .marketing-flow-topics h4 span {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    margin-right: 0;
+    font-size: 18px;
+  }
+
+  /* Keep number and pricing subsection title together on one line. */
+  #price .pfb-subhead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  #price .pfb-subhead > span {
+    flex: 0 0 35px;
+    margin: 0;
+  }
+  #price .pfb-subhead h4 {
+    width: auto;
+    min-width: 0;
+    font-size: clamp(18px, 5.2vw, 22px);
+    white-space: normal;
+  }
+
+  /* Let the proposal copy wrap beside the booklet, then return to full width. */
+  #price .pricing-free-outline-row { display: flow-root; }
+  #price .pricing-free-outline-cover {
+    float: left;
+    width: min(101px, 29.52%);
+    margin: 0 14px 8px 0;
+  }
+  #price .pricing-free-outline-copy { display: block; min-width: 0; }
+  #price .pricing-free-outline-copy .pricing-free-final-note {
+    clear: both;
+    width: 100%;
+  }
+
+  /* Compact form of the shared 15-step accordion. */
+  #price .pricing-flow-mobile-toggle {
+    min-height: 72px;
+    padding: 9px 50px 9px 8px;
+    grid-template-columns: 70px 34px minmax(0, 1fr);
+    gap: 8px;
+  }
+  #price .pricing-flow-mobile-toggle .pricing-flow-number-image {
+    display: block;
+    width: 70px;
+    height: 38px;
+  }
+  #price .pricing-flow-mobile-toggle > img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    border-radius: 50%;
+    background: #20aebd;
+    object-fit: contain;
+  }
+  #price .pricing-flow-mobile-title {
+    min-width: 0;
+    color: #009bb1;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  #price .pricing-flow-mobile-indicator { right: 14px; }
+  #price .is-mobile-flow-ready > .pricing-flow-step-content {
+    width: 100%;
+    padding: 18px 12px 22px;
+    text-align: left;
+  }
+  #price .is-mobile-flow-ready > .pricing-flow-step-content p {
+    width: 100%;
+    margin: 0 0 1.5em;
+    text-align: left;
+  }
+  #price .is-mobile-flow-ready > .pricing-flow-step-content p:last-child { margin-bottom: 0; }
+
+  #marketing-flow-final :is(.marketing-flow-intro p, .marketing-flow-white-box > p, .marketing-flow-topics p, .marketing-flow-support > p),
+  #price :is(.pfb-head p, .pfb-lead),
+  #price .pfb-comparison-table-mobile td:not(.pfb-transposed-price):not(.pfb-transposed-audience),
+  #price .pfb-service-table tbody td:nth-child(3),
+  #price .pfb-operation-table-mobile td:not(.pfb-transposed-price),
+  #price .pricing-free-frame p:not(.pricing-free-form-note):not(.pricing-free-final-note),
+  #price .pricing-flow-step-content p,
+  #price .pricing-faq > div p {
+    font-size: 17px;
+    line-height: 1.9;
+  }
+  #marketing-flow-final :is(.marketing-flow-intro p, .marketing-flow-white-box > p, .marketing-flow-topics p, .marketing-flow-support > p),
+  #price .pfb-head p,
+  #price .pricing-free-frame p:not(.pricing-free-form-note):not(.pricing-free-final-note),
+  #price .pricing-flow-step-content p,
+  #price .pricing-faq > div p { margin-bottom: 1.5em; }
+  #price .pfb-service-table tbody td:nth-child(2) > b { font-size: 21px; }
+
+  /* Only the three pricing notes collapse on mobile; their authored type stays intact. */
+  #price .pfb-notes > h5 { display: none; }
+  #price .pfb-notes-toggle {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 54px;
+    padding: 10px 48px 10px 16px;
+    border: 2px solid #20aebd;
+    border-radius: 4px;
+    background: #eaf8fa;
+    color: #007f8e;
+    font: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+  }
+  #price .pfb-notes-toggle::before,
+  #price .pfb-notes-toggle::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 14px;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    transition: transform .24s ease;
+  }
+  #price .pfb-notes-toggle::after { transform: rotate(90deg); }
+  #price .pfb-notes-toggle[aria-expanded="true"] { background: #20aebd; color: #fff; }
+  #price .pfb-notes-toggle[aria-expanded="true"]::after { transform: rotate(0); }
+  #price .pfb-notes-toggle:focus-visible { outline: 3px solid #171717; outline-offset: 3px; }
+  #price .pfb-notes-panel:not([hidden]) { padding-top: 14px; }
+  #price .pfb-notes-panel { width: 100%; }
+}
+
+@media (max-width: 389px) {
+  #price .pricing-flow-mobile-toggle {
+    grid-template-columns: 64px 30px minmax(0, 1fr);
+    gap: 7px;
+    padding-right: 44px;
+  }
+  #price .pricing-flow-mobile-toggle .pricing-flow-number-image { width: 64px; }
+  #price .pricing-flow-mobile-toggle > img { width: 28px; height: 28px; }
+  #price .pricing-flow-mobile-title { font-size: 16px; }
+}
+
+/* One readable price line per condition, including the transposed mobile table. */
+#price .pfb-ad-fee { display: block; }
+#price .pfb-ad-fee > b {
+  display: block;
+  color: #ed6411;
+  font-size: 18px;
+  line-height: 1.65;
+  white-space: nowrap;
+}
+
+/* Strategy subheads share one type scale and one full-width, quiet rule. */
+#marketing-flow-final :is(#strategy-expansion-title, .marketing-flow-white-title, .marketing-flow-topics h4, .marketing-flow-bridge h4) {
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 0 0 16px;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+#marketing-flow-final .strategy-extension,
+#marketing-flow-final .marketing-flow-bridge { border-top: 0; }
+#marketing-flow-final .strategy-extension { padding-top: 0; }
+#marketing-flow-final .marketing-flow-topics article {
+  display: block;
+  padding: 24px 0;
+  border: 0;
+}
+#marketing-flow-final .marketing-flow-topics article:last-child { border: 0; }
+#marketing-flow-final .marketing-flow-topics h4 {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  text-align: left;
+}
+#marketing-flow-final .marketing-flow-topics h4 span { width: 36px; height: 36px; margin: 0; }
+#marketing-flow-final .marketing-flow-topics p { margin: 0 0 0 46px; text-align: left; }
+@media (max-width: 768px) {
+  #price .pfb-ad-fee > b { font-size: 16px; }
+  #price .pfb-operation-table-mobile thead th:nth-child(2),
+  #price .pfb-operation-table-mobile tbody td:nth-child(2) { width: 284px; min-width: 284px; max-width: 284px; }
+  #marketing-flow-final :is(#strategy-expansion-title, .marketing-flow-white-title, .marketing-flow-topics h4, .marketing-flow-bridge h4) {
+    font-size: 20px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #marketing-flow-final .zero-diagram-reveal.is-revealed:not(.is-reveal-complete),
+  #secret .secrets-renovated .zero-diagram-reveal.is-revealed:not(.is-reveal-complete),
+  #secret .zero-closing-reveal.is-revealed:not(.is-reveal-complete) .secrets-closing-art { animation: none; }
+  .zero-heading-reveal {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .zero-smooth-panel,
+  #price .pricing-flow-mobile-indicator::before,
+  #price .pricing-flow-mobile-indicator::after { transition: none !important; animation: none !important; }
+}
+html.zero-accordion-switching,
+html.zero-accordion-switching body {
+  overflow-anchor: none;
+}

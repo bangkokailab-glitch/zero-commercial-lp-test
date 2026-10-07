@@ -1,0 +1,45 @@
+/* Approved offer: examples and proposals precede the CTA; supporting copy follows it. */
+.cta.cta-offer--balanced { padding-top: 66px; padding-bottom: 12px; }
+.cta-offer--balanced .cta-offer__inner { margin-inline: auto; text-align: center; }
+.cta-offer--balanced .cta-offer__lead { margin: 12px auto 0; text-align: center; }
+.cta-offer--balanced .cta-offer__fv-strip { margin: 0 auto 8px; }
+.cta-offer--balanced .cta-offer__fv-strip span { height: 276px; }
+.cta-offer--balanced .cta-offer__fv-strip img { width: 100%; height: auto; margin: 0; }
+.cta-offer--balanced .cta-offer__items { margin: 0 auto 8px; }
+.cta-offer--balanced .cta-offer__button { margin: 0 auto; }
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  .cta.cta-offer--balanced { padding-top: 8.2vw; padding-bottom: 12px; }
+  .cta-offer--balanced .cta-offer__fv-strip span {
+    height: calc(clamp(110px, 18vw, 180px) + 3.8vw + 42px);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .cta.cta-offer--balanced { padding: 76px 2.75vw 26px; }
+  .cta-offer--balanced .cta-offer__inner { width: 100%; max-width: 720px; }
+  .cta-offer--balanced .cta-offer__lead { margin: 12px auto 0; }
+  .cta-offer--balanced .cta-offer__fv-strip { margin-bottom: 12px; }
+  .cta-offer--balanced .cta-offer__fv-strip span {
+    height: calc(clamp(110px, 18vw, 180px) + 48px);
+  }
+  .cta-offer--balanced .cta-offer__items { margin-bottom: 16px; }
+}
+
+@media (max-width: 480px) {
+  .cta.cta-offer--balanced { padding: 15vw 2.75vw 5vw; }
+  .cta-offer--balanced .cta-offer__inner { width: 100%; max-width: 369px; }
+  .cta-offer--balanced .cta-offer__lead { margin: 3vw auto 0; }
+  .cta-offer--balanced .cta-offer__fv-strip { margin-bottom: 3vw; }
+  .cta-offer--balanced .cta-offer__fv-strip span { height: 44vw; }
+  .cta-offer--balanced .cta-offer__items { margin-bottom: 3vw; }
+  .cta-offer--balanced .cta-offer__button { margin-bottom: 0; }
+  .cta-offer--balanced .cta-offer__button > .cta-offer__mail { position: absolute; left: 14px; }
+  .cta-offer--balanced .cta-offer__button > .cta-offer__button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

@@ -1,0 +1,64 @@
+/* 3C分析の章立てを、料金直前の全体図にも引き継ぐ。図・原稿は編集可能なHTMLのまま保持。 */
+#marketing-flow-final.black-dot{padding:4px 0 38px;color:#fff;scroll-margin-top:68px}
+#marketing-flow-final *{box-sizing:border-box}
+#marketing-flow-final>.wrap{max-width:1000px}
+#marketing-flow-final>.wrap>#marketing-flow-final-title{color:#fff;text-align:center;line-height:1.4;margin:0 0 40px;padding:50px 0 30px;border-bottom:2px solid #fff;font-size:33px;font-weight:700}
+#marketing-flow-final .marketing-flow-lead{display:flex;align-items:center;gap:60px;margin:0 0 39px}
+#marketing-flow-final .marketing-flow-illustration{flex:0 0 350px;width:350px;margin:0}
+#marketing-flow-final .marketing-flow-illustration img{display:block;width:100%;height:auto}
+#marketing-flow-final .marketing-flow-lead-copy{flex:1;min-width:0;margin:0}
+#marketing-flow-final .marketing-flow-lead-copy p{color:#fff;margin:0;font-family:'メイリオ','Hiragino Kaku Gothic ProN',sans-serif}
+#marketing-flow-final .marketing-flow-lead-copy p:first-child{font-size:23px;line-height:1.65;font-weight:700;margin-bottom:35px}
+#marketing-flow-final .marketing-flow-lead-copy p:last-child{font-size:16px;line-height:1.8}
+#marketing-flow-final .marketing-flow-white-box{width:100%;background:#fff;color:#231815;padding:0 25px 25px;margin:0}
+#marketing-flow-final .marketing-flow-white-title{font-size:30px;line-height:1.4;text-align:center;font-weight:700}
+#marketing-flow-final .marketing-flow-diagram{margin:0 0 25px;width:100%}
+#marketing-flow-final .marketing-flow-diagram{background:#151515;padding:12px 12px 18px}
+#marketing-flow-final .marketing-flow-diagram picture,#marketing-flow-final .marketing-flow-diagram img{display:block;width:100%}
+#marketing-flow-final .marketing-flow-diagram img{height:auto;margin:0}
+#marketing-flow-final .marketing-flow-intro{max-width:840px;margin:0 auto 24px}
+#marketing-flow-final .marketing-flow-intro p{font-size:16px;line-height:1.8;margin:0 0 12px}
+#marketing-flow-final .marketing-flow-intro strong{font-size:21px}
+#marketing-flow-final .marketing-flow-topics{margin:0 0 25px}
+#marketing-flow-final .marketing-flow-topics article{display:grid;grid-template-columns:minmax(225px,34%) 1fr;gap:18px;align-items:start;border-top:1px solid #d8d3cc;padding:16px 5px}
+#marketing-flow-final .marketing-flow-topics article:last-child{border-bottom:1px solid #d8d3cc}
+#marketing-flow-final .marketing-flow-topics h4{font-size:18px;line-height:1.5;text-align:center;margin:0;font-weight:700}
+#marketing-flow-final .marketing-flow-topics h4 span{color:#ad7031;font-family:Georgia,serif;font-size:14px;margin-right:10px}
+#marketing-flow-final .marketing-flow-topics p{font-size:16px;line-height:1.75;margin:0}
+#marketing-flow-final .marketing-flow-support{margin:0 0 23px}
+#marketing-flow-final .marketing-flow-support p{font-size:16px;line-height:1.85;margin:0 0 11px}
+#marketing-flow-final .marketing-flow-support .marketing-flow-note{color:#5b5b5b;font-size:13px;line-height:1.7;margin:0}
+#marketing-flow-final .marketing-flow-bridge{border-top:1px solid #c6ad88;padding:19px 0 0}
+#marketing-flow-final .marketing-flow-bridge h4{text-align:center;font-size:24px;line-height:1.45;margin:0 0 9px;font-weight:700}
+#marketing-flow-final .marketing-flow-bridge p{font-size:16px;line-height:1.75;margin:0 0 12px}
+#marketing-flow-final .marketing-flow-bridge a{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#956129;font-size:16px;font-weight:700;text-decoration:none;border-bottom:1px solid #956129}
+#marketing-flow-final .marketing-flow-bridge a:focus-visible{outline:2px solid #ee7a18;outline-offset:3px}
+@media(max-width:767px){
+  #marketing-flow-final.black-dot{padding:4px 0 24px}
+  #marketing-flow-final>.wrap{width:92.6vw;max-width:none}
+  #marketing-flow-final>.wrap>#marketing-flow-final-title{font-size:clamp(19px,5.1vw,24px);padding:22px 0 16px;margin:0 0 21px;line-height:1.45}
+  #marketing-flow-final .marketing-flow-lead{display:block;margin:0 0 21px;min-height:0}
+  #marketing-flow-final .marketing-flow-lead::after{content:"";display:block;clear:both}
+  #marketing-flow-final .marketing-flow-illustration{float:left;width:40%;margin:0 4% 8px 0}
+  #marketing-flow-final .marketing-flow-lead-copy{display:block;margin:0}
+  #marketing-flow-final .marketing-flow-lead-copy p:first-child{font-size:clamp(16px,4.25vw,19px);line-height:1.5;margin:0 0 12px;font-weight:700}
+  #marketing-flow-final .marketing-flow-lead-copy p:last-child{clear:both;font-size:14px;line-height:1.7}
+  #marketing-flow-final .marketing-flow-white-box{padding:3.8vw 3.8vw 16px;margin:0}
+  #marketing-flow-final .marketing-flow-white-title{font-size:clamp(17px,4.6vw,21px);line-height:1.4;padding:9px 0 11px;margin-bottom:16px}
+  #marketing-flow-final .marketing-flow-diagram{margin-bottom:18px}
+  #marketing-flow-final .marketing-flow-diagram{padding:4px 2px 8px}
+  #marketing-flow-final .marketing-flow-intro{margin-bottom:15px}
+  #marketing-flow-final .marketing-flow-intro p{font-size:14px;line-height:1.7}
+  #marketing-flow-final .marketing-flow-intro strong{font-size:17px}
+  #marketing-flow-final .marketing-flow-topics{margin-bottom:18px}
+  #marketing-flow-final .marketing-flow-topics article{display:block;padding:12px 1px}
+  #marketing-flow-final .marketing-flow-topics h4{font-size:16px;margin:0 0 5px}
+  #marketing-flow-final .marketing-flow-topics p{font-size:13px;line-height:1.7}
+  #marketing-flow-final .marketing-flow-support{margin-bottom:18px}
+  #marketing-flow-final .marketing-flow-support p{font-size:14px;line-height:1.7}
+  #marketing-flow-final .marketing-flow-support .marketing-flow-note{font-size:12px;line-height:1.6}
+  #marketing-flow-final .marketing-flow-bridge{padding-top:15px}
+  #marketing-flow-final .marketing-flow-bridge h4{font-size:19px}
+  #marketing-flow-final .marketing-flow-bridge p{font-size:13px;line-height:1.7}
+  #marketing-flow-final .marketing-flow-bridge a{font-size:14px}
+}

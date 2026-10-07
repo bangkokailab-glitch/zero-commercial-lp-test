@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="badge-bg" d="M0 0H180V84H0Z" fill="#20aebd"/>
+    <path id="word-step" d="M18 24h18v6H18v-6Zm0 0h6v20h-6V24Zm0 14h18v6H18v-6Zm12 0h6v20h-6V38ZM18 52h18v6H18v-6ZM42 24h18v6h-6v28h-6V30h-6v-6ZM66 24h18v6H72v8h10v6H72v8h12v6H66V24ZM90 24h18v6H96v9h6V30h6v15H96v13h-6V24Z" fill="#fff"/>
+    <path id="digit-0" d="M0 0h14v4H0V0ZM0 0h4v30H0V0Zm10 0h4v30h-4V0ZM0 26h14v4H0v-4Z" fill="#fff"/>
+    <path id="digit-1" d="M5 0h5v30H5V7L1 11V5l4-5Z" fill="#fff"/>
+    <path id="digit-2" d="M0 0h14v4H0V0Zm10 0h4v15h-4V0ZM0 13h14v4H0v-4Zm0 0h4v17H0V13Zm0 13h14v4H0v-4Z" fill="#fff"/>
+    <path id="digit-3" d="M0 0h14v4H0V0Zm10 0h4v30h-4V0ZM2 13h12v4H2v-4ZM0 26h14v4H0v-4Z" fill="#fff"/>
+    <path id="digit-4" d="M0 0h4v17H0V0Zm10 0h4v30h-4V0ZM0 13h14v4H0v-4Z" fill="#fff"/>
+    <path id="digit-5" d="M0 0h14v4H0V0ZM0 0h4v17H0V0Zm0 13h14v4H0v-4Zm10 13h4V13h-4v13ZM0 26h14v4H0v-4Z" fill="#fff"/>
+    <path id="digit-6" d="M0 0h14v4H0V0ZM0 0h4v30H0V0Zm0 13h14v4H0v-4Zm10 13h4V13h-4v13ZM0 26h14v4H0v-4Z" fill="#fff"/>
+    <path id="digit-7" d="M0 0h14v4H0V0Zm10 0h4v30h-4V0Z" fill="#fff"/>
+    <path id="digit-8" d="M0 0h14v4H0V0ZM0 0h4v30H0V0Zm10 0h4v30h-4V0ZM0 13h14v4H0v-4ZM0 26h14v4H0v-4Z" fill="#fff"/>
+    <path id="digit-9" d="M0 0h14v4H0V0ZM0 0h4v17H0V0Zm10 0h4v30h-4V0ZM0 13h14v4H0v-4ZM0 26h14v4H0v-4Z" fill="#fff"/>
+  </defs>
+  <symbol id="step-01" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-0"/><use href="#digit-1" transform="translate(20)"/></g></symbol>
+  <symbol id="step-02" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-0"/><use href="#digit-2" transform="translate(20)"/></g></symbol>
+  <symbol id="step-03" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-0"/><use href="#digit-3" transform="translate(20)"/></g></symbol>
+  <symbol id="step-04" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-0"/><use href="#digit-4" transform="translate(20)"/></g></symbol>
+  <symbol id="step-05" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-0"/><use href="#digit-5" transform="translate(20)"/></g></symbol>
+  <symbol id="step-06" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-0"/><use href="#digit-6" transform="translate(20)"/></g></symbol>
+  <symbol id="step-07" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-0"/><use href="#digit-7" transform="translate(20)"/></g></symbol>
+  <symbol id="step-08" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-0"/><use href="#digit-8" transform="translate(20)"/></g></symbol>
+  <symbol id="step-09" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-0"/><use href="#digit-9" transform="translate(20)"/></g></symbol>
+  <symbol id="step-10" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-1"/><use href="#digit-0" transform="translate(20)"/></g></symbol>
+  <symbol id="step-11" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-1"/><use href="#digit-1" transform="translate(20)"/></g></symbol>
+  <symbol id="step-12" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-1"/><use href="#digit-2" transform="translate(20)"/></g></symbol>
+  <symbol id="step-13" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-1"/><use href="#digit-3" transform="translate(20)"/></g></symbol>
+  <symbol id="step-14" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-1"/><use href="#digit-4" transform="translate(20)"/></g></symbol>
+  <symbol id="step-15" viewBox="0 0 180 84"><use href="#badge-bg"/><use href="#word-step"/><g transform="translate(126 27)"><use href="#digit-1"/><use href="#digit-5" transform="translate(20)"/></g></symbol>
+</svg>
