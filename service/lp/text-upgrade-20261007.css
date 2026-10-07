@@ -153,7 +153,7 @@
 #mv .zero-hero-audience__rest {font-size:.9em}
 #mv .zero-hero-legacy-banner {position:absolute;left:0;top:70px;width:505px;margin:0}
 #mv .zero-hero-story {position:absolute;left:0;top:159px;width:100%;font-size:37px;line-height:1.5;letter-spacing:0;margin:0}
-#mv .zero-hero-display {position:absolute;left:0;top:218px;width:100%;font-size:132px;line-height:1.15;letter-spacing:0;filter:none;text-align:left}
+#mv .zero-hero-display {position:absolute;left:0;top:218px;width:100%;font-size:132px;line-height:1.15;letter-spacing:0;filter:none;text-align:left;color:#ff2028}
 #mv .zero-hero-display__text {display:inline-block;width:max-content;max-width:none;transform:translateX(var(--hero-ink-offset,0px)) scaleX(var(--hero-fit,.87));transform-origin:left center;filter:url(#zero-ink-wear)}
 #mv .zero-hero-signature {position:absolute;top:382px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:30px;line-height:1.2;padding:0 18px;margin:0}
 #mv .zero-hero-stats {position:absolute;top:438px;left:50%;transform:translateX(-50%);width:810px;max-width:100%;gap:34px;margin:0}
@@ -182,8 +182,9 @@
 /* One-shot bar-wipe reveal, followed by visible-only proof counters.
    All content stays visible when JavaScript is absent or motion is reduced. */
 .zero-hero-wipe {position:relative;display:inline-block;isolation:isolate}
-.zero-hero-wipe::after {content:"";position:absolute;z-index:2;inset:-.12em 0 -.04em;background:#fff;transform:scaleX(0);transform-origin:left;pointer-events:none}
-.zero-hero-signature::after {background:#ef7406;inset:0}
+.zero-hero-wipe::after {content:"";position:absolute;z-index:2;top:var(--hero-wipe-top,.15em);left:0;right:0;height:var(--hero-wipe-height,.8em);background:#fff;transform:scaleX(0);transform-origin:left;pointer-events:none}
+.zero-hero-display::after {background:#ff2028}
+.zero-hero-signature::after {background:#fff}
 #mv .zero-hero-stat strong {min-width:3ch;font-variant-numeric:tabular-nums;text-align:center}
 #mv .zero-hero-stat strong[data-count-to="13"] {min-width:2ch}
 @keyframes zero-hero-wipe-bar {
@@ -207,8 +208,8 @@
  #mv .zero-hero-legacy-banner{position:relative;top:auto;width:100%;margin:12px 0 5px;flex:none}
  #mv .zero-hero-story{position:static;font-size:18px;line-height:1.5;letter-spacing:-.045em;margin:5px 0 3px;white-space:nowrap}
  #mv .mv-primary-title{width:100%}
- #mv .zero-hero-display{position:static;font-size:52px;line-height:1.2}
- #mv .zero-hero-signature{position:static;transform:none;font-size:14px;line-height:1.4;padding:1px 10px;margin:8px auto 16px}
+ #mv .zero-hero-display{position:relative;top:auto;left:auto;font-size:52px;line-height:1.2}
+ #mv .zero-hero-signature{position:relative;top:auto;left:auto;transform:none;font-size:14px;line-height:1.4;padding:1px 10px;margin:8px auto 16px}
  #mv .zero-hero-stats{position:static;transform:none;width:100%;gap:7px}
  #mv .zero-hero-stat svg{width:20px;height:19px}
  #mv .zero-hero-stat p{font-size:9px;line-height:1.35;letter-spacing:-.04em;margin:1px 0}

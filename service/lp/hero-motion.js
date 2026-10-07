@@ -32,7 +32,7 @@
     if (played.has(counter)) return;
     played.add(counter);
     if (motion.matches || document.hidden) return finishCounter(counter);
-    counter.textContent = '1';
+    counter.textContent = '0';
     pending.set(counter, setTimeout(() => {
       pending.delete(counter);
       const start = performance.now();
@@ -40,7 +40,7 @@
       function tick(now) {
         const progress = Math.min((now - start) / 1600, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
-        counter.textContent = String(Math.min(target, Math.floor(1 + (target - 1) * eased)));
+        counter.textContent = String(Math.min(target, Math.floor(target * eased)));
         if (progress < 1) frames.set(counter, requestAnimationFrame(tick));
         else finishCounter(counter);
       }
