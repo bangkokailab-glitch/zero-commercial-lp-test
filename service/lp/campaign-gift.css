@@ -1,178 +1,82 @@
-/* Campaign-only revision: a custom proposal CTA, without a booklet mockup.
-   Keep the current photo and carousel until a new background is approved. */
-.cta.cta-offer--gold {
-  isolation: isolate;
-  overflow: hidden;
-  padding: 20px 0 16px;
-  background: #e9e3d9;
-  color: #201c18;
-}
-.cta.cta-offer--gold > .offer-campaign-background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(#fff2, #fff5), url(images/offer-meeting-room-20261007.webp) center / cover no-repeat;
-}
-.cta.cta-offer--gold > .offer-campaign-background.is-viewport-pinned {
-  bottom: auto;
-  height: 100vh;
-  height: 100lvh;
-  will-change: transform;
-}
-.cta.cta-offer--gold > :not(.offer-campaign-background) { position: relative; z-index: 1; }
+/* Campaign8: a quieter ribbon and a compact, equal-size two-line CTA. */
+.cta.cta-offer--gold { isolation:isolate; overflow:hidden; padding:20px 0 16px; background:#071224; color:#fff; }
+.cta.cta-offer--gold > :not(.moon-scene) { position:relative; z-index:1; }
 .cta.cta-offer--gold .cta-ribbon {
-  container-type: inline-size;
-  scroll-margin-top: 120px;
-  display: block;
-  width: min(1000px, calc(100% - 24px));
-  height: auto;
-  min-height: 0;
-  aspect-ratio: 821.78 / 106.94;
-  padding: 0;
-  margin: 0 auto 8px;
-  font-family: var(--zero-shingo-bold);
-  line-height: 1.2;
-  white-space: nowrap;
+  container-type:inline-size;
+  scroll-margin-top:120px;
+  display:block;
+  width:min(1000px, calc(100% - 24px));
+  height:auto;
+  min-height:0;
+  aspect-ratio:821.78 / 106.94;
+  padding:0;
+  margin:0 auto 8px;
+  font-family:var(--zero-shingo-bold);
+  white-space:nowrap;
 }
-/* Text belongs to the front gold face, not the lower ribbon tails. */
+/* Center on the gold front face, excluding the hanging ribbon tails. */
 .cta.cta-offer--gold .cta-ribbon > span {
-  position: absolute;
-  left: 6.67%;
-  top: 0;
-  width: 87.63%;
-  height: 70.1%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  font-size: 4.95cqw;
-  line-height: 1.5;
-  letter-spacing: .045em;
+  position:absolute;
+  left:6.67%; top:0; width:87.63%; height:70.1%;
+  display:flex; align-items:center; justify-content:center;
+  padding:0;
+  font-size:4.2cqw;
+  line-height:1.6;
+  letter-spacing:.055em;
 }
-.cta.cta-offer--gold .cta-ribbon > span > span {
-  text-emphasis: none;
-  -webkit-text-emphasis: none;
-}
-.cta.cta-offer--gold .offer-proposal {
-  width: min(1000px, calc(100% - 48px));
-  padding: 0;
-  margin: 18px auto 0;
-}
+.cta.cta-offer--gold .cta-ribbon > span > span { text-emphasis:none; -webkit-text-emphasis:none; }
+.cta.cta-offer--gold .offer-proposal { width:min(1000px, calc(100% - 48px)); padding:0; margin:18px auto 0; }
 .cta.cta-offer--gold .offer-gift {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  display: block;
-  padding: 12px 24px;
-  border: 3px solid #fff;
-  border-radius: 8px;
-  background: radial-gradient(ellipse at 35% 0%, #ff989866, transparent 60%), linear-gradient(175deg, #ff4545 0%, #f60b17 46%, #df0010 76%, #bb000e 100%);
-  box-shadow: 5px 6px 0 #743e3b55, 0 9px 16px #4b111126, inset 0 2px 3px #ffffffa6, inset 0 -4px 6px #89000a99;
-  color: #fff;
-  font-family: var(--zero-shingo-bold);
-  text-decoration: none;
-  text-align: center;
-  transition: filter .2s ease;
-  animation: proposal-float 3.8s ease-in-out infinite paused;
+  position:relative;
+  display:block;
+  padding:15px 24px;
+  border:3px solid #fff;
+  border-radius:8px;
+  background:#e50920;
+  box-shadow:5px 6px 0 #ffffff30;
+  color:#fff;
+  font-family:var(--zero-shingo-bold);
+  text-decoration:none;
+  text-align:center;
+  transition:background-color .2s ease;
+  animation:proposal-float 3.8s ease-in-out infinite paused;
 }
+/* No gloss, moving light, glint, or shine on this CTA. */
 .cta.cta-offer--gold .offer-gift::before,
-.cta.cta-offer--gold .offer-gift::after { content: ""; position: absolute; pointer-events: none; }
-/* Static curved highlight gives the button a glossy surface at rest, too. */
-.cta.cta-offer--gold .offer-gift::after {
-  z-index: 0;
-  inset: 1px 1px auto;
-  height: 48%;
-  border-radius: 5px 5px 50% 12%;
-  background: linear-gradient(#ffffff38, #ffffff08);
-}
-.cta.cta-offer--gold .offer-gift::before {
-  z-index: 2;
-  inset: 0;
-  background: linear-gradient(105deg, transparent 38%, #ffffff08 44%, #ffffff4d 50%, #ffffff08 56%, transparent 62%);
-  transform: translateX(-130%);
-  animation: proposal-shine 5.8s ease-in-out 1.2s infinite paused;
-}
-.cta.cta-offer--gold .offer-gift:hover { filter: brightness(1.05); }
-.cta.cta-offer--gold .offer-gift:focus-visible { outline: 3px solid #162f60; outline-offset: 5px; }
-.offer-gift__copy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; min-width: 0; gap: 8px; }
-.offer-gift__label {
-  display: block;
-  font-family: var(--zero-shingo-regular);
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: .06em;
-  text-wrap: balance;
-}
-.offer-gift__title {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  align-items: end;
-  justify-content: center;
-  column-gap: .35em;
-  font-family: var(--zero-shingo-bold);
-  color: #fff;
-  font-size: 36px;
-  line-height: 1.4;
-  letter-spacing: .025em;
-}
-.offer-gift__title > span { white-space: nowrap; }
-.offer-gift__plus { font-size: .72em; line-height: 1.9445; }
-.offer-gift__design { display: flex; flex-direction: column; align-items: center; gap: 2px; }
-.offer-gift__scope { font-family: var(--zero-shingo-regular); font-size: 14px; line-height: 1.6; letter-spacing: .04em; }
-.offer-gift__action { display: block; font-size: 21px; line-height: 1.6; letter-spacing: .06em; text-decoration: underline; text-underline-offset: .2em; animation: proposal-action 3.8s ease-in-out .3s infinite paused; }
+.cta.cta-offer--gold .offer-gift::after { content:none; }
+.cta.cta-offer--gold .offer-gift:hover { background:#ce0017; }
+.cta.cta-offer--gold .offer-gift:focus-visible { outline:3px solid #fff; outline-offset:5px; }
+.offer-gift__copy { display:flex; flex-direction:column; align-items:center; gap:8px; font-size:32px; line-height:1.55; letter-spacing:.035em; }
+.offer-gift__line { display:block; font:inherit; white-space:nowrap; }
+.offer-gift__plus { display:inline-block; margin-inline:.15em; font-size:.65em; vertical-align:.08em; }
+.offer-gift__arrows { display:inline-block; margin-left:.18em; font-family:Arial,sans-serif; font-size:.7em; letter-spacing:-.14em; vertical-align:.1em; animation:proposal-arrows 2.4s ease-in-out infinite paused; }
 .cta.cta-offer--gold .offer-gift.is-in-view,
-.cta.cta-offer--gold .offer-gift.is-in-view::before,
-.offer-gift.is-in-view .offer-gift__action { animation-play-state: running; }
-/* Freeze the target while the user is interacting with it. */
+.offer-gift.is-in-view .offer-gift__arrows { animation-play-state:running; }
 .cta.cta-offer--gold .offer-gift:is(:hover, :focus-visible),
-.cta.cta-offer--gold .offer-gift:is(:hover, :focus-visible)::before,
-.offer-gift:is(:hover, :focus-visible) .offer-gift__action { animation-play-state: paused; }
-@keyframes proposal-float { 0%, 100% { transform: translateY(3px); } 50% { transform: translateY(-3px); } }
-@keyframes proposal-action { 0%, 55%, 100% { transform: none; } 68% { transform: translateY(-1px) scale(1.035); } 82% { transform: none; } }
-@keyframes proposal-shine { 0%, 68% { transform: translateX(-130%); } 88%, 100% { transform: translateX(130%); } }
+.offer-gift:is(:hover, :focus-visible) .offer-gift__arrows { animation-play-state:paused; }
+@keyframes proposal-float { 0%,100% { transform:translateY(3px); } 50% { transform:translateY(-3px); } }
+@keyframes proposal-arrows { 0%,55%,100% { transform:none; } 75% { transform:translateX(3px); } }
 .cta.cta-offer--gold .offer-proposal__note {
-  width: fit-content;
-  max-width: 100%;
-  margin: 14px auto 0;
-  padding: 5px 12px;
-  background: #ffffffdb;
-  color: #27221d;
-  font-family: var(--zero-shingo-regular);
-  font-size: 14px;
-  line-height: 1.7;
-  text-align: center;
-  text-wrap: balance;
+  width:fit-content; max-width:100%; margin:14px auto 0; padding:5px 12px;
+  background:#071224c9; color:#fff;
+  font-family:var(--zero-shingo-regular); font-size:14px; line-height:1.7; text-align:center; text-wrap:balance;
 }
-@media (max-width: 1000px) and (min-width: 769px) {
-  .offer-gift__title { font-size: 34px; }
-  .offer-gift__label { font-size: 15px; }
+@media(max-width:1000px) and (min-width:769px) { .offer-gift__copy { font-size:30px; } }
+@media(max-width:768px) {
+  html.gift-cta-overlaps-floating .sticky-consultation:not(:focus-within) { opacity:0; visibility:hidden; pointer-events:none; }
+  .cta.cta-offer--gold { padding:12px 0; }
+  .cta.cta-offer--gold .cta-ribbon { width:calc(100% - 12px); margin-bottom:8px; scroll-margin-top:72px; }
+  .cta.cta-offer--gold .offer-proposal { width:calc(100% - 32px); max-width:600px; margin-top:14px; }
+  .cta.cta-offer--gold .offer-gift { padding:24px 10px; border-width:2px; }
+  .offer-gift__copy { font-size:19px; letter-spacing:.015em; }
+  .cta.cta-offer--gold .offer-proposal__note { margin-top:12px; padding:5px 7px; font-size:11px; line-height:1.7; }
 }
-@media (max-width: 768px) {
-  /* Keep the floating consultation link elsewhere, without covering this CTA. */
-  html.gift-cta-overlaps-floating .sticky-consultation:not(:focus-within) { opacity: 0; visibility: hidden; pointer-events: none; }
-  .cta.cta-offer--gold { padding: 12px 0; }
-  .cta.cta-offer--gold .cta-ribbon { width: calc(100% - 12px); margin-bottom: 8px; scroll-margin-top: 72px; }
-  .cta.cta-offer--gold .offer-proposal { width: calc(100% - 32px); max-width: 600px; margin-top: 14px; }
-  .cta.cta-offer--gold .offer-gift { padding: 12px; border-width: 2px; }
-  .offer-gift__copy { gap: 9px; }
-  .offer-gift__label { font-size: 12px; line-height: 1.65; letter-spacing: .035em; }
-  .offer-gift__title { column-gap: .22em; font-size: clamp(21px, 5.8vw, 34px); line-height: 1.45; letter-spacing: .015em; }
-  .offer-gift__plus { line-height: 2.014; }
-  .offer-gift__scope { font-size: 11px; line-height: 1.6; letter-spacing: .01em; }
-  .offer-gift__action { font-size: 17px; line-height: 1.6; letter-spacing: .04em; }
-  .cta.cta-offer--gold .offer-proposal__note { margin-top: 12px; padding: 5px 7px; font-size: 11px; line-height: 1.7; }
+@media(min-width:480px) and (max-width:768px) {
+  .cta.cta-offer--gold .offer-gift { padding-block:18px; }
+  .offer-gift__copy { font-size:24px; }
 }
-@media (max-width: 359px) {
-  .cta.cta-offer--gold .offer-gift { padding-inline: 8px; }
-  .offer-gift__title { font-size: 19.5px; }
-  .offer-gift__label { font-size: 11px; }
-  .offer-gift__scope { font-size: 10px; }
-  .offer-gift__action { font-size: 16px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .cta.cta-offer--gold .offer-gift,
-  .cta.cta-offer--gold .offer-gift::before,
-  .offer-gift__action { animation: none; transition: none; }
-  .cta.cta-offer--gold .offer-gift::before { display: none; }
+@media(max-width:374px) { .offer-gift__copy { font-size:18px; } }
+@media(max-width:339px) { .offer-gift__copy { font-size:16px; } }
+@media(prefers-reduced-motion:reduce) {
+  .cta.cta-offer--gold .offer-gift,.offer-gift__arrows { animation:none; transition:none; }
 }
