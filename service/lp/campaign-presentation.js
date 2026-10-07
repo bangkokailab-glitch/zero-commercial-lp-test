@@ -6,9 +6,26 @@
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const floating = document.querySelector('.sticky-consultation');
   const proposals = [...document.querySelectorAll('.cta-offer--gold .offer-proposal')];
+  const buttons = [...document.querySelectorAll('.cta-offer--gold .offer-gift')];
+  const visibleButtons = new Set();
+  const updateMotion = () => buttons.forEach(button => {
+    button.classList.toggle('is-in-view', visibleButtons.has(button) && !document.hidden && !reduced.matches);
+  });
+  if (typeof IntersectionObserver === 'function') {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) visibleButtons.add(entry.target);
+        else visibleButtons.delete(entry.target);
+      });
+      updateMotion();
+    }, { threshold: 0 });
+    buttons.forEach(button => observer.observe(button));
+  }
+  document.addEventListener('visibilitychange', updateMotion);
   let frame = 0;
   const update = () => {
     frame = 0;
+    updateMotion();
     layers.forEach(layer => {
       const pinned = !reduced.matches;
       layer.classList.toggle('is-viewport-pinned', pinned);
