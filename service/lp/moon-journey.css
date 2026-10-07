@@ -9,6 +9,13 @@
 }
 .moon-scene.is-viewport-pinned { bottom:auto; height:100vh; height:100lvh; will-change:transform; }
 .moon-scene__photo { position:absolute; inset:0; display:block; width:100%; height:100%; max-width:none; object-fit:cover; object-position:100% 50%; }
+.moon-scene::before {
+  content:""; position:absolute; z-index:1; inset:0; opacity:.35;
+  background:radial-gradient(circle at 12% 17%,#dcecff 0 1px,transparent 3px),radial-gradient(circle at 71% 31%,#dcecff 0 1px,transparent 3px),radial-gradient(circle at 43% 8%,#fff 0 .8px,transparent 2.5px),radial-gradient(circle at 93% 38%,#fff 0 .8px,transparent 2.5px);
+  animation:moon-starlight 6s ease-in-out infinite alternate paused;
+}
+.moon-scene.is-in-view::before { animation-play-state:running; }
+@keyframes moon-starlight { from { opacity:.12; } to { opacity:.65; } }
 .moon-scene::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,#02091745,#02091733 55%,#02091708); }
 .moon-scene__caption {
   position:absolute; z-index:1; left:var(--moon-x); top:calc(var(--moon-y) + var(--moon-radius) + 12px);
@@ -16,6 +23,7 @@
   font-family:Arial,sans-serif; font-size:18px; font-weight:600; line-height:1.4; letter-spacing:.09em;
   color:#f5f4df; text-shadow:0 1px 6px #000;
 }
+@media(prefers-reduced-motion:reduce) { .moon-scene::before { animation:none; opacity:.2; } }
 .moon-scene__flight {
   position:absolute; z-index:1; left:var(--moon-x); top:var(--moon-y);
   display:block; width:30px; height:30px;

@@ -43,6 +43,7 @@
       // Static viewport framing: neither the city nor the distant rocket moves.
       layer.classList.add('is-viewport-pinned');
       const box = layer.parentElement.getBoundingClientRect();
+      layer.classList.toggle('is-in-view', !document.hidden && !reduced.matches && box.bottom > 0 && box.top < innerHeight);
       if (box.bottom > 0 && box.top < innerHeight) {
         layer.style.transform = `translate3d(0, ${-box.top}px, 0)`;
       }
