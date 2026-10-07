@@ -1,4 +1,11 @@
 /* Compact, independent contact circle. The external reference's brand assets are not reused. */
+@font-face {
+  font-family: "ZERO CTA Gothic";
+  src: url("fonts/cta-noto-sans-jp-black-20261007.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
 .has-sticky-consultation {
   --floating-cta-size: clamp(156px, 12.60416667vw, 242px);
   --floating-cta-offset: clamp(16px, 2.08333333vw, 40px);
@@ -41,29 +48,52 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: calc(var(--floating-cta-size) * .05);
-  background: linear-gradient(135deg, #00c877, #08ac80);
-  box-shadow: 0 2px 10px #0002;
-  transition: background .2s ease, box-shadow .2s ease;
+  gap: calc(var(--floating-cta-size) * .035);
+  box-sizing: border-box;
+  border: 1px solid #2fe347;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(ellipse at 32% 10%, #75f47788 0, transparent 40%), linear-gradient(180deg, #08bc1c 0%, #00830a 43%, #005706 72%, #003803 100%);
+  box-shadow: inset 0 2px 3px #e2ffe8b3, inset 2px 0 3px #5aff7c80, inset 0 -3px 4px #002800, 0 4px 0 #003504, 0 7px 14px #0005;
+  transition: filter .2s ease, box-shadow .2s ease;
+}
+.sticky-consultation__circle::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 3%;
+  left: 11%;
+  width: 78%;
+  height: 38%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffffff70, #ffffff12 75%, transparent);
+  pointer-events: none;
 }
 .sticky-consultation__label {
   color: #fff;
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  font-family: "ZERO CTA Gothic", "Hiragino Sans", sans-serif;
   font-size: calc(var(--floating-cta-size) * .111);
   line-height: 1.45;
-  font-weight: 800;
+  font-weight: 900;
+  text-shadow: 0 1px 2px #002e05b3;
   text-align: center;
   white-space: nowrap;
 }
-.sticky-consultation__arrow { width: 23%; height: auto; fill: none; stroke: #fff; stroke-width: 2; }
-.sticky-consultation__link:hover .sticky-consultation__circle { background: #00a66b; box-shadow: 0 3px 14px #0004; }
+.sticky-consultation__arrow { width: 25%; height: auto; fill: none; stroke: #fff; stroke-width: 3.5; stroke-linecap: square; stroke-linejoin: miter; filter: drop-shadow(0 1px 1px #003803); }
+.sticky-consultation__link:hover .sticky-consultation__circle { filter: brightness(1.12); }
 .sticky-consultation__link:focus-visible { outline: 3px solid #fff; outline-offset: 4px; box-shadow: 0 0 0 7px #007647; }
 @keyframes zero-contact-ring { to { transform: rotate(360deg); } }
+@keyframes zero-consultation-bob {
+  0%, 100% { transform: translateY(3px); }
+  50% { transform: translateY(-3px); }
+}
 @media (prefers-reduced-motion: no-preference) {
+  .sticky-consultation__link { animation: zero-consultation-bob 3.6s ease-in-out infinite; }
   .sticky-consultation__ring { animation: zero-contact-ring 15s linear infinite; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sticky-consultation, .sticky-consultation__circle { transition: none; }
+  .sticky-consultation__link { animation: none; transform: none; }
   .sticky-consultation__ring { animation: none; }
 }
 @media (min-width: 769px) {
