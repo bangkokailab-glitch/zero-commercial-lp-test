@@ -23,6 +23,8 @@
 /* Do not put a new emphasis dot on the wrappers; keep the original three dots. */
 .dot span:is(.zero-content-wipe,.zero-content-wipe__copy,.zero-content-wipe__bars,.zero-content-wipe__bar) { padding-top: 0; }
 .dot span:is(.zero-content-wipe,.zero-content-wipe__copy,.zero-content-wipe__bars,.zero-content-wipe__bar)::before { content: none; }
+.dot .zero-content-wipe__bars,
+.dot .zero-content-wipe__bar { position: absolute; }
 .secret-cover-a .zero-content-wipe,
 .secrets-toggle-copy .zero-content-wipe { --content-wipe-color: #e60033; }
 .secret-cover-a__live-lockup .zero-content-wipe__copy {
