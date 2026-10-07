@@ -58,9 +58,8 @@
     <link rel="stylesheet" href="marketing-flow-video.css?20260918-viewport-2">
     <script src="marketing-flow-video.js?20260919-position-1" defer></script>
     <script src="pricing-final-b-20260920.js?v=11" defer></script>
-    <script src="media-performance.js?20260920-autoloop-2" defer></script>
+    <script src="media-performance.js?v=20261007-campaign6" defer></script>
     <link rel="stylesheet" href="offer-gold.css?20260920-autoloop-3">
-    <link rel="stylesheet" href="offer-proposal-red.css?v=20261007-square-1">
     <script src="offer-gold-carousel.js?20260920-autoloop-2" defer></script>
     <link rel="stylesheet" href="final-layout-20260920.css?v=20260923-closing-slide">
     <link rel="stylesheet" href="secret01-purpose-examples.css?v=20260927-shared-examples">
@@ -103,7 +102,9 @@
 @media(max-width:768px){#secret-05 #secret05-copy-flow-figure{width:100%;max-width:950px;margin:18px auto;}#secret-05 #secrets-message-title-panel .secret-scope-note{padding:14px;margin:20px 0;font-size:15px;}}
 </style>
 <link rel="stylesheet" href="morisawa-typography.css?v=20261007-2">
-<link rel="stylesheet" href="text-upgrade-20261007.css?v=20261007-hero5">
+<link rel="stylesheet" href="text-upgrade-20261007.css?v=20261007-campaign6">
+<link rel="stylesheet" href="campaign-gift.css?v=20261007-campaign6">
+<script src="campaign-presentation.js?v=20261007-campaign6" defer></script>
 <script src="hero-text-fit.js?v=20261007-2" defer></script>
 <script src="hero-motion.js?v=20261007-2" defer></script>
 <link rel="preload" as="image" href="images/mvTxt2.svg">
@@ -178,7 +179,8 @@
         </section>
 
         <section class="cta cta-offer cta-offer--gold" aria-labelledby="first-offer-title">
-            <h2 class="cta-ribbon" id="first-offer-title"><span>今なら無料提案キャンペーン実施中</span></h2>
+            <div class="offer-campaign-background" aria-hidden="true"></div>
+            <h2 class="cta-ribbon" id="first-offer-title"><span><span>今なら<em>無料提案</em>キャンペーン実施中</span></span></h2>
             <div class="offer-gold__gallery" role="region" aria-roledescription="カルーセル" aria-label="ZEROのLP制作実績を自動表示しています">
                 <div class="offer-gold__track">
                     <figure class="offer-gold__sample offer-gold__sample--tender"><img src="images/offer-fv-tender-top-432.webp" width="432" height="834" alt="保育士求人LPの制作実績" decoding="async" draggable="false"></figure>
@@ -189,17 +191,16 @@
                 </div>
             </div>
             <div class="offer-proposal">
-                <div class="offer-proposal__grid">
-                    <div class="offer-proposal__card">
-                        <h3><span>無料で</span><em>LP構成案</em><span>をご提案</span></h3>
-                        <p>何をどの順番で伝えるのかを整理</p>
-                    </div>
-                    <div class="offer-proposal__card">
-                        <h3><span>無料で</span><em>デザイン1案</em><span>をご提案</span></h3>
-                        <p>ファーストビューのデザインと<br>メインコピーを具体化</p>
-                    </div>
-                </div>
-                <p class="offer-proposal__note">ZERO式LPの10の秘訣・料金・対応範囲まで読んでいただき、<br class="pc">ヒアリングにご回答いただいた方には2つのご提案をご用意しています</p>
+                <a class="offer-gift" href="https://zero-s.jp/contact/" aria-label="LP構成案＆デザイン1案の無料提案を申し込む" aria-describedby="first-offer-note">
+                    <span class="offer-gift__book"><img src="images/free-proposal-outline-cover-20260920-528.webp" width="528" height="752" alt="お渡しする提案資料「LPの初期構成案」の表紙" decoding="async"></span>
+                    <span class="offer-gift__copy">
+                        <span class="offer-gift__label"><span class="offer-gift__label-detail">貴社専用の提案資料を</span>無料プレゼント</span>
+                        <strong class="offer-gift__title"><span>LP構成案<span class="offer-gift__amp">＆</span></span><span>デザイン1案</span></strong>
+                        <span class="offer-gift__action">無料提案を申し込む</span>
+                    </span>
+                    <svg class="offer-gift__arrow" viewBox="0 0 32 32" aria-hidden="true"><path d="m7 4 12 12L7 28m10-24 12 12-12 12"/></svg>
+                </a>
+                <p class="offer-proposal__note" id="first-offer-note">ZERO式LPの10の秘訣・料金・対応範囲まで読んでいただき、<br class="pc">ヒアリングにご回答いただいた方には2つのご提案をご用意しています</p>
             </div>
         </section>
 
@@ -1560,7 +1561,8 @@
         </section>
 
         <section class="cta cta-offer cta-offer--gold" aria-labelledby="offer-final-title">
-            <h2 class="cta-ribbon" id="offer-final-title"><span>今なら無料提案キャンペーン実施中</span></h2>
+            <div class="offer-campaign-background" aria-hidden="true"></div>
+            <h2 class="cta-ribbon" id="offer-final-title"><span><span>今なら<em>無料提案</em>キャンペーン実施中</span></span></h2>
             <div class="offer-gold__gallery" role="region" aria-roledescription="カルーセル" aria-label="ZEROのLP制作実績を自動表示しています">
                 <div class="offer-gold__track">
                     <figure class="offer-gold__sample offer-gold__sample--tender"><img src="images/offer-fv-tender-top-432.webp" width="432" height="834" alt="保育士求人LPの制作実績" loading="lazy" decoding="async" draggable="false"></figure>
@@ -1571,17 +1573,16 @@
                 </div>
             </div>
             <div class="offer-proposal">
-                <div class="offer-proposal__grid">
-                    <div class="offer-proposal__card">
-                        <h3><span>無料で</span><em>LP構成案</em><span>をご提案</span></h3>
-                        <p>何をどの順番で伝えるのかを整理</p>
-                    </div>
-                    <div class="offer-proposal__card">
-                        <h3><span>無料で</span><em>デザイン1案</em><span>をご提案</span></h3>
-                        <p>ファーストビューのデザインと<br>メインコピーを具体化</p>
-                    </div>
-                </div>
-                <p class="offer-proposal__note">ZERO式LPの10の秘訣・料金・対応範囲まで読んでいただき、<br class="pc">ヒアリングにご回答いただいた方には2つのご提案をご用意しています</p>
+                <a class="offer-gift" href="https://zero-s.jp/contact/" aria-label="LP構成案＆デザイン1案の無料提案を申し込む" aria-describedby="final-offer-note">
+                    <span class="offer-gift__book"><img src="images/free-proposal-outline-cover-20260920-528.webp" width="528" height="752" alt="お渡しする提案資料「LPの初期構成案」の表紙" loading="lazy" decoding="async"></span>
+                    <span class="offer-gift__copy">
+                        <span class="offer-gift__label"><span class="offer-gift__label-detail">貴社専用の提案資料を</span>無料プレゼント</span>
+                        <strong class="offer-gift__title"><span>LP構成案<span class="offer-gift__amp">＆</span></span><span>デザイン1案</span></strong>
+                        <span class="offer-gift__action">無料提案を申し込む</span>
+                    </span>
+                    <svg class="offer-gift__arrow" viewBox="0 0 32 32" aria-hidden="true"><path d="m7 4 12 12L7 28m10-24 12 12-12 12"/></svg>
+                </a>
+                <p class="offer-proposal__note" id="final-offer-note">ZERO式LPの10の秘訣・料金・対応範囲まで読んでいただき、<br class="pc">ヒアリングにご回答いただいた方には2つのご提案をご用意しています</p>
             </div>
         </section>
 

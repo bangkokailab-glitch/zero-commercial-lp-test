@@ -27,7 +27,13 @@
     : null;
 
   videos.forEach(video => {
+    // Explicit properties help iOS inline autoplay as well as the HTML attributes.
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
     visibility.set(video, false);
+    video.addEventListener('loadeddata', () => syncVideo(video));
+    video.addEventListener('canplay', () => syncVideo(video));
     if (motion.matches) video.removeAttribute('autoplay');
     if (videoObserver) videoObserver.observe(video);
     else {
@@ -37,6 +43,7 @@
   });
 
   document.addEventListener('visibilitychange', syncVideos);
+  window.addEventListener('pageshow', syncVideos);
   if (motion.addEventListener) motion.addEventListener('change', syncVideos);
   else if (motion.addListener) motion.addListener(syncVideos);
   syncVideos();
