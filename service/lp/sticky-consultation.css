@@ -20,9 +20,9 @@
   display: block;
   box-sizing: border-box;
   padding: 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   transition: opacity .4s ease, visibility .4s;
 }
 .sticky-consultation.is-visible { opacity: 1; visibility: visible; pointer-events: auto; }
@@ -50,24 +50,24 @@
   justify-content: center;
   gap: calc(var(--floating-cta-size) * .035);
   box-sizing: border-box;
-  border: 1px solid #258b52;
+  border: 1px solid #ff7b7b;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(155deg, #075331 0%, #034326 42%, #022f1b 75%, #011e11 100%);
-  box-shadow: inset 0 1px 2px #8ac4a666, inset 2px 0 3px #35866155, inset 0 -3px 4px #001b10, 0 4px 0 #012718, 0 7px 14px #0006;
+  background: radial-gradient(ellipse at 35% 8%, #ff9292 0%, transparent 42%), linear-gradient(165deg, #ff3434 0%, #ff0808 43%, #e00000 75%, #b50000 100%);
+  box-shadow: inset 0 2px 3px #ffffffb3, inset 2px 0 4px #ff8a8a80, inset 0 -4px 7px #850000, 0 4px 0 #840000, 0 8px 18px #0006;
   transition: filter .2s ease, box-shadow .2s ease;
 }
 .sticky-consultation__circle::before {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 8%;
-  left: 18%;
-  width: 30%;
-  height: 10%;
+  top: 5%;
+  left: 13%;
+  width: 70%;
+  height: 40%;
   border-radius: 50%;
-  background: radial-gradient(ellipse, #ffffff80 0%, #c9f5de38 35%, transparent 72%);
-  transform: rotate(-28deg);
+  background: linear-gradient(180deg, #ffffff8c 0%, #ffffff20 65%, transparent 100%);
+  transform: rotate(-12deg);
   pointer-events: none;
 }
 .sticky-consultation__label {
@@ -76,13 +76,13 @@
   font-size: calc(var(--floating-cta-size) * .111);
   line-height: 1.45;
   font-weight: 900;
-  text-shadow: 0 1px 2px #002e05b3;
+  text-shadow: 0 1px 2px #730000b3;
   text-align: center;
   white-space: nowrap;
 }
-.sticky-consultation__arrow { width: 25%; height: auto; fill: none; stroke: #fff; stroke-width: 3.5; stroke-linecap: square; stroke-linejoin: miter; filter: drop-shadow(0 1px 1px #003803); }
+.sticky-consultation__arrow { width: 25%; height: auto; fill: none; stroke: #fff; stroke-width: 3.5; stroke-linecap: square; stroke-linejoin: miter; filter: drop-shadow(0 1px 1px #730000); }
 .sticky-consultation__link:hover .sticky-consultation__circle { filter: brightness(1.12); }
-.sticky-consultation__link:focus-visible { outline: 3px solid #fff; outline-offset: 4px; box-shadow: 0 0 0 7px #007647; }
+.sticky-consultation__link:focus-visible { outline: 3px solid #fff; outline-offset: 4px; box-shadow: 0 0 0 7px #b50000; }
 @keyframes zero-contact-ring { to { transform: rotate(360deg); } }
 @keyframes zero-consultation-bob {
   0%, 100% { transform: translateY(6px); }

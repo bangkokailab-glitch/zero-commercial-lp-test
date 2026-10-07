@@ -4,10 +4,11 @@
 .zero-hero-intro p {margin:0;font:inherit;font-size:21px;line-height:1.65}
 .zero-hero-intro mark {background:#fff000;color:#111;padding:1px 2px}
 .zero-hero-intro .zero-hero-audience {font-size:25px;white-space:nowrap}
-.zero-hero-legacy-banner {position:relative;width:54%;aspect-ratio:505/100;overflow:hidden;margin:16px 0 2px}
-#mv .zero-hero-legacy-banner img {position:absolute;width:206.1%;max-width:none;height:auto;left:-6.93%;top:0;margin:0}
+.zero-hero-legacy-banner {position:relative;width:54%;aspect-ratio:505/100;overflow:hidden;clip-path:polygon(0 52%,100% 3%,100% 57%,0 106%);margin:16px 0 2px}
+/* Show only the original diagonal strip, never the legacy story text or dots below it. */
+#mv .zero-hero-legacy-banner>svg {display:block;position:absolute;inset:0;width:100%;height:100%}
 .zero-hero-story {text-align:center;font-family:var(--zero-shingo-bold);font-size:35px;line-height:1.5;margin:0 0 4px}
-.zero-hero-story span {text-emphasis:filled dot #ed7108;text-emphasis-position:over}
+.zero-hero-story__emphasis {text-emphasis:filled dot #ed7108;text-emphasis-position:over}
 #mv .mv-primary-title {display:block;margin:0;text-align:center;font-family:var(--zero-shingo-bold);color:#fff;line-height:1.2}
 .zero-hero-display {display:block;font-size:116px;letter-spacing:-.045em;white-space:nowrap;filter:url(#zero-ink-wear)}
 .zero-hero-signature {display:inline-block;background:#fff;color:#231815;font-size:30px;line-height:1.35;padding:3px 24px;margin:19px auto 22px;filter:url(#zero-ink-wear)}
@@ -147,7 +148,9 @@
 #mv .zero-hero-intro {position:absolute;inset:0 0 auto;display:grid;grid-template-columns:60% 40%;gap:0;height:60px;text-align:left}
 #mv .zero-hero-intro p {font-size:23px;line-height:1.4;letter-spacing:0;white-space:nowrap}
 #mv .zero-hero-intro .zero-hero-audience {font-size:32px;line-height:1.4;text-align:right}
-#mv .zero-hero-audience span {text-emphasis:filled dot #ed7108;text-emphasis-position:over}
+#mv .zero-hero-audience__focus {font-size:1.16em;text-emphasis:filled dot #ed7108;text-emphasis-position:over}
+#mv .zero-hero-audience__small {font-size:.8em}
+#mv .zero-hero-audience__rest {font-size:.9em}
 #mv .zero-hero-legacy-banner {position:absolute;left:0;top:70px;width:505px;margin:0}
 #mv .zero-hero-story {position:absolute;left:0;top:159px;width:100%;font-size:37px;line-height:1.5;letter-spacing:0;margin:0}
 #mv .zero-hero-display {position:absolute;left:0;top:218px;width:100%;font-size:132px;line-height:1.15;letter-spacing:0;filter:none;text-align:left}
@@ -160,8 +163,9 @@
 #mv .zero-hero-stat>div {flex-direction:column;align-items:center;gap:0;text-align:center}
 #mv .zero-hero-stat strong {font-size:60px;line-height:1.08;letter-spacing:0}
 #mv .zero-hero-stat>div>span {font-size:18px;line-height:1.4}
-@media(min-width:769px) and (max-width:1040px){
- #mv .zero-hero-content{height:auto;aspect-ratio:1000/684}
+@media(min-width:769px) and (max-width:1399px){
+ /* Leave a real right-hand rail so the always-visible CTA never covers hero copy. */
+ #mv .zero-hero-content{height:auto;aspect-ratio:1000/684;width:min(1000px,calc(100% - 212px));margin-left:20px;margin-right:auto}
  #mv .zero-hero-intro{height:6cqw}
  #mv .zero-hero-intro p{font-size:2.3cqw}
  #mv .zero-hero-intro .zero-hero-audience{font-size:3.2cqw}
@@ -174,6 +178,25 @@
  #mv .zero-hero-stat p{font-size:1.9cqw}
  #mv .zero-hero-stat strong{font-size:6cqw}
  #mv .zero-hero-stat>div>span{font-size:1.8cqw}
+}
+/* One-shot bar-wipe reveal, followed by visible-only proof counters.
+   All content stays visible when JavaScript is absent or motion is reduced. */
+.zero-hero-wipe {position:relative;display:inline-block;isolation:isolate}
+.zero-hero-wipe::after {content:"";position:absolute;z-index:2;inset:-.12em 0 -.04em;background:#fff;transform:scaleX(0);transform-origin:left;pointer-events:none}
+.zero-hero-signature::after {background:#ef7406;inset:0}
+#mv .zero-hero-stat strong {min-width:3ch;font-variant-numeric:tabular-nums;text-align:center}
+#mv .zero-hero-stat strong[data-count-to="13"] {min-width:2ch}
+@keyframes zero-hero-wipe-bar {
+  0% {transform:scaleX(0);transform-origin:left}
+  48% {transform:scaleX(1);transform-origin:left}
+  49% {transform:scaleX(1);transform-origin:right}
+  100% {transform:scaleX(0);transform-origin:right}
+}
+@keyframes zero-hero-wipe-copy {0%,48%{opacity:0}49%,100%{opacity:1}}
+@media (prefers-reduced-motion:no-preference) {
+  #mv.hero-motion-pending .zero-hero-wipe__content {opacity:0}
+  #mv.hero-is-animating .zero-hero-wipe::after {animation:zero-hero-wipe-bar 900ms cubic-bezier(.65,0,.35,1) var(--hero-reveal-delay,0ms) both}
+  #mv.hero-is-animating .zero-hero-wipe__content {animation:zero-hero-wipe-copy 900ms linear var(--hero-reveal-delay,0ms) both}
 }
 @media(max-width:768px){
  #mv.video-bg{padding:22px 0 18px}
