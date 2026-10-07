@@ -273,5 +273,5 @@ body section.cta > a.zero-phone-free { --zero-text-face: var(--zero-shingo-bold)
 
 /* The mobile signature inherits a regular family but retains its bold weight. */
 @media (max-width: 768px) {
-  #about .name { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+  #about .name[class] { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
 }
