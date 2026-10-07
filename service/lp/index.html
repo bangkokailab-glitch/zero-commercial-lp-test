@@ -51,8 +51,8 @@
     <link rel="stylesheet" href="mobile-reading.css?20260920-about-portrait-11">
     <link rel="stylesheet" href="secrets-accordion.css?20260918-turquoise-2">
     <script src="secrets-accordion.js?20260929-secret08-support" defer></script>
-    <link rel="stylesheet" href="sticky-consultation.css?20260920-footer-dot-1">
-    <script src="sticky-consultation.js?20260918-always-2" defer></script>
+    <link rel="stylesheet" href="sticky-consultation.css?20261007-floating-circle-1">
+    <script src="sticky-consultation.js?20261007-floating-circle-1" defer></script>
     <link rel="stylesheet" href="marketing-flow-video.css?20260918-viewport-2">
     <script src="marketing-flow-video.js?20260919-position-1" defer></script>
     <script src="pricing-final-b-20260920.js?v=11" defer></script>
@@ -90,33 +90,6 @@
   .fix-menu.pc .fix-menu-secret a { padding: 5px 0 5px 12px; color: #333; }
   .fix-menu.pc .fix-menu-secret:not(:last-child) { border-bottom-color: #e2e2e2; }
   .fix-menu.pc a:hover, .fix-menu.pc a:focus-visible { color: #007e88; background: #eaf9fa; }
-}
-</style>
-<style id="pc-sidebar-consultation-style">
-@media (min-width: 769px) {
-  .sticky-consultation { display: none !important; }
-  .has-sticky-consultation { scroll-padding-bottom: 0; }
-  .has-sticky-consultation footer.black-dot { padding-bottom: 15px; }
-  .fix-menu.pc { bottom: 20px; }
-  .fix-menu.pc > ul { max-height: calc(100dvh - 230px); }
-  .fix-menu.pc a.fix-menu-consultation {
-    display: block;
-    margin: 10px 0 0;
-    padding: 12px 2px;
-    border: 1px solid #d86200;
-    border-radius: 5px;
-    background: #ed7100;
-    color: #fff;
-    font-size: 12px;
-    line-height: 1.6;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    animation: none;
-    transform: none;
-  }
-  .fix-menu.pc a.fix-menu-consultation:hover { background: #cd5d00; }
-  .fix-menu.pc a.fix-menu-consultation:focus-visible { outline: 3px solid #007e88; outline-offset: 2px; }
 }
 </style>
 <style id="secret05-compact-20260927">
@@ -186,7 +159,6 @@
                 <li><a href="#price">料金体系・制作の流れ</a></li>
                 <li><a href="#about">ZEROについて</a></li>
             </ul>
-            <a class="fix-menu-consultation" href="https://zero-s.jp/contact/" aria-label="無料の構成案・デザイン案を相談する">無料の構成案・<br>デザイン案を相談する</a>
         </div>
 
         <section id="mv" class="video-bg">
@@ -1612,8 +1584,17 @@
             <p class="copyright">Copyright（c）2026　株式会社ZERO　All rights reserved.</p>
         </footer>
 </div><!-- container -->
-<aside class="sticky-consultation" aria-label="LP制作の無料相談">
-    <a href="https://zero-s.jp/contact/" class="cta-offer__button sticky-consultation__link" aria-label="無料の構成案・デザイン案を相談する"><img class="cta-offer__button-image" src="images/offer-cta-pc.svg" alt=""><span class="cta-offer__mail" aria-hidden="true"></span><span class="cta-offer__doc" aria-hidden="true"><svg viewBox="0 0 40 48"><path d="M5 2h20l10 10v33H5zM25 2v11h10M11 21h18M11 28h18M11 35h11"/><path d="m23 37 11-11 4 4-11 11-7 3z"/></svg></span><span class="cta-offer__button-text"><strong>無料</strong>の構成案・デザイン案を相談する</span></a>
+<aside class="sticky-consultation" aria-label="LP制作の相談">
+    <a href="https://zero-s.jp/contact/" class="sticky-consultation__link" aria-label="LP制作の相談はこちら">
+        <svg class="sticky-consultation__ring" viewBox="0 0 242 242" aria-hidden="true" focusable="false">
+            <defs><path id="consultation-contact-circle" d="M121 10 a111 111 0 1 1 -.01 0"/></defs>
+            <text textLength="697.4" lengthAdjust="spacing"><textPath href="#consultation-contact-circle">CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT </textPath></text>
+        </svg>
+        <span class="sticky-consultation__circle">
+            <span class="sticky-consultation__label">LP制作の<br>相談はこちら</span>
+            <svg class="sticky-consultation__arrow" viewBox="0 0 42 16" aria-hidden="true" focusable="false"><path d="M1 11h37L29 2"/></svg>
+        </span>
+    </a>
 </aside>
 <script>document.createElement( "picture" );</script>
 <script src="js/picturefill.min.js"></script>

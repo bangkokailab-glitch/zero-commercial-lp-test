@@ -1,21 +1,78 @@
-/* Reuse the approved campaign CTA; only its fixed placement and subtle movement are new. */
+/* Compact, independent contact circle. The external reference's brand assets are not reused. */
+.has-sticky-consultation {
+  --floating-cta-size: clamp(156px, 12.60416667vw, 242px);
+  --floating-cta-offset: clamp(16px, 2.08333333vw, 40px);
+}
 .sticky-consultation {
   position: fixed;
   z-index: 900;
-  inset: auto 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  right: max(var(--floating-cta-offset), env(safe-area-inset-right, 0px));
+  bottom: max(var(--floating-cta-offset), env(safe-area-inset-bottom, 0px));
+  width: var(--floating-cta-size);
+  aspect-ratio: 1;
+  display: block;
   box-sizing: border-box;
-  padding: 12px max(12px, env(safe-area-inset-right)) max(16px, calc(env(safe-area-inset-bottom) + 8px)) max(12px, env(safe-area-inset-left));
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+  transition: opacity .4s ease, visibility .4s;
 }
+.sticky-consultation.is-visible { opacity: 1; visibility: visible; pointer-events: auto; }
 .sticky-consultation[hidden] { display: none !important; }
 .sticky-consultation .sticky-consultation__link {
+  position: relative;
+  display: block;
   width: 100%;
-  max-width: 652px;
+  height: 100%;
   margin: 0;
-  pointer-events: auto;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.sticky-consultation__ring { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.sticky-consultation__ring text { fill: #fff; font: 10px Arial, sans-serif; letter-spacing: .6px; filter: drop-shadow(0 1px 1px #3338); }
+.sticky-consultation__circle {
+  position: absolute;
+  inset: 8.67768595%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--floating-cta-size) * .05);
+  background: linear-gradient(135deg, #00c877, #08ac80);
+  box-shadow: 0 2px 10px #0002;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+.sticky-consultation__label {
+  color: #fff;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  font-size: calc(var(--floating-cta-size) * .111);
+  line-height: 1.45;
+  font-weight: 800;
+  text-align: center;
+  white-space: nowrap;
+}
+.sticky-consultation__arrow { width: 23%; height: auto; fill: none; stroke: #fff; stroke-width: 2; }
+.sticky-consultation__link:hover .sticky-consultation__circle { background: #00a66b; box-shadow: 0 3px 14px #0004; }
+.sticky-consultation__link:focus-visible { outline: 3px solid #fff; outline-offset: 4px; box-shadow: 0 0 0 7px #007647; }
+@keyframes zero-contact-ring { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: no-preference) {
+  .sticky-consultation__ring { animation: zero-contact-ring 15s linear infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sticky-consultation, .sticky-consultation__circle { transition: none; }
+  .sticky-consultation__ring { animation: none; }
+}
+@media (min-width: 769px) {
+  .has-sticky-consultation .fix-menu.pc { bottom: 20px; }
+  .has-floating-consultation .fix-menu.pc { bottom: calc(var(--floating-cta-size) + var(--floating-cta-offset) + 16px); }
+  .has-floating-consultation .fix-menu.pc > ul { max-height: max(160px, calc(100dvh - var(--floating-cta-size) - var(--floating-cta-offset) - 150px)); }
+}
+@media (max-width: 768px) {
+  .has-sticky-consultation { --floating-cta-size: clamp(90px, 25vw, 120px); --floating-cta-offset: 8px; }
 }
 .has-sticky-consultation { scroll-padding-bottom: var(--sticky-consultation-space, calc(132px + env(safe-area-inset-bottom, 0px))); }
 .has-sticky-consultation body { padding-bottom: 0; }
@@ -39,14 +96,12 @@
   50% { translate: 0 -3px; }
 }
 @media (prefers-reduced-motion: no-preference) {
-  #container a:is(.cta-offer__button, .zero-pricing-cta, .cta-btn),
-  .sticky-consultation .sticky-consultation__link {
+  #container a:is(.cta-offer__button, .zero-pricing-cta, .cta-btn) {
     animation: zero-cta-float 3.2s ease-in-out infinite;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  #container a:is(.cta-offer__button, .zero-pricing-cta, .cta-btn),
-  .sticky-consultation .sticky-consultation__link {
+  #container a:is(.cta-offer__button, .zero-pricing-cta, .cta-btn) {
     animation: none;
     translate: none;
   }
