@@ -33,7 +33,10 @@
       let period = 0;
       let canLoop = false;
       let inView = false;
-      const mayMove = () => canLoop && inView && !motion.matches && !document.hidden;
+      // Campaign strips keep advancing even while scrolled out of view.
+      // Only the visitor's reduced-motion setting or a hidden tab suspends them.
+      const continuous = section.matches('section.cta-offer--gold');
+      const mayMove = () => canLoop && (continuous || inView) && !motion.matches && !document.hidden;
 
       const reconcile = () => {
         gallery.dataset.offerGoldPlaying = mayMove() ? 'true' : 'false';
@@ -42,7 +45,9 @@
       const measure = () => {
         const first = samples[0].getBoundingClientRect();
         period = clones[0].getBoundingClientRect().left - first.left;
-        canLoop = period > 0 && gallery.scrollWidth - gallery.clientWidth >= period - 1;
+        // The gallery's scrollWidth shrinks as the track translates left, which
+        // could incorrectly stop a valid loop during image loads or resizing.
+        canLoop = period > 0 && track.scrollWidth - gallery.clientWidth >= period - 1;
         if (canLoop) {
           const distance = `${period}px`;
           const duration = `${period / pixelsPerSecond}s`;
