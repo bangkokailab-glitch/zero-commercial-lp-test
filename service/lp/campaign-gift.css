@@ -9,6 +9,8 @@
   height:auto;
   min-height:0;
   aspect-ratio:821.78 / 96.246;
+  background-image:url(images/ribbon.svg?v=20261008-bg11);
+  background-size:100% 100%;
   padding:0;
   margin:0 auto 8px;
   font-family:var(--zero-shingo-bold);
