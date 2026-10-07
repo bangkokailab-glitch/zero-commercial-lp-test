@@ -1,0 +1,79 @@
+/* Only the two free-proposal cards; ribbon, gallery and floating CTA stay unchanged. */
+@font-face {
+  font-family: "ZERO Offer Gothic";
+  src: url("fonts/offer-noto-sans-jp-black-20261007.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+.cta.cta-offer--gold .offer-proposal {
+  width: calc(100% - 48px);
+  max-width: 1000px;
+  margin: 12px auto 0;
+}
+.cta.cta-offer--gold .offer-proposal__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+.cta.cta-offer--gold .offer-proposal__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 130px;
+  padding: 22px 16px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #e50000;
+  background-image: radial-gradient(rgba(91, 0, 0, .22) .8px, transparent .9px);
+  background-size: 4px 4px;
+  color: #fff;
+  text-align: center;
+  font-family: "Shin Go Bold", "ZERO Offer Gothic", "Hiragino Sans", sans-serif;
+  font-weight: 900;
+}
+.cta.cta-offer--gold .offer-proposal__card h3 {
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 27px;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+.cta.cta-offer--gold .offer-proposal__card p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+.cta.cta-offer--gold .offer-proposal__note {
+  margin: 20px 0 12px;
+  padding: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
+}
+@media (max-width: 1000px) and (min-width: 769px) {
+  .cta.cta-offer--gold .offer-proposal__card h3 { font-size: 23px; }
+  .cta.cta-offer--gold .offer-proposal__card p { font-size: 15px; }
+}
+@media (max-width: 768px) {
+  .cta.cta-offer--gold .offer-proposal { width: calc(100% - 24px); margin-top: 8px; }
+  .cta.cta-offer--gold .offer-proposal__grid { grid-template-columns: 1fr; gap: 10px; }
+  .cta.cta-offer--gold .offer-proposal__card { min-height: 110px; padding: 18px 10px; }
+  .cta.cta-offer--gold .offer-proposal__card h3 { font-size: 21px; margin-bottom: 8px; }
+  .cta.cta-offer--gold .offer-proposal__card p { font-size: 14px; }
+  .cta.cta-offer--gold .offer-proposal__note { margin: 16px 0 8px; font-size: 12px; line-height: 1.8; }
+}
