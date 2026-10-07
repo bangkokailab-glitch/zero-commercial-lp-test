@@ -144,7 +144,7 @@
 /* Hero revision: match the original 1,000px artwork's desktop coordinates.
    The surrounding sections and the retained diagonal banner are untouched. */
 #mv.video-bg {padding:32px 0 16px}
-#mv .zero-hero-content {container-type:inline-size;height:684px}
+#mv .zero-hero-content {container-type:inline-size;width:min(1000px,calc(100% - 40px));margin-inline:auto;height:684px}
 #mv .zero-hero-intro {position:absolute;inset:0 0 auto;display:grid;grid-template-columns:60% 40%;gap:0;height:60px;text-align:left}
 #mv .zero-hero-intro p {font-size:23px;line-height:1.4;letter-spacing:0;white-space:nowrap}
 #mv .zero-hero-intro .zero-hero-audience {font-size:32px;line-height:1.4;text-align:right}
@@ -153,19 +153,19 @@
 #mv .zero-hero-audience__rest {font-size:.9em}
 #mv .zero-hero-legacy-banner {position:absolute;left:0;top:70px;width:505px;margin:0}
 #mv .zero-hero-story {position:absolute;left:0;top:159px;width:100%;font-size:37px;line-height:1.5;letter-spacing:0;margin:0}
-#mv .zero-hero-display {position:absolute;left:0;top:218px;width:100%;font-size:132px;line-height:1.15;letter-spacing:0;filter:none;text-align:left;color:#ff2028}
+#mv .zero-hero-display {position:absolute;left:0;top:218px;width:100%;font-size:132px;line-height:1.15;letter-spacing:0;filter:none;text-align:left;color:#fff}
 #mv .zero-hero-display__text {display:inline-block;width:max-content;max-width:none;transform:translateX(var(--hero-ink-offset,0px)) scaleX(var(--hero-fit,.87));transform-origin:left center;filter:url(#zero-ink-wear)}
 #mv .zero-hero-signature {position:absolute;top:382px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:30px;line-height:1.2;padding:0 18px;margin:0}
 #mv .zero-hero-stats {position:absolute;top:438px;left:50%;transform:translateX(-50%);width:810px;max-width:100%;gap:34px;margin:0}
 #mv .zero-hero-stat {box-sizing:border-box}
 #mv .zero-hero-stat svg {width:40px;height:38px}
-#mv .zero-hero-stat p {font-size:19px;line-height:1.45;margin:3px 0 0}
+#mv .zero-hero-stat p {font-size:22px;line-height:1.45;margin:3px 0 0}
 #mv .zero-hero-stat>div {flex-direction:column;align-items:center;gap:0;text-align:center}
-#mv .zero-hero-stat strong {font-size:60px;line-height:1.08;letter-spacing:0}
-#mv .zero-hero-stat>div>span {font-size:18px;line-height:1.4}
-@media(min-width:769px) and (max-width:1399px){
- /* Leave a real right-hand rail so the always-visible CTA never covers hero copy. */
- #mv .zero-hero-content{height:auto;aspect-ratio:1000/684;width:min(1000px,calc(100% - 212px));margin-left:20px;margin-right:auto}
+#mv .zero-hero-stat strong {font-size:70px;line-height:1.08;letter-spacing:0}
+#mv .zero-hero-stat>div>span {font-size:21px;line-height:1.4}
+@media(min-width:769px) and (max-width:1039px){
+ /* Scale the centered artwork only when its 1,000px frame no longer fits. */
+ #mv .zero-hero-content{height:auto;aspect-ratio:1000/684}
  #mv .zero-hero-intro{height:6cqw}
  #mv .zero-hero-intro p{font-size:2.3cqw}
  #mv .zero-hero-intro .zero-hero-audience{font-size:3.2cqw}
@@ -175,9 +175,9 @@
  #mv .zero-hero-signature{top:38.2cqw;font-size:3cqw;padding:0 1.8cqw}
  #mv .zero-hero-stats{top:43.8cqw;width:81cqw;gap:3.4cqw}
  #mv .zero-hero-stat svg{width:4cqw;height:3.8cqw}
- #mv .zero-hero-stat p{font-size:1.9cqw}
- #mv .zero-hero-stat strong{font-size:6cqw}
- #mv .zero-hero-stat>div>span{font-size:1.8cqw}
+ #mv .zero-hero-stat p{font-size:2.2cqw}
+ #mv .zero-hero-stat strong{font-size:7cqw}
+ #mv .zero-hero-stat>div>span{font-size:2.1cqw}
 }
 /* One-shot bar-wipe reveal, followed by visible-only proof counters.
    All content stays visible when JavaScript is absent or motion is reduced. */
@@ -200,31 +200,19 @@
   #mv.hero-is-animating .zero-hero-wipe__content {animation:zero-hero-wipe-copy 900ms linear var(--hero-reveal-delay,0ms) both}
 }
 @media(max-width:768px){
- #mv.video-bg{padding:22px 0 18px}
- #mv .zero-hero-content{height:auto;display:flex;flex-direction:column;align-items:center}
- #mv .zero-hero-intro{position:static;display:flex;flex-direction:column;height:auto;gap:18px;width:100%}
- #mv .zero-hero-intro p{font-size:12px;line-height:1.6;letter-spacing:-.05em;white-space:normal;text-align:center}
- #mv .zero-hero-intro .zero-hero-audience{font-size:20px;line-height:1.5;text-align:center}
- #mv .zero-hero-legacy-banner{position:relative;top:auto;width:100%;margin:12px 0 5px;flex:none}
- #mv .zero-hero-story{position:static;font-size:18px;line-height:1.5;letter-spacing:-.045em;margin:5px 0 3px;white-space:nowrap}
+ #mv.video-bg{padding:12px 0 26px}
+ #mv .zero-hero-content{width:calc(100% - 24px);max-width:620px;height:auto;display:flex;flex-direction:column;align-items:center}
+ /* Match the original mobile artwork: omit the desktop intro and keep the
+    diagonal strip, title and three proof circles in a compact vertical stack. */
+ #mv .zero-hero-intro{display:none}
+ #mv .zero-hero-legacy-banner{position:relative;top:auto;width:74%;margin:-4px auto 0 0;flex:none}
+ #mv .zero-hero-story{position:static;font-size:4.9cqw;line-height:1.5;letter-spacing:-.045em;margin:0 0 3px;white-space:nowrap}
  #mv .mv-primary-title{width:100%}
- #mv .zero-hero-display{position:relative;top:auto;left:auto;font-size:52px;line-height:1.2}
- #mv .zero-hero-signature{position:relative;top:auto;left:auto;transform:none;font-size:14px;line-height:1.4;padding:1px 10px;margin:8px auto 16px}
+ #mv .zero-hero-display{position:relative;top:auto;left:auto;font-size:13.2cqw;line-height:1.2}
+ #mv .zero-hero-signature{position:relative;top:auto;left:auto;transform:none;font-size:3.8cqw;line-height:1.4;padding:1px 10px;margin:8px auto 16px}
  #mv .zero-hero-stats{position:static;transform:none;width:100%;gap:7px}
- #mv .zero-hero-stat svg{width:20px;height:19px}
- #mv .zero-hero-stat p{font-size:9px;line-height:1.35;letter-spacing:-.04em;margin:1px 0}
- #mv .zero-hero-stat strong{font-size:30px;line-height:1.05}
- #mv .zero-hero-stat>div>span{font-size:10px;line-height:1.2}
-}
-@media(min-width:481px) and (max-width:768px){
- #mv .zero-hero-content{max-width:620px}
- #mv .zero-hero-intro p{font-size:18px}
- #mv .zero-hero-intro .zero-hero-audience{font-size:28px}
- #mv .zero-hero-story{font-size:28px}
- #mv .zero-hero-display{font-size:82px}
- #mv .zero-hero-signature{font-size:22px}
- #mv .zero-hero-stat svg{width:32px;height:30px}
- #mv .zero-hero-stat p{font-size:14px}
- #mv .zero-hero-stat strong{font-size:48px}
- #mv .zero-hero-stat>div>span{font-size:15px}
+ #mv .zero-hero-stat svg{width:5.2cqw;height:4.9cqw}
+ #mv .zero-hero-stat p{font-size:3cqw;line-height:1.35;letter-spacing:-.04em;margin:1px 0}
+ #mv .zero-hero-stat strong{font-size:10cqw;line-height:1.05}
+ #mv .zero-hero-stat>div>span{font-size:3.3cqw;line-height:1.2}
 }

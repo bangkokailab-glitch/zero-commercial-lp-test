@@ -6,6 +6,23 @@
   if (!dock || !link) return;
   dock.hidden = false;
 
+  const contents = document.querySelector('.fix-menu');
+  const toggle = contents?.querySelector('.fix-menu-toggle');
+  if (toggle) {
+    contents.classList.add('is-compact-ready');
+    const setExpanded = expanded => {
+      contents.classList.toggle('is-expanded', expanded);
+      toggle.setAttribute('aria-expanded', String(expanded));
+      toggle.textContent = expanded ? 'Contents −' : 'Contents ＋';
+    };
+    toggle.addEventListener('click', () => setExpanded(toggle.getAttribute('aria-expanded') !== 'true'));
+    contents.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setExpanded(false)));
+    document.addEventListener('pointerdown', event => { if (!contents.contains(event.target)) setExpanded(false); });
+    contents.addEventListener('keydown', event => {
+      if (event.key === 'Escape') { setExpanded(false); toggle.focus(); }
+    });
+  }
+
   const root = document.documentElement;
   root.classList.add('has-sticky-consultation', 'has-floating-consultation');
   dock.classList.add('is-visible');
