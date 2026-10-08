@@ -36,6 +36,12 @@ html[data-zero-scope="recruit"].zero-recruit-backgrounds .bg_photo > img { visib
 html[data-zero-scope="main"] .slick-prev::before,
 html[data-zero-scope="main"] .slick-next::before { font-family: sans-serif; }
 html[data-zero-scope="labo"] body.mean-container #spMenubtn { display:none; }
+@media (max-width:767px) {
+  html[data-zero-scope="labo"] .mean-container .mean-bar { position:fixed; top:0; left:0; z-index:10000000; pointer-events:none; }
+  html[data-zero-scope="labo"] .mean-container a.meanmenu-reveal { pointer-events:auto; width:38px; height:38px; top:8px; right:8px !important; }
+  html[data-zero-scope="labo"] .mean-container .mean-nav { pointer-events:auto; margin-top:55px; max-height:calc(100dvh - 55px); overflow-y:auto; }
+  html[data-zero-scope="labo"] .h_contact { right:60px; }
+}
 
 /* Testing-only footer is outside the original layout, not a production CTA. */
 #zero-preview-note { clear: both; position: relative; z-index: 2; padding: 18px; border-top: 1px solid #ddd; background:#fff; color:#333; font: 12px/1.7 sans-serif; text-align:center; }
