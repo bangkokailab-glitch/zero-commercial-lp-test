@@ -2783,7 +2783,7 @@ LARGER MOBILE DEVICES
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .top-post-list .post-list .entry-content h1.entry-title {
         font-size: 12px;
     }
@@ -2792,7 +2792,7 @@ LARGER MOBILE DEVICES
 /*********************
 TABLET & SMALLER LAPTOPS
 *********************/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     #container {
         overflow: hidden;
     }
@@ -3503,7 +3503,7 @@ SNS
 /*
 Mobile Grid Styles
 */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .header h2.blog_ttl {
         display: none;
     }
@@ -3953,7 +3953,7 @@ Mobile Grid Styles
 }
 
 /* Portrait tablet to landscape */
-@media only screen and (min-width: 768px) and (max-width: 1099px) {
+@media only screen and (min-width: 769px) and (max-width: 1099px) {
     .mv img {
         width: 100%;
     }
@@ -5418,7 +5418,7 @@ screen and (min-width: 769px) {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
+@media only screen and (min-width: 769px) and (max-width: 1100px) {
     .cta {
         background: url(img/common/cta_bg.png) no-repeat;
         width: 100%;
@@ -5528,7 +5528,7 @@ screen and (min-width: 769px) {
     display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .pc-only {
         display: block;
     }

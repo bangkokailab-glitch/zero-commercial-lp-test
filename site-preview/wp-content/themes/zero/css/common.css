@@ -593,7 +593,7 @@ td.valign_b {
     zoom: 1
 }
 
-@media (min-width:768px) {
+@media (min-width:1001px) {
     body {
         background: #fff;
         font-size: 1pc
@@ -774,7 +774,7 @@ td.valign_b {
     }
 }
 
-@media (max-width:767px) {
+@media (max-width:1000px) {
     body {
         background-color: #fff
     }
@@ -1169,7 +1169,7 @@ td.valign_b {
         height: 5vw;
       }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width:1000px){
   #header .inner {
     display: flex;
     align-items: center;

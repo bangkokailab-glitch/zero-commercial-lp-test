@@ -2380,7 +2380,7 @@ LARGER MOBILE DEVICES
 /*********************
 TABLET & SMALLER LAPTOPS
 *********************/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
 
   #container{
     overflow:hidden;
@@ -3005,7 +3005,7 @@ SNS
 Mobile Grid Styles
 */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 img{
   max-width: 100%;
 
@@ -3356,7 +3356,7 @@ img{
 
 
 /* Portrait tablet to landscape */
-@media only screen and (min-width: 768px) and (max-width: 1099px) {
+@media only screen and (min-width: 769px) and (max-width: 1099px) {
 
 /*   グリッドシステム */
   .t-all {

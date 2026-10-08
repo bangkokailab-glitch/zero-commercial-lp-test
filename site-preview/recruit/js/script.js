@@ -72,7 +72,7 @@ $(function(){
 //footerナビ 開閉
 $(window).on('load resize', function(){
 	var winW = $(window).width();
-	var devW = 768;
+	var devW = 1000;
 	if (winW <= devW) {
     $("footer .nav_menu ul").addClass("sp");
 	} else {

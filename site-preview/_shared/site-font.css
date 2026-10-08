@@ -48,3 +48,107 @@ html[data-zero-scope="labo"] body.mean-container #spMenubtn { display:none; }
 #zero-preview-note a { color:#0073ad; }
 .zero-preview-form-notice { padding:12px; border:1px solid #ccc; background:white; color:#333; font-size:14px; }
 .zero-missing-original { margin:20px 0; padding:24px; border:1px dashed #bbb; color:#555; background:#fafafa; font-size:14px; line-height:1.8; }
+
+/* Layout repair 2026-10-08. Keep original artwork and all text/content. */
+/* Company shares body#top with the homepage; its image must not inherit the home hero. */
+html[data-zero-legacy] #contents.company h2.mv {
+  display:block; height:auto; background:none; overflow:visible; line-height:0;
+}
+html[data-zero-legacy] #contents.company h2.mv img { display:block; width:100%; height:auto; }
+html[data-zero-legacy] .works_top .slick-slider { max-width:100%; box-sizing:border-box; }
+html[data-zero-legacy] img[src*="/img/top/img01.png"] { max-width:100%; height:auto; }
+html[data-zero-legacy] .content_list ul li p { margin-inline:0; }
+/* The advertorial/service company message must fit the tablet content area. */
+@media (min-width:769px) and (max-width:1000px) {
+  html[data-zero-scope="main"]:not([data-zero-legacy]) .about-box { height:auto; min-height:69.5vw; }
+  html[data-zero-scope="main"]:not([data-zero-legacy]) .about-txt { position:relative; top:auto; left:auto; width:auto; margin:0; padding:4.5vw 5vw 7vw; box-sizing:border-box; }
+}
+@media (max-width:1000px) {
+  html[data-zero-legacy] #header #logo { width:auto; max-width:calc(100% - 136px); margin:0; }
+  html[data-zero-legacy] #header #logo span img { display:block; width:auto; height:40px; max-width:min(45vw,210px); object-fit:contain; }
+  html[data-zero-legacy] #header .sp-nav { width:120px; flex:0 0 120px; }
+  html[data-zero-legacy] #header .circle img { width:24px; height:auto; }
+  html[data-zero-legacy] .sp-menu { right:0; transform:translateX(100%); visibility:hidden; max-width:min(280px,88vw); box-sizing:border-box; overflow-y:auto; transition:transform .3s ease,visibility .3s; }
+  html[data-zero-legacy] #sp-btn:checked ~ .sp-menu { transform:translateX(0); visibility:visible; }
+  html[data-zero-legacy] .cta .anime_btn.orange_btn { width:100%; max-width:480px; box-sizing:border-box; padding:0; }
+  html[data-zero-legacy] .cta .anime_btn.orange_btn a,
+  html[data-zero-legacy] .cta .anime_btn.orange_btn a span { width:100%; max-width:100%; box-sizing:border-box; }
+  html[data-zero-legacy] .produce_module { width:auto; max-width:none; box-sizing:border-box; }
+  html[data-zero-legacy] body#works .produce_module { width:100%; margin-inline:0; }
+}
+
+/* A row belongs to the grid, not to whichever floated card happens to be shorter. */
+html[data-zero-scope="lp-media"] .lp_list > ul { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:50px 27px; }
+html[data-zero-scope="lp-media"] .lp_list > ul::before,
+html[data-zero-scope="lp-media"] .lp_list > ul::after { display:none; }
+html[data-zero-scope="lp-media"] .lp_list > ul > li { width:auto; min-width:0; float:none; margin:0; }
+html[data-zero-scope="lp-media"] .lp_list .busyo_img img { width:100%; height:auto; }
+html[data-zero-scope="lp-media"] .category_navi ul { width:min(1000px,100%); box-sizing:border-box; }
+@media (max-width:1099px) {
+  html[data-zero-scope="lp-media"] .lp_list > ul { grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px 20px; }
+  html[data-zero-scope="lp-media"] .cta { width:100%; height:auto; min-height:0; }
+  html[data-zero-scope="lp-media"] .cta img { max-width:100%; height:auto; }
+  html[data-zero-scope="lp-media"] .cta ul { display:flex; align-items:center; gap:12px; }
+  html[data-zero-scope="lp-media"] .cta li { float:none; min-width:0; }
+}
+@media (min-width:769px) {
+  html[data-zero-scope="labo"] #mv { position:relative; overflow:hidden; height:min(551px,38.263889vw); }
+  html[data-zero-scope="labo"] #mv img.bg { position:absolute; left:50%; top:0; transform:translateX(-50%); margin:0; width:min(2000px,138.888889vw); max-width:none; height:auto; }
+  html[data-zero-scope="labo"] #mv > a { position:absolute; bottom:2%; left:calc(50% + min(200px,13.888889vw)); margin:0; width:min(303px,21.041667vw); }
+  html[data-zero-scope="labo"] #mv > a img { display:block; width:100%; height:auto; }
+  html[data-zero-scope="labo"] #g_nav .nav { display:flex; position:relative; width:100%; margin:0 auto; }
+  html[data-zero-scope="labo"] #g_nav .nav > li { flex:1; float:none; width:auto; min-width:0; }
+  html[data-zero-scope="labo"] #g_nav .nav > li > a { display:flex; align-items:center; justify-content:center; min-height:55px; height:auto; padding:8px 4px; line-height:1.5; white-space:nowrap; }
+  html[data-zero-scope="lp-media"] .mv { height:min(461px,32.013889vw); }
+  html[data-zero-scope="lp-media"] .mv img.pc { left:50%; top:0; transform:translateX(-50%); margin:0; width:min(2000px,138.888889vw); max-width:none; height:auto; }
+}
+@media (min-width:769px) and (max-width:1099px) {
+  html[data-zero-scope="labo"] .wrap,
+  html[data-zero-scope="lp-media"] .wrap { width:calc(100% - 40px); max-width:960px; }
+  html[data-zero-scope="lp-media"] #inner-header { display:grid; grid-template-columns:minmax(0,1fr) 120px; align-items:center; gap:8px 24px; padding:10px 0 14px; }
+  html[data-zero-scope="lp-media"] #inner-header::before,
+  html[data-zero-scope="lp-media"] #inner-header::after { display:none; }
+  html[data-zero-scope="lp-media"] #logo { float:none; width:min(408px,100%); grid-column:1; grid-row:1; margin:0; }
+  html[data-zero-scope="lp-media"] #logo h1 { margin:0; }
+  html[data-zero-scope="lp-media"] #logo img { display:block; max-width:100%; height:auto; }
+  html[data-zero-scope="lp-media"] .h_contact { position:static; grid-column:2; grid-row:1; }
+  html[data-zero-scope="lp-media"] #g_nav { float:none; margin:0; grid-column:1/-1; grid-row:2; }
+  html[data-zero-scope="lp-media"] #g_nav ul { display:flex; justify-content:center; margin:0; padding:0; }
+  html[data-zero-scope="lp-media"] #g_nav li { float:none; }
+  html[data-zero-scope="lp-media"] #g_nav a { line-height:1.5; }
+}
+@media (max-width:768px) {
+  html[data-zero-scope="lp-media"] .lp_list > ul { gap:20px 2%; }
+  html[data-zero-scope="labo"] .header,
+  html[data-zero-scope="lp-media"] .header { position:fixed; inset:0 0 auto; width:100%; height:60px !important; padding:0 12px; background:#fff !important; box-sizing:border-box; z-index:9999999; }
+  html[data-zero-scope="labo"] #inner-header,
+  html[data-zero-scope="lp-media"] #inner-header { width:100%; height:60px !important; padding:0; margin:0; position:relative; }
+  html[data-zero-scope="labo"] #container,
+  html[data-zero-scope="lp-media"] #container { padding-top:60px; }
+  html[data-zero-scope="labo"] #logo,
+  html[data-zero-scope="lp-media"] #logo { position:absolute; inset:0 auto 0 0; width:calc(100% - 116px); height:60px; margin:0; display:flex; align-items:center; }
+  html[data-zero-scope="labo"] #logo h1,
+  html[data-zero-scope="lp-media"] #logo h1 { width:100%; margin:0; line-height:1; }
+  html[data-zero-scope="labo"] #logo a,
+  html[data-zero-scope="lp-media"] #logo a { display:block; position:static; width:100%; height:auto; margin:0; }
+  html[data-zero-scope="labo"] #logo img,
+  html[data-zero-scope="lp-media"] #logo img { display:block; width:auto; max-width:100%; max-height:38px; height:auto; }
+  html[data-zero-scope="labo"] .header .blog_ttl,
+  html[data-zero-scope="labo"] .header .subnav { display:none; }
+  html[data-zero-scope="labo"] .h_contact,
+  html[data-zero-scope="lp-media"] .h_contact { position:absolute; right:52px; top:12px; width:48px; height:36px; margin:0; }
+  html[data-zero-scope="labo"] .h_contact img,
+  html[data-zero-scope="lp-media"] .h_contact img { display:block; max-width:100%; max-height:36px; width:auto; height:auto; margin:auto; }
+  html[data-zero-scope="labo"] .mean-container .mean-bar,
+  html[data-zero-scope="lp-media"] .mean-container .mean-bar { position:fixed; top:0; left:0; width:100%; z-index:10000000; pointer-events:none; }
+  html[data-zero-scope="labo"] .mean-container a.meanmenu-reveal,
+  html[data-zero-scope="lp-media"] .mean-container a.meanmenu-reveal { pointer-events:auto; box-sizing:border-box; padding:7px; width:38px; height:38px; top:11px; right:12px !important; background:#23adb8; }
+  html[data-zero-scope="labo"] .mean-container a.meanmenu-reveal span,
+  html[data-zero-scope="lp-media"] .mean-container a.meanmenu-reveal span { display:block; width:100%; height:2px; margin:4px 0; background:#fff; }
+  html[data-zero-scope="labo"] .mean-container a.meanmenu-reveal.meanclose,
+  html[data-zero-scope="lp-media"] .mean-container a.meanmenu-reveal.meanclose { color:#fff; font:26px/24px sans-serif !important; text-align:center; text-decoration:none; }
+  html[data-zero-scope="labo"] .mean-container .mean-nav,
+  html[data-zero-scope="lp-media"] .mean-container .mean-nav { pointer-events:auto; margin-top:60px; max-height:calc(100dvh - 60px); overflow-y:auto; }
+  html[data-zero-scope="labo"] #mv_sp img,
+  html[data-zero-scope="lp-media"] .mv img.sp { display:block; width:100%; height:auto; }
+}
