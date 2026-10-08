@@ -13,7 +13,7 @@
     const setExpanded = expanded => {
       contents.classList.toggle('is-expanded', expanded);
       toggle.setAttribute('aria-expanded', String(expanded));
-      toggle.textContent = expanded ? 'Contents −' : 'Contents ＋';
+      toggle.querySelector('.fix-menu-toggle__symbol').textContent = expanded ? '−' : '＋';
     };
     toggle.addEventListener('click', () => setExpanded(toggle.getAttribute('aria-expanded') !== 'true'));
     contents.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setExpanded(false)));
