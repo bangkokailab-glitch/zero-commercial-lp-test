@@ -15,6 +15,30 @@
 .pricing-section-indicator { display:none; }
 .pricing-faq-short { display:none; }
 .pricing-flow-title-short { display:none; }
+/* FAQ uses the production-flow row, badge colors and shared +/- indicator.
+   The desktop flow's 48px icon + responsive bottom margin + 24px padding
+   determines its current row height; keep that reference design unchanged. */
+#price .pricing-faq > summary {
+  display:grid; grid-template-columns:90px minmax(0,1fr); gap:14px;
+  align-items:center; box-sizing:border-box; width:100%;
+  height:calc(72px + min(30px,3vw));
+  padding:12px 62px 12px 14px; margin:0; border:0; border-radius:0;
+  background:#f5f5f5; color:#009bb1;
+  font-family:var(--zero-shingo-bold); font-size:21px; line-height:1.55;
+  font-weight:700; text-align:left; list-style:none; touch-action:manipulation;
+}
+#price .pricing-faq > summary::before,
+#price .pricing-faq > summary::after,
+#price .pricing-faq[open] > summary::after { content:none; }
+#price .pricing-faq > summary::-webkit-details-marker { display:none; }
+#price .pricing-faq > summary:focus-visible { outline:3px solid #171717; outline-offset:-3px; }
+#price .pricing-faq-number {
+  display:grid; place-items:center; width:90px; height:42px;
+  background:#20aebd; color:#fff; font-size:21px; line-height:1;
+  letter-spacing:0; font-variant-numeric:tabular-nums; white-space:nowrap;
+}
+#price .pricing-faq-question { display:block; min-width:0; }
+#price .pricing-faq[open] > summary .pricing-flow-mobile-indicator::after { transform:rotate(0); }
 #price .pricing-section-panel { display:flow-root; }
 #price .pricing-section-panel[hidden] { display:none; }
 #price .pricing-section-panel > p {
@@ -76,13 +100,11 @@
   #price .pricing-section-panel > p { font-size:16px; line-height:1.9; }
   #price .pricing-proposal-cta { margin-block:24px 6px; }
   #price .pricing-faq > summary {
-    display:flex; align-items:center; box-sizing:border-box; height:82px;
-    padding:10px 34px 10px 22px;
-    font-size:clamp(13px,3.8vw,16px); line-height:1.6;
+    height:82px; padding:8px 30px 8px 8px;
+    grid-template-columns:64px minmax(0,1fr); gap:6px;
+    font-size:clamp(13px,3.75vw,16px); line-height:1.6;
   }
-  #price .pricing-faq > summary::before,
-  #price .pricing-faq > summary::after { top:50%; transform:translateY(-50%); }
-  #price .pricing-faq > summary::after { right:10px; }
+  #price .pricing-faq-number { width:64px; height:34px; font-size:16px; }
   .pricing-faq-full { display:none; }
   .pricing-faq-short, .pricing-faq-short > span { display:block; }
   .pricing-faq-short > span { white-space:nowrap; }
