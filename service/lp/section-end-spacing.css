@@ -17,12 +17,7 @@
   margin-bottom:0;
 }
 
-/* Chapter 04's speech-bubble tail is part of the white content. Preserve it,
-   then leave the same 48px of clear background after its tip. */
-#secret > #secret-04 { padding-bottom:calc(var(--section-end-gap) + 42px); }
-
 @media(max-width:768px) {
-  #secret > #secret-04 { padding-bottom:calc(var(--section-end-gap) + 32px); }
   /* Match the visible slide rather than reserving the tallest slide's height.
      Include the existing track padding/scrollbar in the common ending gap. */
   #works { padding-bottom:calc(var(--section-end-gap) - 10px - var(--works-scrollbar-height,0px)); }
