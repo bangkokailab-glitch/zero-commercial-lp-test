@@ -6,16 +6,6 @@
   const duration = 260;
   let accordionScrollToken = 0;
 
-  function setupMobileViewportLock() {
-    const viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) return;
-    const desktopValue = viewport.getAttribute('content') || 'width=device-width,initial-scale=1.0';
-    const mobileValue = 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no';
-    const update = () => viewport.setAttribute('content', mobile.matches ? mobileValue : desktopValue);
-    update();
-    if (typeof mobile.addEventListener === 'function') mobile.addEventListener('change', update);
-  }
-
   function setupAboutPortrait() {
     const message = document.querySelector('#about .about-support-message');
     const paragraph = message?.querySelector(':scope > p');
@@ -458,7 +448,6 @@
     }, true);
   }
 
-  setupMobileViewportLock();
   setupAboutPortrait();
   setupIndependentDetails('#price .pricing-faq');
   setupIndependentDetails('#secrets-example-120, #secrets-example-125');

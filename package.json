@@ -1,0 +1,6 @@
+{
+  "name": "zero-commercial-lp-preview",
+  "private": true,
+  "scripts": { "build": "node scripts/build-lp-assets.cjs" },
+  "devDependencies": { "esbuild": "0.28.2" }
+}
