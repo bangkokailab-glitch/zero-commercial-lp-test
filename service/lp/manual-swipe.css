@@ -1,0 +1,49 @@
+/* Shared manual case navigation. Desktop layouts remain as approved. */
+.lp-swipe-navigation { display:none; }
+@media(max-width:768px) {
+  #container .lp-swipe-navigation:not([hidden]) {
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+    box-sizing:border-box; width:100%; padding:8px; margin:0 0 12px;
+    border:1px solid #19b4c1; border-radius:8px; background:#f1fafb; color:#165e65;
+  }
+  #container .works-case-navigation.lp-swipe-navigation { width:calc(100% - 24px); margin:28px auto 12px; }
+  #container .lp-swipe-navigation .lp-swipe-hint {
+    flex:0 1 auto; padding:0; margin:0; font-family:var(--zero-shingo-regular);
+    color:#165e65; font-size:12px; line-height:1.6; letter-spacing:0; text-align:left; font-weight:400;
+  }
+  #container .lp-swipe-navigation .lp-swipe-hint > span { display:block; white-space:nowrap; }
+  #container .lp-swipe-navigation .lp-swipe-actions { display:flex; align-items:center; gap:2px; flex-shrink:0; }
+  #container .lp-swipe-navigation button {
+    appearance:none; display:grid; place-items:center; flex:none; box-sizing:border-box;
+    width:44px; height:44px; padding:0; margin:0; border:1px solid #19b4c1;
+    border-radius:50%; background:#fff; color:#087780; font:700 28px/1 sans-serif; cursor:pointer;
+  }
+  #container .lp-swipe-navigation button:disabled { opacity:.35; cursor:default; }
+  #container .lp-swipe-navigation button:focus-visible,
+  #container :is(#works-case-track,#lp-purpose-track,#secret06-fv-track):focus-visible { outline:3px solid #e50920; outline-offset:2px; }
+  #container .lp-swipe-navigation .lp-swipe-position {
+    display:block; width:56px; padding:0; margin:0; text-align:center; color:#165e65;
+    font-family:var(--zero-shingo-bold); font-size:12px; line-height:1.5; letter-spacing:0;
+    font-variant-numeric:tabular-nums; white-space:nowrap;
+  }
+  #secret :is(#secrets-box-44-panel,#secrets-box-397-panel) :is(.lp-purpose-controls,.lp-purpose-swipe-note) { display:none; }
+  #container :is(#works-case-track,#lp-purpose-track,#secret06-fv-track) {
+    display:flex; align-items:flex-start; gap:16px; box-sizing:content-box;
+    overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory;
+    overscroll-behavior-x:contain; scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch; scrollbar-width:none;
+  }
+  #container :is(#works-case-track,#lp-purpose-track,#secret06-fv-track)::-webkit-scrollbar { display:none; }
+  #secret :is(#lp-purpose-track,#secret06-fv-track) { height:var(--swipe-current-height,auto); padding:0 0 10px; }
+  #container :is(#works-case-track,#lp-purpose-track,#secret06-fv-track) > :is(.work-case,.lp-purpose-card) {
+    flex:0 0 100%; min-width:0; box-sizing:border-box; scroll-snap-align:start; scroll-snap-stop:always;
+  }
+  #secret :is(#lp-purpose-track,#secret06-fv-track) > .lp-purpose-card { border:4px solid #19b4c1; border-radius:0; box-shadow:none; }
+}
+@media(max-width:768px) and (prefers-reduced-motion:reduce) {
+  #container :is(#works-case-track,#lp-purpose-track,#secret06-fv-track) { scroll-behavior:auto; }
+}
+@media print {
+  .lp-swipe-navigation { display:none!important; }
+  #container :is(#works-case-track,#lp-purpose-track,#secret06-fv-track) { height:auto; }
+}
