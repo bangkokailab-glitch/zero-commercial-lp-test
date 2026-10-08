@@ -1,0 +1,59 @@
+:root{--face-r:"mfw-pshingopr6n-regular","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;--face-b:"mfw-pshingopr6n-bold","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;--yellow:#fff000;--red:#e60033}
+*{box-sizing:border-box}body{margin:0;background:#f1f2f4;color:#222;font-family:var(--face-r);font-synthesis:none}a{color:inherit}button{font:inherit}.svg-definitions{position:absolute;width:0;height:0;overflow:hidden}
+.review-header{padding:26px 24px 22px;max-width:1050px;margin:auto}.review-heading>span{font:12px/1.4 Arial,sans-serif;letter-spacing:.12em;color:#69747b}.review-heading h1{font:24px/1.6 var(--face-b);margin:6px 0}.review-heading p{font-size:13px;margin:0;color:#555}.review-header nav{display:flex;gap:8px;margin:18px 0 10px}.review-header nav a{flex:1;text-align:center;background:#fff;border:1px solid #cdd3d7;border-radius:5px;padding:12px 8px;text-decoration:none;font:14px/1.5 var(--face-b)}.review-header nav a[aria-current="page"]{background:#20272b;border-color:#20272b;color:#fff}.review-note{font-size:13px;line-height:1.7;margin:8px 0 0}.review-footer{max-width:1050px;margin:auto;padding:24px;font-size:13px;line-height:1.8}.review-footer p{margin:6px 0}.review-footer a{display:inline-block;margin:12px 20px 0 0}
+.copy-proposal{background:linear-gradient(#161616ab,#161616d9),url('../images/mv-img.jpg') center/cover;color:#fff;padding:52px 0 44px;overflow:hidden}
+.copy-wrap{width:min(1000px,calc(100% - 40px));margin:auto;container-type:inline-size}
+.intro-tag{display:table;margin:0 0 44px 0;background:#fff;color:#201916;padding:7px 18px;transform:rotate(-4deg);font:28px/1.5 var(--face-b);white-space:nowrap}
+.proposal-title{font-family:var(--face-b);font-weight:700;margin:0 0 28px;text-align:center;letter-spacing:0}
+.title-line{display:block;width:100%;white-space:nowrap;line-height:1.25}
+.title-line>span{display:inline-block;vertical-align:baseline}
+.title-lead{font-size:66px;margin-bottom:12px}
+.title-answer{font-size:86px;padding-top:22px;line-height:1.3}
+.title-word{position:relative}.title-word::before{content:"";position:absolute;left:0;right:0;top:-.23em;height:.14em;background:radial-gradient(circle closest-side,var(--yellow) 95%,transparent 100%) 0 0/calc(100% / 9) 100% repeat-x}
+.title-end{font-size:.55em;padding-left:.05em}
+.proof-lockup{margin:0}.monitor-equation{width:83%;display:grid;grid-template-columns:minmax(0,1fr) 38px minmax(0,1fr) 38px minmax(0,1fr);gap:12px;align-items:start;margin:0 auto}
+.monitor{position:relative;aspect-ratio:233.69/179.88;min-width:0}.monitor svg{display:block;width:100%;height:100%;position:absolute;inset:0}.monitor-copy{position:absolute;left:4.5%;right:4.5%;top:8%;height:62%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;white-space:nowrap;font-family:var(--face-b)}.monitor-copy strong{font-size:36px;line-height:1.25}.monitor-copy>span{font-size:20px;line-height:1.5}.monitor--conversion{color:var(--yellow)}.operator{align-self:start;padding-top:45%;font:38px/1 var(--face-b);display:flex;align-items:center;justify-content:center;height:76%}
+.conclusion-band{margin:0;background:#a44b0e;padding:13px 10px;display:flex;justify-content:center;flex-wrap:wrap;column-gap:.3em;font:23px/1.5 var(--face-b);text-align:center}.conclusion-band>span{white-space:nowrap}
+.copy-body{font:16px/1.85 var(--face-b);margin:28px auto 0;text-align:center;max-width:970px}.copy-body p{margin:0 0 15px}.copy-body p:last-child{margin-bottom:0}.copy-body mark{background:var(--yellow);color:#121212;padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+/* A — familiar composition, compact hierarchy. */
+.variant-a .desktop-break{display:none}
+/* B — bigger premise, yellow answer, deliberate two-beat reading. */
+.variant-b{padding-top:60px}
+.variant-b .intro-tag{margin:0 auto 38px;transform:none;font-size:24px;padding:7px 20px}
+.variant-b .title-lead{font-size:100px;line-height:1.2;margin-bottom:14px}
+.variant-b .title-answer{padding-top:0;font-size:90px;line-height:1.35}
+.variant-b .title-word{color:var(--yellow);text-emphasis:none}
+.variant-b .title-word::before,.variant-c .title-word::before{display:none}
+.variant-b .title-end{font-size:.52em}
+.variant-b .proposal-title{margin-bottom:26px}
+.variant-b .copy-body{font-size:18px;line-height:1.85;max-width:920px}
+.variant-b .copy-body p{margin-bottom:22px}
+/* C — poster-like white and red bands, with the same live type and diagram. */
+.variant-c .intro-tag{background:none;color:#fff;transform:none;padding:0;margin:0 0 24px;font-size:25px}
+.variant-c .proposal-title{margin-bottom:28px;text-align:left}
+.variant-c .title-lead{display:table;width:auto;background:#fff;color:#191919;padding:4px 16px 7px;font-size:76px;margin-bottom:12px;line-height:1.25}
+.variant-c .title-answer{padding:8px 12px 12px;background:var(--red);font-size:90px;line-height:1.3}
+.variant-c .title-word{text-emphasis:none}
+.variant-c .title-end{font-size:.54em}
+.variant-c .copy-body{text-align:left;max-width:920px}.variant-c .desktop-break{display:none}
+@media(min-width:769px) and (max-width:1039px){
+ .intro-tag{font-size:2.8cqw}.title-lead{font-size:6.6cqw}.title-answer{font-size:8.6cqw}.monitor-copy strong{font-size:3.6cqw}.monitor-copy>span{font-size:2cqw}.conclusion-band{font-size:2.3cqw}
+ .variant-b .title-lead{font-size:10cqw}.variant-b .title-answer{font-size:9cqw}.variant-c .title-lead{font-size:7.6cqw}.variant-c .title-answer{font-size:9cqw}
+}
+@media(max-width:768px){
+ .review-header{padding:18px 14px}.review-heading h1{font-size:20px}.review-header nav{gap:5px}.review-header nav a{font-size:11px;padding:10px 2px}.review-note{font-size:12px}.review-footer{padding:20px 14px;font-size:12px}
+ .copy-proposal{padding:32px 0 30px}.copy-wrap{width:calc(100% - 24px)}
+ .intro-tag{font-size:clamp(12px,3.85cqw,24px);padding:5px 8px;margin-bottom:30px}
+ .title-lead{font-size:clamp(30px,10cqw,68px);margin-bottom:8px}.title-answer{font-size:clamp(24px,8.35cqw,62px);padding-top:10px;line-height:1.3}.title-end{font-size:.59em}.proposal-title{margin-bottom:20px}
+ .monitor-equation{width:100%;grid-template-columns:minmax(0,1fr) 16px minmax(0,1fr) 16px minmax(0,1fr);gap:5px}
+ .monitor-copy{gap:4px}.monitor-copy strong{font-size:clamp(14px,4.35cqw,30px)}.monitor-copy>span{font-size:clamp(8px,2.5cqw,18px)}.operator{font-size:18px}
+ .conclusion-band{font-size:clamp(10px,3.2cqw,19px);line-height:1.6;padding:8px 3px;display:block}.conclusion-band>span{display:block}
+ .copy-body{margin-top:20px;font-size:14px;line-height:1.9;text-align:left}.copy-body p{margin-bottom:14px}.desktop-break{display:none}
+ .variant-b .intro-tag{font-size:clamp(12px,3.55cqw,22px);padding:5px 7px;margin-bottom:20px}
+ .variant-b .title-lead{font-size:clamp(32px,11.9cqw,80px);margin-bottom:9px}.variant-b .title-answer{font-size:clamp(24px,8.65cqw,62px)}.variant-b .title-end{font-size:.52em}.variant-b .proposal-title{margin-bottom:24px}
+ .variant-b .copy-body{font-size:15px;line-height:2}.variant-b .copy-body p{margin-bottom:20px}
+ .variant-c .intro-tag{font-size:clamp(12px,3.7cqw,23px);margin-bottom:16px}
+ .variant-c .title-lead{font-size:clamp(28px,9.7cqw,65px);padding:3px 9px 6px;margin-bottom:8px}.variant-c .title-answer{font-size:clamp(22px,8.65cqw,62px);padding:8px 7px 11px}.variant-c .title-end{font-size:.53em}.variant-c .proposal-title{margin-bottom:22px}
+}
+body.embed .review-header,body.embed .review-footer{display:none}
+@media(prefers-reduced-motion:no-preference){.copy-proposal.is-changing .title-line{animation:proposal-in .55s cubic-bezier(.2,.7,.2,1) both}.copy-proposal.is-changing .title-answer{animation-delay:.12s}@keyframes proposal-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}}
