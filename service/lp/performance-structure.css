@@ -5,6 +5,16 @@
   clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important;
 }
 .sp-btn-inner { display: block; }
+/* Mobile panels start closed after enhancement. Avoid laying out/downloading
+   their entire contents before the deferred script applies that same state.
+   The head class exists only with JS; the bundle's load/error handler removes
+   it, so failed enhancement and no-JS visits retain readable full content. */
+@media screen and (max-width: 768px) {
+  html.zero-mobile-panels-pending #secret:not(.secrets-accordion-ready) .secrets-panel,
+  html.zero-mobile-panels-pending #price .pricing-section:not(.pricing-section-ready) > .pricing-section-panel {
+    display: none;
+  }
+}
 html.zero-has-deferred-backgrounds #about .about-box:not(.is-background-ready),
 html.zero-has-deferred-backgrounds #about .about-support-message:not(.is-background-ready),
 html.zero-has-deferred-backgrounds #about .about-support-message:not(.is-background-ready)::after,

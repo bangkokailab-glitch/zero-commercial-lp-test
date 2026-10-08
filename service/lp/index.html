@@ -37,7 +37,7 @@
   }, { once: true });
 })();
 
-document.documentElement.classList.add('zero-has-deferred-backgrounds');</script>
+document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mobile-panels-pending');</script>
 <link rel="shortcut icon" href="images/favicon.ico">
 <meta content="株式会社ZEROはLP制作・改善実績300社以上、ホームページ制作実績120社以上。32万円〜・58万円〜・120万円〜の3プランで、戦略設計からデザイン・コーディング、公開後の改善まで支援します。契約前に初期構成案とファーストビュー初期デザイン1案をPDFで無料提案します。" name="description">
 <meta content="" name="keywords">
@@ -70,8 +70,8 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds');</script
 <noscript><link rel="stylesheet" href="https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css"></noscript>
 
 <link rel="preload" as="image" href="performance-media/hero-legacy-banner.svg">
-<link rel="stylesheet" href="page-bundle.css?v=20261008-speed55">
-<script src="page-bundle.js?v=20261008-speed55" defer></script>
+<link rel="stylesheet" href="page-bundle.css?v=20261008-speed57">
+<script src="page-bundle.js?v=20261008-speed57" defer onload="document.documentElement.classList.remove('zero-mobile-panels-pending')" onerror="document.documentElement.classList.remove('zero-mobile-panels-pending','zero-has-deferred-backgrounds')"></script>
 </head>
 <body>
     <div id="container">
