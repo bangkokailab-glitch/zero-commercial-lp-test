@@ -2,10 +2,12 @@
     $(function(){
         $('a[href^="#"]').click(function(){
             var campaignCue = $(this).hasClass("section-down-cue--handoff");
-            var speed = campaignCue && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 500;
+            var proposalNote = $(this).closest(".offer-proposal__note").length;
+            var speed = (campaignCue || proposalNote) && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 500;
             var href= $(this).attr("href");
             var target = $(href == "#" || href == "" ? 'html' : href);
             var menuOffset = $(this).closest(".fix-menu-secret").length ? 80 : 0;
+            if (proposalNote) menuOffset = $('#top-header').outerHeight() + 12;
             if ($(this).closest(".fix-menu").length && window.matchMedia('(max-width: 768px)').matches) {
                 menuOffset = $('#top-header').outerHeight() + 12;
             }

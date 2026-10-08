@@ -77,6 +77,8 @@
 }
 /* Preserve the explicit two-line chapter guide on desktop as well as mobile. */
 .cta.cta-offer--gold .offer-proposal__note > span { white-space:nowrap; }
+.cta.cta-offer--gold .offer-proposal__note a { color:inherit; text-decoration:underline; text-underline-offset:.2em; }
+.cta.cta-offer--gold .offer-proposal__note a:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
 @media(max-width:1000px) and (min-width:769px) { .offer-gift__copy { font-size:30px; } }
 @media(max-width:768px) {
   :root { --zero-cta-border-width:2px; --zero-cta-arrow-distance:5px; }
