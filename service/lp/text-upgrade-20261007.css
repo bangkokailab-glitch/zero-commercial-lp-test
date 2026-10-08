@@ -10,9 +10,8 @@
 .zero-hero-story {text-align:center;font-family:var(--zero-shingo-bold);font-size:35px;line-height:1.5;margin:0 0 4px}
 .zero-hero-story__emphasis {text-emphasis:filled dot #ed7108;text-emphasis-position:over}
 #mv .mv-primary-title {display:block;margin:0;text-align:center;font-family:var(--zero-shingo-bold);color:#fff;line-height:1.2}
-.zero-hero-display {display:block;font-size:116px;letter-spacing:-.045em;white-space:nowrap;filter:url(#zero-ink-wear)}
-.zero-hero-signature {display:inline-block;background:#fff;color:#231815;font-size:30px;line-height:1.35;padding:3px 24px;margin:19px auto 22px;filter:url(#zero-ink-wear)}
-.zero-text-effect-defs {position:absolute;pointer-events:none}
+.zero-hero-display {display:block;font-size:116px;letter-spacing:-.045em;white-space:nowrap}
+.zero-hero-signature {display:inline-block;background:#fff;color:#231815;font-size:30px;line-height:1.35;padding:3px 24px;margin:19px auto 22px}
 .zero-hero-stats {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;max-width:810px;margin:0 auto 15px}
 .zero-hero-stat {aspect-ratio:1;border:3px solid #fff;border-radius:50%;background:#ef7406;box-shadow:5px 7px 0 #ffffff30;display:flex;flex-direction:column;justify-content:center;align-items:center}
 .zero-hero-stat svg {width:48px;height:45px;fill:none;stroke:#ffb316;stroke-width:3}
@@ -155,7 +154,13 @@
 #mv .zero-hero-legacy-banner {position:absolute;left:0;top:70px;width:505px;margin:0}
 #mv .zero-hero-story {position:absolute;left:0;top:159px;width:100%;font-size:37px;line-height:1.5;letter-spacing:0;margin:0}
 #mv .zero-hero-display {position:absolute;left:0;top:218px;width:100%;font-size:132px;line-height:1.15;letter-spacing:0;filter:none;text-align:left;color:#fff}
-#mv .zero-hero-display__text {display:inline-block;width:max-content;max-width:none;transform:translateX(var(--hero-ink-offset,0px)) scaleX(var(--hero-fit,.87));transform-origin:left center;filter:url(#zero-ink-wear)}
+#mv .zero-hero-display__text {display:inline-block;width:max-content;max-width:none;transform:translateX(var(--hero-ink-offset,0px)) scaleX(var(--hero-fit,.87));transform-origin:left center}
+/* Reuse the approved artwork's localized ink clusters. These decorative layers
+   leave the live font, its weight, fit and line box completely unchanged.
+   The title offsets follow the current Shin Go ink bearings; the reveal's
+   measured ink top/height keeps the texture aligned on desktop and mobile. */
+#mv .zero-hero-display__text::before {content:"";position:absolute;z-index:1;pointer-events:none;left:.065em;right:.041em;top:calc(var(--hero-wipe-top,.15em) - var(--hero-wipe-height,.8em)*.112);height:calc(var(--hero-wipe-height,.8em)*1.329);background:url("images/hero-title-ink.svg") center/100% 100% no-repeat}
+#mv .zero-hero-signature::before {content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:url("images/hero-signature-ink.svg") center/100% 100% no-repeat}
 #mv .zero-hero-signature {position:absolute;top:382px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:30px;line-height:1.2;padding:0 18px;margin:0}
 #mv .zero-hero-stats {position:absolute;top:438px;left:50%;transform:translateX(-50%);width:810px;max-width:100%;gap:34px;margin:0}
 #mv .zero-hero-stat {box-sizing:border-box}
@@ -203,10 +208,12 @@
 @media (prefers-reduced-motion:no-preference) {
   #mv.hero-motion-pending .zero-hero-signature {background-color:transparent}
   #mv.hero-motion-pending .zero-hero-wipe__content,
+  #mv.hero-motion-pending .zero-hero-signature::before,
   #mv.hero-motion-pending .zero-hero-legacy-banner>svg,
   #mv.hero-motion-pending .zero-hero-stats {opacity:0}
   #mv.hero-is-animating .zero-hero-wipe::after {animation:zero-hero-wipe-bar var(--hero-reveal-duration,900ms) cubic-bezier(.65,0,.35,1) var(--hero-reveal-delay,0ms) both}
-  #mv.hero-is-animating .zero-hero-wipe__content {animation:zero-hero-wipe-copy var(--hero-reveal-duration,900ms) linear var(--hero-reveal-delay,0ms) both}
+  #mv.hero-is-animating .zero-hero-wipe__content,
+  #mv.hero-is-animating .zero-hero-signature::before {animation:zero-hero-wipe-copy var(--hero-reveal-duration,900ms) linear var(--hero-reveal-delay,0ms) both}
   #mv.hero-is-animating .zero-hero-signature {animation:zero-hero-signature-background 900ms linear var(--hero-reveal-delay,0ms) both}
   #mv.hero-is-animating .zero-hero-legacy-banner>svg {animation:zero-hero-banner-reveal 500ms cubic-bezier(.2,.7,.3,1) var(--hero-banner-delay,980ms) both}
   #mv.hero-is-animating .zero-hero-stats {animation:zero-hero-stats-reveal 450ms ease var(--hero-stats-delay,2540ms) both}
