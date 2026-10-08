@@ -103,16 +103,59 @@
   .has-sticky-consultation { --floating-cta-size: clamp(90px, 25vw, 120px); --floating-cta-offset: 8px; }
 }
 .fix-menu-toggle {display:none}
-/* The floating controls must not move the centered hero. On narrow desktops,
+/* The floating controls must not move the centered hero. On compact screens,
    retain every Contents link behind a compact, keyboard-accessible toggle. */
 @media (min-width:769px) and (max-width:1359px) {
   .has-sticky-consultation {--floating-cta-size:112px;--floating-cta-offset:12px}
+}
+@media (max-width:1359px) {
   .has-floating-consultation .fix-menu.pc.is-compact-ready {width:124px;right:8px;bottom:140px;padding:0}
   .fix-menu.pc.is-compact-ready > span {display:none}
   .fix-menu.pc.is-compact-ready .fix-menu-toggle {display:block;width:100%;border:0;padding:10px 4px;background:#19bbc7;color:#fff;font:600 13px/1.2 sans-serif;cursor:pointer}
   .fix-menu-toggle:focus-visible {outline:3px solid #fff;outline-offset:3px}
   .fix-menu.pc.is-compact-ready > ul {display:none}
   .has-floating-consultation .fix-menu.pc.is-compact-ready.is-expanded > ul {display:block;position:absolute;right:-2px;bottom:100%;width:190px;box-sizing:border-box;padding:8px 10px;background:#fff;border:2px solid #19bbc7;max-height:calc(100dvh - 220px);overflow:auto}
+}
+@media (max-width:768px) {
+  .has-floating-consultation .fix-menu.pc.is-compact-ready {
+    display: block;
+    width: 120px;
+    right: max(var(--floating-cta-offset), env(safe-area-inset-right, 0px));
+    bottom: calc(var(--floating-cta-size) + max(var(--floating-cta-offset), env(safe-area-inset-bottom, 0px)) + 12px);
+  }
+  /* Use the freed bottom corner when the campaign hides the duplicate CTA. */
+  html.gift-cta-overlaps-floating .fix-menu.pc.is-compact-ready {
+    bottom: max(var(--floating-cta-offset), env(safe-area-inset-bottom, 0px));
+  }
+  .fix-menu.pc.is-compact-ready .fix-menu-toggle {
+    min-height: 44px;
+    font-size: 14px;
+    touch-action: manipulation;
+  }
+  .fix-menu.pc.is-compact-ready .fix-menu-toggle:focus-visible {
+    outline-color: #005d65;
+    outline-offset: -3px;
+  }
+  .has-floating-consultation .fix-menu.pc.is-compact-ready.is-expanded > ul {
+    width: min(252px, calc(100vw - 24px - env(safe-area-inset-right, 0px) - env(safe-area-inset-left, 0px)));
+    max-height: calc(100dvh - var(--floating-cta-size) - max(var(--floating-cta-offset), env(safe-area-inset-bottom, 0px)) - 140px);
+    padding: 4px 10px;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .fix-menu.pc a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 2px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    touch-action: manipulation;
+  }
+  .fix-menu.pc .fix-menu-secret a { padding-left: 14px; }
+  .fix-menu.pc .fix-menu-secret:not(:last-child) { border-bottom-color: #e2e2e2; }
+  .fix-menu.pc a:hover, .fix-menu.pc a:focus-visible { color: #007e88; background: #eaf9fa; }
 }
 .has-sticky-consultation { scroll-padding-bottom: var(--sticky-consultation-space, calc(132px + env(safe-area-inset-bottom, 0px))); }
 .has-sticky-consultation body { padding-bottom: 0; }

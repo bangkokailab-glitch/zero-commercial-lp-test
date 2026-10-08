@@ -6,6 +6,9 @@
             var href= $(this).attr("href");
             var target = $(href == "#" || href == "" ? 'html' : href);
             var menuOffset = $(this).closest(".fix-menu-secret").length ? 80 : 0;
+            if ($(this).closest(".fix-menu").length && window.matchMedia('(max-width: 768px)').matches) {
+                menuOffset = $('#top-header').outerHeight() + 12;
+            }
             if (campaignCue) menuOffset = parseFloat(window.getComputedStyle(target[0]).scrollMarginTop) || 0;
             var position = Math.max(0, target.offset().top - menuOffset);
             $("html, body").stop(true).animate({scrollTop:position}, speed, "swing", function(){
@@ -19,4 +22,3 @@
             return false;
         });
     });
-    
