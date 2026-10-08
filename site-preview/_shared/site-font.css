@@ -152,3 +152,43 @@ html[data-zero-scope="lp-media"] .category_navi ul { width:min(1000px,100%); box
   html[data-zero-scope="labo"] #mv_sp img,
   html[data-zero-scope="lp-media"] .mv img.sp { display:block; width:100%; height:auto; }
 }
+/* Shared lab/gallery footer repair. Content stays unchanged; obsolete phone is removed in build. */
+html[data-zero-preview] .zero-contact-cta { width:100%; height:auto; min-height:0; padding:24px clamp(16px,4vw,30px) 28px; background-size:cover; background-position:center; }
+html[data-zero-preview] .zero-contact-cta .catch { margin:0; }
+html[data-zero-preview] .zero-contact-cta .catch img { display:block; width:100%; height:auto; max-width:660px; margin-inline:auto; }
+html[data-zero-preview] .zero-contact-cta > ul { display:flex; justify-content:center; align-items:center; margin:28px 0 0; padding:0; width:100%; gap:0; }
+html[data-zero-preview] .zero-contact-cta > ul::before,
+html[data-zero-preview] .zero-contact-cta > ul::after { display:none; }
+html[data-zero-preview] .zero-contact-cta > ul > li,
+html[data-zero-preview] .zero-contact-cta > ul > li:last-child { display:flex; float:none; width:auto; max-width:100%; margin:0; align-items:center; justify-content:center; gap:10px; }
+html[data-zero-preview] .zero-contact-cta li .mail_icon { width:54px; height:auto; flex:0 0 54px; padding:0; }
+html[data-zero-preview] .zero-contact-cta li:last-child a { display:block; width:auto; max-width:100%; }
+html[data-zero-preview] .zero-contact-cta a img { width:259px; max-width:100%; height:auto; vertical-align:middle; }
+html[data-zero-scope="labo"] .cta_banner,
+html[data-zero-scope="lp-media"] .cta_banner { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin:32px 0 40px !important; padding:0; }
+html[data-zero-scope="labo"] .cta_banner::before,
+html[data-zero-scope="labo"] .cta_banner::after,
+html[data-zero-scope="lp-media"] .cta_banner::before,
+html[data-zero-scope="lp-media"] .cta_banner::after { display:none; }
+html[data-zero-scope="labo"] .cta_banner > li,
+html[data-zero-scope="lp-media"] .cta_banner > li { width:100%; float:none; margin:0; min-width:0; }
+html[data-zero-scope="labo"] .cta_banner a,
+html[data-zero-scope="lp-media"] .cta_banner a { display:block; }
+html[data-zero-scope="labo"] .cta_banner img,
+html[data-zero-scope="lp-media"] .cta_banner img { display:block; width:100%; max-width:100%; height:auto; }
+html[data-zero-scope="labo"] #sidebar1 .cta_banner { grid-template-columns:1fr; gap:20px; margin-top:0 !important; }
+html[data-zero-scope="labo"] #inner-footer,
+html[data-zero-scope="lp-media"] #inner-footer { display:block; width:calc(100% - 40px); max-width:1000px; margin-inline:auto; padding:24px 0; text-align:center; }
+html[data-zero-scope="labo"] #inner-footer > div,
+html[data-zero-scope="lp-media"] #inner-footer > div { float:none; width:100%; margin:0; padding:0; }
+html[data-zero-scope="labo"] #inner-footer p,
+html[data-zero-scope="labo"] #inner-footer h3,
+html[data-zero-scope="lp-media"] #inner-footer p,
+html[data-zero-scope="lp-media"] #inner-footer h3 { margin:0; font-size:12px; line-height:1.8; text-align:center; overflow-wrap:anywhere; }
+@media(max-width:768px){
+ html[data-zero-preview] .zero-contact-cta { padding:20px 16px 24px; }
+ html[data-zero-preview] .zero-contact-cta > ul { margin-top:20px; }
+ html[data-zero-preview] .zero-contact-cta a img { width:259px; }
+ html[data-zero-scope="labo"] main > .cta_banner,
+ html[data-zero-scope="lp-media"] main > .cta_banner { grid-template-columns:minmax(0,330px); justify-content:center; gap:20px; }
+}
