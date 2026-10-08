@@ -62,7 +62,12 @@
 #price .pricing-free-heading-copy { min-width:0; }
 #price .pricing-proposal-cta { width:min(876.3px,100%); margin:28px auto 12px; }
 #price .pricing-proposal-cta .offer-gift { color:#fff; text-decoration:none; }
-#about .about-title-reveal { width:auto; margin:0; padding:0; border:0; font-size:inherit; line-height:1; }
+#about[class] .about-title-reveal {
+  width:min(82vw,890px); max-width:100%; margin:0 0 32px; padding:0; border:0;
+  font-family:var(--zero-shingo-bold); font-size:clamp(30px,4.2vw,44px);
+  font-weight:700; line-height:1.45; letter-spacing:0; color:#fff;
+}
+#about .about-title-line { display:block; white-space:nowrap; }
 #about .about-title-reveal .zero-content-wipe { display:block; }
 /* Match the closing summary to the pricing chapter headings, not the older
    edge-to-edge gray rule. Keep its copy and existing wipe animation intact. */
@@ -135,7 +140,7 @@
   .pricing-flow-title-full { display:none; }
   .pricing-flow-title-short, .pricing-flow-title-short > span { display:block; }
   .pricing-flow-title-short > span { white-space:nowrap; }
-  #about .about-title-reveal { margin-bottom:16px; }
+  #about[class] .about-title-reveal { width:100%; margin-bottom:16px; font-size:clamp(16px,5.3vw,38px); }
   #about .merit-box { padding-top:20px; padding-inline:12px; }
   #about[class] .merit-box > h3 {
     margin-bottom:18px; padding-bottom:12px;
