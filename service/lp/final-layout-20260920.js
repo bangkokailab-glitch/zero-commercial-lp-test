@@ -384,7 +384,7 @@
       'pricing-free-title': ['ご契約前に、構成案と', 'デザイン案を無料でご提案'],
       'pricing-flow-title': ['お問い合わせ・ご提案・', 'LP制作・納品までの流れ']
     };
-    const rows = [...document.querySelectorAll('#price .pricing-section')].map(section => {
+    const rows = [...document.querySelectorAll('#price .pricing-section')].map((section, index) => {
       const heading = section.querySelector(':scope > h3');
       const panel = section.querySelector(':scope > .pricing-section-panel');
       if (!heading || !panel) return null;
@@ -393,6 +393,9 @@
       button.className = 'pricing-section-toggle';
       button.id = `${heading.id}-toggle`;
       button.setAttribute('aria-controls', panel.id);
+      const number = document.createElement('span');
+      number.className = 'zero-subheading-number pricing-section-number';
+      number.textContent = String(index + 1).padStart(2, '0');
       const copy = document.createElement('span');
       copy.className = 'pricing-section-label';
       const lines = breaks[heading.id];
@@ -405,7 +408,7 @@
       const indicator = document.createElement('span');
       indicator.className = 'pricing-section-indicator';
       indicator.setAttribute('aria-hidden', 'true');
-      button.append(copy, indicator);
+      button.append(number, copy, indicator);
       heading.replaceChildren(button);
       section.classList.add('pricing-section-ready');
       panel.setAttribute('role', 'region');

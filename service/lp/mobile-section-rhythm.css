@@ -1,0 +1,30 @@
+/* One mobile closing gap for every major section. Keep internal copy/CTA spacing. */
+@media (max-width:768px) {
+  #container { --mobile-section-end-gap:68px; }
+  #mv.video-bg,
+  .cta.cta-offer--gold,
+  #copy.video-bg,
+  #secret .secrets-renovated,
+  #price,
+  #about.grey-dot {
+    padding-bottom:var(--mobile-section-end-gap);
+  }
+  #worry > .black-dot { padding-bottom:var(--mobile-section-end-gap); }
+  #worry > .black-dot > .wrap > p:last-child,
+  #copy .copy-txt > p:last-child,
+  .cta.cta-offer--gold > .offer-proposal {
+    margin-bottom:0;
+  }
+  /* The swipe track includes a 10px scrollbar allowance; do not add it twice. */
+  #works { padding-bottom:calc(var(--mobile-section-end-gap) - 10px); }
+  #works-case-track { margin-bottom:0; }
+  #secret .secret-cover-a { height:auto; min-height:0; }
+  #secret .secret-cover-a__content { height:auto; padding-bottom:var(--mobile-section-end-gap); }
+  #secret .secret-cover-a__cue { margin-bottom:0; }
+  #secret .secrets-renovated > .wrap > .secrets-white:last-child,
+  #secret #secret-04 .megacure-story-section:last-child,
+  #price > .wrap > .pricing-section:last-child,
+  #about > .wrap > .merit-box:last-child {
+    margin-bottom:0;
+  }
+}

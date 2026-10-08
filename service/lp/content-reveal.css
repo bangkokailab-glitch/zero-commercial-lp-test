@@ -54,7 +54,8 @@
   justify-content: center;
   gap: 12px;
 }
-#secret .zero-subheading-number {
+#secret .zero-subheading-number,
+#price .pricing-section-number {
   display: grid;
   place-items: center;
   flex: 0 0 36px;

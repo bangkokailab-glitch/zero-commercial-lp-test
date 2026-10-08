@@ -5,7 +5,8 @@
   font-family:var(--zero-shingo-bold); font-size:30px; line-height:1.4;
 }
 #price .pricing-section-toggle {
-  appearance:none; display:block; position:relative; width:100%;
+  appearance:none; display:flex; align-items:center; justify-content:center; gap:12px;
+  position:relative; width:100%;
   padding:0; margin:0; border:0; border-radius:0; background:none;
   color:inherit; font:inherit; letter-spacing:inherit; text-align:inherit;
   opacity:1; -webkit-text-fill-color:currentColor; cursor:default;
@@ -36,11 +37,12 @@
     font-size:clamp(13px,3.9vw,17px); line-height:1.55; letter-spacing:0;
   }
   #price .pricing-section-toggle {
-    height:82px; padding:10px 56px 10px 13px;
-    display:flex; align-items:center; text-align:left; cursor:pointer;
+    height:82px; padding:10px 53px 10px 9px; gap:7px;
+    justify-content:flex-start; text-align:left; cursor:pointer;
     font-family:var(--zero-shingo-bold);
   }
   #price .pricing-section-toggle:focus-visible { outline:3px solid #f0b200; outline-offset:3px; }
+  #price .pricing-section-number { flex-basis:30px; width:30px; height:30px; }
   #price .pricing-section-label { min-width:0; }
   #price .pricing-section-label .zero-content-wipe__copy { white-space:nowrap; }
   .pricing-section-indicator {

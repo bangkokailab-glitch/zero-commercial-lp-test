@@ -15,6 +15,19 @@
   function leftOf(card) {
     return card.getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
   }
+  function fitHeight() {
+    if (!mobile.matches) {
+      track.style.removeProperty('--works-case-height');
+      return;
+    }
+    // A flex row otherwise reserves the tallest of all five cases, leaving
+    // empty space below a shorter case. Size to the currently displayed card.
+    var scrollbar = track.offsetHeight - track.clientHeight;
+    var height = Math.ceil(cards[current].getBoundingClientRect().height + scrollbar) + 'px';
+    if (track.style.getPropertyValue('--works-case-height') !== height) {
+      track.style.setProperty('--works-case-height', height);
+    }
+  }
   function update() {
     frame = 0;
     if (!mobile.matches) return;
@@ -27,6 +40,7 @@
     if (position.textContent !== text) position.textContent = text;
     previous.disabled = current === 0;
     next.disabled = current === cards.length - 1;
+    fitHeight();
   }
   function go(index) {
     if (!mobile.matches) return;
@@ -44,6 +58,7 @@
       track.removeAttribute('tabindex');
       track.removeAttribute('aria-roledescription');
       track.scrollLeft = 0;
+      fitHeight();
     }
   }
   previous.addEventListener('click', function () { go(current - 1); });
@@ -60,6 +75,18 @@
   if (mobile.addEventListener) mobile.addEventListener('change', layout);
   else mobile.addListener(layout);
   // Preserve the selected case through orientation changes without moving the page vertically.
-  if (window.ResizeObserver) new ResizeObserver(layout).observe(track);
+  if (window.ResizeObserver) {
+    var lastWidth = track.clientWidth;
+    var observer = new ResizeObserver(function () {
+      var width = track.clientWidth;
+      if (width !== lastWidth) { lastWidth = width; layout(); }
+      else fitHeight();
+    });
+    observer.observe(track);
+    cards.forEach(function (card) { observer.observe(card); });
+  } else {
+    window.addEventListener('resize', layout);
+    track.querySelectorAll('img').forEach(function (image) { image.addEventListener('load', fitHeight); });
+  }
   layout();
 })();
