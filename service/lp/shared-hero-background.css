@@ -5,8 +5,8 @@
 /* The hero and first campaign are one block. Scope spacing to this block only. */
 .hero-offer-journey > .cta.cta-offer--gold { padding-bottom:23px; }
 @media(max-width:768px) {
-  /* 23px + the campaign's existing 12px top padding = the desktop-like 35px gap. */
-  .hero-offer-journey > #mv.video-bg { padding-bottom:23px; }
+  /* Keep only the first campaign's 12px top padding below the mobile proof circles. */
+  .hero-offer-journey > #mv.video-bg { padding-bottom:0; }
 }
 .shared-hero-background { position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none; background:#444b49; opacity:.9; }
 .shared-hero-background.is-viewport-pinned { bottom:auto; height:100vh; height:100lvh; will-change:transform; }
