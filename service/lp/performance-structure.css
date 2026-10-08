@@ -5,6 +5,7 @@
   clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important;
 }
 .sp-btn-inner { display: block; }
+html.zero-has-deferred-backgrounds #about .about-box:not(.is-background-ready),
 html.zero-has-deferred-backgrounds #about .about-support-message:not(.is-background-ready),
 html.zero-has-deferred-backgrounds #about .about-support-message:not(.is-background-ready)::after,
 html.zero-has-deferred-backgrounds #secrets-box-44-panel .lp-purpose-media--k2-continuation:not(.is-background-ready) {

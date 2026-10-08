@@ -1,6 +1,6 @@
 /* Keep real background artwork, but avoid competing with the first viewport. */
 (() => {
-  const targets = document.querySelectorAll('#about .about-support-message, .lp-purpose-media--k2-continuation');
+  const targets = document.querySelectorAll('#about .about-box, #about .about-support-message, .lp-purpose-media--k2-continuation');
   const show = target => target.classList.add('is-background-ready');
   if (!('IntersectionObserver' in window)) { targets.forEach(show); return; }
   const observer = new IntersectionObserver(entries => entries.forEach(entry => {
