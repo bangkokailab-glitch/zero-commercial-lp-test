@@ -61,9 +61,11 @@
 .secret-cover-a__live-title {display:block;font-family:var(--zero-shingo-bold);font-size:42px;line-height:1.45;color:#231815}
 .secret-cover-a__live-lockup {display:flex;justify-content:center;align-items:baseline;gap:16px;font-family:var(--zero-shingo-bold);color:#231815;font-size:62px;line-height:1.3}
 .secret-cover-a__live-lockup b {font-family:var(--zero-shingo-bold);font-size:130px;color:#ee6d09;letter-spacing:-.07em}
-#secret .secrets-panel>.secrets-closing--text {position:relative;display:block;background:#080808 radial-gradient(#302d2c 22%,transparent 24%) 0 0/5px 5px;padding:30px 26px;margin:30px 0 0;border:0;border-radius:0;overflow:hidden;text-align:center;isolation:isolate}
+#secret .secrets-panel>.secrets-closing--text {position:relative;display:block;background:#080808 radial-gradient(#302d2c 22%,transparent 24%) 0 0/5px 5px;padding:30px 26px;margin:30px 0 0;border:0;border-radius:0;overflow:hidden;text-align:center;isolation:isolate;container-type:inline-size}
 #secret .secrets-closing--text .secrets-closing-bg {display:none}
-#secret .secrets-closing--text>p {position:relative;display:block;width:auto;height:auto;clip:auto;clip-path:none;overflow:visible;white-space:normal;font-family:var(--zero-shingo-bold);font-size:26px;line-height:1.7;font-weight:700;text-align:center;margin:0}
+#secret .secrets-closing--text>p {position:relative;display:block;width:auto;height:auto;clip:auto;clip-path:none;overflow:visible;white-space:normal;font-family:var(--zero-shingo-bold);font-size:clamp(26px,3.35cqi,30px);line-height:1.7;font-weight:700;text-align:center;margin:0}
+/* These longer single-line statements keep their two-line board composition. */
+#secret :is(#secrets-box-89-panel,#secrets-box-132-panel,#secrets-box-397-panel) .secrets-closing--text>p {font-size:clamp(26px,3.12cqi,28px)}
 #secret .secrets-closing--text>p+p {margin-top:8px}
 #secret .secrets-closing--text>.secrets-closing-yellow {color:#fff16a}
 #secret .secrets-closing--text>.secrets-closing-blue {color:#72c7dc}
@@ -122,8 +124,16 @@
  .secret-cover-a__live-title{font-size:clamp(23px,6vw,36px);line-height:1.5}
  .secret-cover-a__live-lockup{font-size:42px;gap:10px}
  .secret-cover-a__live-lockup b{font-size:94px}
- #secret .secrets-panel>.secrets-closing--text{padding:23px 17px;margin-top:24px}
- #secret .secrets-closing--text>p{font-size:18px;line-height:1.8;text-align:center}
+ #secret .secrets-panel>.secrets-closing--text{padding:23px 12px;margin-top:24px}
+ #secret .secrets-closing--text>p{font-size:20px;line-height:1.8;text-align:center}
+ #secret :is(#secrets-box-397-panel,#secrets-box-354-panel) .secrets-closing--text>p {font-size:19px}
+ #secret :is(#secrets-box-132-panel,#secrets-box-265-panel) .secrets-closing--text>p {font-size:18.5px}
+ #secret #secrets-box-89-panel .secrets-closing--text>p {font-size:20px}
+ #secret .closing-desktop-break{display:none}
+}
+@media(max-width:374px){
+ #secret :is(#secrets-box-1-panel,#secrets-box-89-panel,#secrets-box-311-panel,#secrets-box-426-panel) .secrets-closing--text>p {font-size:19px}
+ #secret #secrets-box-89-panel .secrets-closing--text>p {font-size:18.5px}
 }
 @media(prefers-reduced-motion:reduce){#secret .secrets-closing--text.zero-closing-reveal.is-revealed{animation:none}}
 
