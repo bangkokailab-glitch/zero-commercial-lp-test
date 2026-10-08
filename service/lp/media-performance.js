@@ -7,7 +7,9 @@
   const videos = Array.from(document.querySelectorAll('video[src$="mv.mp4"], video[data-background-src]'));
   // A fixed/oversized background video's own rectangle can cover the viewport
   // before its section arrives. Use the content section for visibility instead.
-  const targetFor = video => video.closest('#copy') || video;
+  // Pinned campaign layers can remain viewport-sized after their section ends.
+  // Observe the owning section, not the transformed video rectangle.
+  const targetFor = video => video.closest('.shared-hero-background')?.parentElement || video.closest('#copy') || video;
   const videoByTarget = new Map(videos.map(video => [targetFor(video), video]));
   const prepareVideo = video => {
     if (!video.dataset.backgroundSrc || motion.matches) return;
@@ -15,8 +17,8 @@
     video.preload = 'metadata';
     delete video.dataset.backgroundSrc;
   };
-  // The secondary background is far below the first view. Do not compete with
-  // hero text/fonts at startup; prepare it shortly before the reader reaches it.
+  // Lower backgrounds must not compete with hero text/fonts at startup.
+  // Prepare each shortly before the reader reaches its section.
   if ('IntersectionObserver' in window) {
     const preloadObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
