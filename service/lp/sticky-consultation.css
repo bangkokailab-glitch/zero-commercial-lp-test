@@ -1,4 +1,4 @@
-/* Compact, independent contact circle. The external reference's brand assets are not reused. */
+/* ZERO's rounded-square consultation button. */
 @font-face {
   font-family: "ZERO CTA Gothic";
   src: url("fonts/cta-noto-sans-jp-black-20261007.ttf") format("truetype");
@@ -33,17 +33,15 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  border-radius: 50%;
+  border-radius: 18%;
   color: #fff;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
-.sticky-consultation__ring { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.sticky-consultation__ring text { fill: #fff; font: 10px Arial, sans-serif; letter-spacing: .6px; filter: drop-shadow(0 1px 1px #3338); }
 .sticky-consultation__circle {
   position: absolute;
   inset: 8.67768595%;
-  border-radius: 50%;
+  border-radius: 18%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,7 +81,6 @@
 .sticky-consultation__arrow { width: 25%; height: auto; fill: none; stroke: #fff; stroke-width: 3.5; stroke-linecap: square; stroke-linejoin: miter; filter: drop-shadow(0 1px 1px #730000); }
 .sticky-consultation__link:hover .sticky-consultation__circle { filter: brightness(1.12); }
 .sticky-consultation__link:focus-visible { outline: 3px solid #fff; outline-offset: 4px; box-shadow: 0 0 0 7px #b50000; }
-@keyframes zero-contact-ring { to { transform: rotate(360deg); } }
 @keyframes zero-consultation-bob {
   0%, 100% { transform: translateY(6px); }
   50% { transform: translateY(-6px); }
@@ -97,13 +94,11 @@
 }
 @media (prefers-reduced-motion: no-preference) {
   .sticky-consultation__link { animation: zero-consultation-bob 3.6s ease-in-out infinite; }
-  .sticky-consultation__ring { animation: zero-contact-ring 15s linear infinite; }
   .sticky-consultation__label { animation: zero-consultation-label-pop 3.2s ease-in-out infinite; transform-origin: center; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sticky-consultation, .sticky-consultation__circle { transition: none; }
   .sticky-consultation__link { animation: none; transform: none; }
-  .sticky-consultation__ring { animation: none; }
   .sticky-consultation__label { animation: none; transform: none; }
 }
 @media (min-width: 769px) {
@@ -129,7 +124,7 @@
 .has-sticky-consultation { scroll-padding-bottom: var(--sticky-consultation-space, calc(132px + env(safe-area-inset-bottom, 0px))); }
 .has-sticky-consultation body { padding-bottom: 0; }
 .has-sticky-consultation footer.black-dot {
-  padding-bottom: calc(15px + var(--sticky-consultation-space, calc(132px + env(safe-area-inset-bottom, 0px))));
+  padding-bottom: 15px;
   background-color: #000;
   background-image: radial-gradient(#3e3a39 33%, transparent 33%);
   background-position: 0 0;
@@ -138,7 +133,7 @@
 
 @media (max-width: 1000px) {
   .has-sticky-consultation footer.black-dot {
-    padding-bottom: calc(1.5vw + var(--sticky-consultation-space, calc(132px + env(safe-area-inset-bottom, 0px))));
+    padding-bottom: 1.5vw;
   }
 }
 

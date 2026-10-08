@@ -25,6 +25,7 @@
 
   function render(entry, animate = true) {
     const open = !mobile.matches || entry.mobileOpen;
+    const start = entry.panel.hidden ? 0 : entry.panel.getBoundingClientRect().height;
     entry.button.disabled = !mobile.matches;
     entry.button.setAttribute('aria-expanded', String(open));
     entry.box.classList.toggle('is-collapsed', !open);
@@ -35,7 +36,6 @@
       return Promise.resolve();
     }
     if (open) entry.panel.hidden = false;
-    const start = open ? 0 : entry.panel.getBoundingClientRect().height;
     const end = open ? entry.panel.scrollHeight : 0;
     entry.panel.classList.add('zero-smooth-panel', 'is-animating');
     entry.animation = entry.panel.animate(
@@ -52,34 +52,9 @@
     });
   }
 
-  function setOnlyOpen(selected, animate = true) {
-    const waits = [];
-    for (const entry of entries) {
-      entry.mobileOpen = entry === selected;
-      waits.push(render(entry, animate));
-    }
-    return waits;
-  }
-
   function cancelPendingScroll() {
     scrollToken += 1;
-    window.scrollTo({ top: window.scrollY, behavior: 'auto' });
     document.documentElement.classList.remove('zero-accordion-switching');
-  }
-
-  function alignOpenedHeading(button, waits, token) {
-    document.documentElement.classList.add('zero-accordion-switching');
-    Promise.allSettled(waits).then(() => new Promise(resolve => {
-      requestAnimationFrame(() => requestAnimationFrame(resolve));
-    })).then(() => {
-      if (token !== scrollToken || button.getAttribute('aria-expanded') !== 'true') return;
-      const header = document.getElementById('top-header');
-      const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
-      const top = window.scrollY + button.getBoundingClientRect().top - Math.max(12, headerBottom + 12);
-      window.scrollTo({ top: Math.max(0, top), behavior: reduced.matches ? 'auto' : 'smooth' });
-    }).finally(() => {
-      if (token === scrollToken) document.documentElement.classList.remove('zero-accordion-switching');
-    });
   }
 
   function holdScrollAnchor(waits, token) {
@@ -99,7 +74,7 @@
     if (!target || !root.contains(target)) return;
     const entry = entries.find(item => item.panel.contains(target) || item.box.querySelector(':scope > h4') === target || item.button === target);
     const revealed = entry && entry.panel.hidden;
-    if (entry) setOnlyOpen(entry, false);
+    if (entry) { entry.mobileOpen = true; render(entry, false); }
     for (let ancestor = target; ancestor && ancestor !== root; ancestor = ancestor.parentElement) {
       if (ancestor.tagName === 'DETAILS') ancestor.open = true;
     }
@@ -109,13 +84,15 @@
   for (const entry of entries) {
     entry.button.addEventListener('click', () => {
       if (!mobile.matches) return;
-      const switching = !entry.mobileOpen && entries.some(other => other !== entry && other.mobileOpen);
       cancelPendingScroll();
       const token = scrollToken;
-      const waits = setOnlyOpen(entry.mobileOpen ? null : entry, true);
+      // Changing content above the tapped heading makes the viewport jump.
+      // Toggle this panel only; leave other panels and the scroll position alone.
+      document.documentElement.classList.add('zero-accordion-switching');
+      entry.mobileOpen = !entry.mobileOpen;
+      const waits = [render(entry, true)];
       entry.button.focus({ preventScroll: true });
-      if (switching) alignOpenedHeading(entry.button, waits, token);
-      else holdScrollAnchor(waits, token);
+      holdScrollAnchor(waits, token);
     });
     render(entry, false);
   }

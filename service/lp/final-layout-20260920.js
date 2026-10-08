@@ -41,13 +41,13 @@
 
   function setPanel(panel, open, animate = true) {
     if (!panel) return Promise.resolve();
+    const start = panel.hidden ? 0 : panel.getBoundingClientRect().height;
     cancelPanel(panel);
     if (!animate || reduced.matches || typeof panel.animate !== 'function') {
       panel.hidden = !open;
       return Promise.resolve();
     }
     if (open) panel.hidden = false;
-    const start = open ? 0 : panel.getBoundingClientRect().height;
     const end = open ? panel.scrollHeight : 0;
     panel.classList.add('zero-smooth-panel', 'is-animating');
     panel._zeroAnimation = panel.animate(
@@ -66,23 +66,7 @@
 
   function cancelPendingAccordionScroll() {
     accordionScrollToken += 1;
-    window.scrollTo({ top: window.scrollY, behavior: 'auto' });
-    document.documentElement.classList.remove('zero-accordion-switching');
-  }
-
-  function alignOpenedAccordionHeading(target, waits, token) {
     document.documentElement.classList.add('zero-accordion-switching');
-    Promise.allSettled(waits).then(() => new Promise(resolve => {
-      requestAnimationFrame(() => requestAnimationFrame(resolve));
-    })).then(() => {
-      if (token !== accordionScrollToken || target.getAttribute('aria-expanded') !== 'true') return;
-      const header = document.getElementById('top-header');
-      const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
-      const top = window.scrollY + target.getBoundingClientRect().top - Math.max(12, headerBottom + 12);
-      window.scrollTo({ top: Math.max(0, top), behavior: reduced.matches ? 'auto' : 'smooth' });
-    }).finally(() => {
-      if (token === accordionScrollToken) document.documentElement.classList.remove('zero-accordion-switching');
-    });
   }
 
   function holdAccordionScrollAnchor(waits, token) {
@@ -94,7 +78,7 @@
     });
   }
 
-  function setupExclusiveDetails(selector) {
+  function setupIndependentDetails(selector) {
     const details = Array.from(document.querySelectorAll(selector));
     details.forEach(detail => {
       const summary = detail.querySelector(':scope > summary');
@@ -106,20 +90,9 @@
         if (!mobile.matches) return;
         event.preventDefault();
         const willOpen = summary.getAttribute('aria-expanded') !== 'true';
-        const switching = willOpen && details.some(other => other !== detail && other.querySelector(':scope > summary')?.getAttribute('aria-expanded') === 'true');
         cancelPendingAccordionScroll();
         const token = accordionScrollToken;
         const waits = [];
-        details.forEach(other => {
-          if (other === detail || other.querySelector(':scope > summary')?.getAttribute('aria-expanded') !== 'true') return;
-          const otherPanel = other.querySelector(':scope > div');
-          other.querySelector(':scope > summary')?.setAttribute('aria-expanded', 'false');
-          const stateToken = (other._zeroStateToken || 0) + 1;
-          other._zeroStateToken = stateToken;
-          waits.push(setPanel(otherPanel, false).then(() => {
-            if (other._zeroStateToken === stateToken && other.querySelector(':scope > summary')?.getAttribute('aria-expanded') === 'false') other.open = false;
-          }));
-        });
         if (willOpen) {
           detail._zeroStateToken = (detail._zeroStateToken || 0) + 1;
           detail.open = true;
@@ -134,8 +107,7 @@
           }));
         }
         summary.focus({ preventScroll: true });
-        if (switching) alignOpenedAccordionHeading(summary, waits, token);
-        else holdAccordionScrollAnchor(waits, token);
+        holdAccordionScrollAnchor(waits, token);
       });
     });
     const reset = () => details.forEach(detail => {
@@ -309,29 +281,13 @@
       row.button.setAttribute('aria-expanded', String(row.open));
       return setPanel(row.body, row.open, animate);
     }
-    function setOnlyOpen(selected) {
-      const waits = [];
-      rows.forEach(row => {
-        const next = row === selected;
-        if (row.open === next) return;
-        row.open = next;
-        waits.push(render(row));
-      });
-      return waits;
-    }
     rows.forEach(row => row.button.addEventListener('click', () => {
-      if (!mobile.matches) {
-        setOnlyOpen(row.open ? null : row);
-        row.button.focus({ preventScroll: true });
-        return;
-      }
-      const switching = !row.open && rows.some(other => other !== row && other.open);
       cancelPendingAccordionScroll();
       const token = accordionScrollToken;
-      const waits = setOnlyOpen(row.open ? null : row);
+      row.open = !row.open;
+      const waits = [render(row)];
       row.button.focus({ preventScroll: true });
-      if (switching) alignOpenedAccordionHeading(row.button, waits, token);
-      else holdAccordionScrollAnchor(waits, token);
+      holdAccordionScrollAnchor(waits, token);
     }));
     function modeChanged() {
       rows.forEach(row => {
@@ -375,26 +331,14 @@
       return setPanel(row.panel, row.open, animate);
     }
 
-    function setOnlyOpen(selected) {
-      const waits = [];
-      rows.forEach(row => {
-        const next = row === selected;
-        if (row.open === next) return;
-        row.open = next;
-        waits.push(render(row));
-      });
-      return waits;
-    }
-
     rows.forEach(row => row.button.addEventListener('click', () => {
       if (!mobile.matches) return;
-      const switching = !row.open && rows.some(other => other !== row && other.open);
       cancelPendingAccordionScroll();
       const token = accordionScrollToken;
-      const waits = setOnlyOpen(row.open ? null : row);
+      row.open = !row.open;
+      const waits = [render(row)];
       row.button.focus({ preventScroll: true });
-      if (switching) alignOpenedAccordionHeading(row.button, waits, token);
-      else holdAccordionScrollAnchor(waits, token);
+      holdAccordionScrollAnchor(waits, token);
     }));
 
     function modeChanged() {
@@ -412,8 +356,8 @@
 
   setupMobileViewportLock();
   setupAboutPortrait();
-  setupExclusiveDetails('#price .pricing-faq');
-  setupExclusiveDetails('#secrets-example-120, #secrets-example-125');
+  setupIndependentDetails('#price .pricing-faq');
+  setupIndependentDetails('#secrets-example-120, #secrets-example-125');
   setupHeadingReveals();
   setupDiagramReveal();
   setupFlow();

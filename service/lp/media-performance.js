@@ -4,7 +4,30 @@
 
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const visibility = new WeakMap();
-  const videos = Array.from(document.querySelectorAll('video[src$="mv.mp4"]'));
+  const videos = Array.from(document.querySelectorAll('video[src$="mv.mp4"], video[data-background-src]'));
+  // A fixed/oversized background video's own rectangle can cover the viewport
+  // before its section arrives. Use the content section for visibility instead.
+  const targetFor = video => video.closest('#copy') || video;
+  const videoByTarget = new Map(videos.map(video => [targetFor(video), video]));
+  const prepareVideo = video => {
+    if (!video.dataset.backgroundSrc || motion.matches) return;
+    video.src = video.dataset.backgroundSrc;
+    video.preload = 'metadata';
+    delete video.dataset.backgroundSrc;
+  };
+  // The secondary background is far below the first view. Do not compete with
+  // hero text/fonts at startup; prepare it shortly before the reader reaches it.
+  if ('IntersectionObserver' in window) {
+    const preloadObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !motion.matches) {
+          prepareVideo(videoByTarget.get(entry.target));
+          preloadObserver.unobserve(entry.target);
+        }
+      });
+    }, {rootMargin:'300px 0px'});
+    videos.filter(video => video.dataset.backgroundSrc).forEach(video => preloadObserver.observe(targetFor(video)));
+  }
 
   const syncVideo = video => {
     const mayPlay = !motion.matches && !document.hidden && visibility.get(video) === true;
@@ -12,6 +35,7 @@
       video.pause();
       return;
     }
+    prepareVideo(video);
     const promise = video.play();
     if (promise && typeof promise.catch === 'function') promise.catch(() => {});
   };
@@ -20,8 +44,9 @@
   const videoObserver = 'IntersectionObserver' in window
     ? new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          visibility.set(entry.target, entry.isIntersecting && entry.intersectionRatio > 0);
-          syncVideo(entry.target);
+          const video = videoByTarget.get(entry.target);
+          visibility.set(video, entry.isIntersecting && entry.intersectionRatio > 0);
+          syncVideo(video);
         });
       }, { threshold: 0 })
     : null;
@@ -35,9 +60,9 @@
     video.addEventListener('loadeddata', () => syncVideo(video));
     video.addEventListener('canplay', () => syncVideo(video));
     if (motion.matches) video.removeAttribute('autoplay');
-    if (videoObserver) videoObserver.observe(video);
+    if (videoObserver) videoObserver.observe(targetFor(video));
     else {
-      const rect = video.getBoundingClientRect();
+      const rect = targetFor(video).getBoundingClientRect();
       visibility.set(video, rect.bottom > 0 && rect.top < innerHeight);
     }
   });
