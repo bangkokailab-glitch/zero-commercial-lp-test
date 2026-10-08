@@ -6,55 +6,20 @@
   const floating = document.querySelector('.sticky-consultation');
   const proposals = [...document.querySelectorAll('.cta-offer--gold .offer-proposal, .pricing-proposal-cta')];
   const buttons = [...document.querySelectorAll('.cta-offer--gold .offer-gift, .pricing-proposal-cta .offer-gift')];
-  const copyAnimations = new Map();
-  const copyPulse = 180;
-  const leadIn = 120;
-  // Keep the approved 80% pulse speed and peak; move both lines as one unit.
-  const copySpeed = .8;
-  const copyPeak = 1.58 * .8;
-  const copyCycle = leadIn + copyPulse + 660;
-  const copyKeyframes = peak => {
-    const keyframes = [{ offset: 0, transform: 'scale(1)' }];
-    for (let sample = 0; sample <= 4; sample += 1) {
-      const progress = sample / 4;
-      const scale = 1 + (peak - 1) * Math.sin(progress * Math.PI) ** 2;
-      keyframes.push({ offset: (leadIn + progress * copyPulse) / copyCycle, transform: `scale(${scale.toFixed(4)})`, easing: 'ease-in-out' });
-    }
-    keyframes.push({ offset: 1, transform: 'scale(1)' });
-    return keyframes;
-  };
+  // The complete copy now uses the floating consultation label's shared CSS
+  // keyframes. No second JS pulse or character-by-character animation.
   buttons.forEach(button => {
-    if (typeof button.animate !== 'function') return;
     const copy = button.querySelector('.offer-gift__copy');
     const lines = [...button.querySelectorAll('.offer-gift__line')];
     if (!copy || !lines.length) return;
     // Keep a single accessible name for the two-line action.
     if (!button.hasAttribute('aria-label')) button.setAttribute('aria-label', lines.map(line => line.textContent.trim()).join(' '));
     copy.setAttribute('aria-hidden', 'true');
-    const animation = copy.animate(copyKeyframes(copyPeak), { duration: copyCycle / copySpeed, iterations: Infinity, fill: 'both' });
-    animation.pause();
-    animation.currentTime = 0;
-    copyAnimations.set(button, { animation, lines, peak: copyPeak });
-  });
-  const fitCopyMotion = () => copyAnimations.forEach((state, button) => {
-    if (!button.clientWidth) return;
-    // Only cap the peak when a narrow phone would push the text into the frame.
-    const textWidth = Math.max(...state.lines.map(line => line.offsetWidth));
-    const peak = Math.max(1, Math.min(copyPeak, (button.clientWidth - 8) / textWidth));
-    if (Math.abs(peak - state.peak) < .0001) return;
-    state.animation.effect.setKeyframes(copyKeyframes(peak));
-    state.peak = peak;
   });
   const visibleButtons = new Set();
   const updateMotion = () => buttons.forEach(button => {
     const running = visibleButtons.has(button) && !document.hidden && !reduced.matches;
     button.classList.toggle('is-in-view', running);
-    const animation = copyAnimations.get(button)?.animation;
-    if (animation) {
-      if (running && animation.playState !== 'running') animation.play();
-      else if (!running && animation.playState === 'running') animation.pause();
-      if (reduced.matches) animation.currentTime = 0;
-    }
   });
   if (typeof IntersectionObserver === 'function') {
     const observer = new IntersectionObserver(entries => {
@@ -89,7 +54,7 @@
     document.documentElement.classList.toggle('gift-cta-overlaps-floating', Boolean(overlaps));
   };
   const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
-  const resize = () => { fitCopyMotion(); update(); };
+  const resize = update;
   document.addEventListener('visibilitychange', schedule);
   addEventListener('scroll', schedule, { passive: true });
   addEventListener('resize', resize);

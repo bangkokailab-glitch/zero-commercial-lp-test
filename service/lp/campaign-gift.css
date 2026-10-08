@@ -64,7 +64,12 @@
 .offer-gift__plus { display:inline-block; margin-inline:.15em; font-size:.65em; vertical-align:.08em; }
 .offer-gift__arrows { position:absolute; right:24px; top:50%; display:block; width:56px; height:auto; margin:0; fill:none; stroke:#fff; stroke-width:3.5; stroke-linecap:square; stroke-linejoin:miter; transform:translateY(-50%); animation:proposal-arrows var(--zero-cta-arrow-duration) ease-in-out infinite paused; }
 :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift.is-in-view,
+.offer-gift.is-in-view .offer-gift__copy,
 .offer-gift.is-in-view .offer-gift__arrows { animation-play-state:running; }
+/* Use exactly the gentle 3.2s / 1.08 peak motion approved on the floating CTA. */
+@media(prefers-reduced-motion:no-preference) {
+  .offer-gift__copy { animation:zero-consultation-label-pop 3.2s ease-in-out infinite paused; }
+}
 /* Hover/touch/focus do not interrupt the whole-copy pulse. */
 @keyframes proposal-float { 0%,100% { transform:translateY(var(--proposal-float-distance)); } 50% { transform:translateY(calc(-1 * var(--proposal-float-distance))); } }
 /* Share the horizontal motion; the floating button needs no vertical centering offset. */
