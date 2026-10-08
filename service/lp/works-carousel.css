@@ -3,9 +3,9 @@
 @media (max-width:768px) {
   .works-case-navigation:not([hidden]) {
     display:flex; align-items:center; justify-content:space-between; gap:8px;
-    width:calc(100% - 24px); margin:28px auto 10px; color:#211815;
+    width:calc(100% - 24px); margin:28px auto 10px; color:#fff;
   }
-  .works-case-navigation p { margin:0; font-size:11px; line-height:1.5; }
+  .works-case-navigation p { margin:0; font-size:12px; line-height:1.5; font-weight:600; }
   .works-case-navigation > div { display:flex; align-items:center; gap:5px; flex-shrink:0; }
   .works-case-navigation button {
     appearance:none; display:grid; place-items:center; width:44px; height:44px;
