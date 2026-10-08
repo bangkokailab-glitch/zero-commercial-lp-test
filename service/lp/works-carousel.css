@@ -18,11 +18,10 @@
   }
   .works-case-position { font-size:13px; font-variant-numeric:tabular-nums; white-space:nowrap; }
   #works-case-track {
-    display:flex; align-items:flex-start; gap:16px; overflow-x:auto; overflow-y:hidden;
+    display:flex; align-items:flex-start; gap:16px; overflow-x:auto;
     scroll-snap-type:x mandatory; overscroll-behavior-x:contain;
     scrollbar-width:thin; scrollbar-color:#19b4c1 transparent;
     -webkit-overflow-scrolling:touch; padding-bottom:10px; margin-top:0;
-    box-sizing:content-box; height:var(--works-case-height, auto);
   }
   #works-case-track > .work-case {
     flex:0 0 100%; min-width:0; box-sizing:border-box;
@@ -31,5 +30,5 @@
 }
 @media print {
   .works-case-navigation { display:none!important; }
-  #works-case-track { display:block; overflow:visible; height:auto; }
+  #works-case-track { display:block; overflow:visible; }
 }
