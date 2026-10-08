@@ -11,9 +11,9 @@
   const characterStep = 90;
   const characterPulse = 180;
   const leadIn = 120;
-  // 70% of the previous reading speed and peak size, not 70% of the base font.
-  const characterSpeed = .7;
-  const characterPeak = 1.58 * .7;
+  // 85% of the original reading speed and peak size, not 85% of the base font.
+  const characterSpeed = .85;
+  const characterPeak = 1.58 * .85;
   const characterClearance = (characterPeak - 1) / 2 + .02;
   buttons.forEach(button => {
     if (typeof button.animate !== 'function') return;
