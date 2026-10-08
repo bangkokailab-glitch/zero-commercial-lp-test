@@ -22,12 +22,28 @@
   font-family:var(--zero-shingo-regular); font-size:16px; line-height:1.8;
   letter-spacing:normal; font-weight:400;
 }
+/* Subsection numbers are distinct from the primary red chapter badges. */
+#price .pfb-subhead > span,
+#price .pricing-free-number {
+  display:grid; place-items:center; flex:0 0 36px;
+  width:36px; height:36px; margin:0; border-radius:50%;
+  background:#333; color:#fff;
+  font-family:var(--zero-shingo-bold); font-size:12px; font-weight:700;
+  line-height:1; letter-spacing:0; font-variant-numeric:tabular-nums;
+}
+#price .pricing-free-proposal > .pricing-free-heading {
+  display:flex; align-items:center; justify-content:center; gap:10px;
+}
+#price .pricing-free-heading-copy { min-width:0; }
 #price .pricing-proposal-cta { width:min(876.3px,100%); margin:28px auto 12px; }
 #price .pricing-proposal-cta .offer-gift { color:#fff; text-decoration:none; }
 #about .about-title-reveal { width:auto; margin:0; padding:0; border:0; font-size:inherit; line-height:1; }
 #about .about-title-reveal .zero-content-wipe { display:block; }
 
 @media(max-width:768px) {
+  #price .pfb-subhead > span,
+  #price .pricing-free-number { flex-basis:35px; width:35px; height:35px; }
+  #price .pricing-free-proposal > .pricing-free-heading { gap:8px; }
   #price .pricing-section-ready {
     padding:0 !important; border:2px solid #20aebd;
     margin-bottom:18px; overflow:visible;
