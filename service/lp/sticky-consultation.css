@@ -69,7 +69,6 @@
   white-space: nowrap;
 }
 .sticky-consultation__arrow { width: 25%; height: auto; fill: none; stroke: #fff; stroke-width: 3.5; stroke-linecap: square; stroke-linejoin: miter; filter: drop-shadow(0 1px 1px #730000); }
-.sticky-consultation__arrow { --proposal-arrow-distance: var(--zero-cta-arrow-distance, 9px); --proposal-arrow-offset-y: 0%; }
 .sticky-consultation__link:hover .sticky-consultation__circle { background: var(--zero-cta-red-hover, #ce0017); }
 .sticky-consultation__link:focus-visible { outline: 3px solid #fff; outline-offset: 4px; box-shadow: 0 0 0 7px #b50000; }
 @keyframes zero-consultation-bob {
@@ -86,7 +85,6 @@
 @media (prefers-reduced-motion: no-preference) {
   .sticky-consultation__link { animation: zero-consultation-bob 3.6s ease-in-out infinite; }
   .sticky-consultation__label { animation: zero-consultation-label-pop 3.2s ease-in-out infinite; transform-origin: center; }
-  .sticky-consultation__arrow { animation: proposal-arrows var(--zero-cta-arrow-duration, .85s) ease-in-out infinite; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sticky-consultation, .sticky-consultation__circle { transition: none; }
