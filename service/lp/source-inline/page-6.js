@@ -1,6 +1,9 @@
 
     $(document).ready(function(){
-        $('.works-box').slick({
+        $('.works-box').on('init reInit', function () {
+            // Slick clears cloned IDs to empty strings; remove the empty attrs.
+            $(this).find('[id=""]').removeAttr('id');
+        }).slick({
             lazyLoad: 'ondemand',
             slidesToShow: 5,
             slidesToScroll: 1,
@@ -31,4 +34,3 @@
             ]
             });
         });
-    
