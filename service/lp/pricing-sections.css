@@ -34,7 +34,8 @@
 #price .pricing-faq > summary:focus-visible { outline:3px solid #171717; outline-offset:-3px; }
 #price .pricing-faq-number {
   display:grid; place-items:center; width:90px; height:42px;
-  background:#20aebd; color:#fff; font-size:21px; line-height:1;
+  /* Keep the existing badge/row size while spelling out the FAQ label. */
+  background:#20aebd; color:#fff; font-size:14px; line-height:1.2;
   letter-spacing:0; font-variant-numeric:tabular-nums; white-space:nowrap;
 }
 #price .pricing-faq-question { display:block; min-width:0; }
@@ -115,7 +116,7 @@
     grid-template-columns:64px minmax(0,1fr); gap:6px;
     font-size:clamp(13px,3.75vw,16px); line-height:1.6;
   }
-  #price .pricing-faq-number { width:64px; height:34px; font-size:16px; }
+  #price .pricing-faq-number { width:64px; height:34px; font-size:12px; }
   .pricing-faq-full { display:none; }
   .pricing-faq-short, .pricing-faq-short > span { display:block; }
   .pricing-faq-short > span { white-space:nowrap; }
