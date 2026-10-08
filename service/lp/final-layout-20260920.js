@@ -31,9 +31,10 @@
 
   function setPanel(panel, open, animate = true) {
     if (!panel) return Promise.resolve();
-    const start = panel.hidden ? 0 : panel.getBoundingClientRect().height;
+    const animated = animate && !reduced.matches && typeof panel.animate === 'function';
+    const start = animated && !panel.hidden ? panel.getBoundingClientRect().height : 0;
     cancelPanel(panel);
-    if (!animate || reduced.matches || typeof panel.animate !== 'function') {
+    if (!animated) {
       panel.hidden = !open;
       return Promise.resolve();
     }

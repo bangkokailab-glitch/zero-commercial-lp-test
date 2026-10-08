@@ -25,13 +25,15 @@
 
   function render(entry, animate = true) {
     const open = !mobile.matches || entry.mobileOpen;
-    const start = entry.panel.hidden ? 0 : entry.panel.getBoundingClientRect().height;
+    const animated = mobile.matches && animate && !reduced.matches && typeof entry.panel.animate === 'function';
+    // Initial/desktop state changes do not animate and need no layout read.
+    const start = animated && !entry.panel.hidden ? entry.panel.getBoundingClientRect().height : 0;
     entry.button.disabled = !mobile.matches;
     entry.button.setAttribute('aria-expanded', String(open));
     entry.box.classList.toggle('is-collapsed', !open);
     cancel(entry);
 
-    if (!mobile.matches || !animate || reduced.matches || typeof entry.panel.animate !== 'function') {
+    if (!animated) {
       entry.panel.hidden = !open;
       return Promise.resolve();
     }
