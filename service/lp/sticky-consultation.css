@@ -48,12 +48,12 @@
   justify-content: center;
   gap: calc(var(--floating-cta-size) * .035);
   box-sizing: border-box;
-  border: 1px solid #ff7b7b;
+  border: var(--zero-cta-border-width, 3px) solid #fff;
   overflow: hidden;
   isolation: isolate;
-  background: #e50920;
+  background: var(--zero-cta-red, #e50920);
   box-shadow: 0 4px 0 #950013, 0 8px 18px #0004;
-  transition: filter .2s ease, box-shadow .2s ease;
+  transition: background-color .2s ease, box-shadow .2s ease;
 }
 .sticky-consultation__circle::before {
   content: none;
@@ -69,7 +69,8 @@
   white-space: nowrap;
 }
 .sticky-consultation__arrow { width: 25%; height: auto; fill: none; stroke: #fff; stroke-width: 3.5; stroke-linecap: square; stroke-linejoin: miter; filter: drop-shadow(0 1px 1px #730000); }
-.sticky-consultation__link:hover .sticky-consultation__circle { filter: brightness(1.12); }
+.sticky-consultation__arrow { --proposal-arrow-distance: var(--zero-cta-arrow-distance, 9px); --proposal-arrow-offset-y: 0%; }
+.sticky-consultation__link:hover .sticky-consultation__circle { background: var(--zero-cta-red-hover, #ce0017); }
 .sticky-consultation__link:focus-visible { outline: 3px solid #fff; outline-offset: 4px; box-shadow: 0 0 0 7px #b50000; }
 @keyframes zero-consultation-bob {
   0%, 100% { transform: translateY(6px); }
@@ -85,11 +86,13 @@
 @media (prefers-reduced-motion: no-preference) {
   .sticky-consultation__link { animation: zero-consultation-bob 3.6s ease-in-out infinite; }
   .sticky-consultation__label { animation: zero-consultation-label-pop 3.2s ease-in-out infinite; transform-origin: center; }
+  .sticky-consultation__arrow { animation: proposal-arrows var(--zero-cta-arrow-duration, .85s) ease-in-out infinite; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sticky-consultation, .sticky-consultation__circle { transition: none; }
   .sticky-consultation__link { animation: none; transform: none; }
   .sticky-consultation__label { animation: none; transform: none; }
+  .sticky-consultation__arrow { animation: none; transform: none; }
 }
 @media (min-width: 769px) {
   .has-sticky-consultation .fix-menu.pc { bottom: 20px; }
