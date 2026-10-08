@@ -83,7 +83,7 @@
     '#secret .secrets-closing--text > p',
     '#price > .wrap > h2', '#price .pricing-section-label',
     '#about > .wrap > h2', '#about .about-title-reveal', '#about .merit-box > h3',
-    '.work-case__cvr', '.work-case__lift'
+    '.work-case__cvr-label', '.work-case__lift-label'
   ];
   const wipes = [...document.querySelectorAll(selectors.join(','))].map(target => {
     const wipe = document.createElement('span');

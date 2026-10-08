@@ -1,0 +1,82 @@
+/* Case proof: stable numerals, equal before/after panels and no wrapped rates. */
+#works .work-case header {
+  align-items:stretch; gap:20px; padding-right:20px; margin-bottom:22px;
+}
+#works .work-case header h3 {
+  box-sizing:border-box; flex:0 0 146px; min-width:0;
+  flex-direction:column; align-items:center; gap:0; padding:16px 10px;
+}
+#works .work-case__metrics { padding:12px 0; container-type:inline-size; }
+#works .work-case__context { font-size:15px; line-height:1.6; text-align:center; margin:0 0 5px; }
+#works .work-case__cvr {
+  display:grid; grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);
+  align-items:center; gap:7px 12px; padding:0; margin:0; line-height:1.2;
+}
+#works .work-case__cvr-label {
+  grid-column:1/-1; font:18px/1.5 var(--zero-shingo-bold); text-align:center;
+}
+#works .work-case__cvr-label .zero-content-wipe,
+#works .work-case__cvr-label .zero-content-wipe__copy {
+  display:block; width:auto; font:inherit; letter-spacing:0;
+}
+#works .work-case__cvr-label .zero-content-wipe { display:inline-block; --content-wipe-color:#e60033; }
+#works .work-case__cvr .work-case__rate {
+  box-sizing:border-box; display:flex; align-items:baseline; justify-content:center;
+  gap:2px; padding:10px 12px; min-width:0; border:2px solid var(--metric-color);
+  background:var(--metric-color); color:#fff; font:52px/1.2 var(--zero-shingo-bold);
+  letter-spacing:0; white-space:nowrap;
+}
+#works .work-case__rate--before { --metric-color:#171717; --metric-band-color:#363636; }
+#works .work-case__rate--after { --metric-color:#e60033; --metric-band-color:#b70028; }
+#works .work-case__cvr small { font-size:.43em; line-height:1; }
+#works .work-case__cvr i { font-style:normal; font-size:30px; line-height:1; text-align:center; }
+#works .work-count {
+  display:inline-block; width:4.1ch; font:inherit; letter-spacing:0;
+  font-variant-numeric:tabular-nums; text-align:center;
+}
+#works .work-case__lift {
+  --metric-band-color:#cc5000; gap:12px; padding:12px 8px;
+}
+#works .work-case__lift-label { font:inherit; letter-spacing:0; }
+#works .work-case__lift-label .zero-content-wipe__copy { display:block; }
+#works .work-case__lift strong { white-space:nowrap; }
+/* A solid band passes behind the digits; the 0.01 is never masked or faded. */
+#works .work-metric-band { position:relative; isolation:isolate; overflow:hidden; }
+#works .work-metric-band::before {
+  content:""; position:absolute; inset:0; background:var(--metric-band-color);
+  transform:scaleX(0); transform-origin:left; z-index:-1; pointer-events:none;
+}
+@keyframes work-metric-band {
+  0% { transform:scaleX(0); transform-origin:left; }
+  45% { transform:scaleX(1); transform-origin:left; }
+  46% { transform:scaleX(1); transform-origin:right; }
+  100% { transform:scaleX(0); transform-origin:right; }
+}
+@media(prefers-reduced-motion:no-preference) {
+  #works .work-metric-band.is-metric-entering::before {
+    animation:work-metric-band 800ms cubic-bezier(.65,0,.35,1) both;
+  }
+}
+@media(min-width:769px) and (max-width:1039px) {
+  #works .work-case header h3 { flex-basis:122px; }
+  #works .work-case__cvr .work-case__rate { font-size:42px; }
+  #works .work-case__lift { flex-direction:column; gap:4px; }
+}
+@media(max-width:768px) {
+  #works .work-case header { gap:8px; padding-right:8px; margin-bottom:18px; }
+  #works .work-case header h3 { flex-basis:68px; padding:10px 4px; font-size:15px; }
+  #works .work-case header h3 span { font-size:34px; }
+  #works .work-case__metrics { padding:10px 0; }
+  #works .work-case__context { font-size:10px; margin:0 0 5px; }
+  #works .work-case__cvr { grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr); gap:5px 4px; }
+  #works .work-case__cvr-label { font-size:12px; line-height:1.5; }
+  #works .work-case__cvr .work-case__rate {
+    padding:9px 2px; border-width:1px; font-size:clamp(24px,11cqw,42px);
+  }
+  #works .work-case__cvr i { font-size:20px; }
+  #works .work-case__lift { gap:5px; padding:10px 3px; }
+  #works .work-case__lift strong { font-size:clamp(28px,7.7vw,47px); }
+}
+@media(prefers-reduced-motion:reduce),print {
+  #works .work-metric-band::before { display:none; }
+}
