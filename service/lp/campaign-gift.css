@@ -1,4 +1,4 @@
-/* Preserve approved copy and dimensions; animate characters in reading order. */
+/* Preserve approved copy and dimensions; pulse the complete two-line message. */
 :root {
   --zero-cta-red:#e50920;
   --zero-cta-red-hover:#ce0017;
@@ -59,14 +59,13 @@
 :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift::after { content:none; }
 :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift:hover { background:var(--zero-cta-red-hover); }
 :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift:focus-visible { outline:3px solid #f0b200; outline-offset:5px; }
-.offer-gift__copy { display:flex; flex-direction:column; align-items:center; gap:8px; font-size:32px; line-height:1.55; letter-spacing:.035em; }
+.offer-gift__copy { display:flex; flex-direction:column; align-items:center; width:max-content; max-width:100%; margin-inline:auto; gap:8px; font-size:32px; line-height:1.55; letter-spacing:.035em; transform-origin:50% 50%; }
 .offer-gift__line { display:block; font:inherit; white-space:nowrap; }
-.offer-gift__character { display:inline-block; position:relative; font:inherit; letter-spacing:inherit; transform-origin:50% 50%; }
 .offer-gift__plus { display:inline-block; margin-inline:.15em; font-size:.65em; vertical-align:.08em; }
 .offer-gift__arrows { position:absolute; right:24px; top:50%; display:block; width:56px; height:auto; margin:0; fill:none; stroke:#fff; stroke-width:3.5; stroke-linecap:square; stroke-linejoin:miter; transform:translateY(-50%); animation:proposal-arrows var(--zero-cta-arrow-duration) ease-in-out infinite paused; }
 :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift.is-in-view,
 .offer-gift.is-in-view .offer-gift__arrows { animation-play-state:running; }
-/* Hover/touch/focus do not interrupt the reading loop. */
+/* Hover/touch/focus do not interrupt the whole-copy pulse. */
 @keyframes proposal-float { 0%,100% { transform:translateY(var(--proposal-float-distance)); } 50% { transform:translateY(calc(-1 * var(--proposal-float-distance))); } }
 /* Share the horizontal motion; the floating button needs no vertical centering offset. */
 @keyframes proposal-arrows { 0%,100% { transform:translate(calc(-1 * var(--proposal-arrow-distance)),var(--proposal-arrow-offset-y,-50%)); } 50% { transform:translate(var(--proposal-arrow-distance),var(--proposal-arrow-offset-y,-50%)); } }
@@ -87,13 +86,14 @@
   .cta.cta-offer--gold .cta-ribbon { margin-bottom:8px; scroll-margin-top:72px; }
   .cta.cta-offer--gold .offer-proposal { margin-top:14px; }
   /* About 70% of the previous height; keep width and type size unchanged. */
-  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { --proposal-float-distance:4.5px; padding:6px 44px 6px 12px; }
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { --proposal-float-distance:4.5px; padding:6px 12px; }
   .offer-gift__copy { font-size:19px; letter-spacing:.015em; }
   .offer-gift__arrows { right:10px; width:30px; }
   .cta.cta-offer--gold .offer-proposal__note { position:relative; left:50%; transform:translateX(-50%); width:calc(100vw - 24px); max-width:none; margin:12px 0 0; padding:5px 7px; font-size:clamp(8.5px,2.75vw,11px); line-height:1.7; text-wrap:initial; }
 }
 @media(min-width:480px) and (max-width:768px) {
-  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { padding-block:4px; }
+  /* Keep the enlarged two-line copy clear of the white frame. */
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { padding-block:8px; }
   .offer-gift__copy { font-size:24px; line-height:1.4; gap:6px; }
 }
 @media(max-width:374px) {
@@ -106,5 +106,5 @@
 }
 @media(prefers-reduced-motion:reduce) {
   :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift,.offer-gift__copy,.offer-gift__arrows { animation:none; transition:none; }
-  .offer-gift__character { transform:none !important; }
+  .offer-gift__copy { transform:none !important; }
 }
