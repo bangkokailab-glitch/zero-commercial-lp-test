@@ -76,6 +76,28 @@
 #secret .zero-numbered-heading .zero-content-wipe__copy { text-wrap: balance; }
 #secret .zero-subheading-line { display: block; text-wrap: balance; }
 
+/* Desktop: keep the original type sizes; use the full heading width and normal
+   tracking instead of balanced lines. Never squeeze or scale the text. */
+@media (min-width: 769px) {
+  #secret .secrets-white > h4 { padding-inline: 4px; }
+  #secret .secrets-toggle.zero-numbered-heading {
+    align-items: flex-start;
+    line-height: 1.35;
+  }
+  #secret .zero-numbered-heading .zero-subheading-number { margin-top: 2px; }
+  #secret .zero-numbered-heading .secrets-toggle-copy {
+    flex: 0 1 auto;
+    max-width: calc(100% - 48px);
+    letter-spacing: 0;
+    text-align: left;
+  }
+  #secret .zero-numbered-heading .zero-content-wipe__copy,
+  #secret .zero-numbered-heading .zero-subheading-desktop {
+    text-wrap: wrap;
+  }
+  #secret .zero-subheading-desktop br { display: none; }
+}
+
 @keyframes zero-content-wipe-bar {
   0% { transform: scaleX(0); transform-origin: left; }
   48% { transform: scaleX(1); transform-origin: left; }
