@@ -11,6 +11,10 @@
   const characterStep = 90;
   const characterPulse = 180;
   const leadIn = 120;
+  // 70% of the previous reading speed and peak size, not 70% of the base font.
+  const characterSpeed = .7;
+  const characterPeak = 1.58 * .7;
+  const characterClearance = (characterPeak - 1) / 2 + .02;
   buttons.forEach(button => {
     if (typeof button.animate !== 'function') return;
     const copy = button.querySelector('.offer-gift__copy');
@@ -56,11 +60,11 @@
       });
       const keyframes = [...times].sort((a, b) => a - b).map(time => {
         // Neighbours make room without changing line width or button height.
-        const shift = .31 * (pulseAt(previous, time) - pulseAt(next, time));
-        const scale = 1 + .58 * pulseAt(index, time);
+        const shift = characterClearance * (pulseAt(previous, time) - pulseAt(next, time));
+        const scale = 1 + (characterPeak - 1) * pulseAt(index, time);
         return { offset: time / cycle, transform: `translateX(${shift.toFixed(4)}em) scale(${scale.toFixed(4)})`, easing: 'ease-in-out' };
       });
-      const animation = characters[index].animate(keyframes, { duration: cycle, iterations: Infinity, fill: 'both' });
+      const animation = characters[index].animate(keyframes, { duration: cycle / characterSpeed, iterations: Infinity, fill: 'both' });
       animation.pause();
       animation.currentTime = 0;
       animations.push(animation);
