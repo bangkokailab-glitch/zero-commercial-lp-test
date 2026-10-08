@@ -1,0 +1,54 @@
+:root{--face-r:"mfw-pshingopr6n-regular","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;--face-b:"mfw-pshingopr6n-bold","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;--ink:#231815;--orange:#ee6d09;--blue:#006abb}
+*{box-sizing:border-box}body{margin:0;background:#eef0f2;color:var(--ink);font-family:var(--face-r);font-synthesis:none}a{color:inherit}button{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.review-header{padding:24px;max-width:1050px;margin:auto}.review-eyebrow{font:12px/1.4 Arial,sans-serif;letter-spacing:.12em;color:#69747b}.review-header h1{font:24px/1.6 var(--face-b);margin:6px 0}.review-header p{font-size:13px;line-height:1.7;margin:0}.review-header nav{display:flex;gap:8px;margin:18px 0 10px}.review-header nav a{flex:1;text-align:center;background:#fff;border:1px solid #cdd3d7;border-radius:5px;padding:12px 8px;text-decoration:none;font:14px/1.5 var(--face-b)}.review-header nav a[aria-current="page"]{background:#20272b;border-color:#20272b;color:#fff}.review-controls{display:flex;align-items:center;justify-content:space-between;gap:16px}.replay{flex:none;border:1px solid #aaa;background:white;padding:7px 12px;border-radius:4px;cursor:pointer;font-size:12px}.review-footer{max-width:1050px;margin:auto;padding:24px;font-size:13px;line-height:1.8}.review-footer p{margin:6px 0}.review-footer a{display:inline-block;margin:12px 20px 0 0}
+.secret-proposal{background:#fff;padding:30px 0 38px;overflow:hidden}
+.cover-wrap{width:min(1000px,calc(100% - 40px));margin:auto;container-type:inline-size;text-align:center}
+.cover-logo{display:block;width:110px;height:auto;margin:0 auto 26px}
+.cover-title{margin:0;font-family:var(--face-b);font-weight:700;letter-spacing:0}
+.headline-line{display:block;white-space:nowrap;line-height:1.3}
+.reveal-text{display:inline-block;position:relative;vertical-align:top}
+.headline-first{font-size:76px;margin-bottom:8px}
+.headline-second{font-size:84px}
+.count-lockup{display:flex;align-items:baseline;justify-content:center;gap:16px;line-height:1.1;margin-top:10px}
+.count{font-family:var(--face-b);color:var(--orange);font-size:166px;line-height:1.1;letter-spacing:-.05em;width:1.55em;flex:none;text-align:center;font-variant-numeric:tabular-nums;font-weight:700}
+.count-suffix{font-size:70px;white-space:nowrap}
+.production-lockup{display:none}
+.cover-description{margin:30px auto 0;max-width:930px;font:18px/1.85 var(--face-r);color:#383633}
+.cover-description p{margin:0}.cover-description p+p{margin-top:22px;font-family:var(--face-b)}
+.down-cue{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;width:52px;height:52px;margin:24px auto 0;text-decoration:none}
+.down-cue span{display:block;flex:none;width:20px;height:20px;border-right:4px solid var(--orange);border-bottom:4px solid var(--orange);transform:rotate(45deg)}
+/* A: the familiar centred composition, widened to use the available space. */
+/* B: move 制作 onto the 10 lockup so the long noun can be set larger. */
+.variant-b .headline-first{font-size:84px;margin-bottom:6px}
+.variant-b .headline-second{font-size:108px;letter-spacing:-.025em}
+.variant-b .production-inline{display:none}.variant-b .production-lockup{display:inline-block;font-size:84px;white-space:nowrap}
+.variant-b .count-lockup{gap:18px;margin-top:0}.variant-b .count{font-size:186px}.variant-b .count-suffix{font-size:84px}
+/* C: a blue title band ties the live headline to the original ZERO logo. */
+.variant-c .headline-first{font-size:76px;margin-bottom:12px;color:#fff}
+.variant-c .headline-first .reveal-text{background:var(--blue);padding:3px 28px 9px}
+.variant-c .headline-second{font-size:86px}
+.variant-c .count{font-size:160px}.variant-c .count-suffix{font-size:68px}
+@media(min-width:769px) and (max-width:1039px){
+ .headline-first{font-size:7.6cqw}.headline-second{font-size:8.4cqw}.variant-b .headline-first{font-size:8.4cqw}.variant-b .headline-second{font-size:10.8cqw}.variant-c .headline-first{font-size:7.6cqw}.variant-c .headline-second{font-size:8.6cqw}
+ .variant-b .count{font-size:18.6cqw}.variant-b .production-lockup,.variant-b .count-suffix{font-size:8.4cqw}
+}
+@media(max-width:768px){
+ .review-header{padding:18px 14px}.review-header h1{font-size:20px}.review-header nav{gap:5px}.review-header nav a{font-size:12px;padding:10px 2px}.review-controls{align-items:flex-start}.review-header .review-note{font-size:12px}.review-footer{padding:20px 14px;font-size:12px}
+ .secret-proposal{padding:18px 0 26px}.cover-wrap{width:calc(100% - 24px)}.cover-logo{width:82px;margin-bottom:20px}
+ .headline-first{font-size:clamp(30px,10.4cqw,62px);margin-bottom:8px}.headline-second{font-size:clamp(24px,8.8cqw,62px);letter-spacing:-.015em}
+ .count-lockup{gap:10px;margin-top:14px}.count{font-size:clamp(100px,29cqw,154px)}.count-suffix{font-size:clamp(36px,11cqw,60px)}
+ .cover-description{margin-top:24px;font-size:15px;line-height:1.9}.cover-description p+p{margin-top:18px}.desktop-break{display:none}
+ .down-cue{margin-top:18px;width:48px;height:48px;gap:1px}.down-cue span{width:16px;height:16px;border-width:3px}
+ .variant-b .headline-first{font-size:clamp(32px,11.4cqw,74px);margin-bottom:9px}.variant-b .headline-second{font-size:clamp(30px,11.2cqw,80px);letter-spacing:-.03em}
+ .variant-b .production-lockup{font-size:clamp(28px,9.8cqw,65px)}.variant-b .count{font-size:clamp(80px,27.5cqw,170px)}.variant-b .count-suffix{font-size:clamp(30px,10.3cqw,65px)}.variant-b .count-lockup{gap:6px;margin-top:6px}
+ .variant-c .headline-first{font-size:clamp(29px,10.4cqw,62px);margin-bottom:12px}.variant-c .headline-first .reveal-text{padding:3px 14px 7px}.variant-c .headline-second{font-size:clamp(24px,8.8cqw,62px)}.variant-c .count{font-size:clamp(100px,29cqw,154px)}.variant-c .count-suffix{font-size:clamp(36px,11cqw,60px)}
+}
+body.embed .review-header,body.embed .review-footer{display:none}
+@media(prefers-reduced-motion:no-preference){
+ .is-animating .reveal-text{animation:headline-ink .78s both}
+ .is-animating .reveal-text::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:left center;animation:headline-band .78s both}
+ .variant-c.is-animating .reveal-text::after{background:var(--blue)}
+ .is-animating .headline-second .reveal-text,.is-animating .headline-second .reveal-text::after{animation-delay:.22s}
+ @keyframes headline-band{0%{transform:scaleX(0)}45%{transform:scaleX(1);transform-origin:left center}46%{transform-origin:right center}100%{transform:scaleX(0);transform-origin:right center}}
+ @keyframes headline-ink{0%,43%{color:transparent}44%,100%{color:inherit}}
+}
