@@ -205,10 +205,8 @@
 
   function setupHeadingReveals() {
     const selectors = [
-      // Secret headings now use the shared bar wipe in content-reveal.js.
-      '#marketing-flow-final-title',
-      '#price > .wrap > h2',
-      '#about > .wrap > h2'
+      // Secret, pricing and about headings use the shared band-first reveal.
+      '#marketing-flow-final-title'
     ];
     document.querySelectorAll(selectors.join(',')).forEach(heading => {
       if (heading.closest('.cta-offer--gold') || heading.classList.contains('wow')) return;
@@ -250,6 +248,23 @@
   function setupFlow() {
     const list = document.querySelector('#price .pricing-flow-list--static');
     if (!list) return;
+    const mobileTitles = [
+      ['お問い合わせ'],
+      ['ヒアリング', 'フォームへのご回答'],
+      ['初回打ち合わせ', 'ヒアリング'],
+      ['2回目打ち合わせ', '無料提案のご説明'],
+      ['プラン選択・ご契約', '着手金のお支払い'],
+      ['制作前ヒアリング', '制作日程のご案内'],
+      ['調査・戦略整理', '構成案のご提出'],
+      ['原稿の執筆', '内容確認'],
+      ['デザインに使う', '素材の準備'],
+      ['ファーストビュー', 'デザイン2案'],
+      ['もう一方の端末の', 'ファーストビュー'],
+      ['ページ下部の制作', 'デザイン確認'],
+      ['コーディング', '表示と動作の確認'],
+      ['納品・残金の', 'お支払い'],
+      ['公開後の運用', '改善']
+    ];
     const items = Array.from(list.children);
     const rows = items.map((item, index) => {
       const number = item.querySelector(':scope > .pricing-flow-number-image');
@@ -266,7 +281,17 @@
       button.append(number.cloneNode(true), icon.cloneNode(true));
       const title = document.createElement('span');
       title.className = 'pricing-flow-mobile-title';
-      title.textContent = heading.textContent;
+      const full = document.createElement('span');
+      full.className = 'pricing-flow-title-full';
+      full.textContent = heading.textContent;
+      const short = document.createElement('span');
+      short.className = 'pricing-flow-title-short';
+      (mobileTitles[index] || [heading.textContent]).forEach(text => {
+        const line = document.createElement('span');
+        line.textContent = text;
+        short.append(line);
+      });
+      title.append(full, short);
       const indicator = document.createElement('span');
       indicator.className = 'pricing-flow-mobile-indicator';
       indicator.setAttribute('aria-hidden', 'true');
@@ -354,6 +379,82 @@
     if (typeof mobile.addEventListener === 'function') mobile.addEventListener('change', modeChanged);
   }
 
+  function setupPricingSections() {
+    const breaks = {
+      'pricing-free-title': ['ご契約前に、構成案と', 'デザイン案を無料でご提案'],
+      'pricing-flow-title': ['お問い合わせ・ご提案・', 'LP制作・納品までの流れ']
+    };
+    const rows = [...document.querySelectorAll('#price .pricing-section')].map(section => {
+      const heading = section.querySelector(':scope > h3');
+      const panel = section.querySelector(':scope > .pricing-section-panel');
+      if (!heading || !panel) return null;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'pricing-section-toggle';
+      button.id = `${heading.id}-toggle`;
+      button.setAttribute('aria-controls', panel.id);
+      const copy = document.createElement('span');
+      copy.className = 'pricing-section-label';
+      const lines = breaks[heading.id];
+      if (lines) {
+        copy.append(document.createTextNode(lines[0]));
+        const br = document.createElement('br');
+        br.className = 'sp';
+        copy.append(br, document.createTextNode(lines[1]));
+      } else copy.append(...heading.childNodes);
+      const indicator = document.createElement('span');
+      indicator.className = 'pricing-section-indicator';
+      indicator.setAttribute('aria-hidden', 'true');
+      button.append(copy, indicator);
+      heading.replaceChildren(button);
+      section.classList.add('pricing-section-ready');
+      panel.setAttribute('role', 'region');
+      panel.setAttribute('aria-labelledby', heading.id);
+      return { section, heading, button, panel, open: false };
+    }).filter(Boolean);
+
+    const render = (row, animate = true) => {
+      const open = !mobile.matches || row.open;
+      row.button.disabled = !mobile.matches;
+      row.button.setAttribute('aria-expanded', String(open));
+      row.section.classList.toggle('is-section-open', open);
+      return setPanel(row.panel, open, animate);
+    };
+    rows.forEach(row => row.button.addEventListener('click', () => {
+      if (!mobile.matches) return;
+      cancelPendingAccordionScroll();
+      const token = accordionScrollToken;
+      row.open = !row.open;
+      const wait = render(row);
+      row.button.focus({ preventScroll: true });
+      holdAccordionScrollAnchor([wait], token);
+    }));
+    const modeChanged = () => rows.forEach(row => render(row, false));
+    modeChanged();
+    mobile.addEventListener('change', modeChanged);
+
+    // Only explicit anchor navigation opens a matching section. Ordinary
+    // toggles never scroll or close another section, including nested panels.
+    const openHash = hash => {
+      let id;
+      try { id = decodeURIComponent(hash.slice(1)); } catch { return; }
+      const target = document.getElementById(id);
+      rows.forEach(row => {
+        if (!target || !row.section.contains(target)) return;
+        row.open = true;
+        render(row, false);
+      });
+    };
+    openHash(location.hash);
+    window.addEventListener('hashchange', () => openHash(location.hash));
+    document.addEventListener('click', event => {
+      const link = event.target.closest('a[href]');
+      if (!link) return;
+      const url = new URL(link.href, location.href);
+      if (url.origin === location.origin && url.pathname === location.pathname && url.hash) openHash(url.hash);
+    }, true);
+  }
+
   setupMobileViewportLock();
   setupAboutPortrait();
   setupIndependentDetails('#price .pricing-faq');
@@ -362,6 +463,7 @@
   setupDiagramReveal();
   setupFlow();
   setupPricingNotes();
+  setupPricingSections();
   setupTrustHighlights();
   setupDeferredImages();
 })();

@@ -1,0 +1,34 @@
+/* Keep the approved desktop case layout; only mobile becomes a native swipe track. */
+.works-case-navigation { display:none; }
+@media (max-width:768px) {
+  .works-case-navigation:not([hidden]) {
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+    width:calc(100% - 24px); margin:28px auto 10px; color:#211815;
+  }
+  .works-case-navigation p { margin:0; font-size:11px; line-height:1.5; }
+  .works-case-navigation > div { display:flex; align-items:center; gap:5px; flex-shrink:0; }
+  .works-case-navigation button {
+    appearance:none; display:grid; place-items:center; width:44px; height:44px;
+    border:1px solid #19b4c1; border-radius:50%; background:#fff; color:#087780;
+    font-size:22px; line-height:1; padding:0; cursor:pointer;
+  }
+  .works-case-navigation button:disabled { opacity:.35; cursor:default; }
+  .works-case-navigation button:focus-visible, #works-case-track:focus-visible {
+    outline:3px solid #e50920; outline-offset:2px;
+  }
+  .works-case-position { font-size:13px; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  #works-case-track {
+    display:flex; align-items:flex-start; gap:16px; overflow-x:auto;
+    scroll-snap-type:x mandatory; overscroll-behavior-x:contain;
+    scrollbar-width:thin; scrollbar-color:#19b4c1 transparent;
+    -webkit-overflow-scrolling:touch; padding-bottom:10px; margin-top:0;
+  }
+  #works-case-track > .work-case {
+    flex:0 0 100%; min-width:0; box-sizing:border-box;
+    scroll-snap-align:start; margin-bottom:0;
+  }
+}
+@media print {
+  .works-case-navigation { display:none!important; }
+  #works-case-track { display:block; overflow:visible; }
+}

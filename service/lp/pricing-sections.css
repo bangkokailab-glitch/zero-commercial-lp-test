@@ -1,0 +1,87 @@
+/* Four independently collapsible chapters on mobile; full content on desktop. */
+#price .pricing-final-b > h3 {
+  width:100%; margin:0 0 24px; padding:0 0 15px; border:0;
+  border-bottom:2px solid #20aebd; text-align:center;
+  font-family:var(--zero-shingo-bold); font-size:30px; line-height:1.4;
+}
+#price .pricing-section-toggle {
+  appearance:none; display:block; position:relative; width:100%;
+  padding:0; margin:0; border:0; border-radius:0; background:none;
+  color:inherit; font:inherit; letter-spacing:inherit; text-align:inherit;
+  opacity:1; -webkit-text-fill-color:currentColor; cursor:default;
+}
+.pricing-section-label { display:block; }
+.pricing-section-indicator { display:none; }
+.pricing-faq-short { display:none; }
+.pricing-flow-title-short { display:none; }
+#price .pricing-section-panel { display:flow-root; }
+#price .pricing-section-panel[hidden] { display:none; }
+#price .pricing-section-panel > p {
+  max-width:900px; margin:0 auto 30px;
+  font-family:var(--zero-shingo-regular); font-size:16px; line-height:1.8;
+  letter-spacing:normal; font-weight:400;
+}
+#price .pricing-proposal-cta { width:min(876.3px,100%); margin:28px auto 12px; }
+#price .pricing-proposal-cta .offer-gift { color:#fff; text-decoration:none; }
+#about .about-title-reveal { width:auto; margin:0; padding:0; border:0; font-size:inherit; line-height:1; }
+#about .about-title-reveal .zero-content-wipe { display:block; }
+
+@media(max-width:768px) {
+  #price .pricing-section-ready {
+    padding:0 !important; border:2px solid #20aebd;
+    margin-bottom:18px; overflow:visible;
+  }
+  #price .zero-pricing-frame.pricing-section-ready > h3 {
+    width:100%; padding:0 !important; margin:0 !important; border:0;
+    font-size:clamp(13px,3.9vw,17px); line-height:1.55; letter-spacing:0;
+  }
+  #price .pricing-section-toggle {
+    height:82px; padding:10px 56px 10px 13px;
+    display:flex; align-items:center; text-align:left; cursor:pointer;
+    font-family:var(--zero-shingo-bold);
+  }
+  #price .pricing-section-toggle:focus-visible { outline:3px solid #f0b200; outline-offset:3px; }
+  #price .pricing-section-label { min-width:0; }
+  #price .pricing-section-label .zero-content-wipe__copy { white-space:nowrap; }
+  .pricing-section-indicator {
+    position:absolute; right:10px; top:50%; transform:translateY(-50%);
+    display:block; width:36px; height:36px;
+    border:2px solid #20aebd; border-radius:50%;
+  }
+  .pricing-section-indicator::before, .pricing-section-indicator::after {
+    content:""; position:absolute; left:50%; top:50%; width:14px; height:2px;
+    background:#20aebd; transform:translate(-50%,-50%);
+  }
+  .pricing-section-indicator::after { transform:translate(-50%,-50%) rotate(90deg); }
+  [aria-expanded="true"] > .pricing-section-indicator::after { transform:translate(-50%,-50%); }
+  #price .pricing-section-panel { padding:22px 12px 20px; border-top:1px solid #20aebd; }
+  #price .pricing-section-panel > p { font-size:16px; line-height:1.9; }
+  #price .pricing-proposal-cta { margin-block:24px 6px; }
+  #price .pricing-faq > summary {
+    display:flex; align-items:center; box-sizing:border-box; height:82px;
+    padding:10px 34px 10px 22px;
+    font-size:clamp(13px,3.8vw,16px); line-height:1.6;
+  }
+  #price .pricing-faq > summary::before,
+  #price .pricing-faq > summary::after { top:50%; transform:translateY(-50%); }
+  #price .pricing-faq > summary::after { right:10px; }
+  .pricing-faq-full { display:none; }
+  .pricing-faq-short, .pricing-faq-short > span { display:block; }
+  .pricing-faq-short > span { white-space:nowrap; }
+  #price .pricing-flow-mobile-toggle {
+    height:82px; min-height:82px; padding:8px 30px 8px 8px;
+    grid-template-columns:64px 28px minmax(0,1fr); gap:6px;
+  }
+  #price .pricing-flow-mobile-toggle .pricing-flow-number-image { width:64px; height:34px; }
+  #price .pricing-flow-mobile-toggle > img { width:28px; height:28px; padding:5px; }
+  #price .pricing-flow-mobile-title { font-size:clamp(13px,3.75vw,16px); line-height:1.6; }
+  #price .pricing-flow-mobile-indicator { right:4px; }
+  .pricing-flow-title-full { display:none; }
+  .pricing-flow-title-short, .pricing-flow-title-short > span { display:block; }
+  .pricing-flow-title-short > span { white-space:nowrap; }
+  #about .about-title-reveal { margin-bottom:16px; }
+}
+@media print {
+  #price .pricing-section-panel[hidden] { display:flow-root; }
+  .pricing-section-indicator { display:none; }
+}

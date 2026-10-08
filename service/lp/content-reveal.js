@@ -76,11 +76,14 @@
   const selectors = [
     '#worry .worry-h2', '#worry p.lines', '#worry p.dot', '#works > h2',
     '#copy .zero-copy-banner > span', '#copy .zero-copy-title', '#copy .copy-h2__label',
-    '.secret-cover-a__live-title', '.secret-cover-a__live-lockup',
+    '.secret-cover-a__live-title', '.secret-cover-a__live-lockup > .secret-cover-a__suffix',
     '.secret-cover-a__phases', '.secret-cover-a__description > p',
     '#secret .secrets-renovated > .wrap > h3',
     '#secret .secrets-white > h4 .secrets-toggle-copy',
-    '#secret .secrets-closing--text > p'
+    '#secret .secrets-closing--text > p',
+    '#price > .wrap > h2', '#price .pricing-section-label',
+    '#about > .wrap > h2', '#about .about-title-reveal', '#about .merit-box > h3',
+    '.work-case__cvr', '.work-case__lift'
   ];
   const wipes = [...document.querySelectorAll(selectors.join(','))].map(target => {
     const wipe = document.createElement('span');
@@ -134,6 +137,12 @@
         } else lines.push({left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom});
       }
     }
+    // Preserve the approved about-title artwork, revealing it with the same
+    // band without retaining its previous, conflicting fade animation.
+    if (!lines.length) copy.querySelectorAll('img').forEach(image => {
+      const rect = image.getBoundingClientRect();
+      if (rect.width && rect.height) lines.push(rect);
+    });
     const bars = document.createElement('span');
     bars.className = 'zero-content-wipe__bars';
     bars.setAttribute('aria-hidden', 'true');
@@ -213,7 +222,7 @@
     if (document.hidden) [...running.keys()].forEach(finish);
   });
   document.addEventListener('focusin', event => {
-    const heading = event.target.closest('.secrets-toggle');
+    const heading = event.target.closest('.secrets-toggle, .pricing-section-toggle');
     heading?.querySelectorAll('.zero-content-wipe').forEach(finish);
   });
 })();

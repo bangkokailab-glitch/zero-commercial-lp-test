@@ -4,8 +4,8 @@
   const layers = [...document.querySelectorAll('.shared-hero-background')];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const floating = document.querySelector('.sticky-consultation');
-  const proposals = [...document.querySelectorAll('.cta-offer--gold .offer-proposal')];
-  const buttons = [...document.querySelectorAll('.cta-offer--gold .offer-gift')];
+  const proposals = [...document.querySelectorAll('.cta-offer--gold .offer-proposal, .pricing-proposal-cta')];
+  const buttons = [...document.querySelectorAll('.cta-offer--gold .offer-gift, .pricing-proposal-cta .offer-gift')];
   const visibleButtons = new Set();
   const updateMotion = () => buttons.forEach(button => {
     button.classList.toggle('is-in-view', visibleButtons.has(button) && !document.hidden && !reduced.matches);

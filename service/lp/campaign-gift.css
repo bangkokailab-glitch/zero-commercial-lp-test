@@ -17,6 +17,7 @@
   white-space:nowrap;
 }
 /* Center on the gold front face, excluding the hanging ribbon tails. */
+#secret .chapter-offer .cta-ribbon { margin:0 auto 8px; }
 .cta.cta-offer--gold .cta-ribbon > span {
   position:absolute;
   left:6.67%; top:0; width:87.63%; height:70.1%;
@@ -29,7 +30,7 @@
 .cta.cta-offer--gold .cta-ribbon > span > span { text-emphasis:none; -webkit-text-emphasis:none; }
 /* Match the gold front face exactly, not the ribbon's hanging tails. */
 .cta.cta-offer--gold .offer-proposal { width:calc(var(--campaign-frame-width) * .8763); padding:0; margin:18px 0 0 calc((100% - var(--campaign-frame-width)) / 2 + var(--campaign-frame-width) * .0667); }
-.cta.cta-offer--gold .offer-gift {
+:is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift {
   position:relative;
   display:block;
   padding:15px 84px;
@@ -45,18 +46,18 @@
   animation:proposal-float 3.8s ease-in-out infinite paused;
 }
 /* No gloss, moving light, glint, or shine on this CTA. */
-.cta.cta-offer--gold .offer-gift::before,
-.cta.cta-offer--gold .offer-gift::after { content:none; }
-.cta.cta-offer--gold .offer-gift:hover { background:#ce0017; }
-.cta.cta-offer--gold .offer-gift:focus-visible { outline:3px solid #fff; outline-offset:5px; }
+:is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift::before,
+:is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift::after { content:none; }
+:is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift:hover { background:#ce0017; }
+:is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift:focus-visible { outline:3px solid #f0b200; outline-offset:5px; }
 .offer-gift__copy { display:flex; flex-direction:column; align-items:center; gap:8px; font-size:32px; line-height:1.55; letter-spacing:.035em; transform-origin:center; animation:proposal-copy-pop 3.2s ease-in-out infinite paused; }
 .offer-gift__line { display:block; font:inherit; white-space:nowrap; }
 .offer-gift__plus { display:inline-block; margin-inline:.15em; font-size:.65em; vertical-align:.08em; }
 .offer-gift__arrows { position:absolute; right:24px; top:50%; display:block; width:56px; height:auto; margin:0; fill:none; stroke:#fff; stroke-width:3.5; stroke-linecap:square; stroke-linejoin:miter; transform:translateY(-50%); animation:proposal-arrows 2.4s ease-in-out infinite paused; }
-.cta.cta-offer--gold .offer-gift.is-in-view,
+:is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift.is-in-view,
 .offer-gift.is-in-view .offer-gift__copy,
 .offer-gift.is-in-view .offer-gift__arrows { animation-play-state:running; }
-.cta.cta-offer--gold .offer-gift:is(:hover, :focus-visible),
+:is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift:is(:hover, :focus-visible),
 .offer-gift:is(:hover, :focus-visible) .offer-gift__copy,
 .offer-gift:is(:hover, :focus-visible) .offer-gift__arrows { animation-play-state:paused; }
 @keyframes proposal-float { 0%,100% { transform:translateY(3px); } 50% { transform:translateY(-3px); } }
@@ -74,24 +75,24 @@
   .cta.cta-offer--gold .cta-ribbon { margin-bottom:8px; scroll-margin-top:72px; }
   .cta.cta-offer--gold .offer-proposal { margin-top:14px; }
   /* About 70% of the previous height; keep width and type size unchanged. */
-  .cta.cta-offer--gold .offer-gift { padding:6px 44px 6px 12px; border-width:2px; }
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { padding:6px 44px 6px 12px; border-width:2px; }
   .offer-gift__copy { font-size:19px; letter-spacing:.015em; }
   .offer-gift__arrows { right:10px; width:30px; }
   .cta.cta-offer--gold .offer-proposal__note { position:relative; left:50%; transform:translateX(-50%); width:calc(100vw - 24px); max-width:none; margin:12px 0 0; padding:5px 7px; font-size:clamp(8.5px,2.75vw,11px); line-height:1.7; text-wrap:initial; }
   .cta.cta-offer--gold .offer-proposal__note > span { white-space:nowrap; }
 }
 @media(min-width:480px) and (max-width:768px) {
-  .cta.cta-offer--gold .offer-gift { padding-block:4px; }
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { padding-block:4px; }
   .offer-gift__copy { font-size:24px; line-height:1.4; gap:6px; }
 }
 @media(max-width:374px) {
-  .cta.cta-offer--gold .offer-gift { padding-block:7px; }
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { padding-block:7px; }
   .offer-gift__copy { font-size:17px; }
 }
 @media(max-width:339px) {
-  .cta.cta-offer--gold .offer-gift { padding-block:8px; }
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { padding-block:8px; }
   .offer-gift__copy { font-size:15px; }
 }
 @media(prefers-reduced-motion:reduce) {
-  .cta.cta-offer--gold .offer-gift,.offer-gift__copy,.offer-gift__arrows { animation:none; transition:none; }
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift,.offer-gift__copy,.offer-gift__arrows { animation:none; transition:none; }
 }

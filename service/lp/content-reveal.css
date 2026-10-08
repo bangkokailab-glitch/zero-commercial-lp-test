@@ -27,14 +27,25 @@
 .dot .zero-content-wipe__bar { position: absolute; }
 .secret-cover-a .zero-content-wipe,
 .secrets-toggle-copy .zero-content-wipe { --content-wipe-color: #e60033; }
-.secret-cover-a__live-lockup .zero-content-wipe__copy {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  gap: 16px;
-}
+.secret-cover-a__live-lockup .zero-content-wipe { vertical-align:baseline; }
+#secret-cover-count { display:inline-block; min-width:1.25em; text-align:center; font-variant-numeric:tabular-nums; }
 .secrets-closing-yellow .zero-content-wipe { --content-wipe-color: #fff16a; }
 .secrets-closing-blue .zero-content-wipe { --content-wipe-color: #72c7dc; }
+#price .zero-content-wipe,
+#about :is(.about-h2,.merit-box h3) .zero-content-wipe { --content-wipe-color:#e60033; }
+/* Keep the metric row and orange badge's existing flex layout and type scale. */
+.work-case__cvr > .zero-content-wipe,
+.work-case__cvr .zero-content-wipe__copy {
+  width:100%; font:inherit; letter-spacing:inherit;
+}
+.work-case__cvr .zero-content-wipe { --content-wipe-color:#f36c06; }
+.work-case__cvr .zero-content-wipe__copy {
+  display:flex; align-items:baseline; justify-content:space-between; gap:8px;
+}
+.work-case__lift > .zero-content-wipe { width:100%; }
+.work-case__lift .zero-content-wipe__copy {
+  display:flex; align-items:center; justify-content:center; gap:10px;
+}
 
 /* Match the pricing subsection's circular number sizing, in the requested red. */
 #secret .secrets-toggle.zero-numbered-heading {
@@ -92,7 +103,8 @@
   }
 }
 @media(max-width:768px) {
-  .secret-cover-a__live-lockup .zero-content-wipe__copy { gap: 10px; }
+  .work-case__cvr .zero-content-wipe__copy { flex-wrap:wrap; justify-content:flex-start; gap:3px; }
+  .work-case__lift .zero-content-wipe__copy { flex-direction:column; gap:3px; }
   #secret.secrets-accordion-ready .zero-numbered-heading {
     gap: 9px;
     padding-left: 12px;

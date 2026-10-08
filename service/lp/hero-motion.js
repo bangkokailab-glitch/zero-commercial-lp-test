@@ -4,7 +4,7 @@
   const hero = document.querySelector('#mv');
   if (!hero) return;
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
-  const counters = [...hero.querySelectorAll('[data-count-to]')];
+  const counters = [...document.querySelectorAll('#mv [data-count-to], #secret-cover-count')];
   const played = new WeakSet();
   const pending = new Map();
   const frames = new Map();
@@ -13,6 +13,9 @@
   let started = false;
   if (!motion.matches && !document.hidden) {
     hero.classList.add('hero-motion-pending');
+    counters.filter(counter => counter.dataset.countFrom).forEach(counter => {
+      counter.textContent = counter.dataset.countFrom;
+    });
   }
 
   function finishCounter(counter) {
@@ -32,7 +35,8 @@
     if (played.has(counter)) return;
     played.add(counter);
     if (motion.matches || document.hidden) return finishCounter(counter);
-    counter.textContent = '0';
+    const from = Number(counter.dataset.countFrom || 0);
+    counter.textContent = String(from);
     pending.set(counter, setTimeout(() => {
       pending.delete(counter);
       const start = performance.now();
@@ -40,7 +44,7 @@
       function tick(now) {
         const progress = Math.min((now - start) / 1600, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
-        counter.textContent = String(Math.min(target, Math.floor(target * eased)));
+        counter.textContent = String(Math.min(target, Math.floor(from + (target - from) * eased)));
         if (progress < 1) frames.set(counter, requestAnimationFrame(tick));
         else finishCounter(counter);
       }
@@ -75,12 +79,16 @@
           if (!entry.isIntersecting) return;
           const counter = entry.target.querySelector('[data-count-to]');
           const index = counters.indexOf(counter);
-          const delay = Math.max(0, (inView ? offset+1650 : 0) - (performance.now() - startedAt)) + index * 170;
+          const delay = hero.contains(counter)
+            ? Math.max(0, (inView ? offset+1650 : 0) - (performance.now() - startedAt)) + index * 170
+            : 0;
           count(counter, delay);
           observer.unobserve(entry.target);
         });
       }, {threshold:.3});
-      counters.forEach(counter => observer.observe(counter.closest('.zero-hero-stat')));
+      counters.forEach(counter => observer.observe(counter.closest('.zero-hero-stat, .secret-cover-a__live-lockup')));
+    } else {
+      counters.forEach(finishCounter);
     }
   }
   // A slow font delivery must not leave the first view hidden or delay it forever.
