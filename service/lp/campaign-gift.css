@@ -68,6 +68,8 @@
   background:#111c; color:#fff;
   font-family:var(--zero-shingo-regular); font-size:14px; line-height:1.7; text-align:center; text-wrap:balance;
 }
+/* Preserve the explicit two-line chapter guide on desktop as well as mobile. */
+.cta.cta-offer--gold .offer-proposal__note > span { white-space:nowrap; }
 @media(max-width:1000px) and (min-width:769px) { .offer-gift__copy { font-size:30px; } }
 @media(max-width:768px) {
   html.gift-cta-overlaps-floating .sticky-consultation:not(:focus-within) { opacity:0; visibility:hidden; pointer-events:none; }
@@ -79,7 +81,6 @@
   .offer-gift__copy { font-size:19px; letter-spacing:.015em; }
   .offer-gift__arrows { right:10px; width:30px; }
   .cta.cta-offer--gold .offer-proposal__note { position:relative; left:50%; transform:translateX(-50%); width:calc(100vw - 24px); max-width:none; margin:12px 0 0; padding:5px 7px; font-size:clamp(8.5px,2.75vw,11px); line-height:1.7; text-wrap:initial; }
-  .cta.cta-offer--gold .offer-proposal__note > span { white-space:nowrap; }
 }
 @media(min-width:480px) and (max-width:768px) {
   :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { padding-block:4px; }
