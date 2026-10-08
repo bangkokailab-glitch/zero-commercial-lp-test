@@ -1,0 +1,396 @@
+/*! #######################################################################
+
+	bxslider
+	
+####################################################################### */
+
+
+/* RESET AND LAYOUT */
+
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto 45px;
+  padding: 0;
+  *zoom: 1;
+}
+
+.page-full .bx-wrapper {
+  max-width:initial!important;
+}
+
+.bx-wrapper img {
+  width: 100%;
+  display: block;
+}
+.bx-wrapper ul{
+  margin:0;
+  padding:0;
+}
+
+/* THEME */
+
+.bx-wrapper .bx-viewport {
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url(../../library/images/bx_loader.gif) center center no-repeat #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+  left: 5px;
+  opacity: 0;
+}
+
+.bx-wrapper .bx-next {
+  right: 5px;
+  opacity:0;
+}
+
+.bx-wrapper:hover .bx-prev {
+  left:3px;
+  opacity:0.5;
+}
+
+.bx-wrapper:hover .bx-next {
+  right:3px;
+  opacity:0.5;
+}
+.bx-wrapper .bx-prev:hover{
+  opacity:1;
+  left:0;
+}
+
+.bx-wrapper .bx-next:hover{
+  opacity:1;
+  right:0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  line-height:32px;
+  background:#fff;
+  color:#111;
+  display:block;
+  text-decoration:none;
+  text-align:center;
+  z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url(../../library/images/controls.png) -86px -11px no-repeat;
+  margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+  background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url(../../library/images/controls.png) -86px -44px no-repeat;
+  margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+  background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666¥9;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+
+
+/* タグ「OSUSUME」カルーセル用 */
+
+#top_carousel .ttl{
+  margin-top:0;
+}
+#top_carousel .bx-viewport{
+	box-shadow: none;
+}
+#top_carousel .bx-wrapper ul li a{
+  text-decoration:none;
+  color: #444;
+}
+#top_carousel .bx-wrapper ul li a:hover{
+  color: #888;
+}
+#top_carousel .bx-wrapper ul li .eyecatch{
+	height: 100px;
+	overflow: hidden;
+	background: #444;
+}
+#top_carousel .bx-wrapper ul li .eyecatch img{
+	width: 100%;
+}
+#top_carousel .bx-wrapper ul li .osusume-label{
+  position:absolute;
+  font-family: 'Lato', sans-serif;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 0, 0.75);
+  color:#111;
+  font-size: 0.7em;
+  text-align:center;
+  display:block;
+  padding: 0.3em 0.6em;
+  line-height:1.2;
+}
+
+#top_carousel .bx-wrapper ul li .date{
+  font-size:0.7em;
+  margin:3px 0;
+}
+#top_carousel .bx-wrapper ul li .cat-name{
+  padding: 0.05em 0.6em;
+  font-size: 0.7em;
+  margin-left: 0.4em;
+  border: 1px solid #888;
+  display: inline-block;
+}
+#top_carousel .bx-wrapper ul li .cat-name:empty{
+  display:none;
+}
+#top_carousel .bx-wrapper ul li .entry-title{
+  font-size: 0.82em;
+}
+
+
+/* タグ「PICKUP」スライド用 */
+
+#slider .bx-wrapper ul li a{
+  text-decoration:none;
+}
+#slider .bx-wrapper ul li .pickup-label{
+  position:absolute;
+  font-family: 'Lato', sans-serif;
+  top: 0.7em;
+  right: 0.7em;
+  background: rgba(255, 255, 0, 0.95);
+  color:#111;
+  font-size: 0.85em;
+  text-align:center;
+  display:block;
+  padding: 0.3em 0.6em;
+  line-height:1.2;
+  box-shadow: 2px 2px 0 rgba(51, 51, 51, 0.3);
+}
+
+#slider .bx-wrapper ul li .slidecaption-wrap{
+  color:#fff;
+  font-size:1.1em;
+  position:absolute;
+  width: 100%;
+  height: 141px;
+  bottom: 0;
+  background: url(../../library/images/slide_gradation_bg.png) repeat-x top;
+}
+#slider .bx-wrapper ul li .slidecaption{
+  font-size:1em;
+  padding:0 1.5em;
+  position:absolute;
+  bottom:1.4em;
+}
+#slider .bx-wrapper ul li .slidecaption .date{
+  font-size:0.8em;
+  margin-bottom:3px;
+}
+#slider .bx-wrapper ul li .slidecaption .cat-name{
+  padding:0.1em 0.6em;
+  font-size:0.8em;
+  margin-left:0.8em;
+  border:1px solid;
+}
+#slider .bx-wrapper ul li .slidecaption .cat-name:empty{
+  display:none;
+}
+#slider .bx-wrapper ul li .slidecaption .entry-title{
+  font-size:1.1em;
+}
+#slider .bx-wrapper ul li{
+  height:370px;
+  overflow:hidden;
+  background: #333;
+}
+#slider .bx-wrapper ul li .eyecatch{
+  width:100%;
+  height:100%;
+}
+#slider .bx-wrapper ul li .eyecatch img{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  #slider,
+  #frontslider{
+    width: 104.3%;
+    margin-left: -2.15%;
+  }
+  #slider .bx-viewport{
+    box-shadow: none;
+  }
+  #top_carousel{
+    margin:1.2em 0 0;
+  }
+  .share.short .sns li a{
+    padding:0.6em 0.2em;
+    font-size:1em;
+  }
+  
+  #slider .bx-wrapper ul li{
+    height:270px;
+  }
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .bx-wrapper{
+    margin-bottom: 30px;
+  }
+  .bx-wrapper .bx-pager{
+    padding-top:0;
+    bottom:-30px;
+  }
+  .bx-wrapper .bx-controls-direction a{
+    background: none;
+    color: #fff;
+    text-shadow: 0 0 5px #555;
+    font-size: 2em;
+  }
+  #slider .bx-wrapper ul li{
+    height: 160px;
+    font-size: 0.8em;
+  }
+  #top_carousel .bx-wrapper ul li{
+    font-size:0.8em;
+  }
+  #top_carousel .bx-wrapper ul li .osusume-label{
+    font-size:0.5em;
+  }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1099px) {
+  #slider .bx-wrapper ul li{
+    height:250px;
+  }
+}

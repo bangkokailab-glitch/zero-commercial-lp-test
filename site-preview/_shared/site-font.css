@@ -1,0 +1,44 @@
+/* Licensed Morisawa web delivery; never bundle/rehost the purchased font binaries. */
+:root {
+  --zero-site-regular: "mfw-pshingopr6n-regular", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  --zero-site-bold: "mfw-pshingopr6n-bold", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+html.zero-font-ready body { font-family: var(--zero-site-regular); font-synthesis: none; }
+html.zero-font-ready [data-zero-font="regular"] { font-family: var(--zero-site-regular) !important; font-synthesis: none; }
+html.zero-font-ready [data-zero-font="bold"] { font-family: var(--zero-site-bold) !important; font-synthesis: none; }
+/* Icon glyphs keep their own families. R and B are separate supplied families. */
+
+/* The fixed off-canvas navigation previously enlarged the mobile document. */
+@media (max-width:767px) {
+  html[data-zero-scope="main"] { overflow-x: clip; }
+  html[data-zero-scope="main"] .sp-menu {
+    right: 0; transform: translateX(100%); visibility: hidden;
+    max-width: min(280px, 88vw); box-sizing: border-box;
+    overflow-y: auto; transition: transform .3s ease, visibility .3s;
+  }
+  html[data-zero-scope="main"] #sp-btn:checked ~ .sp-menu { transform: translateX(0); visibility: visible; }
+  /* Legacy desktop CTA was 480px wide even on a 360px viewport. */
+  html[data-zero-scope="main"] .cta .anime_btn.orange_btn { width:100%; max-width:480px; box-sizing:border-box; padding:0; }
+  html[data-zero-scope="main"] .cta .anime_btn.orange_btn a,
+  html[data-zero-scope="main"] .cta .anime_btn.orange_btn a span { width:100%; max-width:100%; box-sizing:border-box; }
+  html[data-zero-scope="main"] .produce_module { width:auto; max-width:none; box-sizing:border-box; }
+  html[data-zero-scope="main"] body#works .produce_module { width:100%; margin-left:0; margin-right:0; }
+}
+/* Recruit content stays readable before scrolling and if scripting fails. */
+html[data-zero-scope="recruit"] .fadein:not(.on) { opacity: 1; transform: none; }
+html[data-zero-scope="recruit"] .bg_photo > img { visibility: visible; }
+html[data-zero-scope="recruit"].zero-recruit-backgrounds .bg_photo > img { visibility: hidden; }
+@media (prefers-reduced-motion:reduce) {
+  html[data-zero-scope="recruit"] .first_animation,
+  html[data-zero-scope="recruit"] .fadein { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+/* Slick navigation uses CSS shapes, not a missing icon-font request. */
+html[data-zero-scope="main"] .slick-prev::before,
+html[data-zero-scope="main"] .slick-next::before { font-family: sans-serif; }
+html[data-zero-scope="labo"] body.mean-container #spMenubtn { display:none; }
+
+/* Testing-only footer is outside the original layout, not a production CTA. */
+#zero-preview-note { clear: both; position: relative; z-index: 2; padding: 18px; border-top: 1px solid #ddd; background:#fff; color:#333; font: 12px/1.7 sans-serif; text-align:center; }
+#zero-preview-note a { color:#0073ad; }
+.zero-preview-form-notice { padding:12px; border:1px solid #ccc; background:white; color:#333; font-size:14px; }
+.zero-missing-original { margin:20px 0; padding:24px; border:1px dashed #bbb; color:#555; background:#fafafa; font-size:14px; line-height:1.8; }

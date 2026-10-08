@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80.48" height="135.96" viewBox="0 0 80.48 135.96">
+  <defs>
+    <linearGradient id="a" data-name="新規グラデーションスウォッチ 3" x1="0.24" y1="67.7" x2="80.24" y2="67.7" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#efd447"/>
+      <stop offset="0.24" stop-color="#f0d54c"/>
+      <stop offset="0.52" stop-color="#f2d85b"/>
+      <stop offset="0.82" stop-color="#f5dd73"/>
+      <stop offset="1" stop-color="#f7e184"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <polygon points="80.24 113.42 40.24 135.39 0.24 113.42 0.24 0 80.24 0 80.24 113.42" style="fill: url(#a)"/>
+    <path d="M35.05,74.38l1.52-2.72h5.71V97.87h-2.9V74.38Z" style="fill: #fff"/>
+    <g>
+      <path d="M19.86,35.32a3.46,3.46,0,0,0-3.25-2,3,3,0,0,0-3.13,2.92c0,1.62,1.68,2.37,2.95,2.94l1.25.55C20.13,40.75,22.21,42,22.21,45a5.81,5.81,0,0,1-5.93,5.8,5.82,5.82,0,0,1-5.87-4.86l2.05-.57a3.87,3.87,0,0,0,3.77,3.49,3.79,3.79,0,0,0,3.88-3.67c0-2.19-1.73-2.94-3.48-3.73l-1.15-.5c-2.2-1-4.1-2.12-4.1-4.82,0-2.91,2.48-4.78,5.28-4.78a5.41,5.41,0,0,1,4.87,2.91Z" style="fill: #fff"/>
+      <path d="M33.69,50.45h-2.1V33.6H27v-2H38.29v2h-4.6Z" style="fill: #fff"/>
+      <path d="M43.94,31.65h9.77v2H46v5.58h7.45v2H46v7.38h7.67v1.94H43.94Z" style="fill: #fff"/>
+      <path d="M62.5,50.45H60.4V31.65h3.1a8,8,0,0,1,4.67,1,5.17,5.17,0,0,1,2.12,4.29,5.27,5.27,0,0,1-1.8,4A6.81,6.81,0,0,1,64,42.22H62.5Zm0-10.17h1.4c2.32,0,4.29-.7,4.29-3.39,0-3.07-2.47-3.29-4.92-3.29H62.5Z" style="fill: #fff"/>
+    </g>
+    <polyline points="80.24 113.42 40.24 135.39 0.24 113.42" style="fill: none;stroke: #fff;stroke-miterlimit: 10"/>
+  </g>
+</svg>

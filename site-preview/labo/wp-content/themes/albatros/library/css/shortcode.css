@@ -1,0 +1,363 @@
+
+/* ショートコードで関連記事を取得 */
+.related_article{
+	margin: 1.8em 0;
+}
+.related_article .inbox{
+  padding-left:25%;
+}
+.related_article p.ttl{
+	margin: 0 0 0.1em;
+	font-size:1em;
+	font-weight: bold;
+}
+.related_article .ttl:before{
+	content:'関連記事';
+	font-size:0.7em;
+	font-weight:bold;
+	color:#fff;
+	background:#111;
+	width:5em;
+	display:inline-block;
+	padding:0.2em;
+	position:relative;
+	top:-2px;
+	text-align:center;
+	margin-right:0.5em;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+.related_article.labelnone .ttl:before{
+	content:none;
+}
+.related_article .date{
+	font-size:0.8em;
+}
+.related_article .thum{
+	width: 22%;
+	float:left;
+}
+.related_article .thum img{
+  width:100%;
+  margin-bottom: 0;
+}
+.related_article a{
+	color:#333;
+	background: #FFF;
+	border: 1px solid #eee;
+	box-shadow:1px 1px 0 #efefef;
+	text-decoration:none;
+	display:block;
+	padding:0.9em;
+}
+.related_article a:hover{
+	color:#666;
+	background:lightyellow;
+}
+
+/* ショートコードで補足説明を追加 */
+.supplement{
+  background:lightyellow;
+  font-size: 0.88em;
+  padding:1em;
+  margin: 1.5em 0 2em;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+  border: 1px solid rgba(237, 237, 237, 0.5);
+}
+.supplement p:last-child{
+  margin-bottom:0;
+}
+.supplement.warning{
+  background:pink;
+  color:#333;
+}
+.supplement.boader{
+	background:none;
+}
+.supplement:before{
+  font-family:"fontawesome";
+  content:'\f0e6';
+  float:left;
+  margin-right:2px;
+}
+.supplement.warning:before{
+  font-family:"fontawesome";
+  content:'\f071';
+  float:left;
+  margin-right:2px;
+}
+.supplement.boader:before{
+	content: none;
+}
+
+/* CTA */
+
+.cta-inner{
+  background: #323944;
+  color:#ddd;
+  border-top: 5px solid rgba(146, 146, 146, 0.5);
+  padding: 1em;
+}
+.cta-inner .cta_copy{
+  text-align:center;
+  color:#fff;
+}
+.cta-inner .btn-wrap a{
+	box-shadow:none;
+}
+/* ボタン */
+
+/* でかいボタン */
+.btn-wrap.big a{
+  font-size:1.1em;
+  padding:1.1em 2em;
+  min-width:400px;
+  max-width:90%;
+}
+
+
+/* 目立つボタン */
+.btn-wrap.lightning a{
+  background: #C81C1C;
+  border-color: #C81C1C;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+.btn-wrap.lightning a:hover{
+  background: #EC7373;
+}
+
+/* 背景付きボタン */
+.btn-wrap.bg{
+  background:#efefef;
+  padding:1.5em 1em;
+  margin: 2.5em 0;
+}
+.btn-wrap.bg-yellow{
+  background:lightyellow;
+  padding:1.5em 1em;
+  margin: 2.5em 0;
+}
+/* ボタンを角丸に */
+.btn-wrap.maru,
+.btn-wrap.maru a{
+  border-radius:0.4em;
+}
+
+/* ボタンアニメーション */
+.anim a {
+  animation: jiggle 3s ease-in infinite;
+}
+
+@keyframes jiggle {
+  48%, 62% {
+    transform: scale(1.0, 1.0)
+  }
+  50% {
+    transform: scale(1.1, 0.9)
+  }
+  56% {
+    transform: scale(0.9, 1.1) translate(0, -5px)
+  }
+  59% {
+    transform: scale(1.0, 1.0) translate(0, -3px)
+  }
+}
+
+/* ショートコードで吹き出しデザイン */
+.voice{
+  margin:1em 0 1.3em;
+  font-size:0.9em;
+}
+
+.voice .voicecomment{
+  border:3px solid #eee;
+  color: #444;
+  padding: 2.5%;
+  position:relative;
+  width:87%;
+  border-radius:5px;
+}
+.voice.l .voicecomment{
+  float:right;
+}
+.voice.r .voicecomment{
+  float:left;
+}
+
+.voice.l .voicecomment:before{
+    content: '';
+    position: absolute;
+    border-right: 8px solid #eee;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    top: 10px;
+    left: -11px;
+  }
+  .voice.l .voicecomment:after{
+    content: '';
+    position: absolute;
+    border-right: 10px solid #fff;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    top: 10px;
+    left: -7px;
+  }
+.voice.r .voicecomment:before{
+    content: '';
+    position: absolute;
+    border-left: 8px solid #eee;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    top: 10px;
+    right: -11px;
+  }
+  .voice.r .voicecomment:after{
+    content: '';
+    position: absolute;
+    border-left: 10px solid #fff;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    top: 10px;
+    right: -7px;
+  }
+
+.voice .voicecomment h2,
+.voice .voicecomment h3,
+.voice .voicecomment h4,
+.voice .voicecomment h5{
+  margin:10px 0!important;
+  padding:0;
+}
+.voice .voicecomment p{
+  margin-bottom:1em;
+}
+.voice .voicecomment p:last-child{
+  margin-bottom:0;
+}
+.voice .icon{
+  width:10%;
+  text-align:center;
+}
+.voice.l .icon{
+  float:left;
+}
+.voice.r .icon{
+  float:right;
+}
+.voice .icon img{
+  border-radius:50%;
+  margin:0;
+  box-shadow:  0 0 8px rgba(0, 0, 0, 0.15);
+  border: 3px solid #fff;
+}
+.voice.icon_red .icon img{
+border-color: #FF4E4E;
+}
+.voice.icon_blue .icon img{
+border-color: #50B4DE;
+}
+.voice.icon_yellow .icon img{
+border-color: #faee00;
+}
+.voice.icon_black .icon img{
+border-color: #222;
+}
+.voice .icon .name{
+  font-size: 0.65em;
+  padding:0.4em 0;
+}
+.voice.big .icon{
+  width:18%;
+}
+.voice.big .voicecomment{
+  width:79%;
+}
+
+
+/* 吹き出しデザイン変更 */
+/* FB風 */
+.voice.l.fb .voicecomment,
+.voice.l.line .voicecomment{
+  background:#eee;
+}
+  .voice.l.fb .voicecomment:after,
+  .voice.l.line .voicecomment:after{
+    content:none;
+  }
+.voice.r.fb .voicecomment{
+  background: #4C5CB0;
+  border-color: #4C5CB0;
+  color:#fff;
+}
+  .voice.r.fb .voicecomment:before{
+    border-left-color: #4C5CB0;
+  }
+  .voice.r.fb .voicecomment:after{
+    content:none;
+  }
+/* LINE風 */
+.voice.r.line .voicecomment{
+  background: #7ACC40;
+  border-color: #7ACC40;
+  color:#fff;
+}
+  .voice.r.line .voicecomment:before{
+    border-left-color: #7ACC40;
+  }
+  .voice.r.line .voicecomment:after{
+    content:none;
+  }
+
+@media only screen and (max-width: 480px) {
+/* モバイルボタン */
+  .btn-wrap a{
+    font-size:0.9em;
+    padding:0.9em 1.5em;
+  }
+
+  .btn-wrap.big a{
+    font-size:0.9em;
+    padding:0.9em 1.5em;
+    min-width:80%;
+    max-width:90%;
+  }
+
+  .btn-wrap.bg {
+    padding: 0.9em 0.8em;
+    margin: 2.5em 0;
+  }
+  .voice .icon{
+	width:15%;
+  }
+  .voice .voicecomment{
+  	width:80%;
+  	font-size:0.95em;
+  }
+
+
+/* モバイル関連記事 */
+  .related_article{
+      font-size:0.8em;
+  }
+  .related_article .inbox{
+    padding-left: 32%;
+  }
+
+  .related_article .ttl:before{
+      content:'関連';
+      width:3em;
+  }
+
+  .related_article .thum{
+      width: 30%;
+  }
+
+  .related_article a{
+      padding:0.6em;
+  }
+
+
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.62" height="46.28" viewBox="0 0 45.62 46.28">
+  <g>
+    <path d="M34.17,9.77a3.21,3.21,0,0,0,3.21-3.21V3.21a3.21,3.21,0,0,0-6.42,0V6.57A3.2,3.2,0,0,0,34.17,9.77Z" style="fill: #fff"/>
+    <path d="M45.57,5.55H39.11V7.18a4.89,4.89,0,1,1-9.77,0V5.55h-13V7.18a4.89,4.89,0,0,1-9.78,0V5.55L0,5.47V46.28H45.62ZM42.36,43H3.26V17h39.1V43Z" style="fill: #fff"/>
+    <path d="M11.36,9.77a3.21,3.21,0,0,0,3.21-3.21V3.21a3.21,3.21,0,0,0-6.42,0V6.57A3.2,3.2,0,0,0,11.36,9.77Z" style="fill: #fff"/>
+    <rect x="16.31" y="20.46" width="5.13" height="4.53" style="fill: #fff"/>
+    <rect x="24.61" y="20.46" width="5.14" height="4.53" style="fill: #fff"/>
+    <rect x="32.31" y="20.46" width="5.13" height="4.53" style="fill: #fff"/>
+    <rect x="16.31" y="27.99" width="5.13" height="4.53" style="fill: #fff"/>
+    <rect x="24.61" y="27.99" width="5.14" height="4.53" style="fill: #fff"/>
+    <rect x="32.31" y="27.99" width="5.13" height="4.53" style="fill: #fff"/>
+    <rect x="16.31" y="35.66" width="5.13" height="4.53" style="fill: #fff"/>
+    <rect x="8.15" y="27.99" width="5.13" height="4.53" style="fill: #fff"/>
+    <rect x="8.15" y="35.66" width="5.13" height="4.53" style="fill: #fff"/>
+    <rect x="24.61" y="35.66" width="5.14" height="4.53" style="fill: #fff"/>
+    <rect x="32.31" y="35.66" width="5.13" height="4.53" style="fill: #fff"/>
+  </g>
+</svg>

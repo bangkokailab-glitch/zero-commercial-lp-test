@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="821.78" height="106.94" viewBox="0 0 821.78 106.94">
+  <defs>
+    <linearGradient id="a" data-name="New Gradient Swatch 15" y1="69.45" x2="118.54" y2="69.45" gradientUnits="userSpaceOnUse">
+      <stop offset="0.05" stop-color="#ddb064"/>
+      <stop offset="0.24" stop-color="#efdf7f"/>
+      <stop offset="0.25" stop-color="#f1e185"/>
+      <stop offset="0.27" stop-color="#f6e796"/>
+      <stop offset="0.29" stop-color="#fef1b2"/>
+      <stop offset="0.29" stop-color="#fff2b6"/>
+      <stop offset="0.55" stop-color="#865c24"/>
+      <stop offset="0.6" stop-color="#93682d"/>
+      <stop offset="0.69" stop-color="#b58846"/>
+      <stop offset="0.78" stop-color="#dfb166"/>
+      <stop offset="0.91" stop-color="#814e23"/>
+      <stop offset="1" stop-color="#291b10"/>
+    </linearGradient>
+    <linearGradient id="b" x1="54.81" y1="69.45" x2="118.54" y2="69.45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#573519"/>
+      <stop offset="0.55" stop-color="#865c24"/>
+      <stop offset="0.6" stop-color="#93682d"/>
+      <stop offset="0.69" stop-color="#b58846"/>
+      <stop offset="0.78" stop-color="#dfb166"/>
+      <stop offset="0.91" stop-color="#814e23"/>
+      <stop offset="1" stop-color="#291b10"/>
+    </linearGradient>
+    <linearGradient id="c" x1="2230.65" y1="69.45" x2="2341.22" y2="69.45" gradientTransform="matrix(-1, 0, 0, 1, 3052.43, 0)" xlink:href="#a"/>
+    <linearGradient id="d" x1="2277.5" y1="69.45" x2="2341.22" y2="69.45" gradientTransform="matrix(-1, 0, 0, 1, 3052.43, 0)" xlink:href="#b"/>
+    <linearGradient id="e" x1="10.83" y1="37.49" x2="866.03" y2="37.49" xlink:href="#a"/>
+  </defs>
+  <g>
+    <polygon points="0 106.94 118.54 106.94 118.54 31.96 0 31.96 34.31 69.45 0 106.94" style="fill: url(#a)"/>
+    <polygon points="54.81 74.97 118.54 106.94 118.54 31.96 54.81 74.97" style="fill: url(#b)"/>
+    <polygon points="821.78 106.94 711.21 106.94 711.21 31.96 821.78 31.96 789.77 69.45 821.78 106.94" style="fill: url(#c)"/>
+    <polygon points="774.93 74.97 711.21 106.94 711.21 31.96 774.93 74.97" style="fill: url(#d)"/>
+    <polygon points="500.27 0 54.81 0 54.81 74.97 500.27 74.97 774.93 74.97 774.93 0 500.27 0" style="fill: url(#e)"/>
+  </g>
+</svg>
