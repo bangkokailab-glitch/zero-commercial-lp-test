@@ -110,7 +110,9 @@
     target.append(wipe);
     return wipe;
   });
-  const images = [...document.querySelectorAll('#secret .secrets-renovated img')];
+  // The market-expansion overview has its own ordered panel/arrow entrance.
+  const images = [...document.querySelectorAll('#secret .secrets-renovated img')]
+    .filter(image => !image.closest('.secret10-overview'));
   images.forEach(image => image.classList.add('zero-secret-image'));
   document.querySelectorAll('#secret .secrets-renovated > .wrap > figure > .img-tag')
     .forEach(image => image.classList.add('zero-secret-number'));
