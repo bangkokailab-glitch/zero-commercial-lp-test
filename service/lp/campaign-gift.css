@@ -1,4 +1,4 @@
-/* Campaign9: preserve approved copy and height, add a right-hand chevron. */
+/* Preserve approved copy and dimensions; animate characters in reading order. */
 .cta.cta-offer--gold { --campaign-frame-width:min(1000px, calc(100% - 24px)); isolation:isolate; overflow:clip; padding:20px 0 16px; background:#080808; color:#fff; }
 .cta.cta-offer--gold > :not(.shared-hero-background) { position:relative; z-index:1; }
 .cta.cta-offer--gold .cta-ribbon {
@@ -43,26 +43,25 @@
   text-decoration:none;
   text-align:center;
   transition:background-color .2s ease;
-  animation:proposal-float 3.8s ease-in-out infinite paused;
+  --proposal-float-distance:6px;
+  --proposal-arrow-distance:9px;
+  animation:proposal-float 1.65s ease-in-out infinite paused;
 }
 /* No gloss, moving light, glint, or shine on this CTA. */
 :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift::before,
 :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift::after { content:none; }
 :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift:hover { background:#ce0017; }
 :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift:focus-visible { outline:3px solid #f0b200; outline-offset:5px; }
-.offer-gift__copy { display:flex; flex-direction:column; align-items:center; gap:8px; font-size:32px; line-height:1.55; letter-spacing:.035em; transform-origin:center; animation:proposal-copy-pop 3.2s ease-in-out infinite paused; }
+.offer-gift__copy { display:flex; flex-direction:column; align-items:center; gap:8px; font-size:32px; line-height:1.55; letter-spacing:.035em; }
 .offer-gift__line { display:block; font:inherit; white-space:nowrap; }
+.offer-gift__character { display:inline-block; position:relative; font:inherit; letter-spacing:inherit; transform-origin:50% 50%; }
 .offer-gift__plus { display:inline-block; margin-inline:.15em; font-size:.65em; vertical-align:.08em; }
-.offer-gift__arrows { position:absolute; right:24px; top:50%; display:block; width:56px; height:auto; margin:0; fill:none; stroke:#fff; stroke-width:3.5; stroke-linecap:square; stroke-linejoin:miter; transform:translateY(-50%); animation:proposal-arrows 2.4s ease-in-out infinite paused; }
+.offer-gift__arrows { position:absolute; right:24px; top:50%; display:block; width:56px; height:auto; margin:0; fill:none; stroke:#fff; stroke-width:3.5; stroke-linecap:square; stroke-linejoin:miter; transform:translateY(-50%); animation:proposal-arrows .85s ease-in-out infinite paused; }
 :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift.is-in-view,
-.offer-gift.is-in-view .offer-gift__copy,
 .offer-gift.is-in-view .offer-gift__arrows { animation-play-state:running; }
-:is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift:is(:hover, :focus-visible),
-.offer-gift:is(:hover, :focus-visible) .offer-gift__copy,
-.offer-gift:is(:hover, :focus-visible) .offer-gift__arrows { animation-play-state:paused; }
-@keyframes proposal-float { 0%,100% { transform:translateY(3px); } 50% { transform:translateY(-3px); } }
-@keyframes proposal-arrows { 0%,55%,100% { transform:translate(0,-50%); } 75% { transform:translate(4px,-50%); } }
-@keyframes proposal-copy-pop { 0%,52%,100% { transform:scale(1); } 64% { transform:scale(1.055); } 74% { transform:scale(1.015); } 84% { transform:scale(1.035); } 94% { transform:scale(1); } }
+/* Hover/touch/focus do not interrupt the reading loop. */
+@keyframes proposal-float { 0%,100% { transform:translateY(var(--proposal-float-distance)); } 50% { transform:translateY(calc(-1 * var(--proposal-float-distance))); } }
+@keyframes proposal-arrows { 0%,100% { transform:translate(calc(-1 * var(--proposal-arrow-distance)),-50%); } 50% { transform:translate(var(--proposal-arrow-distance),-50%); } }
 .cta.cta-offer--gold .offer-proposal__note {
   width:fit-content; max-width:100%; margin:14px auto 0; padding:5px 12px;
   background:#111c; color:#fff;
@@ -77,7 +76,7 @@
   .cta.cta-offer--gold .cta-ribbon { margin-bottom:8px; scroll-margin-top:72px; }
   .cta.cta-offer--gold .offer-proposal { margin-top:14px; }
   /* About 70% of the previous height; keep width and type size unchanged. */
-  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { padding:6px 44px 6px 12px; border-width:2px; }
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift { --proposal-float-distance:4.5px; --proposal-arrow-distance:5px; padding:6px 44px 6px 12px; border-width:2px; }
   .offer-gift__copy { font-size:19px; letter-spacing:.015em; }
   .offer-gift__arrows { right:10px; width:30px; }
   .cta.cta-offer--gold .offer-proposal__note { position:relative; left:50%; transform:translateX(-50%); width:calc(100vw - 24px); max-width:none; margin:12px 0 0; padding:5px 7px; font-size:clamp(8.5px,2.75vw,11px); line-height:1.7; text-wrap:initial; }
@@ -96,4 +95,5 @@
 }
 @media(prefers-reduced-motion:reduce) {
   :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift,.offer-gift__copy,.offer-gift__arrows { animation:none; transition:none; }
+  .offer-gift__character { transform:none !important; }
 }
