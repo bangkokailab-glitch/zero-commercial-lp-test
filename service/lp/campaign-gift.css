@@ -3,8 +3,7 @@
   --zero-cta-red:#e50920;
   --zero-cta-red-hover:#ce0017;
   --zero-cta-border-width:3px;
-  --zero-cta-arrow-duration:.85s;
-  --zero-cta-arrow-distance:9px;
+  --zero-cta-arrow-duration:3.2s;
 }
 .cta.cta-offer--gold { --campaign-frame-width:min(1000px, calc(100% - 24px)); isolation:isolate; overflow:clip; padding:20px 0 16px; background:#080808; color:#fff; }
 .cta.cta-offer--gold > :not(.shared-hero-background) { position:relative; z-index:1; }
@@ -51,7 +50,7 @@
   text-align:center;
   transition:background-color .2s ease;
   --proposal-float-distance:6px;
-  --proposal-arrow-distance:var(--zero-cta-arrow-distance);
+  --proposal-arrow-distance:var(--consultation-arrow-distance, 3px);
   animation:proposal-float 1.65s ease-in-out infinite paused;
 }
 /* No gloss, moving light, glint, or shine on this CTA. */
@@ -72,8 +71,14 @@
 }
 /* Hover/touch/focus do not interrupt the whole-copy pulse. */
 @keyframes proposal-float { 0%,100% { transform:translateY(var(--proposal-float-distance)); } 50% { transform:translateY(calc(-1 * var(--proposal-float-distance))); } }
-/* Share the horizontal motion; the floating button needs no vertical centering offset. */
-@keyframes proposal-arrows { 0%,100% { transform:translate(calc(-1 * var(--proposal-arrow-distance)),var(--proposal-arrow-offset-y,-50%)); } 50% { transform:translate(var(--proposal-arrow-distance),var(--proposal-arrow-offset-y,-50%)); } }
+/* Match the floating CTA's two small accents and the copy's 3.2s cycle.
+   Keep the -50% offset so the larger arrow remains vertically centered. */
+@keyframes proposal-arrows {
+  0%,52%,94%,100% { transform:translate(0,var(--proposal-arrow-offset-y,-50%)); }
+  64% { transform:translate(var(--proposal-arrow-distance),var(--proposal-arrow-offset-y,-50%)); }
+  74% { transform:translate(calc(var(--proposal-arrow-distance) * -.3333333333),var(--proposal-arrow-offset-y,-50%)); }
+  84% { transform:translate(calc(var(--proposal-arrow-distance) * .6666666667),var(--proposal-arrow-offset-y,-50%)); }
+}
 .cta.cta-offer--gold .offer-proposal__note {
   width:fit-content; max-width:100%; margin:14px auto 0; padding:5px 12px;
   background:#111c; color:#fff;
@@ -85,7 +90,7 @@
 .cta.cta-offer--gold .offer-proposal__note a:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
 @media(max-width:1000px) and (min-width:769px) { .offer-gift__copy { font-size:30px; } }
 @media(max-width:768px) {
-  :root { --zero-cta-border-width:2px; --zero-cta-arrow-distance:5px; }
+  :root { --zero-cta-border-width:2px; }
   html.gift-cta-overlaps-floating .sticky-consultation:not(:focus-within) { opacity:0; visibility:hidden; pointer-events:none; }
   .cta.cta-offer--gold { --campaign-frame-width:calc(100% - 12px); padding:12px 0; }
   .cta.cta-offer--gold .cta-ribbon { margin-bottom:8px; scroll-margin-top:72px; }
