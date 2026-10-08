@@ -11,6 +11,28 @@
   var reduce = window.matchMedia('(prefers-reduced-motion:reduce)');
   var current = 0;
   var frame = 0;
+  var heightFrame = 0;
+  var settleTimer = 0;
+  var section = document.getElementById('works');
+  function fitCurrentHeight() {
+    heightFrame = 0;
+    if (!mobile.matches) {
+      track.style.removeProperty('--works-current-height');
+      section.style.removeProperty('--works-scrollbar-height');
+      return;
+    }
+    var height = cards[current].getBoundingClientRect().height + 'px';
+    if (track.style.getPropertyValue('--works-current-height') !== height) {
+      track.style.setProperty('--works-current-height', height);
+    }
+    var scrollbar = Math.max(0, track.offsetHeight - track.clientHeight) + 'px';
+    if (section.style.getPropertyValue('--works-scrollbar-height') !== scrollbar) {
+      section.style.setProperty('--works-scrollbar-height', scrollbar);
+    }
+  }
+  function scheduleHeight() {
+    if (!heightFrame) heightFrame = requestAnimationFrame(fitCurrentHeight);
+  }
   function pad(n) { return String(n).padStart(2, '0'); }
   function leftOf(card) {
     return card.getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
@@ -45,12 +67,17 @@
       track.removeAttribute('aria-roledescription');
       track.scrollLeft = 0;
     }
+    scheduleHeight();
   }
   previous.addEventListener('click', function () { go(current - 1); });
   next.addEventListener('click', function () { go(current + 1); });
   track.addEventListener('scroll', function () {
     if (!frame) frame = requestAnimationFrame(update);
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(scheduleHeight, 150);
   }, {passive:true});
+  track.addEventListener('scrollend', scheduleHeight);
+  track.addEventListener('load', scheduleHeight, true);
   track.addEventListener('keydown', function (event) {
     if (!mobile.matches || event.target !== track) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
@@ -60,6 +87,15 @@
   if (mobile.addEventListener) mobile.addEventListener('change', layout);
   else mobile.addListener(layout);
   // Preserve the selected case through orientation changes without moving the page vertically.
-  if (window.ResizeObserver) new ResizeObserver(layout).observe(track);
+  if (window.ResizeObserver) {
+    var lastWidth = 0;
+    new ResizeObserver(function () {
+      var width = track.clientWidth;
+      if (width !== lastWidth) { lastWidth = width; layout(); }
+    }).observe(track);
+    var cardObserver = new ResizeObserver(scheduleHeight);
+    cards.forEach(function (card) { cardObserver.observe(card); });
+  }
+  if (document.fonts) document.fonts.ready.then(scheduleHeight);
   layout();
 })();

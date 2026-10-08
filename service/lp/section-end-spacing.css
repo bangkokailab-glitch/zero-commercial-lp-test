@@ -1,0 +1,34 @@
+/* Only the requested section endings. Do not alter section starts, inner gaps,
+   the hero/campaign journey, or the campaign blocks between chapters. */
+#works,
+#secret > .secrets-renovated,
+#price,
+#about.grey-dot {
+  --section-end-gap:48px;
+  padding-bottom:var(--section-end-gap);
+}
+
+#works > #works-case-track,
+#works-case-track > .work-case:last-child,
+#secret > .secrets-renovated > .wrap > .secrets-white:last-child,
+#secret > #secret-04 > .wrap > .secrets-white:last-child,
+#price > .wrap > .pricing-faq-frame:last-child,
+#about > .wrap > .merit-box:last-child {
+  margin-bottom:0;
+}
+
+/* Chapter 04's speech-bubble tail is part of the white content. Preserve it,
+   then leave the same 48px of clear background after its tip. */
+#secret > #secret-04 { padding-bottom:calc(var(--section-end-gap) + 42px); }
+
+@media(max-width:768px) {
+  #secret > #secret-04 { padding-bottom:calc(var(--section-end-gap) + 32px); }
+  /* Match the visible slide rather than reserving the tallest slide's height.
+     Include the existing track padding/scrollbar in the common ending gap. */
+  #works { padding-bottom:calc(var(--section-end-gap) - 10px - var(--works-scrollbar-height,0px)); }
+  #works-case-track { box-sizing:content-box; height:var(--works-current-height,auto); overflow-y:hidden; }
+}
+
+@media print {
+  #works-case-track { height:auto; }
+}
