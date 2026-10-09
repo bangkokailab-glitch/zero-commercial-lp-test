@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="1140" viewBox="0 0 750 1140" role="img">
+<!-- Preserve the original drawing coordinates while trimming the removed footer. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="1223" viewBox="0 0 750 1223" role="img">
+<defs><radialGradient id="bg" cx="50%" cy="42%" r="80%"><stop offset="0%" stop-color="#FFFCF9"/><stop offset="100%" stop-color="#FBF6EF"/></radialGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#93847e" flood-opacity=".12"/></filter></defs>
+<rect width="750" height="1223" fill="url(#bg)"/>
+<text x="375" y="60" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="44" font-weight="800" letter-spacing="-.035em"><tspan fill="#E93665">必要なアクセス</tspan><tspan>と</tspan></text>
+<text x="375" y="109" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="44" font-weight="800" letter-spacing="-.035em">広告予算</text>
+<g>
+    <rect x="115" y="137" width="520" height="128" fill="#fff" stroke="#E8DAD8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="115" y="137" width="520" height="40" fill="#ED4E77"/>
+    <circle cx="306" cy="157" r="15" fill="#fff"/>
+    <text x="306" y="166" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="22" font-weight="800" letter-spacing="-.035em">1</text>
+    <text x="331" y="167" text-anchor="start" fill="#fff" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="32" font-weight="800" letter-spacing="-.035em">LP訪問</text>
+    <g transform="translate(245,219) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(279,219) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(313,219) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g>
+    <text x="470" y="241" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="55" font-weight="800" letter-spacing="-.035em">5,000人</text>
+  </g>
+<g>
+  <text x="375" y="296" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="24" font-weight="800" letter-spacing="-.035em">CVR 2％</text>
+  <path d="M375 304V333" stroke="#ED4E77" stroke-width="5" stroke-linecap="round"/>
+  <path d="M362 323L375 339L388 323Z" fill="#ED4E77"/>
+</g>
+<g>
+    <rect x="115" y="346" width="520" height="128" fill="#fff" stroke="#E8DAD8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="115" y="346" width="520" height="40" fill="#ED4E77"/>
+    <circle cx="290" cy="366" r="15" fill="#fff"/>
+    <text x="290" y="375" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="22" font-weight="800" letter-spacing="-.035em">2</text>
+    <text x="315" y="376" text-anchor="start" fill="#fff" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="32" font-weight="800" letter-spacing="-.035em">問い合わせ</text>
+    <g transform="translate(245,428) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(279,428) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(313,428) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g>
+    <text x="470" y="450" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="63" font-weight="800" letter-spacing="-.035em">100件</text>
+  </g>
+<g>
+  <text x="375" y="505" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="24" font-weight="800" letter-spacing="-.035em">来店率 50％</text>
+  <path d="M375 513V542" stroke="#ED4E77" stroke-width="5" stroke-linecap="round"/>
+  <path d="M362 532L375 548L388 532Z" fill="#ED4E77"/>
+</g>
+<g>
+    <rect x="115" y="555" width="520" height="128" fill="#fff" stroke="#E8DAD8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="115" y="555" width="520" height="40" fill="#ED4E77"/>
+    <circle cx="306" cy="575" r="15" fill="#fff"/>
+    <text x="306" y="584" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="22" font-weight="800" letter-spacing="-.035em">3</text>
+    <text x="331" y="585" text-anchor="start" fill="#fff" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="32" font-weight="800" letter-spacing="-.035em">初回来店</text>
+    <g transform="translate(245,637) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(279,637) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(313,637) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g>
+    <text x="470" y="659" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="63" font-weight="800" letter-spacing="-.035em">50人</text>
+  </g>
+<g>
+  <text x="375" y="714" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="24" font-weight="800" letter-spacing="-.035em">契約率 30％</text>
+  <path d="M375 722V751" stroke="#ED4E77" stroke-width="5" stroke-linecap="round"/>
+  <path d="M362 741L375 757L388 741Z" fill="#ED4E77"/>
+</g>
+<g>
+    <rect x="115" y="764" width="520" height="128" fill="#fff" stroke="#E8DAD8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="115" y="764" width="520" height="40" fill="#ED4E77"/>
+    <circle cx="274" cy="784" r="15" fill="#fff"/>
+    <text x="274" y="793" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="22" font-weight="800" letter-spacing="-.035em">4</text>
+    <text x="299" y="794" text-anchor="start" fill="#fff" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="32" font-weight="800" letter-spacing="-.035em">本コース契約</text>
+    <g transform="translate(245,846) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(279,846) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(313,846) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g>
+    <text x="470" y="868" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="63" font-weight="800" letter-spacing="-.035em">15件</text>
+  </g>
+<rect x="115" y="918" width="520" height="116" fill="#fff" stroke="#E8DAD8" stroke-width="1.5" filter="url(#shadow)"/>
+<rect x="115" y="918" width="520" height="40" fill="#ED4E77"/>
+<text x="375" y="948" text-anchor="middle" fill="#fff" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="32" font-weight="800" letter-spacing="-.035em">広告予算</text>
+<text x="375" y="991" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="30" font-weight="800" letter-spacing="-.035em">100件 × CPA4,000円</text>
+<text x="375" y="1026" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="36" font-weight="800" letter-spacing="-.035em">＝ 40万円</text>
+<text x="375" y="1076" text-anchor="middle" fill="#66615F" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="28" font-weight="500" letter-spacing="-.035em">問い合わせ100件をCPA4,000円で</text>
+<text x="375" y="1110" text-anchor="middle" fill="#66615F" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="28" font-weight="500" letter-spacing="-.035em">獲得する仮定です。</text>
+
+
+
+</svg>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="799" viewBox="0 0 750 799" role="img">
+<!-- Preserve the original drawing coordinates while trimming the removed footer. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="880" viewBox="0 0 750 880" role="img">
+<defs><radialGradient id="bg" cx="50%" cy="42%" r="80%"><stop offset="0%" stop-color="#FFFCF9"/><stop offset="100%" stop-color="#FBF6EF"/></radialGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#93847e" flood-opacity=".12"/></filter></defs>
+<rect width="750" height="880" fill="url(#bg)"/>
+<text x="375" y="60" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="44" font-weight="800" letter-spacing="-.035em"><tspan fill="#E93665">初回体験</tspan><tspan>から、</tspan></text>
+<text x="375" y="109" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="44" font-weight="800" letter-spacing="-.035em">コース契約・再契約へ</text>
+<g>
+    <rect x="115" y="137" width="520" height="128" fill="#fff" stroke="#E8DAD8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="115" y="137" width="520" height="40" fill="#ED4E77"/>
+    <circle cx="306" cy="157" r="15" fill="#fff"/>
+    <text x="306" y="166" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="22" font-weight="800" letter-spacing="-.035em">1</text>
+    <text x="331" y="167" text-anchor="start" fill="#fff" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="32" font-weight="800" letter-spacing="-.035em">初回体験</text>
+    <g transform="translate(245,219) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(279,219) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(313,219) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g>
+    <text x="450" y="241" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="63" font-weight="800" letter-spacing="-.035em">100人</text>
+  </g>
+<g>
+  <text x="375" y="296" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="24" font-weight="800" letter-spacing="-.035em">契約率 30％</text>
+  <path d="M375 304V333" stroke="#ED4E77" stroke-width="5" stroke-linecap="round"/>
+  <path d="M362 323L375 339L388 323Z" fill="#ED4E77"/>
+</g>
+<g>
+    <rect x="115" y="356" width="520" height="128" fill="#fff" stroke="#E8DAD8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="115" y="356" width="520" height="40" fill="#ED4E77"/>
+    <circle cx="290" cy="376" r="15" fill="#fff"/>
+    <text x="290" y="385" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="22" font-weight="800" letter-spacing="-.035em">2</text>
+    <text x="315" y="386" text-anchor="start" fill="#fff" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="32" font-weight="800" letter-spacing="-.035em">コース契約</text>
+    <g transform="translate(245,438) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(279,438) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(313,438) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g>
+    <text x="430" y="460" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="63" font-weight="800" letter-spacing="-.035em">30人</text>
+  </g>
+<g>
+  <text x="375" y="515" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="24" font-weight="800" letter-spacing="-.035em">再契約率 30％</text>
+  <path d="M375 523V552" stroke="#ED4E77" stroke-width="5" stroke-linecap="round"/>
+  <path d="M362 542L375 558L388 542Z" fill="#ED4E77"/>
+</g>
+<g>
+    <rect x="115" y="575" width="520" height="128" fill="#fff" stroke="#E8DAD8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="115" y="575" width="520" height="40" fill="#ED4E77"/>
+    <circle cx="322" cy="595" r="15" fill="#fff"/>
+    <text x="322" y="604" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="22" font-weight="800" letter-spacing="-.035em">3</text>
+    <text x="347" y="605" text-anchor="start" fill="#fff" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="32" font-weight="800" letter-spacing="-.035em">再契約</text>
+    <g transform="translate(245,657) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(279,657) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g><g transform="translate(313,657) scale(.85)" fill="#43B3F2" stroke="#76CBF7" stroke-width=".6"><circle cx="0" cy="-27" r="7.5"/><path d="M-8-17C-12-17-15-14-15-10V15Q-15 18-12 18H-11Q-9 18-9 15V-5H-7V37Q-7 43-3 43H-2Q0 43 0 39V10H1V39Q1 43 3 43H4Q8 43 8 37V-5H9V15Q9 18 11 18H12Q15 18 15 15V-10C15-14 12-17 8-17Z"/></g>
+    <text x="410" y="679" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="63" font-weight="800" letter-spacing="-.035em">9人</text>
+  </g>
+<text x="375" y="735" text-anchor="middle" fill="#66615F" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="30" font-weight="500" letter-spacing="-.035em">初回体験100人から、</text>
+<text x="375" y="769" text-anchor="middle" fill="#66615F" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="30" font-weight="500" letter-spacing="-.035em">契約30人・再契約9人の仮定です。</text>
+
+
+
+</svg>
+</svg>

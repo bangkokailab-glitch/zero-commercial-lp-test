@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ltv01-pc",
+    "source": "scripts/secret02-diagrams/ltv01-pc.svg",
+    "output": "service/lp/performance-media/secret02-ltv01-pc-clean-v1.webp",
+    "width": 950,
+    "height": 288,
+    "originalName": "秘訣02_初回体験からコース契約・再契約へ_PC版.svg",
+    "originalHeight": 335,
+    "retainedNote": "初回体験100人から、契約30人・再契約9人につながる仮定です。"
+  },
+  {
+    "id": "ltv01-sp",
+    "source": "scripts/secret02-diagrams/ltv01-sp.svg",
+    "output": "service/lp/performance-media/secret02-ltv01-sp-clean-v1.webp",
+    "width": 750,
+    "height": 799,
+    "originalName": "秘訣02_初回体験からコース契約・再契約へ_SP版.svg",
+    "originalHeight": 880,
+    "retainedNote": "契約30人・再契約9人の仮定です。"
+  },
+  {
+    "id": "kpi03-pc",
+    "source": "scripts/secret02-diagrams/kpi03-pc.svg",
+    "output": "service/lp/performance-media/secret02-kpi03-pc-clean-v1.webp",
+    "width": 2105,
+    "height": 933,
+    "originalName": "秘訣02_同じ月の売上と費用から利益を確認_PC版.svg",
+    "originalHeight": 1046,
+    "retainedNote": "同じ費用を二重に引かず、月ごとの利益を確かめます。"
+  },
+  {
+    "id": "kpi03-sp",
+    "source": "scripts/secret02-diagrams/kpi03-sp.svg",
+    "output": "service/lp/performance-media/secret02-kpi03-sp-clean-v1.webp",
+    "width": 750,
+    "height": 682,
+    "originalName": "秘訣02_同じ月の売上と費用から利益を確認_SP版.svg",
+    "originalHeight": 765,
+    "retainedNote": "月ごとの利益を確かめます。"
+  },
+  {
+    "id": "ltv03-pc",
+    "source": "scripts/secret02-diagrams/ltv03-pc.svg",
+    "output": "service/lp/performance-media/secret02-ltv03-pc-clean-v1.webp",
+    "width": 950,
+    "height": 265,
+    "originalName": "秘訣02_問い合わせ一件の見込み売上_PC版.svg",
+    "originalHeight": 314,
+    "retainedNote": "この金額は売上の見込みであり、利益ではありません。"
+  },
+  {
+    "id": "ltv03-sp",
+    "source": "scripts/secret02-diagrams/ltv03-sp.svg",
+    "output": "service/lp/performance-media/secret02-ltv03-sp-clean-v1.webp",
+    "width": 750,
+    "height": 766,
+    "originalName": "秘訣02_問い合わせ一件の見込み売上_SP版.svg",
+    "originalHeight": 852,
+    "retainedNote": "売上の見込みであり、利益ではありません。"
+  },
+  {
+    "id": "kpi02-pc",
+    "source": "scripts/secret02-diagrams/kpi02-pc.svg",
+    "output": "service/lp/performance-media/secret02-kpi02-pc-clean-v1.webp",
+    "width": 950,
+    "height": 345,
+    "originalName": "秘訣02_必要なアクセス数と広告予算_PC版.svg",
+    "originalHeight": 380,
+    "retainedNote": "問い合わせ100件をCPA4,000円で獲得する仮定です。"
+  },
+  {
+    "id": "kpi02-sp",
+    "source": "scripts/secret02-diagrams/kpi02-sp.svg",
+    "output": "service/lp/performance-media/secret02-kpi02-sp-clean-v1.webp",
+    "width": 750,
+    "height": 1140,
+    "originalName": "秘訣02_必要なアクセス数と広告予算_SP版.svg",
+    "originalHeight": 1223,
+    "retainedNote": "獲得する仮定です。"
+  },
+  {
+    "id": "kpi01-pc",
+    "source": "scripts/secret02-diagrams/kpi01-pc.svg",
+    "output": "service/lp/performance-media/secret02-kpi01-pc-clean-v1.webp",
+    "width": 950,
+    "height": 288,
+    "originalName": "秘訣02_月十五件の契約から必要件数を逆算_PC版.svg",
+    "originalHeight": 335,
+    "retainedNote": "15件の契約には、50人の来店と100件の問い合わせが必要です。"
+  },
+  {
+    "id": "kpi01-sp",
+    "source": "scripts/secret02-diagrams/kpi01-sp.svg",
+    "output": "service/lp/performance-media/secret02-kpi01-sp-clean-v1.webp",
+    "width": 750,
+    "height": 799,
+    "originalName": "秘訣02_月十五件の契約から必要件数を逆算_SP版.svg",
+    "originalHeight": 880,
+    "retainedNote": "100件の問い合わせが必要です。"
+  },
+  {
+    "id": "ltv04-pc",
+    "source": "scripts/secret02-diagrams/ltv04-pc.svg",
+    "output": "service/lp/performance-media/secret02-ltv04-pc-clean-v1.webp",
+    "width": 950,
+    "height": 373,
+    "originalName": "秘訣02_見込み売上から費用と利益への配分_PC版.svg",
+    "originalHeight": 430,
+    "retainedNote": "サービス提供の費用と広告費を払い、固定費と利益に回せる金額を確認します。"
+  },
+  {
+    "id": "ltv04-sp",
+    "source": "scripts/secret02-diagrams/ltv04-sp.svg",
+    "output": "service/lp/performance-media/secret02-ltv04-sp-clean-v1.webp",
+    "width": 750,
+    "height": 842,
+    "originalName": "秘訣02_見込み売上から費用と利益への配分_SP版.svg",
+    "originalHeight": 936,
+    "retainedNote": "費用を支払い、固定費と利益に回せる金額を確認します。"
+  }
+]

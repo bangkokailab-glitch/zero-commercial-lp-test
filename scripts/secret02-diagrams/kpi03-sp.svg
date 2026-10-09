@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="682" viewBox="0 0 750 682" role="img">
+<!-- Preserve the original drawing coordinates while trimming the removed footer. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="765" viewBox="0 0 750 765" role="img">
+<defs><radialGradient id="bg" cx="50%" cy="42%" r="80%"><stop offset="0%" stop-color="#FFFCF9"/><stop offset="100%" stop-color="#FBF6EF"/></radialGradient></defs>
+<rect width="750" height="765" fill="url(#bg)"/>
+<text x="375" y="60" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="44" font-weight="800" letter-spacing="-.035em"><tspan fill="#E93665">同じ月の売上</tspan><tspan>と</tspan></text>
+<text x="375" y="109" text-anchor="middle" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="44" font-weight="800" letter-spacing="-.035em">費用で利益を確認</text>
+<rect x="62" y="137" width="626" height="42" fill="#ED4E77"/>
+<text x="375" y="168" text-anchor="middle" fill="#fff" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="32" font-weight="800" letter-spacing="-.035em">同じ月の売上と費用</text>
+<g>
+    <rect x="62" y="179" width="626" height="76" fill="#fff" stroke="#E8DAD8" stroke-width="1"/>
+    <rect x="62" y="179" width="130" height="76" fill="#FFF4F6"/>
+    <text x="127" y="230" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="32" font-weight="800" letter-spacing="-.035em">売上</text>
+    <text x="219" y="228" text-anchor="start" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="30" font-weight="750" letter-spacing="-.035em">その月に提供したサービスの売上</text>
+  </g>
+<g>
+    <rect x="62" y="255" width="626" height="88" fill="#fff" stroke="#E8DAD8" stroke-width="1"/>
+    <rect x="62" y="255" width="130" height="88" fill="#FFF4F6"/>
+    <text x="127" y="312" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="38" font-weight="800" letter-spacing="-.035em">−</text>
+    <text x="219" y="292" text-anchor="start" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="30" font-weight="750" letter-spacing="-.035em">施術件数などに応じて</text><text x="219" y="327" text-anchor="start" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="30" font-weight="750" letter-spacing="-.035em">増える費用</text>
+  </g>
+<g>
+    <rect x="62" y="343" width="626" height="76" fill="#fff" stroke="#E8DAD8" stroke-width="1"/>
+    <rect x="62" y="343" width="130" height="76" fill="#FFF4F6"/>
+    <text x="127" y="394" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="38" font-weight="800" letter-spacing="-.035em">−</text>
+    <text x="219" y="392" text-anchor="start" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="30" font-weight="750" letter-spacing="-.035em">広告費</text>
+  </g>
+<g>
+    <rect x="62" y="419" width="626" height="76" fill="#fff" stroke="#E8DAD8" stroke-width="1"/>
+    <rect x="62" y="419" width="130" height="76" fill="#FFF4F6"/>
+    <text x="127" y="470" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="38" font-weight="800" letter-spacing="-.035em">−</text>
+    <text x="219" y="468" text-anchor="start" fill="#343434" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="30" font-weight="750" letter-spacing="-.035em">家賃・給与などの固定費</text>
+  </g>
+<g>
+    <rect x="62" y="495" width="626" height="76" fill="#FBE9ED" stroke="#E8DAD8" stroke-width="1"/>
+    <rect x="62" y="495" width="130" height="76" fill="#F6D6DF"/>
+    <text x="127" y="546" text-anchor="middle" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="38" font-weight="800" letter-spacing="-.035em">＝</text>
+    <text x="219" y="544" text-anchor="start" fill="#E93665" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="30" font-weight="750" letter-spacing="-.035em">営業利益の見込み</text>
+  </g>
+<text x="375" y="618" text-anchor="middle" fill="#66615F" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="28" font-weight="500" letter-spacing="-.035em">同じ費用を二重に引かず、</text>
+<text x="375" y="652" text-anchor="middle" fill="#66615F" font-family='"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif' font-size="28" font-weight="500" letter-spacing="-.035em">月ごとの利益を確かめます。</text>
+
+
+
+</svg>
+</svg>
