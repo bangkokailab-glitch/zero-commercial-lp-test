@@ -51,7 +51,7 @@
 .plan-facts strong{font-size:34px;margin-right:3px}
 .plan-facts dd span{font-size:20px;margin-right:4px}
 .plan-copy{font-size:16px;line-height:1.8}
-.plan-copy span{display:block;font-family:var(--bold);margin-bottom:6px;letter-spacing:-.035em}
+.plan-copy>.plan-lead{display:block;font-family:var(--bold);margin-bottom:6px;letter-spacing:-.035em}
 .lp-offer{padding:44px 24px;background:var(--ivory);scroll-margin-top:0}
 .lp-offer .section-title{font-size:31px}
 .offer-block{margin-top:24px}

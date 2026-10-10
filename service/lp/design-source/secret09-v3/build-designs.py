@@ -84,14 +84,14 @@ def benefit(kind):
         stages = [
             ('洗浄','素材に合わせて、布団を洗浄します。','白い布団を洗う洗濯機のドラムと、ガラス内の泡のイメージ'),
             ('乾燥','洗浄した布団を、乾燥させます。','乾燥機のドラムに入れられた白い布団のイメージ'),
-            ('仕上がり確認','仕上がりを確認してから、ご自宅へお届けします。','作業台で布団の縫い目と表面を手で確認する場面のイメージ'),
+            ('仕上がり確認','仕上がりを確認してから、<span class="phrase">ご自宅へお届けします。</span>','作業台で布団の縫い目と表面を手で確認する場面のイメージ'),
         ]
         shots = ''.join(f'<div class="care-shot care-shot-{i}">{guide_photo("care-guide.png",crop,alt,"care-photo")}<h3><span class="care-no">{i:02d}</span>{title}</h3><p>{body}</p></div>' for i,((title,body,alt),crop) in enumerate(zip(stages,CARE_CROPS),1))
         return f'''<section class="benefit benefit-B care-section" id="benefit" data-generation="care-guide"><div class="benefit-header"><p class="section-label">布団のお手入れ</p><h2 class="section-title"><span>洗って、乾かして。</span><span>仕上がりまで確認。</span></h2></div><div class="care-stages">{shots}<p class="image-note">お手入れのイメージ</p></div></section>'''
     if kind == 'C':
         return f'''<section class="benefit benefit-C plan-section" id="benefit" data-generation="family-plan-guide"><div class="benefit-header"><p class="section-label">家族のお手入れの予定に</p><h2 class="section-title"><span>2枚まとめて、</span><span>使う予定に合わせて。</span></h2></div>
         {guide_photo('family-plan-guide.png',FAMILY_CROP,'2枚の白い布団と生成りの集荷袋、日付のないカレンダーを組み合わせた利用計画のイメージ','plan-photo',(1122,1402))}
-        <div class="plan-content"><dl class="plan-facts"><div><dt>預ける布団</dt><dd><strong>2</strong>枚</dd></div><div><dt>返送目安</dt><dd><span>約</span><strong>2</strong>週間</dd></div></dl><p class="plan-copy"><span>家族で使う布団を、2枚いっしょに。</span>布団を使う予定に合わせてご検討ください。</p></div></section>'''
+        <div class="plan-content"><dl class="plan-facts"><div><dt>預ける布団</dt><dd><strong>2</strong>枚</dd></div><div><dt>返送目安</dt><dd><span>約</span><strong>2</strong>週間</dd></div></dl><p class="plan-copy"><span class="plan-lead">家族で使う布団を、2枚いっしょに。</span>布団を使う予定に合わせて<span class="phrase">ご検討ください。</span></p></div></section>'''
     d=DATA[kind]
     return f'''<section class="benefit benefit-{kind}" id="benefit" data-generation="benefit-{kind.lower()}">
     <div class="benefit-header"><p class="section-label">ふとん便のある暮らし</p><h2 class="section-title">{lines(d['title'])}</h2></div>
@@ -127,7 +127,7 @@ def final(kind):
     <footer class="lp-footer">ふとん便（仮称）<br>説明用の架空サービス・デザイン例</footer>'''
 
 def page(title, body, sticky=False, gallery=False):
-    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>{title}</title><link rel="stylesheet" href="{FONT}"><link rel="stylesheet" href="lp-designs.css?v=20261010-v3-polish3"><script>if(new URLSearchParams(location.search).get('export')==='2')document.documentElement.classList.add('export2x');</script></head><body class="{'gallery-body' if gallery else 'single'} {'has-sticky' if sticky else ''}">{body}{'<aside class="sticky-cta" aria-label="集荷の案内">'+cta()+'</aside>' if sticky else ''}<script src="font-audit.js?v=20261010-v3"></script>{'<script src="lp-ui.js?v=20261010-v3"></script>' if sticky else ''}</body></html>'''
+    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>{title}</title><link rel="stylesheet" href="{FONT}"><link rel="stylesheet" href="lp-designs.css?v=20261010-v3-polish4"><script>if(new URLSearchParams(location.search).get('export')==='2')document.documentElement.classList.add('export2x');</script></head><body class="{'gallery-body' if gallery else 'single'} {'has-sticky' if sticky else ''}">{body}{'<aside class="sticky-cta" aria-label="集荷の案内">'+cta()+'</aside>' if sticky else ''}<script src="font-audit.js?v=20261010-v3"></script>{'<script src="lp-ui.js?v=20261010-v3"></script>' if sticky else ''}</body></html>'''
 
 def lp(kind='A', before=False):
     if kind == 'A':
