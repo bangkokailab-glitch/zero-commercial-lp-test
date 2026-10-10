@@ -4,7 +4,9 @@ The user selected eight finished images for the existing test-site A/B-test chap
 
 - Figure 01: A = pickup, B = clean. Both copy and design now differ, so the figure's condition labels and the following copy-only paragraph are updated to avoid claiming that only the headline changes.
 - Figure 02: A = pickup → flow → care → offer; B = clean → care → flow → offer; C = family → family-detail → care → flow → offer.
-- Figure 03: the original long procedure text is retained as Before; the selected flow image is After, matching A in Figure 02.
+- Figure 03 (updated): Before now uses the existing three-step flow from Figure 02. After uses the user-approved four-step card image, clarifying the supplied bag, home pickup and return estimate. Surrounding copy describes a hypothetical clarity improvement, not an observed failure or proven uplift. Figure 02 remains the baseline.
+
+The additional `flow-four-steps.webp` uses the approved clipboard image (948 × 1659) at WebP quality 94, preserving dimensions and artwork. No generation, cropping or redesign. Its source and checksum are recorded in `flow-four-steps-manifest.json`.
 - Figure 04: selected compact metrics image. Desktop keeps the existing figure width. Mobile displays the two existing panels vertically using CSS viewports of the same image; no text or panels are discarded.
 
 Article diagrams are now responsive HTML containing the selected assets rather than newly flattened giant screenshots. Reused artwork shares one URL, with lazy loading and explicit dimensions. The sample CTA artwork is not a real order form. Other chapters, the historical design-source previews, and production are unchanged.
