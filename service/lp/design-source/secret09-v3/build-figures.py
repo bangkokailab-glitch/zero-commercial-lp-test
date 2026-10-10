@@ -33,7 +33,7 @@ def figure2():
  cards=[]
  for k,title,copy,order in [('a','便利さ','重たい布団を運ばずに。','利用の流れを先に伝える。'),('b','清潔さ','家では洗いにくい布団を洗う。','洗浄と仕上がりを先に伝える。'),('c','家族での利用','家族の布団をまとめて頼む。','一緒に利用する場面を先に伝える。')]:
   cards.append(f'<section class="axis-case"><header><h2><span>{k.upper()}案</span>{title}</h2><p>{copy}</p><small>{order}</small></header>{image("lp-"+k,"生成した"+title+"訴求の完成LP。FV、本文、料金、FAQ、CTAを含む")}</section>')
- return head(2,'訴求の違う3つのLPで、反応を確かめる。','同じサービスの、何を先に伝えるか。')+'<div class="axes-grid">'+''.join(cards)+'</div><p class="conditions"><b>基本条件は共通</b>商品・料金・申し込み条件をそろえる</p><p class="summary flow"><span>比較する</span><i>→</i><span>有望な方向性を絞る</span><i>→</i><span>さらに改善する</span></p>'+note(FICT)
+ return head(2,'<span class="phrase">訴求の違う3つのLPで、</span><span class="phrase">反応を確かめる。</span>','同じサービスの、何を先に伝えるか。')+'<div class="axes-grid">'+''.join(cards)+'</div><p class="conditions"><b>基本条件は共通</b>商品・料金・申し込み条件をそろえる</p><p class="summary flow"><span>比較する</span><i>→</i><span>有望な方向性を絞る</span><i>→</i><span>さらに改善する</span></p>'+note(FICT)
 def crop(name,kind='flow'):
  return f'<div class="lp-crop {kind}">{image(name,"同じ生成LPの利用手順部分")}</div>'
 def figure3():
@@ -47,6 +47,6 @@ overview_height=flow_height+230
 css=f':root{{--flow-start:{flow_top};--flow-height:{flow_height};--overview-start:{overview_top};--overview-height:{overview_height};--focus-start:{(flow_top-overview_top)/overview_height*100}%;--focus-height:{flow_height/overview_height*100}%}}'
 (ROOT/'crop-geometry.css').write_text(css+'\n')
 for n,func in enumerate([figure1,figure2,figure3],1):
- html=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>秘訣9 改訂図{n:02d}</title><link rel="stylesheet" href="{FONT}"><link rel="stylesheet" href="figures-v3.css?v=20261010-v3"><link rel="stylesheet" href="crop-geometry.css?v=20261010-v3"><script>if(new URLSearchParams(location.search).get('export')==='2')document.documentElement.classList.add('export2x');</script></head><body><main class="diagram figure-{n:02d}">{func()}</main><script src="font-audit.js?v=20261010-v3"></script></body></html>'''
+ html=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>秘訣9 改訂図{n:02d}</title><link rel="stylesheet" href="{FONT}"><link rel="stylesheet" href="figures-v3.css?v=20261010-v3-final1"><link rel="stylesheet" href="crop-geometry.css?v=20261010-v3"><script>if(new URLSearchParams(location.search).get('export')==='2')document.documentElement.classList.add('export2x');</script></head><body><main class="diagram figure-{n:02d}">{func()}</main><script src="font-audit.js?v=20261010-v3"></script></body></html>'''
  (ROOT/f'figure-{n:02d}.html').write_text(html)
 print('Prepared three diagrams referencing the same rendered LP files. Figure 04 is unchanged.')
