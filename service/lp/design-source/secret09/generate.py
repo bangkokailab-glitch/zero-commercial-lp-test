@@ -60,7 +60,7 @@ def figure1():
  for letter,count,cvr in [('A','30','3'),('B','50','5')]:
   cards.append(f'''<section class="ab-case"><h2 class="case-title"><span>{letter}案</span><b>メインコピーだけを変更</b></h2><div class="copy-caption">{COPIES[letter]}</div>{lp(letter)}<div class="results"><div><span>LPを見た人数</span><b>1,000<small>人</small></b></div><div><span>申し込み数</span><b>{count}<small>件</small></b></div><div class="cvr"><span>成約率</span><b>{cvr}<small>%</small></b></div></div></section>''')
  return heading(1,'A/Bテストとは？','異なる案を同じ時期に表示し、<br class="sp-only">申し込みにつながる反応を比較します。')+f'''
- <div class="traffic">{icon('person')}<strong>広告からアクセスを集める</strong></div><div class="branch"><span>ランダムに約半分ずつ</span><i></i></div>
+ <div class="traffic">{icon('person')}<strong>広告からアクセスを集める</strong></div><div class="branch"><span>A案・B案へ、ランダムに約半分ずつ</span><i></i></div>
  <div class="ab-grid">{''.join(cards)}</div>
  <div class="same-conditions"><b>そろえる条件</b><span>写真・本文・料金条件・CTA・配置</span></div>
  <div class="mobile-results"><div><b>A案</b><strong>3<small>%</small></strong><span>1,000人中30件</span></div><div><b>B案</b><strong>5<small>%</small></strong><span>1,000人中50件</span></div></div>
@@ -78,19 +78,19 @@ def step_title(n,title): return f'<h2 class="stage-title"><span>{n}</span>{title
 
 LONG='お申し込み時に、布団の枚数と集荷のご希望日をお選びください。その後、ご自宅へ専用の集荷袋をお届けします。お届けした袋に布団を入れ、集荷日に配送員へお渡しください。お預かりした布団は、素材に合わせて洗浄・乾燥を行い、仕上がりを確認したうえで、ご自宅へお届けします。'
 def figure3():
- return heading(3,'読み進めなくなる箇所を見直す。')+note('説明用の模式図・実測データではありません')+f'''
+ return heading(3,'<span class="keep">読み進めなくなる箇所を</span><span class="keep">見直す。</span>')+note('説明用の模式図・実測データではありません')+f'''
  <div class="analysis-grid"><section class="observe">{step_title('1','確認する')}<p class="stage-lead">どこで読む手が止まるか。</p>
  <div class="scroll-study"><div class="analysis-page"><div class="mini-brand">ふとん便</div><h3>重たい布団を運ばずに。<br>自宅からクリーニング。</h3><img src="assets/convenience.webp" alt="布団を集荷用に準備する写真" width="1536" height="1024"><span class="mini-cta">集荷を申し込む <i class="click-dot"></i></span><div class="dense-copy"><h3>ご利用の流れ</h3><p>{LONG}</p></div><div class="next-content"><h3>布団2枚コース</h3><b>12,800円</b><p>往復配送・洗浄・乾燥込み</p></div><span class="mini-cta">集荷を申し込む <i class="click-dot"></i></span><div class="scroll-overlay"></div></div><div class="reach-rail"><b>到達</b><span>多い</span><i></i><span>少ない</span></div></div>
  <div class="drop-callout"><b>長い説明のあたりで、<br>読み進める人が減っている。</b><span>前後の文章も確認する。</span></div><p class="click-note"><i class="click-dot"></i>ボタンのクリックも確認</p></section>
  <section class="repair">{step_title('2','見直す')}<p class="stage-lead">長い文章を<br><b>3ステップの図解に整理する。</b></p><div class="before"><span class="repair-label">変更前</span><h3>ご利用の流れ</h3><p>{LONG}</p></div><div class="repair-arrow">↓</div><div class="after"><span class="repair-label">変更後</span><h3>家から頼める、3ステップ。</h3><div class="repair-steps">'''+''.join(f'<div>{icon(ic)}<p><b>{n}. {t}</b><span>{d}</span></p></div>' for n,ic,t,d in [(1,'phone','ネットで予約','枚数・集荷日を選ぶ'),(2,'box','自宅から発送','専用の袋に詰めて渡す'),(3,'home','自宅で受け取る','洗浄・乾燥後にお届け')])+f'''</div></div><p class="hypothesis-note">「説明が長く、理解しにくいのでは？」<br>という仮説で見直します。<br>離脱した位置だけで原因は断定できません。</p></section></div>
  <section class="recheck">{step_title('3','もう一度確かめる')}<div class="recheck-items"><p>{icon('search')}<span>次のコンテンツまで<br><b>進む人は増えたか</b></span></p><p>{icon('phone')}<span>ボタンは<br><b>押されるようになったか</b></span></p></div></section>
- <p class="figure-summary">離脱が多い箇所を見つけ、修正し、反応を確かめる。</p>{note(FICT)}'''
+ <p class="figure-summary"><span class="keep">離脱が多い箇所を見つけ、</span><span class="keep">修正し、反応を確かめる。</span></p>{note(FICT)}'''
 
 def figure4():
  return heading(4,'改善後は、この2つを確認。')+f'''
  <div class="metrics-grid"><section class="metric"><span class="metric-label">申し込みにつながった割合</span><h2>成約率 <small>〈CVR〉</small></h2><p class="metric-definition">訪問した人のうち、<br>何人が申し込んだか</p><div class="metric-visual"><div class="visitors">{icon('person')}{icon('person')}{icon('person')}<b>訪問</b></div>{icon('arrow')}<div>{icon('check')}<b>申し込み完了</b></div></div><p class="metric-foot">ボタンのクリックと<br><b>申し込みの完了は分けて確認。</b></p></section>
  <section class="metric"><span class="metric-label">1件あたりにかかった広告費</span><h2>獲得単価 <small>〈CPA〉</small></h2><p class="metric-definition">1件の申し込みに、<br>広告費がいくらかかったか</p><div class="metric-visual"><div>{icon('yen')}<b>広告費</b></div><span class="divide">÷</span><div>{icon('check')}<b>申し込み件数</b></div></div><p class="metric-foot">かかった広告費を<br><b>申し込みの完了件数で割る。</b></p></section></div>
- <div class="metric-compare">変更前と変更後を比較する</div><p class="figure-summary">読まれたか。<br class="sp-only">その先の申し込みにつながったか。</p>'''
+ <div class="metric-compare">変更前と変更後を比較する</div><p class="figure-summary">読まれたか。<br class="sp-only"><span class="keep">その先の申し込みに</span><span class="keep">つながったか。</span></p>'''
 
 for n,func in enumerate([figure1,figure2,figure3,figure4],1):
  body=func()
