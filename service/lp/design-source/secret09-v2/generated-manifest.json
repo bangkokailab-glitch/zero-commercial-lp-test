@@ -1,0 +1,50 @@
+[
+  {
+    "key": "fv-convenience-pair",
+    "original": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/generated_images/exec-dffdf1f8-9617-454e-90c9-f54a8c8c91d3.png",
+    "saved": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/secret09-revision-v2/repository/service/lp/design-source/secret09-v2/assets/fv-convenience-pair.png",
+    "sha256": "9cd37abcd5ddac355f96105e4ee4e94b03487c6617add26dce31171aac1b43ff"
+  },
+  {
+    "key": "fv-clean-pair",
+    "original": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/generated_images/exec-022a8c80-7605-4498-ab03-683ba7f49bc7.png",
+    "saved": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/secret09-revision-v2/repository/service/lp/design-source/secret09-v2/assets/fv-clean-pair.png",
+    "sha256": "20ca3cc0bdf021b185cf1a547836319bb3f7010d6ec4f1542e47ac4682ef8e45"
+  },
+  {
+    "key": "fv-family-pair",
+    "original": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/generated_images/exec-9e675fa6-f2cb-4c1b-81d6-5130747844f0.png",
+    "saved": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/secret09-revision-v2/repository/service/lp/design-source/secret09-v2/assets/fv-family-pair.png",
+    "sha256": "995a4710fe81402bb349626fb248180aa09928ee409c8b06080a505ad103e50b"
+  },
+  {
+    "key": "lower-flow",
+    "original": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/generated_images/exec-d21a9db5-7a7a-467a-8a57-fe26f743a26a.png",
+    "saved": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/secret09-revision-v2/repository/service/lp/design-source/secret09-v2/assets/lower-flow.png",
+    "sha256": "47130e8cced6a2932931df603efe9394048bbfd79d2be134d256b77b7f1ec697"
+  },
+  {
+    "key": "lower-care",
+    "original": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/generated_images/exec-ab5759ba-9a06-4fd0-aaca-28a9ff3de5a3.png",
+    "saved": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/secret09-revision-v2/repository/service/lp/design-source/secret09-v2/assets/lower-care.png",
+    "sha256": "7f84357c942b7829726e4db17883a0b7d3aa079e2f165e87fae99102d8e6a453"
+  },
+  {
+    "key": "lower-family",
+    "original": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/generated_images/exec-5a5cfd58-8518-499f-aebf-6b23ad5d292b.png",
+    "saved": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/secret09-revision-v2/repository/service/lp/design-source/secret09-v2/assets/lower-family.png",
+    "sha256": "292e45dea90015f9ccf9b64ba2cc8b8f4b450a9daf8852aace528e7f5077a3f0"
+  },
+  {
+    "key": "lower-offer",
+    "original": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/generated_images/exec-60f6b54b-8eff-47cb-a9d3-8de4cf9259b3.png",
+    "saved": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/secret09-revision-v2/repository/service/lp/design-source/secret09-v2/assets/lower-offer.png",
+    "sha256": "d97dbf8351a93aa6c419bbb2bba9cc59634f482068d10da4e96c8dbcbc2607f4"
+  },
+  {
+    "key": "cta",
+    "original": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/generated_images/exec-69989932-874f-4b8e-8702-1016ce43db54.png",
+    "saved": "/Users/naokiikeda/Documents/Codex/2026-10-10/task/secret09-revision-v2/repository/service/lp/design-source/secret09-v2/assets/cta.png",
+    "sha256": "59b3ce0db7428ae3159298e342e9690d8ff0d8e636b0619ab726e278b327986d"
+  }
+]
