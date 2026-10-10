@@ -96,7 +96,7 @@ def benefit(kind):
     return f'''<section class="benefit benefit-{kind}" id="benefit" data-generation="benefit-{kind.lower()}">
     <div class="benefit-header"><p class="section-label">ふとん便のある暮らし</p><h2 class="section-title">{lines(d['title'])}</h2></div>
     {photo(f'benefit-{kind.lower()}.png',d['benefit_crop'],d['benefit_alt'])}
-    <div class="benefit-copy"><p>布団を預けるのも、受け取るのも、<span class="phrase">ご自宅で。</span>お店まで持ち運ぶ手間を省けます。</p></div></section>'''
+    <div class="benefit-copy"><p><span class="phrase">布団を預けるのも、</span><span class="phrase">受け取るのも、</span><span class="phrase">ご自宅で。</span><span class="phrase">お店まで持ち運ぶ</span><span class="phrase">手間を省けます。</span></p></div></section>'''
 
 def flow(kind='A', before=False):
     titles=['ネットで予約','自宅から発送','自宅で受け取る']
