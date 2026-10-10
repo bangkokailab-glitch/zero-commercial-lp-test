@@ -145,7 +145,7 @@ for kind in 'ABC':
 for label,alternate in [('a',False),('b',True)]:
     (ROOT/f'fv-{label}.html').write_text(page(f'ふとん便 — 主見出し比較 {label.upper()}',f'<main class="lp-canvas">{hero("A",alternate)}</main>'))
 
-gallery='''<main class="gallery"><p class="section-label">ZERO 秘訣9 サンプルLP</p><h1>ふとん便の、3つの伝え方。</h1><p>単体LPの実寸確認は完了しています。記事の比較図への反映を進めています。<br>同じ架空サービスを、便利さ・清潔さ・家族利用から伝える3案を掲載しています。</p><div class="gallery-grid">'''
+gallery='''<main class="gallery"><p class="section-label">ZERO 秘訣9 サンプルLP</p><h1>ふとん便の、3つの伝え方。</h1><p>同じ架空サービスを、便利さ・清潔さ・家族利用から伝える3案を掲載しています。<br>各LPと、秘訣9で使用している比較図をご覧いただけます。</p><div class="gallery-grid">'''
 for kind,label in [('A','便利さ'),('B','清潔さ'),('C','家族利用')]:
     gallery+=f'<article class="gallery-card"><p class="section-label">SAMPLE {kind}</p><h2>{label}</h2><p>{DATA[kind]["label"]}</p><a href="lp-{kind.lower()}.html">単体LPを見る →</a></article>'
 gallery+='''</div><div class="gallery-links"><a href="fv-a.html">図01 見出しA</a><a href="fv-b.html">図01 見出しB</a><a href="lp-a-before.html#process">図03 Before：長文版</a><a href="lp-a-after.html#process">図03 After：3ステップ版</a><a href="design-study.html">制作デザインを見る</a><a href="../../#secret-09">テストサイトの秘訣9へ</a></div>'''
@@ -163,5 +163,6 @@ study+='<section><h2>下層の仕上げデザイン</h2><p>Aは利用の行動�
 shutil.copy2(ROOT.parent/'secret09-v2/font-audit.js',ROOT/'font-audit.js')
 manifest={'version':'v3-lower-polish','fontStylesheet':FONT,'heroCrops':{k:v['hero_crop'] for k,v in DATA.items()},'benefitCrops':{k:v['benefit_crop'] for k,v in DATA.items()},'polishCrops':{'journey':JOURNEY_CROPS,'care':CARE_CROPS,'family':FAMILY_CROP},'assets':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'assets').glob('*.png'))},'fig01':'H1 text only; all other markup, geometry, photos and conditions identical','fig02':'Normal A and After use the same complete LP with an illustrated three-step procedure','fig03':'Dedicated lp-a-before versus lp-a-after: only process content changes; exact original long paragraph versus approved concise 3 steps; fixed conditions retained','publication':'test repository only; production is outside scope'}
 manifest['renders']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'renders').glob('*.jpg'))}
+manifest['figures']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT.parent.parent/'performance-media').glob('secret09-fig0[123]-*-v3.jpg'))}
 (ROOT/'source-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 print('Built 3 complete LPs, isolated procedure comparison, 2 FV comparisons, gallery and design study.')

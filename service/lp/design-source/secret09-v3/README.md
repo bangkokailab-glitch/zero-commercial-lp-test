@@ -10,6 +10,8 @@ Mobile-first editable samples for the fictional duvet cleaning service ふとん
 - `lp-a-before.html`: a dedicated comparison variant. Only the procedure content is replaced by the exact original long paragraph.
 - `fv-a.html`, `fv-b.html`: identical first-view layout, photograph, price, conditions and CTA; H1 text only differs.
 - `design-study.html`: generated standard and type-emphasis concepts, with major lower-section guides.
+- `figure-01.html`, `figure-02.html`, `figure-03.html`: editable article diagrams. Figure 04 stays at its existing approved version.
+- `renders/`: seven browser-rendered LP/FV JPEGs and measured section geometry. Normal A and After have identical JPEG hashes.
 
 ## Design decisions
 
@@ -25,7 +27,15 @@ The primary CTA goes to the explicit fictional-service note at `#order`. There i
 
 Open a standalone page on the test domain with `?export=2`, set browser viewport to 780px wide, wait for `html[data-font-audit]`, and capture a full-page screenshot through the approved browser tool. This renders the 390px mobile design at twice the resolution. Keep real-size 390px and 360px screenshots for quality review.
 
-Rebuild HTML with `python3 build-designs.py`. Source-only publication is used to verify the licensed font on its authorized domain before replacing article diagrams. Main article/CSS/JS are unchanged at that stage.
+Rebuild LP HTML with `python3 build-designs.py`. After saving the seven browser renders and `renders/layout-metadata.json`, run `python3 build-figures.py`. Crop geometry is computed from the dedicated Before LP's measured process section.
+
+For article diagrams, open `figure-01.html` through `figure-03.html` with `?export=2`. Use a 1900px viewport for PC (950px display width) or a 684px viewport for SP (342px display width). Wait for the font audit and image loading, then capture the full page. The output is JPEG, even if a browser tool's default filename suggests another extension.
+
+Figure 02 SP is 18347px tall. A single full-page capture produced repeated content and was rejected. Capture consecutive 4000px-high clips at y=0, 4000, 8000, 12000 and 16000 (the last clip is 2347px high). Use `swift stitch-screenshots.swift output.jpg tile-0.jpg ... tile-4.jpg` to join their pixels without resizing or retouching, then inspect each segment and the four joins. The individual browser clips and capture audit are kept in the task QA directory.
+
+The six delivery files are `../../performance-media/secret09-fig{01,02,03}-{pc,sp}-v3.jpg`. Their actual dimensions are written to the three article `picture` elements. Existing article copy, alternative text, figure 04, other chapters, CSS and JavaScript remain unchanged. The obsolete v2 AVIF source in figure 01 is removed so browsers select the new PC image.
+
+Generated originals, editable HTML/CSS, generation prompts and image hashes are retained in this directory. Review evidence is summarized in `REVIEW.md`; detailed real-size screenshots and audits remain with the task's `secret09-revision-v3/qa` records.
 
 ## Comparison checks
 

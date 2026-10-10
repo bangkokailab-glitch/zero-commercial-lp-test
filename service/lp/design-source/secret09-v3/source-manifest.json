@@ -115,5 +115,13 @@
     "lp-a.jpg": "cdb15c382621d609e9fa30f001fa49523a1ab6331be8f2284b8ec97f97b160e3",
     "lp-b.jpg": "b5d52bd4e28253126b33046cf19518eadb439959e35383af5e1e6590a146d92e",
     "lp-c.jpg": "1427681a0b050da0558e18921182b09984210fc823e984b1138ffe41d034bbd3"
+  },
+  "figures": {
+    "secret09-fig01-pc-v3.jpg": "880f21a1b6f1dbe3ce6339016323c8910ee19ac8eb4b559ea83ba92dbe67c06d",
+    "secret09-fig01-sp-v3.jpg": "9edbae4a1cbdd77501a26cecd09d5471498a8aae7e178e3076fe0867f8944b11",
+    "secret09-fig02-pc-v3.jpg": "5d7a49958f89202a129ee18b31961213c7409a21e83fc60056e2e578e7cfc08f",
+    "secret09-fig02-sp-v3.jpg": "3f6ff4b7a0ea490e0bfc1dfcd406f74261c536018ea97ce11faa78a95d595d8d",
+    "secret09-fig03-pc-v3.jpg": "c527dfe6a56198d5fa86815e95ee92625d7217fa68ca509c12d079ee3c15de60",
+    "secret09-fig03-sp-v3.jpg": "aaea1519e3751bdb4a238c63bdb6545c7f7f8ddd71454acbba724d612a9be37a"
   }
 }
