@@ -117,9 +117,9 @@ for kind in 'ABC':
 for label,alternate in [('a',False),('b',True)]:
     (ROOT/f'fv-{label}.html').write_text(page(f'ふとん便 — 主見出し比較 {label.upper()}',f'<main class="lp-canvas">{hero("A",alternate)}</main>'))
 
-gallery='''<main class="gallery"><p class="section-label">ZERO 秘訣9 サンプルLP</p><h1>ふとん便の、3つの伝え方。</h1><p>同じ架空サービスを、便利さ・清潔さ・家族利用から伝える完成LPです。<br>スマートフォンでそれぞれのページを開き、ファーストビューから料金・最終案内まで確認できます。</p><div class="gallery-grid">'''
+gallery='''<main class="gallery"><p class="section-label">ZERO 秘訣9 サンプルLP</p><h1>ふとん便の、3つの伝え方。</h1><p>制作中の確認用プレビューです。実寸レビューと記事の図への反映は未完了です。<br>同じ架空サービスを、便利さ・清潔さ・家族利用から伝える3案を掲載しています。</p><div class="gallery-grid">'''
 for kind,label in [('A','便利さ'),('B','清潔さ'),('C','家族利用')]:
-    gallery+=f'<article class="gallery-card"><p class="section-label">SAMPLE {kind}</p><h2>{label}</h2><p>{DATA[kind]["label"]}</p><a href="lp-{kind.lower()}.html">単体LPを見る →</a><a href="renders/lp-{kind.lower()}.jpg">LP全景の画像を見る →</a></article>'
+    gallery+=f'<article class="gallery-card"><p class="section-label">SAMPLE {kind}</p><h2>{label}</h2><p>{DATA[kind]["label"]}</p><a href="lp-{kind.lower()}.html">単体LPを見る →</a></article>'
 gallery+='''</div><div class="gallery-links"><a href="fv-a.html">図01 見出しA</a><a href="fv-b.html">図01 見出しB</a><a href="lp-a-after.html#process">図03 3ステップ版</a><a href="design-study.html">制作デザインを見る</a><a href="../../#secret-09">テストサイトの秘訣9へ</a></div><p>ふとん便は、説明用の架空サービスです。実際のお申し込みは受け付けていません。</p></main>'''
 (ROOT/'index.html').write_text(page('秘訣9 サンプルLP一覧',gallery,gallery=True))
 study='<main class="study"><h1>ふとん便 デザイン制作記録</h1><p>各訴求で通常案と文字強調案を生成し、同じ深緑・温白・自然光の写真を使う左の通常案を選定しました。最終LPは写真領域を使い、文字・価格・条件を実際の新ゴで編集可能なHTMLに組み直しています。</p>'
