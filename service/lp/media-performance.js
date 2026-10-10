@@ -77,7 +77,8 @@
 
   const initWorksObserver = () => {
     if (!window.jQuery || !('IntersectionObserver' in window)) return;
-    const galleries = Array.from(document.querySelectorAll('.works-box.slick-initialized'));
+    const galleries = Array.from(document.querySelectorAll('.works-box.slick-initialized'))
+      .filter(gallery => !gallery.dataset.performanceObserved);
     if (!galleries.length) return;
     const galleryVisibility = new WeakMap();
     const syncGallery = gallery => {
@@ -93,6 +94,7 @@
       });
     }, { threshold: 0 });
     galleries.forEach(gallery => {
+      gallery.dataset.performanceObserved = 'true';
       galleryVisibility.set(gallery, false);
       observer.observe(gallery);
     });
@@ -103,4 +105,8 @@
   };
 
   window.addEventListener('load', initWorksObserver, { once: true });
+  // DOM-ready can initialize Slick after window.load on a warm cache. Watch
+  // its init too, so offscreen galleries never depend on event ordering.
+  if (window.jQuery) window.jQuery(document).on('init', '.works-box', initWorksObserver);
+  if (document.readyState === 'complete') initWorksObserver();
 })();

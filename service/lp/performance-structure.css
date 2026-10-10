@@ -21,3 +21,4 @@ html.zero-has-deferred-backgrounds #about .about-support-message:not(.is-backgro
 html.zero-has-deferred-backgrounds #secrets-box-44-panel .lp-purpose-media--k2-continuation:not(.is-background-ready) {
   background-image: none;
 }
+.zero-optimized-picture { display: contents; }

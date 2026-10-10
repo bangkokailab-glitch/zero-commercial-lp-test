@@ -33,10 +33,9 @@
       let period = 0;
       let canLoop = false;
       let inView = false;
-      // Campaign strips keep advancing even while scrolled out of view.
-      // Only the visitor's reduced-motion setting or a hidden tab suspends them.
-      const continuous = section.matches('section.cta-offer--gold');
-      const mayMove = () => canLoop && (continuous || inView) && !motion.matches && !document.hidden;
+      // Pause unseen strips without resetting their CSS animation progress.
+      // Returning to the gallery resumes the same position and approved speed.
+      const mayMove = () => canLoop && inView && !motion.matches && !document.hidden;
 
       const reconcile = () => {
         gallery.dataset.offerGoldPlaying = mayMove() ? 'true' : 'false';
