@@ -5,10 +5,10 @@ Promise.all([document.fonts.ready, ...Array.from(document.images).map(img => img
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   let node;
   while ((node = walker.nextNode())) {
-    if (!node.parentElement || /SCRIPT|STYLE/.test(node.parentElement.tagName)) continue;
+    if (!node.parentElement || /SCRIPT|STYLE/.test(node.parentElement.tagName) || !node.parentElement.getClientRects().length) continue;
     const family = getComputedStyle(node.parentElement).fontFamily;
     for (const name of ['regular', 'bold']) {
-      if (family.includes('mfw-pshingopr6n-' + name)) glyphs[name] += node.textContent;
+      if (family.includes('mfw-pshingopr6n-' + name)) glyphs[name] += node.textContent.replace(/\s/g, '');
     }
   }
   const state = name => ({
@@ -20,6 +20,8 @@ Promise.all([document.fonts.ready, ...Array.from(document.images).map(img => img
     regular: state('regular'), bold: state('bold'),
     regularCheck: document.fonts.check('16px "mfw-pshingopr6n-regular"', [...new Set(glyphs.regular)].join('')),
     boldCheck: document.fonts.check('24px "mfw-pshingopr6n-bold"', [...new Set(glyphs.bold)].join('')),
+    unresolvedBoldCharacters: [...new Set(glyphs.bold)].filter(char => !document.fonts.check('24px "mfw-pshingopr6n-bold"', char)),
+    unresolvedRegularCharacters: [...new Set(glyphs.regular)].filter(char => !document.fonts.check('16px "mfw-pshingopr6n-regular"', char)),
     headingFamily: getComputedStyle(document.querySelector('h1')).fontFamily,
     bodyFamily: getComputedStyle(document.body).fontFamily,
     failedImages: Array.from(document.images).filter(img => !img.complete || !img.naturalWidth).map(img => img.getAttribute('src')),
