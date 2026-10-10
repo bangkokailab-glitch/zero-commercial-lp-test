@@ -1,0 +1,93 @@
+{
+  "renders": {
+    "fv-a.jpg": {
+      "sha256": "3993f0bdb3d48d56eed2c270f59368c08bff33159643f2928ef0f3000407044c",
+      "bytes": 119441
+    },
+    "fv-b.jpg": {
+      "sha256": "8c0083da3e8708712ada30e13166430750181f80fbb5f695e0b29376afedc181",
+      "bytes": 119735
+    },
+    "lp-c.jpg": {
+      "sha256": "b30e6a8ed84cf8d1afd3ef0b17fe694a7d987da515a6ca38c7e0a2f49eedb98a",
+      "bytes": 593732
+    },
+    "lp-b.jpg": {
+      "sha256": "6c0bba5056401d004acd29539cf9270921fa86b325eb108662d371a85eb9a8c8",
+      "bytes": 570387
+    },
+    "lp-a.jpg": {
+      "sha256": "dbee1f4474d1a74e848465e3b093176ff1fe5d72c9dca7fc3a2d19e705d5bd82",
+      "bytes": 571417
+    },
+    "lp-a-after.jpg": {
+      "sha256": "5196b6b698510b97b01ddaf3c5119fbb2b958a0c67e2ce8fa2e4f1cfc4a05075",
+      "bytes": 546520
+    }
+  },
+  "figures": {
+    "01": {
+      "pc": {
+        "file": "secret09-fig01-pc-v2.jpg",
+        "width": 1900,
+        "height": 3209,
+        "bytes": 487980,
+        "sha256": "7c2bd8b7f6067435183d3af6ccc46b525b1527aef9daba87bf2431bec0bb32dd"
+      },
+      "sp": {
+        "file": "secret09-fig01-sp-v2.jpg",
+        "width": 684,
+        "height": 4740,
+        "bytes": 358656,
+        "sha256": "97c720dfa05bc59b8a7f89b7b193e280a7eaaf8646dbc25a1ac189d88e42d71b"
+      }
+    },
+    "02": {
+      "pc": {
+        "file": "secret09-fig02-pc-v2.jpg",
+        "width": 1900,
+        "height": 4486,
+        "bytes": 1175446,
+        "sha256": "3671c85797240466f5d4e4f8e44052c9cb45e437d97cc199c7d7c3665289e670"
+      },
+      "sp": {
+        "file": "secret09-fig02-sp-v2.jpg",
+        "width": 684,
+        "height": 13426,
+        "bytes": 1341610,
+        "sha256": "fbbc3c567bb5d162e5d24944fa15a633ba3b76466ac696d97b361b643420417c"
+      }
+    },
+    "03": {
+      "pc": {
+        "file": "secret09-fig03-pc-v2.jpg",
+        "width": 1900,
+        "height": 4021,
+        "bytes": 651034,
+        "sha256": "75f83cfb602200258712eb342195a8d57e5cd061972880567c25819107e241fc"
+      },
+      "sp": {
+        "file": "secret09-fig03-sp-v2.jpg",
+        "width": 684,
+        "height": 5950,
+        "bytes": 488188,
+        "sha256": "146c881f69592cd13308b07ef8542eef7ccc5d5ebf5b77c9520c15eba84b9221"
+      }
+    }
+  },
+  "references": {
+    "figure-01": [
+      "renders/fv-a.jpg",
+      "renders/fv-b.jpg"
+    ],
+    "figure-02": [
+      "renders/lp-a.jpg",
+      "renders/lp-b.jpg",
+      "renders/lp-c.jpg"
+    ],
+    "figure-03": [
+      "renders/lp-a.jpg",
+      "renders/lp-a-after.jpg"
+    ]
+  }
+}
