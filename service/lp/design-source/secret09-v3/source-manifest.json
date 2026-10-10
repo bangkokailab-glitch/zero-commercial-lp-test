@@ -1,5 +1,5 @@
 {
-  "version": "v3",
+  "version": "v3-lower-polish",
   "fontStylesheet": "https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css",
   "heroCrops": {
     "A": [
@@ -41,18 +41,70 @@
       723
     ]
   },
+  "polishCrops": {
+    "journey": [
+      [
+        62,
+        275,
+        489,
+        370
+      ],
+      [
+        62,
+        730,
+        489,
+        361
+      ],
+      [
+        62,
+        1169,
+        489,
+        328
+      ]
+    ],
+    "care": [
+      [
+        38,
+        265,
+        598,
+        372
+      ],
+      [
+        386,
+        659,
+        600,
+        371
+      ],
+      [
+        38,
+        1052,
+        948,
+        284
+      ]
+    ],
+    "family": [
+      0,
+      320,
+      1122,
+      623
+    ]
+  },
   "assets": {
     "benefit-a.png": "df7ce98ddb58d6c587b545e25ce029b1fb07beadf170d46719b22e1231680138",
     "benefit-b.png": "b1d302ecbc327f9165a378084f12c2f767107dadf7c19b55e99a3640ad133c54",
     "benefit-c.png": "641e595aac4d7159c8c37f85c41bcee90365f6f3ff06da511980c7e08a5542e3",
+    "care-guide.png": "2ba119e0250368af01b66279f346020b37eeae28bd691daac6e951361b290eae",
     "cta.png": "84da4ffe5eb60004fb278fb33d82b873a6ff59d644c02d4fb9b8bba470529f4e",
+    "family-plan-guide.png": "13e25a9629c64eec32436638cbb0ea90e3810cafae0f90a09035377f28eca283",
     "flow-guide.png": "e075260f42c0f42f420fb173052b2a382b406968c207b4d5277077761266692c",
     "fv-a-pair.png": "8355086178bf32f73b0ce7e5fba9c781b6307a4bbd092ee9ca4beb32d96d48c0",
     "fv-b-pair.png": "2a2411f8ed34afded5683e5b39c8815c6090aa7713b00c02b50086656895c9bd",
     "fv-c-pair.png": "1dd7303a9c58e1c455295738a40b7d852e56f6be6117981c5ae9ee5db75efb0b",
+    "journey-guide.png": "07540c36c6a744ccc5e4fff8ee3f18bd8d11fa7535340e815f52235c2cd442b4",
     "price-guide.png": "8795bbbcbf3090a70a89aab691c5a436b55f7b9490c439c55e7c1cb4eb149640"
   },
   "fig01": "H1 text only; all other markup, geometry, photos and conditions identical",
-  "fig03": "Only process block changes; original long paragraph versus approved concise 3 steps; meanings and fixed conditions retained",
+  "fig02": "Normal A and After use the same complete LP with an illustrated three-step procedure",
+  "fig03": "Dedicated lp-a-before versus lp-a-after: only process content changes; exact original long paragraph versus approved concise 3 steps; fixed conditions retained",
   "publication": "test repository only; production is outside scope"
 }

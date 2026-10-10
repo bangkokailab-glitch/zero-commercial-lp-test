@@ -6,13 +6,16 @@ Mobile-first editable samples for the fictional duvet cleaning service ふとん
 
 - `index.html`: standalone sample gallery.
 - `lp-a.html`, `lp-b.html`, `lp-c.html`: complete convenience, cleanliness and family LPs.
-- `lp-a-after.html`: the same A LP with only the procedure section shortened into three steps.
+- `lp-a-after.html`: the same completed A LP, with an illustrated three-step procedure.
+- `lp-a-before.html`: a dedicated comparison variant. Only the procedure content is replaced by the exact original long paragraph.
 - `fv-a.html`, `fv-b.html`: identical first-view layout, photograph, price, conditions and CTA; H1 text only differs.
 - `design-study.html`: generated standard and type-emphasis concepts, with major lower-section guides.
 
 ## Design decisions
 
-The left standard concept was selected for each of A/B/C. One pine-green and warm-ivory brand, natural rectangular photos, a shared typographic wordmark and matte buttons replace the old waves, stitches, photo masks, glossy CTA and improbable wash collage. A/B hero copy stays concise; their promise and service category are already stated in H1 and the header. C retains the useful two-line supporting copy. Full benefit explanations follow the photo.
+The left standard concept was selected for each of A/B/C. One pine-green and warm-ivory brand, natural rectangular photos, a shared typographic wordmark and matte buttons are used throughout. The approved first views stay fixed. The lower sections use three distinct compositions: A illustrates the customer's journey; B shows washing, drying and a final check; C combines two duvets with a date-free calendar and the approximate return time. The collection bag stays ivory across the photos and guides.
+
+Normal A and After are identical outside the document title. Before differs only inside the procedure section, with a shared minimum height. B and C use a compact three-step journey. Preparation FAQs use native, working details/summary controls; the first question is open. Pricing and all service conditions remain together in the price section, in addition to the hero summary.
 
 Generated originals are kept in `assets/`; Japanese text, prices and conditions are editable HTML, typeset with the licensed Morisawa Shingo stylesheet. Only photo regions from generated design compositions are exposed with CSS crops. No image font or font binary is extracted. Prompts and asset hashes are recorded separately.
 
