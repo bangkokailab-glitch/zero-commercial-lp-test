@@ -1,0 +1,58 @@
+{
+  "version": "v3",
+  "fontStylesheet": "https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css",
+  "heroCrops": {
+    "A": [
+      42,
+      471,
+      571,
+      445
+    ],
+    "B": [
+      42,
+      459,
+      571,
+      456
+    ],
+    "C": [
+      42,
+      405,
+      571,
+      480
+    ]
+  },
+  "benefitCrops": {
+    "A": [
+      29,
+      350,
+      965,
+      737
+    ],
+    "B": [
+      1,
+      417,
+      1022,
+      638
+    ],
+    "C": [
+      36,
+      349,
+      954,
+      723
+    ]
+  },
+  "assets": {
+    "benefit-a.png": "df7ce98ddb58d6c587b545e25ce029b1fb07beadf170d46719b22e1231680138",
+    "benefit-b.png": "b1d302ecbc327f9165a378084f12c2f767107dadf7c19b55e99a3640ad133c54",
+    "benefit-c.png": "641e595aac4d7159c8c37f85c41bcee90365f6f3ff06da511980c7e08a5542e3",
+    "cta.png": "84da4ffe5eb60004fb278fb33d82b873a6ff59d644c02d4fb9b8bba470529f4e",
+    "flow-guide.png": "e075260f42c0f42f420fb173052b2a382b406968c207b4d5277077761266692c",
+    "fv-a-pair.png": "8355086178bf32f73b0ce7e5fba9c781b6307a4bbd092ee9ca4beb32d96d48c0",
+    "fv-b-pair.png": "2a2411f8ed34afded5683e5b39c8815c6090aa7713b00c02b50086656895c9bd",
+    "fv-c-pair.png": "1dd7303a9c58e1c455295738a40b7d852e56f6be6117981c5ae9ee5db75efb0b",
+    "price-guide.png": "8795bbbcbf3090a70a89aab691c5a436b55f7b9490c439c55e7c1cb4eb149640"
+  },
+  "fig01": "H1 text only; all other markup, geometry, photos and conditions identical",
+  "fig03": "Only process block changes; original long paragraph versus approved concise 3 steps; meanings and fixed conditions retained",
+  "publication": "test repository only; production is outside scope"
+}
