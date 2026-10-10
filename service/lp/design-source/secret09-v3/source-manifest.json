@@ -106,5 +106,14 @@
   "fig01": "H1 text only; all other markup, geometry, photos and conditions identical",
   "fig02": "Normal A and After use the same complete LP with an illustrated three-step procedure",
   "fig03": "Dedicated lp-a-before versus lp-a-after: only process content changes; exact original long paragraph versus approved concise 3 steps; fixed conditions retained",
-  "publication": "test repository only; production is outside scope"
+  "publication": "test repository only; production is outside scope",
+  "renders": {
+    "fv-a.jpg": "54f01c9e8a8e349c755038c8ea4e52b70c40c19f504f4918e5ed7d1e78be2ee9",
+    "fv-b.jpg": "b2283d90a4c26707a3af2e0fc2b4bc691f297cfad2280176bb68858430757d90",
+    "lp-a-after.jpg": "cdb15c382621d609e9fa30f001fa49523a1ab6331be8f2284b8ec97f97b160e3",
+    "lp-a-before.jpg": "4d5d8c0828ebbd0faebb2f4eb876e65429c5028aadfa447c168edb06f50b1c01",
+    "lp-a.jpg": "cdb15c382621d609e9fa30f001fa49523a1ab6331be8f2284b8ec97f97b160e3",
+    "lp-b.jpg": "b5d52bd4e28253126b33046cf19518eadb439959e35383af5e1e6590a146d92e",
+    "lp-c.jpg": "1427681a0b050da0558e18921182b09984210fc823e984b1138ffe41d034bbd3"
+  }
 }

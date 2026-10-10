@@ -145,10 +145,15 @@ for kind in 'ABC':
 for label,alternate in [('a',False),('b',True)]:
     (ROOT/f'fv-{label}.html').write_text(page(f'ふとん便 — 主見出し比較 {label.upper()}',f'<main class="lp-canvas">{hero("A",alternate)}</main>'))
 
-gallery='''<main class="gallery"><p class="section-label">ZERO 秘訣9 サンプルLP</p><h1>ふとん便の、3つの伝え方。</h1><p>制作中の確認用プレビューです。実寸レビューと記事の図への反映は未完了です。<br>同じ架空サービスを、便利さ・清潔さ・家族利用から伝える3案を掲載しています。</p><div class="gallery-grid">'''
+gallery='''<main class="gallery"><p class="section-label">ZERO 秘訣9 サンプルLP</p><h1>ふとん便の、3つの伝え方。</h1><p>単体LPの実寸確認は完了しています。記事の比較図への反映を進めています。<br>同じ架空サービスを、便利さ・清潔さ・家族利用から伝える3案を掲載しています。</p><div class="gallery-grid">'''
 for kind,label in [('A','便利さ'),('B','清潔さ'),('C','家族利用')]:
     gallery+=f'<article class="gallery-card"><p class="section-label">SAMPLE {kind}</p><h2>{label}</h2><p>{DATA[kind]["label"]}</p><a href="lp-{kind.lower()}.html">単体LPを見る →</a></article>'
-gallery+='''</div><div class="gallery-links"><a href="fv-a.html">図01 見出しA</a><a href="fv-b.html">図01 見出しB</a><a href="lp-a-before.html#process">図03 Before：長文版</a><a href="lp-a-after.html#process">図03 After：3ステップ版</a><a href="design-study.html">制作デザインを見る</a><a href="../../#secret-09">テストサイトの秘訣9へ</a></div><p>ふとん便は、説明用の架空サービスです。実際のお申し込みは受け付けていません。</p></main>'''
+gallery+='''</div><div class="gallery-links"><a href="fv-a.html">図01 見出しA</a><a href="fv-b.html">図01 見出しB</a><a href="lp-a-before.html#process">図03 Before：長文版</a><a href="lp-a-after.html#process">図03 After：3ステップ版</a><a href="design-study.html">制作デザインを見る</a><a href="../../#secret-09">テストサイトの秘訣9へ</a></div>'''
+if all((ROOT/f'figure-{n:02d}.html').exists() for n in range(1,4)):
+    gallery+='<div class="gallery-links">'+''.join(f'<a href="figure-{n:02d}.html">比較図{n:02d}を見る</a>' for n in range(1,4))+'</div>'
+if all((ROOT/f'renders/lp-{k}.jpg').exists() for k in 'abc'):
+    gallery+='<div class="gallery-links">'+''.join(f'<a href="renders/lp-{k}.jpg">{k.upper()}案の全体画像</a>' for k in 'abc')+'</div>'
+gallery+='<p>ふとん便は、説明用の架空サービスです。実際のお申し込みは受け付けていません。</p></main>'
 (ROOT/'index.html').write_text(page('秘訣9 サンプルLP一覧',gallery,gallery=True))
 study='<main class="study"><h1>ふとん便 デザイン制作記録</h1><p>各訴求で通常案と文字強調案を生成し、同じ深緑・温白・自然光の写真を使う左の通常案を選定しました。最終LPは写真領域を使い、文字・価格・条件を実際の新ゴで編集可能なHTMLに組み直しています。</p>'
 for kind,label in [('A','便利さ'),('B','清潔さ'),('C','家族利用')]:
@@ -157,5 +162,6 @@ study+='<section><h2>下層の仕上げデザイン</h2><p>Aは利用の行動�
 (ROOT/'design-study.html').write_text(page('ふとん便 デザイン制作記録',study,gallery=True))
 shutil.copy2(ROOT.parent/'secret09-v2/font-audit.js',ROOT/'font-audit.js')
 manifest={'version':'v3-lower-polish','fontStylesheet':FONT,'heroCrops':{k:v['hero_crop'] for k,v in DATA.items()},'benefitCrops':{k:v['benefit_crop'] for k,v in DATA.items()},'polishCrops':{'journey':JOURNEY_CROPS,'care':CARE_CROPS,'family':FAMILY_CROP},'assets':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'assets').glob('*.png'))},'fig01':'H1 text only; all other markup, geometry, photos and conditions identical','fig02':'Normal A and After use the same complete LP with an illustrated three-step procedure','fig03':'Dedicated lp-a-before versus lp-a-after: only process content changes; exact original long paragraph versus approved concise 3 steps; fixed conditions retained','publication':'test repository only; production is outside scope'}
+manifest['renders']={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'renders').glob('*.jpg'))}
 (ROOT/'source-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 print('Built 3 complete LPs, isolated procedure comparison, 2 FV comparisons, gallery and design study.')
