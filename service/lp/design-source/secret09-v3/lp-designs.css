@@ -11,6 +11,7 @@
 .comparison-flow{min-height:556px}
 .lp-flow .section-title{margin-bottom:28px}
 .flow-long{font-size:16px;line-height:1.85}
+.phrase{display:inline-block;white-space:nowrap}
 .flow-steps{list-style:none;padding:0;display:grid;gap:24px}
 .flow-steps li{position:relative;display:grid;grid-template-columns:116px minmax(0,1fr);gap:18px;align-items:center;min-height:100px}
 .journey-photo{align-self:center}

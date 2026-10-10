@@ -96,7 +96,7 @@ def benefit(kind):
     return f'''<section class="benefit benefit-{kind}" id="benefit" data-generation="benefit-{kind.lower()}">
     <div class="benefit-header"><p class="section-label">ふとん便のある暮らし</p><h2 class="section-title">{lines(d['title'])}</h2></div>
     {photo(f'benefit-{kind.lower()}.png',d['benefit_crop'],d['benefit_alt'])}
-    <div class="benefit-copy"><p>布団を預けるのも、受け取るのも、ご自宅で。お店まで持ち運ぶ手間を省けます。</p></div></section>'''
+    <div class="benefit-copy"><p>布団を預けるのも、受け取るのも、<span class="phrase">ご自宅で。</span>お店まで持ち運ぶ手間を省けます。</p></div></section>'''
 
 def flow(kind='A', before=False):
     titles=['ネットで予約','自宅から発送','自宅で受け取る']
@@ -107,7 +107,7 @@ def flow(kind='A', before=False):
         content=f'<p class="flow-long">{LONG}</p>'
     else:
         headings = ['ネットで<br>予約','自宅から<br>発送','自宅で<br>受け取る'] if compact else titles
-        bodies = ['枚数と集荷日<br>を選ぶ。','専用の袋に<br>詰めて渡す。','洗浄・乾燥<br>してお届け。'] if compact else short
+        bodies = ['枚数と集荷日<br>を選ぶ。','専用の袋に<br>詰めて渡す。','洗浄・乾燥<br>してお届け。'] if compact else ['<span class="phrase">布団の枚数と</span><span class="phrase">集荷日を選ぶ。</span>',short[1],short[2]]
         content = '<ol class="flow-steps">'+''.join(f'<li>{guide_photo("journey-guide.png",crop,alt,"journey-photo")}<div class="step-copy"><h3><span class="step-no">{i:02d}</span>{h}</h3><p>{b}</p></div></li>' for i,(h,b,crop,alt) in enumerate(zip(headings,bodies,JOURNEY_CROPS,alts),1))+'</ol>'
     title = 'ご自宅から、3ステップ。' if compact else 'ご利用の流れ'
     return f'<section class="lp-flow {"compact-flow" if compact else "comparison-flow"}" id="process" data-generation="journey-guide"><p class="section-label">ご利用方法</p><h2 class="section-title">{title}</h2>{content}</section>'
@@ -123,11 +123,11 @@ def faq(kind):
 
 def final(kind):
     return f'''<section class="final-order" id="order"><h2 class="section-title">{lines(DATA[kind]['final'])}</h2>
-    <p class="demo-note">ふとん便は、説明用の架空サービスです。<br>このページではお申し込みを受け付けていません。</p><a class="return-link" href="#price"><span>料金と内容をもう一度見る</span><span class="arrow" aria-hidden="true">→</span></a></section>
+    <p class="demo-note">ふとん便は、説明用の架空サービスです。<br><span class="phrase">このページでは</span><span class="phrase">お申し込みを</span><span class="phrase">受け付けていません。</span></p><a class="return-link" href="#price"><span>料金と内容をもう一度見る</span><span class="arrow" aria-hidden="true">→</span></a></section>
     <footer class="lp-footer">ふとん便（仮称）<br>説明用の架空サービス・デザイン例</footer>'''
 
 def page(title, body, sticky=False, gallery=False):
-    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>{title}</title><link rel="stylesheet" href="{FONT}"><link rel="stylesheet" href="lp-designs.css?v=20261010-v3-polish2"><script>if(new URLSearchParams(location.search).get('export')==='2')document.documentElement.classList.add('export2x');</script></head><body class="{'gallery-body' if gallery else 'single'} {'has-sticky' if sticky else ''}">{body}{'<aside class="sticky-cta" aria-label="集荷の案内">'+cta()+'</aside>' if sticky else ''}<script src="font-audit.js?v=20261010-v3"></script>{'<script src="lp-ui.js?v=20261010-v3"></script>' if sticky else ''}</body></html>'''
+    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>{title}</title><link rel="stylesheet" href="{FONT}"><link rel="stylesheet" href="lp-designs.css?v=20261010-v3-polish3"><script>if(new URLSearchParams(location.search).get('export')==='2')document.documentElement.classList.add('export2x');</script></head><body class="{'gallery-body' if gallery else 'single'} {'has-sticky' if sticky else ''}">{body}{'<aside class="sticky-cta" aria-label="集荷の案内">'+cta()+'</aside>' if sticky else ''}<script src="font-audit.js?v=20261010-v3"></script>{'<script src="lp-ui.js?v=20261010-v3"></script>' if sticky else ''}</body></html>'''
 
 def lp(kind='A', before=False):
     if kind == 'A':
