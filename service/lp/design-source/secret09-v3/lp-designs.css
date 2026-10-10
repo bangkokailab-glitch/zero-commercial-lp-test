@@ -22,8 +22,8 @@
 .compact-flow{padding:38px 24px 40px}
 .compact-flow .section-title{font-size:25px;margin-bottom:24px;letter-spacing:-.05em}
 .compact-flow .flow-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-.compact-flow .flow-steps li{display:block;min-height:0}
-.compact-flow .journey-photo{width:100%;aspect-ratio:1.32;margin-bottom:12px}
+.compact-flow .flow-steps li{display:grid;grid-template-columns:1fr;grid-template-rows:80px auto;gap:12px;min-height:0;align-items:start}
+.compact-flow .journey-photo{width:100%;align-self:start}
 .compact-flow .flow-steps h3{font-size:16px;line-height:1.55;letter-spacing:-.02em;margin-bottom:7px}
 .compact-flow .flow-steps p{font-size:15px;line-height:1.7;letter-spacing:-.025em}
 .compact-flow .step-no{font-size:12px;margin-bottom:4px}

@@ -127,7 +127,7 @@ def final(kind):
     <footer class="lp-footer">ふとん便（仮称）<br>説明用の架空サービス・デザイン例</footer>'''
 
 def page(title, body, sticky=False, gallery=False):
-    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>{title}</title><link rel="stylesheet" href="{FONT}"><link rel="stylesheet" href="lp-designs.css?v=20261010-v3-polish1"><script>if(new URLSearchParams(location.search).get('export')==='2')document.documentElement.classList.add('export2x');</script></head><body class="{'gallery-body' if gallery else 'single'} {'has-sticky' if sticky else ''}">{body}{'<aside class="sticky-cta" aria-label="集荷の案内">'+cta()+'</aside>' if sticky else ''}<script src="font-audit.js?v=20261010-v3"></script>{'<script src="lp-ui.js?v=20261010-v3"></script>' if sticky else ''}</body></html>'''
+    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>{title}</title><link rel="stylesheet" href="{FONT}"><link rel="stylesheet" href="lp-designs.css?v=20261010-v3-polish2"><script>if(new URLSearchParams(location.search).get('export')==='2')document.documentElement.classList.add('export2x');</script></head><body class="{'gallery-body' if gallery else 'single'} {'has-sticky' if sticky else ''}">{body}{'<aside class="sticky-cta" aria-label="集荷の案内">'+cta()+'</aside>' if sticky else ''}<script src="font-audit.js?v=20261010-v3"></script>{'<script src="lp-ui.js?v=20261010-v3"></script>' if sticky else ''}</body></html>'''
 
 def lp(kind='A', before=False):
     if kind == 'A':
