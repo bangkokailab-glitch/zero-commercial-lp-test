@@ -265,10 +265,10 @@ body section.cta > a.zero-phone-free { --zero-text-face: var(--zero-shingo-bold)
 
 /* secret04-megacure-story.css */
 #secret .megacure-story--approved .story-box { font-family: var(--zero-text-face); }
-#secret .megacure-story--approved .story-note .story-note-category { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#secret .megacure-story--approved .story-part-heading .story-note-category { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
 #secret .megacure-story--approved .story-note-heading { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
-#secret .megacure-story--approved .story-note .story-note-copy { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
-#secret .megacure-story--approved .story-note-copy strong { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .megacure-story--approved .story-note :is(.story-note-lead, .story-note-details dd, .story-note-next, .story-note-takeaway) { --zero-text-face: var(--zero-shingo-regular); font-family: var(--zero-text-face); }
+#secret .megacure-story--approved .story-note :is(.story-note-details dt, .story-note-next > span, .story-note-takeaway strong) { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
 #secret #secrets-box-328-panel .megacure-story-scope::before { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
 
 /* The mobile signature inherits a regular family but retains its bold weight. */
