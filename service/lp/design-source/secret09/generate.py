@@ -95,6 +95,7 @@ def figure4():
 for n,func in enumerate([figure1,figure2,figure3,figure4],1):
  body=func()
  page=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>ZERO 秘訣9 図{n:02d} 編集用組版</title><link rel="stylesheet" href="https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css"><link rel="stylesheet" href="figures.css"></head><body><main class="diagram figure-{n:02d}">{body}</main></body></html>'''
+ page=page.replace('</head>', '<script>if(new URLSearchParams(location.search).get("export")=="2")document.documentElement.classList.add("export2x");</script></head>')
  page=page.replace('</body>', '<script src="font-audit.js"></script></body>')
  (OUT/f'figure-{n:02d}.html').write_text(page)
  (OUT/f'figure-{n:02d}-fragment.html').write_text(body)

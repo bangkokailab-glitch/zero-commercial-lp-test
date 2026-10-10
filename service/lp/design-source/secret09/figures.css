@@ -9,3 +9,7 @@
 /* Keep semantic Japanese phrases together in narrow diagrams. */
 .keep{display:inline-block;white-space:nowrap}.reach-rail{width:42px}.reach-rail span{white-space:nowrap;font-size:12px}
 @media(max-width:600px){.reach-rail{width:38px}.figure-03 .figure-header h1 .keep{display:block}.figure-03 .figure-summary .keep,.figure-04 .figure-summary .keep{display:block}}
+
+/* Explicit 2x artwork export; the 950 / 342 px composition remains unchanged. */
+.export2x .diagram{zoom:2;min-width:950px}
+@media(max-width:600px){.export2x .diagram{min-width:342px}}
