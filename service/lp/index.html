@@ -64,14 +64,14 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 }
 </script>
 
-<link rel="preload" href="images/mv-img.jpg" as="image">
+<link rel="preload" href="images/mv-img.jpg" as="image" fetchpriority="high">
 <link rel="preconnect" href="https://morisawafonts.net" crossorigin>
 <link rel="preload" as="style" href="https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css"></noscript>
 
 <link rel="preload" as="image" href="performance-media/hero-legacy-banner.svg">
-<link rel="stylesheet" href="page-bundle.css?v=20261011-strategy-mobile-grid">
-<script src="page-bundle.js?v=20261011-strategy-mobile-grid" defer onload="document.documentElement.classList.remove('zero-mobile-panels-pending')" onerror="document.documentElement.classList.remove('zero-mobile-panels-pending','zero-has-deferred-backgrounds')"></script>
+<link rel="stylesheet" href="page-bundle.css?v=20261011-fast-display">
+<script src="page-bundle.js?v=20261011-fast-display" defer fetchpriority="high" onload="document.documentElement.classList.remove('zero-mobile-panels-pending')" onerror="document.documentElement.classList.remove('zero-mobile-panels-pending','zero-has-deferred-backgrounds')"></script>
 <link rel="stylesheet" href="secret09-selected.css?v=20261010-no-figure-numbers">
 </head>
 <body>
@@ -119,11 +119,11 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
                     </picture>
                     <nav class="global-nav pc" aria-label="PC用サイトメニュー">
                         <ul>
-                            <li><a href="https://zero-s.jp/service/"><img src="images/menu1.svg" alt="サービス" decoding="async" width="61" height="32"></a></li>
-                            <li><a href="https://zero-s.jp/works/"><img src="images/menu2.svg" alt="製作実績" decoding="async" width="52" height="33"></a></li>
-                            <li><a href="https://zero-s.jp/aboutus/"><img src="images/menu3.svg" alt="会社情報" decoding="async" width="81" height="32"></a></li>
-                            <li><a href="https://zero-s.jp/recruit/"><img src="images/menu4.svg" alt="採用情報" decoding="async" width="59" height="32"></a></li>
-                            <li><a href="https://zero-s.jp/labo/"><img src="images/menu5.svg" alt="ゼロ ラボ" decoding="async" width="94" height="33"></a></li>
+                            <li><a href="https://zero-s.jp/service/"><img src="images/menu1.svg" alt="サービス" loading="lazy" decoding="async" width="61" height="32"></a></li>
+                            <li><a href="https://zero-s.jp/works/"><img src="images/menu2.svg" alt="製作実績" loading="lazy" decoding="async" width="52" height="33"></a></li>
+                            <li><a href="https://zero-s.jp/aboutus/"><img src="images/menu3.svg" alt="会社情報" loading="lazy" decoding="async" width="81" height="32"></a></li>
+                            <li><a href="https://zero-s.jp/recruit/"><img src="images/menu4.svg" alt="採用情報" loading="lazy" decoding="async" width="59" height="32"></a></li>
+                            <li><a href="https://zero-s.jp/labo/"><img src="images/menu5.svg" alt="ゼロ ラボ" loading="lazy" decoding="async" width="94" height="33"></a></li>
                         </ul>
                     </nav>
                     <button type="button" onclick="location.href='https://zero-s.jp/contact/'" class="header-btn pc"><span><svg class="header-mail-icon" viewBox="0 0 32 24" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="21" rx="1.5"></rect><path d="m3 4 13 10L29 4"></path></svg>お問合せ</span>
@@ -172,7 +172,7 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
         <div class="hero-offer-journey">
             <div class="shared-hero-background" aria-hidden="true">
                 <img src="images/mv-img.jpg" alt="" fetchpriority="high" decoding="async" width="4000" height="2240">
-                <video src="images/mv.mp4" poster="images/mv-img.jpg" preload="metadata" autoplay loop muted playsinline tabindex="-1"></video>
+                <video src="images/mv.mp4?v=20261011-faststart" poster="images/mv-img.jpg" preload="metadata" autoplay loop muted playsinline tabindex="-1"></video>
             </div>
         <section id="mv" class="video-bg">
             <div class="zero-hero-content">
@@ -418,7 +418,7 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
         <section id="copy" class="video-bg copy-layout-b" aria-labelledby="copy-b-title">
             <div class="shared-hero-background" aria-hidden="true">
                 <img src="images/mv-img.jpg" alt="" fetchpriority="low" loading="lazy" decoding="async" width="4000" height="2240">
-                <video preload="none" data-background-src="images/mv.mp4" poster="images/mv-img.jpg" loop muted playsinline tabindex="-1"></video>
+                <video preload="none" data-background-src="images/mv.mp4?v=20261011-faststart" poster="images/mv-img.jpg" loop muted playsinline tabindex="-1"></video>
             </div>
 <svg class="copy-b-svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
   <!-- Original monitor paths from ZERO's images/copy2.svg. Text stays HTML. -->
@@ -454,7 +454,7 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
             <div role="group" class="secret-cover-a secret-cover-c" aria-labelledby="secret-cover-title">
                 <a class="section-down-cue section-down-cue--handoff section-down-cue--triangle" href="#secret-cover-intro" aria-label="売れるLPの9の秘訣へ進む"><svg viewBox="0 0 130 77" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline points="0,0 65,77 130,0" vector-effect="non-scaling-stroke"/></svg><svg viewBox="0 0 130 77" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline points="0,0 65,77 130,0" vector-effect="non-scaling-stroke"/></svg></a>
                 <div class="secret-cover-a__content" id="secret-cover-intro">
-                    <img class="secret-cover-a__logo" src="secret-cover-white-designs/legacy-logo-centered.svg" alt="ZERO" width="153" height="156" decoding="async">
+                    <img class="secret-cover-a__logo" src="secret-cover-white-designs/legacy-logo-centered.svg" alt="ZERO" width="153" height="156" loading="lazy" decoding="async">
                     <h2 id="secret-cover-title" class="secret-cover-a__title"><span class="secret-cover-a__live-title secret-cover-c__first">売れるZERO式</span><span class="secret-cover-a__live-title secret-cover-c__second">ランディングページ制作</span><span class="secret-cover-a__live-lockup"><b id="secret-cover-count" data-count-to="9" data-count-from="1" aria-hidden="true">9</b><span class="zero-sr-only">9</span><span class="secret-cover-a__suffix">の秘訣</span></span></h2>
                     <div class="secret-cover-a__description"><p>その答えを、ZEROが実践する「9の秘訣」にまとめました。<br class="secret-cover-a__pc">目的・数字設計から、<span class="story-analysis-term">3C分析</span>、制作、集客、改善まで。<br class="secret-cover-a__pc">具体的な進め方を、事例と図解で解説します。</p><p><mark class="zero-trust-highlight">本気でLPを集客と売上につなげたい方は、ぜひ最後までお読みください。</mark></p></div>
                     <a class="secret-cover-a__cue section-down-cue" href="#secret-01" aria-label="秘訣01へ進む"><svg viewBox="0 0 130 77" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline points="0,0 65,77 130,0" vector-effect="non-scaling-stroke"/></svg><svg viewBox="0 0 130 77" preserveAspectRatio="none" aria-hidden="true" focusable="false"><polyline points="0,0 65,77 130,0" vector-effect="non-scaling-stroke"/></svg></a>
@@ -794,7 +794,7 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
         <section class="cta cta-offer cta-offer--gold chapter-offer cta-offer--section-tip" id="offer-after-03" aria-labelledby="offer-after-03-title">
             <div class="shared-hero-background" aria-hidden="true">
                 <img fetchpriority="low" src="images/mv-img.jpg" alt="" loading="lazy" decoding="async" width="4000" height="2240">
-                <video preload="none" data-background-src="images/mv.mp4" poster="images/mv-img.jpg" loop muted playsinline tabindex="-1"></video>
+                <video preload="none" data-background-src="images/mv.mp4?v=20261011-faststart" poster="images/mv-img.jpg" loop muted playsinline tabindex="-1"></video>
             </div>
             <p class="cta-ribbon" id="offer-after-03-title"><span><span>今なら無料提案キャンペーン実施中</span></span></p>
             <div class="offer-gold__gallery" role="region" aria-roledescription="カルーセル" aria-label="ZEROのLP制作実績を自動表示しています">
@@ -1208,7 +1208,7 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
         <section class="cta cta-offer cta-offer--gold chapter-offer cta-offer--section-tip" id="offer-after-06" aria-labelledby="offer-after-06-title">
             <div class="shared-hero-background" aria-hidden="true">
                 <img fetchpriority="low" src="images/mv-img.jpg" alt="" loading="lazy" decoding="async" width="4000" height="2240">
-                <video preload="none" data-background-src="images/mv.mp4" poster="images/mv-img.jpg" loop muted playsinline tabindex="-1"></video>
+                <video preload="none" data-background-src="images/mv.mp4?v=20261011-faststart" poster="images/mv-img.jpg" loop muted playsinline tabindex="-1"></video>
             </div>
             <p class="cta-ribbon" id="offer-after-06-title"><span><span>今なら無料提案キャンペーン実施中</span></span></p>
             <div class="offer-gold__gallery" role="region" aria-roledescription="カルーセル" aria-label="ZEROのLP制作実績を自動表示しています">
@@ -1596,7 +1596,7 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
         <div class="campaign-strategy-journey">
             <div class="shared-hero-background" aria-hidden="true">
                 <img fetchpriority="low" src="images/mv-img.jpg" alt="" loading="lazy" decoding="async" width="4000" height="2240">
-                <video preload="none" data-background-src="images/mv.mp4" poster="images/mv-img.jpg" loop muted playsinline tabindex="-1"></video>
+                <video preload="none" data-background-src="images/mv.mp4?v=20261011-faststart" poster="images/mv-img.jpg" loop muted playsinline tabindex="-1"></video>
             </div>
         <section class="cta cta-offer cta-offer--gold chapter-offer cta-offer--section-tip" id="offer-after-09" aria-labelledby="offer-after-09-title">
             <p class="cta-ribbon" id="offer-after-09-title"><span><span>今なら無料提案キャンペーン実施中</span></span></p>
@@ -1968,7 +1968,7 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
         <section class="cta cta-offer cta-offer--gold cta-offer--section-tip" aria-labelledby="offer-final-title">
             <div class="shared-hero-background" aria-hidden="true">
                 <img fetchpriority="low" src="images/mv-img.jpg" alt="" loading="lazy" decoding="async" width="4000" height="2240">
-                <video preload="none" data-background-src="images/mv.mp4" poster="images/mv-img.jpg" loop muted playsinline tabindex="-1"></video>
+                <video preload="none" data-background-src="images/mv.mp4?v=20261011-faststart" poster="images/mv-img.jpg" loop muted playsinline tabindex="-1"></video>
             </div>
             <h2 class="cta-ribbon" id="offer-final-title"><span><span>今なら無料提案キャンペーン実施中</span></span></h2>
             <div class="offer-gold__gallery" role="region" aria-roledescription="カルーセル" aria-label="ZEROのLP制作実績を自動表示しています">

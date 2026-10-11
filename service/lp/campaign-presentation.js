@@ -6,6 +6,10 @@
   const floating = document.querySelector('.sticky-consultation');
   const proposals = [...document.querySelectorAll('.cta-offer--gold .offer-proposal, .pricing-proposal-cta')];
   const buttons = [...document.querySelectorAll('.cta-offer--gold .offer-gift, .pricing-proposal-cta .offer-gift')];
+  // Pinning is a one-time layout change. Do it for every shared layer before
+  // measuring any section, rather than mixing writes/reads on each scroll.
+  layers.forEach(layer => layer.classList.add('is-viewport-pinned'));
+  const lastTransforms = new WeakMap();
   // The complete copy now uses the floating consultation label's shared CSS
   // keyframes. No second JS pulse or character-by-character animation.
   buttons.forEach(button => {
@@ -37,25 +41,31 @@
   let frame = 0;
   const update = () => {
     frame = 0;
-    updateMotion();
-    layers.forEach(layer => {
-      // Keep one viewport-sized background behind both sections on mobile too.
-      layer.classList.add('is-viewport-pinned');
+    // Read all section/CTA geometry first, then apply the resulting changes.
+    // The same viewport-sized video still spans both sections on mobile too.
+    const positions = layers.map(layer => {
       const box = layer.parentElement.getBoundingClientRect();
-      if (box.bottom > 0 && box.top < innerHeight) {
-        layer.style.transform = `translate3d(0, ${-box.top}px, 0)`;
-      }
+      return { layer, transform: box.bottom > 0 && box.top < innerHeight
+        ? `translate3d(0, ${-box.top}px, 0)` : null };
     });
     // A duplicate floating CTA must not obscure the gift or its conditions.
-    const floatingBox = floating?.getBoundingClientRect();
-    const overlaps = innerWidth <= 768 && floatingBox && proposals.some(proposal => {
+    const floatingBox = innerWidth <= 768 ? floating?.getBoundingClientRect() : null;
+    const overlaps = floatingBox && proposals.some(proposal => {
       const box = proposal.getBoundingClientRect();
       return box.top < floatingBox.bottom && box.bottom > floatingBox.top && box.right > floatingBox.left && box.left < floatingBox.right;
+    });
+    updateMotion();
+    positions.forEach(({ layer, transform }) => {
+      if (transform === null || lastTransforms.get(layer) === transform) return;
+      layer.style.transform = transform;
+      lastTransforms.set(layer, transform);
     });
     document.documentElement.classList.toggle('gift-cta-overlaps-floating', Boolean(overlaps));
   };
   const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
-  const resize = update;
+  // Fonts, image layout, viewport resize and ResizeObserver can all report
+  // the same change. Coalesce them into the existing single-frame update.
+  const resize = schedule;
   document.addEventListener('visibilitychange', schedule);
   addEventListener('scroll', schedule, { passive: true });
   addEventListener('resize', resize);

@@ -4,7 +4,8 @@
 
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const visibility = new WeakMap();
-  const videos = Array.from(document.querySelectorAll('video[src$="mv.mp4"], video[data-background-src]'));
+  // A cache-version query must not disable visibility-based playback.
+  const videos = Array.from(document.querySelectorAll('video[src^="images/mv.mp4"], video[data-background-src]'));
   // A fixed/oversized background video's own rectangle can cover the viewport
   // before its section arrives. Use the content section for visibility instead.
   // Pinned campaign layers can remain viewport-sized after their section ends.

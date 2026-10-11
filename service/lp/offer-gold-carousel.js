@@ -5,6 +5,22 @@
   const start = () => {
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const pixelsPerSecond = 18;
+    const pendingMeasurements = new Set();
+    let measurementFrame = 0;
+    const scheduleMeasurement = measure => {
+      pendingMeasurements.add(measure);
+      if (measurementFrame) return;
+      measurementFrame = requestAnimationFrame(() => {
+        measurementFrame = 0;
+        const measurements = [...pendingMeasurements];
+        pendingMeasurements.clear();
+        // All galleries read their geometry before any CSS variables change.
+        // Clones and layout remain identical; duplicate load/resize events no
+        // longer force a separate whole-page layout for every gallery.
+        const applyMeasurements = measurements.map(read => read());
+        applyMeasurements.forEach(apply => apply());
+      });
+    };
 
     document.querySelectorAll('section.cta-offer--gold, .offer-gold-carousel-instance').forEach(section => {
       const gallery = section.querySelector('.offer-gold__gallery');
@@ -38,30 +54,37 @@
       const mayMove = () => canLoop && inView && !motion.matches && !document.hidden;
 
       const reconcile = () => {
-        gallery.dataset.offerGoldPlaying = mayMove() ? 'true' : 'false';
+        const playing = mayMove() ? 'true' : 'false';
+        if (gallery.dataset.offerGoldPlaying !== playing) gallery.dataset.offerGoldPlaying = playing;
       };
 
       const measure = () => {
         const first = samples[0].getBoundingClientRect();
-        period = clones[0].getBoundingClientRect().left - first.left;
+        const nextPeriod = clones[0].getBoundingClientRect().left - first.left;
         // The gallery's scrollWidth shrinks as the track translates left, which
         // could incorrectly stop a valid loop during image loads or resizing.
-        canLoop = period > 0 && track.scrollWidth - gallery.clientWidth >= period - 1;
-        if (canLoop) {
-          const distance = `${period}px`;
-          const duration = `${period / pixelsPerSecond}s`;
-          if (track.style.getPropertyValue('--offer-loop-distance') !== distance) {
-            track.style.setProperty('--offer-loop-distance', distance);
-          }
-          if (track.style.getPropertyValue('--offer-loop-duration') !== duration) {
-            track.style.setProperty('--offer-loop-duration', duration);
-          }
-        }
+        const nextCanLoop = nextPeriod > 0 && track.scrollWidth - gallery.clientWidth >= nextPeriod - 1;
         const bounds = gallery.getBoundingClientRect();
-        inView = bounds.width > 0 && bounds.height > 0 && bounds.bottom > 0 &&
+        const nextInView = bounds.width > 0 && bounds.height > 0 && bounds.bottom > 0 &&
           bounds.top < window.innerHeight && bounds.right > 0 && bounds.left < window.innerWidth;
-        reconcile();
+        return () => {
+          period = nextPeriod;
+          canLoop = nextCanLoop;
+          inView = nextInView;
+          if (canLoop) {
+            const distance = `${period}px`;
+            const duration = `${period / pixelsPerSecond}s`;
+            if (track.style.getPropertyValue('--offer-loop-distance') !== distance) {
+              track.style.setProperty('--offer-loop-distance', distance);
+            }
+            if (track.style.getPropertyValue('--offer-loop-duration') !== duration) {
+              track.style.setProperty('--offer-loop-duration', duration);
+            }
+          }
+          reconcile();
+        };
       };
+      const scheduleMeasure = () => scheduleMeasurement(measure);
 
       if ('IntersectionObserver' in window) {
         const visibility = new IntersectionObserver(entries => {
@@ -70,22 +93,22 @@
         }, { threshold: 0 });
         visibility.observe(gallery);
       } else {
-        window.addEventListener('scroll', measure, { passive: true });
+        window.addEventListener('scroll', scheduleMeasure, { passive: true });
       }
       if ('ResizeObserver' in window) {
-        const dimensions = new ResizeObserver(measure);
+        const dimensions = new ResizeObserver(scheduleMeasure);
         dimensions.observe(gallery);
         dimensions.observe(track);
       }
-      track.addEventListener('load', measure, true);
-      window.addEventListener('resize', measure, { passive: true });
-      window.addEventListener('pageshow', measure);
+      track.addEventListener('load', scheduleMeasure, true);
+      window.addEventListener('resize', scheduleMeasure, { passive: true });
+      window.addEventListener('pageshow', scheduleMeasure);
       document.addEventListener('visibilitychange', () => {
         reconcile();
       });
       if (motion.addEventListener) motion.addEventListener('change', reconcile);
       else if (motion.addListener) motion.addListener(reconcile);
-      measure();
+      scheduleMeasure();
     });
   };
 
