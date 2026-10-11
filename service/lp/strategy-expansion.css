@@ -56,9 +56,9 @@
   padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone;
 }
 #strategy-expansion::before {
-  content:"";top:-2px;z-index:2;
-  /* This handoff now follows the campaign after chapter 9. */
-  background:#161616;
+  /* Only remove this handoff's solid triangle; preserve the separate VV cue. */
+  content:none;
+  display:none;
 }
 /* Continue the same triangle and animated double-chevron into pricing. */
 #price.section-start-handoff {
