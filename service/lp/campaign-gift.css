@@ -202,7 +202,8 @@
    Optical text offsets are measured with the actual Morisawa Web font.
    Desktop proportions and the existing 1.65s / 3.2s animations stay intact. */
 @media(max-width:768px) {
-  .cta.cta-offer--gold .offer-proposal { margin-top:74px; }
+  /* Restore the original gap; paint the callout above the preceding gallery. */
+  .cta.cta-offer--gold .offer-proposal { margin-top:14px; position:relative; z-index:2; }
   #price .pricing-proposal-cta > .section-down-cue.section-down-cue--inline { margin-bottom:74px; }
   :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift--with-price {
     height:82.875px; padding:0; box-shadow:4px 5px 0 #ffffff30;
