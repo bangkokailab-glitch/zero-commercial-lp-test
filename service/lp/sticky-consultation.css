@@ -112,6 +112,7 @@
 }
 /* Match the visible red frame, not its larger invisible animation container. */
 .has-floating-consultation .fix-menu.pc.is-compact-ready {
+  --contents-control-height: calc(var(--floating-control-size) * .5);
   --contents-bottom: calc(max(var(--floating-cta-offset), env(safe-area-inset-bottom, 0px)) + var(--floating-cta-size) - var(--floating-cta-inset) + 16px);
   display: block;
   width: var(--floating-control-size);
@@ -123,13 +124,14 @@
 }
 .fix-menu.pc.is-compact-ready > span { display:none; }
 .fix-menu.pc.is-compact-ready .fix-menu-toggle {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: calc(var(--floating-control-size) * .035);
+  gap: calc(var(--floating-control-size) * .06);
   width: 100%;
-  height: var(--floating-control-size);
+  height: var(--contents-control-height);
   box-sizing: border-box;
   padding: 4px;
   border: var(--zero-cta-border-width, 3px) solid #fff;
@@ -142,6 +144,11 @@
   line-height: 1.2;
   cursor: pointer;
   touch-action: manipulation;
+}
+/* Keep the visible frame at half height, with a thumb-friendly mobile hit area. */
+.fix-menu.pc.is-compact-ready .fix-menu-toggle::after {
+  content:"";position:absolute;left:0;right:0;top:50%;
+  height:max(100%, 44px);transform:translateY(-50%);
 }
 .fix-menu.pc.is-compact-ready .fix-menu-toggle > span {
   display: block;
@@ -162,7 +169,7 @@
   right: 0;
   bottom: calc(100% + 10px);
   width: min(252px, calc(100vw - 24px - env(safe-area-inset-right, 0px) - env(safe-area-inset-left, 0px)));
-  max-height: max(44px, calc(100dvh - var(--contents-bottom) - var(--floating-control-size) - 106px));
+  max-height: max(44px, calc(100dvh - var(--contents-bottom) - var(--contents-control-height) - 106px));
   box-sizing: border-box;
   padding: 4px 10px;
   background: #fff;
