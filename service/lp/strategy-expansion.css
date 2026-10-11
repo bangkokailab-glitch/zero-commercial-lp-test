@@ -20,12 +20,26 @@
 }
 #strategy-expansion .strategy-expansion__line {display:block;}
 #strategy-expansion h2 em {color:#f9d56c;font-style:normal;}
+#strategy-expansion h2 .zero-content-wipe {--content-wipe-color:#f9d56c;}
 /* Same image and natural aspect ratio on every screen. 1000px -> 900px on PC. */
 #strategy-expansion .strategy-expansion__diagram {
-  width:90%;max-width:900px;margin:0 auto 34px;padding:0;background:transparent;
+  position:relative;width:90%;max-width:900px;margin:0 auto 34px;padding:0;background:transparent;
 }
 #strategy-expansion .strategy-expansion__diagram img {
   display:block;width:100%;height:auto;max-height:none;margin:0;
+}
+/* Reveal the approved artwork itself, without covering the background video. */
+#strategy-expansion .strategy-expansion__stage {
+  position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
+}
+#strategy-expansion .strategy-expansion__diagram.is-diagram-pending > img {opacity:0;}
+@media (prefers-reduced-motion:reduce) {
+  #strategy-expansion .strategy-expansion__stage {display:none;}
+  #strategy-expansion .strategy-expansion__diagram.is-diagram-pending > img {opacity:1;}
+}
+@media print {
+  #strategy-expansion .strategy-expansion__stage {display:none;}
+  #strategy-expansion .strategy-expansion__diagram.is-diagram-pending > img {opacity:1;}
 }
 #strategy-expansion .strategy-expansion__copy {margin:0 auto;max-width:1000px;}
 #strategy-expansion .strategy-expansion__copy p {
