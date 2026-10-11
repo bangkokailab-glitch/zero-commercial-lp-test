@@ -184,7 +184,7 @@
   :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift--with-price { height:calc(172px + 18cqw); }
   .offer-price-bubble { width:84px; left:12px; top:-10px; }
   .offer-price-bubble__text { gap:.5px; padding-bottom:0; }
-  .offer-price-bubble__lead { width:50px; font-size:9px; line-height:1.1; white-space:normal; }
+  .offer-price-bubble__lead { width:50px; font-size:9px; line-height:1.1; white-space:normal; word-break:keep-all; }
   .offer-price-bubble__number { font-size:28px; margin-left:-2px; -webkit-text-stroke:.42px currentColor; }
   .offer-price-bubble__unit { font-size:11px; }
   .offer-gift--with-price .offer-gift__copy { font-size:min(24px,5.6cqw); letter-spacing:.015em; gap:6px; }
