@@ -79,7 +79,7 @@
 /* Desktop: keep the original type sizes; use the full heading width and normal
    tracking instead of balanced lines. Never squeeze or scale the text. */
 @media (min-width: 769px) {
-  #secret .secrets-white > h4 { padding-inline: 4px; }
+  #secret .secrets-white > h3 { padding-inline: 4px; }
   #secret .secrets-toggle.zero-numbered-heading {
     align-items: flex-start;
     line-height: 1.35;

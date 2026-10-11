@@ -7,7 +7,7 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const duration = 260;
   let scrollToken = 0;
-  const entries = Array.from(root.querySelectorAll('.secrets-white > h4 > .secrets-toggle')).map(button => ({
+  const entries = Array.from(root.querySelectorAll('.secrets-white > h3 > .secrets-toggle')).map(button => ({
     button,
     box: button.closest('.secrets-white'),
     panel: document.getElementById(button.getAttribute('aria-controls')),
@@ -74,7 +74,7 @@
     try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
     const target = document.getElementById(id);
     if (!target || !root.contains(target)) return;
-    const entry = entries.find(item => item.panel.contains(target) || item.box.querySelector(':scope > h4') === target || item.button === target);
+    const entry = entries.find(item => item.panel.contains(target) || item.box.querySelector(':scope > h3') === target || item.button === target);
     const revealed = entry && entry.panel.hidden;
     if (entry) { entry.mobileOpen = true; render(entry, false); }
     for (let ancestor = target; ancestor && ancestor !== root; ancestor = ancestor.parentElement) {

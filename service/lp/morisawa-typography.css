@@ -142,7 +142,7 @@ label.question { --zero-text-face: var(--zero-shingo-bold); font-family: var(--z
 
 /* secrets-renovation.css */
 #secret .secrets-renovated .underline-ttl { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
-#secret .secrets-white > h4 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
+#secret .secrets-white > h3 { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
 #secret .secrets-subtitle { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
 #secret .secrets-figure figcaption { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }
 #secret .secrets-node:not(:last-child)::after { --zero-text-face: var(--zero-shingo-bold); font-family: var(--zero-text-face); }

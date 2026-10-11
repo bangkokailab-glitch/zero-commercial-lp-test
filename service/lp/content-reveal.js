@@ -32,10 +32,7 @@
     'secrets-box-667':['SEO・AI検索で','疑問への答えを相談へ'],
     'secrets-box-699':['SNSで接点を広げ','検討中の人に判断材料を'],
     'secrets-box-768':['予算とアクセス数に合わせ、','A/Bテストの進め方を選ぶ。'],
-    'secrets-box-789':['離脱が多い箇所を見直し、','LPを磨き続ける。'],
-    'secrets-box-market-strategy':['市場を広げる前に','売上につながる売り方を'],
-    'secrets-box-839':['今の強みを活かして','別の業界のお客様へ'],
-    'secrets-box-863':['英語・タイ語・中国語で','海外市場へ届ける']
+    'secrets-box-789':['離脱が多い箇所を見直し、','LPを磨き続ける。']
   };
   Object.entries(mobileHeadings).forEach(([id, lines]) => {
     const copy = document.querySelector(`#${id} .secrets-toggle-copy`);
@@ -57,7 +54,7 @@
   });
 
   document.querySelectorAll('#secret .secrets-renovated').forEach(chapter => {
-    chapter.querySelectorAll('.secrets-white > h4 > .secrets-toggle').forEach((button, index) => {
+    chapter.querySelectorAll('.secrets-white > h3 > .secrets-toggle').forEach((button, index) => {
       if (button.querySelector('.zero-subheading-number')) return;
       const copy = button.querySelector('.secrets-toggle-copy');
       // Chapter 07 already has circled ordinals: replace them, never double-number.
@@ -77,8 +74,8 @@
     '#copy .zero-copy-banner > span', '#copy .zero-copy-title', '#copy .copy-h2__label',
     '.secret-cover-a__live-title', '.secret-cover-a__live-lockup > .secret-cover-a__suffix',
     '.secret-cover-a__phases', '.secret-cover-a__description > p',
-    '#secret .secrets-renovated > .wrap > h3',
-    '#secret .secrets-white > h4 .secrets-toggle-copy',
+    '#secret .secrets-renovated > .wrap > h2',
+    '#secret .secrets-white > h3 .secrets-toggle-copy',
     '#secret .secrets-closing--text > p',
     '#strategy-expansion .strategy-expansion__line',
     '#strategy-expansion .strategy-expansion__banner > span',
@@ -112,9 +109,7 @@
     target.append(wipe);
     return wipe;
   });
-  // The market-expansion overview has its own ordered panel/arrow entrance.
-  const images = [...document.querySelectorAll('#secret .secrets-renovated img')]
-    .filter(image => !image.closest('.secret10-overview'));
+  const images = [...document.querySelectorAll('#secret .secrets-renovated img')];
   images.forEach(image => image.classList.add('zero-secret-image'));
   document.querySelectorAll('#secret .secrets-renovated > .wrap > figure > .img-tag')
     .forEach(image => image.classList.add('zero-secret-number'));
