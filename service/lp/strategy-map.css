@@ -99,30 +99,65 @@
 .strategy-map[data-design="c"] .map-channels {grid-template-columns:repeat(3,1fr);gap:8px;}
 .strategy-map[data-design="c"] .map-channels li {border:0;padding:10px 0;font-size:12px;}
 .strategy-map[data-design="c"] .map-channels .map-icon {width:32px;height:32px;}
-/* Readable reflow, not a scaled-down raster diagram. Arrows use outside gutters. */
+/* Only the comparison designs B/C reflow into a single mobile column. */
 @media(max-width:800px){
-  .strategy-map, .strategy-map[data-design="b"], .strategy-map[data-design="c"] {grid-template-columns:minmax(0,1fr);row-gap:42px;padding:8px 24px;}
-  .strategy-map .map-card[data-node] {grid-column:1;grid-row:auto;}
-  .strategy-map .map-card__inner {padding:20px 14px;}
-  .strategy-map .map-card--planning .map-card__heading {flex-direction:row;}
-  .strategy-map .map-card h3, .strategy-map[data-design="c"] .map-card--planning h3 {font-size:21px;}
-  .strategy-map .map-card p, .strategy-map[data-design="c"] .map-card--planning p {font-size:14px;}
-  .strategy-map [data-node="lp"] h3, .strategy-map[data-design="b"] [data-node="lp"] h3 {font-size:32px;}
-  .strategy-map [data-node="acquisition"] h3, .strategy-map [data-node="response-sales"] h3 {font-size:24px;}
-  .strategy-map .map-channels, .strategy-map[data-design="c"] .map-channels {grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:20px;}
-  .strategy-map .map-channels li, .strategy-map[data-design="b"] .map-channels li, .strategy-map[data-design="c"] .map-channels li {padding:0;border:0;font-size:12px;gap:10px;}
-  .strategy-map .map-channels .map-icon, .strategy-map[data-design="c"] .map-channels .map-icon {width:32px;height:32px;}
-  .strategy-map .map-channels li+li {border:0;}
-  .strategy-map .map-story li {font-size:21px;gap:22px;}
-  .strategy-map .map-story-title {font-size:14px!important;}
-  .strategy-map .map-results {flex-direction:row;gap:14px;padding-top:20px;}
-  .strategy-map .map-results .map-icon {width:44px;height:44px;}
-  .strategy-map .map-card--compact .map-card__inner {min-height:120px;}
+  .strategy-map:not([data-design="a"]) {grid-template-columns:minmax(0,1fr);row-gap:42px;padding:8px 24px;}
+  .strategy-map:not([data-design="a"]) .map-card[data-node] {grid-column:1;grid-row:auto;}
+  .strategy-map:not([data-design="a"]) .map-card__inner {padding:20px 14px;}
+  .strategy-map:not([data-design="a"]) .map-card--planning .map-card__heading {flex-direction:row;}
+  .strategy-map:not([data-design="a"]) .map-card h3, .strategy-map[data-design="c"] .map-card--planning h3 {font-size:21px;}
+  .strategy-map:not([data-design="a"]) .map-card p, .strategy-map[data-design="c"] .map-card--planning p {font-size:14px;}
+  .strategy-map:not([data-design="a"]) [data-node="lp"] h3 {font-size:32px;}
+  .strategy-map:not([data-design="a"]) [data-node="acquisition"] h3, .strategy-map:not([data-design="a"]) [data-node="response-sales"] h3 {font-size:24px;}
+  .strategy-map:not([data-design="a"]) .map-channels {grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:20px;}
+  .strategy-map:not([data-design="a"]) .map-channels li {padding:0;border:0;font-size:12px;gap:10px;}
+  .strategy-map:not([data-design="a"]) .map-channels .map-icon {width:32px;height:32px;}
+  .strategy-map:not([data-design="a"]) .map-channels li+li {border:0;}
+  .strategy-map:not([data-design="a"]) .map-story li {font-size:21px;gap:22px;}
+  .strategy-map:not([data-design="a"]) .map-story-title {font-size:14px!important;}
+  .strategy-map:not([data-design="a"]) .map-results {flex-direction:row;gap:14px;padding-top:20px;}
+  .strategy-map:not([data-design="a"]) .map-results .map-icon {width:44px;height:44px;}
+  .strategy-map:not([data-design="a"]) .map-card--compact .map-card__inner {min-height:120px;}
   .strategy-map[data-design="b"] .map-phase {display:none;}
   .strategy-map[data-design="b"] .map-card--compact .map-card__inner,
   .strategy-map[data-design="c"] .map-card--compact .map-card__inner {flex-direction:row;}
   .strategy-map[data-design="b"] .map-card--compact .map-card__heading,
   .strategy-map[data-design="c"] .map-card--compact .map-card__heading {flex-direction:row;}
+}
+/* Approved A keeps the desktop map: three planning cards, the LP between
+   acquisition/results, and three expansion cards. Give narrow cards more
+   vertical room while keeping live text, icons and the same arrow topology. */
+@media(max-width:800px){
+  .strategy-map[data-design="a"] {container-type:inline-size;row-gap:clamp(44px,8vw,64px);padding:8px 4px;}
+  .strategy-map[data-design="a"] .map-card__inner {padding:14px 5px;border-width:1px;}
+  .strategy-map[data-design="a"] .map-card__inner::before,
+  .strategy-map[data-design="a"] .map-card__inner::after {width:6px;height:6px;border-width:1px;}
+  .strategy-map[data-design="a"] .map-card__inner::before {inset:-3px auto auto -3px;}
+  .strategy-map[data-design="a"] .map-card__inner::after {inset:auto -3px -3px auto;}
+  .strategy-map[data-design="a"] .map-card h3 {font-size:clamp(11px,3.5cqw,22px);line-height:1.5;}
+  .strategy-map[data-design="a"] .map-card p {font-size:clamp(11px,2.9cqw,15px);line-height:1.6;}
+  .strategy-map[data-design="a"] .map-phrase {white-space:nowrap;}
+  .strategy-map[data-design="a"] .map-icon {width:clamp(24px,7cqw,40px);height:clamp(24px,7cqw,40px);}
+  .strategy-map[data-design="a"] .map-card--planning .map-card__inner {min-height:142px;}
+  .strategy-map[data-design="a"] .map-card--planning .map-card__heading {flex-direction:column;gap:7px;min-height:0;margin-bottom:9px;padding-bottom:9px;}
+  .strategy-map[data-design="a"] [data-node="lp"] .map-card__inner {min-height:350px;padding:14px 6px 10px;}
+  .strategy-map[data-design="a"] [data-node="lp"] h3 {font-size:clamp(20px,5.5cqw,32px);}
+  .strategy-map[data-design="a"] .map-story-title {font-size:clamp(11px,2.9cqw,15px)!important;line-height:1.6;padding:10px 0!important;margin-top:10px!important;}
+  .strategy-map[data-design="a"] .map-story li {gap:6px;min-height:46px;padding:10px 0;font-size:clamp(13px,3.8cqw,21px);}
+  .strategy-map[data-design="a"] .map-story .map-icon {width:clamp(20px,5.5cqw,32px);height:clamp(20px,5.5cqw,32px);}
+  .strategy-map[data-design="a"] [data-node="acquisition"] .map-card__inner,
+  .strategy-map[data-design="a"] [data-node="response-sales"] .map-card__inner {padding-inline:4px;}
+  .strategy-map[data-design="a"] [data-node="acquisition"] h3 {font-size:clamp(16px,4.5cqw,24px);}
+  .strategy-map[data-design="a"] [data-node="response-sales"] h3 {font-size:clamp(11px,3.5cqw,22px);}
+  .strategy-map[data-design="a"] .map-channels {margin-top:12px;}
+  .strategy-map[data-design="a"] .map-channels li {gap:8px;padding:16px 0;font-size:clamp(11px,3cqw,16px);}
+  .strategy-map[data-design="a"] .map-channels .map-icon {width:clamp(28px,8cqw,44px);height:clamp(28px,8cqw,44px);}
+  .strategy-map[data-design="a"] .map-results {gap:18px;padding-top:22px;}
+  .strategy-map[data-design="a"] .map-results .map-icon {width:clamp(32px,9cqw,54px);height:clamp(32px,9cqw,54px);}
+  .strategy-map[data-design="a"] .map-card--compact .map-card__inner {flex-direction:column;gap:8px;min-height:112px;padding:12px 5px;}
+  .strategy-map[data-design="a"] .map-card--compact .map-card__heading {flex-direction:column;gap:8px;}
+  .strategy-map[data-design="a"] .map-card--compact p {margin-top:4px;}
+  .strategy-map[data-design="a"] .map-arrow-line {stroke-width:1.5;}
 }
 @media(prefers-reduced-motion:reduce), print {
   .strategy-map.is-map-pending .map-card__inner {opacity:1!important;transform:none!important;}

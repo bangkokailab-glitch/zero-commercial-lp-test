@@ -45,13 +45,17 @@
         const r=el.getBoundingClientRect();return [name,{x:r.left-root.left,y:r.top-root.top,w:r.width,h:r.height}];
       }));
       const mobile=matchMedia('(max-width:800px)').matches,hub=host.dataset.design==='c';
-      const pt=(b,side,t=.5)=>side==='l'?[b.x-7,b.y+b.h*t]:side==='r'?[b.x+b.w+7,b.y+b.h*t]:side==='t'?[b.x+b.w*t,b.y-7]:[b.x+b.w*t,b.y+b.h+7];
+      const compactGrid=mobile&&host.dataset.design==='a';
+      // A retains desktop connections on phones; shorter insets leave room
+      // for the horizontal arrows in the narrow planning/expansion gutters.
+      const inset=compactGrid?Math.min(4,root.width*.008):7;
+      const pt=(b,side,t=.5)=>side==='l'?[b.x-inset,b.y+b.h*t]:side==='r'?[b.x+b.w+inset,b.y+b.h*t]:side==='t'?[b.x+b.w*t,b.y-inset]:[b.x+b.w*t,b.y+b.h+inset];
       const down=(a,b)=>{const s=pt(a,'b'),e=pt(b,'t'),y=(s[1]+e[1])/2;return [s,[s[0],y],[e[0],y],e]};
       const across=(a,b)=>{const s=pt(a,'r'),e=pt(b,'l'),x=(s[0]+e[0])/2;return [s,[x,s[1]],[x,e[1]],e]};
       for(const arrow of arrows){
         const a=boxes[arrow.from],b=boxes[arrow.to];
         let points;
-        if(mobile){
+        if(mobile&&!compactGrid){
           if(arrow.name==='to-sales-from-overseas'){
             const s=pt(a,'r'),e=pt(b,'r');points=[s,[root.width-4,s[1]],[root.width-4,e[1]],e];
           }else if(arrow.name==='to-lp-from-idea'||arrow.name==='to-improvement'){
@@ -76,7 +80,7 @@
         // Drop duplicate vertices, so even straight connections have a direction.
         points=points.filter((p,i)=>!i||Math.hypot(p[0]-points[i-1][0],p[1]-points[i-1][1])>.1);
         const end=points[points.length-1],prev=points[points.length-2];
-        const angle=Math.atan2(end[1]-prev[1],end[0]-prev[0]),size=mobile?7:9;
+        const angle=Math.atan2(end[1]-prev[1],end[0]-prev[0]),size=compactGrid?Math.min(7,root.width*.013):mobile?7:9;
         const base=[end[0]-Math.cos(angle)*size,end[1]-Math.sin(angle)*size];
         const l=[base[0]-Math.sin(angle)*size*.65,base[1]+Math.cos(angle)*size*.65];
         const r=[base[0]+Math.sin(angle)*size*.65,base[1]-Math.cos(angle)*size*.65];

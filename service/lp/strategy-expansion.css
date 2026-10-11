@@ -47,7 +47,7 @@
 #strategy-expansion .strategy-expansion__line {display:block;}
 #strategy-expansion h2 em {color:#f9d56c;font-style:normal;}
 #strategy-expansion h2 .zero-content-wipe {--content-wipe-color:#f9d56c;}
-/* The diagram is live text and reflows on mobile; the desktop ceiling stays 1000px. */
+/* Live text keeps the same map on mobile; the desktop ceiling stays 1000px. */
 #strategy-expansion .strategy-expansion__diagram {
   position:relative;width:100%;max-width:1000px;margin:0 auto 34px;padding:0;background:transparent;
 }
