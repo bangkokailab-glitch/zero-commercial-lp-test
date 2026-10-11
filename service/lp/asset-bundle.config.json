@@ -41,7 +41,8 @@
     "work-metrics.css",
     "adopted-copy-secret.css",
     "performance-structure.css",
-    "strategy-expansion.css"
+    "strategy-expansion.css",
+    "strategy-map.css"
   ],
   "js": [
     "js/jquery-3.5.1.min.js",

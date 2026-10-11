@@ -13,6 +13,20 @@
   display:block;width:96px;height:auto;margin:0 auto 30px;
   background:transparent;border:0;box-shadow:none;
 }
+#strategy-expansion .strategy-expansion__banner {
+  position:relative;isolation:isolate;display:table;width:auto;max-width:100%;
+  margin:0 auto 38px;padding:7px 20px;color:#231815;
+  font:700 24px/1.5 var(--zero-shingo-bold);text-align:center;
+}
+#strategy-expansion .strategy-expansion__banner::before {
+  content:"";position:absolute;inset:0;z-index:-1;background:#fff;transform-origin:left;
+}
+@media(prefers-reduced-motion:no-preference) {
+  #strategy-expansion .strategy-expansion__banner:has(.is-content-pending)::before {transform:scaleX(0);}
+  #strategy-expansion .strategy-expansion__banner:has(.is-content-entering)::before {
+    animation:zero-copy-banner-in 800ms cubic-bezier(.65,0,.35,1) var(--content-delay,0ms) both;
+  }
+}
 #strategy-expansion h2 {
   margin:0 auto 42px;padding:0;width:100%;border:0;
   font-family:var(--zero-shingo-bold);
@@ -21,32 +35,22 @@
 #strategy-expansion .strategy-expansion__line {display:block;}
 #strategy-expansion h2 em {color:#f9d56c;font-style:normal;}
 #strategy-expansion h2 .zero-content-wipe {--content-wipe-color:#f9d56c;}
-/* Same image and natural aspect ratio on every screen. 1000px -> 900px on PC. */
+/* The diagram is live text and reflows on mobile; the desktop ceiling stays 1000px. */
 #strategy-expansion .strategy-expansion__diagram {
-  position:relative;width:90%;max-width:900px;margin:0 auto 34px;padding:0;background:transparent;
+  position:relative;width:100%;max-width:1000px;margin:0 auto 34px;padding:0;background:transparent;
 }
-#strategy-expansion .strategy-expansion__diagram img {
-  display:block;width:100%;height:auto;max-height:none;margin:0;
-}
-/* Reveal the approved artwork itself, without covering the background video. */
-#strategy-expansion .strategy-expansion__stage {
-  position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
-}
-#strategy-expansion .strategy-expansion__diagram.is-diagram-pending > img {opacity:0;}
-@media (prefers-reduced-motion:reduce) {
-  #strategy-expansion .strategy-expansion__stage {display:none;}
-  #strategy-expansion .strategy-expansion__diagram.is-diagram-pending > img {opacity:1;}
-}
-@media print {
-  #strategy-expansion .strategy-expansion__stage {display:none;}
-  #strategy-expansion .strategy-expansion__diagram.is-diagram-pending > img {opacity:1;}
-}
+#strategy-expansion {font-family:var(--zero-shingo-regular);font-synthesis:none;}
+#strategy-expansion .strategy-expansion__copy p {font-family:var(--zero-shingo-regular);font-weight:400;}
 #strategy-expansion .strategy-expansion__copy {margin:0 auto;max-width:1000px;}
 #strategy-expansion .strategy-expansion__copy p {
   margin:0;color:#fff;
 }
 #strategy-expansion .strategy-expansion__copy .strategy-expansion__closing {
   margin-top:22px;text-wrap:balance;
+}
+#strategy-expansion .strategy-expansion__closing mark {
+  font-family:var(--zero-shingo-bold);font-weight:700;background:#fff000;color:#121212;
+  padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone;
 }
 #strategy-expansion::before {
   content:"";top:-2px;z-index:2;
@@ -55,15 +59,17 @@
 /* Continue the same triangle and animated double-chevron into pricing. */
 #price.section-start-handoff {
   position:relative;
-  padding-top:calc(var(--section-tip-height) + 26px);
+  /* Match #works: one 100px / 10vw entrance, without extra title padding. */
+  --section-entry-top:0px;
+  padding-top:min(100px,10vw);
 }
 #price.section-start-handoff::before {
   content:"";top:-2px;z-index:2;background:#161616;
 }
 @media(max-width:768px){
-  #price.section-start-handoff {padding-top:calc(var(--section-tip-height) + 20px);}
   #strategy-expansion {padding:calc(var(--section-tip-height) + 20px) 0 48px;scroll-margin-top:64px;}
   #strategy-expansion .strategy-expansion__logo {width:72px;margin-bottom:22px;}
+  #strategy-expansion .strategy-expansion__banner {font-size:clamp(12px,3.8cqw,22px);padding:7px 9px;margin-bottom:26px;}
   #strategy-expansion h2 {margin-bottom:26px;}
   #strategy-expansion .strategy-expansion__diagram {margin-bottom:26px;}
   #strategy-expansion .strategy-expansion__copy .strategy-expansion__closing {margin-top:18px;}

@@ -81,6 +81,7 @@
     '#secret .secrets-white > h4 .secrets-toggle-copy',
     '#secret .secrets-closing--text > p',
     '#strategy-expansion .strategy-expansion__line',
+    '#strategy-expansion .strategy-expansion__banner > span',
     '#strategy-expansion .strategy-expansion__copy > p',
     '#price > .wrap > h2', '#price .pricing-section-label',
     '#about > .wrap > h2', '#about .about-title-reveal', '#about .merit-box > h3',

@@ -1,0 +1,131 @@
+/* Live Morisawa text: no diagram labels are baked into an image. */
+.strategy-map {
+  --map-regular:var(--zero-shingo-regular,"mfw-pshingopr6n-regular",sans-serif);
+  --map-bold:var(--zero-shingo-bold,"mfw-pshingopr6n-bold",sans-serif);
+  position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(26,minmax(0,1fr));
+  row-gap:88px;width:100%;max-width:1000px;margin:0 auto;padding:10px;box-sizing:border-box;
+  color:#fff;font:400 16px/1.65 var(--map-regular);font-synthesis:none;
+}
+.strategy-map *, .strategy-map *::before, .strategy-map *::after {box-sizing:border-box;}
+.strategy-map .map-card {position:relative;z-index:1;min-width:0;margin:0;padding:0;background:transparent;}
+.strategy-map .map-card__inner {
+  position:relative;height:100%;padding:18px 14px;border:2px solid currentColor;
+  background:transparent;text-align:center;display:flex;flex-direction:column;justify-content:center;
+  transform-origin:center;
+}
+.strategy-map[data-design="a"] .map-card__inner::before,
+.strategy-map[data-design="a"] .map-card__inner::after {
+  content:"";position:absolute;inset:-6px auto auto -6px;width:10px;height:10px;border:2px solid currentColor;background:#191919;
+}
+.strategy-map[data-design="a"] .map-card__inner::after {inset:auto -6px -6px auto;}
+.strategy-map .map-card h3 {
+  margin:0;padding:0;border:0;background:none;color:inherit;width:auto;
+  font:700 23px/1.45 var(--map-bold);letter-spacing:0;text-align:inherit;word-break:normal;
+}
+.strategy-map .map-card p {
+  margin:0;padding:0;color:inherit;font:400 16px/1.65 var(--map-regular);text-align:inherit;
+}
+.strategy-map .map-card__heading {display:flex;justify-content:center;align-items:center;gap:10px;}
+.strategy-map .map-card--planning .map-card__heading {min-height:48px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #ffffffb0;}
+.strategy-map .map-icon {display:block;flex:0 0 auto;width:40px;height:40px;}
+.strategy-map [data-node="ltv-kpi"] {grid-column:1/9;grid-row:1;}
+.strategy-map [data-node="three-c"] {grid-column:10/18;grid-row:1;}
+.strategy-map [data-node="big-idea"] {grid-column:19/27;grid-row:1;}
+.strategy-map [data-node="acquisition"] {grid-column:1/7;grid-row:2;}
+.strategy-map [data-node="lp"] {grid-column:9/19;grid-row:2;}
+.strategy-map [data-node="response-sales"] {grid-column:21/27;grid-row:2;}
+.strategy-map [data-node="improvement"] {grid-column:1/9;grid-row:3;}
+.strategy-map [data-node="multilingual"] {grid-column:10/18;grid-row:3;}
+.strategy-map [data-node="overseas"] {grid-column:19/27;grid-row:3;}
+.strategy-map [data-node="lp"] .map-card__inner {padding:18px 18px 12px;}
+.strategy-map [data-node="lp"] h3 {font-size:38px;}
+.strategy-map .map-story-title {padding:12px 0!important;border-block:1px solid #ffffffa0;margin:12px 0 0!important;font-size:16px!important;}
+.strategy-map .map-story {list-style:none;margin:0;padding:0;display:grid;gap:0;}
+.strategy-map .map-story li {display:flex;align-items:center;gap:26px;margin:0;padding:10px 12px;border-bottom:1px solid #ffffff80;text-align:left;font:700 24px/1.5 var(--map-bold);}
+.strategy-map .map-story li:last-child {border-bottom:0;}
+.strategy-map .map-story .map-icon {width:36px;height:36px;}
+.strategy-map .map-channels {list-style:none;margin:14px 0 0;padding:0;display:grid;}
+.strategy-map .map-channels li {display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px 0;margin:0;font:400 18px/1.5 var(--map-regular);}
+.strategy-map .map-channels li+li {border-top:1px dashed #ffffff80;}
+.strategy-map .map-channels .map-icon {width:52px;height:52px;}
+.strategy-map [data-node="acquisition"] h3, .strategy-map [data-node="response-sales"] h3 {font-size:28px;}
+.strategy-map .map-results {display:flex;flex:1;flex-direction:column;align-items:center;justify-content:space-evenly;gap:18px;padding-top:22px;}
+.strategy-map .map-results .map-icon {width:62px;height:62px;}
+.strategy-map .map-card--compact .map-card__inner {flex-direction:row;align-items:center;gap:10px;min-height:100px;}
+.strategy-map .map-card--compact h3 {font-size:22px;}
+.strategy-map .map-card--compact p {font-size:14px;}
+.strategy-map .map-connectors {position:absolute;inset:0;width:100%;height:100%;z-index:0;overflow:visible;pointer-events:none;color:#fff;}
+.strategy-map .map-arrow-line {fill:none;stroke:currentColor;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;}
+.strategy-map .map-arrow-head {fill:currentColor;stroke:none;}
+.strategy-map .map-phase {display:none;}
+.strategy-map .map-sr-only {position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
+.strategy-map.is-map-pending .map-card__inner {opacity:0;}
+.strategy-map.is-map-pending .map-arrow-line {stroke-dashoffset:1;}
+.strategy-map.is-map-pending .map-arrow-head {opacity:0;}
+/* B: three editorial lanes distinguish planning, execution and expansion. */
+.strategy-map[data-design="b"] {row-gap:105px;padding-top:44px;}
+.strategy-map[data-design="b"] .map-card__inner {border:0;border-top:2px solid #fff;border-bottom:1px solid #ffffff55;padding:20px 12px;}
+.strategy-map[data-design="b"] .map-card--planning .map-card__heading {flex-direction:column;border:0;padding:0;margin-bottom:16px;}
+.strategy-map[data-design="b"] .map-phase {display:block;position:absolute;left:10px;right:10px;margin:0;padding:0;color:#84caeb;font:700 15px/1.5 var(--map-bold);letter-spacing:.1em;}
+.strategy-map[data-design="b"] .map-phase span {margin-left:10px;}
+.strategy-map[data-design="b"] .map-phase--plan {top:0;}
+.strategy-map[data-design="b"] [data-node="lp"] h3 {font-size:32px;}
+.strategy-map[data-design="b"] .map-story {grid-template-columns:1fr 1fr;gap:10px;padding-top:18px;}
+.strategy-map[data-design="b"] .map-story li {flex-direction:column;gap:9px;border:1px solid #ffffff65;padding:12px 0;font-size:18px;text-align:center;}
+.strategy-map[data-design="b"] .map-story li:last-child {grid-column:1/-1;flex-direction:row;justify-content:center;border:1px solid #ffffff65;}
+.strategy-map[data-design="b"] .map-channels li {padding:15px 0;}
+.strategy-map[data-design="b"] .map-card--compact .map-card__inner {flex-direction:column;gap:14px;}
+.strategy-map[data-design="b"] .map-card--compact .map-card__heading {flex-direction:column;gap:14px;}
+/* C: the LP is the hub, with planning at left and business results at right. */
+.strategy-map[data-design="c"] {row-gap:52px;}
+.strategy-map[data-design="c"] [data-node="ltv-kpi"] {grid-column:1/8;grid-row:1;}
+.strategy-map[data-design="c"] [data-node="three-c"] {grid-column:1/8;grid-row:2;}
+.strategy-map[data-design="c"] [data-node="big-idea"] {grid-column:1/8;grid-row:3;}
+.strategy-map[data-design="c"] [data-node="lp"] {grid-column:10/19;grid-row:1/4;}
+.strategy-map[data-design="c"] [data-node="response-sales"] {grid-column:21/27;grid-row:1/4;}
+.strategy-map[data-design="c"] [data-node="acquisition"] {grid-column:1/8;grid-row:4/6;}
+.strategy-map[data-design="c"] [data-node="improvement"] {grid-column:10/19;grid-row:4/6;}
+.strategy-map[data-design="c"] [data-node="multilingual"] {grid-column:21/27;grid-row:4;}
+.strategy-map[data-design="c"] [data-node="overseas"] {grid-column:21/27;grid-row:5;}
+.strategy-map[data-design="c"] .map-card__inner {border:1px solid #ffffff9c;border-radius:18px;padding:18px 12px;}
+.strategy-map[data-design="c"] [data-node="lp"] .map-card__inner {border:2px solid #fff;justify-content:center;}
+.strategy-map[data-design="c"] .map-card--planning .map-card__heading {margin-bottom:8px;padding-bottom:8px;gap:8px;}
+.strategy-map[data-design="c"] .map-card--planning h3 {font-size:20px;}
+.strategy-map[data-design="c"] .map-card--planning p {font-size:14px;}
+.strategy-map[data-design="c"] .map-card--planning .map-icon {width:32px;height:32px;}
+.strategy-map[data-design="c"] .map-card--compact .map-card__inner {flex-direction:column;gap:16px;}
+.strategy-map[data-design="c"] .map-card--compact .map-card__heading {flex-direction:column;gap:16px;}
+.strategy-map[data-design="c"] .map-card--compact h3 {font-size:19px;}
+.strategy-map[data-design="c"] .map-channels {grid-template-columns:repeat(3,1fr);gap:8px;}
+.strategy-map[data-design="c"] .map-channels li {border:0;padding:10px 0;font-size:12px;}
+.strategy-map[data-design="c"] .map-channels .map-icon {width:32px;height:32px;}
+/* Readable reflow, not a scaled-down raster diagram. Arrows use outside gutters. */
+@media(max-width:800px){
+  .strategy-map, .strategy-map[data-design="b"], .strategy-map[data-design="c"] {grid-template-columns:minmax(0,1fr);row-gap:42px;padding:8px 24px;}
+  .strategy-map .map-card[data-node] {grid-column:1;grid-row:auto;}
+  .strategy-map .map-card__inner {padding:20px 14px;}
+  .strategy-map .map-card--planning .map-card__heading {flex-direction:row;}
+  .strategy-map .map-card h3, .strategy-map[data-design="c"] .map-card--planning h3 {font-size:21px;}
+  .strategy-map .map-card p, .strategy-map[data-design="c"] .map-card--planning p {font-size:14px;}
+  .strategy-map [data-node="lp"] h3, .strategy-map[data-design="b"] [data-node="lp"] h3 {font-size:32px;}
+  .strategy-map [data-node="acquisition"] h3, .strategy-map [data-node="response-sales"] h3 {font-size:24px;}
+  .strategy-map .map-channels, .strategy-map[data-design="c"] .map-channels {grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:20px;}
+  .strategy-map .map-channels li, .strategy-map[data-design="b"] .map-channels li, .strategy-map[data-design="c"] .map-channels li {padding:0;border:0;font-size:12px;gap:10px;}
+  .strategy-map .map-channels .map-icon, .strategy-map[data-design="c"] .map-channels .map-icon {width:32px;height:32px;}
+  .strategy-map .map-channels li+li {border:0;}
+  .strategy-map .map-story li {font-size:21px;gap:22px;}
+  .strategy-map .map-story-title {font-size:14px!important;}
+  .strategy-map .map-results {flex-direction:row;gap:14px;padding-top:20px;}
+  .strategy-map .map-results .map-icon {width:44px;height:44px;}
+  .strategy-map .map-card--compact .map-card__inner {min-height:120px;}
+  .strategy-map[data-design="b"] .map-phase {display:none;}
+  .strategy-map[data-design="b"] .map-card--compact .map-card__inner,
+  .strategy-map[data-design="c"] .map-card--compact .map-card__inner {flex-direction:row;}
+  .strategy-map[data-design="b"] .map-card--compact .map-card__heading,
+  .strategy-map[data-design="c"] .map-card--compact .map-card__heading {flex-direction:row;}
+}
+@media(prefers-reduced-motion:reduce), print {
+  .strategy-map.is-map-pending .map-card__inner {opacity:1!important;transform:none!important;}
+  .strategy-map.is-map-pending .map-arrow-line {stroke-dashoffset:0!important;}
+  .strategy-map.is-map-pending .map-arrow-head {opacity:1!important;}
+}
