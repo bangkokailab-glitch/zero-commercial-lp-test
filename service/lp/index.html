@@ -75,6 +75,38 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 <link rel="stylesheet" href="secret09-selected.css?v=20261010-no-figure-numbers">
 </head>
 <body>
+<!-- Inline STEP artwork also works when this test page is opened via file://. -->
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="zero-flow-badge-bg" d="M0 0H180V84H0Z" fill="#20aebd"/>
+    <path id="zero-flow-word-step" d="M18 24h18v6H18v-6Zm0 0h6v20h-6V24Zm0 14h18v6H18v-6Zm12 0h6v20h-6V38ZM18 52h18v6H18v-6ZM42 24h18v6h-6v28h-6V30h-6v-6ZM66 24h18v6H72v8h10v6H72v8h12v6H66V24ZM90 24h18v6H96v9h6V30h6v15H96v13h-6V24Z" fill="#fff"/>
+    <path id="zero-flow-digit-0" d="M0 0h14v4H0V0ZM0 0h4v30H0V0Zm10 0h4v30h-4V0ZM0 26h14v4H0v-4Z" fill="#fff"/>
+    <path id="zero-flow-digit-1" d="M5 0h5v30H5V7L1 11V5l4-5Z" fill="#fff"/>
+    <path id="zero-flow-digit-2" d="M0 0h14v4H0V0Zm10 0h4v15h-4V0ZM0 13h14v4H0v-4Zm0 0h4v17H0V13Zm0 13h14v4H0v-4Z" fill="#fff"/>
+    <path id="zero-flow-digit-3" d="M0 0h14v4H0V0Zm10 0h4v30h-4V0ZM2 13h12v4H2v-4ZM0 26h14v4H0v-4Z" fill="#fff"/>
+    <path id="zero-flow-digit-4" d="M0 0h4v17H0V0Zm10 0h4v30h-4V0ZM0 13h14v4H0v-4Z" fill="#fff"/>
+    <path id="zero-flow-digit-5" d="M0 0h14v4H0V0ZM0 0h4v17H0V0Zm0 13h14v4H0v-4Zm10 13h4V13h-4v13ZM0 26h14v4H0v-4Z" fill="#fff"/>
+    <path id="zero-flow-digit-6" d="M0 0h14v4H0V0ZM0 0h4v30H0V0Zm0 13h14v4H0v-4Zm10 13h4V13h-4v13ZM0 26h14v4H0v-4Z" fill="#fff"/>
+    <path id="zero-flow-digit-7" d="M0 0h14v4H0V0Zm10 0h4v30h-4V0Z" fill="#fff"/>
+    <path id="zero-flow-digit-8" d="M0 0h14v4H0V0ZM0 0h4v30H0V0Zm10 0h4v30h-4V0ZM0 13h14v4H0v-4ZM0 26h14v4H0v-4Z" fill="#fff"/>
+    <path id="zero-flow-digit-9" d="M0 0h14v4H0V0ZM0 0h4v17H0V0Zm10 0h4v30h-4V0ZM0 13h14v4H0v-4ZM0 26h14v4H0v-4Z" fill="#fff"/>
+  </defs>
+  <symbol id="zero-flow-step-01" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-0"/><use href="#zero-flow-digit-1" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-02" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-0"/><use href="#zero-flow-digit-2" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-03" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-0"/><use href="#zero-flow-digit-3" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-04" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-0"/><use href="#zero-flow-digit-4" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-05" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-0"/><use href="#zero-flow-digit-5" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-06" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-0"/><use href="#zero-flow-digit-6" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-07" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-0"/><use href="#zero-flow-digit-7" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-08" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-0"/><use href="#zero-flow-digit-8" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-09" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-0"/><use href="#zero-flow-digit-9" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-10" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-1"/><use href="#zero-flow-digit-0" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-11" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-1"/><use href="#zero-flow-digit-1" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-12" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-1"/><use href="#zero-flow-digit-2" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-13" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-1"/><use href="#zero-flow-digit-3" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-14" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-1"/><use href="#zero-flow-digit-4" transform="translate(20)"/></g></symbol>
+  <symbol id="zero-flow-step-15" viewBox="0 0 180 84"><use href="#zero-flow-badge-bg"/><use href="#zero-flow-word-step"/><g transform="translate(126 27)"><use href="#zero-flow-digit-1"/><use href="#zero-flow-digit-5" transform="translate(20)"/></g></symbol>
+</svg>
     <div id="container">
 
         <header id="top-header">
@@ -1734,63 +1766,63 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
                     <p class="pricing-flow-intro">お問い合わせ後、ヒアリングと無料提案を通じて、制作の方向性と費用をご確認いただきます。ご契約後は、企画構成・原稿・デザインを段階ごとに確認しながら制作を進めます。</p>
                     <ol class="pricing-flow-list pricing-flow-list--static">
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 01"><use href="images/flow-step-badges-20260920.svg?v=2#step-01"></use></svg><img fetchpriority="low" src="images/flow1.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 01"><use href="#zero-flow-step-01"></use></svg><img fetchpriority="low" src="images/flow1.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>お問い合わせ</h4><p>お問い合わせフォームに、会社名・ご担当者名・ご連絡先などの基本情報と、ご相談内容をご入力ください。</p><p>制作したい商品・サービスや、現在お困りのことなど、分かる範囲でお知らせください。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 02"><use href="images/flow-step-badges-20260920.svg?v=2#step-02"></use></svg><img fetchpriority="low" src="images/flow2.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 02"><use href="#zero-flow-step-02"></use></svg><img fetchpriority="low" src="images/flow2.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>ヒアリングフォームへのご回答</h4><p>お問い合わせ内容を確認後、ZEROからLP制作のヒアリングフォームをお送りします。いただいたご質問にも、あわせて回答します。</p><p>商品・サービスの特徴、自社の強み、想定するユーザー、制作の目的などを、できる限り詳しくご記入ください。</p><p>フォーム内に打ち合わせの希望日程もご入力いただき、ご回答後に日程を調整します。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 03"><use href="images/flow-step-badges-20260920.svg?v=2#step-03"></use></svg><img fetchpriority="low" src="images/flow3.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 03"><use href="#zero-flow-step-03"></use></svg><img fetchpriority="low" src="images/flow3.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>初回のお打ち合わせ・ヒアリング</h4><p>ご回答いただいた内容をもとに、ビデオミーティングで詳しくお話を伺います。</p><p>商品・サービスの理解を深めながら、LPで伝えたいこと、ユーザーに取ってほしい行動、予算や公開時期などを確認します。この打ち合わせで伺った内容をもとに、後日、無料提案を作成します。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 04"><use href="images/flow-step-badges-20260920.svg?v=2#step-04"></use></svg><img fetchpriority="low" src="images/flow4.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 04"><use href="#zero-flow-step-04"></use></svg><img fetchpriority="low" src="images/flow4.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>2回目のお打ち合わせ・無料提案のプレゼンテーション</h4><p>初回ヒアリングの内容をもとに、初期構成案、ファーストビューのデザイン1案、お見積書を作成します。</p><p>2回目のビデオミーティングでは、画面を共有しながら提案内容をプレゼンテーションします。構成やデザインの意図、プランごとの対応範囲、費用をご説明し、ご質問にもお答えします。</p><p>提案資料とお見積書は、ミーティング終了後にお送りします。ご説明と資料の内容を踏まえて、ご発注をご検討ください。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 05"><use href="images/flow-step-badges-20260920.svg?v=2#step-05"></use></svg><img fetchpriority="low" src="images/flow5.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 05"><use href="#zero-flow-step-05"></use></svg><img fetchpriority="low" src="images/flow5.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>プランの選択・ご契約・着手金のお支払い</h4><p>提案内容をご確認いただき、ご依頼いただける場合は制作プランをお選びください。</p><p>制作内容・対応範囲・費用をご確認のうえ、ご契約手続きを進めます。ご契約後、制作開始前に制作料金の70％を着手金としてお支払いいただき、ご入金を確認後に制作を開始します。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 06"><use href="images/flow-step-badges-20260920.svg?v=2#step-06"></use></svg><img fetchpriority="low" src="images/flow6.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 06"><use href="#zero-flow-step-06"></use></svg><img fetchpriority="low" src="images/flow6.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>制作前ヒアリング・スケジュールのご案内</h4><p>ご契約後、制作前の打ち合わせを行います。すでにご回答いただいたヒアリング内容をもとに、提案段階では確認しきれなかった情報や、制作に必要な事項を詳しく伺います。</p><p>確認内容を踏まえ、企画構成・原稿・デザイン・コーディングなどの制作スケジュールをご案内します。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 07"><use href="images/flow-step-badges-20260920.svg?v=2#step-07"></use></svg><img fetchpriority="low" src="images/flow7.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 07"><use href="#zero-flow-step-07"></use></svg><img fetchpriority="low" src="images/flow7.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>調査・戦略整理・企画構成案のご提出</h4><p>選択いただいたプランの対応範囲に沿って、必要な調査・分析と、伝える内容の整理を進めます。</p><p>その内容をもとに、何を、どの順番で伝えるかをまとめた「企画構成案」を作成します。見出し、掲載内容、申し込みまでの流れをご確認いただき、認識をすり合わせながら構成を確定します。</p><p>※独自調査を含まないプランでは、ご提供いただいた情報・方針をもとに企画構成案を作成します。</p><p>※確定後に構成を全面的に変更する場合は、通常の修正範囲には含まれません。追加費用とスケジュールをご相談します。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 08"><use href="images/flow-step-badges-20260920.svg?v=2#step-08"></use></svg><img fetchpriority="low" src="images/flow8.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 08"><use href="#zero-flow-step-08"></use></svg><img fetchpriority="low" src="images/flow8.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>原稿の執筆・内容確認</h4><p>確定した企画構成案に沿って、ZEROが原稿の初稿を作成します。ユーザーの悩み、商品の価値、判断に必要な情報を、読み進めやすい文章にまとめます。</p><p>商品・サービスの仕様、価格、実績、数値などの事実関係は、お客様にもご確認いただきます。</p><p>デザイン・コーディングプランでは、お客様に原稿の最終編集をお願いします。マーケティングプラン・ZERO式LP制作プランでは、ZEROが作成した原稿の編集まで対応します。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 09"><use href="images/flow-step-badges-20260920.svg?v=2#step-09"></use></svg><img fetchpriority="low" src="images/flow10.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 09"><use href="#zero-flow-step-09"></use></svg><img fetchpriority="low" src="images/flow10.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>デザインに使用する素材の準備</h4><p>ロゴ、商品写真、サービスの利用風景、実績資料など、デザインに使用する素材をご共有ください。</p><p>必要な素材が不足している場合は、代替方法や購入・制作の必要性をご相談します。有料素材や追加制作が必要な場合は、事前に費用をご案内します。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 10"><use href="images/flow-step-badges-20260920.svg?v=2#step-10"></use></svg><img fetchpriority="low" src="images/flow9.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 10"><use href="#zero-flow-step-10"></use></svg><img fetchpriority="low" src="images/flow9.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>ファーストビューのデザイン2案をご提出</h4><p>原稿と素材をもとに、ページの第一印象となるファーストビューの方向性を、すべての制作プランで2案作成します。</p><p>商材や想定ユーザー、集客方法に応じて、スマートフォン版・PC版のどちらから制作するかを決めます。2案から方向性に合う1案をお選びいただきます。修正をご希望の場合は、選定した方向性をもとに毎回2つの修正案をご提示し、比較・選択を重ねて最終1案へ絞ります。</p><p>ファーストビューのデザイン修正は基本3回までです。2案の提示はファーストビューの方向性に対するもので、ページ下部全体やPC・スマートフォンで毎回別案を2案ずつ制作するものではありません。</p><p>※契約前の無料提案はファーストビューのデザイン1案です。公開後のテスト用FVは選定した共通デザインのコピー違いで、マーケティングプランは合計2パターン、ZERO式LP制作プランは合計4パターンです。A/Bテストの設定・運用は別契約です。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 11"><use href="images/flow-step-badges-20260920.svg?v=2#step-11"></use></svg><img fetchpriority="low" src="images/flow11.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 11"><use href="#zero-flow-step-11"></use></svg><img fetchpriority="low" src="images/flow11.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>もう一方の端末のファーストビューを制作</h4><p>選定したファーストビューの方向性が固まったら、まだ制作していない端末のデザインを作成します。</p><p>スマートフォン版から制作した場合はPC版を、PC版から制作した場合はスマートフォン版を作成し、それぞれの画面で読みやすく、伝わりやすい見せ方に整えます。</p><p>※PCのみ・スマートフォンのみのご契約では、対象端末のみ制作します。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 12"><use href="images/flow-step-badges-20260920.svg?v=2#step-12"></use></svg><img fetchpriority="low" src="images/flow9.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 12"><use href="#zero-flow-step-12"></use></svg><img fetchpriority="low" src="images/flow9.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>ページ下部のデザイン制作・ご確認</h4><p>ファーストビューのデザイン確定後、企画構成案と原稿に沿って、ページ下部のデザインを制作します。</p><p>商品説明、実績、料金、申し込みへの導線などを、ページ全体で統一感のあるデザインに仕上げます。ご確認いただいた内容をもとに調整し、全体のデザインを確定します。</p><p>ファーストビューより下のデザイン修正は、基本的に3回まで対応します。軽微な調整についても、内容を確認しながら対応します。</p><p>※ファーストビュー・ページ下部ともに、確定したデザインの作り直しは通常の修正範囲には含まれません。ご希望の場合は、追加費用とスケジュールをご相談します。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 13"><use href="images/flow-step-badges-20260920.svg?v=2#step-13"></use></svg><img fetchpriority="low" src="images/flow12.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 13"><use href="#zero-flow-step-13"></use></svg><img fetchpriority="low" src="images/flow12.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>コーディング・表示と動作の確認</h4><p>確定したデザインをもとに、ブラウザで閲覧・操作できるLPを構築します。</p><p>契約対象の端末で文字や画像の表示を確認し、リンク・ボタンなどの動作をチェックします。既存のお問い合わせフォームや連絡先へのリンク設置は制作プランに含みます。新しいフォームの構築は有料オプションです。計測設定は、ご契約前のお見積もりで合意した範囲を確認します。</p><p>完成後は確認用のページをご案内し、お客様にも最終確認をお願いします。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 14"><use href="images/flow-step-badges-20260920.svg?v=2#step-14"></use></svg><img fetchpriority="low" src="images/flow13.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 14"><use href="#zero-flow-step-14"></use></svg><img fetchpriority="low" src="images/flow13.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>納品・残金のお支払い</h4><p>最終確認が完了したら、ご契約で定めた形式・方法で納品します。すべての制作プランに、事前に合意した公開環境への反映を含みます。サーバー・ドメイン・外部サービス等の利用料や、公開環境の新規構築・移行は含みません。必要な場合は、ご契約前に対応範囲と費用を確認します。</p><p>納品後、制作料金の残り30％を請求書に記載の期日までにお支払いいただきます。</p></div>
                         </li>
                         <li>
-                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 15"><use href="images/flow-step-badges-20260920.svg?v=2#step-15"></use></svg><img fetchpriority="low" src="images/flow12.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
+                            <svg class="pricing-flow-number-image" role="img" aria-label="STEP 15"><use href="#zero-flow-step-15"></use></svg><img fetchpriority="low" src="images/flow12.svg" alt="" width="54" height="54" loading="lazy" decoding="async">
                             <div class="pricing-flow-step-content"><h4>公開後の運用・改善</h4><p>公開後の支援をご希望の場合は、LP運用改善や広告運用など、必要なサービスをご案内します。</p><p>アクセス解析・ヒートマップ・A/Bテストなどを通じて、ユーザーの反応を確かめながら改善を進めます。運用・改善は、制作プランとは別契約で対応します。</p></div>
                         </li>
                     </ol>
