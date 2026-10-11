@@ -3,7 +3,7 @@
   position:relative;
   isolation:isolate;
   overflow:hidden;
-  padding:58px 0 64px;
+  padding:calc(var(--section-tip-height) + 26px) 0 64px;
   background:#080808;
   color:#fff;
   scroll-margin-top:72px;
@@ -15,8 +15,8 @@
 }
 #strategy-expansion h2 {
   margin:0 auto 42px;padding:0;width:100%;border:0;
-  font-family:var(--zero-shingo-bold);font-size:clamp(36px,5.1vw,64px);
-  font-weight:700;line-height:1.45;letter-spacing:0;text-align:center;
+  font-family:var(--zero-shingo-bold);
+  font-weight:700;letter-spacing:0;text-align:center;
 }
 #strategy-expansion .strategy-expansion__line {display:block;}
 #strategy-expansion h2 em {color:#f9d56c;font-style:normal;}
@@ -29,27 +29,19 @@
 }
 #strategy-expansion .strategy-expansion__copy {margin:0 auto;max-width:1000px;}
 #strategy-expansion .strategy-expansion__copy p {
-  margin:0;text-align:center;font-family:var(--zero-shingo-regular);
-  font-size:20px;line-height:1.9;color:#fff;
+  margin:0;color:#fff;
 }
 #strategy-expansion .strategy-expansion__copy .strategy-expansion__closing {
-  margin-top:10px;font-family:var(--zero-shingo-bold);
-  font-size:30px;font-weight:700;line-height:1.6;text-wrap:balance;
+  margin-top:22px;text-wrap:balance;
 }
-#strategy-expansion .strategy-expansion__tip {
-  position:absolute;z-index:2;top:0;left:50%;transform:translateX(-50%);
-  width:72px;height:36px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%);
+#strategy-expansion::before {
+  content:"";top:-2px;z-index:2;
+  background:#e60033 radial-gradient(#c6002c 33%,transparent 33%) 0 0 / 4px 4px;
 }
-#strategy-expansion .strategy-expansion__tip span {
-  position:absolute;left:calc(50% - 7px);top:0;width:14px;height:14px;
-  border-right:2px solid #222;border-bottom:2px solid #222;transform:rotate(45deg);
-}
-#strategy-expansion .strategy-expansion__tip span+span {top:8px;}
 @media(max-width:768px){
-  #strategy-expansion {padding:48px 0;scroll-margin-top:64px;}
+  #strategy-expansion {padding:calc(var(--section-tip-height) + 20px) 0 48px;scroll-margin-top:64px;}
   #strategy-expansion .strategy-expansion__logo {width:72px;margin-bottom:22px;}
-  #strategy-expansion h2 {font-size:clamp(22px,5.5vw,40px);line-height:1.55;margin-bottom:26px;}
+  #strategy-expansion h2 {margin-bottom:26px;}
   #strategy-expansion .strategy-expansion__diagram {margin-bottom:26px;}
-  #strategy-expansion .strategy-expansion__copy p {font-size:17px;line-height:1.9;}
-  #strategy-expansion .strategy-expansion__copy .strategy-expansion__closing {font-size:22px;margin-top:16px;}
+  #strategy-expansion .strategy-expansion__copy .strategy-expansion__closing {margin-top:18px;}
 }
