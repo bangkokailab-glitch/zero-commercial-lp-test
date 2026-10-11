@@ -1,91 +1,46 @@
-/* Preserve approved copy and dimensions; pulse the complete two-line message. */
-/* Approved oval price callout: live Web-font text, shared CTA motion.
-   Only the gallery CTAs carry this element; their button design stays intact. */
-.cta-offer--gold .offer-price-bubble {
-  --price-bubble-width: 240px;
-  position: absolute;
-  left: -65px;
-  top: -22px;
-  z-index: 2;
-  display: block;
-  width: var(--price-bubble-width);
-  height: calc(var(--price-bubble-width) * .44);
-  pointer-events: none;
-  color: #000;
-  font-family: var(--zero-shingo-bold);
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 1;
-  text-align: center;
-  filter: drop-shadow(3px 5px 0 #0005);
+/* Approved circle callout: live Morisawa text, never rasterized.
+   Keep the complete copy centered on the red frame, excluding decorations. */
+:is(.cta.cta-offer--gold, #price) .offer-proposal { container:proposal / inline-size; }
+.offer-price-bubble {
+  position:absolute;
+  left:3.8191cqw;
+  top:-1.206cqw;
+  z-index:2;
+  display:block;
+  width:16.0804cqw;
+  aspect-ratio:1;
+  pointer-events:none;
+  color:#161616;
+  font-family:var(--zero-shingo-bold);
+  font-weight:700;
+  letter-spacing:0;
+  line-height:1;
+  text-align:center;
+  transform-origin:50% 50%;
+  filter:drop-shadow(2px 4px 0 #0005);
 }
-.cta-offer--gold .offer-price-bubble__shape {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  fill: #fff;
-  stroke: #b68d38;
-  stroke-width: 2.5;
-  stroke-linejoin: round;
+.offer-price-bubble__shape {
+  position:absolute; inset:0;
+  display:block; width:100%; height:100%; overflow:visible;
+  fill:#fff; stroke:#b68d38; stroke-width:2.5; stroke-linejoin:round;
 }
-.cta-offer--gold .offer-price-bubble__text {
-  position: relative;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: calc(var(--price-bubble-width) * .015);
-  padding-bottom: 3px;
+.offer-price-bubble__text {
+  position:absolute; inset:0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:.175cqw; padding-bottom:.262cqw;
 }
-.cta-offer--gold .offer-price-bubble__lead {
-  display: block;
-  font: inherit;
-  font-size: calc(var(--price-bubble-width) * .073);
-  line-height: 1.4;
-  white-space: nowrap;
+.offer-price-bubble__lead {
+  display:block;
+  font-family:var(--zero-shingo-regular); font-weight:400;
+  font-size:1.1361cqw; line-height:1.45; color:#444; white-space:nowrap;
 }
-.cta-offer--gold .offer-price-bubble__price {
-  display: block;
-  font: inherit;
-  font-size: calc(var(--price-bubble-width) * .115);
-  line-height: 1.1;
-  white-space: nowrap;
+.offer-price-bubble__number {
+  display:block; margin-left:-.262cqw;
+  font-size:5.6806cqw; line-height:1.12; letter-spacing:-.045em; color:#96701f;
+  -webkit-text-stroke:.07865cqw currentColor; paint-order:stroke fill;
 }
-.cta-offer--gold .offer-price-bubble__number {
-  font: inherit;
-  font-size: calc(var(--price-bubble-width) * .22);
-  letter-spacing: -.045em;
-}
-/* On narrower buttons the oval sits above, with its tail routed beside the copy. */
-.cta.cta-offer--gold .offer-proposal.offer-proposal--price-above {
-  margin-top: 110px;
-}
-.cta-offer--gold .offer-proposal--price-above .offer-price-bubble {
-  --price-bubble-width: 200px;
-  left: -8px;
-  top: -94px;
-}
-@media (max-width: 768px) {
-  .cta.cta-offer--gold .offer-proposal:has(.offer-price-bubble) { margin-top: 90px; }
-  .cta-offer--gold .offer-price-bubble {
-    --price-bubble-width: 170px;
-    left: -8px;
-    top: -81px;
-  }
-}
-@media (min-width: 769px) and (max-width: 959px) {
-  .cta.cta-offer--gold .offer-proposal:has(.offer-price-bubble):not(.price-layout-ready) {
-    margin-top: 110px;
-  }
-  .cta-offer--gold .offer-proposal:not(.price-layout-ready) .offer-price-bubble {
-    --price-bubble-width: 200px;
-    left: -8px;
-    top: -94px;
-  }
+.offer-price-bubble__unit {
+  display:block; font-size:2.0101cqw; line-height:1.35; white-space:nowrap;
 }
 
 :root {
@@ -206,4 +161,38 @@
 @media(prefers-reduced-motion:reduce) {
   :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift,.offer-gift__copy,.offer-gift__arrows { animation:none; transition:none; }
   .offer-gift__copy { transform:none !important; }
+}
+
+/* Proportions match the approved 995 x 156px frame / 160px circle comp.
+   Equal inset on both sides keeps decorations out of copy alignment. */
+:is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift--with-price {
+  display:flex; align-items:center; justify-content:center;
+  box-sizing:border-box; width:100%; height:15.6784cqw; padding:0;
+}
+.offer-gift--with-price .offer-gift__copy {
+  flex-shrink:0; max-width:none; margin:0; gap:.804cqw;
+  font-size:3.2161cqw; line-height:1.55; letter-spacing:.035em;
+}
+.offer-gift--with-price .offer-gift__arrows { width:5.6281cqw; right:2.4121cqw; }
+@media(prefers-reduced-motion:no-preference) {
+  .offer-price-bubble { animation:zero-consultation-label-pop 3.2s ease-in-out infinite paused; }
+  .offer-gift.is-in-view .offer-price-bubble { animation-play-state:running; }
+}
+/* Small screens keep readable type without forcing the circle beside the copy.
+   The copy remains in the center of the entire red frame. */
+@container proposal (max-width:599px) {
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift--with-price { height:calc(172px + 18cqw); }
+  .offer-price-bubble { width:84px; left:12px; top:-10px; }
+  .offer-price-bubble__text { gap:.5px; padding-bottom:0; }
+  .offer-price-bubble__lead { width:50px; font-size:9px; line-height:1.1; white-space:normal; }
+  .offer-price-bubble__number { font-size:28px; margin-left:-2px; -webkit-text-stroke:.42px currentColor; }
+  .offer-price-bubble__unit { font-size:11px; }
+  .offer-gift--with-price .offer-gift__copy { font-size:min(24px,5.6cqw); letter-spacing:.015em; gap:6px; }
+  .offer-gift--with-price .offer-gift__arrows {
+    top:auto; bottom:20px; right:16px; width:30px;
+    --proposal-arrow-offset-y:0px; transform:translateY(0);
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .offer-price-bubble { animation:none; transform:none; }
 }
