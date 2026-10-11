@@ -1,4 +1,13 @@
 /* Approved closing concept replaces chapter 10; the nine chapters stay intact. */
+/* One video, poster and overlay continue through the offer and strategy content.
+   Existing background controllers observe this common parent for pinning/playback. */
+.campaign-strategy-journey {
+  position:relative;display:flow-root;isolation:isolate;overflow:clip;background:#080808;
+}
+.campaign-strategy-journey > #offer-after-09,
+.campaign-strategy-journey > #strategy-expansion {
+  position:relative;z-index:1;background:transparent;
+}
 /* Keep the pre-existing double chevron outside the clipped video section. */
 #offer-after-09.cta.cta-offer--gold { padding-bottom:48px; }
 .strategy-campaign-handoff { height:0; z-index:3; }
