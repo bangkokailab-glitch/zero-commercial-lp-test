@@ -38,7 +38,16 @@
   content:"";top:-2px;z-index:2;
   background:#e60033 radial-gradient(#c6002c 33%,transparent 33%) 0 0 / 4px 4px;
 }
+/* Continue the same triangle and animated double-chevron into pricing. */
+#price.section-start-handoff {
+  position:relative;
+  padding-top:calc(var(--section-tip-height) + 26px);
+}
+#price.section-start-handoff::before {
+  content:"";top:-2px;z-index:2;background:#161616;
+}
 @media(max-width:768px){
+  #price.section-start-handoff {padding-top:calc(var(--section-tip-height) + 20px);}
   #strategy-expansion {padding:calc(var(--section-tip-height) + 20px) 0 48px;scroll-margin-top:64px;}
   #strategy-expansion .strategy-expansion__logo {width:72px;margin-bottom:22px;}
   #strategy-expansion h2 {margin-bottom:26px;}
