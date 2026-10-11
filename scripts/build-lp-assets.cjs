@@ -3,6 +3,13 @@ const fs=require('fs'),path=require('path');
 const esbuild=process.env.ZERO_BUILD_TOOLS ? require(path.join(process.env.ZERO_BUILD_TOOLS,'esbuild')) : require('esbuild');
 const root=path.resolve(__dirname,'../service/lp');
 const config=JSON.parse(fs.readFileSync(path.join(root,'asset-bundle.config.json'),'utf8'));
+// The navigation policy must run before parsing fragments or restoring scroll.
+const htmlPath=path.join(root,'index.html');
+const html=fs.readFileSync(htmlPath,'utf8');
+const startScript=fs.readFileSync(path.join(root,'preview-start.js'),'utf8').trim();
+const nextHTML=html.replace(/<script>\/\* (?:Fresh opens and reloads|Run in the head:)[\s\S]*?(?=\ndocument\.documentElement\.classList\.add\('zero-has-deferred-backgrounds')/,()=>`<script>${startScript}\n`);
+if(nextHTML===html&&!html.includes(startScript))throw new Error('Missing early navigation script in index.html');
+if(nextHTML!==html)fs.writeFileSync(htmlPath,nextHTML);
 const css=config.css.map(file=>{
   let source=fs.readFileSync(path.join(root,file),'utf8').replace(/^@charset[^;]+;/gm,'');
   const base=path.posix.dirname(file);

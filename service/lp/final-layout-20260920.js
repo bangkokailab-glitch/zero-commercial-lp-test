@@ -31,7 +31,7 @@
 
   function setPanel(panel, open, animate = true) {
     if (!panel) return Promise.resolve();
-    const animated = animate && !reduced.matches && typeof panel.animate === 'function';
+    const animated = animate && !window.zeroPageStart?.restoring && !reduced.matches && typeof panel.animate === 'function';
     const start = animated && !panel.hidden ? panel.getBoundingClientRect().height : 0;
     cancelPanel(panel);
     if (!animated) {
@@ -302,7 +302,7 @@
       const token = accordionScrollToken;
       row.open = !row.open;
       const waits = [render(row)];
-      row.button.focus({ preventScroll: true });
+      if (!window.zeroPageStart?.restoring) row.button.focus({ preventScroll: true });
       holdAccordionScrollAnchor(waits, token);
     }));
     function modeChanged() {
@@ -353,7 +353,7 @@
       const token = accordionScrollToken;
       row.open = !row.open;
       const waits = [render(row)];
-      row.button.focus({ preventScroll: true });
+      if (!window.zeroPageStart?.restoring) row.button.focus({ preventScroll: true });
       holdAccordionScrollAnchor(waits, token);
     }));
 
@@ -420,7 +420,7 @@
       const token = accordionScrollToken;
       row.open = !row.open;
       const wait = render(row);
-      row.button.focus({ preventScroll: true });
+      if (!window.zeroPageStart?.restoring) row.button.focus({ preventScroll: true });
       holdAccordionScrollAnchor([wait], token);
     }));
     const modeChanged = () => rows.forEach(row => render(row, false));

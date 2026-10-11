@@ -17,7 +17,9 @@
     var next = navigation.querySelector('.lp-swipe-next');
     var position = navigation.querySelector('.lp-swipe-position');
     var works = isWorks && document.getElementById('works');
-    var current = 0, frame = 0, heightFrame = 0, settleTimer = 0, lastWidth = -1;
+    var savedCard = window.zeroPageStart?.saved?.swipes?.[track.id];
+    var current = Number.isFinite(savedCard) ? Math.floor(savedCard / perView()) : 0;
+    var frame = 0, heightFrame = 0, settleTimer = 0, lastWidth = -1;
     var lastMobile = mobile.matches;
     function perView() { return mobile.matches || isWorks ? 1 : 4; }
     function count() { return Math.ceil(cards.length / perView()); }
@@ -29,6 +31,7 @@
       return Math.max(0, Math.min(left, track.scrollWidth - track.clientWidth));
     }
     function updateControls() {
+      track.dataset.readingCard = String(current * perView());
       var text = pad(current + 1) + ' / ' + pad(cards.length);
       if (position.textContent !== text) position.textContent = text;
       previous.disabled = current === 0; next.disabled = current >= count() - 1;

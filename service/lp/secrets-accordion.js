@@ -25,7 +25,7 @@
 
   function render(entry, animate = true) {
     const open = !mobile.matches || entry.mobileOpen;
-    const animated = mobile.matches && animate && !reduced.matches && typeof entry.panel.animate === 'function';
+    const animated = mobile.matches && animate && !window.zeroPageStart?.restoring && !reduced.matches && typeof entry.panel.animate === 'function';
     // Initial/desktop state changes do not animate and need no layout read.
     const start = animated && !entry.panel.hidden ? entry.panel.getBoundingClientRect().height : 0;
     entry.button.disabled = !mobile.matches;
@@ -93,7 +93,7 @@
       document.documentElement.classList.add('zero-accordion-switching');
       entry.mobileOpen = !entry.mobileOpen;
       const waits = [render(entry, true)];
-      entry.button.focus({ preventScroll: true });
+      if (!window.zeroPageStart?.restoring) entry.button.focus({ preventScroll: true });
       holdScrollAnchor(waits, token);
     });
     render(entry, false);

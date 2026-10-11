@@ -1,31 +1,31 @@
-/* Fresh opens and reloads start at the FV; in-page and history navigation stay native. */
+/* Run in the head: fresh visits start at the FV; reloads keep the reading position. */
 (() => {
   'use strict';
-  const host = location.hostname;
-  const isPreview = host === 'localhost' || host === '127.0.0.1' || host === '::1' ||
-    /^192\.168\./.test(host) || /^10\./.test(host) || /^172\.(1[6-9]|2\d|3[01])\./.test(host);
-  if (!isPreview) return;
-  const navigation = performance.getEntriesByType('navigation')[0];
-  if (navigation?.type === 'back_forward' || (!navigation && performance.navigation?.type === 2)) return;
-
-  const restoration = history.scrollRestoration;
-  history.scrollRestoration = 'manual';
-  if (location.hash) {
-    history.replaceState(history.state, '', location.pathname + location.search);
+  const entry = performance.getEntriesByType('navigation')[0];
+  const type = entry?.type || ['navigate', 'reload', 'back_forward'][performance.navigation?.type] || 'navigate';
+  const key = 'zeroLPReadingPosition';
+  const path = location.pathname + location.search;
+  const stored = history.state?.[key];
+  const saved = type !== 'navigate' && stored?.version === 1 && stored.path === path ? stored : null;
+  window.zeroPageStart = { key, path, type, saved, restoring: false, interrupted: false };
+  // A reload without a bookmark and native history navigation use browser restoration.
+  history.scrollRestoration = type === 'navigate' || saved ? 'manual' : 'auto';
+  const hash = location.hash;
+  if (hash && (type === 'navigate' || saved)) {
+    history.replaceState(history.state, '', path);
+    if (saved) window.zeroPageStart.hash = hash;
   }
-
-  let readerInteracted = false;
-  const interactionEvents = ['pointerdown', 'touchstart', 'wheel', 'keydown'];
-  const rememberInteraction = () => { readerInteracted = true; };
-  for (const event of interactionEvents) {
-    window.addEventListener(event, rememberInteraction, { passive: true, once: true });
-  }
-  window.addEventListener('pageshow', () => {
-    requestAnimationFrame(() => {
-      // Never pull a reader back after they have already begun navigating the page.
-      if (!readerInteracted) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      history.scrollRestoration = restoration;
-      for (const event of interactionEvents) window.removeEventListener(event, rememberInteraction);
-    });
+  const events = ['pointerdown', 'touchstart', 'wheel', 'keydown'];
+  const stop = () => { window.zeroPageStart.interrupted = true; };
+  events.forEach(event => addEventListener(event, stop, { passive: true, once: true }));
+  addEventListener('pageshow', event => {
+    if (!event.persisted && type === 'navigate' && !window.zeroPageStart.interrupted) {
+      scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+    if (!saved || !window.zeroPageStart.ready) {
+      history.scrollRestoration = 'auto';
+      if (saved && hash && !window.zeroPageStart.ready && !window.zeroPageStart.interrupted) history.replaceState(history.state, '', path + hash);
+    }
+    events.forEach(event => removeEventListener(event, stop));
   }, { once: true });
 })();
