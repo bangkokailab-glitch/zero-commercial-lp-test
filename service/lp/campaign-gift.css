@@ -196,3 +196,63 @@
 @media(prefers-reduced-motion:reduce) {
   .offer-price-bubble { animation:none; transform:none; }
 }
+
+/* Approved mobile comp, 2026-10-11.
+   Restore the pre-circle frame dimensions; only the 72px callout overhangs.
+   Optical text offsets are measured with the actual Morisawa Web font.
+   Desktop proportions and the existing 1.65s / 3.2s animations stay intact. */
+@media(max-width:768px) {
+  .cta.cta-offer--gold .offer-proposal { margin-top:74px; }
+  #price .pricing-proposal-cta > .section-down-cue.section-down-cue--inline { margin-bottom:74px; }
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift--with-price {
+    height:82.875px; padding:0; box-shadow:4px 5px 0 #ffffff30;
+  }
+  .offer-gift--with-price .offer-gift__copy {
+    font-size:min(17.5px,5.3cqw); line-height:1.4;
+    letter-spacing:.015em; gap:6px;
+  }
+  .offer-gift--with-price .offer-gift__arrows {
+    top:50%; bottom:auto; right:3px; width:18px;
+    --proposal-arrow-offset-y:-50%; transform:translateY(-50%);
+  }
+  .offer-price-bubble {
+    width:72px; height:72px; left:-16px; top:-59px;
+    transform-origin:37.216978px 34.988813px;
+    filter:drop-shadow(1px 2px 0 #0005);
+  }
+  .offer-price-bubble__shape { stroke-width:3; }
+  .offer-price-bubble__text {
+    inset:auto; left:37.216978px; top:34.988813px; width:max-content;
+    gap:1.5px; padding-bottom:0;
+    transform:translate(-50%,calc(-50% - .01118655px));
+  }
+  .offer-price-bubble__lead {
+    display:flex; flex-direction:column; align-items:center;
+    width:auto; margin:0; font-size:8.5px; line-height:1.2;
+    white-space:nowrap;
+  }
+  .offer-price-bubble__lead > wbr { display:none; }
+  .offer-price-bubble__lead-row { display:block; }
+  .offer-price-bubble__lead-row:first-child { transform:translateX(2.550311413px); }
+  .offer-price-bubble__lead-row:last-child { transform:translateX(-.283021920px); }
+  .offer-price-bubble__number {
+    margin:0; font-size:24.5px; line-height:.95;
+    -webkit-text-stroke:.4px currentColor; transform:translateX(-.616355254px);
+  }
+  .offer-price-bubble__unit {
+    margin-top:1px; font-size:9px; line-height:1.25;
+    transform:translateX(.21697808px);
+  }
+}
+@media(min-width:480px) and (max-width:768px) {
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift--with-price { height:93.1875px; }
+  .offer-gift--with-price .offer-gift__copy { font-size:min(22px,5.3cqw); }
+}
+@media(max-width:374px) {
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift--with-price { height:78.6875px; }
+  .offer-gift--with-price .offer-gift__copy { font-size:min(16px,5.3cqw); }
+}
+@media(max-width:339px) {
+  :is(.cta.cta-offer--gold, .pricing-proposal-cta) .offer-gift--with-price { height:74.5px; }
+  .offer-gift--with-price .offer-gift__copy { font-size:min(14.5px,5.3cqw); }
+}
