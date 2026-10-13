@@ -33,10 +33,22 @@
     .b{background:#122c4c;color:#fff}.b::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 43%,#3e658a 0,transparent 40%),linear-gradient(155deg,#0b1930,#19395e 60%,#0a203d);z-index:0}.b::after{content:"";position:absolute;z-index:2;left:0;right:0;top:514px;height:100px;background:linear-gradient(transparent,#122c4c 80%);pointer-events:none}
     .b .brand{padding-bottom:9px;border-bottom:1px solid rgba(255,255,255,.5)}.b .tag{color:#bed1dc}.b .hero-copy{top:78px}.b .eyebrow{color:#f8d26a;border:1px solid #f8d26a;margin-bottom:10px}.b h1{display:none}.b .b-copy{display:block;position:absolute;z-index:3;left:24px;right:24px;top:105px;font-family:var(--bold);font-style:normal;transform:none}.b .b-copy .l1{display:block;font-size:27px}.b .b-copy .l2{display:block;font-size:43px;color:#f8d26a;line-height:1.25}.b .b-copy .l3{display:block;font-size:24px}.b .b-product{display:flex;position:absolute;z-index:3;left:24px;right:24px;top:260px;height:49px;background:#f8d26a;color:#132944;align-items:center;justify-content:center;font-family:var(--bold);font-size:25px;white-space:nowrap}.b .benefit{display:none}.b .art{width:326px;left:55px;top:306px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.3))}.b .beam{position:absolute;z-index:0;left:-70px;top:328px;width:470px;height:192px;transform:rotate(-14deg);background:linear-gradient(90deg,transparent,rgba(244,199,91,.18),transparent)}.b .flow{top:548px;gap:0;border:1px solid #e9c369;background:rgba(10,28,50,.84)}.b .flow span{flex:1;text-align:center;padding:8px 2px}.b .flow span+span{border-left:1px solid rgba(233,195,105,.7)}.b .flow i{display:none}.b .offer{top:608px;color:#fff}.b .offer em{color:#f8d26a}.b .cta{background:#e96a38;color:#fff}.b .note{color:#d4dce5}
     .b-copy,.b-product{display:none}
+    .visual-bg{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:fill}
+    .a .bg-b,.b .bg-a{display:none}
+    .a,.b{background:transparent}
+    .a::before,.a::after,.b::before,.b::after,.roundel,.beam,.art{display:none}
+    .a .brand,.b .brand{border:0}
+    .a .eyebrow{background:transparent}.b .eyebrow{border:0}
+    .a .benefit{border-left:0}
+    .a .flow span{background:transparent;border:0}.b .flow{top:549px;border:0;background:transparent}.b .flow span+span{border-left:0}
+    .b .b-product{background:transparent}
+    .a .cta,.b .cta{top:666px;background:transparent;box-shadow:none}.cta::after{display:none}
   </style>
 </head>
 <body>
   <main class="screen a" id="screen">
+    <img class="visual-bg bg-a" src="./assets/fv-background-a.png" alt="店主のまりと斎藤を描いた明るいイラスト">
+    <img class="visual-bg bg-b" src="./assets/fv-background-b.png" alt="店主のまりと斎藤を描いた濃紺のイラスト">
     <div class="brand"><span class="mark">ZERO ASIA</span><span class="tag">バンコクの店舗オーナーへ</span></div>
     <section class="hero-copy"><span class="eyebrow">集客から予約対応まで、ひとつの導線に。</span><h1>バンコク<br>店舗集客<span class="accent">セット</span></h1></section>
     <p class="benefit">お客様の予約を<span class="hl">増やして</span>、<br><span class="small">予約対応の手間を減らす。</span></p>
