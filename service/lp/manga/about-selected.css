@@ -7,7 +7,7 @@
   position:relative;
   isolation:isolate;
   container-type:inline-size;
-  margin:0 8px 30px;
+  margin:0 2px 30px;
   border:2px solid var(--about-gold);
   background:var(--about-paper);
   color:#06213b;
@@ -62,7 +62,7 @@
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:8px;
   margin:0;
-  width:68%;
+  width:70%;
   left:3cqw;
   top:34cqw;
   position:absolute;
@@ -86,7 +86,7 @@
 #about-zero .about-selected__stats dd { position:relative; margin:0; padding-inline:5px; line-height:1.1; }
 #about-zero .about-selected__stats dd strong {
   display:block;
-  font-size:clamp(32px,9.2cqw,50px);
+  font-size:clamp(30px,8.5cqw,47px);
   line-height:1.2;
   letter-spacing:-.06em;
   color:#a27b20;
@@ -101,14 +101,14 @@
   color:#08243d;
 }
 #about-zero .about-selected__copy {
-  padding:23px 20px 30px;
+  padding:20px 18px 22px;
   background:linear-gradient(100deg,#fffef6,#fffdf5);
 }
 #about-zero .about-selected__copy p,
 #about-zero .about-selected__promise-body {
-  margin:0 0 22px;
+  margin:0 0 14px;
   font-size:16px;
-  line-height:1.9;
+  line-height:1.7;
   letter-spacing:.01em;
   font-family:var(--manga-morisawa-regular);
   font-weight:400;
@@ -117,9 +117,9 @@
 #about-zero .about-selected__copy p:last-child,
 #about-zero .about-selected__promise-body:last-child { margin-bottom:0; }
 #about-zero .about-selected__copy h4 {
-  margin:0 0 23px;
-  font-size:clamp(23px,6.25cqw,32px);
-  line-height:1.55;
+  margin:0 0 16px;
+  font-size:clamp(22px,5.9cqw,30px);
+  line-height:1.45;
   letter-spacing:-.055em;
   font-family:var(--manga-morisawa-bold);
   color:#08243d;
@@ -148,8 +148,8 @@
 }
 #about-zero .about-selected__comic--language .about-selected__slice { height:43.1564cqw; }
 #about-zero .about-selected__comic--language .about-selected__slice img { top:-87.2905cqw; }
-#about-zero .about-selected__comic--promise .about-selected__slice { height:33.6592cqw; }
-#about-zero .about-selected__comic--promise .about-selected__slice img { top:-176.5363cqw; }
+#about-zero .about-selected__comic--promise .about-selected__slice { height:33.93855cqw; }
+#about-zero .about-selected__comic--promise .about-selected__slice img { top:-178.77095cqw; }
 #about-zero .about-selected__comic .comic-dialogue {
   padding:2.5cqw 1cqw;
   border-radius:50%;
@@ -161,26 +161,26 @@
   box-shadow:none;
 }
 #about-zero .about-selected__promise-wrap { margin:0; background:#03273e; }
-#about-zero .about-selected__promise { position:relative; margin:0 4px 4px; padding:30px 20px 0; color:#fff; overflow:clip; }
+#about-zero .about-selected__promise { position:relative; margin:0 4px 4px; padding:24px 20px 0; color:#fff; overflow:clip; }
 #about-zero .about-selected__promise h4 {
   position:relative;
   z-index:1;
   margin:0;
   font-size:clamp(23px,6.5cqw,36px);
-  line-height:1.65;
+  line-height:1.5;
   letter-spacing:-.06em;
   text-align:center;
   color:#f1cb67;
   font-family:var(--manga-morisawa-bold);
 }
-#about-zero .about-selected__ornament { display:flex; align-items:center; gap:10px; margin:20px 0 22px; color:#d6b252; }
+#about-zero .about-selected__ornament { display:flex; align-items:center; gap:10px; margin:16px 0 18px; color:#d6b252; }
 #about-zero .about-selected__ornament::before,
 #about-zero .about-selected__ornament::after { content:""; flex:1; height:1px; background:#ab893f; }
 #about-zero .about-selected__ornament span { font-size:15px; line-height:1; }
 #about-zero .about-selected__pledge {
-  margin:0 0 24px;
+  margin:0 0 20px;
   font-size:clamp(17px,4.75cqw,25px);
-  line-height:1.85;
+  line-height:1.65;
   letter-spacing:-.035em;
   text-align:center;
   color:#f5d578;
@@ -237,3 +237,23 @@
 }
 #about-zero .about-selected__stats dd::before { left:-3px; }
 #about-zero .about-selected__stats dd::after { right:-3px; transform:scaleX(-1); }
+
+/* A single navy artwork field continues behind the live company message.
+   Its bottom crop preserves the original pen and envelope; copy remains selectable. */
+#about-zero .about-selected__promise { isolation:isolate; }
+#about-zero .about-selected__promise::before {
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:url("assets/performance/assets--about-selected--story-clean.webp") center 84.493% / 103.9106% 2112% no-repeat;
+}
+#about-zero .about-selected__promise .about-selected__stationery { margin-top:12px; }
+
+/* One continuous outline, including the tail: no detached triangular tail. */
+#about-zero .about-selected__balloon {
+  border:0; background:transparent; border-radius:0;
+  padding:3cqw 1.4cqw 4cqw; isolation:isolate;
+}
+#about-zero .about-selected__balloon::before {
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 120' preserveAspectRatio='none'%3E%3Cpath d='M121 3C48 3 4 20 4 53C4 78 23 91 46 99L31 116L65 105C83 109 102 111 124 111C193 111 236 93 236 56C236 22 193 3 121 3Z' fill='%23fffefb' stroke='%23092336' stroke-width='2.4'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+#about-zero .about-selected__balloon::after { content:none; }

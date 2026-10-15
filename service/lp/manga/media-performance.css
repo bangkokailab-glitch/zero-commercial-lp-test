@@ -3,7 +3,8 @@
 html.manga-media-js .manga-example__scene:not(.is-media-ready),
 html.manga-media-js #line-demo .line-demo-stage:not(.is-media-ready),
 html.manga-media-js #line-demo .line-demo-stage:not(.is-media-ready) .line-demo-portrait,
-html.manga-media-js .campaign-selected__offer:not(.is-media-ready)::before {
+html.manga-media-js .campaign-selected__offer:not(.is-media-ready)::before,
+html.manga-media-js .about-selected__promise:not(.is-media-ready)::before {
   background-image: none !important;
 }
 html.manga-media-js .manga-example__scene:not(.is-media-ready) .manga-example__action::after {

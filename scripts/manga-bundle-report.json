@@ -1,12 +1,12 @@
 {
   "page": "service/lp/manga",
-  "revision": "8c5ea8b9cdac",
+  "revision": "e23da81ba2c2",
   "source": {
     "cssRequests": 25,
     "jsRequests": 8,
     "css": {
-      "bytes": 136346,
-      "gzipBytes": 41473
+      "bytes": 136982,
+      "gzipBytes": 41913
     },
     "js": {
       "bytes": 50817,
@@ -17,8 +17,8 @@
     "cssRequests": 3,
     "jsRequests": 1,
     "css": {
-      "bytes": 119925,
-      "gzipBytes": 27407
+      "bytes": 120251,
+      "gzipBytes": 27479
     },
     "js": {
       "bytes": 32450,
@@ -75,8 +75,8 @@
         "campaign-selected.css",
         "media-performance.css"
       ],
-      "bytes": 92742,
-      "gzipBytes": 20144
+      "bytes": 93068,
+      "gzipBytes": 20216
     },
     {
       "file": "manga-page.bundle.js",
