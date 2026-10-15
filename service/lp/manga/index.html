@@ -71,6 +71,8 @@
     <link rel="stylesheet" href="manga-interactions.css?v=20261015-motion2">
   <link rel="stylesheet" href="manga-backhalf.css?v=20261015-back1">
 <script src="manga-backhalf.js?v=20261015-back1" defer></script>
+<link rel="stylesheet" href="line-booking-demo.css?v=20261015-line3">
+<script src="line-booking-demo.js?v=20261015-line1" defer></script>
 </head>
   <body>
     <main aria-label="バンコク店舗集客セットのLPデザイン確認">
@@ -226,6 +228,76 @@
         </div>
         <p class="language-scroll-hint"><span aria-hidden="true">↔</span> 横スクロールで日本語・英語・タイ語のLPをご覧いただけます</p>
       </section>
+
+<div class="manga-backhalf automation-chapters">
+<section id="line-automation" aria-labelledby="line-automation-title">
+  <header class="back-heading"><h2 id="line-automation-title"><span data-manga-wipe>予約が増えても、<br>返信に追われないために。</span></h2></header>
+  <figure class="comic-frame"><img src="assets/line-ads/line-intro.jpg" width="887" height="1774" loading="lazy" alt="女性：でも、外国語の問い合わせが増えたら、返信が大変そう…。斎藤：そこで、AIを使ったLINEの自動化だよ。質問への返信から、空き枠の案内、予約受付まで自動化するんだ。まず、お客様からどんな質問が来るか、お店にしっかりヒアリングするんだ。その質問への回答を、最初に作り込んでおくよ。"><span class="speech-mask" data-speech-mask style="left:62%;top:3.8%;width:34.4%;height:7.3%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:8.8%;top:30%;width:33%;height:4.7%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:64.1%;top:34%;width:34%;height:7%;--speech-delay:550ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:6.8%;top:63.5%;width:31.5%;height:8.9%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:69.7%;top:62.7%;width:27.5%;height:6.5%;--speech-delay:550ms" aria-hidden="true"></span></figure>
+  <div class="back-content setup-content">
+    <p class="setup-kicker">お店に合わせて、最初に準備</p>
+    <h3 class="setup-heading"><span>01</span>よくある質問と、<br>その回答を作り込む。</h3>
+    <ul class="back-checks"><li>メニュー・料金・所要時間</li><li>施術内容や注意事項</li><li>お店の場所・営業時間</li><li>支払い方法</li><li>予約変更・キャンセルのルール</li></ul>
+    <p class="setup-key">お店で確認した内容をもとに、<br><strong>問い合わせが来た言語に合わせて回答。</strong></p>
+  </div>
+  <figure class="comic-frame"><img src="assets/line-ads/booking-rules.jpg" width="1122" height="1402" loading="lazy" alt="女性：でも、うちはメニューによって、同じ時間に受けられる人数が違うんです。斎藤：そこも、お店のルールに合わせて設定するんだ。メニューごとの所要時間や、同時に何件受けられるかも確認しておくよ。"><span class="speech-mask" data-speech-mask style="left:56.3%;top:5.5%;width:40.8%;height:15.5%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:60.8%;top:53.5%;width:35.5%;height:7.3%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:67%;top:66.2%;width:29.8%;height:14.0%;--speech-delay:550ms" aria-hidden="true"></span></figure>
+  <div class="back-content setup-content">
+    <h3 class="setup-heading"><span>02</span>お店ごとの予約ルールを<br>設定する。</h3>
+    <table class="booking-rules"><caption>予約ルールの設定例</caption><thead><tr><th scope="col">設定する内容</th><th scope="col">ルールの例</th></tr></thead><tbody>
+      <tr><th scope="row">メニューごとの<br>所要時間</th><td>脱毛は60分、<br>ホワイトニングは60分</td></tr>
+      <tr><th scope="row">メニューごとの<br>受付上限</th><td>それぞれ1時間に1件まで</td></tr>
+      <tr><th scope="row">同時に<br>受けられる条件</th><td>スタッフ・設備に余裕があれば同時受付可能</td></tr>
+      <tr><th scope="row">予約できる時間</th><td>営業時間・休憩・準備時間を反映</td></tr>
+    </tbody></table>
+    <p class="setup-key">メニューごとの枠と、<br><strong>お店全体で同時に対応できる条件</strong>を整理します。</p>
+  </div>
+  <figure class="comic-frame"><img src="assets/line-ads/calendar-sync.jpg" width="1254" height="1254" loading="lazy" alt="斎藤：AIが、お店ごとの予約ルールとGoogleカレンダーの予定を確認するんだ。予約できる時間を案内して、お客様が選んだ日時をルールどおりに登録するよ。"><span class="speech-mask" data-speech-mask style="left:5.5%;top:5.5%;width:38.8%;height:20.2%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:53.5%;top:7.6%;width:42.5%;height:14.0%;--speech-delay:550ms" aria-hidden="true"></span></figure>
+  <div class="back-content setup-content">
+    <h3 class="setup-heading"><span>03</span>Googleカレンダーと連動し、<br>空き枠案内から予約登録へ。</h3>
+    <ol class="booking-route"><li>希望を確認</li><li>予約ルールとカレンダーを確認</li><li>受付可能な枠を案内</li><li>お客様が選択</li><li>予約を登録・完了案内</li></ol>
+  </div>
+</section>
+<section id="line-demo" aria-labelledby="line-demo-title" data-line-demo>
+  <header class="back-heading"><h2 id="line-demo-title"><span data-manga-wipe>質問から予約まで、<br>実際の流れを見てみよう。</span></h2></header>
+  <div class="demo-language-bar"><label for="demo-language">会話の言語</label><select id="demo-language" data-demo-language><option value="ja">日本語</option><option value="en">English</option><option value="th">ไทย</option></select><span class="demo-label">体験デモ</span></div>
+<div class="demo-controls"><button type="button" data-demo-toggle aria-pressed="false">Ⅱ 一時停止</button><button type="button" data-demo-restart>↺ 最初から見る</button></div>
+  <div class="line-demo-stage" data-demo-screen>
+    <div class="line-demo-phone">
+      <div class="line-demo-speaker" aria-hidden="true"></div>
+      <header class="line-demo-chat-header"><span aria-hidden="true">‹</span><strong data-demo-chat-title>サロン予約</strong><span aria-hidden="true">•••</span></header>
+      <div class="line-demo-chat" data-demo-chat role="region" tabindex="0" aria-label="LINEの会話デモ。触れると自動再生を一時停止します。"></div>
+      <div class="line-demo-input" aria-hidden="true"><span>＋</span><span>メッセージ</span><span>⌕</span></div>
+    </div>
+    <aside class="line-demo-guide" aria-label="斎藤さんの説明">
+      <p class="line-demo-explain" data-demo-explain>事前に準備したお店の情報をもとに回答するよ</p>
+      <div class="line-demo-portrait" data-demo-portrait data-pose="0" role="img" aria-label="斎藤さん：質問に回答"></div>
+      <span class="line-demo-guide-name">斎藤さん</span>
+    </aside>
+  </div>
+  <div class="demo-dashboard">
+    <p class="demo-status" data-demo-status aria-live="polite" aria-atomic="true">01 / 06　質問に回答</p>
+    <progress data-demo-progress value="1" max="6" aria-label="会話デモの進行"></progress>
+
+    <p class="demo-reading-hint">会話に触れると一時停止。<br>スマホ内を上下にスクロールして読み返せます。</p>
+    <nav class="demo-steps" aria-label="見たい場面を選ぶ"><button data-demo-step type="button">01 質問</button><button data-demo-step type="button">02 言語</button><button data-demo-step type="button">03 希望</button><button data-demo-step type="button">04 空き枠</button><button data-demo-step type="button">05 再確認</button><button data-demo-step type="button">06 完了</button></nav>
+    <p class="demo-finished" data-demo-finished hidden>質問への回答から、予約登録・完了案内まで。</p>
+    <p class="back-note demo-disclosure">会話・料金・予約枠は説明用の例です。このデモから実際の予約やメッセージ送信は行われません。</p>
+  </div>
+  <div class="back-content staff-handoff"><h3>自動対応できない内容は、<br>スタッフへ引き継ぎ。</h3><p>お店で確認が必要な質問は、無理に回答せず、人が確認する流れへつなぎます。</p><div data-demo-handoff></div></div>
+  <figure class="comic-frame"><img src="assets/line-ads/customer-focus.jpg" width="1122" height="1402" loading="lazy" alt="スマホを気にせず接客する女性：これなら、接客中もずっと返信を気にしなくていいんですね。お客様に集中できるし、仕事がずっと楽になりそう！ 斎藤：いつもの質問や予約受付を任せられれば、その分、お店の仕事に時間を使えるね。"><span class="speech-mask" data-speech-mask style="left:4%;top:4%;width:35%;height:11%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:61.3%;top:4.3%;width:35.5%;height:10.6%;--speech-delay:550ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:54.5%;top:72.3%;width:41.5%;height:15%;--speech-delay:0ms" aria-hidden="true"></span></figure>
+  <aside class="integration-note"><h3>今お使いのシステムとの連携も、<br>ご相談ください。</h3><p>Googleカレンダーを活用すると、導入の手間や費用を抑えやすくなります。</p><p>お店独自のシステムへの組み込みも、仕様を確認してご相談いただけます。個別開発が必要な場合は、別途費用がかかります。</p></aside>
+</section>
+<section id="google-ads" aria-labelledby="google-ads-title">
+  <header class="back-heading"><h2 id="google-ads-title"><span data-manga-wipe>来店につながるお客様を、<br>広告から。</span></h2></header>
+  <figure class="comic-frame"><img src="assets/line-ads/ads-intro.jpg" width="1122" height="1402" loading="lazy" alt="女性：予約まで自動で受け付けられるんですね！ でも、そもそもそのLPは、どうやってお客様に見てもらうんですか？ 斎藤：そこでGoogle広告を使うんだ。お店やサービスを探している人に、LPを見つけてもらうよ。"><span class="speech-mask" data-speech-mask style="left:57.1%;top:5.4%;width:39.4%;height:18.5%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:60.5%;top:45.2%;width:37%;height:15.5%;--speech-delay:0ms" aria-hidden="true"></span></figure>
+  <div class="back-content ads-content"><h3 class="ads-lead">探している人に、<br>お店の魅力が届くように。</h3>
+    <article class="ad-journey"><span>01</span><div><h4>エリア・言語・検索内容に合わせる</h4><p>来店してほしいエリアと、探しているサービス、使う言語に合わせて広告を設計します。</p><div class="search-example"><small>検索のイメージ</small><p>⌕　バンコク ホワイトニング</p></div></div></article>
+    <article class="ad-journey"><span>02</span><div><h4>興味を持った人を、対応するLPへ</h4><p>日本語・英語・タイ語それぞれのLPへ案内。広告で伝えた内容を、続けて読み進められるようにします。</p><div class="ad-language-tags"><span>日本語</span><span>English</span><span>ไทย</span></div></div></article>
+    <article class="ad-journey"><span>03</span><div><h4>LPで魅力と、選ばれる理由を伝える</h4><p>サービスの内容、料金、お店の強みを順番に伝え、「このお店に行きたい」という気持ちにつなげます。</p></div></article>
+    <article class="ad-journey"><span>04</span><div><h4>LINEで質問に答え、予約受付へ</h4><p>気になることを確認し、希望のメニュー・日時を相談。お店に合わせたAI対応で、予約受付まで進めます。</p></div></article>
+  </div>
+  <figure class="comic-frame"><img src="assets/line-ads/ads-to-booking.jpg" width="1024" height="1536" loading="lazy" alt="広告で見つけてもらう。LPで「このお店に行きたい」と思ってもらう。AIを使ったLINE対応で、質問から予約まで進める。"></figure>
+</section>
+</div>
 
 <div class="manga-backhalf">
 <section id="plans" aria-labelledby="plans-title">
