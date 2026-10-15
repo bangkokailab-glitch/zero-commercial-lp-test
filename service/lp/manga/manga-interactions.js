@@ -17,32 +17,42 @@
   let nextSpeechAt = 0;
   let speechFailed = false;
 
-  // Keep the LP demo and its linked AIDMA explanation clear of the outer CTA.
-  // This is independent of motion preferences and leaves the demo's green CTA intact.
-  const readingZone = document.querySelector('#lp-example');
-  function setDockReadingZone(reading) {
+  // Both interactive phone scenes need the full reading area. The same CTA
+  // settles into the final offer slot instead of creating a duplicate button.
+  const readingZones = [...document.querySelectorAll('#lp-example, #line-demo')];
+  const finalSlot = document.querySelector('[data-cta-slot]');
+  let dockRaf = 0;
+  function syncDockReadingZone() {
+    dockRaf = 0;
     if (!dock) return;
-    if (reading === dock.classList.contains('is-reading-hidden')) return;
+    const reading = readingZones.some(zone => {
+      const box = zone.getBoundingClientRect();
+      return box.bottom > 0 && box.top < innerHeight;
+    });
+    const changed = reading !== dock.classList.contains('is-reading-hidden');
     dock.classList.toggle('is-reading-hidden', reading);
     dock.inert = reading;
     if (reading) dock.setAttribute('aria-hidden', 'true');
     else dock.removeAttribute('aria-hidden');
-    queueSpeechCheck();
-  }
-  function syncDockReadingZone() {
-    if (!readingZone) return;
-    const box = readingZone.getBoundingClientRect();
-    setDockReadingZone(box.bottom > 0 && box.top < innerHeight);
-  }
-  if (dock && readingZone) {
-    if ('IntersectionObserver' in window) {
-      const readingObserver = new IntersectionObserver(entries => setDockReadingZone(entries[0].isIntersecting));
-      readingObserver.observe(readingZone);
-    } else {
-      window.addEventListener('scroll', syncDockReadingZone, { passive: true });
+    if (finalSlot) {
+      const dockHeight = dock.offsetHeight;
+      finalSlot.style.height = `${dockHeight}px`;
+      const docked = finalSlot.getBoundingClientRect().bottom <= innerHeight + 1;
+      dock.classList.toggle('is-docked', docked);
+      // Keep the floating element outside container-type ancestors.
+      const target = docked ? finalSlot : document.body;
+      if (dock.parentElement !== target) target.appendChild(dock);
     }
-    window.addEventListener('resize', syncDockReadingZone, { passive: true });
-    window.addEventListener('pageshow', syncDockReadingZone);
+    if (changed) queueSpeechCheck();
+  }
+  function queueDockCheck() {
+    if (!dockRaf) dockRaf = requestAnimationFrame(syncDockReadingZone);
+  }
+  if (dock) {
+    window.addEventListener('scroll', queueDockCheck, { passive: true });
+    window.addEventListener('resize', queueDockCheck, { passive: true });
+    window.addEventListener('pageshow', queueDockCheck);
+    if ('ResizeObserver' in window) new ResizeObserver(queueDockCheck).observe(dock);
     syncDockReadingZone();
   }
 

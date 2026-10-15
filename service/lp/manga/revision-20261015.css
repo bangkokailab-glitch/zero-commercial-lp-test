@@ -1,0 +1,58 @@
+/* October revision: compact live explanation, consistent chapter/panel edges. */
+.direction-a main { padding-bottom:0; }
+.direction-a :is(.selected-heading,.back-heading) { overflow:visible; }
+.direction-a .back-heading::after { content:none; }
+.chapter-pointer { position:absolute; z-index:8; bottom:-22px; left:50%; transform:translateX(-50%); width:58px; height:28px; overflow:visible; pointer-events:none; }
+.direction-a .selected-heading__pointer { display:none; }
+
+.direction-a .manga-example__psychology {
+ margin:0; padding:16px 18px 18px; border:0; border-radius:0; box-shadow:none;
+ background:#fffdf5; min-height:0; overflow:visible;
+}
+.direction-a .manga-example__psychology::before { content:none; }
+.aidma-compact-label { display:flex; flex-wrap:wrap; align-items:center; gap:5px; color:#8f6b25; font-size:14px; line-height:1.5; }
+.aidma-compact-label strong { color:#092336; }
+.direction-a .manga-example__notes { display:block; padding:0; margin:8px 0 0; min-height:0; }
+.direction-a .manga-example__note { display:block; text-align:left; min-height:0; padding:0; }
+.direction-a .manga-example__note[hidden] { display:none!important; }
+.direction-a .manga-example__thought,.direction-a .manga-example__note.is-long .manga-example__thought { max-width:none; margin:0 0 5px; font-size:16px; line-height:1.55; letter-spacing:0; min-height:0; text-wrap:wrap; }
+.direction-a .manga-example__explanation { max-width:none; margin:0; font-size:13px; line-height:1.65; letter-spacing:0; text-wrap:wrap; }
+
+/* A single 2/3/2 px separator on both sides of every panel. */
+.comic-frame { margin:0; background:#fff; container-type:inline-size; }
+.comic-frame::before,.comic-frame::after,
+.manga-example::before,.manga-example::after,
+.line-demo-stage::before,.line-demo-stage::after {
+ content:""; display:block; position:absolute; left:0; width:100%; height:7px; z-index:9;
+ background:linear-gradient(#071524 0 2px,#fff 2px 5px,#071524 5px 7px); pointer-events:none;
+}
+.comic-frame::before,.manga-example::before,.line-demo-stage::before { top:0; bottom:auto; }
+.comic-frame::after,.manga-example::after,.line-demo-stage::after { bottom:0; top:auto; }
+.comic-frame + .comic-frame { margin-top:-7px; }
+.comic-seam .comic-seam__edge { stroke-width:7px; }
+.comic-seam .comic-seam__gap { stroke-width:3px; }
+.comparison-selected::before,.comparison-selected::after { display:block; }
+.direction-a .manga-example,.line-demo-stage { position:relative; }
+#line-demo .line-demo-stage::before,#line-demo .line-demo-stage::after { inset:auto 0; height:7px; z-index:9; background:linear-gradient(#071524 0 2px,#fff 2px 5px,#071524 5px 7px); }
+#line-demo .line-demo-stage::before { top:0; }
+#line-demo .line-demo-stage::after { bottom:0; }
+.direction-a .setup-content { margin:30px 9px; padding:30px 20px; }
+.integration-manga { background:#fff; }
+.integration-caption { margin:0; padding:22px 20px 28px; font-size:13px; line-height:1.9; color:#17354a; }
+.direction-a #line-demo { background:#fff; }
+.direction-a .demo-language-bar { padding-top:40px; }
+.revision-comic .comic-dialogue { line-height:1.5; }
+
+/* Small character cameos follow the production steps without replacing copy. */
+.direction-a .production-step > div { min-width:0; }
+.step-portrait { float:right; width:74px; height:84px; margin:0 0 10px 12px; border-radius:50% 50% 35% 35%; border:1px solid #c7a45d; background-color:#f0dfb5; background-repeat:no-repeat; }
+.step-portrait--mari { background-image:url('assets/direction-a/mari-handoff.webp'); background-size:160%; background-position:48% 16%; }
+.step-portrait--saito { background-image:url('assets/line-ads/saito-demo-poses.png'); background-size:370% 245%; background-position:0 0; }
+.direction-a .production-step h3 { min-height:70px; }
+.direction-a .production-step p { clear:both; }
+
+.direction-a .rough-offer { margin-bottom:0; padding-bottom:0; border-bottom:0; border-radius:17px 17px 0 0; }
+.cta-final-slot { position:relative; height:190px; margin:0; background:#071f36; }
+.manga-cta--dock.is-docked { position:absolute; left:0; bottom:0; width:100%; translate:0 0; background:#071f36; }
+.manga-cta--dock.is-docked .manga-cta__link { animation:none; }
+@media (prefers-reduced-motion:reduce) { .manga-cta--dock { transition:none; } }

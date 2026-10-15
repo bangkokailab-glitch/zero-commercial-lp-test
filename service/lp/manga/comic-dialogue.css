@@ -1,0 +1,58 @@
+/* All dialogue appears as one unit: balloon, tail and live text. The clean
+   manga plate contains no dialogue, so no white empty balloons remain. */
+.comic-frame .comic-dialogue,
+.comic-dialogue {
+  position:absolute;
+  z-index:5;
+  left:var(--bubble-x, 55%);
+  top:var(--bubble-y, 4%);
+  width:var(--bubble-w, 42%);
+  margin:0;
+  padding:2.1cqw 2.4cqw;
+  border:1.5px solid #092336;
+  border-radius:3.8cqw;
+  background:#fffefb;
+  color:#092336;
+  box-shadow:0 .45cqw 0 rgb(4 25 44 / 12%);
+  font-family:var(--manga-morisawa-bold, sans-serif);
+  font-synthesis:none;
+  font-size:var(--bubble-size, 3.2cqw);
+  font-weight:700;
+  line-height:1.48;
+  letter-spacing:-.035em;
+  text-align:left;
+  overflow-wrap:anywhere;
+  pointer-events:none;
+  transform-origin:var(--bubble-origin, 25% 100%);
+}
+.comic-dialogue::after {
+  content:"";
+  position:absolute;
+  left:var(--bubble-tail, 22%);
+  bottom:-1.55cqw;
+  width:2.9cqw;
+  height:2.9cqw;
+  border-right:1.5px solid #092336;
+  border-bottom:1.5px solid #092336;
+  background:#fffefb;
+  transform:skewY(-17deg) rotate(40deg);
+}
+.comic-dialogue--tail-right { --bubble-tail:73%; --bubble-origin:75% 100%; }
+.comic-dialogue--tail-left::after { left:-1.55cqw; bottom:17%; transform:skewY(-17deg) rotate(125deg); }
+.comic-dialogue--tail-up::after { bottom:auto; top:-1.55cqw; transform:skewY(-17deg) rotate(220deg); }
+.comic-dialogue strong { color:inherit; font-weight:inherit; }
+.manga-motion-ready .comic-dialogue[data-speech-reveal]:not(.is-shown):not(.is-revealing) {
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(6px) scale(.96);
+}
+.manga-motion-ready .comic-dialogue[data-speech-reveal].is-revealing,
+.manga-motion-ready .comic-dialogue[data-speech-reveal].is-shown {
+  opacity:1;
+  visibility:visible;
+  transform:none;
+  transition:opacity 180ms ease-out, transform 180ms ease-out;
+}
+@media (prefers-reduced-motion:reduce) {
+  .manga-motion-ready .comic-dialogue[data-speech-reveal] { opacity:1!important; visibility:visible!important; transform:none!important; transition:none!important; }
+}
