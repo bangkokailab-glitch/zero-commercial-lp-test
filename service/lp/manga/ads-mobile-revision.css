@@ -1,0 +1,10 @@
+/* Smartphone search examples; preserve readable, natural image length. */
+.direction-a .ads-entry-lead{margin:6px 0 32px;text-align:center;font-size:clamp(20px,4cqw,29px);line-height:1.7;color:#08243d;}
+.direction-a .ads-entry-lead strong{display:block;color:#a57622;}
+.direction-a .ads-a-screen .ads-a-screenshot-link{display:block;width:100%;max-width:393px;margin:0 auto;background:#fff;border:1px solid #d9deE6;border-radius:12px;overflow:hidden;}
+.direction-a .ads-a-screen .ads-a-screenshot-link img{display:block;width:100%;height:auto;}
+.direction-a .ads-a-map-route{grid-template-columns:1fr 24px 1fr;}
+.direction-a .ads-a-keywords{gap:9px 7px;}
+.direction-a .ads-a-keywords strong{font-size:clamp(12px,2.7cqw,18px);line-height:1.6;padding:7px 10px;}
+.direction-a .ads-entry-lead{color:#fff8e7;}
+.direction-a .ads-entry-lead strong{color:#efd085;}
