@@ -1,0 +1,46 @@
+/* Selected heading B: square navy panel with a continuous double gold outline.
+   Load after direction-a.css and revision-20261015.css. Text sizing and the
+   existing marker animation remain shared across all chapter headings. */
+.direction-a :is(.selected-heading, .back-heading).heading-b {
+  isolation: isolate;
+  overflow: visible;
+  background: #041d43;
+  border-radius: 0;
+}
+
+.direction-a .heading-b .selected-heading__panel {
+  background: transparent;
+}
+
+.direction-a .heading-b::before,
+.direction-a .heading-b::after,
+.direction-a .heading-b .selected-heading__panel::before,
+.direction-a .heading-b .selected-heading__panel::after {
+  content: none;
+}
+
+.direction-a .heading-b > .chapter-pointer,
+.direction-a .heading-b .selected-heading__pointer {
+  display: none;
+}
+
+.heading-b__frame {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: calc(100% + var(--heading-b-tail, 28px));
+  overflow: visible;
+  pointer-events: none;
+}
+
+.direction-a .heading-b h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.direction-a .heading-b .heading-line--accent {
+  color: #f0d380;
+}

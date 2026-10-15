@@ -1,0 +1,20 @@
+/* ZERO's closing message: a readable letter after the company comic. */
+.zero-message {
+  position:relative; padding:38px 25px 36px; margin:0;
+  background:linear-gradient(130deg,#fffdf7,#f5efdf); color:#102e46;
+  border-top:3px solid #b89950; border-bottom:3px solid #b89950;
+}
+.zero-message::before { content:""; position:absolute; inset:8px; border:1px solid #c9b681; pointer-events:none; }
+.zero-message__eyebrow { margin:0 0 17px; color:#8b6927; font-size:12px; letter-spacing:.13em; font-family:var(--manga-morisawa-bold); }
+.zero-message h3 { margin:0 0 24px; font-size:24px; line-height:1.65; letter-spacing:-.04em; font-family:var(--manga-morisawa-bold); }
+.zero-message__intro { font-size:15px; line-height:2; margin:0; }
+.zero-message__section { margin:32px 0 0; padding-top:26px; border-top:1px solid #d4c5a1; }
+.zero-message h4 { font-size:19px; line-height:1.65; margin:0 0 16px; letter-spacing:-.035em; font-family:var(--manga-morisawa-bold); }
+.zero-message__section p { font-size:15px; line-height:2; margin:0 0 17px; }
+.zero-message strong { font-family:var(--manga-morisawa-bold); }
+.zero-message__promise { position:relative; margin:32px -9px 0; padding:28px 22px; background:#082641; color:#fff; border:2px solid #c5a65b; }
+.zero-message__promise::before { content:""; position:absolute; inset:5px; border:1px solid #8b7747; pointer-events:none; }
+.zero-message__promise h4 { margin-bottom:20px; color:#f1d58d; font-size:23px; line-height:1.7; }
+.zero-message__promise p { margin:0 0 18px; font-size:15px; line-height:1.95; }
+.zero-message__promise p:last-child { margin:0; }
+.zero-message__signature { margin:25px 0 0; text-align:right; font-family:var(--manga-morisawa-bold); font-size:14px; }
