@@ -1,0 +1,13 @@
+/* Comfortable body size, independent of a one-screen height. */
+.direction-a .manga-backhalf{font-size:16px;line-height:1.9}
+.direction-a :is(.setup-content>p,.back-checks li,.setup-key,.booking-route li,.booking-rules,.booking-rules caption,.integration-caption,.detail-card p,.single-prices dt,.ad-option dt,.ad-option dd,.coupon-note p,.faq-list summary,.faq-answer,.ads-operation__intro,.ads-operation__steps p,.ads-a-card__lead,.ads-a-destination__copy){font-size:16px;line-height:1.85}
+.direction-a :is(.back-note,.setup-kicker,.back-kicker,.price-plan dl>div,.price-discount,.price-monthly,.ads-operation__note,.ads-a-route-note,.ads-a-screen__label){font-size:14px;line-height:1.8}
+.direction-a .ads-a-keywords strong{font-size:14px;line-height:1.6}
+.direction-a .price-plan dl>div{gap:8px}
+.direction-a .price-plan dt{flex:1;min-width:0}
+.direction-a .price-plan dd{flex:none}
+.direction-a .price-plan dd small{font-size:12px}
+.direction-a .single-prices dt{font-size:16px}
+.direction-a .faq-list summary{padding-block:24px}
+.direction-a .faq-answer{padding-bottom:26px}
+.direction-a .manga-example__explanation{font-size:15px;line-height:1.75}

@@ -1,0 +1,62 @@
+/* Selected campaign 1: preserve the art coordinates above the navy fabric,
+   then let the live offer copy set its own height for comfortable reading. */
+.direction-a .campaign-selected {
+  container-type: inline-size;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: clip;
+  background: #031b32;
+  color: #fff9ed;
+  font-family: var(--manga-morisawa-regular, sans-serif);
+}
+.direction-a .campaign-selected :is(h3, strong) { font-family: var(--manga-morisawa-bold, sans-serif); }
+.direction-a .campaign-selected p { margin: 0; }
+.direction-a .campaign-selected__hero { position: relative; aspect-ratio: 734 / 1412; overflow: clip; }
+.direction-a .campaign-selected__plate { display: block; position: absolute; inset: 0 0 auto; width: 100%; height: auto; max-width: none; margin: 0; padding: 0; border: 0; }
+.direction-a .campaign-selected__intro { position: absolute; top: 2%; left: 5%; width: 90%; text-align: center; color: #fffdf4; text-shadow: 0 2px 4px #001225; }
+.direction-a .campaign-selected__intro p:first-child { font-size: 5.9cqw; line-height: 1.5; }
+.direction-a .campaign-selected__intro p:first-child strong { color: #f2d27a; font-size: 7cqw; }
+.direction-a .campaign-selected__intro p:last-child { font-size: 4.4cqw; line-height: 1.55; letter-spacing: -.04em; white-space: nowrap; }
+.direction-a .campaign-selected__view-heading { position: absolute; top: 11.5%; left: 3%; width: 94%; margin: 0; padding: 0; text-align: center; color: #fffdf3; font-weight: 400; text-shadow: 0 2px 6px #001124; }
+.direction-a .campaign-selected__view-heading span { display: block; font-size: 4.4cqw; line-height: 1.35; }
+.direction-a .campaign-selected__view-heading strong { display: block; margin: .45cqw 0; color: #f6d585; font-size: 7.8cqw; line-height: 1.35; letter-spacing: -.07em; white-space: nowrap; }
+.direction-a .campaign-selected__phone-copy { position: absolute; inset: 39.8% auto auto 34%; width: 34%; color: #33281e; transform: rotate(1deg); }
+.direction-a .campaign-selected__phone-copy > span { display: block; width: max-content; margin-left: auto; padding: .6cqw 1cqw; background: #fff9e9db; font-size: 2.6cqw; line-height: 1.4; }
+.direction-a .campaign-selected__phone-copy p { margin-top: 34cqw; font-family: var(--manga-morisawa-bold, sans-serif); font-size: 4.2cqw; line-height: 1.65; letter-spacing: -.025em; text-shadow: 0 1px 5px #fff9e9, 0 0 12px #fff9e9; }
+.direction-a .campaign-selected__book { position: absolute; top: 73.4%; left: 14%; width: 32%; color: #13283a; }
+.direction-a .campaign-selected__book--rough { top: 74.4%; left: 56%; width: 35%; }
+.direction-a .campaign-selected__book > span { display: block; color: #b28a3b; font-family: Georgia, serif; font-style: italic; font-size: 9cqw; line-height: 1; }
+.direction-a .campaign-selected__book > strong { display: block; margin-top: .5cqw; font-size: 4cqw; line-height: 1.5; letter-spacing: -.045em; }
+.direction-a .campaign-selected__book--rough > strong { font-size: 3.8cqw; }
+
+.direction-a .campaign-selected__offer {
+  position: relative;
+  isolation: isolate;
+  margin: 0;
+  padding: 3cqw 6.2cqw 12cqw;
+  text-align: center;
+}
+.direction-a .campaign-selected__offer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("assets/campaign-selected/offer-satin-clean.webp") center bottom / 100% 293.4247% no-repeat;
+  pointer-events: none;
+}
+.direction-a .campaign-selected__offer-name { color: #fff9ee; font-size: 4.65cqw; line-height: 1.8; font-family: var(--manga-morisawa-bold, sans-serif); }
+.direction-a .campaign-selected__free { margin: 4.5cqw -2cqw 0; padding: 0 0 4.5cqw; color: #f5d98c; font-size: 6.1cqw; line-height: 1.6; white-space: nowrap; letter-spacing: -.07em; text-shadow: 0 2px 2px #001023; }
+.direction-a .campaign-selected__free > span { font-size: 8.8cqw; }
+.direction-a .campaign-selected__free > strong { font-size: 11.8cqw; }
+.direction-a .campaign-selected__deliverables { display: grid; grid-template-columns: 1fr 1fr; gap: 5cqw; margin: 4.5cqw 0 0; padding: 0; color: #fffaf0; text-align: left; }
+.direction-a .campaign-selected__deliverables > div { position: relative; margin: 0; padding: 0; min-width: 0; }
+.direction-a .campaign-selected__deliverables > div + div::before { content: ""; position: absolute; top: .5cqw; bottom: 0; left: -2.5cqw; width: 1px; background: #d8bc7873; }
+.direction-a .campaign-selected__deliverables dt { margin: 0; padding: 0; }
+.direction-a .campaign-selected__deliverables dt > span { display: block; margin-bottom: 2cqw; color: #edcd7b; font-family: Georgia, serif; font-size: 9.5cqw; font-style: italic; line-height: 1; }
+.direction-a .campaign-selected__deliverables dt > strong { display: block; min-height: 3.2em; padding-bottom: 1.8cqw; border-bottom: 1px solid #d2b772b3; font-size: clamp(17px, 4.3cqw, 28px); line-height: 1.6; letter-spacing: -.045em; }
+.direction-a .campaign-selected__deliverables dd { margin: 2.4cqw 0 0; padding: 0; font-size: clamp(16px, 4.1cqw, 27px); line-height: 1.9; letter-spacing: -.045em; }
+.direction-a .campaign-selected__scope { margin-top: 6cqw; padding: 4.7cqw 0; border-top: 1px solid #f1dfb8a6; border-bottom: 1px solid #f1dfb86b; color: #fffaf1; font-size: clamp(16px, 4.1cqw, 27px); line-height: 1.95; text-wrap: pretty; }
+.direction-a .campaign-selected__scope strong { color: #ffe6a6; }
+.direction-a .campaign-selected__invitation { margin-top: 9cqw; color: #fff7dc; font-size: clamp(18px, 4.8cqw, 32px); line-height: 1.85; letter-spacing: .02em; text-shadow: 0 2px 5px #001023; }
+@media print { .campaign-selected { print-color-adjust: exact; } }

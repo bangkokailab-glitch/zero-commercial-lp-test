@@ -17,7 +17,7 @@
     function tick(time) {
       if (!canRun()) {frame = 0; last = 0; return;}
       if (last && time > manualUntil) {
-        const cycle = group.getBoundingClientRect().width + 14;
+        const cycle = group.getBoundingClientRect().width + (parseFloat(getComputedStyle(group.parentElement).columnGap) || 0);
         position += Math.min(time - last, 50) * Number(lane.dataset.speed) / 1000;
         if (position >= cycle) position -= cycle;
         viewport.scrollLeft = position;
@@ -35,8 +35,8 @@
     viewport.addEventListener('pointercancel', () => {touching = false; manualUntil = performance.now() + 1600; sync();});
     viewport.addEventListener('wheel', () => {manualUntil = performance.now() + 1600; position = viewport.scrollLeft;}, {passive:true});
     viewport.addEventListener('scroll', () => {if(touching || focused || performance.now() < manualUntil) position = viewport.scrollLeft;}, {passive:true});
-    lane.addEventListener('focusin', () => {focused = true; sync();});
-    lane.addEventListener('focusout', event => {if(!lane.contains(event.relatedTarget)) {focused = false; sync();}});
+    viewport.addEventListener('focusin', () => {focused = true; sync();});
+    viewport.addEventListener('focusout', event => {if(!viewport.contains(event.relatedTarget)) {focused = false; sync();}});
     document.addEventListener('visibilitychange', sync);
     reduced.addEventListener('change', () => {if(reduced.matches) paused = true; label(); sync();});
     label();

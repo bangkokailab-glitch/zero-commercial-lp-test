@@ -1,0 +1,17 @@
+/* Actual mobile LP artwork from the existing ZERO test page. */
+#about-zero .about-cases{margin:0;padding:30px 0 28px;border-block:1px solid #d2b876;background:linear-gradient(135deg,#102f49,#061b30);color:#fff;overflow:clip}
+#about-zero .about-cases .evidence-heading{padding:0 20px 18px}
+#about-zero .about-cases h3{margin:0 0 15px;font-size:24px;line-height:1.55;letter-spacing:-.03em;color:#f5df9c}
+#about-zero .about-cases .lane-toggle{font:14px/1.5 var(--manga-morisawa-regular);padding:8px 12px;color:#f7e6b7;background:#15364f;border:1px solid #c9aa64;border-radius:4px}
+#about-zero .about-cases .evidence-viewport{padding:8px 0 16px;scrollbar-color:#c7a251 #122e46}
+#about-zero .about-cases .evidence-track{padding-inline:22px}
+#about-zero .about-cases :is(.evidence-track,.evidence-group){gap:18px}
+#about-zero .about-cases__item{flex:none;width:238px;margin:0}
+#about-zero .about-cases__phone{position:relative;border:3px solid #7c7f85;border-radius:30px;padding:20px 7px 18px;background:linear-gradient(110deg,#203342,#07111a 50%,#273a48);box-shadow:inset 0 0 0 2px #050d16,0 8px 14px #0005}
+#about-zero .about-cases__phone::before{content:'';position:absolute;width:44px;height:4px;top:8px;left:calc(50% - 22px);border-radius:5px;background:#050b10;box-shadow:0 1px 1px #ffffff38}
+#about-zero .about-cases__phone::after{content:'';position:absolute;width:64px;height:4px;bottom:7px;left:calc(50% - 32px);border-radius:5px;background:#82909a}
+#about-zero .about-cases__screen{aspect-ratio:432/834;overflow:clip;border-radius:14px;background:#fff}
+#about-zero .about-cases__screen img{width:100%;height:100%;object-fit:cover;object-position:center top}
+#about-zero .about-cases figcaption{padding:16px 4px 0;color:#fffdf6;font:16px/1.7 var(--manga-morisawa-bold);text-align:center}
+#about-zero .about-cases .lane-hint{margin:20px 10px 0!important;color:#f5e4b7;font-size:15px;line-height:1.6}
+@media(max-width:374px){#about-zero .about-cases__item{width:220px}#about-zero .about-cases h3{font-size:22px}}
