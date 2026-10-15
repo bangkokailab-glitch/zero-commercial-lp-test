@@ -87,6 +87,10 @@ main { container-type:inline-size; padding-bottom:180px; background:#fff; }
 /* Approved ZERO campaign button: identical mobile geometry, red, white edge,
    circle placement, copy pulse and 1.65s vertical float. Only the price changes. */
 .manga-cta--dock { position:fixed; z-index:900; bottom:0; left:50%; translate:-50% 0; width:min(100%,390px); padding:65px 0 calc(16px + env(safe-area-inset-bottom,0px)); background:linear-gradient(#17171700 0 38%,#171717ee 65%); pointer-events:none; }
+.manga-cta--dock { opacity:1; visibility:visible; transition:opacity .18s ease, visibility 0s; }
+.manga-cta--dock.is-reading-hidden { opacity:0; visibility:hidden; transition:opacity .18s ease, visibility 0s .18s; }
+.manga-cta--dock.is-reading-hidden .manga-cta__link { pointer-events:none; }
+.manga-cta--dock.is-reading-hidden * { animation-play-state:paused; }
 .manga-cta__link { container-type:inline-size; display:flex; align-items:center; justify-content:center; box-sizing:border-box; width:calc((100% - 12px) * .8763); height:82.875px; min-height:0; margin:auto; padding:0; border:2px solid #fff; border-radius:8px; background:#e50920; box-shadow:4px 5px 0 #ffffff30; pointer-events:auto; }
 .manga-cta__copy { flex-shrink:0; width:max-content; max-width:none; margin:0; align-items:center; gap:6px; font-size:min(17.5px,5.3cqw); line-height:1.4; letter-spacing:.015em; transform-origin:center; }
 .manga-cta__copy > span { display:block; font:inherit; white-space:nowrap; }
@@ -115,6 +119,7 @@ main { container-type:inline-size; padding-bottom:180px; background:#fff; }
   .worry-card__inner { padding-inline:10px; }
 }
 @media(prefers-reduced-motion:reduce),print {
+  .manga-cta--dock,.manga-cta--dock.is-reading-hidden { transition:none; }
   [data-manga-wipe] .manga-wipe__copy { opacity:1!important; animation:none!important; }
   [data-manga-wipe]::after,.speech-mask { display:none!important; }
   .manga-example__scroll-cue,.manga-example__action,.manga-example__action img,.manga-example__action::after,.manga-cta__link,.manga-cta__copy,.manga-cta__bubble,.manga-cta__arrows { animation:none!important; }

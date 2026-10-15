@@ -17,6 +17,35 @@
   let nextSpeechAt = 0;
   let speechFailed = false;
 
+  // Keep the LP demo and its linked AIDMA explanation clear of the outer CTA.
+  // This is independent of motion preferences and leaves the demo's green CTA intact.
+  const readingZone = document.querySelector('#lp-example');
+  function setDockReadingZone(reading) {
+    if (!dock) return;
+    if (reading === dock.classList.contains('is-reading-hidden')) return;
+    dock.classList.toggle('is-reading-hidden', reading);
+    dock.inert = reading;
+    if (reading) dock.setAttribute('aria-hidden', 'true');
+    else dock.removeAttribute('aria-hidden');
+    queueSpeechCheck();
+  }
+  function syncDockReadingZone() {
+    if (!readingZone) return;
+    const box = readingZone.getBoundingClientRect();
+    setDockReadingZone(box.bottom > 0 && box.top < innerHeight);
+  }
+  if (dock && readingZone) {
+    if ('IntersectionObserver' in window) {
+      const readingObserver = new IntersectionObserver(entries => setDockReadingZone(entries[0].isIntersecting));
+      readingObserver.observe(readingZone);
+    } else {
+      window.addEventListener('scroll', syncDockReadingZone, { passive: true });
+    }
+    window.addEventListener('resize', syncDockReadingZone, { passive: true });
+    window.addEventListener('pageshow', syncDockReadingZone);
+    syncDockReadingZone();
+  }
+
   const finish = element => {
     clearTimeout(timers.get(element));
     cancelAnimationFrame(frames.get(element));
@@ -38,7 +67,7 @@
   }
   function readingBottom() {
     const box = dock?.getBoundingClientRect();
-    const fixed = dock && getComputedStyle(dock).position === 'fixed';
+    const fixed = dock && !dock.classList.contains('is-reading-hidden') && getComputedStyle(dock).position === 'fixed';
     return Math.min(innerHeight - 18, fixed && box.top > 0 ? box.top - 18 : innerHeight - 18);
   }
   function speechInView(element) {
