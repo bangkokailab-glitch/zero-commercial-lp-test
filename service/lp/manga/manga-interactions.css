@@ -95,7 +95,7 @@ main { container-type:inline-size; padding-bottom:180px; background:#fff; }
 .manga-cta__bubble { width:72px; height:72px; left:-16px; top:-59px; transform-origin:37.216978px 34.988813px; filter:drop-shadow(1px 2px 0 #0005); }
 .manga-cta__bubble-copy { inset:auto; left:37.216978px; top:34.988813px; width:max-content; gap:1.5px; transform:translate(-50%,calc(-50% - .01118655px)); }
 .manga-cta__bubble-copy > span:first-child { font-family:var(--manga-morisawa-regular)!important; font-size:8.5px; line-height:1.2; }
-.manga-cta__bubble-copy strong { margin:0; font-size:18px; line-height:1.05; letter-spacing:-.045em; color:#96701f; -webkit-text-stroke:.25px currentColor; }
+.manga-cta__bubble-copy strong { margin:0; font-size:15.5px; line-height:1.05; letter-spacing:-.045em; color:#96701f; -webkit-text-stroke:.25px currentColor; }
 .manga-cta__bubble-copy > span:last-child { margin-top:1px; font-size:9px; line-height:1.25; }
 @keyframes zero-proposal-float { 0%,100%{transform:translateY(4.5px)}50%{transform:translateY(-4.5px)} }
 @keyframes zero-label-pop { 0%,52%,100%{transform:translateY(0) scale(1)}64%{transform:translateY(-2px) scale(1.08)}74%{transform:translateY(1px) scale(1.02)}84%{transform:translateY(-1px) scale(1.06)}94%{transform:translateY(0) scale(1)} }
