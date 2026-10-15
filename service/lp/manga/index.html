@@ -7,6 +7,7 @@
     <meta name="color-scheme" content="dark">
     <title>バンコク店舗集客セット｜漫画版・テスト</title>
     <meta name="description" content="バンコク店舗集客セットのスマートフォン向けLPデザイン確認ページです。">
+    <script>document.documentElement.classList.add('manga-motion-ready');window.mangaMotionFallback=setTimeout(function(){document.documentElement.classList.remove('manga-motion-ready')},8000);</script>
     <link rel="stylesheet" href="lp-example.css">
     <link rel="stylesheet" href="aidma-b.css">
     <link rel="preconnect" href="https://morisawafonts.net" crossorigin>
@@ -15,7 +16,7 @@
     <link rel="stylesheet" href="aidma-ticket.css?v=20261015-compact">
     <link rel="stylesheet" href="aidma-scene.css?v=20261015-reference">
     <script src="lp-example.js?v=20261015-ticket" defer></script>
-    <script src="manga-interactions.js?v=20261015-motion3" defer></script>
+    <script src="manga-interactions.js?v=20261015-direction-a1" defer></script>
     <style>
       *, *::before, *::after { box-sizing: border-box; }
       html { background: #041326; }
@@ -24,6 +25,7 @@
         width: 100%;
         max-width: 390px;
         margin-inline: auto;
+        container-type: inline-size;
         background: #061c38;
       }
       img {
@@ -71,10 +73,13 @@
     <link rel="stylesheet" href="manga-interactions.css?v=20261015-motion2">
   <link rel="stylesheet" href="manga-backhalf.css?v=20261015-back1">
 <script src="manga-backhalf.js?v=20261015-back1" defer></script>
-<link rel="stylesheet" href="line-booking-demo.css?v=20261015-line3">
-<script src="line-booking-demo.js?v=20261015-line1" defer></script>
+<link rel="stylesheet" href="line-booking-demo.css?v=20261015-direction-a1">
+<script src="line-booking-demo.js?v=20261015-direction-a1" defer></script>
+<link rel="stylesheet" href="direction-a.css?v=20261015-a1">
+<link rel="stylesheet" href="ads-direction-a.css?v=20261015-a1">
+<link rel="stylesheet" href="comic-speech.css?v=20261015-a1">
 </head>
-  <body>
+  <body class="direction-a">
     <main aria-label="バンコク店舗集客セットのLPデザイン確認">
       <section class="manga-hero" aria-labelledby="manga-hero-title">
         <div class="manga-hero__copy">
@@ -91,14 +96,14 @@
 
 
 
-      <section id="worries" class="selected-heading selected-heading--worries" aria-labelledby="worries-title"><div class="selected-heading__panel"><h2 id="worries-title"><span data-manga-wipe>こんなお悩み</span><br><strong data-manga-wipe>ありませんか？</strong></h2></div><div class="selected-heading__band" aria-hidden="true"></div><span class="selected-heading__pointer" aria-hidden="true"></span></section>
+      <section id="worries" class="selected-heading selected-heading--worries" aria-labelledby="worries-title"><div class="selected-heading__panel"><h2 id="worries-title"><span class="heading-line" data-manga-wipe>こんなお悩み</span><span class="heading-line heading-line--accent" data-manga-wipe>ありませんか？</span></h2></div><div class="selected-heading__band" aria-hidden="true"></div><span class="selected-heading__pointer" aria-hidden="true"></span></section>
       <div class="worry-flow">
         <section class="worry-card worry-card--booking" aria-labelledby="booking-title"><div class="worry-card__inner"><h3 id="booking-title">予約をもっと増やしたい</h3><ul><li>新規予約が思うように増えない</li><li>日本人のお客様に見つけてもらえない</li><li>広告を出しても予約につながらない</li><li>お店の魅力や選ばれる理由が伝わらない</li><li>日本人以外のお客様にも来てほしい</li></ul></div></section>
         <figure class="comic-frame comic-frame--worry" data-comic><img class="worry-comic" loading="lazy" decoding="async" src="assets/comic01-worry.webp" width="1619" height="971" alt="マリ：予約は増やしたい。でも、返信に追われるのは困る…。"><span class="speech-mask" data-speech-mask style="left:63%;top:18%;width:31.6%;height:22%;--speech-delay:0ms" aria-hidden="true"></span></figure>
         <section class="worry-card worry-card--response" aria-labelledby="response-title"><div class="worry-card__inner"><h3 id="response-title">予約対応の手間を減らしたい</h3><ul><li>接客中もLINEの返信が気になる</li><li>空き枠の確認・日時調整が手作業</li><li>同じ質問に何度も答えている</li><li>営業時間外の問い合わせに対応できない</li><li>英語・タイ語の返信に時間がかかる</li></ul></div></section>
         <figure class="comic-frame comic-frame--worry" data-comic><img class="worry-comic" loading="lazy" decoding="async" src="assets/comic02-booking-dialogue.webp" width="1619" height="971" alt="マリ：予約が増えても、英語やタイ語の返信で毎日何時間も…。これじゃ、他の仕事ができないよ…。"><span class="speech-mask" data-speech-mask style="left:59%;top:7.5%;width:37.8%;height:25%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:71.8%;top:47%;width:24.4%;height:24%;--speech-delay:550ms" aria-hidden="true"></span></figure>
       </div>
-      <section id="block03" class="selected-heading selected-heading--solution" aria-labelledby="solution-title"><div class="selected-heading__panel"><h2 id="solution-title"><span data-manga-wipe>予約を増やして、対応の手間を減らす。</span><br><strong data-manga-wipe>バンコク店舗集客セット</strong></h2></div><div class="selected-heading__band" aria-hidden="true"></div><span class="selected-heading__pointer" aria-hidden="true"></span></section>
+      <section id="block03" class="selected-heading selected-heading--solution" aria-labelledby="solution-title"><div class="selected-heading__panel"><h2 id="solution-title"><span class="heading-line" data-manga-wipe>予約を増やして、対応の手間を減らす。</span><span class="heading-line heading-line--accent" data-manga-wipe>バンコク店舗集客セット</span></h2></div><div class="selected-heading__band" aria-hidden="true"></div><span class="selected-heading__pointer" aria-hidden="true"></span></section>
       <figure class="comic-frame comic-frame--intro" data-comic><img class="story-art story-comic" src="assets/revision-oct14/story-intro-color.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="マリ：バンコク店舗集客セットって、どんなセットなんですか？ 斎藤：広告で集めて、LPで魅力を伝え、LINEで質問・予約へつなぐんだ。マリ：広告を出すだけじゃ、ダメなんですか？ 斎藤：見つけた人に、このお店に行きたいと思ってもらうページが必要なんだ。" ><span class="speech-mask" data-speech-mask style="left:4.1%;top:3.6%;width:38%;height:10.7%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:61%;top:3.2%;width:35.9%;height:10.7%;--speech-delay:550ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:3.8%;top:62.4%;width:30.7%;height:7.8%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:64.7%;top:66%;width:33.3%;height:15%;--speech-delay:550ms" aria-hidden="true"></span><svg class="comic-seam" viewBox="0 0 1122 1402" aria-hidden="true" preserveAspectRatio="none"><path d="M0 806L1122 886" class="comic-seam__edge"/><path d="M0 806L1122 886" class="comic-seam__gap"/></svg></figure>
       <figure class="comparison-selected comic-frame" data-comic id="homepage-comparison" aria-label="Salon de Sixの実ホームページと商品LPの比較">
         <img class="story-art" src="assets/revision-oct14/story-comparison-selected-character.png" width="1024" height="1536" loading="lazy" decoding="async" alt="斎藤：ホームページはお店全体の案内。LPは一つのサービスに絞ったページだよ。画像や大きな見出しで魅力を見せられるんだ。売れる営業マンも、お客様に合わせて、納得できる順番で話すよね。LPも同じ。Web上の営業マンだよ。" >
@@ -231,7 +236,7 @@
 
 <div class="manga-backhalf automation-chapters">
 <section id="line-automation" aria-labelledby="line-automation-title">
-  <header class="back-heading"><h2 id="line-automation-title"><span data-manga-wipe>予約が増えても、<br>返信に追われないために。</span></h2></header>
+  <header class="back-heading"><h2 id="line-automation-title"><span class="heading-line" data-manga-wipe>予約が増えても、</span><span class="heading-line heading-line--accent" data-manga-wipe>返信に追われないために。</span></h2></header>
   <figure class="comic-frame"><img src="assets/line-ads/line-intro.jpg" width="887" height="1774" loading="lazy" alt="女性：でも、外国語の問い合わせが増えたら、返信が大変そう…。斎藤：そこで、AIを使ったLINEの自動化だよ。質問への返信から、空き枠の案内、予約受付まで自動化するんだ。まず、お客様からどんな質問が来るか、お店にしっかりヒアリングするんだ。その質問への回答を、最初に作り込んでおくよ。"><span class="speech-mask" data-speech-mask style="left:62%;top:3.8%;width:34.4%;height:7.3%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:8.8%;top:30%;width:33%;height:4.7%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:64.1%;top:34%;width:34%;height:7%;--speech-delay:550ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:6.8%;top:63.5%;width:31.5%;height:8.9%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:69.7%;top:62.7%;width:27.5%;height:6.5%;--speech-delay:550ms" aria-hidden="true"></span></figure>
   <div class="back-content setup-content">
     <p class="setup-kicker">お店に合わせて、最初に準備</p>
@@ -257,7 +262,7 @@
   </div>
 </section>
 <section id="line-demo" aria-labelledby="line-demo-title" data-line-demo>
-  <header class="back-heading"><h2 id="line-demo-title"><span data-manga-wipe>質問から予約まで、<br>実際の流れを見てみよう。</span></h2></header>
+  <header class="back-heading"><h2 id="line-demo-title"><span class="heading-line" data-manga-wipe>質問から予約まで、</span><span class="heading-line heading-line--accent" data-manga-wipe>実際の流れを見てみよう。</span></h2></header>
   <div class="demo-language-bar"><label for="demo-language">会話の言語</label><select id="demo-language" data-demo-language><option value="ja">日本語</option><option value="en">English</option><option value="th">ไทย</option></select><span class="demo-label">体験デモ</span></div>
 <div class="demo-controls"><button type="button" data-demo-toggle aria-pressed="false">Ⅱ 一時停止</button><button type="button" data-demo-restart>↺ 最初から見る</button></div>
   <div class="line-demo-stage" data-demo-screen>
@@ -282,40 +287,123 @@
     <p class="demo-finished" data-demo-finished hidden>質問への回答から、予約登録・完了案内まで。</p>
     <p class="back-note demo-disclosure">会話・料金・予約枠は説明用の例です。このデモから実際の予約やメッセージ送信は行われません。</p>
   </div>
-  <div class="back-content staff-handoff"><h3>自動対応できない内容は、<br>スタッフへ引き継ぎ。</h3><p>お店で確認が必要な質問は、無理に回答せず、人が確認する流れへつなぎます。</p><div data-demo-handoff></div></div>
+  <div class="back-content staff-handoff"><h3>自動対応できない内容は、<br>スタッフへ引き継ぎ。</h3><p>お店で確認が必要な質問は、無理に回答せず、人が確認する流れへつなぎます。</p><div data-demo-handoff></div><div class="handoff-visual"><p class="handoff-caption">確認が必要な内容は、<br>スタッフが対応します。</p><img class="handoff-mari" src="assets/direction-a/mari-handoff.webp" width="1122" height="1402" loading="lazy" alt="お客様の質問を確認するマリ"></div></div>
   <figure class="comic-frame"><img src="assets/line-ads/customer-focus.jpg" width="1122" height="1402" loading="lazy" alt="スマホを気にせず接客する女性：これなら、接客中もずっと返信を気にしなくていいんですね。お客様に集中できるし、仕事がずっと楽になりそう！ 斎藤：いつもの質問や予約受付を任せられれば、その分、お店の仕事に時間を使えるね。"><span class="speech-mask" data-speech-mask style="left:4%;top:4%;width:35%;height:11%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:61.3%;top:4.3%;width:35.5%;height:10.6%;--speech-delay:550ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:54.5%;top:72.3%;width:41.5%;height:15%;--speech-delay:0ms" aria-hidden="true"></span></figure>
   <aside class="integration-note"><h3>今お使いのシステムとの連携も、<br>ご相談ください。</h3><p>Googleカレンダーを活用すると、導入の手間や費用を抑えやすくなります。</p><p>お店独自のシステムへの組み込みも、仕様を確認してご相談いただけます。個別開発が必要な場合は、別途費用がかかります。</p></aside>
 </section>
-<section id="google-ads" aria-labelledby="google-ads-title">
-  <header class="back-heading"><h2 id="google-ads-title"><span data-manga-wipe>来店につながるお客様を、<br>広告から。</span></h2></header>
-  <figure class="comic-frame"><img src="assets/line-ads/ads-intro.jpg" width="1122" height="1402" loading="lazy" alt="女性：予約まで自動で受け付けられるんですね！ でも、そもそもそのLPは、どうやってお客様に見てもらうんですか？ 斎藤：そこでGoogle広告を使うんだ。お店やサービスを探している人に、LPを見つけてもらうよ。"><span class="speech-mask" data-speech-mask style="left:57.1%;top:5.4%;width:39.4%;height:18.5%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:60.5%;top:45.2%;width:37%;height:15.5%;--speech-delay:0ms" aria-hidden="true"></span></figure>
-  <div class="back-content ads-content"><h3 class="ads-lead">探している人に、<br>お店の魅力が届くように。</h3>
-    <article class="ad-journey"><span>01</span><div><h4>エリア・言語・検索内容に合わせる</h4><p>来店してほしいエリアと、探しているサービス、使う言語に合わせて広告を設計します。</p><div class="search-example"><small>検索のイメージ</small><p>⌕　バンコク ホワイトニング</p></div></div></article>
-    <article class="ad-journey"><span>02</span><div><h4>興味を持った人を、対応するLPへ</h4><p>日本語・英語・タイ語それぞれのLPへ案内。広告で伝えた内容を、続けて読み進められるようにします。</p><div class="ad-language-tags"><span>日本語</span><span>English</span><span>ไทย</span></div></div></article>
-    <article class="ad-journey"><span>03</span><div><h4>LPで魅力と、選ばれる理由を伝える</h4><p>サービスの内容、料金、お店の強みを順番に伝え、「このお店に行きたい」という気持ちにつなげます。</p></div></article>
-    <article class="ad-journey"><span>04</span><div><h4>LINEで質問に答え、予約受付へ</h4><p>気になることを確認し、希望のメニュー・日時を相談。お店に合わせたAI対応で、予約受付まで進めます。</p></div></article>
+<section id="google-ads" class="ads-section-a" aria-labelledby="google-ads-title">
+  <header class="back-heading"><h2 id="google-ads-title"><span class="heading-line" data-manga-wipe>来店につながるお客様を、</span><span class="heading-line heading-line--accent" data-manga-wipe>広告から。</span></h2></header>
+
+  <figure class="comic-frame" data-comic>
+    <img src="assets/line-ads/ads-intro.jpg" width="1122" height="1402" loading="lazy" decoding="async" alt="マリ：予約まで自動で受け付けられるんですね！ でも、そもそもそのLPは、どうやってお客様に見てもらうんですか？ 斎藤：そこでGoogle広告を使うんだ。お店やサービスを探している人に、LPを見つけてもらうよ。">
+    <span class="speech-mask" data-speech-mask style="left:57.1%;top:5.4%;width:39.4%;height:18.5%" aria-hidden="true"></span>
+    <span class="speech-mask" data-speech-mask style="left:60.5%;top:45.2%;width:37%;height:15.5%" aria-hidden="true"></span>
+  </figure>
+
+  <div class="ads-comic-sequence" aria-label="Google検索とGoogleマップからお店を見つけてもらう流れ">
+    <figure class="comic-frame ads-comic-panel" data-comic style="--ads-panel-index:0">
+      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
+      <p class="ads-comic-bubble" data-speech-reveal><span class="ads-comic-speaker">斎藤さん</span>「バンコク 脱毛サロン」など、サービスを探している人に検索広告を出せるんだ。</p>
+    </figure>
+    <figure class="comic-frame ads-comic-panel" data-comic style="--ads-panel-index:1">
+      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
+      <p class="ads-comic-bubble" data-speech-reveal><span class="ads-comic-speaker">マリ</span>私も「バンコク 焼肉」とか、Googleマップで探します！</p>
+    </figure>
+    <figure class="comic-frame ads-comic-panel" data-comic style="--ads-panel-index:2">
+      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
+      <p class="ads-comic-bubble" data-speech-reveal><span class="ads-comic-speaker">斎藤さん</span>近くのお店を探す人にも、マップ上の広告で見つけてもらえるよ。</p>
+    </figure>
+    <figure class="comic-frame ads-comic-panel" data-comic style="--ads-panel-index:3">
+      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
+      <p class="ads-comic-bubble" data-speech-reveal><span class="ads-comic-speaker">斎藤さん</span>見つけてもらったら、LPで魅力を伝えて、LINEで質問・予約につなぐんだ。</p>
+    </figure>
   </div>
-  <figure class="comic-frame"><img src="assets/line-ads/ads-to-booking.jpg" width="1024" height="1536" loading="lazy" alt="広告で見つけてもらう。LPで「このお店に行きたい」と思ってもらう。AIを使ったLINE対応で、質問から予約まで進める。"></figure>
+
+  <div class="ads-a-explainer">
+    <div class="ads-a-intro"><p class="ads-a-eyebrow">お店を探す、2つの入口</p><p>検索しているそのときに、<br><strong>お店を知ってもらうきっかけを。</strong></p></div>
+
+    <article class="ads-a-card" aria-labelledby="ads-search-title">
+      <header class="ads-a-card__heading"><span class="ads-a-number" aria-hidden="true">01</span><div><p class="ads-a-eyebrow">Google検索広告</p><h3 id="ads-search-title">サービスを探している人に<br>見つけてもらう。</h3></div></header>
+      <p class="ads-a-card__lead">「バンコク 脱毛サロン」など、<strong>地域とサービス名で検索する人</strong>へ。検索内容に合った広告を届けます。</p>
+
+      <figure class="ads-a-screen">
+        <div class="ads-a-screen__label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.4"></circle><path d="m15 15 6 6"></path></svg><span>検索例：バンコク 脱毛サロン</span></div>
+        <img src="assets/direction-a/google-search-example.webp" width="1438" height="1093" loading="lazy" decoding="async" alt="Google検索結果のスポンサー広告欄を示した説明画面。Salon de Sixのサービスに関する検索広告。">
+        <figcaption><span>ここに注目</span>検索結果の「スポンサー広告」から、サービス専用のLPへ。<small class="ads-a-screen-note">検索画面は、実画面を参考にした説明用です。</small></figcaption>
+      </figure>
+
+      <div class="ads-a-destination" aria-label="Google検索広告からサービス専用LPへ">
+        <div class="ads-a-destination__copy"><p class="ads-a-destination__from">Google検索広告</p><span class="ads-a-down-arrow" aria-hidden="true"></span><h4>サービス専用のLP</h4><p>内容・料金・選ばれる理由を、<br>ひとつのページで詳しく。</p></div>
+        <figure class="ads-a-lp-preview"><img src="assets/revision-oct14/salon-lp-fv-offer-jp.webp" width="865" height="1750" loading="lazy" decoding="async" alt="Salon de Sixの男磨きセットを紹介するサービス専用LP"><figcaption>Salon de SixのLP実例</figcaption></figure>
+      </div>
+      <p class="ads-a-keywords"><span>ほかにも、こんな検索から</span><strong>バンコク 美容</strong><strong>バンコク 歯医者</strong></p>
+    </article>
+
+    <article class="ads-a-card" aria-labelledby="ads-maps-title">
+      <header class="ads-a-card__heading"><span class="ads-a-number" aria-hidden="true">02</span><div><p class="ads-a-eyebrow">Googleマップ広告</p><h3 id="ads-maps-title">近くのお店を探す人に<br>知ってもらう。</h3></div></header>
+      <p class="ads-a-card__lead">食事のお店や、通いやすいお店を探すとき。<strong>地図で場所を確かめている人</strong>にも、お店を見つけてもらう入口をつくります。</p>
+      <figure class="ads-a-screen">
+        <div class="ads-a-screen__label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-8.8 8-14A8 8 0 0 0 4 8c0 5.2 8 14 8 14Z"></path><circle cx="12" cy="8" r="2.6"></circle></svg><span>検索例：バンコク 焼肉</span></div>
+        <img src="assets/direction-a/map-example.webp" width="1385" height="1136" loading="lazy" decoding="async" alt="Googleマップの店舗検索画面をもとに、広告の掲載場所を示した説明図。実際に掲載中の広告を示すものではありません。">
+        <figcaption><span>広告表示の説明例</span>地図や検索結果で、お店の存在と場所を伝えます。</figcaption>
+      </figure>
+
+      <div class="ads-a-map-route" aria-label="店舗情報のウェブサイト導線からLPへ進む例">
+        <div class="ads-a-map-route__step"><span class="ads-a-route-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10 17v18h20V17M6 17l4-12h20l4 12M6 17h28M16 35V24h8v11"></path><path d="M13 5l-2 12M20 5v12M27 5l2 12"></path></svg></span><strong>店舗情報</strong></div>
+        <span class="ads-a-route-chevron" aria-hidden="true"></span>
+        <div class="ads-a-map-route__step"><span class="ads-a-route-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="5" y="7" width="30" height="26" rx="3"></rect><path d="M5 14h30M10 10h2M15 10h2M20 10h2M14 23h12M23 19l4 4-4 4"></path></svg></span><strong>ウェブサイト</strong></div>
+        <span class="ads-a-route-chevron" aria-hidden="true"></span>
+        <div class="ads-a-map-route__step"><span class="ads-a-route-icon" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="10" y="3" width="20" height="34" rx="4"></rect><path d="M15 8h10M14 13h12v9H14zM14 26h12M17 32h6"></path></svg></span><strong>LP</strong></div>
+      </div>
+      <p class="ads-a-route-note">店舗情報の「ウェブサイト」など、<strong>LPへ案内できる導線</strong>を設計します。</p>
+      <p class="ads-a-footnote">広告形式やクリックする箇所により、店舗情報・経路・電話・ウェブサイトなど、表示や移動先は異なります。すべてのクリックがLPに直接移動するわけではありません。</p>
+    </article>
+
+    <section class="ads-a-match" aria-labelledby="ads-match-title">
+      <p class="ads-a-eyebrow">広告から、その先まで</p>
+      <h3 id="ads-match-title">探している人に、<br>お店の魅力が届くように。</h3>
+      <p>広告とLPで伝える内容をそろえ、<br>来店・予約までの流れを設計します。</p>
+      <ol class="ads-a-match__list">
+        <li><span aria-hidden="true">01</span><div><h4>エリア・言語・検索内容を合わせる</h4><p>来店してほしいエリアと、探しているサービス、使う言語に合わせて広告を設計します。</p></div></li>
+        <li><span aria-hidden="true">02</span><div><h4>広告に対応するLPへ案内する</h4><p>日本語・英語・タイ語のLPへ。広告で気になった内容を、そのまま詳しく読めるようにします。</p><div class="ads-a-languages"><span>日本語</span><span>English</span><span lang="th">ไทย</span></div></div></li>
+        <li><span aria-hidden="true">03</span><div><h4>魅力と、選ばれる理由を伝える</h4><p>サービス内容、料金、お店の強みを順番に伝え、「このお店に行きたい」という気持ちにつなげます。</p></div></li>
+        <li><span aria-hidden="true">04</span><div><h4>LINEで質問から予約受付へ</h4><p>気になることを確認し、希望のメニューと日時を相談。お店に合わせたAI対応で予約受付へ進めます。</p></div></li>
+      </ol>
+    </section>
+  </div>
+
+  <header class="back-heading ads-a-summary-heading"><h2 id="ads-summary-title"><span class="heading-line" data-manga-wipe>集客から予約まで、</span><span class="heading-line heading-line--accent" data-manga-wipe>ひとつの流れで。</span></h2></header>
+  <figure class="comic-frame ads-a-summary-comic" data-comic aria-labelledby="ads-summary-title">
+    <img src="assets/line-ads/ads-to-booking.jpg" width="1024" height="1536" loading="lazy" decoding="async" alt="広告で見つけてもらう。LPで「このお店に行きたい」と思ってもらう。AIを使ったLINE対応で、質問から予約まで進める。広告、LP、LINEを通じてお店に来店するお客様と、笑顔で迎えるマリと斎藤さん。">
+    <span class="speech-mask" data-speech-mask style="left:4.2%;top:2.2%;width:49.9%;height:3.8%" aria-hidden="true"></span>
+    <span class="speech-mask" data-speech-mask style="left:4.3%;top:36.1%;width:90.8%;height:3.7%" aria-hidden="true"></span>
+    <span class="speech-mask" data-speech-mask style="left:4.0%;top:68.8%;width:92%;height:3.7%" aria-hidden="true"></span>
+  </figure>
+  <div class="ads-a-outcome" data-comic>
+    <p class="ads-a-outcome__quote" data-speech-reveal><span>マリ</span>これなら、返信に追われず、<br><strong>目の前のお客様に集中できそう！</strong></p>
+    <p class="ads-a-outcome__answer" data-speech-reveal><span>斎藤さん</span>いつもの質問や予約受付を任せられれば、その分、お店の仕事に時間を使えるね。</p>
+    <p class="ads-a-outcome__bridge">この流れを、お店に合わせて整えるのが<br><strong>バンコク店舗集客セット</strong>です。</p>
+  </div>
 </section>
 </div>
 
 <div class="manga-backhalf">
 <section id="plans" aria-labelledby="plans-title">
-<header class="back-heading"><h2 id="plans-title"><span data-manga-wipe>お店に必要な集客と<br>予約対応を、ひとつに。</span></h2></header>
+<header class="back-heading"><h2 id="plans-title"><span class="heading-line" data-manga-wipe>お店に必要な集客と予約対応を、</span><span class="heading-line heading-line--accent" data-manga-wipe>ひとつに。</span></h2></header>
 <div class="back-content"><p class="back-lead">単品でのご依頼も可能です。<br>LP制作とLINEのAI自動化を同時にご依頼いただくと、セット割引が適用されます。広告運用は、ご希望に合わせて追加できるオプションです。</p>
 <article class="price-plan"><h3>日本語LP＋LINE自動化セット</h3><dl><div><dt>日本語LP制作</dt><dd>50,000<small> THB</small></dd></div><div><dt>LINE AI自動化・初期</dt><dd>30,000<small> THB</small></dd></div></dl><div class="price-discount"><span>通常初期費用 80,000 THB</span><strong>同時発注で 10,000 THB割引</strong></div><p class="price-total"><span>セット初期費用</span><strong>70,000<small> THB</small></strong></p><p class="price-monthly">LINE自動化の月額費用 <strong>2,000 <small>THB／月</small></strong></p></article>
 <article class="price-plan"><h3>3言語LP＋LINE自動化セット</h3><dl><div><dt>日本語LP制作</dt><dd>50,000<small> THB</small></dd></div><div><dt>英語LP追加制作</dt><dd>10,000<small> THB</small></dd></div><div><dt>タイ語LP追加制作</dt><dd>10,000<small> THB</small></dd></div><div><dt>LINE AI自動化・初期</dt><dd>30,000<small> THB</small></dd></div></dl><div class="price-discount"><span>通常初期費用 100,000 THB</span><strong>同時発注で 20,000 THB割引</strong></div><p class="price-total"><span>セット初期費用</span><strong>80,000<small> THB</small></strong></p><p class="price-monthly">LINE自動化の月額費用 <strong>2,000 <small>THB／月</small></strong></p></article>
 <p class="back-note">※日本語LP制作50,000バーツの基本構成をもとにしたセット価格です。広告運用は別途オプションです。</p>
-<h3 class="back-subhead">必要なものだけ、単品でも。</h3><dl class="single-prices"><div><dt>日本語LP制作</dt><dd>50,000 THB〜</dd></div><div><dt>英語LP追加制作</dt><dd>1ページ 10,000 THB</dd></div><div><dt>タイ語LP追加制作</dt><dd>1ページ 10,000 THB</dd></div><div><dt>LINEのAI質問対応・予約自動化</dt><dd>初期30,000 THB<br>＋月額2,000 THB</dd></div></dl><p>多言語LPは、日本語LPを制作いただいたお客様向けの追加サービスです。日本語版を土台に英語・タイ語へ展開します。英語のみ・タイ語のみの新規制作は、基本的に受け付けておりません。</p><h3 class="back-subhead">LINE自動化の対応内容</h3><ul class="back-checks">
+<div class="detail-card"><h3 class="back-subhead">必要なものだけ、単品でも。</h3><dl class="single-prices"><div><dt>日本語LP制作</dt><dd>50,000 THB〜</dd></div><div><dt>英語LP追加制作</dt><dd>1ページ 10,000 THB</dd></div><div><dt>タイ語LP追加制作</dt><dd>1ページ 10,000 THB</dd></div><div><dt>LINEのAI質問対応・予約自動化</dt><dd>初期30,000 THB<br>＋月額2,000 THB</dd></div></dl><p>多言語LPは、日本語LPを制作いただいたお客様向けの追加サービスです。日本語版を土台に英語・タイ語へ展開します。英語のみ・タイ語のみの新規制作は、基本的に受け付けておりません。</p></div><div class="detail-card"><h3 class="back-subhead">LINE自動化の対応内容</h3><ul class="back-checks">
 <li>想定される質問をヒアリングし、回答内容を事前に作り込む。</li>
 <li>問い合わせの言語に合わせて回答する。</li>
 <li>メニュー、所要時間、受付可能件数、スタッフ・設備等の予約ルールを設定する。</li>
 <li>Googleカレンダーと連動し、希望サービス・日時を確認する。</li>
 <li>予約ルールと予定を確認して空き枠を案内し、予約受付・登録へ進める。</li>
 <li>自動回答できない内容をスタッフへ引き継ぐ流れも整理する。</li>
-</ul><div class="ad-option"><span class="back-kicker">OPTION</span><h3>広告運用は、必要に応じて<br>追加できます。</h3><p>リスティング広告・Googleマップ広告に対応。</p><dl><div><dt>月額広告費10,000 THB以下</dt><dd>運用手数料 <strong>2,000 THB／月</strong></dd></div><div><dt>月額広告費10,000 THB超</dt><dd>運用手数料 <strong>広告費の20％</strong></dd></div></dl><p class="back-note">例：広告費10,000 THB → 手数料2,000 THB<br>広告費20,000 THB → 手数料4,000 THB</p><p>Googleへ支払う広告費は、運用手数料とは別途必要です。広告を出すかどうか、運用を依頼するかどうかは、お客様に選んでいただけます。</p></div><h3 class="back-subhead">今お使いのシステムとの連携も、<br>ご相談ください。</h3><p>Googleカレンダーを活用した標準的な構成を基本とし、独自システムへの組み込みは仕様を確認して対応範囲をご案内します。個別開発が必要な場合は、別途お見積もりとなります。</p><aside class="coupon-note"><strong>初めての広告出稿は、Google広告のクーポンもご相談ください。</strong><p>対象となる場合は、利用できる広告クレジットと適用条件をご案内します。</p></aside></div></section>
+</ul></div><div class="ad-option"><span class="back-kicker">OPTION</span><h3>広告運用は、必要に応じて<br>追加できます。</h3><p>リスティング広告・Googleマップ広告に対応。</p><dl><div><dt>月額広告費10,000 THB以下</dt><dd>運用手数料 <strong>2,000 THB／月</strong></dd></div><div><dt>月額広告費10,000 THB超</dt><dd>運用手数料 <strong>広告費の20％</strong></dd></div></dl><p class="back-note">例：広告費10,000 THB → 手数料2,000 THB<br>広告費20,000 THB → 手数料4,000 THB</p><p>Googleへ支払う広告費は、運用手数料とは別途必要です。広告を出すかどうか、運用を依頼するかどうかは、お客様に選んでいただけます。</p></div><div class="detail-card"><h3 class="back-subhead">今お使いのシステムとの連携も、<br>ご相談ください。</h3><p>Googleカレンダーを活用した標準的な構成を基本とし、独自システムへの組み込みは仕様を確認して対応範囲をご案内します。個別開発が必要な場合は、別途お見積もりとなります。</p></div><aside class="coupon-note"><strong>初めての広告出稿は、Google広告のクーポンもご相談ください。</strong><p>対象となる場合は、利用できる広告クレジットと適用条件をご案内します。</p></aside></div></section>
 <section id="production-flow" aria-labelledby="flow-title">
-<header class="back-heading"><h2 id="flow-title"><span data-manga-wipe>お問い合わせから、<br>制作・納品まで。</span></h2></header>
+<header class="back-heading"><h2 id="flow-title"><span class="heading-line" data-manga-wipe>お問い合わせから</span><span class="heading-line heading-line--accent" data-manga-wipe>制作・納品までの流れ</span></h2></header>
 <div class="back-content"><p class="back-lead">まずはLINEで、お店のことをお聞かせください。お店の情報や写真をもとに、スマホLPのメイン画像ラフを1案、無料でご提案します。仕上がりのイメージとお見積もりをご確認いただいてから、本制作へ進みます。</p><ol class="production-steps">
 <li class="production-step step-1"><span class="step-no">01</span><div><h3>LINEでお問い合わせ</h3><p>「無料ラフを相談したい」とLINEでお知らせください。</p><p>お店の業種や、集客・予約対応でお困りのことを伺います。</p></div></li>
 <li class="production-step step-2"><span class="step-no">02</span><div><h3>ヒアリング・お店の情報や素材のご提供</h3><p>サービス内容、料金、強み、来てほしいお客様、お店のイメージを確認します。</p><p>お店・サービスの写真やロゴなど、制作に必要な素材をご提供いただきます。</p></div></li>
@@ -326,7 +414,7 @@
 <li class="production-step step-7"><span class="step-no">07</span><div><span class="step-tag">工程5〜6と並行</span><h3>並行して、LINEのAI自動対応・予約を構築</h3><p>セットをご依頼の場合は、LP制作と並行して、よくある質問と回答、メニュー、所要時間、受付可能件数などをヒアリングします。</p><p>店舗ごとのルールに合わせ、Googleカレンダーと連動した質問対応・空き枠案内・予約受付を実装します。</p></div></li>
 <li class="production-step step-8"><span class="step-no">08</span><div><h3>最終確認・納品</h3><p>LPの表示、問い合わせへの導線、LINEの回答・予約の流れを確認します。</p><p>必要な調整を行い、ご依頼範囲に合わせて納品します。</p></div></li>
 </ol></div></section><section id="faq" aria-labelledby="faq-title">
-<header class="back-heading"><h2 id="faq-title"><span data-manga-wipe>ご相談前の、<br>気になることにお答えします。</span></h2></header>
+<header class="back-heading"><h2 id="faq-title"><span class="heading-line" data-manga-wipe>ご相談前の気になることに</span><span class="heading-line heading-line--accent" data-manga-wipe>お答えします。</span></h2></header>
 <div class="back-content faq-list">
 <details><summary><span>Q01</span>無料ラフを見てから、依頼を検討できますか？</summary><div class="faq-answer"><span>A</span><p>はい。お店についてヒアリングしたうえで、スマホLPのメイン画像ラフを1案、無料でご提案します。デザインの方向性とお見積もりをご確認いただいてから、本制作をご検討いただけます。</p></div></details>
 <details><summary><span>Q02</span>LPだけ、LINEの自動化だけでも依頼できますか？</summary><div class="faq-answer"><span>A</span><p>はい。それぞれ単品でご依頼いただけます。日本語LPは50,000バーツ〜、LINEのAI自動化は初期30,000バーツ・月額2,000バーツです。同時にご依頼いただくとセット割引が適用されます。</p></div></details>
@@ -341,7 +429,7 @@
 <details><summary><span>Q11</span>制作・導入には、どのくらいの期間がかかりますか？</summary><div class="faq-answer"><span>A</span><p>ページの内容、対応言語、LINEの連携仕様、素材のご準備状況によって変わります。ヒアリング後、制作前にスケジュールをご案内します。</p></div></details>
 <details><summary><span>Q12</span>支払いは、どのタイミングですか？</summary><div class="faq-answer"><span>A</span><p>無料ラフとお見積もりをご確認いただき、正式なご依頼後に着手金をお支払いいただきます。金額と支払い条件は、ご依頼前にご案内します。</p></div></details>
 </div></section><section id="about-zero" aria-labelledby="about-title">
-<header class="back-heading"><h2 id="about-title"><span data-manga-wipe>株式会社ゼロについて</span></h2></header>
+<header class="back-heading"><h2 id="about-title"><span class="heading-line" data-manga-wipe>私たちについて</span></h2></header>
 <div class="back-content"><p class="company-lead">LP制作を専門に、<strong>13年。</strong><br>日本で培った経験を、<br>バンコクのお店へ。</p>
 <p>株式会社ゼロは、東京都港区にある日本の会社です。<br>ランディングページ制作を専門に創業し、13年。これまでに300社以上のLP制作、100社以上の広告運用を手がけてきました。</p><p>私たちが大切にしているのは、お店の魅力を整理し、お客様が「ここに行きたい」と思える順番で伝えることです。<br>企画・構成・文章・デザインから、広告、LINEを使った質問対応・予約受付まで。バンコクの店舗に向けて、Webとマーケティングの両面から支援しています。</p>
 <dl class="company-stats"><div><dt>LP制作実績</dt><dd>300<small>社以上</small></dd></div><div><dt>広告運用実績</dt><dd>100<small>社以上</small></dd></div><div><dt>LP制作専門</dt><dd>13<small>年</small></dd></div></dl></div>
@@ -374,7 +462,7 @@
 <div class="back-content company-close"><p class="back-note">※掲載数値は各案件の施策前後の事例です。LP改善と広告施策等を組み合わせた事例を含みます。</p>
 <p>バンコクで、お店の集客を伸ばすチャンスを一緒に見つけたい。<br>魅力を伝えるページと、質問・予約まで進みやすい仕組みを整えることで、まだ取り組めることがあると私たちは考えています。</p><p>ご相談いただいたお店には、一店一店の強みと課題に向き合い、売上を伸ばすために何ができるかを一緒に考えます。<br>日本で培った制作・運用の経験を活かし、ご相談から制作・導入まで、丁寧に進めます。お店のことを、まずはお聞かせください。</p>
 </div></section><section id="free-rough" aria-labelledby="rough-title">
-<header class="back-heading"><h2 id="rough-title"><span data-manga-wipe>まずは、あなたのお店のLPを<br>見てみませんか？</span></h2></header>
+<header class="back-heading"><h2 id="rough-title"><span class="heading-line" data-manga-wipe>まず、あなたのお店のLPを</span><span class="heading-line heading-line--accent" data-manga-wipe>見てみませんか？</span></h2></header>
 <figure class="comic-frame closing-comic"><img src="assets/closing-manga.png" width="887" height="1774" loading="lazy" alt="マリ：うちのお店なら、どんなLPになるんだろう？ 斎藤：今なら、スマホLPのメイン画像ラフを1案、無料で提案するよ。マリ：無料でデザインを見てから、お願いするか考えられるんですね！ 斎藤：そう。お店のお話と写真をもとに作るから、まずはLINEで相談してみて。マリ：それなら、一度見てみたいです！"><span class="speech-mask" data-speech-mask style="left:60.8%;top:5.2%;width:33%;height:8%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:5.3%;top:27.5%;width:39%;height:12.4%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:60.5%;top:54.4%;width:35.7%;height:8%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:70%;top:71.9%;width:24.9%;height:10%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:4.2%;top:92.5%;width:31.2%;height:5.5%;--speech-delay:550ms" aria-hidden="true"></span></figure><div class="back-content rough-offer"><p>お店の魅力を、どんなページで伝えられるのか。<br>まずはデザインのイメージをご覧ください。</p><h3>今なら、スマホLPの<br>メイン画像ラフを<strong>1案、無料</strong>でご提案。</h3><button class="rough-line-cta" type="button" disabled aria-describedby="line-destination-pending"><strong>LINEで無料ラフを相談する</strong><small>スマホLPのメイン画像ラフを1案、無料でご提案</small></button><p id="line-destination-pending" class="back-note">LINE相談先を設定中です。</p><p class="back-note">お店の情報・写真をもとに、メイン画像のラフ案をご提案します。</p></div></section></div>
     </main>
       <aside class="manga-cta manga-cta--dock" aria-label="無料提案のご相談">

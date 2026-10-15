@@ -11,7 +11,30 @@
   const status = demo.querySelector('[data-demo-status]');
   const progress = demo.querySelector('[data-demo-progress]');
   const portrait = demo.querySelector('[data-demo-portrait]');
+  if (![chat, toggle, restart, select, note, status, progress, portrait].every(Boolean)) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const dashboard = demo.querySelector('.demo-dashboard');
+  const controls = toggle.closest('.demo-controls');
+  if (dashboard && controls) progress.after(controls);
+  const languageBar = select.closest('.demo-language-bar');
+  const languageOptions = document.createElement('div');
+  languageOptions.className = 'demo-language-options';
+  languageOptions.setAttribute('role', 'group');
+  languageOptions.setAttribute('aria-label', '会話の言語');
+  [...select.options].forEach(option => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.dataset.language = option.value;
+    button.textContent = option.textContent;
+    button.setAttribute('aria-pressed', String(option.selected));
+    button.addEventListener('click', () => {
+      select.value = option.value;
+      changeLanguage(option.value);
+    });
+    languageOptions.append(button);
+  });
+  languageBar.append(languageOptions);
+  languageBar.classList.add('has-language-buttons');
   const explanations = [
     '事前に準備したお店の情報をもとに回答するよ',
     '日本語・英語・タイ語。来た言語に合わせて対応するんだ',
@@ -62,17 +85,20 @@
   function updateControl(){toggle.textContent=complete?'もう一度再生':paused?'▶ 再生':'Ⅱ 一時停止';toggle.setAttribute('aria-pressed',String(paused));}
   function stop(){clearTimeout(timer);timer=0;}
   function schedule(){stop();if(ready())timer=setTimeout(next, index===0?600:2550);}
-  function addMessage(role,text){
+  function addMessage(role,text,scroll=true){
     const item=document.createElement('div');item.className=`line-message line-message--${role}`;
     if(role!=='system'){
       const label=document.createElement('span');label.className='line-message__sender';label.textContent=copy[language][role];item.append(label);
     }
     const bubble=document.createElement('p');bubble.textContent=text;item.append(bubble);chat.append(item);
     // Deliberately scroll this element only, never the outer page.
-    chat.scrollTo({top:chat.scrollHeight,behavior:reduced.matches?'instant':'smooth'});
+    if(scroll)chat.scrollTo({top:chat.scrollHeight,behavior:reduced.matches?'instant':'smooth'});
   }
   function setStage(stage){
-    note.textContent=explanations[stage];status.textContent=`${String(stage+1).padStart(2,'0')} / 06　${titles[stage]}`;
+    note.textContent=explanations[stage];
+    const number=document.createElement('span');number.className='demo-status__number';number.textContent=String(stage+1).padStart(2,'0');
+    const total=document.createElement('small');total.textContent=' / 06';number.append(total);
+    const title=document.createElement('span');title.textContent=titles[stage];status.replaceChildren(number,title);
     progress.value=stage+1;portrait.dataset.pose=String(stage);portrait.setAttribute('aria-label',`斎藤さん：${titles[stage]}`);
     demo.querySelectorAll('[data-demo-step]').forEach((b,i)=>b.setAttribute('aria-current',i===stage?'step':'false'));
   }
@@ -87,7 +113,9 @@
     stop();paused=!play;complete=false;index=0;chat.replaceChildren();
     chat.lang=copy[language].lang;demo.querySelector('[data-demo-chat-title]').textContent=copy[language].title;
     entries=copy[language].stages.flatMap((messages,stage)=>messages.map(([role,text])=>({role,text,stage})));
-    demo.querySelector('[data-demo-finished]').hidden=true;setStage(0);updateControl();schedule();renderHandoff();
+    demo.querySelector('[data-demo-finished]').hidden=true;setStage(0);
+    if(!play&&reduced.matches){entries.slice(0,2).forEach(entry=>addMessage(entry.role,entry.text,false));index=2;chat.scrollTop=0;}
+    updateControl();schedule();renderHandoff();
   }
   function renderHandoff(){
     const box=demo.querySelector('[data-demo-handoff]');box.lang=copy[language].lang;box.replaceChildren();
@@ -95,16 +123,25 @@
   }
   toggle.addEventListener('click',()=>{if(complete)return reset(true);paused=!paused;updateControl();schedule();});
   restart.addEventListener('click',()=>reset(true));
-  select.addEventListener('change',()=>{language=select.value;reset(!reduced.matches);});
+  function changeLanguage(value){
+    if(!copy[value])return;
+    language=value;
+    languageOptions.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===value)));
+    reset(!reduced.matches);
+  }
+  select.addEventListener('change',()=>changeLanguage(select.value));
   demo.querySelectorAll('[data-demo-step]').forEach((button,stage)=>button.addEventListener('click',()=>{
     stop();paused=true;complete=false;chat.replaceChildren();index=0;
-    entries.forEach((entry,i)=>{if(entry.stage<=stage){addMessage(entry.role,entry.text);index=i+1;}});
+    entries.forEach((entry,i)=>{if(entry.stage<=stage){addMessage(entry.role,entry.text,false);index=i+1;}});
+    chat.scrollTo({top:chat.scrollHeight,behavior:'instant'});
     complete=index===entries.length;demo.querySelector('[data-demo-finished]').hidden=!complete;setStage(stage);updateControl();
   }));
   // A touch, wheel or keyboard read pauses auto-play so earlier messages remain readable.
   function pauseForReading(){if(!paused&&!complete){paused=true;stop();updateControl();}}
   chat.addEventListener('pointerdown',pauseForReading);chat.addEventListener('wheel',pauseForReading,{passive:true});chat.addEventListener('keydown',pauseForReading);
-  new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;schedule();},{threshold:.35,rootMargin:'0px 0px -145px 0px'}).observe(screen);
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;schedule();},{threshold:.35,rootMargin:'0px 0px -145px 0px'}).observe(screen);
+  }else{visible=true;}
   document.addEventListener('visibilitychange',schedule);
   reduced.addEventListener('change',event=>{if(event.matches){paused=true;stop();updateControl();}});
   reset(!reduced.matches);

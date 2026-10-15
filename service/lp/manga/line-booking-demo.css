@@ -11,3 +11,75 @@
 @media(prefers-reduced-motion:reduce){.line-message{animation:none}.line-demo-chat{scroll-behavior:auto}.line-demo-portrait{transition:none}}
 
 #line-demo>.demo-controls{padding:0 12px 14px;background:#fff}
+
+/* Adopted direction A: the device, guide and salon form one continuous scene. */
+#line-demo{background:#06263e;overflow:clip}
+#line-demo .demo-language-bar{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0;padding:0 16px 23px;background:#06263e;color:#fff1be;border-bottom:1px solid #c6a252}
+#line-demo .demo-language-bar label{font-size:12px}
+#line-demo .demo-language-bar select{border-color:#d3ae58;background:#fff8e6;color:#09283d;border-radius:20px}
+#line-demo .demo-label{color:#f8e3a3;background:transparent;border:1px solid #b89858;border-radius:12px}
+#line-demo .demo-language-bar.has-language-buttons label,
+#line-demo .demo-language-bar.has-language-buttons select,
+#line-demo .demo-language-bar.has-language-buttons .demo-label{display:none}
+.demo-language-options{display:flex;gap:8px;width:100%}
+.demo-language-options button{flex:1;min-width:0;min-height:39px;padding:7px 6px;border:1px solid #d2c093;border-radius:24px;color:#fff;font:inherit;font-size:13px;background:transparent;cursor:pointer}
+.demo-language-options button[aria-pressed=true]{color:#08263d;background:linear-gradient(110deg,#fff0b4,#edc569);border-color:#ffedb0;box-shadow:inset 0 0 0 1px #fffae9;font-family:var(--manga-morisawa-bold)}
+.demo-language-options button:focus-visible{outline:3px solid #fff7c7;outline-offset:3px}
+#line-demo .line-demo-stage{container-type:inline-size;display:grid;grid-template-columns:minmax(0,54%) minmax(0,46%);height:auto;min-height:0;padding:17px 5px 20px;gap:0;margin-bottom:0;border:0;box-shadow:none;background:#c59b5c url('assets/direction-a/salon-demo-background.webp') center / cover no-repeat;isolation:isolate;overflow:hidden}
+#line-demo .line-demo-stage::after{content:"";position:absolute;z-index:0;inset:auto 0 0;height:24px;background:linear-gradient(180deg,#72451225,#ad773d95);border-bottom:2px solid #ae813f;pointer-events:none}
+#line-demo .line-demo-phone{z-index:2;width:100%;height:auto;min-height:0;aspect-ratio:205 / 440;border:1.3158cqw solid #081019;border-radius:6.8cqw;background:linear-gradient(110deg,#273643,#080e16 17%,#101a23 84%,#455360);padding:6.3158cqw 0 4.7368cqw;box-shadow:0 0 0 1px #899399,0 0 0 2px #15222c,2px 5px 10px #28170469;overflow:hidden}
+#line-demo .line-demo-phone::after{content:"";position:absolute;bottom:1.7cqw;left:31%;width:38%;height:3px;background:#9aa6af;border-radius:3px;pointer-events:none}
+#line-demo .line-demo-speaker{top:2.6cqw;width:9cqw;height:1cqw;left:calc(50% - 4.5cqw);background:#111d28;box-shadow:0 1px #59636e}
+#line-demo .line-demo-chat-header{min-height:36px;gap:5px;padding:9px 6px;background:#193956;border-bottom:0;color:#fff;font-size:13px}
+#line-demo .line-demo-chat-header strong{font-size:11.5px}
+#line-demo .line-demo-chat{padding:10px 6px;background:#a8c5e4;scrollbar-width:none}
+#line-demo .line-demo-chat::-webkit-scrollbar{display:none}
+#line-demo .line-message{font-size:11px;line-height:1.7;margin-bottom:13px}
+#line-demo .line-message__sender{color:#264862;font-size:8px;margin-bottom:4px}
+#line-demo .line-message p{max-width:94%;padding:8px 8px;background:#fff;border-radius:3px 11px 11px 11px;box-shadow:none}
+#line-demo .line-message--you p{background:#b2ee8d;border-radius:11px 3px 11px 11px}
+#line-demo .line-message--system{font-size:9px}
+#line-demo .line-message--system p{background:#ffffffa6;border-radius:10px;padding:6px}
+#line-demo .line-demo-chat[lang=th] .line-message{font-size:11.5px;line-height:1.8}
+#line-demo .line-demo-input{padding:7px 5px;gap:4px;font-size:14px;min-height:32px}
+#line-demo .line-demo-input>span:nth-child(2){font-size:8px;padding:4px 6px;white-space:nowrap}
+#line-demo .line-demo-guide{height:100%;min-height:0}
+#line-demo .line-demo-explain{position:relative;z-index:3;min-height:107px;margin:10px 3px 0 8px!important;padding:16px 11px 17px;background:#fff;color:#08243b;border:1.5px solid #092238;border-radius:30% 27% 28% 24% / 15% 19% 14% 16%;font-size:12px;line-height:1.85;box-shadow:1px 3px #78451c24;overflow-wrap:anywhere}
+#line-demo .line-demo-explain::after{bottom:-10px;left:23%;width:14px;height:17px;border-width:1.5px;background:#fff;transform:skewY(-32deg) rotate(24deg)}
+#line-demo .line-demo-portrait{bottom:0;left:-18%;width:136%;aspect-ratio:2 / 3;max-width:none;filter:drop-shadow(2px 3px 3px #5a321130);transition:none}
+#line-demo .line-demo-guide-name{bottom:2px;left:25%;right:5%;padding:2px 5px;font-size:9px;border-radius:12px;color:#fff8dc;background:#08283dcf;border:1px solid #d4b76c}
+#line-demo .demo-dashboard{position:relative;margin:0 8px 24px;padding:22px 17px 20px;background:linear-gradient(110deg,#fffdf6,#fff 70%,#faf4e2);border:3px solid #c9a24d;border-radius:15px;box-shadow:inset 0 0 0 2px #fff0b9;color:#08263d}
+#line-demo .demo-status{display:flex;align-items:baseline;gap:10px;margin:0 0 16px!important;font-size:14px;line-height:1.6}
+.demo-status__number{font-size:26px;line-height:1.1;color:#b38d34;white-space:nowrap}
+.demo-status__number small{color:#8b8b87;font-size:15px}
+#line-demo .demo-dashboard progress{height:6px;margin-bottom:22px;border-radius:5px;background:#d4d5d1}
+#line-demo .demo-dashboard progress::-webkit-progress-bar{background:#d4d5d1}
+#line-demo .demo-dashboard progress::-webkit-progress-value{background:linear-gradient(90deg,#e7cf83,#a67f30)}
+#line-demo .demo-dashboard progress::-moz-progress-bar{background:#bd943f}
+#line-demo .demo-controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0;background:none}
+#line-demo .demo-controls button{min-height:43px;padding:9px 4px;border:1px solid #c4a052;border-radius:24px;background:#fffdf6;color:#0b2a40;font-family:var(--manga-morisawa-bold);font-size:12px;line-height:1.4;box-shadow:0 3px 7px #7761371a}
+#line-demo .demo-controls button:first-child{border-color:#0e3650;background:linear-gradient(145deg,#0e3c5b,#031e32);color:#fff;box-shadow:inset 0 1px 0 #7992a2,0 3px 7px #162e4733}
+#line-demo .demo-reading-hint{font-size:11px;line-height:1.9;margin:18px 0!important;color:#405666}
+#line-demo .demo-steps{gap:7px}
+#line-demo .demo-steps button{padding:8px 2px;border:1px solid #d7c59b;border-radius:7px;font-size:10px;line-height:1.5;background:#fffefa;color:#3b5062}
+#line-demo .demo-steps button[aria-current=step]{background:#f5df9c;color:#08263d;border-color:#b78c36;box-shadow:inset 0 0 0 1px #fff3ca}
+#line-demo .demo-finished{border-radius:7px;padding:12px;background:#edf5e9;font-size:11px}
+#line-demo .demo-disclosure{color:#61717a;font-size:10px!important;line-height:1.9}
+#line-demo .staff-handoff{position:relative;margin:0 8px 28px;padding:27px 18px 28px;background:linear-gradient(120deg,#fffdf8,#f6efdc);border:3px solid #caa44f;border-radius:16px;box-shadow:inset 0 0 0 2px #fff2ca;overflow:hidden;color:#08263d}
+#line-demo .staff-handoff h3{font-size:21px;line-height:1.6;margin:0 0 17px;letter-spacing:-.03em}
+#line-demo .staff-handoff>p:not(.handoff-caption){font-size:12px;line-height:1.95}
+#line-demo .staff-handoff [data-demo-handoff]{position:relative;padding:17px 12px;background:#edf2f3;border:1px solid #e5ddc9;border-radius:10px}
+#line-demo .handoff-question,#line-demo .handoff-answer{font-size:11px;line-height:1.85;padding:11px}
+#line-demo .handoff-question{background:#d5efc5}
+#line-demo .handoff-answer{background:#fff}
+#line-demo .handoff-mari{position:relative;display:block;width:46%;max-width:176px;height:auto;margin:20px -10px -29px auto;object-fit:contain}
+#line-demo .handoff-caption{position:absolute;left:18px;bottom:23px;max-width:48%;font-family:var(--manga-morisawa-bold);font-size:12px;line-height:1.9;margin:0;color:#17384f}
+@media(max-width:374px){
+ #line-demo .line-demo-explain{font-size:11.5px;line-height:1.8;padding:14px 9px 16px;min-height:101px;margin-left:7px!important}
+ #line-demo .line-message{font-size:10.5px}
+ #line-demo .line-demo-chat-header strong{font-size:10.5px}
+ #line-demo .demo-dashboard{padding-inline:14px}
+ #line-demo .demo-status{gap:8px;font-size:13px}
+ #line-demo .staff-handoff h3{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){#line-demo .line-message{animation:none}#line-demo .line-demo-chat{scroll-behavior:auto}}

@@ -1,0 +1,19 @@
+/* Static content remains readable without JavaScript. The early head guard is
+   released by an eight-second fallback if the motion controller cannot load. */
+.speech-mask,
+.speech-mask.is-pending,
+.speech-mask.is-entering { display: none; animation: none !important; }
+[data-speech-reveal] { opacity: 1; visibility: visible; }
+.manga-motion-ready [data-speech-mask]:not(.is-shown) {
+  display: block; opacity: 1; background: #fefefe; border-radius: 3px;
+  box-shadow: 0 0 0 1.25px #fefefe; pointer-events: none; transition: none;
+}
+.manga-motion-ready [data-speech-mask].is-revealing { opacity: 0; transition: opacity 180ms ease-out; }
+.manga-motion-ready [data-speech-mask].is-shown { display: block; opacity: 0; visibility: hidden; }
+.manga-motion-ready [data-speech-reveal]:not(.is-shown) { opacity: 0; visibility: hidden; transition: none; }
+.manga-motion-ready [data-speech-reveal].is-revealing,
+.manga-motion-ready [data-speech-reveal].is-shown { opacity: 1; visibility: visible; transition: opacity 180ms ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  .manga-motion-ready [data-speech-mask]:not(.is-shown) { display: none; }
+  .manga-motion-ready [data-speech-reveal]:not(.is-shown) { opacity: 1; visibility: visible; transition: none; }
+}

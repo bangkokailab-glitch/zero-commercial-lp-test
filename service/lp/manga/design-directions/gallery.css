@@ -1,0 +1,79 @@
+:root{--ink:#132a3b;--muted:#61717c;--line:#dce2e5;--paper:#f2f3f1;--nav-height:58px;--regular:"mfw-pshingopr6n-regular","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;--bold:"mfw-pshingopr6n-bold","Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(var(--nav-height) + 12px);background:var(--paper);color:var(--ink)}
+body{margin:0;font-family:var(--regular);font-size:14px;line-height:1.8;-webkit-text-size-adjust:100%}
+button,a{-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-underline-offset:4px}
+button{font:inherit}
+button,a:focus-visible{outline-offset:4px}
+:focus-visible{outline:3px solid #b18b36}
+h1,h2,b,strong{font-family:var(--bold);font-weight:700}
+.intro{max-width:1240px;margin:auto;padding:44px 24px 30px}
+.eyebrow{font-size:10px;letter-spacing:.12em;color:var(--muted);margin:0 0 16px}
+.intro h1{font-size:29px;line-height:1.55;letter-spacing:.015em;margin:0 0 17px}
+.intro>p:not(.eyebrow){font-size:13px;color:var(--muted);margin:0 0 20px}
+.text-link{font-size:12px;text-decoration:none;border-bottom:1px solid #9aa8af;padding-bottom:5px;display:inline-block}
+.text-link span{padding-left:12px}
+.review-nav{position:sticky;top:0;z-index:20;border-block:1px solid var(--line);background:rgba(250,251,249,.97);backdrop-filter:blur(12px)}
+.section-nav{max-width:650px;display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:auto;padding:8px 18px}
+.section-nav a{display:block;text-decoration:none;text-align:center;font-size:12px;line-height:1.5;padding:10px 4px;border-radius:3px;color:var(--muted)}
+.section-nav a[aria-current]{color:#fff;background:var(--ink)}
+.direction-tabs{display:none}
+main{max-width:1240px;margin:auto;padding-inline:13px}
+.comparison-section{padding:38px 0 44px}
+.section-title{margin:0 0 20px;padding-inline:0}
+.section-title p{font-size:10px;letter-spacing:.15em;color:var(--muted);margin:0 0 5px}
+.section-title h2{font-size:20px;line-height:1.7;margin:0}
+.comparison-grid{display:grid;grid-template-columns:repeat(3,minmax(0,390px));gap:22px;justify-content:center;align-items:start}
+.design-card{margin:0;min-width:0;background:#fff;box-shadow:0 4px 24px #132a3b12}
+.design-card figcaption{display:flex;align-items:center;gap:12px;min-height:56px;padding:12px 18px;background:#fff;border-bottom:1px solid var(--line)}
+.design-card figcaption b{font-size:22px;line-height:1}
+.design-card figcaption span{font-size:12px}
+.artwork-link{display:block;text-decoration:none}
+.design-card img{display:block;width:100%;height:auto;max-width:none;object-fit:initial}
+.design-card img[hidden]{display:none}
+.image-unavailable{padding:70px 24px;display:block;color:var(--muted);font-size:13px;line-height:2}
+.section-disclosure{font-size:11px;line-height:1.9;color:var(--muted);max-width:850px;margin:22px 0 0}
+.review-footer{max-width:1240px;margin:auto;padding:28px 24px 52px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+.review-footer p{margin:0 0 12px}
+.review-footer .text-link{margin-top:10px}
+
+/* The artwork keeps its native proportions. No viewport-height sizing or cropping. */
+@media(max-width:899px){
+ .intro{max-width:430px;padding:30px 20px 24px}
+ .intro h1{font-size:25px}
+ .intro>p:not(.eyebrow){font-size:12px;line-height:1.9}
+ .desktop-break{display:none}
+ .direction-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:9px 10px 0;max-width:430px;margin:auto}
+ .direction-tabs button{appearance:none;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--muted);padding:8px 2px;min-height:56px;cursor:pointer}
+ .direction-tabs button b{display:block;font-size:17px;line-height:1.25}
+ .direction-tabs button span{display:block;font-size:10px;line-height:1.5;margin-top:3px}
+ .direction-tabs button[aria-selected=true]{color:var(--ink);border-color:var(--ink);box-shadow:inset 0 -2px var(--ink)}
+ .section-nav{max-width:430px;padding:7px 10px 8px;gap:4px}
+ .section-nav a{font-size:11px;padding:8px 2px}
+ main{max-width:390px;padding-inline:0}
+ .comparison-section{padding:28px 0 32px}
+ .section-title{padding-inline:18px;margin-bottom:15px}
+ .section-title h2{font-size:18px}
+ .comparison-grid{display:block}
+ body[data-direction=A] [data-direction-card]:not([data-direction-card=A]),body[data-direction=B] [data-direction-card]:not([data-direction-card=B]),body[data-direction=C] [data-direction-card]:not([data-direction-card=C]){display:none}
+ .design-card{box-shadow:none}
+ .design-card figcaption{display:none}
+ .section-disclosure{padding-inline:18px;font-size:10px;margin-top:18px}
+ .review-footer{max-width:430px;padding:24px 20px 36px}
+}
+
+/* Live typography proof: one shared size, explicit line breaks, one common width. */
+.specimen-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:15px 20px;max-width:430px;margin:auto;font-size:12px}
+.specimen-controls button{appearance:none;background:#fff;border:1px solid #c3ccd1;border-radius:3px;color:var(--ink);padding:7px 13px;cursor:pointer}
+.specimen-controls button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.specimen-list{width:min(100%,390px);max-width:none;padding:0;margin:10px auto 55px;container-type:inline-size}
+.heading-specimen{margin:0 0 32px;position:relative}
+.heading-specimen>p{margin:0;padding:0 14px 10px;font-size:10px;color:var(--muted)}
+.specimen-frame{width:100%;position:relative;padding:30px 15px;background:linear-gradient(110deg,#153e67,#052341);color:#fff;min-height:132px;display:flex;align-items:center;justify-content:center}
+.specimen-frame::after{content:"";position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);width:0;height:0;border-left:22px solid transparent;border-right:22px solid transparent;border-top:16px solid #0b2e50}
+.specimen-frame h2{font-family:var(--bold);font-size:5cqw;line-height:1.75;letter-spacing:-.025em;font-weight:700;margin:0;text-align:center}
+.specimen-frame h2 span{display:block;white-space:nowrap}
+.specimen-frame h2 span+span{color:#fff17a}
+.specimen-note{max-width:430px;margin:0 auto;padding:0 20px 20px;color:var(--muted);font-size:11px}
+.specimen-back{max-width:430px;margin:auto;padding:25px 20px 0}
