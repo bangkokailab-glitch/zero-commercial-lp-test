@@ -47,7 +47,8 @@
       copy.className = 'manga-wipe__copy';
       copy.append(...element.childNodes);
       element.append(copy);
-      const siblings = [...element.closest('.manga-hero__copy, .selected-heading').querySelectorAll('[data-manga-wipe]')];
+      const group = element.closest('.manga-hero__copy, .selected-heading, .back-heading') || element.parentElement;
+      const siblings = [...group.querySelectorAll('[data-manga-wipe]')];
       element.style.setProperty('--wipe-delay', `${siblings.indexOf(element) * 160}ms`);
       element.classList.add('is-pending');
     });
