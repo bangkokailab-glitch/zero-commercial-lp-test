@@ -1,0 +1,208 @@
+.manga-example {
+  color: #071e3a;
+  background: #f8ead0;
+  border-block: 3px solid #071e3a;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+.manga-example *, .manga-example *::before, .manga-example *::after { box-sizing: border-box; }
+.manga-example__scene {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 390 / 500;
+  background: linear-gradient(90deg, #dfb773 0 58%, #071e3a 58%);
+}
+.manga-example__phone {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  width: 97%;
+  height: 96%;
+  overflow: hidden;
+  border: 5px solid #0b1729;
+  border-radius: 29px;
+  background: #0b1729;
+  box-shadow: 2px 3px 0 #061121, 0 0 0 2px #d9bc83;
+}
+.manga-example__speaker {
+  position: absolute;
+  z-index: 3;
+  top: 9px;
+  left: 50%;
+  width: 38px;
+  height: 4px;
+  border-radius: 8px;
+  background: #536172;
+  transform: translateX(-50%);
+}
+.manga-example__screen {
+  position: absolute;
+  z-index: 1;
+  top: 5.3%;
+  right: 4.2%;
+  bottom: 8.5%;
+  left: 4.2%;
+  width: auto;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 2px;
+  background: #fff;
+  scrollbar-width: thin;
+  scrollbar-color: #d0aa46 #e9e3d7;
+  overscroll-behavior-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+.manga-example__screen img { display: block; width: 100%; height: auto; max-width: none; }
+.manga-example__screen:focus-visible { outline: 3px solid #ffe45a; outline-offset: -3px; }
+.manga-example__action {
+  display: block;
+  width: 100%;
+  margin: 0;
+  line-height: 0;
+  background: #fff;
+}
+.manga-example__action img { display: block; width: 100%; height: auto; }
+.manga-example__home {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 44px;
+  height: 3px;
+  border-radius: 9px;
+  background: #77808d;
+  transform: translateX(-50%);
+}
+.manga-example__method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 0;
+  padding: 16px 20px 12px;
+  background: linear-gradient(150deg, #0c2c54, #06182f 74%);
+  color: #fff;
+  text-align: center;
+}
+.manga-example__method h3 {
+  align-self: stretch;
+  margin: 0 0 12px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #e2c767;
+  font-family: Georgia, "Hiragino Mincho ProN", serif;
+  font-size: clamp(10px, 3.05vw, 12px);
+  font-weight: 400;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+.manga-example__method h3 strong { font-size: clamp(20px, 6.15vw, 24px); }
+.manga-example__steps {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0 0 3px;
+  list-style: none;
+}
+.manga-example__steps::before {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 50%;
+  width: 4px;
+  background: #d0ab41;
+  transform: translateX(-50%);
+  content: "";
+}
+.manga-example__steps li {
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 1;
+  width: clamp(52px, 17vw, 67px);
+  height: clamp(52px, 17vw, 67px);
+  border: 2px solid #dbe4ee;
+  border-radius: 50%;
+  background: #cfdae9;
+  color: #0c2a4d;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: clamp(17px, 5.5vw, 21px);
+  font-weight: 900;
+  transition: background .18s, transform .18s, box-shadow .18s;
+}
+.manga-example__steps li.is-active { border-color: #ffdf4e; background: #ffdf4e; box-shadow: 0 0 0 3px #ffdf4e55; transform: scale(1.05); }
+.manga-example__steps li.is-near { border-color: #ffdf4e; background: #fff6d7; }
+.manga-example__scroll-cue {
+  position: absolute;
+  top: 26%;
+  bottom: 23%;
+  left: 9px;
+  width: 18px;
+  border-radius: 12px;
+  background: #fff5d2;
+  color: #071e3a;
+  font-size: clamp(9px, 2.8vw, 11px);
+  font-weight: 900;
+  line-height: 1.45;
+  writing-mode: vertical-rl;
+}
+.manga-example__scroll-cue span { color: #9a6c0d; font-size: 16px; }
+.manga-example__method-caption {
+  position: absolute;
+  top: 34%;
+  right: 2px;
+  margin: 0;
+  color: #fff5ce;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: clamp(10px, 3.1vw, 12px);
+  font-weight: 800;
+  line-height: 1.5;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+}
+.manga-example__psychology {
+  display: block;
+  min-height: 0;
+  margin: 0;
+  padding: 13px 15px 17px;
+  border: 3px solid #071e3a;
+  border-left: 9px solid #e8b925;
+  background: #fffdf4;
+}
+.manga-example__psychology-head { display: flex; align-items: center; gap: 11px; padding-bottom: 8px; border-bottom: 1px solid #d0bd8c; }
+.manga-example__count {
+  display: flex;
+  flex: 0 0 68px;
+  align-items: baseline;
+  justify-content: center;
+  height: 45px;
+  border-radius: 5px;
+  background: #ffe057;
+  color: #071e3a;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 45px;
+}
+.manga-example__count small { font-size: 14px; }
+.manga-example__psychology-head > div { min-width: 0; }
+.manga-example__overline { display: block; font-size: 11px; font-weight: 800; }
+.manga-example__psychology-head strong { display: block; margin-top: 2px; font-size: clamp(14px, 4.1vw, 16px); line-height: 1.3; white-space: nowrap; }
+.manga-example__notes { display: grid; padding-top: 10px; }
+.manga-example__note { grid-area: 1 / 1; min-width: 0; }
+.manga-example__note[hidden] { display: block; visibility: hidden; }
+.manga-example__stage { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.manga-example__thought { margin: 0 0 7px; font-size: clamp(17px, 4.8vw, 19px); line-height: 1.35; font-weight: 900; letter-spacing: -.025em; }
+.manga-example__explanation { margin: 0; font-size: clamp(11.5px, 3.3vw, 13px); line-height: 1.7; }
+@media (max-width: 359px) {
+  .manga-example__method { padding-right: 16px; padding-left: 16px; }
+  .manga-example__count { flex-basis: 60px; font-size: 20px; }
+}

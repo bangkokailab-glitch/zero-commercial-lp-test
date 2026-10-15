@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="color-scheme" content="dark">
+    <title>バンコク店舗集客セット｜漫画版・テスト</title>
+    <meta name="description" content="バンコク店舗集客セットのスマートフォン向けLPデザイン確認ページです。">
+    <link rel="stylesheet" href="lp-example.css">
+    <link rel="stylesheet" href="aidma-b.css">
+    <link rel="preconnect" href="https://morisawafonts.net" crossorigin>
+    <link rel="stylesheet" href="https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css">
+    <link rel="stylesheet" href="manga-cta.css">
+    <script src="lp-example.js" defer></script>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; }
+      html { background: #041326; }
+      body { margin: 0; }
+      main {
+        width: 100%;
+        max-width: 390px;
+        margin-inline: auto;
+        background: #061c38;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .comic-panel { width: 100%; aspect-ratio: 5 / 3; height: auto; object-fit: contain; }
+      .art-slice { position: relative; width: 100%; overflow: hidden; }
+      .art-slice > img { position: absolute; top: var(--shift, 0); left: 0; width: 100%; height: auto; max-width: none; }
+
+      .story-art { display:block; width:100%; height:auto; }
+      .story-comic { border:3px solid #071e3a; }
+      .selected-heading { position:relative; z-index:2; width:100%; background:#fff; }
+      .selected-heading__crop { position:relative; width:100%; overflow:hidden; }
+      .selected-heading__crop img { position:absolute; top:0; left:0; width:100%; height:auto; max-width:none; }
+      .selected-heading--worries .selected-heading__crop { aspect-ratio:1024 / 358; }
+      .selected-heading--solution .selected-heading__crop { aspect-ratio:1024 / 418; }
+      .selected-heading--solution .selected-heading__crop img { transform:translateY(-48.3724%); }
+      .selected-heading__pointer { position:absolute; z-index:2; bottom:0; left:50%; width:13%; aspect-ratio:3.55; background:#06335f; clip-path:polygon(0 0,100% 0,50% 100%); transform:translateX(-50%); }
+      .worry-flow { display:grid; gap:calc(10px * 1.5); padding-bottom:15px; background:#06315c; }
+      .worry-card { position:relative; overflow:hidden; width:100%; background:#06315c; }
+      .worry-card img { position:absolute; top:0; left:0; width:100%; height:auto; max-width:none; }
+      .worry-card--booking { aspect-ratio:648 / 310; }
+      .worry-card--response { aspect-ratio:648 / 316; }
+      .worry-card--response img { transform:translateY(-49.0625%); }
+      .worry-comic { display:block; width:100%; height:auto; border:0; aspect-ratio:1619 / 971; object-fit:cover; }
+      .story-composite { position:relative; margin:0; }
+      .story-composite__screen { position:absolute; overflow:hidden; background:#fff; }
+      .story-composite__screen img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; }
+      .comparison-hp { left:9.36%; top:53.85%; width:48.84%; height:23.18%; }
+      .comparison-lp { left:70.05%; top:52.57%; width:19.79%; height:31.81%; }
+      .comparison-selected { position:relative; margin:0; background:#071e3a; }
+      .comparison-selected__screen { position:absolute; overflow:hidden; }
+      .comparison-selected__screen img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+      .comparison-selected__hp { left:2.9%; top:19.9%; width:40.4%; height:20.7%; clip-path:polygon(0 8%,91% 0,100% 92%,8% 100%); }
+      .comparison-selected__lp { left:45%; top:18.35%; width:18.6%; height:22.2%; clip-path:polygon(0 1%,95% 0,100% 98%,4% 100%); }
+      .language-screen { top:52.7%; height:34%; width:28.4%; border-radius:3px; background:#071522; }
+      .language-screen img { object-fit:contain; object-position:center; }
+      .language-jp { left:3.7%; }
+      .language-en { left:36%; }
+      .language-th { left:67.7%; }
+      .story-composite__screen:focus-visible { outline:3px solid #ffe63c; outline-offset:2px; }
+      </style>
+  </head>
+  <body>
+    <main aria-label="バンコク店舗集客セットのLPデザイン確認">
+      <div class="fv-art"><img
+        src="assets/fv-approved.png"
+        width="904"
+        height="1740"
+        fetchpriority="high"
+        alt="集客から予約対応まで、ひとつの導線に。お客様の予約を増やして、予約対応の手間を減らす。バンコク店舗集客セット。Google広告からスマホLP、LINE自動対応・予約へ。ネット広告運用実績100社突破、ランディングページ制作実績300社突破、LINE自動対応・予約で1日の対応時間を約3時間削減。"
+      ></div>
+      <section class="manga-cta" aria-label="無料提案のご相談">
+        <a class="manga-cta__link" href="https://zero-s.jp/contact/" aria-label="今なら50,000THBから。LP構成案とラフデザイン案を今すぐ無料で提案してもらう">
+          <span class="manga-cta__bubble" aria-hidden="true"><svg viewBox="0 0 184 184" focusable="false"><path transform="rotate(-15 95.11005509 89.41585659)" d="M 165.72 146.82 A 91 91 0 1 0 151.7 160.68 L 173 175 Z"/></svg><span class="manga-cta__bubble-copy"><span>今なら</span><strong>50,000</strong><span>THBから</span></span></span>
+          <span class="manga-cta__copy"><span>LP構成案＋ラフデザイン案を</span><span>今すぐ無料で提案してもらう</span></span>
+          <svg class="manga-cta__arrows" viewBox="0 0 36 24" aria-hidden="true" focusable="false"><path d="m6 3 9 9-9 9m14-18 9 9-9 9"/></svg>
+        </a>
+      </section>
+
+
+      <section id="worries" class="selected-heading selected-heading--worries" aria-labelledby="worries-title"><div class="selected-heading__panel"><h2 id="worries-title">こんなお悩み<br><strong>ありませんか？</strong></h2></div><div class="selected-heading__band" aria-hidden="true"></div><span class="selected-heading__pointer" aria-hidden="true"></span></section>
+      <div class="worry-flow">
+        <section class="worry-card worry-card--booking" aria-labelledby="booking-title"><div class="worry-card__inner"><h3 id="booking-title">予約をもっと増やしたい</h3><ul><li>新規予約が思うように増えない</li><li>日本人のお客様に見つけてもらえない</li><li>広告を出しても予約につながらない</li><li>お店の魅力や選ばれる理由が伝わらない</li><li>日本人以外のお客様にも来てほしい</li></ul></div></section>
+        <img class="worry-comic" loading="lazy" decoding="async" src="assets/comic01-worry.webp" width="1619" height="971" alt="マリ：予約は増やしたい。でも、返信に追われるのは困る…。">
+        <section class="worry-card worry-card--response" aria-labelledby="response-title"><div class="worry-card__inner"><h3 id="response-title">予約対応の手間を減らしたい</h3><ul><li>接客中もLINEの返信が気になる</li><li>空き枠の確認・日時調整が手作業</li><li>同じ質問に何度も答えている</li><li>営業時間外の問い合わせに対応できない</li><li>英語・タイ語の返信に時間がかかる</li></ul></div></section>
+        <img class="worry-comic" loading="lazy" decoding="async" src="assets/comic02-booking-dialogue.webp" width="1619" height="971" alt="マリ：予約が増えても、英語やタイ語の返信で毎日何時間も…。これじゃ、他の仕事ができないよ…。">
+      </div>
+      <section id="block03" class="selected-heading selected-heading--solution" aria-labelledby="solution-title"><div class="selected-heading__panel"><h2 id="solution-title">予約を増やす。対応の手間を減らす。<br>その両方に応える、<br><strong>バンコク店舗集客セット。</strong></h2></div><div class="selected-heading__band" aria-hidden="true"></div><span class="selected-heading__pointer" aria-hidden="true"></span></section>
+      <img class="story-art story-comic" src="assets/revision-oct14/story-intro-color.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="マリ：バンコク店舗集客セットって、どんなセットなんですか？ 斎藤：広告で集めて、LPで魅力を伝え、LINEで質問・予約へつなぐんだ。マリ：広告を出すだけじゃ、ダメなんですか？ 斎藤：見つけた人に、このお店に行きたいと思ってもらうページが必要なんだ。" >
+      <figure class="comparison-selected" id="homepage-comparison" aria-label="Salon de Sixの実ホームページと商品LPの比較">
+        <img class="story-art" src="assets/revision-oct14/story-comparison-selected-character.png" width="1024" height="1536" loading="lazy" decoding="async" alt="斎藤：ホームページはお店全体の案内。LPは一つのサービスに絞ったページだよ。画像や大きな見出しで魅力を見せられるんだ。売れる営業マンも、お客様に合わせて、納得できる順番で話すよね。LPも同じ。Web上の営業マンだよ。" >
+        <div class="comparison-selected__screen comparison-selected__hp"><img src="assets/revision-oct14/salon-hp-desktop.webp" alt="Salon de Six公式ホームページの実画面" width="1200" height="1000" loading="lazy"></div>
+        <div class="comparison-selected__screen comparison-selected__lp"><img src="assets/revision-oct14/salon-lp-fv-offer-jp.webp" alt="Salon de Sixの男磨きセットLPの実画面" width="865" height="1750" loading="lazy"></div>
+      </figure>
+      <section class="manga-example" id="lp-example" data-lp-example data-lp-example-points="0.00000000,0.07914722,0.15783695,0.21731174,0.30515143,0.38704365,0.48815079,0.56135054,0.61991033,0.66337268,0.70683503,0.76722481,0.85231952,0.93100924" aria-labelledby="lp-example-title">
+  <h2 class="lp-example__sr-only" id="lp-example-title">Salon de SixのLPで見る、AIDMAと顧客心理</h2>
+  <div class="manga-example__scene">
+    <div class="manga-example__phone">
+      <div class="manga-example__speaker" aria-hidden="true"></div>
+      <div class="manga-example__screen" data-lp-example-screen id="salon-lp-scroll" tabindex="0" role="region" aria-label="Salon de Sixの商品LPの実例。スマホ内を上下にスクロールすると、AIDMAの段階と下の解説が切り替わります">
+        <img data-lp-example-image src="assets/salon-lp-full.webp" width="600" height="15162" decoding="async" alt="Salon de SixのLP全体。ファーストビュー、体験内容、料金、施術、ビフォーアフター、LINEクーポン、FAQ、店舗情報。">
+        <div class="manga-example__action" aria-label="Salon de SixのLINEクーポン券のアクションボタンの表示例">
+          <img src="assets/fv-action-button-follow-cta.png" width="817" height="194" alt="今なら実質1,500THB。今すぐLINEクーポン券を受け取る">
+        </div>
+      </div>
+      <div class="manga-example__home" aria-hidden="true"></div>
+    </div>
+    <div class="manga-example__method" aria-label="AIDMAの5段階。スマホ内のスクロールに合わせて現在の段階が変わります">
+      <h3>スクロールで分かる<br><strong>LPの設計</strong></h3>
+      <div class="manga-example__scroll-cue" aria-hidden="true"><span>↕</span>スマホ内を上下へ</div>
+      <ol class="manga-example__steps">
+        <li data-lp-example-method-stage="注意" class="is-active">注意</li>
+        <li data-lp-example-method-stage="興味" class="is-near">興味</li>
+        <li data-lp-example-method-stage="欲求">欲求</li>
+        <li data-lp-example-method-stage="記憶">記憶</li>
+        <li data-lp-example-method-stage="行動">行動</li>
+      </ol>
+      <p class="manga-example__method-caption">見せる順番で、気持ちが動く。</p>
+    </div>
+  </div>
+  <aside class="manga-example__psychology" aria-label="スクロール位置と連動する顧客心理の解説">
+    <div class="manga-example__psychology-head">
+      <span class="manga-example__count"><span data-lp-example-current>01</span><small>/14</small></span>
+      <div><span class="manga-example__overline">今見ている場面</span><strong data-lp-example-stage-label>AIDMA｜注意→興味</strong></div>
+    </div>
+    <div class="manga-example__notes"><div class="manga-example__note" data-lp-example-note>
+      <p class="manga-example__stage">AIDMA｜注意→興味</p>
+      <h3 class="manga-example__thought">「自分の身だしなみも気になる」</h3>
+      <p class="manga-example__explanation">「第一印象」「清潔感」「30代」という言葉と男性の写真で、自分の悩みと重ねてもらいます。「自分に関係がある」と気づき、続きを見たくなる入口をつくるパートです。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜興味</p>
+      <h3 class="manga-example__thought">「気になるところを、まとめて整えられるんだ」</h3>
+      <p class="manga-example__explanation">ヒゲ・歯・眉などの8部位と90分という目安で、漠然とした「男磨き」を具体的な体験へ。自分の気になる部分も含まれるとわかることで、サービスへの興味を深めます。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜興味→欲求</p>
+      <h3 class="manga-example__thought">「料金、時間、品質。自分が重視する点に合いそう」</h3>
+      <p class="manga-example__explanation">コスパ・時短・品質の3点に強みを整理。お客様が大切にする条件と照らし合わせ、「ここで受けたい」と感じる理由をつくります。興味を、選ぶ理由へ進めるパートです。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜欲求</p>
+      <h3 class="manga-example__thought">「セットなら、この料金で何が受けられるの？」</h3>
+      <p class="manga-example__explanation">単品ごとの掲載相場とセット料金、割引の条件を並べて、内容と金額を比較できるようにします。「この内容なら納得できる」と判断する材料を示し、試したい気持ちを支えます。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜欲求→行動</p>
+      <h3 class="manga-example__thought">「90分なら、自分の予定にも入れられそう」</h3>
+      <p class="manga-example__explanation">約90分の時間表と同時施術の写真で、店内での過ごし方を具体化。「忙しくて行けないかも」という迷いに答え、商談や会食の前など、自分の予定に組み込めるかを考えてもらいます。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜興味→欲求</p>
+      <h3 class="manga-example__thought">「どんな機器と施術でケアしてくれるのかな」</h3>
+      <p class="manga-example__explanation">機器や施術の写真で、「どんなケアを受けるのか」を見せます。料金だけでは判断できない中身を伝え、自分の体を任せたいと思えるか、信頼を確かめる材料にします。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜興味→欲求</p>
+      <h3 class="manga-example__thought">「特徴がわかると、自分に合うか考えやすい」</h3>
+      <p class="manga-example__explanation">機器の特徴を、痛みへの配慮や所要時間など、お客様の気がかりと結びつけて説明。「それが自分にどう関係するのか」がわかることで、施術への理解と納得を支えます。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜欲求</p>
+      <h3 class="manga-example__thought">「口元を整えた自分は、どんな印象になるだろう」</h3>
+      <p class="manga-example__explanation">ヒゲの比較ビジュアルから、自分の口元や第一印象の変化を想像してもらいます。「何をするサービスか」という理解から、「自分もこうなりたい」という欲求へ進むパートです。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜欲求</p>
+      <h3 class="manga-example__thought">「笑った時の歯の色も、気になっていた」</h3>
+      <p class="manga-example__explanation">歯の比較ビジュアルでは、笑顔や会話の場面を思い浮かべてもらいます。ヒゲとは別の気がかりにも応え、「自分に必要なケアだ」と感じる接点を増やします。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜欲求→記憶</p>
+      <h3 class="manga-example__thought">「眉まで整えると、印象が違って見える」</h3>
+      <p class="manga-example__explanation">ヒゲ・歯に続いて眉の比較を見せ、顔全体を整える体験を印象に残します。具体的な仕上がりのイメージが、後からお店やサービスを思い出す手がかりになります。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜記憶→行動</p>
+      <h3 class="manga-example__thought">「料金と条件がわかった。クーポンを確認したい」</h3>
+      <p class="manga-example__explanation">体験内容を見た後で、料金とLINE割引の条件をもう一度提示。内容と条件を思い出してもらい、「まずはクーポンを確認する」という次の行動へ案内します。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜欲求→記憶</p>
+      <h3 class="manga-example__thought">「こんな想いで迎えてくれるお店なんだ」</h3>
+      <p class="manga-example__explanation">オーナーの顔と想いで、料金や機器だけでは伝わらない店の姿勢を見せます。「この人のお店なら相談したい」という信頼を支え、店名と人の顔を記憶に結びつけるパートです。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜欲求→行動</p>
+      <h3 class="manga-example__thought">「予約前に気になっていたことを確認しておこう」</h3>
+      <p class="manga-example__explanation">支払い・痛み・通う頻度・日本語対応・クーポンなど、予約前の疑問を先回りして説明。「試したい。でも心配」という気持ちに答え、予約を判断する前の迷いを減らします。</p>
+    </div><div class="manga-example__note" data-lp-example-note hidden>
+      <p class="manga-example__stage">AIDMA｜行動</p>
+      <h3 class="manga-example__thought">「場所と営業時間がわかった。行く予定を考えよう」</h3>
+      <p class="manga-example__explanation">プロンポン駅近くという案内に、住所・営業時間・地図を添えます。「行ってみたい」を「この日なら行けそう」という具体的な予定に変え、来店を考える最後の材料をそろえます。</p>
+    </div></div>
+  </aside>
+  <p class="lp-example__sr-only" data-lp-example-status aria-live="polite" aria-atomic="true"></p>
+</section>
+      <img class="story-art" src="assets/revision-oct14/story-cvr-question.png" width="1448" height="1086" loading="lazy" decoding="async" alt="マリ：実際に成果にもつながっているんですか？ Salon de Sixの比較実績。成約率（CVR）約1.5倍。ホームページで販売していた時との比較。斎藤：他の案件でも、商品特化LPの方が成約率が高い傾向があるよ。" >
+      <figure class="story-composite" id="multilingual-lp" aria-label="同じSalon de SixのLPメイン画像を日本語、英語、タイ語で展開">
+        <img class="story-art" src="assets/revision-oct14/story-multilingual-further.png" width="1122" height="1402" loading="lazy" decoding="async" alt="斎藤：さらに、日本語で作ったLPを土台に、英語・タイ語にも広げられるよ。" >
+        <a class="story-composite__screen language-screen language-jp" href="assets/revision-oct14/salon-lp-fv-jp.png" target="_blank" rel="noopener" aria-label="日本語版のメイン画像を拡大"><img src="assets/revision-oct14/salon-lp-fv-jp.webp" alt="Salon de Sixの日本語版メイン画像" loading="lazy"></a>
+<a class="story-composite__screen language-screen language-en" href="assets/revision-oct14/salon-lp-fv-en.png" target="_blank" rel="noopener" aria-label="英語版のメイン画像を拡大"><img src="assets/revision-oct14/salon-lp-fv-en.webp" alt="Salon de Sixの英語版メイン画像" loading="lazy"></a>
+<a class="story-composite__screen language-screen language-th" href="assets/revision-oct14/salon-lp-fv-th.png" target="_blank" rel="noopener" aria-label="タイ語版のメイン画像を拡大"><img src="assets/revision-oct14/salon-lp-fv-th.webp" alt="Salon de Sixのタイ語版メイン画像" loading="lazy"></a>
+      </figure>
+      <section class="manga-cta manga-cta--last" aria-label="無料提案のご相談">
+        <a class="manga-cta__link" href="https://zero-s.jp/contact/" aria-label="今なら50,000THBから。LP構成案とラフデザイン案を今すぐ無料で提案してもらう">
+          <span class="manga-cta__bubble" aria-hidden="true"><svg viewBox="0 0 184 184" focusable="false"><path transform="rotate(-15 95.11005509 89.41585659)" d="M 165.72 146.82 A 91 91 0 1 0 151.7 160.68 L 173 175 Z"/></svg><span class="manga-cta__bubble-copy"><span>今なら</span><strong>50,000</strong><span>THBから</span></span></span>
+          <span class="manga-cta__copy"><span>LP構成案＋ラフデザイン案を</span><span>今すぐ無料で提案してもらう</span></span>
+          <svg class="manga-cta__arrows" viewBox="0 0 36 24" aria-hidden="true" focusable="false"><path d="m6 3 9 9-9 9m14-18 9 9-9 9"/></svg>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
