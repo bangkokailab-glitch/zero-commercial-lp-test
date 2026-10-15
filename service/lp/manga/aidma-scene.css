@@ -1,0 +1,115 @@
+/* Approved 888 × 1038 composition. All coordinates scale with the scene. */
+.manga-example__scene {
+  container-type: inline-size;
+  display: block;
+  aspect-ratio: 888 / 1038;
+  overflow: hidden;
+  background: #f7f7f7 url("assets/aidma-scene-approved.png") center / 100% 100% no-repeat;
+}
+.manga-example__phone {
+  position: absolute;
+  left: 6.76%; top: 9.54%; width: 48.09%; height: 83.72%;
+  border: 0; border-radius: .55cqw;
+  background: #fff; box-shadow: none;
+  z-index: 2;
+}
+.manga-example__speaker, .manga-example__home { display: none; }
+.manga-example__screen {
+  inset: 0; border-radius: 0;
+  padding-bottom: 23.7454%;
+  scrollbar-width: none;
+}
+.manga-example__screen::-webkit-scrollbar { display: none; }
+/* Separate from the scroll content: stays inside the phone at every position.
+   Matching bottom padding lets the final map finish directly above the CTA. */
+.manga-example__action {
+  position: absolute; z-index: 3; inset: auto 0 0;
+  width: 100%; aspect-ratio: 817 / 194;
+  box-shadow: 0 -1px 4px #071e3a30;
+}
+.manga-example__method {
+  position: absolute; inset: 0;
+  display: block; padding: 0;
+  background: none; pointer-events: none;
+}
+.manga-example__method::before {
+  content: ""; position: absolute;
+  top: 1.54%; right: .9%; bottom: 0; left: 61.6%;
+  border-top-right-radius: 3cqw;
+  background: linear-gradient(115deg,#102638 0%,#061b31 57%,#081d33 100%);
+  clip-path: polygon(0 0,100% 0,100% 100%,0 95.7%);
+}
+.manga-example__method h3 {
+  position: absolute; top: 4.05%; left: 64.4%; width: 31.9%;
+  margin: 0; padding: 0 0 1.3cqw;
+  border-bottom: .27cqw solid #efd36f;
+  font-size: 3.5cqw; font-weight: 400; line-height: 1.35;
+  letter-spacing: -.04em; white-space: nowrap;
+}
+.manga-example__method h3 strong { font-size: 5.8cqw; font-weight: 400; line-height: 1.25; }
+.manga-example__steps {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  display: block; margin: 0; padding: 0;
+}
+.manga-example__steps::before {
+  left: 76.35%; top: 24.3%; bottom: 12.3%; width: 1.12%;
+  background: #ffe144;
+}
+.manga-example__steps::after {
+  content: ""; position: absolute;
+  left: 84.7%; top: 32.18%; width: 1.9%; height: 61.66%;
+  border: .27cqw solid #f9da67; border-left: 0;
+}
+.manga-example__steps li {
+  position: absolute; left: 68.8%; width: 14.86%; height: auto;
+  aspect-ratio: 1; margin: 0;
+  border: .25cqw solid #e2e9f0;
+  background: linear-gradient(115deg,#bac8d8,#c8d5e4);
+  color: #061c38; font-size: 4.7cqw; line-height: 1;
+  transform: none;
+}
+.manga-example__steps li:nth-child(1) { top: 17.53%; left: 68.35%; width: 16.22%; }
+.manga-example__steps li:nth-child(2) { top: 34.59%; left: 68.65%; width: 15.54%; }
+.manga-example__steps li:nth-child(3) { top: 50.96%; }
+.manga-example__steps li:nth-child(4) { top: 66.09%; }
+.manga-example__steps li:nth-child(5) { top: 81.21%; }
+.manga-example__steps li.is-active {
+  transform: none; border-color: #ffe985;
+  background: radial-gradient(circle at 35% 25%,#ffe869,#ffd21b 75%);
+  box-shadow: 0 0 2.3cqw .55cqw #f9d54a70;
+}
+.manga-example__steps li:first-child.is-active::after {
+  content: ""; position: absolute; left: 105%; top: 20%;
+  width: 3.4cqw; height: 6.9cqw;
+  background: #ffe26a;
+  clip-path: polygon(0 24%,59% 0,82% 22%,9% 37%,100% 44%,100% 66%,10% 57%,79% 85%,64% 100%,0 67%);
+}
+.manga-example__steps li.is-near {
+  border: .45cqw solid #ffdf62;
+  background: radial-gradient(circle at 45% 30%,#fff5d6,#ffedbd);
+  box-shadow: 0 0 1.7cqw .3cqw #f9d54a55;
+}
+.manga-example__scroll-cue {
+  position: absolute; top: 18.69%; bottom: 26.88%; left: 58.56%;
+  width: 5.52%; border-radius: 0; background: none;
+  display: flex; align-items: center; justify-content: center;
+  writing-mode: horizontal-tb;
+}
+.manga-example__scroll-cue::before {
+  content: ""; position: absolute; inset: 0 15%;
+  background: #ffedb7;
+  clip-path: polygon(50% 0,100% 4.8%,65% 4.8%,65% 95.2%,100% 95.2%,50% 100%,0 95.2%,35% 95.2%,35% 4.8%,0 4.8%);
+}
+.manga-example__scroll-cue span {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 49.65%; padding: 2cqw 0;
+  border-radius: 3cqw; background: #fff1ca;
+  color: #06172c; font-size: 3.15cqw; line-height: 1.1;
+  font-weight: 700; writing-mode: vertical-rl; white-space: nowrap;
+}
+.manga-example__method-caption {
+  top: 41.4%; right: 4.1%; margin: 0;
+  font-size: 3.5cqw; line-height: 1.22; font-weight: 400;
+  color: #fff8e6; letter-spacing: .02em;
+  writing-mode: vertical-rl; white-space: nowrap;
+}
