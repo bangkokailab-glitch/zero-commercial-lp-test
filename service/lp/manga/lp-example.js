@@ -4,6 +4,10 @@
     const guides = [...component.querySelectorAll('[data-lp-example-guide]')];
     const controls = [...component.querySelectorAll('[data-lp-example-step]')];
     const notes = [...component.querySelectorAll('[data-lp-example-note]')];
+    notes.forEach((note) => {
+      const thought = note.querySelector('.manga-example__thought');
+      note.classList.toggle('is-long', (thought?.textContent || '').trim().length > 18);
+    });
     const selectors = [...component.querySelectorAll('[data-lp-example-select]')];
     const stages = [...component.querySelectorAll('[data-lp-example-stage]')];
     const progress = component.querySelector('[data-lp-example-progress]');
@@ -73,7 +77,7 @@
       guides.forEach((guide, index) => { guide.hidden = index !== active; });
       notes.forEach((note, index) => { note.hidden = index !== active; });
       const stage = notes[active]?.querySelector('.manga-example__stage')?.textContent?.trim() || '';
-      if (stageLabel) stageLabel.textContent = stage;
+      if (stageLabel) stageLabel.textContent = stage.split('｜')[1] || stage;
       const stageParts = stage.split('｜')[1]?.split('→') || [];
       methodStages.forEach((item) => {
         item.classList.toggle('is-active', item.dataset.lpExampleMethodStage === stageParts[0]);

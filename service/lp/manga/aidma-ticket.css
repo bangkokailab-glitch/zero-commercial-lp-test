@@ -1,0 +1,234 @@
+/* Ticket-style AIDMA card selected for the manga LP. Text stays live so all 14 scenes update. */
+.selected-heading--solution .selected-heading__panel {
+  min-height: 100px;
+  padding: 15px 6px 12px;
+}
+.selected-heading--solution h2 {
+  font-size: clamp(15px, 4.32vw, 17px);
+  line-height: 1.45;
+  letter-spacing: -.055em;
+  white-space: nowrap;
+}
+.selected-heading--solution h2 strong {
+  font-size: clamp(21px, 6.15vw, 24px);
+  line-height: 1.2;
+  letter-spacing: -.045em;
+}
+.selected-heading--solution .selected-heading__band {
+  height: 24px;
+  background: #fff8e9;
+}
+.selected-heading--solution .selected-heading__pointer {
+  width: 16%;
+  aspect-ratio: 2.8;
+  background: #082b52;
+}
+
+.manga-example__psychology {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  min-height: 548px;
+  margin: 0 8px 18px;
+  padding: 7px 8px 14px;
+  border: 1px solid #a77b32;
+  border-radius: 18px;
+  background: radial-gradient(circle at 50% 43%, #fffefa 0%, #fdfaf2 66%, #f8f0de 100%);
+  box-shadow: inset 0 0 0 5px #fffdf7, inset 0 0 0 6px #b39353;
+  color: #0b1d32;
+}
+.manga-example__psychology::before {
+  position: absolute;
+  inset: 4px;
+  border: 1px solid #bd9a56;
+  border-radius: 15px;
+  content: "";
+  pointer-events: none;
+}
+.manga-example__psychology-head {
+  position: relative;
+  display: grid;
+  grid-template-columns: 32% minmax(0, 1fr);
+  align-items: stretch;
+  min-height: 113px;
+  gap: 0;
+  padding: 0;
+  border: 1px solid #af8744;
+  border-radius: 13px 13px 0 0;
+  overflow: hidden;
+}
+.manga-example__count {
+  position: relative;
+  display: block;
+  height: auto;
+  min-height: 113px;
+  border-radius: 0;
+  background: linear-gradient(145deg, #081c32, #102b45 70%, #081b30);
+  color: #f4cd70;
+  font-family: var(--manga-morisawa-bold) !important;
+  line-height: 1;
+}
+.manga-example__count > span {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  font-size: clamp(54px, 17vw, 67px);
+  letter-spacing: -.09em;
+}
+.manga-example__count::after {
+  position: absolute;
+  top: 35px;
+  left: 72%;
+  width: 2px;
+  height: 76px;
+  background: #e5b95d;
+  content: "";
+  transform: rotate(33deg);
+  transform-origin: top;
+}
+.manga-example__count small {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  font-size: clamp(25px, 8vw, 31px);
+  letter-spacing: -.07em;
+}
+.manga-example__ticket-heading {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 11px 13px 12px 16px;
+  text-align: left;
+  background: #fffcf6;
+}
+.manga-example__overline {
+  display: block;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #bb9c64;
+  font-family: var(--manga-morisawa-regular) !important;
+  font-size: clamp(14px, 4.1vw, 16px);
+  font-weight: 400;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+.manga-example__ticket-heading strong {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin: 0;
+  font-family: var(--manga-morisawa-bold) !important;
+  font-size: clamp(17px, 5.45vw, 21px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -.06em;
+  white-space: nowrap;
+}
+.manga-example__ticket-divider { color: #9a6c23; }
+.manga-example__ticket-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 17px auto 7px;
+  color: #b68a3e;
+  font-size: 25px;
+  line-height: 1;
+}
+.manga-example__ticket-ornament::before,
+.manga-example__ticket-ornament::after {
+  width: 20%;
+  height: 1px;
+  background: #bc9654;
+  content: "";
+}
+.manga-example__notes {
+  display: grid;
+  align-items: center;
+  min-height: 286px;
+  padding: 6px 13px 3px;
+}
+.manga-example__note { grid-area: 1 / 1; min-width: 0; text-align: center; }
+.manga-example__note[hidden] { display: block; visibility: hidden; }
+.manga-example__stage { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.manga-example__thought {
+  max-width: 320px;
+  margin: 0 auto 21px;
+  font-family: var(--manga-morisawa-bold) !important;
+  font-size: clamp(33px, 10vw, 40px);
+  font-weight: 700;
+  line-height: 1.37;
+  letter-spacing: -.06em;
+  text-wrap: balance;
+}
+.manga-example__note.is-long .manga-example__thought { font-size: clamp(25px, 7.1vw, 28px); }
+.manga-example__explanation {
+  max-width: 315px;
+  margin: 0 auto;
+  font-family: var(--manga-morisawa-regular) !important;
+  font-size: clamp(13px, 3.7vw, 15px);
+  line-height: 1.68;
+  letter-spacing: -.025em;
+  text-wrap: pretty;
+}
+.manga-example__ticket-progress {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(14, minmax(0, 1fr));
+  gap: 1px;
+  margin: 14px 13px 0;
+}
+.manga-example__ticket-progress button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: #84786b;
+  cursor: pointer;
+}
+.manga-example__ticket-progress button span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d8d0bd;
+}
+.manga-example__ticket-progress button small { font-size: 9px; line-height: 1; }
+.manga-example__ticket-progress button.is-active { color: #b78a23; }
+.manga-example__ticket-progress button.is-active span { background: #dcae20; }
+.manga-example__ticket-progress button:focus-visible { outline: 2px solid #a77516; outline-offset: 1px; }
+.manga-example__ticket-footer {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 22px 12px 4px;
+  color: #ad915b;
+  font-family: var(--manga-morisawa-regular) !important;
+}
+.manga-example__ticket-footer span:first-child { font-size: 8px; line-height: 1.55; letter-spacing: .13em; }
+.manga-example__ticket-footer span:last-child { color: #594a35; font-size: 10px; line-height: 1.5; letter-spacing: .05em; text-align: right; }
+.manga-example__ticket-leaf {
+  position: absolute;
+  right: -18px;
+  bottom: 29px;
+  width: 75px;
+  height: 140px;
+  fill: none;
+  stroke: #c69c4f;
+  stroke-width: 1;
+  opacity: .42;
+  pointer-events: none;
+}
+.manga-example__ticket-leaf path + path { fill: #edd9a8; fill-opacity: .3; }
+@media (max-width: 374px) {
+  .manga-example__ticket-heading { padding-left: 12px; padding-right: 8px; }
+  .manga-example__ticket-heading strong { font-size: 17px; }
+  .manga-example__ticket-progress { margin-inline: 7px; }
+  .manga-example__notes { padding-inline: 8px; }
+}
