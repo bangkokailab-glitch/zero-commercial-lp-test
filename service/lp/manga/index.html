@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="aidma-ticket.css">
     <link rel="stylesheet" href="aidma-scene.css?v=20261015-reference">
     <script src="lp-example.js?v=20261015-ticket" defer></script>
+    <script src="manga-interactions.js?v=20261015-motion1" defer></script>
     <style>
       *, *::before, *::after { box-sizing: border-box; }
       html { background: #041326; }
@@ -67,39 +68,39 @@
       .language-th { left:67.7%; }
       .story-composite__screen:focus-visible { outline:3px solid #ffe63c; outline-offset:2px; }
       </style>
+    <link rel="stylesheet" href="manga-interactions.css?v=20261015-motion1">
   </head>
   <body>
     <main aria-label="バンコク店舗集客セットのLPデザイン確認">
-      <div class="fv-art"><img
-        src="assets/fv-approved.png"
-        width="904"
-        height="1740"
-        fetchpriority="high"
-        alt="集客から予約対応まで、ひとつの導線に。お客様の予約を増やして、予約対応の手間を減らす。バンコク店舗集客セット。Google広告からスマホLP、LINE自動対応・予約へ。ネット広告運用実績100社突破、ランディングページ制作実績300社突破、LINE自動対応・予約で1日の対応時間を約3時間削減。"
-      ></div>
-      <section class="manga-cta" aria-label="無料提案のご相談">
-        <a class="manga-cta__link" href="https://zero-s.jp/contact/" aria-label="今なら50,000THBから。LP構成案とラフデザイン案を今すぐ無料で提案してもらう">
-          <span class="manga-cta__bubble" aria-hidden="true"><svg viewBox="0 0 184 184" focusable="false"><path transform="rotate(-15 95.11005509 89.41585659)" d="M 165.72 146.82 A 91 91 0 1 0 151.7 160.68 L 173 175 Z"/></svg><span class="manga-cta__bubble-copy"><span>今なら</span><strong>50,000</strong><span>THBから</span></span></span>
-          <span class="manga-cta__copy"><span>LP構成案＋ラフデザイン案を</span><span>今すぐ無料で提案してもらう</span></span>
-          <svg class="manga-cta__arrows" viewBox="0 0 36 24" aria-hidden="true" focusable="false"><path d="m6 3 9 9-9 9m14-18 9 9-9 9"/></svg>
-        </a>
+      <section class="manga-hero" aria-labelledby="manga-hero-title">
+        <div class="manga-hero__copy">
+          <p class="manga-hero__lead"><span data-manga-wipe>集客から予約対応まで、ひとつの導線に。</span></p>
+          <h1 id="manga-hero-title"><span data-manga-wipe>お客様の予約を</span><strong data-manga-wipe>増やして、</strong><span class="manga-hero__sub" data-manga-wipe>予約対応の手間を減らす。</span><span class="manga-hero__product" data-manga-wipe>バンコク店舗集客セット</span></h1>
+        </div>
+        <div class="manga-hero__art"><img src="assets/fv-approved.png" width="904" height="1740" fetchpriority="high" alt="Google広告からスマホLP、LINEの自動対応・予約へつながる集客の流れ"></div>
+        <div class="manga-hero__stats" aria-label="ネット広告運用実績100社突破、LP制作実績300社突破、LINE自動対応・予約で1日の対応時間を約3時間削減">
+          <div><p>ネット広告<br>運用実績</p><strong data-manga-count="100" aria-hidden="true">100</strong><small>社突破</small></div>
+          <div><p>ランディングページ<br>制作実績</p><strong data-manga-count="300" aria-hidden="true">300</strong><small>社突破</small></div>
+          <div><p>LINE自動対応・予約<br>1日の対応時間</p><div class="manga-hero__hours"><small>約</small><strong data-manga-count="3" aria-hidden="true">3</strong><small>時間</small></div><small>削減</small></div>
+        </div>
       </section>
 
 
-      <section id="worries" class="selected-heading selected-heading--worries" aria-labelledby="worries-title"><div class="selected-heading__panel"><h2 id="worries-title">こんなお悩み<br><strong>ありませんか？</strong></h2></div><div class="selected-heading__band" aria-hidden="true"></div><span class="selected-heading__pointer" aria-hidden="true"></span></section>
+
+      <section id="worries" class="selected-heading selected-heading--worries" aria-labelledby="worries-title"><div class="selected-heading__panel"><h2 id="worries-title"><span data-manga-wipe>こんなお悩み</span><br><strong data-manga-wipe>ありませんか？</strong></h2></div><div class="selected-heading__band" aria-hidden="true"></div><span class="selected-heading__pointer" aria-hidden="true"></span></section>
       <div class="worry-flow">
         <section class="worry-card worry-card--booking" aria-labelledby="booking-title"><div class="worry-card__inner"><h3 id="booking-title">予約をもっと増やしたい</h3><ul><li>新規予約が思うように増えない</li><li>日本人のお客様に見つけてもらえない</li><li>広告を出しても予約につながらない</li><li>お店の魅力や選ばれる理由が伝わらない</li><li>日本人以外のお客様にも来てほしい</li></ul></div></section>
-        <img class="worry-comic" loading="lazy" decoding="async" src="assets/comic01-worry.webp" width="1619" height="971" alt="マリ：予約は増やしたい。でも、返信に追われるのは困る…。">
+        <figure class="comic-frame comic-frame--worry" data-comic><img class="worry-comic" loading="lazy" decoding="async" src="assets/comic01-worry.webp" width="1619" height="971" alt="マリ：予約は増やしたい。でも、返信に追われるのは困る…。"><span class="speech-mask" data-speech-mask style="left:63%;top:18%;width:31.6%;height:22%;--speech-delay:0ms" aria-hidden="true"></span></figure>
         <section class="worry-card worry-card--response" aria-labelledby="response-title"><div class="worry-card__inner"><h3 id="response-title">予約対応の手間を減らしたい</h3><ul><li>接客中もLINEの返信が気になる</li><li>空き枠の確認・日時調整が手作業</li><li>同じ質問に何度も答えている</li><li>営業時間外の問い合わせに対応できない</li><li>英語・タイ語の返信に時間がかかる</li></ul></div></section>
-        <img class="worry-comic" loading="lazy" decoding="async" src="assets/comic02-booking-dialogue.webp" width="1619" height="971" alt="マリ：予約が増えても、英語やタイ語の返信で毎日何時間も…。これじゃ、他の仕事ができないよ…。">
+        <figure class="comic-frame comic-frame--worry" data-comic><img class="worry-comic" loading="lazy" decoding="async" src="assets/comic02-booking-dialogue.webp" width="1619" height="971" alt="マリ：予約が増えても、英語やタイ語の返信で毎日何時間も…。これじゃ、他の仕事ができないよ…。"><span class="speech-mask" data-speech-mask style="left:59%;top:7.5%;width:37.8%;height:25%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:71.8%;top:47%;width:24.4%;height:24%;--speech-delay:550ms" aria-hidden="true"></span></figure>
       </div>
-      <section id="block03" class="selected-heading selected-heading--solution" aria-labelledby="solution-title"><div class="selected-heading__panel"><h2 id="solution-title">予約を増やして、対応の手間を減らす。<br><strong>バンコク店舗集客セット</strong></h2></div><div class="selected-heading__band" aria-hidden="true"></div><span class="selected-heading__pointer" aria-hidden="true"></span></section>
-      <img class="story-art story-comic" src="assets/revision-oct14/story-intro-color.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="マリ：バンコク店舗集客セットって、どんなセットなんですか？ 斎藤：広告で集めて、LPで魅力を伝え、LINEで質問・予約へつなぐんだ。マリ：広告を出すだけじゃ、ダメなんですか？ 斎藤：見つけた人に、このお店に行きたいと思ってもらうページが必要なんだ。" >
-      <figure class="comparison-selected" id="homepage-comparison" aria-label="Salon de Sixの実ホームページと商品LPの比較">
+      <section id="block03" class="selected-heading selected-heading--solution" aria-labelledby="solution-title"><div class="selected-heading__panel"><h2 id="solution-title"><span data-manga-wipe>予約を増やして、対応の手間を減らす。</span><br><strong data-manga-wipe>バンコク店舗集客セット</strong></h2></div><div class="selected-heading__band" aria-hidden="true"></div><span class="selected-heading__pointer" aria-hidden="true"></span></section>
+      <figure class="comic-frame comic-frame--intro" data-comic><img class="story-art story-comic" src="assets/revision-oct14/story-intro-color.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="マリ：バンコク店舗集客セットって、どんなセットなんですか？ 斎藤：広告で集めて、LPで魅力を伝え、LINEで質問・予約へつなぐんだ。マリ：広告を出すだけじゃ、ダメなんですか？ 斎藤：見つけた人に、このお店に行きたいと思ってもらうページが必要なんだ。" ><span class="speech-mask" data-speech-mask style="left:4.1%;top:3.6%;width:38%;height:10.7%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:61%;top:3.2%;width:35.9%;height:10.7%;--speech-delay:550ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:3.8%;top:62.4%;width:30.7%;height:7.8%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:64.7%;top:66%;width:33.3%;height:15%;--speech-delay:550ms" aria-hidden="true"></span><svg class="comic-seam" viewBox="0 0 1122 1402" aria-hidden="true" preserveAspectRatio="none"><path d="M0 806L1122 886" class="comic-seam__edge"/><path d="M0 806L1122 886" class="comic-seam__gap"/></svg></figure>
+      <figure class="comparison-selected comic-frame" data-comic id="homepage-comparison" aria-label="Salon de Sixの実ホームページと商品LPの比較">
         <img class="story-art" src="assets/revision-oct14/story-comparison-selected-character.png" width="1024" height="1536" loading="lazy" decoding="async" alt="斎藤：ホームページはお店全体の案内。LPは一つのサービスに絞ったページだよ。画像や大きな見出しで魅力を見せられるんだ。売れる営業マンも、お客様に合わせて、納得できる順番で話すよね。LPも同じ。Web上の営業マンだよ。" >
         <div class="comparison-selected__screen comparison-selected__hp"><img src="assets/revision-oct14/salon-hp-desktop.webp" alt="Salon de Six公式ホームページの実画面" width="1200" height="1000" loading="lazy"></div>
         <div class="comparison-selected__screen comparison-selected__lp"><img src="assets/revision-oct14/salon-lp-fv-offer-jp.webp" alt="Salon de Sixの男磨きセットLPの実画面" width="865" height="1750" loading="lazy"></div>
-      </figure>
+<span class="speech-mask" data-speech-mask style="left:7.3%;top:4%;width:33.8%;height:11.3%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:46%;top:9.4%;width:31.5%;height:5%;--speech-delay:550ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:67%;top:48.6%;width:28.2%;height:11%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:65%;top:63%;width:32.5%;height:5.8%;--speech-delay:550ms" aria-hidden="true"></span><svg class="comic-seam" viewBox="0 0 1024 1536" aria-hidden="true" preserveAspectRatio="none"><path d="M0 781L1024 645" class="comic-seam__edge"/><path d="M0 781L1024 645" class="comic-seam__gap"/></svg>      </figure>
       <section class="manga-example" id="lp-example" data-lp-example data-lp-example-points="0.00000000,0.07914722,0.15783695,0.21731174,0.30515143,0.38704365,0.48815079,0.56135054,0.61991033,0.66337268,0.70683503,0.76722481,0.85231952,0.93100924" aria-labelledby="lp-example-title">
   <h2 class="lp-example__sr-only" id="lp-example-title">Salon de SixのLPで見る、AIDMAと顧客心理</h2>
   <div class="manga-example__scene">
@@ -210,20 +211,27 @@
   </aside>
   <p class="lp-example__sr-only" data-lp-example-status aria-live="polite" aria-atomic="true"></p>
 </section>
-      <img class="story-art" src="assets/revision-oct14/story-cvr-question.png" width="1448" height="1086" loading="lazy" decoding="async" alt="マリ：実際に成果にもつながっているんですか？ Salon de Sixの比較実績。成約率（CVR）約1.5倍。ホームページで販売していた時との比較。斎藤：他の案件でも、商品特化LPの方が成約率が高い傾向があるよ。" >
-      <figure class="story-composite" id="multilingual-lp" aria-label="同じSalon de SixのLPメイン画像を日本語、英語、タイ語で展開">
-        <img class="story-art" src="assets/revision-oct14/story-multilingual-further.png" width="1122" height="1402" loading="lazy" decoding="async" alt="斎藤：さらに、日本語で作ったLPを土台に、英語・タイ語にも広げられるよ。" >
-        <a class="story-composite__screen language-screen language-jp" href="assets/revision-oct14/salon-lp-fv-jp.png" target="_blank" rel="noopener" aria-label="日本語版のメイン画像を拡大"><img src="assets/revision-oct14/salon-lp-fv-jp.webp" alt="Salon de Sixの日本語版メイン画像" loading="lazy"></a>
-<a class="story-composite__screen language-screen language-en" href="assets/revision-oct14/salon-lp-fv-en.png" target="_blank" rel="noopener" aria-label="英語版のメイン画像を拡大"><img src="assets/revision-oct14/salon-lp-fv-en.webp" alt="Salon de Sixの英語版メイン画像" loading="lazy"></a>
-<a class="story-composite__screen language-screen language-th" href="assets/revision-oct14/salon-lp-fv-th.png" target="_blank" rel="noopener" aria-label="タイ語版のメイン画像を拡大"><img src="assets/revision-oct14/salon-lp-fv-th.webp" alt="Salon de Sixのタイ語版メイン画像" loading="lazy"></a>
-      </figure>
-      <section class="manga-cta manga-cta--last" aria-label="無料提案のご相談">
+      <figure class="comic-frame comic-frame--results" data-comic><img class="story-art" src="assets/revision-oct14/story-cvr-question.png" width="1448" height="1086" loading="lazy" decoding="async" alt="マリ：実際に成果にもつながっているんですか？ Salon de Sixの比較実績。成約率（CVR）約1.5倍。ホームページで販売していた時との比較。斎藤：他の案件でも、商品特化LPの方が成約率が高い傾向があるよ。" ><span class="speech-mask" data-speech-mask style="left:3.8%;top:8.4%;width:24%;height:15.2%;--speech-delay:0ms" aria-hidden="true"></span><span class="speech-mask" data-speech-mask style="left:75.5%;top:67.5%;width:23.2%;height:20%;--speech-delay:550ms" aria-hidden="true"></span><svg class="comic-seam" viewBox="0 0 1448 1086" aria-hidden="true" preserveAspectRatio="none"><path d="M493 0L259 1086 M1070 0L824 1086" class="comic-seam__edge"/><path d="M493 0L259 1086 M1070 0L824 1086" class="comic-seam__gap"/></svg></figure>
+      <section id="multilingual-lp" class="multilingual-section" aria-label="日本語・英語・タイ語のLP">
+        <figure class="comic-frame comic-frame--language" data-comic>
+          <div class="language-story-crop"><img src="assets/revision-oct14/story-multilingual-further.png" width="1122" height="1402" loading="lazy" alt="斎藤：さらに、日本語で作ったLPを土台に、英語・タイ語にも広げられるよ。"></div>
+          <span class="speech-mask" data-speech-mask style="left:50%;top:25%;width:44%;height:45%;--speech-delay:0ms" aria-hidden="true"></span>
+        </figure>
+        <div class="language-gallery" tabindex="0" role="region" aria-label="日本語・英語・タイ語のLP。横にスクロールできます">
+          <figure class="language-card"><figcaption>日本語</figcaption><img src="assets/revision-oct14/salon-lp-fv-jp.webp" alt="Salon de Six 日本語LP" width="865" height="1750" loading="lazy"></figure>
+          <figure class="language-card"><figcaption>英語</figcaption><img src="assets/revision-oct14/salon-lp-fv-en.webp" alt="Salon de Six 英語LP" width="865" height="1750" loading="lazy"></figure>
+          <figure class="language-card"><figcaption>タイ語</figcaption><img src="assets/revision-oct14/salon-lp-fv-th.webp" alt="Salon de Six タイ語LP" width="865" height="1750" loading="lazy"></figure>
+        </div>
+        <p class="language-scroll-hint"><span aria-hidden="true">↔</span> 横スクロールで日本語・英語・タイ語のLPをご覧いただけます</p>
+      </section>
+
+    </main>
+      <aside class="manga-cta manga-cta--dock" aria-label="無料提案のご相談">
         <a class="manga-cta__link" href="https://zero-s.jp/contact/" aria-label="今なら50,000THBから。LP構成案とラフデザイン案を今すぐ無料で提案してもらう">
           <span class="manga-cta__bubble" aria-hidden="true"><svg viewBox="0 0 184 184" focusable="false"><path transform="rotate(-15 95.11005509 89.41585659)" d="M 165.72 146.82 A 91 91 0 1 0 151.7 160.68 L 173 175 Z"/></svg><span class="manga-cta__bubble-copy"><span>今なら</span><strong>50,000</strong><span>THBから</span></span></span>
-          <span class="manga-cta__copy"><span>LP構成案＋ラフデザイン案を</span><span>今すぐ無料で提案してもらう</span></span>
+          <span class="manga-cta__copy"><span>LP構成案<span class="manga-cta__plus">＋</span>ラフデザイン案を</span><span>今すぐ無料で提案してもらう</span></span>
           <svg class="manga-cta__arrows" viewBox="0 0 36 24" aria-hidden="true" focusable="false"><path d="m6 3 9 9-9 9m14-18 9 9-9 9"/></svg>
         </a>
-      </section>
-    </main>
+      </aside>
   </body>
 </html>
