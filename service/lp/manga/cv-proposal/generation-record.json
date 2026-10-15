@@ -1,0 +1,34 @@
+{
+  "created": "2026-10-15",
+  "status": "proposal_only_not_in_main_lp",
+  "workflow": "DesignNOW LP guidance called by parent, built-in imagegen for mockup generation; no portfolio upload",
+  "images": [
+    {
+      "path": "assets/early-price-overview.webp",
+      "sourceId": "exec-7a36e043-9f55-4712-9f57-d8445ddd4982",
+      "prompt": "Use case: ads-marketing. Create a polished long mobile Japanese landing-page section DESIGN PROPOSAL, not a whole LP. Output portrait 1024x3072 approximately, maximum 3:1 tall. The adopted direction is luxurious deep navy/blue plus restrained warm gold, off-white panels and subtle gold light, matching the supplied reference's atmosphere and recurring characters. This is the early SERVICE AND PRICE OVERVIEW section. Layout naturally uses about 1.5+ mobile screens, do not compress to one screen, do not make tiny text. 80% clear typography/information, 20% manga guide.\nReference image: style and character identity only, do NOT copy its text. Same guide Saito: Japanese man early30s, wavy black parted hair, navy suit, open white shirt; same Mari: blonde wavy shoulderlength hair, black blazer, white top. At top a small friendly halfbody duo introducing the service, no speech bubble necessary. A rich navy banner contains headline in TWO lines:\n「お店に必要な集客と予約対応を、」\n「ひとつに。」\nBelow: three coordinated visual emblems for「LP制作」「LINE自動化」「広告運用は任意」with phone, LINE chat and search icons.\nMain large exquisite ivory price card with gold double rule, navy header exact:\n「日本語LP＋LINE自動化」\n「セット初期費用」\n「70,000 THB〜」\nMain70,000 extremely clear and dominant, THB same line small.\nBelow gold rule:\n「LINE自動化 月額 2,000 THB」\nThen three readable check rows:\n「お店の魅力を伝える日本語LP」\n「よくある質問への自動返信」\n「空き枠案内から予約受付まで」\nThen secondary navyoutlined ivory horizontal offer card, well spaced:\n「英語・タイ語にも広げるなら」\n「3言語LP＋LINE自動化」\n「初期 80,000 THB〜」\n「LINE自動化 月額 2,000 THB」\nThen a simple separated footnote on white, readable:\n「広告運用は任意のオプションです。」\n「広告費・運用手数料は別途かかります。」\nThen final warmgold narrow editorial panel:\n「まずは無料で、仕上がりをイメージ。」\n「LP構成案＋」\n「メイン画像ラフデザイン1案」\nNo CTA link/button in this proposal, no extra discounts, no added guarantees, no limitedtimer, no madeup evidence. No source annotations or UI chrome. Very accurate Japanese typography, balanced breathing room. Strong refined gold highlights, no gratuitous jewelry, no isolated tiny repeated cards. Carry all exact specified text, no alternate facts.",
+      "references": [
+        "../revision-options/assets/closing-a.webp"
+      ],
+      "correction": {
+        "sourceId": "exec-26cc429b-63a1-417f-b29e-fbfbfe782ac3",
+        "change": "Only the small LP制作 caption from お店の魅力を伝えるホームページ to お店の魅力を伝える専用ページ. All other copy and layout preserved.",
+        "method": "built-in imagegen precise text edit",
+        "dimensions": [
+          725,
+          2169
+        ]
+      }
+    },
+    {
+      "path": "assets/salon-case-study.webp",
+      "sourceId": "exec-55dcae67-8bcb-4826-afdd-053c8d7dc4ab",
+      "prompt": "Use case: ads-marketing. Create ONE polished long vertical mobile landing-page CASE-STUDY DESIGN PROPOSAL image, portrait approximately 1024x3072 (3:1 tall), natural 1.5+ mobile screens. This is only a section of an existing LP. Deep navy #082641, fine warm gold rules and ivory paper panels, soft gold glow, refined substantial design, no cheap SaaS boxes. Precise Japanese copy. Leave generous breathing room rather than packing everything in one viewport.\nReference1 actual Salon de Six HOME PAGE. Reference2 actual Salon de Six service LP. Reference3 is approved manga visual direction and character identities. Use the two screenshot references as product mockup insert content; reproduce their appearance faithfully and do not substitute imaginary beauty salon designs. Do not use reference3 text.\nPanel arrangement:\n1) navy editorial header with small gold「制作事例｜Salon de Six」then TWO lines large white/gold「お店の魅力を、」「選ばれる理由に変える。」\n2) an ivory luxurious comparison display of two devices, left laptop showing reference1 (orange Salon de Six homepage with male model), right taller smartphone showing reference2 (navy Salon de Six LP, male model white shirt and green1500offer). Right phone not crowded, screenshots large. Labels exactly「お店全体を案内するHP」and「一つのサービスを伝えるLP」. No BEFORE/AFTER labels, no claim those screenshots were captured during any measured period. Strong devices + tall LP image should take about a third of wholesection.\n3) a navy performance panel, gentle illuminated gold number1.5 dominant:\nsmall「既存LP掲載の比較実績」\nlabel「成約率」\nhuge「約1.5倍」\nbelow readable「ホームページで販売していた時との比較」\nThis is a supplied claim. Do not add other metrics, dates, counts, graphs, testimonial quotations, assurances or sales values.\n4) ivory editorial sequence with three concise points and small relevant visual crop from reference2:\n「01  一つのサービスに絞る」\n「誰に、何を届けるページかを明確に。」\n「02  選ばれる理由を伝える」\n「内容・料金・不安への答えを順番に。」\n「03  次の行動へつなげる」\n「質問・予約への入口をわかりやすく。」\n5) closing small strip in warm salon atmosphere. Same Saito young Japanese man wavyblack partedhair navy suit openwhite shirt, and Mari blonde wavyshoulderlengthhair blackblazer white top, together looking at service LP on tablet. One common rounded white speechbubble with navy outline, only Saito talks exact:\n「あなたのお店なら、どんな見せ方が合うか。一緒に考えてみましょう。」\nNo customer testimonial. Not a founder quote. No extra 'real customer' statement.\nKeep all copy verbatim, typography sharp, no disclaimers invented inside graphic, no navigation/CTA UI. No redbanner, no pseudo research. Overall premium navy/gold consistent withreference3, narrative enough vertical space with generous margins.",
+      "references": [
+        "../assets/revision-oct14/salon-hp-desktop.webp",
+        "../assets/revision-oct14/salon-lp-fv-offer-jp.webp",
+        "../revision-options/assets/closing-a.webp"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+/* Approved offer details, 2026-10-15. */
+.manga-cta__copy { font-size:min(16px,4.9cqw); gap:7px; }
+.manga-cta__copy > span:first-child { font-size:.96em; }
+.manga-cta--dock { padding-top:78px; }
+.manga-cta__bubble { width:86px; height:86px; top:-72px; transform-origin:44px 43px; }
+.manga-cta__bubble-copy { left:44px; top:42px; gap:1px; }
+.manga-cta__bubble-copy > span:first-child { font-family:var(--manga-morisawa-bold)!important; font-size:9px; line-height:1.25; }
+.manga-cta__bubble-copy strong { font-size:18px; line-height:1.1; }
+.manga-cta__bubble-copy > span:last-child { font-size:10px; margin-top:0; }
+.free-offer-deliverables { margin:26px 0 22px; text-align:left; }
+.free-offer-deliverables p { position:relative; margin:0; padding:18px 0 18px 35px; border-top:1px solid #d4c295; font-size:13px; line-height:1.7; }
+.free-offer-deliverables p:last-child { border-bottom:1px solid #d4c295; }
+.free-offer-deliverables span { position:absolute; left:0; color:#94712b; font-size:15px; }
+.free-offer-deliverables strong { display:block; margin-bottom:6px; font-size:16px; color:#0a2b46; }
+.ads-operation h3 { margin:18px 0 20px; color:#0a2b46; font-size:25px; line-height:1.5; }
+.ads-operation__intro { margin:0 0 28px; font-size:15px; line-height:1.9; }
+.ads-operation__steps { list-style:none; padding:0; margin:0; }
+.ads-operation__steps li { display:grid; grid-template-columns:34px 1fr; gap:12px; padding:24px 0; border-top:1px solid #d4c295; }
+.ads-operation__steps li > span { color:#9c772c; font-size:21px; line-height:1.5; }
+.ads-operation__steps h4 { margin:0 0 10px; font-size:18px; line-height:1.55; color:#0a2b46; }
+.ads-operation__steps p { margin:0; font-size:14px; line-height:1.9; }
+.ads-operation__note { margin:10px 0 0; font-size:12px; line-height:1.8; color:#5a6268; }
+.ads-opportunity-comic { aspect-ratio:4/3; }
+.ads-opportunity-comic img { width:100%; height:100%; object-fit:cover; }
+.ads-opportunity-caption { background:#fffdf5; color:#5f665f; padding:12px 18px; margin:0; font-size:11px; line-height:1.7; }
+@media(max-width:374px) { .manga-cta__copy { font-size:min(15px,4.9cqw); } }
