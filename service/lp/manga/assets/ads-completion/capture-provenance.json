@@ -1,0 +1,29 @@
+{
+  "captured_on": "2026-10-15",
+  "capture_method": "CUA browser screenshot API. JPEG bytes saved directly without redrawing or image generation.",
+  "advertisements_clicked": false,
+  "captures": [
+    {
+      "file": "google-search-live-20261015.jpg",
+      "width": 900,
+      "height": 415,
+      "source_url": "https://www.google.com/search?q=%E3%83%90%E3%83%B3%E3%82%B3%E3%82%AF+%E8%84%B1%E6%AF%9B%E3%82%B5%E3%83%AD%E3%83%B3",
+      "query": "バンコク 脱毛サロン",
+      "sponsored_result_visible": true,
+      "sponsored_advertiser": "Salon de Six / salon-de-six.com",
+      "visible_ad_label": "スポンサー広告",
+      "notes": "Actual search result. Browser screenshot clip includes the search bar and first sponsored result; account controls are outside the captured area. No replacement labels or content were added."
+    },
+    {
+      "file": "google-maps-live-20261015.jpg",
+      "width": 1260,
+      "height": 689,
+      "source_url": "https://www.google.com/maps/search/%E3%83%90%E3%83%B3%E3%82%B3%E3%82%AF+%E7%84%BC%E8%82%89/",
+      "query": "バンコク 焼肉",
+      "sponsored_result_visible": true,
+      "sponsored_advertiser": "Bully's Bangkok",
+      "visible_ad_label": "スポンサー",
+      "notes": "Actual Google Maps search result with a sponsored listing followed by ordinary results. The listing is an example of ad placement, not a claim of ZERO campaign work. Personal recent-places sidebar and account controls are outside the screenshot clip. Google Maps branding and map attribution remain visible. No advertisement or label was composited into the screenshot."
+    }
+  ]
+}

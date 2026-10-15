@@ -15,9 +15,9 @@
 .ads-section-a :is(p,figure,h3,h4) {margin:0;}
 .ads-section-a .comic-frame {margin:0 0 7px;}
 .ads-section-a .ads-comic-panel {position:relative;--ads-crop-top:0;--ads-crop-height:478;aspect-ratio:793 / var(--ads-crop-height);}
-.ads-comic-panel:nth-child(2) {--ads-crop-top:494;--ads-crop-height:472;}
-.ads-comic-panel:nth-child(3) {--ads-crop-top:983;--ads-crop-height:464;}
-.ads-comic-panel:nth-child(4) {--ads-crop-top:1463;--ads-crop-height:520;}
+.ads-comic-panel[data-art-panel="1"] {--ads-crop-top:494;--ads-crop-height:472;}
+.ads-comic-panel[data-art-panel="2"] {--ads-crop-top:983;--ads-crop-height:464;}
+.ads-comic-panel[data-art-panel="3"] {--ads-crop-top:1463;--ads-crop-height:520;}
 .ads-comic-panel__art {position:absolute;inset:0;overflow:hidden;}
 .ads-comic-panel__art > img {position:absolute;left:0;top:calc(-100% * var(--ads-crop-top) / var(--ads-crop-height));width:100%;height:auto;max-width:none;}
 .ads-section-a .ads-comic-bubble {
@@ -44,7 +44,17 @@
 .ads-a-screen {position:relative;overflow:hidden;border:1px solid #d9dde0;border-radius:2.7cqw;background:#fff;}
 .ads-a-screen__label {display:flex;align-items:center;gap:2cqw;padding:3.4cqw 3cqw;background:#fff;border-bottom:1px solid #e5e8eb;font-family:var(--manga-morisawa-bold);font-size:3.05cqw;line-height:1.6;}
 .ads-a-screen__label svg {flex:none;width:4cqw;height:4cqw;stroke:#a07a2c;stroke-width:1.8;fill:none;}
-.ads-a-screen > img {width:100%;height:auto;display:block;}
+.ads-a-screen > img,.ads-a-screenshot-link > img {width:100%;height:auto;display:block;}
+.ads-a-screenshot-link {display:block;background:#fff;}
+.ads-a-screenshot-link:focus-visible {outline:3px solid #b88b2e;outline-offset:-3px;}
+.ads-section-a .ads-a-screen-detail {padding:4cqw 3cqw 0;background:#fff;border-top:1px solid #e5e8eb;}
+.ads-section-a .ads-a-screen-detail > p {margin:0 0 3cqw;font-family:var(--manga-morisawa-bold);font-size:3cqw;color:#8e6b25;}
+.ads-a-screen-detail__crop {position:relative;overflow:hidden;aspect-ratio:407 / 298;}
+.ads-a-screen-detail__crop img {display:block;width:309.5823%;max-width:none;height:auto;}
+.ads-a-screen-note a {color:#655020;text-decoration:underline;text-underline-offset:3px;}
+.ads-section-a .ads-a-destination__purpose {font-size:2.8cqw;color:#786134;margin-bottom:3cqw;}
+.ads-section-a .ads-comic-added {position:relative;}
+.ads-comic-added > img {display:block;width:100%;height:auto;}
 .ads-a-screen figcaption {padding:3.8cqw 3cqw;background:#faf5e7;border-top:1px solid #d8bd7d;font-size:3.1cqw;line-height:1.9;}
 .ads-a-screen figcaption > span {display:table;color:#fff;background:linear-gradient(110deg,#bd933e,#8e6b25);padding:.8cqw 2.5cqw;margin-bottom:2.1cqw;border-radius:1cqw;font-family:var(--manga-morisawa-bold);font-size:2.8cqw;}
 .ads-a-destination {display:grid;grid-template-columns:1.25fr 1fr;gap:5cqw;align-items:center;padding:6cqw 1cqw 5cqw;}

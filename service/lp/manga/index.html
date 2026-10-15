@@ -76,7 +76,7 @@
 <link rel="stylesheet" href="line-booking-demo.css?v=20261015-direction-a1">
 <script src="line-booking-demo.js?v=20261015-direction-a1" defer></script>
 <link rel="stylesheet" href="direction-a.css?v=20261015-a1">
-<link rel="stylesheet" href="ads-direction-a.css?v=20261015-a1">
+<link rel="stylesheet" href="ads-direction-a.css?v=20261015-a2">
 <link rel="stylesheet" href="comic-speech.css?v=20261015-a1">
 </head>
   <body class="direction-a">
@@ -294,26 +294,34 @@
 <section id="google-ads" class="ads-section-a" aria-labelledby="google-ads-title">
   <header class="back-heading"><h2 id="google-ads-title"><span class="heading-line" data-manga-wipe>来店につながるお客様を、</span><span class="heading-line heading-line--accent" data-manga-wipe>広告から。</span></h2></header>
 
-  <figure class="comic-frame" data-comic>
+  <figure class="comic-frame" data-comic data-ad-panel-count="2">
     <img src="assets/line-ads/ads-intro.jpg" width="1122" height="1402" loading="lazy" decoding="async" alt="マリ：予約まで自動で受け付けられるんですね！ でも、そもそもそのLPは、どうやってお客様に見てもらうんですか？ 斎藤：そこでGoogle広告を使うんだ。お店やサービスを探している人に、LPを見つけてもらうよ。">
     <span class="speech-mask" data-speech-mask style="left:57.1%;top:5.4%;width:39.4%;height:18.5%" aria-hidden="true"></span>
     <span class="speech-mask" data-speech-mask style="left:60.5%;top:45.2%;width:37%;height:15.5%" aria-hidden="true"></span>
   </figure>
 
   <div class="ads-comic-sequence" aria-label="Google検索とGoogleマップからお店を見つけてもらう流れ">
-    <figure class="comic-frame ads-comic-panel" data-comic style="--ads-panel-index:0">
+    <figure class="comic-frame ads-comic-panel" data-comic data-ad-panel="3" data-art-panel="0" style="--ads-panel-index:0">
       <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
       <p class="ads-comic-bubble" data-speech-reveal><span class="ads-comic-speaker">斎藤さん</span>「バンコク 脱毛サロン」など、サービスを探している人に検索広告を出せるんだ。</p>
     </figure>
-    <figure class="comic-frame ads-comic-panel" data-comic style="--ads-panel-index:1">
+    <figure id="ads-search-to-lp" class="comic-frame ads-comic-added" data-comic data-ad-panel="4">
+      <img src="assets/ads-completion/search-to-lp.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="斎藤さん：広告を押すと、サービス専用のLPへ。料金やお店の魅力を詳しく見てもらうんだ。Salon de SixのLPをスマホで見せながら説明する。">
+      <span class="speech-mask" data-speech-mask data-speech-text="広告を押すと、サービス専用のLPへ。料金やお店の魅力を詳しく見てもらうんだ。" style="left:51%;top:6.2%;width:36.8%;height:24.6%" aria-hidden="true"></span>
+    </figure>
+    <figure class="comic-frame ads-comic-panel" data-comic data-ad-panel="5" data-art-panel="1" style="--ads-panel-index:1">
       <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
       <p class="ads-comic-bubble" data-speech-reveal><span class="ads-comic-speaker">マリ</span>私も「バンコク 焼肉」とか、Googleマップで探します！</p>
     </figure>
-    <figure class="comic-frame ads-comic-panel" data-comic style="--ads-panel-index:2">
+    <figure class="comic-frame ads-comic-panel" data-comic data-ad-panel="6" data-art-panel="2" style="--ads-panel-index:2">
       <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
       <p class="ads-comic-bubble" data-speech-reveal><span class="ads-comic-speaker">斎藤さん</span>近くのお店を探す人にも、マップ上の広告で見つけてもらえるよ。</p>
     </figure>
-    <figure class="comic-frame ads-comic-panel" data-comic style="--ads-panel-index:3">
+    <figure id="ads-maps-to-website" class="comic-frame ads-comic-added" data-comic data-ad-panel="7">
+      <img src="assets/ads-completion/maps-to-website.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="斎藤さん：マップでは店舗情報から、ウェブサイトへ進めるよ。LPにつながる動線を整えるんだ。店舗情報のウェブサイトへの導線をタブレットで説明する。">
+      <span class="speech-mask" data-speech-mask data-speech-text="マップでは店舗情報から、ウェブサイトへ進めるよ。LPにつながる動線を整えるんだ。" style="left:47.3%;top:7%;width:41.2%;height:25.3%;clip-path:polygon(0 0,100% 0,100% 26%,95.5% 26%,95.5% 50%,85% 50%,85% 74%,50% 74%,50% 100%,0 100%)" aria-hidden="true"></span>
+    </figure>
+    <figure class="comic-frame ads-comic-panel" data-comic data-ad-panel="8" data-art-panel="3" style="--ads-panel-index:3">
       <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
       <p class="ads-comic-bubble" data-speech-reveal><span class="ads-comic-speaker">斎藤さん</span>見つけてもらったら、LPで魅力を伝えて、LINEで質問・予約につなぐんだ。</p>
     </figure>
@@ -328,12 +336,12 @@
 
       <figure class="ads-a-screen">
         <div class="ads-a-screen__label"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.4"></circle><path d="m15 15 6 6"></path></svg><span>検索例：バンコク 脱毛サロン</span></div>
-        <img src="assets/direction-a/google-search-example.webp" width="1438" height="1093" loading="lazy" decoding="async" alt="Google検索結果のスポンサー広告欄を示した説明画面。Salon de Sixのサービスに関する検索広告。">
-        <figcaption><span>ここに注目</span>検索結果の「スポンサー広告」から、サービス専用のLPへ。<small class="ads-a-screen-note">検索画面は、実画面を参考にした説明用です。</small></figcaption>
+        <a class="ads-a-screenshot-link" href="assets/ads-completion/google-search-live-20261015.jpg" target="_blank" rel="noopener" aria-label="Google検索の実画面を拡大して見る"><img src="assets/ads-completion/google-search-live-20261015.jpg" width="900" height="415" loading="lazy" decoding="async" alt="2026年10月15日、バンコク 脱毛サロンで検索したGoogleの実画面。スポンサー広告の欄にSalon de Sixが表示されている。"></a>
+        <figcaption><span>実際の検索画面</span>「スポンサー広告」と表示される場所に、お店の広告が掲載されます。<small class="ads-a-screen-note">2026年10月15日撮影。画像をタップすると拡大できます。掲載内容は検索条件や時期によって変わります。</small></figcaption>
       </figure>
 
       <div class="ads-a-destination" aria-label="Google検索広告からサービス専用LPへ">
-        <div class="ads-a-destination__copy"><p class="ads-a-destination__from">Google検索広告</p><span class="ads-a-down-arrow" aria-hidden="true"></span><h4>サービス専用のLP</h4><p>内容・料金・選ばれる理由を、<br>ひとつのページで詳しく。</p></div>
+        <div class="ads-a-destination__copy"><p class="ads-a-destination__purpose">ご提案するリンク先の設計</p><p class="ads-a-destination__from">Google検索広告</p><span class="ads-a-down-arrow" aria-hidden="true"></span><h4>サービス専用のLPへ</h4><p>広告のリンク先をLPに設定。<br>内容・料金・選ばれる理由を、<br>ひとつのページで詳しく。</p></div>
         <figure class="ads-a-lp-preview"><img src="assets/revision-oct14/salon-lp-fv-offer-jp.webp" width="865" height="1750" loading="lazy" decoding="async" alt="Salon de Sixの男磨きセットを紹介するサービス専用LP"><figcaption>Salon de SixのLP実例</figcaption></figure>
       </div>
       <p class="ads-a-keywords"><span>ほかにも、こんな検索から</span><strong>バンコク 美容</strong><strong>バンコク 歯医者</strong></p>
@@ -344,8 +352,9 @@
       <p class="ads-a-card__lead">食事のお店や、通いやすいお店を探すとき。<strong>地図で場所を確かめている人</strong>にも、お店を見つけてもらう入口をつくります。</p>
       <figure class="ads-a-screen">
         <div class="ads-a-screen__label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-8.8 8-14A8 8 0 0 0 4 8c0 5.2 8 14 8 14Z"></path><circle cx="12" cy="8" r="2.6"></circle></svg><span>検索例：バンコク 焼肉</span></div>
-        <img src="assets/direction-a/map-example.webp" width="1385" height="1136" loading="lazy" decoding="async" alt="Googleマップの店舗検索画面をもとに、広告の掲載場所を示した説明図。実際に掲載中の広告を示すものではありません。">
-        <figcaption><span>広告表示の説明例</span>地図や検索結果で、お店の存在と場所を伝えます。</figcaption>
+        <a class="ads-a-screenshot-link" href="assets/ads-completion/google-maps-live-20261015.jpg" target="_blank" rel="noopener" aria-label="Googleマップの実画面を拡大して見る"><img src="assets/ads-completion/google-maps-live-20261015.jpg" width="1260" height="689" loading="lazy" decoding="async" alt="2026年10月15日、バンコク 焼肉で検索したGoogleマップの実画面。左の検索結果にスポンサー表示、右にバンコクの地図が表示されている。"></a>
+        <div class="ads-a-screen-detail"><p>同じ実画面の「スポンサー」部分を拡大</p><div class="ads-a-screen-detail__crop"><img src="assets/ads-completion/google-maps-live-20261015.jpg" width="1260" height="689" loading="lazy" decoding="async" alt="上の実スクリーンショットのスポンサー欄を拡大。Bully's Bangkokの掲載例。"></div></div>
+        <figcaption><span>実際のマップ広告</span>検索結果の「スポンサー」が広告の目印。地図でお店を探している人にも、存在と場所を伝えられます。<small class="ads-a-screen-note">2026年10月15日撮影。画像をタップすると全体を拡大できます。掲載店舗は広告表示の実例で、当社の運用実績を示すものではありません。</small></figcaption>
       </figure>
 
       <div class="ads-a-map-route" aria-label="店舗情報のウェブサイト導線からLPへ進む例">
@@ -373,15 +382,18 @@
   </div>
 
   <header class="back-heading ads-a-summary-heading"><h2 id="ads-summary-title"><span class="heading-line" data-manga-wipe>集客から予約まで、</span><span class="heading-line heading-line--accent" data-manga-wipe>ひとつの流れで。</span></h2></header>
-  <figure class="comic-frame ads-a-summary-comic" data-comic aria-labelledby="ads-summary-title">
+  <figure class="comic-frame ads-a-summary-comic" data-comic data-summary-panel-count="3" aria-labelledby="ads-summary-title">
     <img src="assets/line-ads/ads-to-booking.jpg" width="1024" height="1536" loading="lazy" decoding="async" alt="広告で見つけてもらう。LPで「このお店に行きたい」と思ってもらう。AIを使ったLINE対応で、質問から予約まで進める。広告、LP、LINEを通じてお店に来店するお客様と、笑顔で迎えるマリと斎藤さん。">
     <span class="speech-mask" data-speech-mask style="left:4.2%;top:2.2%;width:49.9%;height:3.8%" aria-hidden="true"></span>
     <span class="speech-mask" data-speech-mask style="left:4.3%;top:36.1%;width:90.8%;height:3.7%" aria-hidden="true"></span>
     <span class="speech-mask" data-speech-mask style="left:4.0%;top:68.8%;width:92%;height:3.7%" aria-hidden="true"></span>
   </figure>
-  <div class="ads-a-outcome" data-comic>
-    <p class="ads-a-outcome__quote" data-speech-reveal><span>マリ</span>これなら、返信に追われず、<br><strong>目の前のお客様に集中できそう！</strong></p>
-    <p class="ads-a-outcome__answer" data-speech-reveal><span>斎藤さん</span>いつもの質問や予約受付を任せられれば、その分、お店の仕事に時間を使えるね。</p>
+  <figure id="ads-customer-focus" class="comic-frame ads-comic-added ads-a-summary-finish" data-comic data-summary-panel-count="1">
+    <img src="assets/ads-completion/mari-customer-focus.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="まとめの4コマ目。スマホを脇に置き、目の前のお客様にメニューを説明するマリ。集客から予約までつながるんですね！ これなら返信に追われず、お客様に集中できそう！">
+    <span class="speech-mask" data-speech-mask data-speech-text="集客から予約までつながるんですね！" style="left:7.7%;top:8.2%;width:31.2%;height:12%" aria-hidden="true"></span>
+    <span class="speech-mask" data-speech-mask data-speech-text="これなら返信に追われず、お客様に集中できそう！" style="left:52.6%;top:8.4%;width:40.7%;height:11.8%" aria-hidden="true"></span>
+  </figure>
+  <div class="ads-a-outcome">
     <p class="ads-a-outcome__bridge">この流れを、お店に合わせて整えるのが<br><strong>バンコク店舗集客セット</strong>です。</p>
   </div>
 </section>
