@@ -28,9 +28,9 @@
   position: relative;
   display: block;
   overflow: hidden;
-  min-height: 548px;
+  min-height: 0;
   margin: 0 8px 18px;
-  padding: 7px 8px 14px;
+  padding: 7px 8px 10px;
   border: 1px solid #a77b32;
   border-radius: 18px;
   background: radial-gradient(circle at 50% 43%, #fffefa 0%, #fdfaf2 66%, #f8f0de 100%);
@@ -48,9 +48,9 @@
 .manga-example__psychology-head {
   position: relative;
   display: grid;
-  grid-template-columns: 32% minmax(0, 1fr);
+  grid-template-columns: 28% minmax(0, 1fr);
   align-items: stretch;
-  min-height: 113px;
+  min-height: 88px;
   gap: 0;
   padding: 0;
   border: 1px solid #af8744;
@@ -59,9 +59,15 @@
 }
 .manga-example__count {
   position: relative;
-  display: block;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-content: center;
+  justify-items: start;
+  gap: 2px;
+  min-width: 0;
+  padding: 10px;
   height: auto;
-  min-height: 113px;
+  min-height: 88px;
   border-radius: 0;
   background: linear-gradient(145deg, #081c32, #102b45 70%, #081b30);
   color: #f4cd70;
@@ -69,48 +75,40 @@
   line-height: 1;
 }
 .manga-example__count > span {
-  position: absolute;
-  top: 12px;
-  left: 10px;
-  font-size: clamp(54px, 17vw, 67px);
-  letter-spacing: -.09em;
+  position: static;
+  font-size: 42px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.04em;
+  line-height: 1;
 }
-.manga-example__count::after {
-  position: absolute;
-  top: 35px;
-  left: 72%;
-  width: 2px;
-  height: 76px;
-  background: #e5b95d;
-  content: "";
-  transform: rotate(33deg);
-  transform-origin: top;
-}
+.manga-example__count::after { content: none; }
 .manga-example__count small {
-  position: absolute;
-  right: 9px;
-  bottom: 9px;
-  font-size: clamp(25px, 8vw, 31px);
-  letter-spacing: -.07em;
+  position: static;
+  justify-self: end;
+  font-size: 19px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+  line-height: 1;
 }
+.manga-example__count small::before { content: "/"; margin-right: 3px; }
 .manga-example__ticket-heading {
   min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 11px 13px 12px 16px;
+  padding: 10px 12px;
   text-align: left;
   background: #fffcf6;
 }
 .manga-example__overline {
   display: block;
-  margin-bottom: 8px;
-  padding-bottom: 8px;
+  margin-bottom: 7px;
+  padding-bottom: 7px;
   border-bottom: 1px solid #bb9c64;
   font-family: var(--manga-morisawa-regular) !important;
-  font-size: clamp(14px, 4.1vw, 16px);
+  font-size: 14px;
   font-weight: 400;
-  letter-spacing: .08em;
+  letter-spacing: .04em;
   white-space: nowrap;
 }
 .manga-example__ticket-heading strong {
@@ -119,7 +117,7 @@
   gap: 3px;
   margin: 0;
   font-family: var(--manga-morisawa-bold) !important;
-  font-size: clamp(17px, 5.45vw, 21px);
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -.06em;
@@ -131,9 +129,9 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 17px auto 7px;
+  margin: 10px auto 5px;
   color: #b68a3e;
-  font-size: 25px;
+  font-size: 18px;
   line-height: 1;
 }
 .manga-example__ticket-ornament::before,
@@ -146,23 +144,23 @@
 .manga-example__notes {
   display: grid;
   align-items: center;
-  min-height: 286px;
-  padding: 6px 13px 3px;
+  min-height: 0;
+  padding: 6px 13px;
 }
 .manga-example__note { grid-area: 1 / 1; min-width: 0; text-align: center; }
 .manga-example__note[hidden] { display: block; visibility: hidden; }
 .manga-example__stage { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .manga-example__thought {
   max-width: 320px;
-  margin: 0 auto 21px;
+  margin: 0 auto 12px;
   font-family: var(--manga-morisawa-bold) !important;
-  font-size: clamp(33px, 10vw, 40px);
+  font-size: clamp(27px, 7.5vw, 29px);
   font-weight: 700;
-  line-height: 1.37;
-  letter-spacing: -.06em;
+  line-height: 1.45;
+  letter-spacing: -.035em;
   text-wrap: balance;
 }
-.manga-example__note.is-long .manga-example__thought { font-size: clamp(25px, 7.1vw, 28px); }
+.manga-example__note.is-long .manga-example__thought { font-size: clamp(23px, 6.4vw, 25px); }
 .manga-example__explanation {
   max-width: 315px;
   margin: 0 auto;
@@ -177,7 +175,7 @@
   display: grid;
   grid-template-columns: repeat(14, minmax(0, 1fr));
   gap: 1px;
-  margin: 14px 13px 0;
+  margin: 8px 13px 0;
 }
 .manga-example__ticket-progress button {
   display: flex;
@@ -207,7 +205,7 @@
   align-items: end;
   justify-content: space-between;
   gap: 10px;
-  margin: 22px 12px 4px;
+  margin: 10px 12px 4px;
   color: #ad915b;
   font-family: var(--manga-morisawa-regular) !important;
 }
@@ -216,9 +214,9 @@
 .manga-example__ticket-leaf {
   position: absolute;
   right: -18px;
-  bottom: 29px;
-  width: 75px;
-  height: 140px;
+  bottom: 26px;
+  width: 54px;
+  height: 101px;
   fill: none;
   stroke: #c69c4f;
   stroke-width: 1;
