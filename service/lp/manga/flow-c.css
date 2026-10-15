@@ -1,0 +1,146 @@
+/* Approved production flow C. Each card retains the selected alternating manga
+   composition; original detail copy continues inside the same frame below it. */
+.direction-a #production-flow .flow-c{
+  container-type:inline-size;
+  margin:0;
+  padding:30px 9px 32px;
+  background:linear-gradient(135deg,#082b42,#031d30);
+  color:#08243d;
+  font-family:var(--manga-morisawa-regular,sans-serif);
+}
+.direction-a #production-flow .flow-c__intro{
+  margin:0 0 27px;
+  padding:10px 17px 0;
+  color:#fff9e9;
+}
+.direction-a #production-flow .flow-c__intro p{
+  margin:0;
+  font-size:clamp(15px,3.8cqw,25px);
+  line-height:2;
+}
+.direction-a #production-flow .flow-c__steps{
+  display:grid;
+  gap:18px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.direction-a #production-flow .flow-c__card{
+  position:relative;
+  margin:0;
+  padding:5px;
+  overflow:hidden;
+  border:3px solid #d6c28d;
+  border-radius:9px;
+  background:#fffdf5;
+  box-shadow:inset 0 0 0 1px #143c51,0 3px 8px #0003;
+}
+.direction-a #production-flow .flow-c__card::before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  pointer-events:none;
+  inset:4px;
+  border:1px solid #b9a36b;
+  border-radius:4px;
+}
+.direction-a #production-flow .flow-c__scene{
+  position:relative;
+  isolation:isolate;
+  width:100%;
+  aspect-ratio:var(--scene-ratio);
+  overflow:hidden;
+  background:#fffdf5;
+}
+.direction-a #production-flow .flow-c__scene img{
+  position:absolute;
+  z-index:-1;
+  top:var(--scene-top);
+  left:-2.312139%;
+  display:block;
+  width:104.624278%;
+  max-width:none;
+  height:auto;
+  margin:0;
+  border:0;
+  pointer-events:none;
+}
+.direction-a #production-flow .flow-c__number{
+  position:absolute;
+  top:-1px;
+  left:1.1%;
+  width:9.2%;
+  padding:1px 0 0;
+  color:#e6c56c;
+  font-family:var(--manga-morisawa-regular,sans-serif);
+  font-size:clamp(26px,7.3cqw,48px);
+  font-weight:400;
+  line-height:1.18;
+  text-align:center;
+  font-variant-numeric:tabular-nums;
+}
+.direction-a #production-flow .flow-c__scene h3{
+  position:absolute;
+  inset-block-start:50%;
+  left:13%;
+  width:36.5%;
+  margin:0;
+  transform:translateY(-50%);
+  color:#08243d;
+  font-family:var(--manga-morisawa-bold,sans-serif);
+  font-size:clamp(14px,4cqw,28px);
+  font-weight:700;
+  line-height:1.5;
+  letter-spacing:-.045em;
+  overflow-wrap:anywhere;
+  text-wrap:pretty;
+}
+.direction-a #production-flow .flow-c__card:nth-child(even) .flow-c__scene h3{
+  left:59%;
+  width:39%;
+}
+.direction-a #production-flow .flow-c__card--8 .flow-c__scene h3{
+  top:64%;
+  left:63%;
+  width:34%;
+}
+.direction-a #production-flow .flow-c__copy{
+  position:relative;
+  padding:17px 18px 20px;
+  background:linear-gradient(#fffdf5,#fcf8ed);
+}
+.direction-a #production-flow .flow-c__copy::before{
+  content:"";
+  position:absolute;
+  top:0;
+  right:18px;
+  left:18px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#c3a55f 20%,#c3a55f 80%,transparent);
+}
+.direction-a #production-flow .flow-c__copy p{
+  margin:0 0 12px;
+  font-size:clamp(15px,3.8cqw,25px);
+  line-height:1.95;
+}
+.direction-a #production-flow .flow-c__copy p:last-child{margin-bottom:0}
+.direction-a #production-flow .flow-c__tag{
+  display:table;
+  margin:0 0 11px;
+  padding:4px 12px;
+  border:1px solid #c6a252;
+  border-radius:2px;
+  color:#fffdf5;
+  background:#977635;
+  font-family:var(--manga-morisawa-bold,sans-serif);
+  font-size:clamp(12px,3.2cqw,20px);
+  line-height:1.5;
+}
+@media(min-width:700px){
+  .direction-a #production-flow .flow-c{padding:40px 16px 42px}
+  .direction-a #production-flow .flow-c__steps{gap:25px}
+  .direction-a #production-flow .flow-c__intro{padding-inline:26px;margin-bottom:36px}
+  .direction-a #production-flow .flow-c__copy{padding:25px 29px 30px}
+  .direction-a #production-flow .flow-c__copy::before{right:29px;left:29px}
+}
+
