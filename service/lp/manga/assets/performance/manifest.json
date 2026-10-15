@@ -1,0 +1,1005 @@
+{
+  "description": "Source files preserved. Replacement is opt-in via replace=true. SVG images retain their source viewport geometry; replace URL only. Width/height HTML attributes may retain original ratio.",
+  "originalTotalBytes": 17645777,
+  "optimizedTotalBytes": 7053942,
+  "savedBytes": 10591835,
+  "savedPercent": 60.0,
+  "replacements": [
+    {
+      "original": "assets/fv-approved.png",
+      "optimized": "assets/performance/assets--fv-approved.webp",
+      "originalBytes": 2263546,
+      "optimizedBytes": 294902,
+      "savedBytes": 1968644,
+      "savedPercent": 87.0,
+      "originalWidth": 904,
+      "originalHeight": 1740,
+      "width": 780,
+      "height": 1501,
+      "quality": 90,
+      "kind": "hero-manga-text",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/fv-approved.png"
+        }
+      ]
+    },
+    {
+      "original": "assets/line-ads/saito-demo-poses.png",
+      "optimized": "assets/performance/assets--line-ads--saito-demo-poses.webp",
+      "originalBytes": 2175417,
+      "optimizedBytes": 260556,
+      "savedBytes": 1914861,
+      "savedPercent": 88.0,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "width": 1002,
+      "height": 1002,
+      "quality": 88,
+      "kind": "six-pose-sprite",
+      "replace": true,
+      "references": [
+        {
+          "source": "line-booking-demo.css",
+          "url": "assets/line-ads/saito-demo-poses.png?v=1"
+        },
+        {
+          "source": "revision-20261015.css",
+          "url": "assets/line-ads/saito-demo-poses.png"
+        }
+      ]
+    },
+    {
+      "original": "assets/salon-lp-full.webp",
+      "optimized": "assets/performance/assets--salon-lp-full.webp",
+      "originalBytes": 1611016,
+      "optimizedBytes": 1417778,
+      "savedBytes": 193238,
+      "savedPercent": 12.0,
+      "originalWidth": 600,
+      "originalHeight": 15162,
+      "width": 600,
+      "height": 15162,
+      "quality": 88,
+      "kind": "full-long-LP-original-dimensions",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/salon-lp-full.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/aidma-scene-approved.png",
+      "optimized": "assets/performance/assets--aidma-scene-approved.webp",
+      "originalBytes": 1600053,
+      "optimizedBytes": 119876,
+      "savedBytes": 1480177,
+      "savedPercent": 92.5,
+      "originalWidth": 888,
+      "originalHeight": 1038,
+      "width": 780,
+      "height": 912,
+      "quality": 88,
+      "kind": "device-scene",
+      "replace": true,
+      "references": [
+        {
+          "source": "aidma-scene.css",
+          "url": "assets/aidma-scene-approved.png"
+        }
+      ]
+    },
+    {
+      "original": "assets/closing-b/closing-b-faithful.webp",
+      "optimized": "assets/performance/assets--closing-b--closing-b-faithful.webp",
+      "originalBytes": 416196,
+      "optimizedBytes": 252332,
+      "savedBytes": 163864,
+      "savedPercent": 39.4,
+      "originalWidth": 724,
+      "originalHeight": 2172,
+      "width": 724,
+      "height": 2172,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/closing-b/closing-b-faithful.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/line-intro.webp",
+      "optimized": "assets/performance/assets--speech-clean--line-intro.webp",
+      "originalBytes": 399040,
+      "optimizedBytes": 235594,
+      "savedBytes": 163446,
+      "savedPercent": 41.0,
+      "originalWidth": 887,
+      "originalHeight": 1774,
+      "width": 780,
+      "height": 1560,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/line-intro.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/direction-a/mari-handoff.webp",
+      "optimized": "assets/performance/assets--direction-a--mari-handoff.webp",
+      "originalBytes": 378156,
+      "optimizedBytes": 178220,
+      "savedBytes": 199936,
+      "savedPercent": 52.9,
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "width": 780,
+      "height": 975,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "revision-20261015.css",
+          "url": "assets/direction-a/mari-handoff.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/story-comparison.webp",
+      "optimized": "assets/performance/assets--speech-clean--story-comparison.webp",
+      "originalBytes": 365030,
+      "optimizedBytes": 182410,
+      "savedBytes": 182620,
+      "savedPercent": 50.0,
+      "originalWidth": 1024,
+      "originalHeight": 1536,
+      "width": 780,
+      "height": 1170,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/story-comparison.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/direction-a/ads-four-scenes.webp",
+      "optimized": "assets/performance/assets--direction-a--ads-four-scenes.webp",
+      "originalBytes": 364906,
+      "optimizedBytes": 243552,
+      "savedBytes": 121354,
+      "savedPercent": 33.3,
+      "originalWidth": 793,
+      "originalHeight": 1983,
+      "width": 780,
+      "height": 1950,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/direction-a/ads-four-scenes.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/direction-a/ads-four-scenes.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/direction-a/ads-four-scenes.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/direction-a/ads-four-scenes.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/story-intro.webp",
+      "optimized": "assets/performance/assets--speech-clean--story-intro.webp",
+      "originalBytes": 358284,
+      "optimizedBytes": 158020,
+      "savedBytes": 200264,
+      "savedPercent": 55.9,
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "width": 780,
+      "height": 975,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/story-intro.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/maps-to-website.webp",
+      "optimized": "assets/performance/assets--speech-clean--maps-to-website.webp",
+      "originalBytes": 352988,
+      "optimizedBytes": 109822,
+      "savedBytes": 243166,
+      "savedPercent": 68.9,
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "width": 780,
+      "height": 585,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/maps-to-website.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/revision-20261015/integration.webp",
+      "optimized": "assets/performance/assets--revision-20261015--integration.webp",
+      "originalBytes": 344478,
+      "optimizedBytes": 111478,
+      "savedBytes": 233000,
+      "savedPercent": 67.6,
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "width": 780,
+      "height": 585,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/revision-20261015/integration.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/flow-c/flow-c-clean.webp",
+      "optimized": "assets/performance/assets--flow-c--flow-c-clean.webp",
+      "originalBytes": 340082,
+      "optimizedBytes": 195576,
+      "savedBytes": 144506,
+      "savedPercent": 42.5,
+      "originalWidth": 724,
+      "originalHeight": 2171,
+      "width": 724,
+      "height": 2171,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/flow-c-clean.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/story-cvr.webp",
+      "optimized": "assets/performance/assets--speech-clean--story-cvr.webp",
+      "originalBytes": 337872,
+      "optimizedBytes": 109500,
+      "savedBytes": 228372,
+      "savedPercent": 67.6,
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "width": 780,
+      "height": 585,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/story-cvr.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/campaign-selected/campaign-1-clean.webp",
+      "optimized": "assets/performance/assets--campaign-selected--campaign-1-clean.webp",
+      "originalBytes": 334898,
+      "optimizedBytes": 192522,
+      "savedBytes": 142376,
+      "savedPercent": 42.5,
+      "originalWidth": 734,
+      "originalHeight": 2142,
+      "width": 734,
+      "height": 2142,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/campaign-selected/campaign-1-clean.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/ads-intro.webp",
+      "optimized": "assets/performance/assets--speech-clean--ads-intro.webp",
+      "originalBytes": 331264,
+      "optimizedBytes": 147124,
+      "savedBytes": 184140,
+      "savedPercent": 55.6,
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "width": 780,
+      "height": 975,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/ads-intro.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/search-to-lp.webp",
+      "optimized": "assets/performance/assets--speech-clean--search-to-lp.webp",
+      "originalBytes": 325932,
+      "optimizedBytes": 105882,
+      "savedBytes": 220050,
+      "savedPercent": 67.5,
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "width": 780,
+      "height": 585,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/search-to-lp.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/campaign-selected/offer-satin-clean.webp",
+      "optimized": "assets/performance/assets--campaign-selected--offer-satin-clean.webp",
+      "originalBytes": 325522,
+      "optimizedBytes": 185448,
+      "savedBytes": 140074,
+      "savedPercent": 43.0,
+      "originalWidth": 734,
+      "originalHeight": 2142,
+      "width": 734,
+      "height": 2142,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "campaign-selected.css",
+          "url": "assets/campaign-selected/offer-satin-clean.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/flow-c/panels-01-04.webp",
+      "optimized": "assets/performance/assets--flow-c--panels-01-04.webp",
+      "originalBytes": 322696,
+      "optimizedBytes": 189880,
+      "savedBytes": 132816,
+      "savedPercent": 41.2,
+      "originalWidth": 724,
+      "originalHeight": 2172,
+      "width": 724,
+      "height": 2172,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-01-04.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-01-04.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-01-04.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-01-04.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/flow-c/panels-05-08.webp",
+      "optimized": "assets/performance/assets--flow-c--panels-05-08.webp",
+      "originalBytes": 315806,
+      "optimizedBytes": 183070,
+      "savedBytes": 132736,
+      "savedPercent": 42.0,
+      "originalWidth": 724,
+      "originalHeight": 2172,
+      "width": 724,
+      "height": 2172,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-05-08.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-05-08.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-05-08.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-05-08.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/customer-focus.webp",
+      "optimized": "assets/performance/assets--speech-clean--customer-focus.webp",
+      "originalBytes": 304054,
+      "optimizedBytes": 134504,
+      "savedBytes": 169550,
+      "savedPercent": 55.8,
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "width": 780,
+      "height": 975,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/customer-focus.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/booking-rules.webp",
+      "optimized": "assets/performance/assets--speech-clean--booking-rules.webp",
+      "originalBytes": 301960,
+      "optimizedBytes": 135824,
+      "savedBytes": 166136,
+      "savedPercent": 55.0,
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "width": 780,
+      "height": 975,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/booking-rules.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/revision-20261015/handoff.webp",
+      "optimized": "assets/performance/assets--revision-20261015--handoff.webp",
+      "originalBytes": 297838,
+      "optimizedBytes": 100756,
+      "savedBytes": 197082,
+      "savedPercent": 66.2,
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "width": 780,
+      "height": 585,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/revision-20261015/handoff.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/worry-response.webp",
+      "optimized": "assets/performance/assets--speech-clean--worry-response.webp",
+      "originalBytes": 296966,
+      "optimizedBytes": 77576,
+      "savedBytes": 219390,
+      "savedPercent": 73.9,
+      "originalWidth": 1620,
+      "originalHeight": 971,
+      "width": 780,
+      "height": 468,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/worry-response.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/worry-booking.webp",
+      "optimized": "assets/performance/assets--speech-clean--worry-booking.webp",
+      "originalBytes": 296052,
+      "optimizedBytes": 80354,
+      "savedBytes": 215698,
+      "savedPercent": 72.9,
+      "originalWidth": 1619,
+      "originalHeight": 971,
+      "width": 780,
+      "height": 468,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/worry-booking.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/calendar-sync.webp",
+      "optimized": "assets/performance/assets--speech-clean--calendar-sync.webp",
+      "originalBytes": 294758,
+      "optimizedBytes": 113062,
+      "savedBytes": 181696,
+      "savedPercent": 61.6,
+      "originalWidth": 1254,
+      "originalHeight": 1254,
+      "width": 780,
+      "height": 780,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/calendar-sync.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/cv-update-20261015/opportunity.webp",
+      "optimized": "assets/performance/assets--cv-update-20261015--opportunity.webp",
+      "originalBytes": 291778,
+      "optimizedBytes": 90904,
+      "savedBytes": 200874,
+      "savedPercent": 68.8,
+      "originalWidth": 1448,
+      "originalHeight": 1086,
+      "width": 780,
+      "height": 585,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/cv-update-20261015/opportunity.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/about-selected/story-clean.webp",
+      "optimized": "assets/performance/assets--about-selected--story-clean.webp",
+      "originalBytes": 245198,
+      "optimizedBytes": 163762,
+      "savedBytes": 81436,
+      "savedPercent": 33.2,
+      "originalWidth": 744,
+      "originalHeight": 2112,
+      "width": 744,
+      "height": 2112,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/about-selected/story-clean.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/about-selected/story-clean.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/about-selected/story-clean.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/about-selected/story-clean.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/revision-oct14/salon-lp-fv-offer-jp.webp",
+      "optimized": "assets/performance/assets--revision-oct14--salon-lp-fv-offer-jp.webp",
+      "originalBytes": 239764,
+      "optimizedBytes": 203682,
+      "savedBytes": 36082,
+      "savedPercent": 15.0,
+      "originalWidth": 865,
+      "originalHeight": 1750,
+      "width": 780,
+      "height": 1578,
+      "quality": 90,
+      "kind": "embedded-LP-text",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/revision-oct14/salon-lp-fv-offer-jp.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/revision-oct14/salon-lp-fv-offer-jp.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/localization-oct15/salon-lp-fv-en.webp",
+      "optimized": "assets/performance/assets--localization-oct15--salon-lp-fv-en.webp",
+      "originalBytes": 239530,
+      "optimizedBytes": 137798,
+      "savedBytes": 101732,
+      "savedPercent": 42.5,
+      "originalWidth": 1092,
+      "originalHeight": 1440,
+      "width": 780,
+      "height": 1029,
+      "quality": 90,
+      "kind": "embedded-LP-text",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/localization-oct15/salon-lp-fv-en.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/localization-oct15/salon-lp-fv-th.webp",
+      "optimized": "assets/performance/assets--localization-oct15--salon-lp-fv-th.webp",
+      "originalBytes": 239342,
+      "optimizedBytes": 138020,
+      "savedBytes": 101322,
+      "savedPercent": 42.3,
+      "originalWidth": 1092,
+      "originalHeight": 1440,
+      "width": 780,
+      "height": 1029,
+      "quality": 90,
+      "kind": "embedded-LP-text",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/localization-oct15/salon-lp-fv-th.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/speech-clean/story-multilingual.webp",
+      "optimized": "assets/performance/assets--speech-clean--story-multilingual.webp",
+      "originalBytes": 226766,
+      "optimizedBytes": 100704,
+      "savedBytes": 126062,
+      "savedPercent": 55.6,
+      "originalWidth": 1122,
+      "originalHeight": 1402,
+      "width": 780,
+      "height": 975,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/story-multilingual.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/direction-a/salon-demo-background.webp",
+      "optimized": "assets/performance/assets--direction-a--salon-demo-background.webp",
+      "originalBytes": 199068,
+      "optimizedBytes": 75806,
+      "savedBytes": 123262,
+      "savedPercent": 61.9,
+      "originalWidth": 1182,
+      "originalHeight": 1330,
+      "width": 780,
+      "height": 878,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "line-booking-demo.css",
+          "url": "assets/direction-a/salon-demo-background.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/revision-oct14/salon-hp-desktop.webp",
+      "optimized": "assets/performance/assets--revision-oct14--salon-hp-desktop.webp",
+      "originalBytes": 162280,
+      "optimizedBytes": 58154,
+      "savedBytes": 104126,
+      "savedPercent": 64.2,
+      "originalWidth": 1200,
+      "originalHeight": 1000,
+      "width": 600,
+      "height": 500,
+      "quality": 90,
+      "kind": "small-device-screen",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/revision-oct14/salon-hp-desktop.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/revision-oct14/salon-lp-fv-jp.webp",
+      "optimized": "assets/performance/assets--revision-oct14--salon-lp-fv-jp.webp",
+      "originalBytes": 159022,
+      "optimizedBytes": 134846,
+      "savedBytes": 24176,
+      "savedPercent": 15.2,
+      "originalWidth": 865,
+      "originalHeight": 1140,
+      "width": 780,
+      "height": 1028,
+      "quality": 90,
+      "kind": "embedded-LP-text",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/revision-oct14/salon-lp-fv-jp.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/fv-action-button-follow-cta.png",
+      "optimized": "assets/performance/assets--fv-action-button-follow-cta.webp",
+      "originalBytes": 122854,
+      "optimizedBytes": 25866,
+      "savedBytes": 96988,
+      "savedPercent": 78.9,
+      "originalWidth": 817,
+      "originalHeight": 194,
+      "width": 817,
+      "height": 194,
+      "quality": 92,
+      "kind": "CTA-text-and-mask",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/fv-action-button-follow-cta.png"
+        },
+        {
+          "source": "manga-interactions.css",
+          "url": "assets/fv-action-button-follow-cta.png"
+        },
+        {
+          "source": "manga-interactions.css",
+          "url": "assets/fv-action-button-follow-cta.png"
+        }
+      ]
+    },
+    {
+      "original": "assets/about-selected/hero-clean.webp",
+      "optimized": "assets/performance/assets--about-selected--hero-clean.webp",
+      "originalBytes": 93838,
+      "optimizedBytes": 39328,
+      "savedBytes": 54510,
+      "savedPercent": 58.1,
+      "originalWidth": 1024,
+      "originalHeight": 1536,
+      "width": 780,
+      "height": 1170,
+      "quality": 85,
+      "kind": "illustration",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/about-selected/hero-clean.webp"
+        }
+      ]
+    },
+    {
+      "original": "../images/offer-fv-hikaku-top-432.webp",
+      "optimized": "assets/performance/parent-images--offer-fv-hikaku-top-432.webp",
+      "originalBytes": 79738,
+      "optimizedBytes": 84620,
+      "savedBytes": -4882,
+      "savedPercent": -6.1,
+      "originalWidth": 432,
+      "originalHeight": 834,
+      "width": 432,
+      "height": 834,
+      "quality": 88,
+      "kind": "case-study-text",
+      "replace": false,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "../images/offer-fv-hikaku-top-432.webp"
+        }
+      ]
+    },
+    {
+      "original": "../images/offer-fv-mamanic-top-432.webp",
+      "optimized": "assets/performance/parent-images--offer-fv-mamanic-top-432.webp",
+      "originalBytes": 77022,
+      "optimizedBytes": 81736,
+      "savedBytes": -4714,
+      "savedPercent": -6.1,
+      "originalWidth": 432,
+      "originalHeight": 834,
+      "width": 432,
+      "height": 834,
+      "quality": 88,
+      "kind": "case-study-text",
+      "replace": false,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "../images/offer-fv-mamanic-top-432.webp"
+        }
+      ]
+    },
+    {
+      "original": "../images/offer-fv-morijuku-top-432.webp",
+      "optimized": "assets/performance/parent-images--offer-fv-morijuku-top-432.webp",
+      "originalBytes": 67180,
+      "optimizedBytes": 71184,
+      "savedBytes": -4004,
+      "savedPercent": -6.0,
+      "originalWidth": 432,
+      "originalHeight": 834,
+      "width": 432,
+      "height": 834,
+      "quality": 88,
+      "kind": "case-study-text",
+      "replace": false,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "../images/offer-fv-morijuku-top-432.webp"
+        }
+      ]
+    },
+    {
+      "original": "../images/offer-fv-lafente-top-432.webp",
+      "optimized": "assets/performance/parent-images--offer-fv-lafente-top-432.webp",
+      "originalBytes": 53430,
+      "optimizedBytes": 56710,
+      "savedBytes": -3280,
+      "savedPercent": -6.1,
+      "originalWidth": 432,
+      "originalHeight": 834,
+      "width": 432,
+      "height": 834,
+      "quality": 88,
+      "kind": "case-study-text",
+      "replace": false,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "../images/offer-fv-lafente-top-432.webp"
+        }
+      ]
+    },
+    {
+      "original": "../images/offer-fv-tender-top-432.webp",
+      "optimized": "assets/performance/parent-images--offer-fv-tender-top-432.webp",
+      "originalBytes": 53200,
+      "optimizedBytes": 56264,
+      "savedBytes": -3064,
+      "savedPercent": -5.8,
+      "originalWidth": 432,
+      "originalHeight": 834,
+      "width": 432,
+      "height": 834,
+      "quality": 88,
+      "kind": "case-study-text",
+      "replace": false,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "../images/offer-fv-tender-top-432.webp"
+        }
+      ]
+    },
+    {
+      "original": "assets/ads-mobile/google-search-mobile.jpg",
+      "optimized": "assets/performance/assets--ads-mobile--google-search-mobile.webp",
+      "originalBytes": 36088,
+      "optimizedBytes": 39092,
+      "savedBytes": -3004,
+      "savedPercent": -8.3,
+      "originalWidth": 390,
+      "originalHeight": 560,
+      "width": 390,
+      "height": 560,
+      "quality": 95,
+      "kind": "search-screenshot",
+      "replace": false,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/ads-mobile/google-search-mobile.jpg"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/ads-mobile/google-search-mobile.jpg"
+        }
+      ]
+    },
+    {
+      "original": "assets/ads-mobile/google-maps-mobile.jpg",
+      "optimized": "assets/performance/assets--ads-mobile--google-maps-mobile.webp",
+      "originalBytes": 4869,
+      "optimizedBytes": 2796,
+      "savedBytes": 2073,
+      "savedPercent": 42.6,
+      "originalWidth": 393,
+      "originalHeight": 640,
+      "width": 393,
+      "height": 640,
+      "quality": 95,
+      "kind": "search-screenshot",
+      "replace": true,
+      "references": [
+        {
+          "source": "index.html",
+          "url": "assets/ads-mobile/google-maps-mobile.jpg"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/ads-mobile/google-maps-mobile.jpg"
+        }
+      ]
+    }
+  ]
+}

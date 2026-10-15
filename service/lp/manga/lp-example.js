@@ -14,6 +14,8 @@
     const status = component.querySelector('[data-lp-example-status]');
     const methodStages = [...component.querySelectorAll('[data-lp-example-method-stage]')];
     const stageLabel = component.querySelector('[data-lp-example-stage-label]');
+    const currentLabels = [...component.querySelectorAll('[data-lp-example-current]')];
+    const totalLabels = [...component.querySelectorAll('[data-lp-example-total]')];
     const sceneCount = Math.max(guides.length, notes.length);
     if (!screen || !sceneCount) return;
 
@@ -36,16 +38,21 @@
     const isStaged = stages.length === sceneCount;
     let active = -1;
     let frame = 0;
-    const range = () => Math.max(0, screen.scrollHeight - screen.clientHeight);
-    const sourceImage = () => screen.querySelector('[data-lp-example-image]') || screen.querySelector('img');
-    function contentTop(element) {
-      return element.getBoundingClientRect().top - screen.getBoundingClientRect().top
-        + screen.scrollTop - screen.clientTop;
-    }
-    function pointGeometry() {
-      const image = sourceImage();
-      return image ? { top: contentTop(image), height: image.getBoundingClientRect().height }
-        : { top: 0, height: screen.scrollHeight };
+    let visible = !('IntersectionObserver' in window), geometryDirty = true;
+    let screenHeight = 0, maxScroll = 0, stageTops = [], geometry = {top:0, height:0};
+    const sourceImage = screen.querySelector('[data-lp-example-image]') || screen.querySelector('img');
+    function measure() {
+      if (!geometryDirty) return;
+      const box = screen.getBoundingClientRect();
+      const offset = screen.scrollTop - box.top - screen.clientTop;
+      screenHeight = screen.clientHeight;
+      maxScroll = Math.max(0, screen.scrollHeight - screenHeight);
+      if (isStaged) stageTops = stages.map(stage => stage.getBoundingClientRect().top + offset);
+      else if (sourceImage) {
+        const imageBox = sourceImage.getBoundingClientRect();
+        geometry = {top:imageBox.top + offset, height:imageBox.height};
+      } else geometry = {top:0, height:screen.scrollHeight};
+      geometryDirty = false;
     }
     function guideText(guide) {
       const speech = guide.querySelector('[data-lp-example-text], .lp-example__speech');
@@ -55,19 +62,19 @@
     }
     function update() {
       frame = 0;
-      const maxScroll = range();
-      const fraction = maxScroll ? Math.max(0, Math.min(1, screen.scrollTop / maxScroll)) : 0;
+      measure();
+      const scrollTop = screen.scrollTop;
+      const fraction = maxScroll ? Math.max(0, Math.min(1, scrollTop / maxScroll)) : 0;
       let next = 0;
       if (isStaged) {
-        const midpoint = screen.scrollTop + screen.clientHeight / 2;
-        stages.forEach((stage, index) => { if (contentTop(stage) <= midpoint) next = index; });
-      } else if (screen.scrollTop <= 1 || maxScroll === 0) {
+        const midpoint = scrollTop + screenHeight / 2;
+        stageTops.forEach((top, index) => { if (top <= midpoint) next = index; });
+      } else if (scrollTop <= 1 || maxScroll === 0) {
         next = 0;
-      } else if (screen.scrollTop >= maxScroll - 1) {
+      } else if (scrollTop >= maxScroll - 1) {
         next = sceneCount - 1;
       } else {
-        const geometry = pointGeometry();
-        const readingLine = screen.scrollTop + screen.clientHeight * 0.25;
+        const readingLine = scrollTop + screenHeight * 0.25;
         const contentFraction = geometry.height > 0 ? (readingLine - geometry.top) / geometry.height : 0;
         points.forEach((point, index) => { if (point <= contentFraction) next = index; });
       }
@@ -93,26 +100,27 @@
         if ([...select.options].some((option) => option.value === String(active))) select.value = String(active);
         else select.selectedIndex = active;
       });
-      component.querySelectorAll('[data-lp-example-current]').forEach((element) => { element.textContent = String(active + 1).padStart(2, '0'); });
-      component.querySelectorAll('[data-lp-example-total]').forEach((element) => { element.textContent = String(sceneCount); });
+      currentLabels.forEach((element) => { element.textContent = String(active + 1).padStart(2, '0'); });
+      totalLabels.forEach((element) => { element.textContent = String(sceneCount); });
       if (status) status.textContent = `解説 ${active + 1} / ${sceneCount}：${guides[active] ? guideText(guides[active]) : notes[active]?.querySelector('.manga-example__thought')?.textContent || ''}`;
     }
     function requestUpdate() {
-      if (!frame) frame = window.requestAnimationFrame(update);
+      if (!frame && visible && !document.hidden) frame = window.requestAnimationFrame(update);
     }
+    const invalidate = () => { geometryDirty = true; requestUpdate(); };
     function moveTo(index) {
       if (!Number.isInteger(index) || index < 0 || index >= sceneCount) return;
+      measure();
       let target = 0;
       if (isStaged) {
-        target = contentTop(stages[index]);
+        target = stageTops[index];
       } else if (index > 0) {
-        const geometry = pointGeometry();
         // Align the chosen section with the same reading line used above.
         // Two CSS pixels avoid rounding backwards at a section boundary.
-        target = geometry.top + geometry.height * points[index] - screen.clientHeight * 0.25 + 2;
+        target = geometry.top + geometry.height * points[index] - screenHeight * 0.25 + 2;
       }
       screen.scrollTo({
-        top: Math.min(range(), Math.max(0, target)),
+        top: Math.min(maxScroll, Math.max(0, target)),
         behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
       });
     }
@@ -124,14 +132,25 @@
         moveTo(Number.isInteger(value) && select.value.trim() !== '' ? value : select.selectedIndex);
       });
     });
-    screen.querySelectorAll('img').forEach((image) => image.addEventListener('load', requestUpdate));
+    screen.querySelectorAll('img').forEach((image) => image.addEventListener('load', invalidate));
     if ('ResizeObserver' in window) {
-      const observer = new ResizeObserver(requestUpdate);
+      const observer = new ResizeObserver(invalidate);
       observer.observe(screen);
       [...screen.children].forEach((child) => observer.observe(child));
+      if (sourceImage) observer.observe(sourceImage);
     } else {
-      window.addEventListener('resize', requestUpdate, { passive: true });
+      window.addEventListener('resize', invalidate, { passive: true });
     }
+    if ('IntersectionObserver' in window) new IntersectionObserver(entries => {
+      visible = entries[0].isIntersecting;
+      if (visible) requestUpdate();
+      else { cancelAnimationFrame(frame); frame = 0; }
+    }, {rootMargin:'150px 0px'}).observe(component);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) { cancelAnimationFrame(frame); frame = 0; }
+      else requestUpdate();
+    });
+    document.fonts?.ready.then(invalidate);
     update();
   });
 })();

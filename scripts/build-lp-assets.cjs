@@ -20,3 +20,5 @@ const js=config.js.map(file=>`/* ${file} */\n${fs.readFileSync(path.join(root,fi
 fs.writeFileSync(path.join(root,'page-bundle.css'),esbuild.transformSync(css,{loader:'css',minify:true,legalComments:'inline',target:['chrome100','safari15']}).code);
 fs.writeFileSync(path.join(root,'page-bundle.js'),esbuild.transformSync(js,{loader:'js',minify:true,legalComments:'inline',target:['chrome100','safari15']}).code);
 console.log(JSON.stringify({stylesheets:config.css.length,scripts:config.js.length,cssBytes:fs.statSync(path.join(root,'page-bundle.css')).size,jsBytes:fs.statSync(path.join(root,'page-bundle.js')).size}));
+// The manga page keeps its own source order, font boundary and inline styles.
+console.log(JSON.stringify({manga:require('./build-manga-assets.cjs').buildMangaAssets()}));

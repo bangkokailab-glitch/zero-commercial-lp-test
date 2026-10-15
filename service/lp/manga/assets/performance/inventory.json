@@ -1,0 +1,649 @@
+{
+  "totalBytes": 17645777,
+  "assets": [
+    {
+      "path": "assets/fv-approved.png",
+      "bytes": 2263546,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/fv-approved.png"
+        }
+      ],
+      "width": 904,
+      "height": 1740,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/line-ads/saito-demo-poses.png",
+      "bytes": 2175417,
+      "refs": [
+        {
+          "source": "line-booking-demo.css",
+          "url": "assets/line-ads/saito-demo-poses.png?v=1"
+        },
+        {
+          "source": "revision-20261015.css",
+          "url": "assets/line-ads/saito-demo-poses.png"
+        }
+      ],
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/salon-lp-full.webp",
+      "bytes": 1611016,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/salon-lp-full.webp"
+        }
+      ],
+      "width": 600,
+      "height": 15162,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/aidma-scene-approved.png",
+      "bytes": 1600053,
+      "refs": [
+        {
+          "source": "aidma-scene.css",
+          "url": "assets/aidma-scene-approved.png"
+        }
+      ],
+      "width": 888,
+      "height": 1038,
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/closing-b/closing-b-faithful.webp",
+      "bytes": 416196,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/closing-b/closing-b-faithful.webp"
+        }
+      ],
+      "width": 724,
+      "height": 2172,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/line-intro.webp",
+      "bytes": 399040,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/line-intro.webp"
+        }
+      ],
+      "width": 887,
+      "height": 1774,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/direction-a/mari-handoff.webp",
+      "bytes": 378156,
+      "refs": [
+        {
+          "source": "revision-20261015.css",
+          "url": "assets/direction-a/mari-handoff.webp"
+        }
+      ],
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/speech-clean/story-comparison.webp",
+      "bytes": 365030,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/story-comparison.webp"
+        }
+      ],
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/direction-a/ads-four-scenes.webp",
+      "bytes": 364906,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/direction-a/ads-four-scenes.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/direction-a/ads-four-scenes.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/direction-a/ads-four-scenes.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/direction-a/ads-four-scenes.webp"
+        }
+      ],
+      "width": 793,
+      "height": 1983,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/story-intro.webp",
+      "bytes": 358284,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/story-intro.webp"
+        }
+      ],
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/maps-to-website.webp",
+      "bytes": 352988,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/maps-to-website.webp"
+        }
+      ],
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/revision-20261015/integration.webp",
+      "bytes": 344478,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/revision-20261015/integration.webp"
+        }
+      ],
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/flow-c/flow-c-clean.webp",
+      "bytes": 340082,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/flow-c-clean.webp"
+        }
+      ],
+      "width": 724,
+      "height": 2171,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/story-cvr.webp",
+      "bytes": 337872,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/story-cvr.webp"
+        }
+      ],
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/campaign-selected/campaign-1-clean.webp",
+      "bytes": 334898,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/campaign-selected/campaign-1-clean.webp"
+        }
+      ],
+      "width": 734,
+      "height": 2142,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/ads-intro.webp",
+      "bytes": 331264,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/ads-intro.webp"
+        }
+      ],
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/search-to-lp.webp",
+      "bytes": 325932,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/search-to-lp.webp"
+        }
+      ],
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/campaign-selected/offer-satin-clean.webp",
+      "bytes": 325522,
+      "refs": [
+        {
+          "source": "campaign-selected.css",
+          "url": "assets/campaign-selected/offer-satin-clean.webp"
+        }
+      ],
+      "width": 734,
+      "height": 2142,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/flow-c/panels-01-04.webp",
+      "bytes": 322696,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-01-04.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-01-04.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-01-04.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-01-04.webp"
+        }
+      ],
+      "width": 724,
+      "height": 2172,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/flow-c/panels-05-08.webp",
+      "bytes": 315806,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-05-08.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-05-08.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-05-08.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/flow-c/panels-05-08.webp"
+        }
+      ],
+      "width": 724,
+      "height": 2172,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/customer-focus.webp",
+      "bytes": 304054,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/customer-focus.webp"
+        }
+      ],
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/booking-rules.webp",
+      "bytes": 301960,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/booking-rules.webp"
+        }
+      ],
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/revision-20261015/handoff.webp",
+      "bytes": 297838,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/revision-20261015/handoff.webp"
+        }
+      ],
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/worry-response.webp",
+      "bytes": 296966,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/worry-response.webp"
+        }
+      ],
+      "width": 1620,
+      "height": 971,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/worry-booking.webp",
+      "bytes": 296052,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/worry-booking.webp"
+        }
+      ],
+      "width": 1619,
+      "height": 971,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/calendar-sync.webp",
+      "bytes": 294758,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/calendar-sync.webp"
+        }
+      ],
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/cv-update-20261015/opportunity.webp",
+      "bytes": 291778,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/cv-update-20261015/opportunity.webp"
+        }
+      ],
+      "width": 1448,
+      "height": 1086,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/about-selected/story-clean.webp",
+      "bytes": 245198,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/about-selected/story-clean.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/about-selected/story-clean.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/about-selected/story-clean.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/about-selected/story-clean.webp"
+        }
+      ],
+      "width": 744,
+      "height": 2112,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/revision-oct14/salon-lp-fv-offer-jp.webp",
+      "bytes": 239764,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/revision-oct14/salon-lp-fv-offer-jp.webp"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/revision-oct14/salon-lp-fv-offer-jp.webp"
+        }
+      ],
+      "width": 865,
+      "height": 1750,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/localization-oct15/salon-lp-fv-en.webp",
+      "bytes": 239530,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/localization-oct15/salon-lp-fv-en.webp"
+        }
+      ],
+      "width": 1092,
+      "height": 1440,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/localization-oct15/salon-lp-fv-th.webp",
+      "bytes": 239342,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/localization-oct15/salon-lp-fv-th.webp"
+        }
+      ],
+      "width": 1092,
+      "height": 1440,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/speech-clean/story-multilingual.webp",
+      "bytes": 226766,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/speech-clean/story-multilingual.webp"
+        }
+      ],
+      "width": 1122,
+      "height": 1402,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/direction-a/salon-demo-background.webp",
+      "bytes": 199068,
+      "refs": [
+        {
+          "source": "line-booking-demo.css",
+          "url": "assets/direction-a/salon-demo-background.webp"
+        }
+      ],
+      "width": 1182,
+      "height": 1330,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/revision-oct14/salon-hp-desktop.webp",
+      "bytes": 162280,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/revision-oct14/salon-hp-desktop.webp"
+        }
+      ],
+      "width": 1200,
+      "height": 1000,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/revision-oct14/salon-lp-fv-jp.webp",
+      "bytes": 159022,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/revision-oct14/salon-lp-fv-jp.webp"
+        }
+      ],
+      "width": 865,
+      "height": 1140,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/fv-action-button-follow-cta.png",
+      "bytes": 122854,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/fv-action-button-follow-cta.png"
+        },
+        {
+          "source": "manga-interactions.css",
+          "url": "assets/fv-action-button-follow-cta.png"
+        },
+        {
+          "source": "manga-interactions.css",
+          "url": "assets/fv-action-button-follow-cta.png"
+        }
+      ],
+      "width": 817,
+      "height": 194,
+      "mode": "RGBA"
+    },
+    {
+      "path": "assets/about-selected/hero-clean.webp",
+      "bytes": 93838,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/about-selected/hero-clean.webp"
+        }
+      ],
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB"
+    },
+    {
+      "path": "../images/offer-fv-hikaku-top-432.webp",
+      "bytes": 79738,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "../images/offer-fv-hikaku-top-432.webp"
+        }
+      ],
+      "width": 432,
+      "height": 834,
+      "mode": "RGB"
+    },
+    {
+      "path": "../images/offer-fv-mamanic-top-432.webp",
+      "bytes": 77022,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "../images/offer-fv-mamanic-top-432.webp"
+        }
+      ],
+      "width": 432,
+      "height": 834,
+      "mode": "RGB"
+    },
+    {
+      "path": "../images/offer-fv-morijuku-top-432.webp",
+      "bytes": 67180,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "../images/offer-fv-morijuku-top-432.webp"
+        }
+      ],
+      "width": 432,
+      "height": 834,
+      "mode": "RGB"
+    },
+    {
+      "path": "../images/offer-fv-lafente-top-432.webp",
+      "bytes": 53430,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "../images/offer-fv-lafente-top-432.webp"
+        }
+      ],
+      "width": 432,
+      "height": 834,
+      "mode": "RGB"
+    },
+    {
+      "path": "../images/offer-fv-tender-top-432.webp",
+      "bytes": 53200,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "../images/offer-fv-tender-top-432.webp"
+        }
+      ],
+      "width": 432,
+      "height": 834,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/ads-mobile/google-search-mobile.jpg",
+      "bytes": 36088,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/ads-mobile/google-search-mobile.jpg"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/ads-mobile/google-search-mobile.jpg"
+        }
+      ],
+      "width": 390,
+      "height": 560,
+      "mode": "RGB"
+    },
+    {
+      "path": "assets/ads-mobile/google-maps-mobile.jpg",
+      "bytes": 4869,
+      "refs": [
+        {
+          "source": "index.html",
+          "url": "assets/ads-mobile/google-maps-mobile.jpg"
+        },
+        {
+          "source": "index.html",
+          "url": "assets/ads-mobile/google-maps-mobile.jpg"
+        }
+      ],
+      "width": 393,
+      "height": 640,
+      "mode": "RGB"
+    }
+  ]
+}

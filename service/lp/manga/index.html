@@ -7,18 +7,13 @@
     <meta name="color-scheme" content="dark">
     <title>バンコク店舗集客セット｜漫画版・テスト</title>
     <meta name="description" content="バンコク店舗集客セットのスマートフォン向けLPデザイン確認ページです。">
-    <script>document.documentElement.classList.add('manga-motion-ready');window.mangaMotionFallback=setTimeout(function(){document.documentElement.classList.remove('manga-motion-ready')},8000);</script>
-    <link rel="stylesheet" href="lp-example.css">
-    <link rel="stylesheet" href="aidma-b.css">
+    <script>document.documentElement.classList.add('manga-motion-ready','manga-media-js');window.mangaMediaFallback=setTimeout(function(){document.documentElement.classList.remove('manga-media-js');document.querySelectorAll('[data-media-src]').forEach(function(i){i.setAttribute(i.tagName.toLowerCase()==='image'?'href':'src',i.dataset.mediaSrc)})},8000);window.mangaMotionFallback=setTimeout(function(){document.documentElement.classList.remove('manga-motion-ready')},8000);</script>
+    <link rel="preload" as="image" href="assets/performance/assets--fv-approved.webp" fetchpriority="high">
+    <link rel="stylesheet" href="manga-base.bundle.css?v=d6413efb118f">
     <link rel="preconnect" href="https://morisawafonts.net" crossorigin>
     <link rel="stylesheet" href="https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css">
-    <link rel="stylesheet" href="manga-cta.css">
-    <link rel="stylesheet" href="aidma-ticket.css?v=20261015-compact">
-    <link rel="stylesheet" href="aidma-scene.css?v=20261015-reference">
-    <script src="lp-example.js?v=20261015-ticket" defer></script>
-    <script src="manga-interactions.js?v=20261015-r2" defer></script>
-    <script src="conversion-config.js?v=20261015-cv1" defer></script>
-    <script src="conversion-tracking.js?v=20261015-cv1" defer></script>
+    <link rel="stylesheet" href="manga-components.bundle.css?v=d6413efb118f">
+    <script src="manga-page.bundle.js?v=d6413efb118f" defer></script>
     <style>
       *, *::before, *::after { box-sizing: border-box; }
       html { background: #041326; }
@@ -72,28 +67,8 @@
       .language-th { left:67.7%; }
       .story-composite__screen:focus-visible { outline:3px solid #ffe63c; outline-offset:2px; }
       </style>
-    <link rel="stylesheet" href="manga-interactions.css?v=20261015-cta-reading1">
-  <link rel="stylesheet" href="manga-backhalf.css?v=20261015-back1">
-<script src="manga-backhalf.js?v=20261015-back2" defer></script>
-<link rel="stylesheet" href="line-booking-demo.css?v=20261015-simple-loop1">
-<script src="line-booking-demo.js?v=20261015-simple-loop1" defer></script>
-<link rel="stylesheet" href="direction-a.css?v=20261015-a1">
-<link rel="stylesheet" href="ads-direction-a.css?v=20261015-a2">
-<link rel="stylesheet" href="comic-speech.css?v=20261015-a1">
-<link rel="stylesheet" href="comic-dialogue.css?v=20261015-r2">
-<link rel="stylesheet" href="revision-20261015.css?v=20261015-r2">
-<link rel="stylesheet" href="cv-update-20261015.css?v=20261015-cv1">
-<link rel="stylesheet" href="zero-message.css?v=20261015-b1">
-<link rel="stylesheet" href="closing-b.css?v=20261015-b2">
-<link rel="stylesheet" href="pricing-main-revision.css?v=20261015-r2">
-<link rel="stylesheet" href="ads-mobile-revision.css?v=20261015-r2">
-<link rel="stylesheet" href="heading-b.css?v=20261015-b1">
-<link rel="stylesheet" href="flow-c.css?v=20261016-c6">
-<script src="heading-b.js?v=20261015-b1" defer></script>
-<link rel="stylesheet" href="about-selected.css?v=20261015-1">
-<link rel="stylesheet" href="about-cases.css?v=20261015-1">
-<link rel="stylesheet" href="readability-20261015.css?v=1">
-<link rel="stylesheet" href="campaign-selected.css?v=20261016-2">
+    <link rel="stylesheet" href="manga-page.bundle.css?v=d6413efb118f">
+<noscript><style>[data-media-src]{display:none!important}</style></noscript>
 </head>
   <body class="direction-a">
     <main aria-label="バンコク店舗集客セットのLPデザイン確認">
@@ -102,7 +77,7 @@
           <p class="manga-hero__lead"><span data-manga-wipe>集客から予約対応まで、ひとつの導線に。</span></p>
           <h1 id="manga-hero-title"><span data-manga-wipe>お客様の予約を</span><strong data-manga-wipe>増やして、</strong><span class="manga-hero__sub" data-manga-wipe>予約対応の手間を減らす。</span><span class="manga-hero__product" data-manga-wipe>バンコク店舗集客セット</span></h1>
         </div>
-        <div class="manga-hero__art"><img src="assets/fv-approved.png" width="904" height="1740" fetchpriority="high" alt="Google広告からスマホLP、LINEの自動対応・予約へつながる集客の流れ"></div>
+        <div class="manga-hero__art"><img src="assets/performance/assets--fv-approved.webp" width="904" height="1740" fetchpriority="high" alt="Google広告からスマホLP、LINEの自動対応・予約へつながる集客の流れ" decoding="async"></div>
         <div class="manga-hero__stats" aria-label="ネット広告運用実績100社突破、LP制作実績300社突破、LINE自動対応・予約で1日の対応時間を約3時間削減">
           <div><p>ネット広告<br>運用実績</p><strong data-manga-count="100" aria-hidden="true">100</strong><small>社突破</small></div>
           <div><p>ランディングページ<br>制作実績</p><strong data-manga-count="300" aria-hidden="true">300</strong><small>社突破</small></div>
@@ -115,26 +90,26 @@
       <section id="worries" class="selected-heading selected-heading--worries" aria-labelledby="worries-title"><div class="selected-heading__panel"><h2 id="worries-title"><span class="heading-line" data-manga-wipe>こんなお悩み</span><span class="heading-line heading-line--accent" data-manga-wipe>ありませんか？</span></h2></div><div class="selected-heading__band" aria-hidden="true"></div><svg class="chapter-pointer" viewBox="0 0 64 30" aria-hidden="true"><path d="M1 1H63L32 29Z" fill="#08243d" stroke="#c9a459" stroke-width="1.5"/><path d="M9 5H55L32 24Z" fill="none" stroke="#c9a459" stroke-width=".75"/></svg></section>
       <div class="worry-flow">
         <section class="worry-card worry-card--booking" aria-labelledby="booking-title"><div class="worry-card__inner"><h3 id="booking-title">予約をもっと増やしたい</h3><ul><li>新規予約が思うように増えない</li><li>日本人のお客様に見つけてもらえない</li><li>広告を出しても予約につながらない</li><li>お店の魅力や選ばれる理由が伝わらない</li><li>日本人以外のお客様にも来てほしい</li></ul></div></section>
-        <figure data-speech-sheet="worry-booking" class="comic-frame comic-frame--worry" data-comic><img class="worry-comic" loading="lazy" decoding="async" src="assets/speech-clean/worry-booking.webp" width="1619" height="971" alt="接客中、スマホの返信を心配するマリ">
+        <figure data-speech-sheet="worry-booking" class="comic-frame comic-frame--worry" data-comic><img class="worry-comic" loading="lazy" decoding="async" src="assets/performance/assets--speech-clean--worry-booking.webp" width="1619" height="971" alt="接客中、スマホの返信を心配するマリ">
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="予約は増やしたい。でも、返信に追われるのは困る…" style="--bubble-x:60%;--bubble-y:9%;--bubble-w:37%;--bubble-size:3.5cqw">予約は増やしたい。<br>でも、返信に<br>追われるのは困る…</p>
 </figure>
         <section class="worry-card worry-card--response" aria-labelledby="response-title"><div class="worry-card__inner"><h3 id="response-title">予約対応の手間を減らしたい</h3><ul><li>接客中もLINEの返信が気になる</li><li>空き枠の確認・日時調整が手作業</li><li>同じ質問に何度も答えている</li><li>営業時間外の問い合わせに対応できない</li><li>英語・タイ語の返信に時間がかかる</li></ul></div></section>
-        <figure data-speech-sheet="worry-response" class="comic-frame comic-frame--worry" data-comic><img class="worry-comic" loading="lazy" decoding="async" src="assets/speech-clean/worry-response.webp" width="1620" height="971" alt="予約表とスマホを見て、問い合わせ対応に悩むマリ">
+        <figure data-speech-sheet="worry-response" class="comic-frame comic-frame--worry" data-comic><img class="worry-comic" loading="lazy" decoding="async" src="assets/performance/assets--speech-clean--worry-response.webp" width="1620" height="971" alt="予約表とスマホを見て、問い合わせ対応に悩むマリ">
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="予約が増えても、英語やタイ語の返信で毎日何時間も…" style="--bubble-x:58%;--bubble-y:3%;--bubble-w:40%;--bubble-size:3.4cqw">予約が増えても、<br>英語やタイ語の返信で<br>毎日何時間も…</p>
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="これじゃ、他の仕事ができないよ…" style="--bubble-x:69%;--bubble-y:44%;--bubble-w:28%;--bubble-size:3.3cqw">これじゃ、<br>他の仕事が<br>できないよ…</p>
 </figure>
       </div>
       <section id="block03" class="selected-heading selected-heading--solution" aria-labelledby="solution-title"><div class="selected-heading__panel"><h2 id="solution-title"><span class="heading-line" data-manga-wipe>予約を増やして、対応の手間を減らす。</span><span class="heading-line heading-line--accent" data-manga-wipe>バンコク店舗集客セット</span></h2></div><div class="selected-heading__band" aria-hidden="true"></div><svg class="chapter-pointer" viewBox="0 0 64 30" aria-hidden="true"><path d="M1 1H63L32 29Z" fill="#08243d" stroke="#c9a459" stroke-width="1.5"/><path d="M9 5H55L32 24Z" fill="none" stroke="#c9a459" stroke-width=".75"/></svg></section>
-      <figure data-speech-sheet="story-intro" class="comic-frame comic-frame--intro" data-comic><img class="story-art story-comic" src="assets/speech-clean/story-intro.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="マリと斎藤さんが、広告・スマホLP・LINEのつながりを話す二つのコマ" ><svg class="comic-seam" viewBox="0 0 1122 1402" aria-hidden="true" preserveAspectRatio="none"><path d="M0 806L1122 886" class="comic-seam__edge"/><path d="M0 806L1122 886" class="comic-seam__gap"/></svg>
+      <figure data-speech-sheet="story-intro" class="comic-frame comic-frame--intro" data-comic><img class="story-art story-comic" src="assets/performance/assets--speech-clean--story-intro.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="マリと斎藤さんが、広告・スマホLP・LINEのつながりを話す二つのコマ" ><svg class="comic-seam" viewBox="0 0 1122 1402" aria-hidden="true" preserveAspectRatio="none"><path d="M0 806L1122 886" class="comic-seam__edge"/><path d="M0 806L1122 886" class="comic-seam__gap"/></svg>
 <p class="comic-dialogue comic-dialogue--tail-right" data-speech-reveal data-speech-text="バンコク店舗集客セットって、どんなセットなんですか？" style="--bubble-x:2%;--bubble-y:1.5%;--bubble-w:42%;--bubble-size:3.15cqw">バンコク店舗集客セットって、どんなセットなんですか？</p>
 <p class="comic-dialogue" data-speech-reveal data-speech-text="広告で集めて、LPで魅力を伝え、LINEで質問・予約へつなぐんだ。" style="--bubble-x:58%;--bubble-y:1.5%;--bubble-w:40%;--bubble-size:3.15cqw">広告で集めて、LPで魅力を伝え、LINEで質問・予約へつなぐんだ。</p>
 <p class="comic-dialogue" data-speech-reveal data-speech-text="広告を出すだけじゃ、ダメなんですか？" style="--bubble-x:2%;--bubble-y:61%;--bubble-w:34%;--bubble-size:3.15cqw">広告を出すだけじゃ、ダメなんですか？</p>
 <p class="comic-dialogue comic-dialogue--tail-right" data-speech-reveal data-speech-text="見つけた人に「このお店に行きたい」と思ってもらうページが必要なんだ。" style="--bubble-x:63%;--bubble-y:65%;--bubble-w:35%;--bubble-size:3.15cqw">見つけた人に<br>「このお店に行きたい」と思ってもらうページが必要なんだ。</p>
 </figure>
       <figure data-speech-sheet="story-comparison" class="comparison-selected comic-frame" data-comic id="homepage-comparison" aria-label="Salon de Sixの実ホームページと商品LPの比較">
-        <img class="story-art" src="assets/speech-clean/story-comparison.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Salon de SixのホームページとLPを比較し、伝える順番を説明する斎藤さん" >
-        <div class="comparison-selected__screen comparison-selected__hp"><img src="assets/revision-oct14/salon-hp-desktop.webp" alt="Salon de Six公式ホームページの実画面" width="1200" height="1000" loading="lazy"></div>
-        <div class="comparison-selected__screen comparison-selected__lp"><img src="assets/revision-oct14/salon-lp-fv-offer-jp.webp" alt="Salon de Sixの男磨きセットLPの実画面" width="865" height="1750" loading="lazy"></div>
+        <img class="story-art" src="assets/performance/assets--speech-clean--story-comparison.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="Salon de SixのホームページとLPを比較し、伝える順番を説明する斎藤さん" >
+        <div class="comparison-selected__screen comparison-selected__hp"><img src="assets/performance/assets--revision-oct14--salon-hp-desktop.webp" alt="Salon de Six公式ホームページの実画面" width="1200" height="1000" loading="lazy" decoding="async"></div>
+        <div class="comparison-selected__screen comparison-selected__lp"><img src="assets/performance/assets--revision-oct14--salon-lp-fv-offer-jp.webp" alt="Salon de Sixの男磨きセットLPの実画面" width="865" height="1750" loading="lazy" decoding="async"></div>
 <svg class="comic-seam" viewBox="0 0 1024 1536" aria-hidden="true" preserveAspectRatio="none"><path d="M0 781L1024 645" class="comic-seam__edge"/><path d="M0 781L1024 645" class="comic-seam__gap"/></svg>
 <p class="comic-dialogue" data-speech-reveal data-speech-text="ホームページはお店全体の案内。LPは一つのサービスに絞ったページだよ。" style="--bubble-x:3%;--bubble-y:1.5%;--bubble-w:40%;--bubble-size:3.05cqw">ホームページは<br>お店全体の案内。<br>LPは一つのサービスに<br>絞ったページだよ。</p>
 <p class="comic-dialogue comic-dialogue--tail-right" data-speech-reveal data-speech-text="画像や大きな見出しで、魅力を見せられるんだ。" style="--bubble-x:44%;--bubble-y:7%;--bubble-w:34%;--bubble-size:3.05cqw">画像や大きな見出しで、魅力を見せられるんだ。</p>
@@ -143,14 +118,14 @@
 </figure>
       <section class="manga-example" id="lp-example" data-lp-example data-lp-example-points="0.00000000,0.07914722,0.15783695,0.21731174,0.30515143,0.38704365,0.48815079,0.56135054,0.61991033,0.66337268,0.70683503,0.76722481,0.85231952,0.93100924" aria-labelledby="lp-example-title">
   <h2 class="lp-example__sr-only" id="lp-example-title">Salon de SixのLPで見る、AIDMAと顧客心理</h2>
-  <div class="manga-example__scene">
+  <div class="manga-example__scene" data-deferred-media>
     <div class="manga-example__phone">
       <div class="manga-example__speaker" aria-hidden="true"></div>
       <div class="manga-example__screen" data-lp-example-screen id="salon-lp-scroll" tabindex="0" role="region" aria-label="Salon de Sixの商品LPの実例。スマホ内を上下にスクロールすると、AIDMAの段階と下の解説が切り替わります">
-        <img data-lp-example-image src="assets/salon-lp-full.webp" width="600" height="15162" decoding="async" alt="Salon de SixのLP全体。ファーストビュー、体験内容、料金、施術、ビフォーアフター、LINEクーポン、FAQ、店舗情報。">
+        <img data-lp-example-image loading="lazy" data-media-src="assets/performance/assets--salon-lp-full.webp" width="600" height="15162" decoding="async" alt="Salon de SixのLP全体。ファーストビュー、体験内容、料金、施術、ビフォーアフター、LINEクーポン、FAQ、店舗情報。"><noscript><img data-lp-example-image loading="lazy" src="assets/performance/assets--salon-lp-full.webp" width="600" height="15162" decoding="async" alt="Salon de SixのLP全体。ファーストビュー、体験内容、料金、施術、ビフォーアフター、LINEクーポン、FAQ、店舗情報。"></noscript>
       </div>
         <div class="manga-example__action" aria-label="Salon de SixのLINEクーポン券のアクションボタンの表示例">
-          <img src="assets/fv-action-button-follow-cta.png" width="817" height="194" alt="今なら実質1,500THB。今すぐLINEクーポン券を受け取る">
+          <img src="assets/performance/assets--fv-action-button-follow-cta.webp" width="817" height="194" alt="今なら実質1,500THB。今すぐLINEクーポン券を受け取る" decoding="async" loading="lazy">
         </div>
       <div class="manga-example__home" aria-hidden="true"></div>
     </div>
@@ -230,21 +205,21 @@
   </aside>
   <p class="lp-example__sr-only" data-lp-example-status aria-live="polite" aria-atomic="true"></p>
 </section>
-      <figure data-speech-sheet="story-cvr" class="comic-frame comic-frame--results" data-comic><img class="story-art" src="assets/speech-clean/story-cvr.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="マリと斎藤さん。Salon de Sixの比較実績、成約率約1.5倍。ホームページで販売していた時との比較" ><svg class="comic-seam" viewBox="0 0 1448 1086" aria-hidden="true" preserveAspectRatio="none"><path d="M493 0L259 1086 M1070 0L824 1086" class="comic-seam__edge"/><path d="M493 0L259 1086 M1070 0L824 1086" class="comic-seam__gap"/></svg>
+      <figure data-speech-sheet="story-cvr" class="comic-frame comic-frame--results" data-comic><img class="story-art" src="assets/performance/assets--speech-clean--story-cvr.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="マリと斎藤さん。Salon de Sixの比較実績、成約率約1.5倍。ホームページで販売していた時との比較" ><svg class="comic-seam" viewBox="0 0 1448 1086" aria-hidden="true" preserveAspectRatio="none"><path d="M493 0L259 1086 M1070 0L824 1086" class="comic-seam__edge"/><path d="M493 0L259 1086 M1070 0L824 1086" class="comic-seam__gap"/></svg>
 <p class="comic-dialogue" data-speech-reveal data-speech-text="実際に成果にもつながっているんですか？" style="--bubble-x:1.5%;--bubble-y:4%;--bubble-w:29%;--bubble-size:3.05cqw">実際に成果にも<br>つながっている<br>んですか？</p>
 <p class="comic-dialogue comic-dialogue--tail-up" data-speech-reveal data-speech-text="他の案件でも、商品特化LPの方が成約率が高い傾向があるよ。" style="--bubble-x:63.5%;--bubble-y:63%;--bubble-w:35%;--bubble-size:3.2cqw">他の案件でも、<br>商品特化LPの方が<br>成約率が高い傾向<br>があるよ。</p>
 </figure>
       <section id="multilingual-lp" class="multilingual-section" aria-label="日本語・英語・タイ語のLP">
         <figure data-speech-sheet="story-multilingual" class="comic-frame comic-frame--language" data-comic>
-          <div class="language-story-crop"><img src="assets/speech-clean/story-multilingual.webp" width="1122" height="1402" loading="lazy" alt="日本語のLPをもとに多言語へ広げることを説明する斎藤さん"></div>
+          <div class="language-story-crop"><img src="assets/performance/assets--speech-clean--story-multilingual.webp" width="1122" height="1402" loading="lazy" alt="日本語のLPをもとに多言語へ広げることを説明する斎藤さん" decoding="async"></div>
 
 
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="さらに、日本語で作ったLPを土台に、英語・タイ語にも広げられるよ。" style="--bubble-x:45%;--bubble-y:16%;--bubble-w:53%;--bubble-size:3.6cqw">さらに、日本語で作ったLPを土台に、英語・タイ語にも広げられるよ。</p>
 </figure>
         <div class="language-gallery" tabindex="0" role="region" aria-label="日本語・英語・タイ語のLP。横にスクロールできます">
-          <figure class="language-card"><figcaption>日本語</figcaption><img src="assets/revision-oct14/salon-lp-fv-jp.webp" alt="Salon de Six 日本語LP" width="865" height="1750" loading="lazy"></figure>
-          <figure class="language-card"><figcaption>英語</figcaption><img src="assets/localization-oct15/salon-lp-fv-en.webp" alt="Salon de Six 英語LP" width="1092" height="1440" loading="lazy"></figure>
-          <figure class="language-card"><figcaption>タイ語</figcaption><img src="assets/localization-oct15/salon-lp-fv-th.webp" alt="Salon de Six タイ語LP" width="1092" height="1440" loading="lazy"></figure>
+          <figure class="language-card"><figcaption>日本語</figcaption><img src="assets/performance/assets--revision-oct14--salon-lp-fv-jp.webp" alt="Salon de Six 日本語LP" width="865" height="1750" loading="lazy" decoding="async"></figure>
+          <figure class="language-card"><figcaption>英語</figcaption><img src="assets/performance/assets--localization-oct15--salon-lp-fv-en.webp" alt="Salon de Six 英語LP" width="1092" height="1440" loading="lazy" decoding="async"></figure>
+          <figure class="language-card"><figcaption>タイ語</figcaption><img src="assets/performance/assets--localization-oct15--salon-lp-fv-th.webp" alt="Salon de Six タイ語LP" width="1092" height="1440" loading="lazy" decoding="async"></figure>
         </div>
         <p class="language-scroll-hint"><span aria-hidden="true">↔</span> 横スクロールで日本語・英語・タイ語のLPをご覧いただけます</p>
       </section>
@@ -252,7 +227,7 @@
 <div class="manga-backhalf automation-chapters">
 <section id="line-automation" aria-labelledby="line-automation-title">
   <header class="back-heading"><h2 id="line-automation-title"><span class="heading-line" data-manga-wipe>予約が増えても、</span><span class="heading-line heading-line--accent" data-manga-wipe>返信に追われないために。</span></h2><svg class="chapter-pointer" viewBox="0 0 64 30" aria-hidden="true"><path d="M1 1H63L32 29Z" fill="#08243d" stroke="#c9a459" stroke-width="1.5"/><path d="M9 5H55L32 24Z" fill="none" stroke="#c9a459" stroke-width=".75"/></svg></header>
-  <figure data-speech-sheet="line-intro" data-comic class="comic-frame"><img src="assets/speech-clean/line-intro.webp" width="887" height="1774" loading="lazy" alt="外国語の問い合わせに悩むマリへ、LINEの自動化と事前のヒアリングを説明する斎藤さん">
+  <figure data-speech-sheet="line-intro" data-comic class="comic-frame"><img src="assets/performance/assets--speech-clean--line-intro.webp" width="887" height="1774" loading="lazy" alt="外国語の問い合わせに悩むマリへ、LINEの自動化と事前のヒアリングを説明する斎藤さん" decoding="async">
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="でも、外国語の問い合わせが増えたら、返信が大変そう…" style="--bubble-x:58%;--bubble-y:1.5%;--bubble-w:40%;--bubble-size:3.2cqw">でも、外国語の<br>問い合わせが増えたら、返信が大変そう…</p>
 <p class="comic-dialogue comic-dialogue--tail-right" data-speech-reveal data-speech-text="そこで、AIを使ったLINEの自動化だよ。" style="--bubble-x:5%;--bubble-y:28%;--bubble-w:39%;--bubble-size:3.2cqw">そこで、AIを使った<br>LINEの自動化だよ。</p>
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="質問への返信から、空き枠の案内、予約受付まで自動化するんだ。" style="--bubble-x:62%;--bubble-y:32.5%;--bubble-w:36%;--bubble-size:3.1cqw">質問への返信から、<br>空き枠の案内、予約受付まで自動化するんだ。</p>
@@ -265,7 +240,7 @@
     <ul class="back-checks"><li>メニュー・料金・所要時間</li><li>施術内容や注意事項</li><li>お店の場所・営業時間</li><li>支払い方法</li><li>予約変更・キャンセルのルール</li></ul>
     <p class="setup-key">お店で確認した内容をもとに、<br><strong>問い合わせが来た言語に合わせて回答。</strong></p>
   </div>
-  <figure data-speech-sheet="booking-rules" data-comic class="comic-frame"><img src="assets/speech-clean/booking-rules.webp" width="1122" height="1402" loading="lazy" alt="メニューごとの予約ルールについて、予約表を見ながら話すマリと斎藤さん">
+  <figure data-speech-sheet="booking-rules" data-comic class="comic-frame"><img src="assets/performance/assets--speech-clean--booking-rules.webp" width="1122" height="1402" loading="lazy" alt="メニューごとの予約ルールについて、予約表を見ながら話すマリと斎藤さん" decoding="async">
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="でも、うちはメニューによって、同じ時間に受けられる人数が違うんです。" style="--bubble-x:53%;--bubble-y:2%;--bubble-w:45%;--bubble-size:3.3cqw">でも、うちはメニューによって、同じ時間に受けられる人数が違うんです。</p>
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="そこも、お店のルールに合わせて設定するんだ。" style="--bubble-x:59%;--bubble-y:51%;--bubble-w:39%;--bubble-size:3.2cqw">そこも、お店のルールに合わせて設定するんだ。</p>
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="メニューごとの所要時間や、同時に何件受けられるかも確認しておくよ。" style="--bubble-x:62%;--bubble-y:69%;--bubble-w:36%;--bubble-size:3.2cqw">メニューごとの<br>所要時間や、同時に<br>何件受けられるかも<br>確認しておくよ。</p>
@@ -280,7 +255,7 @@
     </tbody></table>
     <p class="setup-key">メニューごとの枠と、<br><strong>お店全体で同時に対応できる条件</strong>を整理します。</p>
   </div>
-  <figure data-speech-sheet="calendar-sync" data-comic class="comic-frame"><img src="assets/speech-clean/calendar-sync.webp" width="1254" height="1254" loading="lazy" alt="空き枠が表示されたカレンダーとスマホを確認するマリと斎藤さん">
+  <figure data-speech-sheet="calendar-sync" data-comic class="comic-frame"><img src="assets/performance/assets--speech-clean--calendar-sync.webp" width="1254" height="1254" loading="lazy" alt="空き枠が表示されたカレンダーとスマホを確認するマリと斎藤さん" decoding="async">
 <p class="comic-dialogue comic-dialogue--tail-right" data-speech-reveal data-speech-text="AIが、お店ごとの予約ルールとGoogleカレンダーの予定を確認するんだ。" style="--bubble-x:2%;--bubble-y:2%;--bubble-w:44%;--bubble-size:3.25cqw">AIが、お店ごとの<br>予約ルールとGoogle<br>カレンダーの予定を<br>確認するんだ。</p>
 <p class="comic-dialogue" data-speech-reveal data-speech-text="予約できる時間を案内して、お客様が選んだ日時をルールどおりに登録するよ。" style="--bubble-x:50%;--bubble-y:2%;--bubble-w:48%;--bubble-size:3.25cqw">予約できる時間を案内して、お客様が選んだ日時をルールどおりに登録するよ。</p>
 </figure>
@@ -299,7 +274,7 @@
       <button type="button" data-demo-language-button="th" aria-pressed="false">ไทย</button>
     </div>
   </div>
-  <div class="line-demo-stage comic-frame" data-demo-screen>
+  <div class="line-demo-stage comic-frame" data-deferred-media data-demo-screen>
     <div class="line-demo-phone">
       <div class="line-demo-speaker" aria-hidden="true"></div>
       <header class="line-demo-chat-header"><span aria-hidden="true">‹</span><strong data-demo-chat-title>サロン予約</strong><span aria-hidden="true">•••</span></header>
@@ -315,19 +290,19 @@
     <p class="demo-reading-hint"><span aria-hidden="true">↕</span>スマホ内を上下にスクロールして読めます。</p>
     <p class="demo-disclosure">会話・料金・予約枠は説明用の例です。実際の予約や送信は行われません。</p>
   </div>
-  <figure class="comic-frame revision-comic handoff-comic" data-comic><img src="assets/revision-20261015/handoff.webp" width="1448" height="1086" loading="lazy" alt="お客様の質問を確認しながら、スタッフへの引き継ぎを相談する二人"><p class="comic-dialogue" data-speech-reveal style="--bubble-x:49%;--bubble-y:3%;--bubble-w:48%;--bubble-size:3.25cqw">お店で確認が必要な質問は、無理に答えずスタッフへ引き継ぐよ。</p><p class="comic-dialogue" data-speech-reveal style="--bubble-x:3%;--bubble-y:5%;--bubble-w:42%;--bubble-size:3.25cqw">大切な確認は、私たちが対応できるんですね。</p></figure>
-  <figure data-speech-sheet="customer-focus" data-comic class="comic-frame"><img src="assets/speech-clean/customer-focus.webp" width="1122" height="1402" loading="lazy" alt="目の前のお客様と笑顔で話すマリと、お店の仕事に集中できることを説明する斎藤さん">
+  <figure class="comic-frame revision-comic handoff-comic" data-comic><img src="assets/performance/assets--revision-20261015--handoff.webp" width="1448" height="1086" loading="lazy" alt="お客様の質問を確認しながら、スタッフへの引き継ぎを相談する二人" decoding="async"><p class="comic-dialogue" data-speech-reveal style="--bubble-x:49%;--bubble-y:3%;--bubble-w:48%;--bubble-size:3.25cqw">お店で確認が必要な質問は、無理に答えずスタッフへ引き継ぐよ。</p><p class="comic-dialogue" data-speech-reveal style="--bubble-x:3%;--bubble-y:5%;--bubble-w:42%;--bubble-size:3.25cqw">大切な確認は、私たちが対応できるんですね。</p></figure>
+  <figure data-speech-sheet="customer-focus" data-comic class="comic-frame"><img src="assets/performance/assets--speech-clean--customer-focus.webp" width="1122" height="1402" loading="lazy" alt="目の前のお客様と笑顔で話すマリと、お店の仕事に集中できることを説明する斎藤さん" decoding="async">
 <p class="comic-dialogue comic-dialogue--tail-right" data-speech-reveal data-speech-text="これなら、接客中もずっと返信を気にしなくていいんですね。" style="--bubble-x:2%;--bubble-y:1%;--bubble-w:39%;--bubble-size:3.15cqw">これなら、接客中も<br>ずっと返信を気に<br>しなくていいんですね。</p>
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="お客様に集中できるし、仕事がずっと楽になりそう！" style="--bubble-x:59%;--bubble-y:1%;--bubble-w:39%;--bubble-size:3.15cqw">お客様に集中できるし、仕事がずっと<br>楽になりそう！</p>
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="いつもの質問や予約受付を任せられれば、その分、お店の仕事に時間を使えるね。" style="--bubble-x:50%;--bubble-y:70%;--bubble-w:48%;--bubble-size:3.3cqw">いつもの質問や予約受付を任せられれば、その分、お店の仕事に時間を使えるね。</p>
 </figure>
-  <div class="integration-manga" id="system-integration"><figure class="comic-frame revision-comic integration-comic" data-comic><img src="assets/revision-20261015/integration.webp" width="1448" height="1086" loading="lazy" alt="既存システムと予約カレンダーの連携を相談する二人"><p class="comic-dialogue" data-speech-reveal style="--bubble-x:3%;--bubble-y:4%;--bubble-w:40%;--bubble-size:3.25cqw">今使っているシステムとも連携できますか？</p><p class="comic-dialogue" data-speech-reveal style="--bubble-x:47%;--bubble-y:3%;--bubble-w:50%;--bubble-size:3cqw">まずは仕様を確認するよ。Googleカレンダーを活用すれば、導入の手間や費用を抑えやすいんだ。</p></figure><p class="integration-caption">独自システムへの組み込みは、仕様を確認してご案内します。個別開発が必要な場合は別途費用がかかります。</p></div>
+  <div class="integration-manga" id="system-integration"><figure class="comic-frame revision-comic integration-comic" data-comic><img src="assets/performance/assets--revision-20261015--integration.webp" width="1448" height="1086" loading="lazy" alt="既存システムと予約カレンダーの連携を相談する二人" decoding="async"><p class="comic-dialogue" data-speech-reveal style="--bubble-x:3%;--bubble-y:4%;--bubble-w:40%;--bubble-size:3.25cqw">今使っているシステムとも連携できますか？</p><p class="comic-dialogue" data-speech-reveal style="--bubble-x:47%;--bubble-y:3%;--bubble-w:50%;--bubble-size:3cqw">まずは仕様を確認するよ。Googleカレンダーを活用すれば、導入の手間や費用を抑えやすいんだ。</p></figure><p class="integration-caption">独自システムへの組み込みは、仕様を確認してご案内します。個別開発が必要な場合は別途費用がかかります。</p></div>
 </section>
 <section id="google-ads" class="ads-section-a" aria-labelledby="google-ads-title">
   <header class="back-heading"><h2 id="google-ads-title"><span class="heading-line" data-manga-wipe>来店につながるお客様を、</span><span class="heading-line heading-line--accent" data-manga-wipe>広告から。</span></h2><svg class="chapter-pointer" viewBox="0 0 64 30" aria-hidden="true"><path d="M1 1H63L32 29Z" fill="#08243d" stroke="#c9a459" stroke-width="1.5"/><path d="M9 5H55L32 24Z" fill="none" stroke="#c9a459" stroke-width=".75"/></svg></header>
 
   <figure data-speech-sheet="ads-intro" class="comic-frame" data-comic data-ad-panel-count="2">
-    <img src="assets/speech-clean/ads-intro.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="LPをどう見つけてもらうのか質問するマリと、Google広告を説明する斎藤さん">
+    <img src="assets/performance/assets--speech-clean--ads-intro.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="LPをどう見つけてもらうのか質問するマリと、Google広告を説明する斎藤さん">
 
 
 
@@ -337,36 +312,36 @@
 
   <div class="ads-comic-sequence" aria-label="Google検索とGoogleマップからお店を見つけてもらう流れ">
     <figure class="comic-frame ads-comic-panel" data-comic data-ad-panel="3" data-art-panel="0" style="--ads-panel-index:0">
-      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
+      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/performance/assets--direction-a--ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
       <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal style="--bubble-x:56%;--bubble-y:5%;--bubble-w:42%;--bubble-size:3.35cqw">「バンコク 脱毛サロン」など、サービスを探している人に検索広告を出せるんだ。</p>
     </figure>
     <figure data-speech-sheet="search-to-lp" id="ads-search-to-lp" class="comic-frame ads-comic-added" data-comic data-ad-panel="4">
-      <img src="assets/speech-clean/search-to-lp.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="Salon de SixのLPをスマホでマリに見せる斎藤さん">
+      <img src="assets/performance/assets--speech-clean--search-to-lp.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="Salon de SixのLPをスマホでマリに見せる斎藤さん">
 
 
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="広告を押すと、サービス専用のLPへ。料金やお店の魅力を詳しく見てもらうんだ。" style="--bubble-x:46%;--bubble-y:2%;--bubble-w:47%;--bubble-size:3.5cqw">広告を押すと、<br>サービス専用のLPへ。<br>料金やお店の魅力を<br>詳しく見てもらうんだ。</p>
 </figure>
     <figure id="ads-lp-opportunity" class="comic-frame ads-opportunity-comic" data-comic data-ad-panel="opportunity">
-      <img src="assets/cv-update-20261015/opportunity.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="ホームページとサービス専用LPを並べ、バンコクのお店の広告の可能性を話すマリと斎藤さん">
+      <img src="assets/performance/assets--cv-update-20261015--opportunity.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="ホームページとサービス専用LPを並べ、バンコクのお店の広告の可能性を話すマリと斎藤さん">
       <p class="comic-dialogue comic-dialogue--tail-right" data-speech-reveal style="--bubble-x:3%;--bubble-y:3%;--bubble-w:51%;--bubble-size:3.35cqw">僕たちが見ている<br>バンコクの店舗広告は、<br>ホームページへの案内が<br>まだ多いんだ。</p>
       <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal style="--bubble-x:56%;--bubble-y:3%;--bubble-w:41%;--bubble-size:3.35cqw">サービス専用のLPで<br>魅力を伝える。<br>ここには、まだ<br>チャンスがあるよ。</p>
     </figure>
     <figure class="comic-frame ads-comic-panel" data-comic data-ad-panel="5" data-art-panel="1" style="--ads-panel-index:1">
-      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
+      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/performance/assets--direction-a--ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
       <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal style="--bubble-x:56%;--bubble-y:5%;--bubble-w:42%;--bubble-size:3.35cqw">私も「バンコク 焼肉」とか、Googleマップで探します！</p>
     </figure>
     <figure class="comic-frame ads-comic-panel" data-comic data-ad-panel="6" data-art-panel="2" style="--ads-panel-index:2">
-      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
+      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/performance/assets--direction-a--ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
       <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal style="--bubble-x:56%;--bubble-y:5%;--bubble-w:42%;--bubble-size:3.35cqw">近くのお店を探す人にも、マップ上の広告で見つけてもらえるよ。</p>
     </figure>
     <figure data-speech-sheet="maps-to-website" id="ads-maps-to-website" class="comic-frame ads-comic-added" data-comic data-ad-panel="7">
-      <img src="assets/speech-clean/maps-to-website.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="店舗情報からLPへの導線を、タブレットで説明する斎藤さん">
+      <img src="assets/performance/assets--speech-clean--maps-to-website.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="店舗情報からLPへの導線を、タブレットで説明する斎藤さん">
 
 
 <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="マップの店舗情報から、サービス専用のLPへ。お店の魅力が伝わる流れを整えるんだ。" style="--bubble-x:42%;--bubble-y:1.5%;--bubble-w:49%;--bubble-size:3.25cqw">マップの店舗情報から、<br>サービス専用のLPへ。<br>お店の魅力が伝わる<br>流れを整えるんだ。</p>
 </figure>
     <figure class="comic-frame ads-comic-panel" data-comic data-ad-panel="8" data-art-panel="3" style="--ads-panel-index:3">
-      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/direction-a/ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
+      <div class="ads-comic-panel__art" aria-hidden="true"><img src="assets/performance/assets--direction-a--ads-four-scenes.webp" width="793" height="1983" loading="lazy" decoding="async" alt=""></div>
       <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal style="--bubble-x:56%;--bubble-y:5%;--bubble-w:42%;--bubble-size:3.35cqw">見つけてもらったら、LPで魅力を伝えて、LINEで質問・予約につなぐんだ。</p>
     </figure>
   </div>
@@ -387,7 +362,7 @@
 
       <div class="ads-a-destination" aria-label="Google検索広告からサービス専用LPへ">
         <div class="ads-a-destination__copy"><p class="ads-a-destination__purpose">ご提案するリンク先の設計</p><p class="ads-a-destination__from">Google検索広告</p><span class="ads-a-down-arrow" aria-hidden="true"></span><h4>サービス専用のLPへ</h4><p>広告のリンク先をLPに設定。<br>内容・料金・選ばれる理由を、<br>ひとつのページで詳しく。</p></div>
-        <figure class="ads-a-lp-preview"><img src="assets/revision-oct14/salon-lp-fv-offer-jp.webp" width="865" height="1750" loading="lazy" decoding="async" alt="Salon de Sixの男磨きセットを紹介するサービス専用LP"><figcaption>Salon de SixのLP実例</figcaption></figure>
+        <figure class="ads-a-lp-preview"><img src="assets/performance/assets--revision-oct14--salon-lp-fv-offer-jp.webp" width="865" height="1750" loading="lazy" decoding="async" alt="Salon de Sixの男磨きセットを紹介するサービス専用LP"><figcaption>Salon de SixのLP実例</figcaption></figure>
       </div>
       <p class="ads-a-keywords"><span>ほかにも、こんな検索から</span><strong>バンコク 美容サロン</strong><strong>バンコク 美容室</strong><strong>バンコク 脱毛サロン</strong><strong>バンコク ネイル</strong><strong>バンコク まつげサロン</strong><strong>バンコク マッサージ</strong><strong>バンコク スパ</strong><strong>バンコク 歯医者</strong><strong>バンコク ホワイトニング</strong><strong>バンコク 整体</strong><strong>バンコク ジム</strong><strong>バンコク パーソナルトレーニング</strong><strong>バンコク ヨガ</strong><strong>バンコク 焼肉</strong><strong>バンコク 寿司</strong><strong>バンコク 居酒屋</strong><strong>バンコク ラーメン</strong><strong>バンコク カフェ</strong></p>
     </article>
@@ -397,7 +372,7 @@
       <p class="ads-a-card__lead">食事のお店や、通いやすいお店を探すとき。<strong>地図で場所を確かめている人</strong>にも、お店を見つけてもらう入口をつくります。</p>
       <figure class="ads-a-screen">
         <div class="ads-a-screen__label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-8.8 8-14A8 8 0 0 0 4 8c0 5.2 8 14 8 14Z"></path><circle cx="12" cy="8" r="2.6"></circle></svg><span>検索例：バンコク 焼肉</span></div>
-        <a class="ads-a-screenshot-link" href="assets/ads-mobile/google-maps-mobile.jpg" target="_blank" rel="noopener" aria-label="Googleマップの実画面を拡大して見る"><img src="assets/ads-mobile/google-maps-mobile.jpg" width="393" height="640" loading="lazy" decoding="async" alt="スマホでバンコク 焼肉を検索したGoogleマップの画面。店舗の検索結果と所在地が表示されている。"></a>
+        <a class="ads-a-screenshot-link" href="assets/performance/assets--ads-mobile--google-maps-mobile.webp" target="_blank" rel="noopener" aria-label="Googleマップの実画面を拡大して見る"><img src="assets/performance/assets--ads-mobile--google-maps-mobile.webp" width="393" height="640" loading="lazy" decoding="async" alt="スマホでバンコク 焼肉を検索したGoogleマップの画面。店舗の検索結果と所在地が表示されている。"></a>
         <figcaption>広告が掲載される場合は「スポンサー」が目印。地図でお店を探している人にも、存在と場所を伝えられます。</figcaption>
       </figure>
 
@@ -426,7 +401,7 @@
      Overlay text shares the same coordinate system; no panel image crops. -->
 <header class="back-heading ads-a-summary-heading"><h2 id="ads-summary-title"><span class="heading-line" data-manga-wipe>集客から予約まで、</span><span class="heading-line heading-line--accent" data-manga-wipe>ひとつの流れで。</span></h2></header>
 <section class="closing-b" aria-labelledby="ads-summary-title" data-closing-design="b" data-closing-art="faithful">
-  <img class="closing-b__art" src="assets/closing-b/closing-b-faithful.webp" width="724" height="2172" loading="lazy" alt="検索広告、多言語LP、お店の魅力、LINE予約をひとつの流れでつなぎ、接客に集中するマリ。採用したクロージングBの漫画。">
+  <img class="closing-b__art" src="assets/performance/assets--closing-b--closing-b-faithful.webp" width="724" height="2172" loading="lazy" alt="検索広告、多言語LP、お店の魅力、LINE予約をひとつの流れでつなぎ、接客に集中するマリ。採用したクロージングBの漫画。" decoding="async">
 
   <div class="closing-b__intro">
     <div class="closing-b__intro-copy">
@@ -497,11 +472,11 @@
 <header class="back-heading"><h2 id="flow-title"><span class="heading-line" data-manga-wipe>お問い合わせから</span><span class="heading-line heading-line--accent" data-manga-wipe>制作・納品までの流れ</span></h2><svg class="chapter-pointer" viewBox="0 0 64 30" aria-hidden="true"><path d="M1 1H63L32 29Z" fill="#08243d" stroke="#c9a459" stroke-width="1.5"/><path d="M9 5H55L32 24Z" fill="none" stroke="#c9a459" stroke-width=".75"/></svg></header>
 <!-- Approved flow C: alternating manga and live copy share each original cream panel. -->
 <div class="flow-c">
-  <div class="flow-c__welcome" aria-hidden="true"><img src="assets/flow-c/flow-c-clean.webp" width="724" height="2172" loading="lazy" decoding="async" alt=""></div>
+  <div class="flow-c__welcome" aria-hidden="true"><img src="assets/performance/assets--flow-c--flow-c-clean.webp" width="724" height="2172" loading="lazy" decoding="async" alt=""></div>
   <ol class="flow-c__steps">
     <li class="flow-c__card flow-c__card--1" aria-labelledby="flow-c-step-1">
       <span class="flow-c__number" aria-hidden="true">01</span>
-      <div class="flow-c__art" aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/flow-c/panels-01-04.webp" width="724" height="2172" y="0"/></svg></div>
+      <div class="flow-c__art" data-deferred-media aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image data-media-src="assets/performance/assets--flow-c--panels-01-04.webp" width="724" height="2172" y="0"/></svg><noscript><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/performance/assets--flow-c--panels-01-04.webp" width="724" height="2172" y="0"/></svg></noscript></div>
       <div class="flow-c__copy">
         <h3 id="flow-c-step-1">LINEで<br>お問い合わせ</h3>
         <p>「無料ラフを相談したい」とLINEでお知らせください。お店のお悩みを伺います。</p>
@@ -509,7 +484,7 @@
     </li>
     <li class="flow-c__card flow-c__card--2" aria-labelledby="flow-c-step-2">
       <span class="flow-c__number" aria-hidden="true">02</span>
-      <div class="flow-c__art" aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/flow-c/panels-01-04.webp" width="724" height="2172" y="-543"/></svg></div>
+      <div class="flow-c__art" data-deferred-media aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image data-media-src="assets/performance/assets--flow-c--panels-01-04.webp" width="724" height="2172" y="-543"/></svg><noscript><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/performance/assets--flow-c--panels-01-04.webp" width="724" height="2172" y="-543"/></svg></noscript></div>
       <div class="flow-c__copy">
         <h3 id="flow-c-step-2">ヒアリング・<br>素材のご提供</h3>
         <p>サービス・料金・強み・来てほしいお客様を確認。写真やロゴをご用意いただきます。</p>
@@ -517,7 +492,7 @@
     </li>
     <li class="flow-c__card flow-c__card--3" aria-labelledby="flow-c-step-3">
       <span class="flow-c__number" aria-hidden="true">03</span>
-      <div class="flow-c__art" aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/flow-c/panels-01-04.webp" width="724" height="2172" y="-1086"/></svg></div>
+      <div class="flow-c__art" data-deferred-media aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image data-media-src="assets/performance/assets--flow-c--panels-01-04.webp" width="724" height="2172" y="-1086"/></svg><noscript><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/performance/assets--flow-c--panels-01-04.webp" width="724" height="2172" y="-1086"/></svg></noscript></div>
       <div class="flow-c__copy">
         <h3 id="flow-c-step-3">LP構成案＋<br>メイン画像ラフ<br>をご提案</h3>
         <p>LP構成案と、メイン画像のラフ1案を無料でご提案。方向性と費用をご確認ください。</p>
@@ -525,7 +500,7 @@
     </li>
     <li class="flow-c__card flow-c__card--4" aria-labelledby="flow-c-step-4">
       <span class="flow-c__number" aria-hidden="true">04</span>
-      <div class="flow-c__art" aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/flow-c/panels-01-04.webp" width="724" height="2172" y="-1629"/></svg></div>
+      <div class="flow-c__art" data-deferred-media aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image data-media-src="assets/performance/assets--flow-c--panels-01-04.webp" width="724" height="2172" y="-1629"/></svg><noscript><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/performance/assets--flow-c--panels-01-04.webp" width="724" height="2172" y="-1629"/></svg></noscript></div>
       <div class="flow-c__copy">
         <h3 id="flow-c-step-4">正式なご依頼・<br>着手金</h3>
         <p>提案と見積もりにご納得いただいたうえでご依頼。着手金のお支払い後、本制作へ。</p>
@@ -533,7 +508,7 @@
     </li>
     <li class="flow-c__card flow-c__card--5" aria-labelledby="flow-c-step-5">
       <span class="flow-c__number" aria-hidden="true">05</span>
-      <div class="flow-c__art" aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/flow-c/panels-05-08.webp" width="724" height="2172" y="0"/></svg></div>
+      <div class="flow-c__art" data-deferred-media aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image data-media-src="assets/performance/assets--flow-c--panels-05-08.webp" width="724" height="2172" y="0"/></svg><noscript><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/performance/assets--flow-c--panels-05-08.webp" width="724" height="2172" y="0"/></svg></noscript></div>
       <div class="flow-c__copy">
         <h3 id="flow-c-step-5">企画・構成・<br>文章を作成</h3>
         <p>伝える内容と順番、文章はZEROが作成。原稿をすべて書く必要はありません。</p>
@@ -541,7 +516,7 @@
     </li>
     <li class="flow-c__card flow-c__card--6" aria-labelledby="flow-c-step-6">
       <span class="flow-c__number" aria-hidden="true">06</span>
-      <div class="flow-c__art" aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/flow-c/panels-05-08.webp" width="724" height="2172" y="-543"/></svg></div>
+      <div class="flow-c__art" data-deferred-media aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image data-media-src="assets/performance/assets--flow-c--panels-05-08.webp" width="724" height="2172" y="-543"/></svg><noscript><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/performance/assets--flow-c--panels-05-08.webp" width="724" height="2172" y="-543"/></svg></noscript></div>
       <div class="flow-c__copy">
         <h3 id="flow-c-step-6">デザイン決定・<br>ページ制作</h3>
         <p>最初にメイン画像を決め、ページ全体を制作。多言語版は日本語版を土台に展開します。</p>
@@ -549,7 +524,7 @@
     </li>
     <li class="flow-c__card flow-c__card--7" aria-labelledby="flow-c-step-7">
       <span class="flow-c__number" aria-hidden="true">07</span>
-      <div class="flow-c__art" aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/flow-c/panels-05-08.webp" width="724" height="2172" y="-1086"/></svg></div>
+      <div class="flow-c__art" data-deferred-media aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image data-media-src="assets/performance/assets--flow-c--panels-05-08.webp" width="724" height="2172" y="-1086"/></svg><noscript><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/performance/assets--flow-c--panels-05-08.webp" width="724" height="2172" y="-1086"/></svg></noscript></div>
       <div class="flow-c__copy">
         <h3 id="flow-c-step-7">LINEのAI対応・<br>予約を構築</h3>
         <p>セットでは工程5〜6と並行。お店のルールとGoogleカレンダーに合わせ、質問・予約対応を構築します。</p>
@@ -557,7 +532,7 @@
     </li>
     <li class="flow-c__card flow-c__card--8" aria-labelledby="flow-c-step-8">
       <span class="flow-c__number" aria-hidden="true">08</span>
-      <div class="flow-c__art" aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/flow-c/panels-05-08.webp" width="724" height="2172" y="-1629"/></svg></div>
+      <div class="flow-c__art" data-deferred-media aria-hidden="true"><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image data-media-src="assets/performance/assets--flow-c--panels-05-08.webp" width="724" height="2172" y="-1629"/></svg><noscript><svg viewBox="0 0 724 543" preserveAspectRatio="xMidYMid slice" focusable="false"><image href="assets/performance/assets--flow-c--panels-05-08.webp" width="724" height="2172" y="-1629"/></svg></noscript></div>
       <div class="flow-c__copy">
         <h3 id="flow-c-step-8">最終確認・納品</h3>
         <p>LPの表示・問い合わせ導線・LINEの回答と予約を確認。調整後、ご依頼範囲に合わせて納品します。</p>
@@ -625,15 +600,15 @@
 <header class="back-heading"><h2 id="about-title"><span class="heading-line" data-manga-wipe>私たちについて</span></h2><svg class="chapter-pointer" viewBox="0 0 64 30" aria-hidden="true"><path d="M1 1H63L32 29Z" fill="#08243d" stroke="#c9a459" stroke-width="1.5"/><path d="M9 5H55L32 24Z" fill="none" stroke="#c9a459" stroke-width=".75"/></svg></header>
 <article id="zero-message" class="about-selected" aria-labelledby="zero-message-title">
   <div class="about-selected__hero">
-    <img class="about-selected__hero-art" src="assets/about-selected/hero-clean.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="微笑む斎藤さんとマリ">
-    <h3 id="zero-message-title" class="about-selected__title"><span>日本で磨いた力を、</span><span>バンコクのお店の</span><strong>売上へ。</strong></h3>
-  </div>
+    <img class="about-selected__hero-art" src="assets/performance/assets--about-selected--hero-clean.webp" width="1024" height="1536" loading="lazy" decoding="async" alt="微笑む斎藤さんとマリ">
+    <h3 id="zero-message-title" class="about-selected__title"><span>日本で磨いた力を、</span><span>バンコクのお店の<strong>売上へ。</strong></span></h3>
 
   <dl class="about-selected__stats" aria-label="株式会社ゼロの実績">
     <div><dt>LP制作</dt><dd><strong>300</strong><span>社以上</span></dd></div>
     <div><dt>広告運用</dt><dd><strong>100</strong><span>社以上</span></dd></div>
     <div><dt>創業</dt><dd><strong>13</strong><span>年</span></dd></div>
   </dl>
+  </div>
 
   <div class="about-selected__copy about-selected__intro">
     <p>株式会社ゼロは、東京都港区を拠点に、LP制作を専門に取り組んできた会社です。</p>
@@ -653,8 +628,8 @@
 
   <section class="about-selected__chapter" aria-labelledby="zero-message-search">
     <figure class="comic-frame about-selected__comic about-selected__comic--search" data-comic>
-      <div class="about-selected__slice"><img src="assets/about-selected/story-clean.webp" width="744" height="2112" loading="lazy" decoding="async" alt="バンコクの景色を背景に、検索広告と専用LPの可能性を話す斎藤さんとマリ"></div>
-      <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="検索広告と専用LPに、チャンスがあります。" style="--bubble-x:61%;--bubble-y:4%;--bubble-w:37%;--bubble-size:3.1cqw">検索広告と専用LPに、<br>チャンスがあります。</p>
+      <div class="about-selected__slice"><img src="assets/performance/assets--about-selected--story-clean.webp" width="744" height="2112" loading="lazy" decoding="async" alt="バンコクの景色を背景に、検索広告と専用LPの可能性を話す斎藤さんとマリ"></div>
+      <p class="comic-dialogue about-selected__balloon" data-speech-reveal data-speech-text="検索広告と専用LPに、チャンスがあります。" style="--bubble-x:68%;--bubble-y:2%;--bubble-w:31%;--bubble-size:2.8cqw;--bubble-tail:7%">検索広告と専用LPに、<br>チャンスがあります。</p>
     </figure>
     <div class="about-selected__copy">
       <h4 id="zero-message-search">バンコク在住8年。<br>私が感じる、<br class="about-selected__narrow-break">大きなチャンス。</h4>
@@ -666,8 +641,8 @@
 
   <section class="about-selected__chapter" aria-labelledby="zero-message-japan">
     <figure class="comic-frame about-selected__comic about-selected__comic--language" data-comic>
-      <div class="about-selected__slice"><img src="assets/about-selected/story-clean.webp" width="744" height="2112" loading="lazy" decoding="async" alt="日本語・英語・タイ語のLPを前に、クリエイティブを多言語へ広げる話をする二人"></div>
-      <p class="comic-dialogue comic-dialogue--tail-left" data-speech-reveal data-speech-text="日本で磨いた力を、日本語・英語・タイ語へ。" style="--bubble-x:64%;--bubble-y:4%;--bubble-w:34%;--bubble-size:3.1cqw">日本で磨いた力を、<br>日本語・英語・<br>タイ語へ。</p>
+      <div class="about-selected__slice"><img src="assets/performance/assets--about-selected--story-clean.webp" width="744" height="2112" loading="lazy" decoding="async" alt="日本語・英語・タイ語のLPを前に、クリエイティブを多言語へ広げる話をする二人"></div>
+      <p class="comic-dialogue about-selected__balloon" data-speech-reveal data-speech-text="日本で磨いた力を、日本語・英語・タイ語へ。" style="--bubble-x:65%;--bubble-y:2%;--bubble-w:34%;--bubble-size:2.8cqw;--bubble-tail:8%">日本で磨いた力を、<br>日本語・英語・タイ語へ。</p>
     </figure>
     <div class="about-selected__copy">
       <h4 id="zero-message-japan">日本で培った<br>クリエイティブを、<br>多言語へ。</h4>
@@ -679,7 +654,7 @@
 
   <div class="about-selected__promise-wrap">
     <figure class="comic-frame about-selected__comic about-selected__comic--promise">
-      <div class="about-selected__slice"><img src="assets/about-selected/story-clean.webp" width="744" height="2112" loading="lazy" decoding="async" alt="胸に手を当て、お店の成果のために取り組むことを約束する斎藤さんとマリ"></div>
+      <div class="about-selected__slice"><img src="assets/performance/assets--about-selected--story-clean.webp" width="744" height="2112" loading="lazy" decoding="async" alt="胸に手を当て、お店の成果のために取り組むことを約束する斎藤さんとマリ"></div>
     </figure>
     <section class="about-selected__promise" aria-labelledby="zero-message-promise">
       <h4 id="zero-message-promise">あなたのお店に、<br>成果で応えるために。</h4>
@@ -688,7 +663,7 @@
       <p class="about-selected__promise-body">広告の反応、問い合わせ、予約を確認し、レポートで共有。広告を調整し、必要に応じてLPも改善します。</p>
       <p class="about-selected__promise-body">つくって終わりにせず、お店に合う打ち手を一緒に積み重ねていきます。</p>
       <p class="about-selected__signature">株式会社ゼロ</p>
-      <div class="about-selected__stationery" aria-hidden="true"><img src="assets/about-selected/story-clean.webp" width="744" height="2112" loading="lazy" alt=""></div>
+      <div class="about-selected__stationery" aria-hidden="true"><img src="assets/performance/assets--about-selected--story-clean.webp" width="744" height="2112" loading="lazy" alt="" decoding="async"></div>
     </section>
   </div>
 </article>
@@ -698,19 +673,19 @@
      The existing single .cta-final-slot follows this fragment. -->
 <article class="campaign-selected" aria-label="LP構成案とメイン画像ラフ1案の無料提案" data-campaign-design="selected-1">
   <div class="campaign-selected__hero">
-    <img class="campaign-selected__plate" src="assets/campaign-selected/campaign-1-clean.webp" width="734" height="2142" loading="lazy" alt="斎藤さんとマリが、大きなスマホのデザインイメージと見開きの提案書をご紹介。">
+    <img class="campaign-selected__plate" src="assets/performance/assets--campaign-selected--campaign-1-clean.webp" width="734" height="2142" loading="lazy" alt="斎藤さんとマリが、大きなスマホのデザインイメージと見開きの提案書をご紹介。" decoding="async">
     <div class="campaign-selected__intro">
       <p>お店の<strong>魅力</strong>を、</p>
       <p>どんなページで伝えられるのか。</p>
     </div>
     <h3 class="campaign-selected__view-heading"><span>まずは、</span><strong>デザインのイメージを</strong><span>ご覧ください。</span></h3>
-    <div class="campaign-selected__phone-copy" aria-hidden="true"><span>ご提案イメージ</span><p>わたしが、<br>好きになる場所</p></div>
+    <div class="campaign-selected__phone-copy" aria-hidden="true"><span>ご提案イメージ</span><p>わたしが、<br>好きになる場所</p><small>キレイで、やさしくて、<br>また来たくなる。</small></div>
     <div class="campaign-selected__book campaign-selected__book--outline" aria-hidden="true"><span>01</span><strong>LP構成案</strong></div>
     <div class="campaign-selected__book campaign-selected__book--rough" aria-hidden="true"><span>02</span><strong>メイン画像の<br>ラフデザイン案</strong></div>
   </div>
-  <div class="campaign-selected__offer">
+  <div class="campaign-selected__offer" data-deferred-media>
     <p class="campaign-selected__offer-name">LP構成案 ＋<br>メイン画像のラフデザイン案</p>
-    <h3 class="campaign-selected__free"><span>1案</span>を<strong>無料</strong>でご提案。</h3>
+    <h3 class="campaign-selected__free"><span><i>1</i>案</span>を<strong>無料</strong>でご提案。</h3>
     <dl class="campaign-selected__deliverables">
       <div><dt><span aria-hidden="true">01</span><strong>LP構成案</strong></dt><dd>伝える内容と順番を<br>ご提案。</dd></div>
       <div><dt><span aria-hidden="true">02</span><strong>メイン画像の<br>ラフデザイン案</strong></dt><dd>最初に表示する<br>メイン画像を1案。</dd></div>

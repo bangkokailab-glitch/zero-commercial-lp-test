@@ -1,0 +1,30 @@
+/* Background images have no native loading=lazy. Keep their geometry and
+   colors, but request their artwork only near the viewport. No-JS is eager. */
+html.manga-media-js .manga-example__scene:not(.is-media-ready),
+html.manga-media-js #line-demo .line-demo-stage:not(.is-media-ready),
+html.manga-media-js #line-demo .line-demo-stage:not(.is-media-ready) .line-demo-portrait,
+html.manga-media-js .campaign-selected__offer:not(.is-media-ready)::before {
+  background-image: none !important;
+}
+html.manga-media-js .manga-example__scene:not(.is-media-ready) .manga-example__action::after {
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+html.manga-media-js .manga-example__scene:not(.is-performance-visible) .manga-example__action,
+html.manga-media-js .manga-example__scene:not(.is-performance-visible) .manga-example__action img,
+html.manga-media-js .manga-example__scene:not(.is-performance-visible) .manga-example__action::after,
+html.manga-document-hidden .manga-example__action,
+html.manga-document-hidden .manga-example__action img,
+html.manga-document-hidden .manga-example__action::after,
+html.manga-document-hidden .manga-cta__link,
+html.manga-document-hidden .manga-cta__copy,
+html.manga-document-hidden .manga-cta__bubble,
+html.manga-document-hidden .manga-cta__arrows {
+  animation-play-state: paused !important;
+}
+.flow-c__art > svg, .flow-c__art > noscript > svg { position:absolute; inset:0; }
+@media print {
+  html.manga-media-js .manga-example__scene,
+  html.manga-media-js #line-demo .line-demo-stage,
+  html.manga-media-js #line-demo .line-demo-portrait { print-color-adjust:exact; }
+}

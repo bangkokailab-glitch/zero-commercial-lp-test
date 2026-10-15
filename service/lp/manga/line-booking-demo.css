@@ -26,7 +26,7 @@
   container-type:inline-size; position:relative; display:grid;
   grid-template-columns:minmax(0,54%) minmax(0,46%);
   padding:17px 5px 20px; gap:0; margin:0; height:auto; min-height:0;
-  background:#c59b5c url('assets/direction-a/salon-demo-background.webp') center / cover no-repeat;
+  background:#c59b5c url('assets/performance/assets--direction-a--salon-demo-background.webp') center / cover no-repeat;
   isolation:isolate; overflow:hidden;
 }
 #line-demo .line-demo-stage::after {
@@ -89,13 +89,14 @@
 }
 #line-demo.is-demo-visible .line-demo-explain { opacity:1; visibility:visible; }
 #line-demo .line-demo-explain::after {
-  content:''; position:absolute; bottom:-10px; left:30%; width:15px; height:17px;
-  background:#fff; border-right:1.5px solid #08243d; border-bottom:1.5px solid #08243d;
-  transform:skewY(-25deg) rotate(24deg); z-index:-1;
+  content:''; position:absolute; top:calc(100% - 1px); left:30%; width:5cqw; height:4cqw;
+  border:0; z-index:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 18'%3E%3Cpath d='M1 0C6 4 8 10 6 16C13 12 18 7 21 0' fill='%23fff' stroke='%2308243d' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  transform:none; pointer-events:none;
 }
 #line-demo .line-demo-portrait {
   position:absolute; z-index:1; bottom:0; left:-2%; width:105%; aspect-ratio:2 / 3;
-  background:url('assets/line-ads/saito-demo-poses.png?v=1') 0 0 / 300% 200% no-repeat;
+  background:url('assets/performance/assets--line-ads--saito-demo-poses.webp?v=1') 0 0 / 300% 200% no-repeat;
   filter:drop-shadow(2px 3px 3px #5a321130);
 }
 #line-demo .line-demo-portrait[data-pose='1'] { background-position:50% 0; }

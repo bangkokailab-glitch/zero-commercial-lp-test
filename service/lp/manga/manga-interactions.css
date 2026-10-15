@@ -67,7 +67,7 @@ main { container-type:inline-size; padding-bottom:180px; background:#fff; }
 .manga-example__phone { left:5.75%; top:8.67%; width:50.1%; height:85.1%; border-radius:1cqw; }
 .manga-example__action { pointer-events:none; user-select:none; }
 .manga-example__action img { pointer-events:none; -webkit-user-drag:none; }
-.manga-example__action::after { content:""; position:absolute; inset:0; z-index:2; background:linear-gradient(105deg,#fff0,#ffffff3d 42%,#ffffffd1 50%,#fff3 58%,#fff0); mask:url('assets/fv-action-button-follow-cta.png') center / 100% 100% no-repeat; -webkit-mask:url('assets/fv-action-button-follow-cta.png') center / 100% 100% no-repeat; background-size:260% 100%; opacity:0; pointer-events:none; mix-blend-mode:screen; }
+.manga-example__action::after { content:""; position:absolute; inset:0; z-index:2; background:linear-gradient(105deg,#fff0,#ffffff3d 42%,#ffffffd1 50%,#fff3 58%,#fff0); mask:url('assets/performance/assets--fv-action-button-follow-cta.webp') center / 100% 100% no-repeat; -webkit-mask:url('assets/performance/assets--fv-action-button-follow-cta.webp') center / 100% 100% no-repeat; background-size:260% 100%; opacity:0; pointer-events:none; mix-blend-mode:screen; }
 @keyframes salon-cta-shine { 0%{background-position:170% 0;opacity:0}16%{opacity:.72}42%,100%{background-position:-70% 0;opacity:0} }
 @keyframes salon-cta-image { 0%,100%{filter:drop-shadow(0 0 0 #29df5d00)}50%{filter:drop-shadow(0 0 8px #29df5d38)} }
 @keyframes salon-cta-pulse { 0%,100%{translate:0 0;scale:1}50%{translate:0 -2px;scale:1.018} }

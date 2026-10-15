@@ -66,7 +66,8 @@
   margin:0; padding:0; border:0; background:transparent;
 }
 .closing-b__focus::before,.closing-b__focus::after { content:none; }
-.closing-b__focus .comic-dialogue { text-align:center; line-height:1.4; padding:1.8cqw 1.7cqw; }
+.closing-b__focus .comic-dialogue { text-align:center; line-height:1.4; padding:2.2cqw 2.4cqw; border-radius:50%; box-shadow:none; --bubble-tail:8%; }
+.closing-b__focus .comic-dialogue::after { left:var(--bubble-tail); top:72%; bottom:auto; transform:none; }
 .closing-b__finish {
   position:absolute; left:7%; top:90.3%; width:86%; height:7.5%;
   display:flex; align-items:center; justify-content:center;

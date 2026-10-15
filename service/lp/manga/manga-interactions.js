@@ -4,6 +4,9 @@
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const wipes = [...document.querySelectorAll('[data-manga-wipe]')];
   const speeches = [...document.querySelectorAll('[data-speech-mask], [data-speech-reveal]')];
+  const pendingSpeeches = new Set(speeches);
+  let nearbySpeeches = null;
+  let speechObserver;
   const counters = [...document.querySelectorAll('[data-manga-count]')];
   const cue = document.querySelector('.manga-example__scroll-cue');
   const timers = new Map();
@@ -21,24 +24,29 @@
   // settles into the final offer slot instead of creating a duplicate button.
   const readingZones = [...document.querySelectorAll('#lp-example, #line-demo')];
   const finalSlot = document.querySelector('[data-cta-slot]');
-  let dockRaf = 0;
+  let dockRaf = 0, dockHeight = 0, dockSizeDirty = true;
+  let finalSlotNear = !('IntersectionObserver' in window);
   function syncDockReadingZone() {
     dockRaf = 0;
-    if (!dock) return;
+    if (!dock || document.hidden) return;
     const reading = readingZones.some(zone => {
       const box = zone.getBoundingClientRect();
       return box.bottom > 0 && box.top < innerHeight;
     });
+    if (dockSizeDirty) { dockHeight = dock.offsetHeight; dockSizeDirty = false; }
+    const slotTop = finalSlot?.getBoundingClientRect().top;
     const changed = reading !== dock.classList.contains('is-reading-hidden');
-    dock.classList.toggle('is-reading-hidden', reading);
-    dock.inert = reading;
-    if (reading) dock.setAttribute('aria-hidden', 'true');
-    else dock.removeAttribute('aria-hidden');
+    if (changed) {
+      dock.classList.toggle('is-reading-hidden', reading);
+      dock.inert = reading;
+      if (reading) dock.setAttribute('aria-hidden', 'true');
+      else dock.removeAttribute('aria-hidden');
+    }
     if (finalSlot) {
-      const dockHeight = dock.offsetHeight;
-      finalSlot.style.height = `${dockHeight}px`;
-      const docked = finalSlot.getBoundingClientRect().bottom <= innerHeight + 1;
-      dock.classList.toggle('is-docked', docked);
+      const height = `${dockHeight}px`;
+      if (finalSlot.style.height !== height) finalSlot.style.height = height;
+      const docked = slotTop + dockHeight <= innerHeight + 1;
+      if (docked !== dock.classList.contains('is-docked')) dock.classList.toggle('is-docked', docked);
       // Keep the floating element outside container-type ancestors.
       const target = docked ? finalSlot : document.body;
       if (dock.parentElement !== target) target.appendChild(dock);
@@ -46,13 +54,22 @@
     if (changed) queueSpeechCheck();
   }
   function queueDockCheck() {
-    if (!dockRaf) dockRaf = requestAnimationFrame(syncDockReadingZone);
+    if (!dockRaf && !document.hidden) dockRaf = requestAnimationFrame(syncDockReadingZone);
   }
+  const invalidateDock = () => { dockSizeDirty = true; queueDockCheck(); };
   if (dock) {
-    window.addEventListener('scroll', queueDockCheck, { passive: true });
-    window.addEventListener('resize', queueDockCheck, { passive: true });
+    window.addEventListener('scroll', () => { if (finalSlotNear || !('IntersectionObserver' in window)) queueDockCheck(); }, { passive: true });
+    if ('IntersectionObserver' in window) {
+      const zones = new IntersectionObserver(queueDockCheck, {threshold:0});
+      readingZones.forEach(zone => zones.observe(zone));
+      if (finalSlot) new IntersectionObserver(entries => {
+        finalSlotNear = entries[0].isIntersecting;
+        queueDockCheck();
+      }, {rootMargin:'100% 0px', threshold:0}).observe(finalSlot);
+    }
+    window.addEventListener('resize', invalidateDock, { passive: true });
     window.addEventListener('pageshow', queueDockCheck);
-    if ('ResizeObserver' in window) new ResizeObserver(queueDockCheck).observe(dock);
+    if ('ResizeObserver' in window) new ResizeObserver(invalidateDock).observe(dock);
     syncDockReadingZone();
   }
 
@@ -61,6 +78,9 @@
     cancelAnimationFrame(frames.get(element));
     timers.delete(element);
     frames.delete(element);
+    pendingSpeeches.delete(element);
+    nearbySpeeches?.delete(element);
+    speechObserver?.unobserve(element);
     element.classList.remove('is-pending', 'is-entering', 'is-cue-entering', 'is-revealing');
     element.classList.add('is-shown');
     if (element.dataset.mangaCount) element.textContent = element.dataset.mangaCount;
@@ -72,19 +92,19 @@
     cancelAnimationFrame(speechRaf);
     root.classList.remove('manga-motion-ready');
     observer?.disconnect();
+    speechObserver?.disconnect();
     [...wipes, ...speeches, ...counters, cue].filter(Boolean).forEach(finish);
     clearTimeout(window.mangaMotionFallback);
   }
   function readingBottom() {
-    const box = dock?.getBoundingClientRect();
     const fixed = dock && !dock.classList.contains('is-reading-hidden') && getComputedStyle(dock).position === 'fixed';
+    const box = fixed ? dock.getBoundingClientRect() : null;
     return Math.min(innerHeight - 18, fixed && box.top > 0 ? box.top - 18 : innerHeight - 18);
   }
-  function speechInView(element) {
+  function speechInView(element, bottom) {
     const box = element.getBoundingClientRect();
     if (box.width === 0 || box.height === 0) return false;
     const top = 12;
-    const bottom = readingBottom();
     const visibleHeight = Math.min(box.bottom, bottom) - Math.max(box.top, top);
     // Observe each bubble, not the whole tall image: lower panels remain hidden
     // until their own words enter the usable viewport above the fixed CTA.
@@ -108,9 +128,14 @@
     stopSpeechTimer();
     // One shared clock follows authored DOM order for all currently visible
     // conversation. Jumping to a chapter never starts hidden panels elsewhere.
-    const next = speeches.find(element => !element.classList.contains('is-shown') && speechInView(element));
+    const bottom = readingBottom();
+    let next;
+    for (const element of pendingSpeeches) {
+      if (nearbySpeeches && !nearbySpeeches.has(element)) continue;
+      if (speechInView(element, bottom)) { next = element; break; }
+    }
     if (!next) return;
-    if (lastSpeech && !speechInView(lastSpeech)) nextSpeechAt = 0;
+    if (lastSpeech && !speechInView(lastSpeech, bottom)) nextSpeechAt = 0;
     const wait = nextSpeechAt - performance.now();
     if (wait > 0) { speechTimer = setTimeout(queueSpeechCheck, wait); return; }
     activeSpeech = next;
@@ -127,7 +152,7 @@
     }, 180);
   }
   function queueSpeechCheck() {
-    if (speechRaf || speechFailed) return;
+    if (speechRaf || speechFailed || document.hidden || !pendingSpeeches.size || (nearbySpeeches && !nearbySpeeches.size)) return;
     speechRaf = requestAnimationFrame(() => {
       try { revealNextSpeech(); } catch (_) { releaseAllContent(); }
     });
@@ -140,9 +165,11 @@
       const target = Number(element.dataset.mangaCount);
       const begin = performance.now();
       element.textContent = '1';
+      let previous = '1';
       const tick = now => {
         const progress = Math.min((now - begin) / 1600, 1);
-        element.textContent = String(Math.floor(1 + (target - 1) * (1 - (1 - progress) ** 3)));
+        const value = String(Math.floor(1 + (target - 1) * (1 - (1 - progress) ** 3)));
+        if (value !== previous) { element.textContent = value; previous = value; }
         if (progress < 1) frames.set(element, requestAnimationFrame(tick));
         else finish(element);
       };
@@ -180,6 +207,17 @@
     if (reduced.matches) return releaseAllContent();
     root.classList.add('manga-motion-ready');
     speeches.forEach(element => element.classList.add('is-pending'));
+    if ('IntersectionObserver' in window) {
+      nearbySpeeches = new Set();
+      speechObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) nearbySpeeches.add(entry.target);
+          else nearbySpeeches.delete(entry.target);
+        });
+        queueSpeechCheck();
+      }, { rootMargin:'200px 0px', threshold:0 });
+      speeches.forEach(element => speechObserver.observe(element));
+    }
     window.addEventListener('scroll', queueSpeechCheck, { passive: true });
     window.addEventListener('resize', queueSpeechCheck, { passive: true });
     document.querySelectorAll('.comic-frame img, [data-comic] img').forEach(image => image.addEventListener('load', queueSpeechCheck));
@@ -192,10 +230,13 @@
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       stopSpeechTimer();
+      cancelAnimationFrame(speechRaf); speechRaf = 0;
+      cancelAnimationFrame(dockRaf); dockRaf = 0;
       if (activeSpeech) { finish(activeSpeech); lastSpeech = activeSpeech; activeSpeech = null; }
       [...timers.keys(), ...frames.keys()].forEach(finish);
     } else {
       nextSpeechAt = performance.now() + 350;
+      queueDockCheck();
       queueSpeechCheck();
     }
   });

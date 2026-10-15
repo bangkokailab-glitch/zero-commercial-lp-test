@@ -58,8 +58,25 @@
   let language = 'ja', visible = false, timer = 0, resumeTimer = 0;
   let messages = [], activeStage = -1, cursor = 0, readingUntil = 0;
   let pointerDown = false, programmaticUntil = 0, scrollFrame = 0;
+  let geometryDirty = true, messageGeometry = [], chatHeight = 0, chatBoxHeight = 0, contentHeight = 0;
+  let sizeObserver;
 
   function stop() { clearTimeout(timer); timer = 0; }
+  function suspend() {
+    stop(); clearTimeout(resumeTimer); resumeTimer = 0;
+    cancelAnimationFrame(scrollFrame); scrollFrame = 0;
+  }
+  function measureMessages() {
+    if (!geometryDirty) return;
+    const box = chat.getBoundingClientRect();
+    const scrollTop = chat.scrollTop;
+    chatHeight = chat.clientHeight; chatBoxHeight = box.height; contentHeight = chat.scrollHeight;
+    messageGeometry = messages.map(message => {
+      const rect = message.getBoundingClientRect();
+      return { middle:(rect.top + rect.bottom) / 2 - box.top + scrollTop, bottom:rect.bottom - box.top + scrollTop };
+    });
+    geometryDirty = false;
+  }
   function ready() {
     return visible && !document.hidden && !reduced.matches && !pointerDown && Date.now() >= readingUntil;
   }
@@ -70,25 +87,25 @@
     portrait.dataset.pose = String(stage);
     portrait.setAttribute('aria-label', '会話の内容を説明する斎藤さん');
     // The whole balloon and its text appear together; there is no empty balloon.
-    if (visible && !reduced.matches && note.animate) {
+    if (visible && !document.hidden && !reduced.matches && note.animate) {
       note.getAnimations().forEach(animation => animation.cancel());
       note.animate([{opacity:0,transform:'translateY(5px) scale(.97)'},{opacity:1,transform:'none'}],{duration:260,easing:'ease-out'});
     }
   }
   function messageAtReadingPosition() {
-    const box = chat.getBoundingClientRect();
-    const reference = box.top + box.height * .58;
+    measureMessages();
+    const reference = chat.scrollTop + chatBoxHeight * .58;
     let best = 0, distance = Infinity;
-    messages.forEach((message, index) => {
-      const rect = message.getBoundingClientRect();
-      const nextDistance = Math.abs((rect.top + rect.bottom) / 2 - reference);
+    messageGeometry.forEach((geometry, index) => {
+      const nextDistance = Math.abs(geometry.middle - reference);
       if (nextDistance < distance) { distance = nextDistance; best = index; }
     });
     return best;
   }
   function syncToReadingPosition(updateCursor = true) {
     if (!messages.length) return;
-    const index = chat.scrollTop + chat.clientHeight >= chat.scrollHeight - 3 ? messages.length - 1 : messageAtReadingPosition();
+    measureMessages();
+    const index = chat.scrollTop + chatHeight >= contentHeight - 3 ? messages.length - 1 : messageAtReadingPosition();
     if (updateCursor) cursor = index;
     setStage(Number(messages[index].dataset.stage));
   }
@@ -98,7 +115,8 @@
   }
   function advance() {
     if (!ready()) return;
-    const atEnd = chat.scrollTop + chat.clientHeight >= chat.scrollHeight - 3;
+    measureMessages();
+    const atEnd = chat.scrollTop + chatHeight >= contentHeight - 3;
     if (atEnd) {
       cursor = 0;
       programmaticUntil = Date.now() + 800;
@@ -109,9 +127,7 @@
     }
     cursor = Math.min(cursor + 1, messages.length - 1);
     const item = messages[cursor];
-    const itemBox = item.getBoundingClientRect();
-    const chatBox = chat.getBoundingClientRect();
-    const top = chat.scrollTop + itemBox.bottom - chatBox.bottom + 12;
+    const top = messageGeometry[cursor].bottom - chatBoxHeight + 12;
     programmaticUntil = Date.now() + 800;
     // Do not use scrollIntoView: the surrounding LP must never be scrolled.
     chat.scrollTo({top:Math.max(chat.scrollTop,top),behavior:'smooth'});
@@ -122,18 +138,24 @@
     programmaticUntil = 0;
     stop();
     clearTimeout(resumeTimer);
-    if (!reduced.matches) resumeTimer = setTimeout(() => {
-      syncToReadingPosition();
-      schedule(4300);
-    }, READING_DELAY + 20);
+    resumeWhenReady(4300);
+  }
+  function resumeWhenReady(delay = 6000) {
+    clearTimeout(resumeTimer); resumeTimer = 0;
+    if (!visible || document.hidden || reduced.matches || pointerDown) return;
+    const wait = readingUntil - Date.now();
+    if (wait > 0) {
+      resumeTimer = setTimeout(() => { resumeTimer = 0; syncToReadingPosition(); schedule(delay); }, wait + 20);
+    } else schedule(delay);
   }
   function renderLanguage(value) {
     if (!copy[value]) return;
     language = value;
     stop(); clearTimeout(resumeTimer);
     readingUntil = 0; pointerDown = false; activeStage = -1; cursor = 0;
-    chat.replaceChildren(); chat.lang = value; title.textContent = copy[value].title;
+    chat.lang = value; title.textContent = copy[value].title;
     languageButtons.forEach(button => button.setAttribute('aria-pressed',String(button.dataset.demoLanguageButton === value)));
+    const fragment = document.createDocumentFragment();
     copy[value].stages.forEach((stageMessages,stage) => stageMessages.forEach(([role,text]) => {
       const item = document.createElement('div');
       item.className = `line-message line-message--${role}`; item.dataset.stage = String(stage);
@@ -141,9 +163,15 @@
         const sender = document.createElement('span');
         sender.className = 'line-message__sender'; sender.textContent = copy[value][role]; item.append(sender);
       }
-      const bubble = document.createElement('p'); bubble.textContent = text; item.append(bubble); chat.append(item);
+      const bubble = document.createElement('p'); bubble.textContent = text; item.append(bubble); fragment.append(item);
     }));
+    chat.replaceChildren(fragment);
     messages = [...chat.querySelectorAll('.line-message')];
+    geometryDirty = true;
+    if (sizeObserver) {
+      sizeObserver.disconnect(); sizeObserver.observe(chat);
+      messages.forEach(message => sizeObserver.observe(message));
+    }
     // All messages exist from the start, so manual scrolling can reach the whole example.
     chat.scrollTo({top:0,behavior:'instant'});
     setStage(0); schedule(6000);
@@ -161,21 +189,28 @@
     const top = event.key === 'Home' ? 0 : event.key === 'End' ? chat.scrollHeight : chat.scrollTop + offsets[event.key];
     chat.scrollTo({top,behavior:reduced.matches ? 'instant' : 'smooth'});
   });
-  chat.addEventListener('scroll',() => {
-    cancelAnimationFrame(scrollFrame);
+  function queueReadingSync() {
+    if (scrollFrame || !visible || document.hidden) return;
     scrollFrame = requestAnimationFrame(() => {
+      scrollFrame = 0;
+      if (!visible || document.hidden) return;
       syncToReadingPosition(Date.now() >= programmaticUntil);
       if (Date.now() >= programmaticUntil && (pointerDown || Date.now() < readingUntil)) holdForReading();
     });
-  },{passive:true});
+  }
+  chat.addEventListener('scroll',queueReadingSync,{passive:true});
+  const invalidateGeometry = () => { geometryDirty = true; queueReadingSync(); };
+  if ('ResizeObserver' in window) sizeObserver = new ResizeObserver(invalidateGeometry);
+  else window.addEventListener('resize', invalidateGeometry, {passive:true});
+  document.fonts?.ready.then(invalidateGeometry);
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(entries => {
       visible = entries[0].isIntersecting;
       demo.classList.toggle('is-demo-visible',visible);
-      if (visible) { syncToReadingPosition(); schedule(6000); } else stop();
+      if (visible) { syncToReadingPosition(); resumeWhenReady(); } else suspend();
     },{threshold:.18}).observe(screen);
   } else { visible = true; demo.classList.add('is-demo-visible'); }
-  document.addEventListener('visibilitychange',() => { if (document.hidden) stop(); else schedule(6000); });
+  document.addEventListener('visibilitychange',() => { if (document.hidden) suspend(); else resumeWhenReady(); });
   reduced.addEventListener('change',() => { stop(); clearTimeout(resumeTimer); readingUntil = 0; if (!reduced.matches) schedule(6000); });
   renderLanguage(language);
 })();

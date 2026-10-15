@@ -46,8 +46,8 @@
 /* Small character cameos follow the production steps without replacing copy. */
 .direction-a .production-step > div { min-width:0; }
 .step-portrait { float:right; width:74px; height:84px; margin:0 0 10px 12px; border-radius:50% 50% 35% 35%; border:1px solid #c7a45d; background-color:#f0dfb5; background-repeat:no-repeat; }
-.step-portrait--mari { background-image:url('assets/direction-a/mari-handoff.webp'); background-size:160%; background-position:48% 16%; }
-.step-portrait--saito { background-image:url('assets/line-ads/saito-demo-poses.png'); background-size:370% 245%; background-position:0 0; }
+.step-portrait--mari { background-image:url('assets/performance/assets--direction-a--mari-handoff.webp'); background-size:160%; background-position:48% 16%; }
+.step-portrait--saito { background-image:url('assets/performance/assets--line-ads--saito-demo-poses.webp'); background-size:370% 245%; background-position:0 0; }
 .direction-a .production-step h3 { min-height:70px; }
 .direction-a .production-step p { clear:both; }
 

@@ -4,7 +4,7 @@
   display: block;
   aspect-ratio: 888 / 1038;
   overflow: hidden;
-  background: #f7f7f7 url("assets/aidma-scene-approved.png") center / 100% 100% no-repeat;
+  background: #f7f7f7 url("assets/performance/assets--aidma-scene-approved.webp") center / 100% 100% no-repeat;
 }
 .manga-example__phone {
   position: absolute;

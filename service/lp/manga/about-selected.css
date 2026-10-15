@@ -25,7 +25,7 @@
 #about-zero .about-selected__hero {
   position:relative;
   overflow:clip;
-  height:58cqw;
+  height:64cqw;
   margin:4px 4px 0;
 }
 #about-zero .about-selected__hero-art {
@@ -40,38 +40,42 @@
   position:absolute;
   z-index:1;
   left:4cqw;
-  top:7cqw;
+  top:8cqw;
   margin:0;
   font-family:var(--manga-morisawa-bold);
-  font-size:clamp(19px,5.55cqw,30px);
-  line-height:1.65;
+  font-size:clamp(22px,6.3cqw,32px);
+  line-height:1.55;
   letter-spacing:-.06em;
   font-weight:700;
 }
-#about-zero .about-selected__title span,
-#about-zero .about-selected__title strong { display:block; }
+#about-zero .about-selected__title > span { display:block; white-space:nowrap; }
+#about-zero .about-selected__title > span + span { font-size:.71em; line-height:1.65; }
 #about-zero .about-selected__title strong {
   color:#a27b20;
-  font-size:1.45em;
-  line-height:1.4;
-  margin-top:1cqw;
+  font-size:1.12em;
+  line-height:inherit;
+  margin:0;
+  display:inline;
 }
 #about-zero .about-selected__stats {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:2px;
-  margin:-5cqw 14px 0;
-  position:relative;
+  gap:8px;
+  margin:0;
+  width:68%;
+  left:3cqw;
+  top:34cqw;
+  position:absolute;
   z-index:2;
 }
 #about-zero .about-selected__stats > div {
   position:relative;
   min-width:0;
-  padding:12px 1px 14px;
+  padding:7px 1px 14px;
   text-align:center;
-  border-bottom:1px solid #ccb36f;
+  border:0;
 }
-#about-zero .about-selected__stats > div + div { border-left:1px solid #dfd0a0; }
+#about-zero .about-selected__stats > div + div { border:0; }
 #about-zero .about-selected__stats dt {
   margin:0 0 3px;
   font-size:clamp(16px,4.35cqw,23px);
@@ -79,10 +83,10 @@
   line-height:1.5;
   color:#08243d;
 }
-#about-zero .about-selected__stats dd { margin:0; line-height:1.1; }
+#about-zero .about-selected__stats dd { position:relative; margin:0; padding-inline:5px; line-height:1.1; }
 #about-zero .about-selected__stats dd strong {
   display:block;
-  font-size:clamp(40px,11.65cqw,63px);
+  font-size:clamp(32px,9.2cqw,50px);
   line-height:1.2;
   letter-spacing:-.06em;
   color:#a27b20;
@@ -97,7 +101,7 @@
   color:#08243d;
 }
 #about-zero .about-selected__copy {
-  padding:28px 22px 32px;
+  padding:23px 20px 30px;
   background:linear-gradient(100deg,#fffef6,#fffdf5);
 }
 #about-zero .about-selected__copy p,
@@ -120,7 +124,7 @@
   font-family:var(--manga-morisawa-bold);
   color:#08243d;
 }
-#about-zero .about-selected__intro { padding-top:26px; padding-bottom:30px; }
+#about-zero .about-selected__intro { padding-top:15px; padding-bottom:28px; }
 #about-zero .about-selected__chapter { margin:0; padding:0; }
 #about-zero .about-selected__comic {
   margin:0 4px;
@@ -147,12 +151,14 @@
 #about-zero .about-selected__comic--promise .about-selected__slice { height:33.6592cqw; }
 #about-zero .about-selected__comic--promise .about-selected__slice img { top:-176.5363cqw; }
 #about-zero .about-selected__comic .comic-dialogue {
-  padding:1.6cqw 1.75cqw;
-  border-radius:5.6cqw;
+  padding:2.5cqw 1cqw;
+  border-radius:50%;
   line-height:1.55;
   letter-spacing:-.055em;
   font-family:var(--manga-morisawa-bold);
   text-align:center;
+  white-space:nowrap;
+  box-shadow:none;
 }
 #about-zero .about-selected__promise-wrap { margin:0; background:#03273e; }
 #about-zero .about-selected__promise { position:relative; margin:0 4px 4px; padding:30px 20px 0; color:#fff; overflow:clip; }
@@ -208,3 +214,26 @@
   #about-zero .about-selected__stationery { margin-inline:-32px; }
   #about-zero .about-selected__narrow-break { display:none; }
 }
+
+/* Faithful option 1: oval dialogue at the speaker's upper right.
+   The shared tail artwork is retained; only its anchor moves to the lower-left. */
+#about-zero .about-selected__balloon::after {
+  left:var(--bubble-tail,7%);
+  bottom:auto;
+  top:72%;
+}
+#about-zero .about-selected__stats dd strong { text-shadow:0 1px 0 #fff4; }
+#about-zero .about-selected__stats::after {
+  content:""; position:absolute; left:2%; right:2%; bottom:0;
+  height:1px; background:linear-gradient(90deg,transparent,#c7a654 18%,#c7a654 82%,transparent);
+}
+
+/* Approved gold laurels give each evidence value an independent visual group. */
+#about-zero .about-selected__stats dd::before,
+#about-zero .about-selected__stats dd::after {
+  content:""; position:absolute; top:-3px; bottom:-4px; width:11px;
+  background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2080%22%3E%3Cg%20fill%3D%22%23b99232%22%3E%3Cpath%20d%3D%22M16%2078C0%2058%201%2024%2015%203%22%20fill%3D%22none%22%20stroke%3D%22%23b99232%22%20stroke-width%3D%221.2%22%2F%3E%3Cpath%20d%3D%22M12%2013C8%208%2010%203%2016%201C17%207%2015%2011%2012%2013ZM9%2022C3%2020%202%2014%204%2010C9%2013%2011%2017%209%2022ZM6%2033C0%2030%200%2024%201%2020C7%2023%208%2028%206%2033ZM5%2044C-1%2040%200%2035%200%2031C6%2034%207%2039%205%2044ZM7%2055C0%2053-1%2047%200%2043C6%2046%209%2050%207%2055ZM10%2066C3%2065%200%2060%201%2055C8%2058%2011%2061%2010%2066ZM16%2076C8%2076%204%2072%204%2067C11%2069%2015%2072%2016%2076ZM10%2024C10%2016%2014%2013%2019%2012C19%2018%2016%2023%2010%2024ZM7%2036C8%2028%2012%2026%2017%2025C17%2031%2012%2035%207%2036ZM7%2048C8%2041%2013%2038%2018%2038C17%2044%2013%2048%207%2048ZM9%2060C9%2053%2015%2050%2019%2050C19%2056%2015%2060%209%2060ZM14%2071C13%2064%2016%2061%2020%2059C23%2064%2019%2070%2014%2071Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center / 100% 100% no-repeat;
+  pointer-events:none;
+}
+#about-zero .about-selected__stats dd::before { left:-3px; }
+#about-zero .about-selected__stats dd::after { right:-3px; transform:scaleX(-1); }

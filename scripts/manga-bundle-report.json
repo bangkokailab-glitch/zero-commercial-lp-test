@@ -1,0 +1,97 @@
+{
+  "page": "service/lp/manga",
+  "revision": "d6413efb118f",
+  "source": {
+    "cssRequests": 25,
+    "jsRequests": 8,
+    "css": {
+      "bytes": 136353,
+      "gzipBytes": 41487
+    },
+    "js": {
+      "bytes": 50817,
+      "gzipBytes": 17551
+    }
+  },
+  "bundled": {
+    "cssRequests": 3,
+    "jsRequests": 1,
+    "css": {
+      "bytes": 119932,
+      "gzipBytes": 27412
+    },
+    "js": {
+      "bytes": 32450,
+      "gzipBytes": 10870
+    }
+  },
+  "unchanged": [
+    "Morisawa stylesheet and fonts",
+    "inline base style and its cascade position",
+    "early inline motion fallback"
+  ],
+  "gzipNote": "gzipBytes are level-9 estimates, not measured transfer sizes.",
+  "outputs": [
+    {
+      "file": "manga-base.bundle.css",
+      "sources": [
+        "lp-example.css",
+        "aidma-b.css"
+      ],
+      "bytes": 13607,
+      "gzipBytes": 3519
+    },
+    {
+      "file": "manga-components.bundle.css",
+      "sources": [
+        "manga-cta.css",
+        "aidma-ticket.css",
+        "aidma-scene.css"
+      ],
+      "bytes": 13576,
+      "gzipBytes": 3744
+    },
+    {
+      "file": "manga-page.bundle.css",
+      "sources": [
+        "manga-interactions.css",
+        "manga-backhalf.css",
+        "line-booking-demo.css",
+        "direction-a.css",
+        "ads-direction-a.css",
+        "comic-speech.css",
+        "comic-dialogue.css",
+        "revision-20261015.css",
+        "cv-update-20261015.css",
+        "zero-message.css",
+        "closing-b.css",
+        "pricing-main-revision.css",
+        "ads-mobile-revision.css",
+        "heading-b.css",
+        "flow-c.css",
+        "about-selected.css",
+        "about-cases.css",
+        "readability-20261015.css",
+        "campaign-selected.css",
+        "media-performance.css"
+      ],
+      "bytes": 92749,
+      "gzipBytes": 20149
+    },
+    {
+      "file": "manga-page.bundle.js",
+      "sources": [
+        "media-performance.js",
+        "lp-example.js",
+        "manga-interactions.js",
+        "conversion-config.js",
+        "conversion-tracking.js",
+        "manga-backhalf.js",
+        "line-booking-demo.js",
+        "heading-b.js"
+      ],
+      "bytes": 32450,
+      "gzipBytes": 10870
+    }
+  ]
+}

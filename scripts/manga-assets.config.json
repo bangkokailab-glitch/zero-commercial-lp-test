@@ -1,0 +1,67 @@
+{
+  "root": "service/lp/manga",
+  "styles": [
+    {
+      "output": "manga-base.bundle.css",
+      "sources": [
+        "lp-example.css",
+        "aidma-b.css"
+      ]
+    },
+    {
+      "external": "https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css"
+    },
+    {
+      "output": "manga-components.bundle.css",
+      "sources": [
+        "manga-cta.css",
+        "aidma-ticket.css",
+        "aidma-scene.css"
+      ]
+    },
+    {
+      "inline": true
+    },
+    {
+      "output": "manga-page.bundle.css",
+      "sources": [
+        "manga-interactions.css",
+        "manga-backhalf.css",
+        "line-booking-demo.css",
+        "direction-a.css",
+        "ads-direction-a.css",
+        "comic-speech.css",
+        "comic-dialogue.css",
+        "revision-20261015.css",
+        "cv-update-20261015.css",
+        "zero-message.css",
+        "closing-b.css",
+        "pricing-main-revision.css",
+        "ads-mobile-revision.css",
+        "heading-b.css",
+        "flow-c.css",
+        "about-selected.css",
+        "about-cases.css",
+        "readability-20261015.css",
+        "campaign-selected.css",
+        "media-performance.css"
+      ]
+    },
+    {
+      "inline": true
+    }
+  ],
+  "scripts": {
+    "output": "manga-page.bundle.js",
+    "sources": [
+      "media-performance.js",
+      "lp-example.js",
+      "manga-interactions.js",
+      "conversion-config.js",
+      "conversion-tracking.js",
+      "manga-backhalf.js",
+      "line-booking-demo.js",
+      "heading-b.js"
+    ]
+  }
+}
