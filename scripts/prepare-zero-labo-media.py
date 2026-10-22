@@ -100,6 +100,14 @@ def main():
             if converted.count(NEWS_PATH_REGEX) != 1:
                 raise RuntimeError("news-model.js path parser changed; review rebasing")
             converted = converted.replace(NEWS_PATH_REGEX, REBASED_NEWS_PATH_REGEX)
+        if path.suffix == ".html":
+            if converted.count("</head>") != 1:
+                raise RuntimeError("missing unique head close in " + str(path))
+            converted = converted.replace(
+                "</head>",
+                '<link rel="icon" type="image/png" href="' + BASE
+                + '/assets/zero-logo-original.png"></head>',
+            )
         if converted != original:
             path.write_text(converted, encoding="utf-8")
             count += 1
