@@ -7,6 +7,7 @@ export function initReadingNavigation(data) {
   if (role !== 'home' && !data.chapters.some(c => c.number === chapterNumber)) return;
   const header = document.querySelector('.site-header');
   if (!header) return;
+  const footer = document.querySelector('.site-footer');
   const tocLabel = role === 'chapter' ? 'この章の目次' : 'この記事の目次';
   const headingSelectors = role === 'article' ? '.article-section h2, .article-section h3, .article-section h4' :
     '.chapter-lesson h2, .chapter-lesson h3, .chapter-faq h2, .chapter-tools h2, .chapter-tools h3, .rd-faq h2, .rd-support-tools h2, .rd-support-tools h3, .chapter-summary h2';
@@ -33,7 +34,9 @@ export function initReadingNavigation(data) {
   let trigger;
   let savedScroll = 0;
   function updateVisibility() {
-    bar.hidden = header.getBoundingClientRect().bottom > 0 && !dialog.open && !bar.contains(document.activeElement);
+    const chromeOverContent = header.getBoundingClientRect().bottom > 0 ||
+      (footer && footer.getBoundingClientRect().top < window.innerHeight);
+    bar.hidden = chromeOverContent && !dialog.open && !bar.contains(document.activeElement);
   }
   function close(restore = true) {
     dialog.close();

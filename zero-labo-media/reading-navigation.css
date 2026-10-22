@@ -43,7 +43,7 @@ a.reading-item:hover{border-color:#005cab;background:#f2f8fc}
 .article-support-action:disabled{background:#eef2ef;color:#52675b!important;border-color:#c9d7ce;cursor:not-allowed;font-size:17px;font-weight:600}
 .article-support-card .resource-example{border-left:2px solid #8aaa97;padding-left:14px;font-size:14px}
 .article-support-card .support-note{font-size:13px;margin:12px 0 0;color:#53687a}
-.has-reading-dock{padding-bottom:calc(90px + env(safe-area-inset-bottom,0px));scroll-padding-bottom:100px}
+.has-reading-dock{scroll-padding-bottom:100px}
 .has-reading-dock .status-message{bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 .reading-dock{position:fixed;z-index:80;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);display:flex;gap:1px;padding:5px;background:#fff;border:1px solid #c4d7e6;border-radius:9px;box-shadow:0 3px 20px #142b3d24;max-width:calc(100% - 32px)}
 .reading-dock[hidden]{display:none}
