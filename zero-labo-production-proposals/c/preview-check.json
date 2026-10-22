@@ -1,0 +1,132 @@
+[
+  {
+    "name": "pc",
+    "httpStatus": 200,
+    "metrics": {
+      "header": 86,
+      "hero": 551,
+      "inner": 1000,
+      "overflow": 0,
+      "heading": "ランディングページを、知る。つくる。育てる。",
+      "sub": "基礎から企画・制作・集客・改善まで。",
+      "source": "2013年創業、LP制作を専門とする株式会社ZEROが届ける、実践の教科書。",
+      "navigation": [
+        {
+          "text": "ホーム",
+          "href": "https://zero-s.jp/labo/"
+        },
+        {
+          "text": "LPO対策",
+          "href": "https://zero-s.jp/labo/?cat=2"
+        },
+        {
+          "text": "SEO対策",
+          "href": "https://zero-s.jp/labo/?cat=4"
+        },
+        {
+          "text": "メディア運営",
+          "href": "https://zero-s.jp/labo/?cat=3"
+        },
+        {
+          "text": "WEB用語集",
+          "href": "https://zero-s.jp/labo/?page_id=7796"
+        },
+        {
+          "text": "お問い合わせ ↗",
+          "href": "https://zero-s.jp/contact/"
+        }
+      ],
+      "imageLoaded": 1536,
+      "fontStatus": "pending"
+    },
+    "errors": []
+  },
+  {
+    "name": "sp",
+    "httpStatus": 200,
+    "metrics": {
+      "header": 56,
+      "hero": 515,
+      "inner": 356,
+      "overflow": 0,
+      "heading": "ランディングページを、知る。つくる。育てる。",
+      "sub": "基礎から企画・制作・集客・改善まで。",
+      "source": "2013年創業、LP制作を専門とする株式会社ZEROが届ける、実践の教科書。",
+      "navigation": [
+        {
+          "text": "ホーム",
+          "href": "https://zero-s.jp/labo/"
+        },
+        {
+          "text": "LPO対策",
+          "href": "https://zero-s.jp/labo/?cat=2"
+        },
+        {
+          "text": "SEO対策",
+          "href": "https://zero-s.jp/labo/?cat=4"
+        },
+        {
+          "text": "メディア運営",
+          "href": "https://zero-s.jp/labo/?cat=3"
+        },
+        {
+          "text": "WEB用語集",
+          "href": "https://zero-s.jp/labo/?page_id=7796"
+        },
+        {
+          "text": "お問い合わせ ↗",
+          "href": "https://zero-s.jp/contact/"
+        }
+      ],
+      "imageLoaded": 1536,
+      "fontStatus": "pending",
+      "mobileMenuVisible": true,
+      "contactVisible": true
+    },
+    "errors": []
+  },
+  {
+    "name": "sp-small",
+    "httpStatus": 200,
+    "metrics": {
+      "header": 56,
+      "hero": 520,
+      "inner": 286,
+      "overflow": 0,
+      "heading": "ランディングページを、知る。つくる。育てる。",
+      "sub": "基礎から企画・制作・集客・改善まで。",
+      "source": "2013年創業、LP制作を専門とする株式会社ZEROが届ける、実践の教科書。",
+      "navigation": [
+        {
+          "text": "ホーム",
+          "href": "https://zero-s.jp/labo/"
+        },
+        {
+          "text": "LPO対策",
+          "href": "https://zero-s.jp/labo/?cat=2"
+        },
+        {
+          "text": "SEO対策",
+          "href": "https://zero-s.jp/labo/?cat=4"
+        },
+        {
+          "text": "メディア運営",
+          "href": "https://zero-s.jp/labo/?cat=3"
+        },
+        {
+          "text": "WEB用語集",
+          "href": "https://zero-s.jp/labo/?page_id=7796"
+        },
+        {
+          "text": "お問い合わせ ↗",
+          "href": "https://zero-s.jp/contact/"
+        }
+      ],
+      "imageLoaded": 1536,
+      "fontStatus": "pending",
+      "mobileMenuVisible": true,
+      "contactVisible": true
+    },
+    "errors": []
+  }
+]
