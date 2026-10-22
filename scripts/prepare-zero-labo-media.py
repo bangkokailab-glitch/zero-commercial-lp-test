@@ -127,7 +127,7 @@ def main():
                 raise RuntimeError("relative subpage " + tag + " " + key + "=" + value + " in " + str(page))
     (DEST / MARKER).write_text(json.dumps({
         "site": "ZERO Labo LP specialist media preview",
-        "sourceRevision": "Revision 034 plus unpublished CH01-001 Revision 035 changes",
+        "sourceRevision": "Revision 035 plus 2026-10-22 display refresh",
         "pages": len(pages),
         "basePath": BASE + "/",
         "font": "Morisawa Shin Go R/B via the existing LP kit CSS",

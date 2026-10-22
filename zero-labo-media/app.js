@@ -16,7 +16,6 @@ const variants={
 };
 variants.C.path=variants.D.path;
 let current='C';
-let boundaryMode=false;
 
 document.body.dataset.variant=current;
 const divider=(from,to,i)=>'<div class="section-divider" aria-hidden="true" style="--from:'+from+';--to:'+to+'"><svg viewBox="0 0 1440 240" preserveAspectRatio="none" style="'+(i%2?'transform:scaleX(-1)':'')+'"><path d="'+variants[current].path+'"/></svg></div>';
@@ -59,34 +58,13 @@ try{
 out+=divider('#eaf4fb','var(--footer-blue)',12)+'<section class="share-section" id="sharing"><div class="share-note"><p class="share-tag">SHARE THE KNOWLEDGE</p><h2>役に立った知識を、<br>次の誰かにも。</h2><div class="prose"><p>LPづくりで迷っている仲間にも、<br class="desktop-break">このページをシェアしてみませんか。</p></div><div class="share-actions"><button type="button" data-share="x"><span aria-hidden="true">𝕏</span> Xでシェアする</button><button type="button" data-share="copy">リンクをコピー</button></div></div></section>';
  q('#article').innerHTML=out;
  }
- const footerHtml='<footer class="site-footer"><div class="wide-inner footer-bottom" id="operator"><div class="footer-brand"><a href="#cover" aria-label="ZEROラボ ページ先頭へ"><img class="footer-logo" src="assets/zero-logo-original.png" width="142" height="40" alt="ZEROラボ"></a><p>ランディングページを、<br>知る。つくる。育てる。</p></div><div class="footer-description">'+paragraph(data.about).replace('サイトです。','サイトです。<br>')+'<nav class="footer-links" aria-label="フッターサイトマップ"><div class="footer-link-row"><a href="/zero-commercial-lp-test/zero-labo-media/about/">ゼロラボについて</a><details class="chapter-dropdown footer-dropdown"><summary>10章一覧 <span aria-hidden="true">⌄</span></summary><div class="header-chapters footer-chapters"></div></details><a href="/zero-commercial-lp-test/zero-labo-media/news/">最新情報</a><a href="/zero-commercial-lp-test/zero-labo-media/glossary/">用語集</a></div><div class="footer-link-row"><a href="https://zero-s.jp/aboutus/" target="_blank" rel="noopener">会社情報</a><a href="https://zero-s.jp/service/lp/" target="_blank" rel="noopener">LP制作の相談はこちら</a><a href="https://zero-s.jp/contact/" target="_blank" rel="noopener">お問い合わせ</a></div></nav></div></div><div class="wide-inner"><details class="preview-info" id="preview-info"><summary>このプレビューについて</summary><p>本文・図解・章の記事一覧・最新情報・章索引の幅を最大620pxに統一した改訂版です。目次は会話の下、シェアは最新情報の後に配置しています。章の親記事は横長の画像付きバナーです。DカーブとC配色は維持しています。章末の記事一覧から次章の冒頭までの距離は前版の約70％です。WordPress本番には反映していません。</p><p>本文・会話：PC18px／行間36px、スマホ16px／行間32px。本文幅620px、スマホ左右16px。メイン画像の下部ラベルと旧ヘッダー表示だけを取り除いた編集画像を使用。下向き三角とヘッダーはHTML/CSSで配置しています。ヘッダーとフッターからサイト内の各項目へ進めます。</p><p>LPクマは仮イラストです。トップ・記事・章ページの池田さんには提供写真を使用しています。CH01-001は公開前の確認用、既存1件は記事テンプレート見本、残り75件と最新情報欄は掲載計画です。章の記事一覧では未執筆の記事を「準備中」、確認用の記事を「確認用」と表示します。</p><p><a href="https://note.com/info/n/n611d3e257e54" target="_blank" rel="noopener">文字規格の参考：note公式</a> ／ <a href="https://lucy.ne.jp/bazubu/category/content-marketing" target="_blank" rel="noopener">章の区切りの参考：バズ部</a> ／ <a href="https://zero-s.jp/labo/" target="_blank" rel="noopener">最新記事の並べ方：現行ZEROラボ</a></p></details></div></footer>';
- q('#article').insertAdjacentHTML('afterend',footerHtml.replaceAll('href="#','href="'+siteHome+'#').replaceAll('src="assets/','src="/zero-commercial-lp-test/zero-labo-media/assets/'));
+ const footerHtml='<footer class="site-footer"><div class="wide-inner footer-bottom" id="operator"><div class="footer-brand"><a class=\"brand-lockup\" href="#cover" aria-label="ZEROラボ ページ先頭へ"><svg class=\"brand-symbol\" viewBox=\"0 0 40 40\" aria-hidden=\"true\"><defs><filter id=\"footer-symbol-white\" color-interpolation-filters=\"sRGB\"><feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -0.6378 -2.1456 -0.2166 0 3\"/></filter></defs><image href=\"assets/zero-logo-original.png\" width=\"142\" height=\"40\" filter=\"url(#footer-symbol-white)\"/></svg><span class=\"brand-word\">ZEROラボ</span></a><p>ランディングページを、<br>知る。つくる。育てる。</p></div><div class="footer-description">'+paragraph(data.about).replace('サイトです。','サイトです。<br>')+'<nav class="footer-links" aria-label="フッターサイトマップ"><div class="footer-link-row"><a href="/zero-commercial-lp-test/zero-labo-media/about/">ゼロラボについて</a><details class="chapter-dropdown footer-dropdown"><summary>10章一覧 <span aria-hidden="true">⌄</span></summary><div class="header-chapters footer-chapters"></div></details><a href="/zero-commercial-lp-test/zero-labo-media/news/">最新情報</a><a href="/zero-commercial-lp-test/zero-labo-media/glossary/">用語集</a></div><div class="footer-link-row"><a href="https://zero-s.jp/aboutus/" target="_blank" rel="noopener">会社情報</a><a href="https://zero-s.jp/service/lp/" target="_blank" rel="noopener">LP制作の相談はこちら</a><a href="https://zero-s.jp/contact/" target="_blank" rel="noopener">お問い合わせ</a></div></nav></div></div></footer>';
+ q('#article').insertAdjacentHTML('afterend',footerHtml.replaceAll('href="#','href="'+siteHome+'#').replaceAll('src="assets/','src="/zero-commercial-lp-test/zero-labo-media/assets/').replaceAll('href="assets/','href="/zero-commercial-lp-test/zero-labo-media/assets/'));
  if(document.body.dataset.page==='news')document.querySelectorAll('a[href="/zero-commercial-lp-test/zero-labo-media/news/"]').forEach(a=>a.setAttribute('aria-current','page')); if(isAbout)document.querySelectorAll('a[href="/zero-commercial-lp-test/zero-labo-media/about/"]').forEach(a=>a.setAttribute('aria-current','page')); if(document.body.dataset.page==='glossary')document.querySelectorAll('a[href="/zero-commercial-lp-test/zero-labo-media/glossary/"]').forEach(a=>a.setAttribute('aria-current','page'));
  q('.header-chapters').innerHTML=data.chapters.map(c=>'<a href="'+chapterDestination(c,!isSubpage).url+'">第'+c.number+'章　'+esc(c.label)+'</a>').join('');
  q('.footer-chapters').innerHTML=data.chapters.map(c=>'<a href="'+chapterDestination(c,!isSubpage).url+'">第'+c.number+'章　'+esc(c.parent.title)+(isSubpage&&chapterDestination(c).introduction?'（章の紹介）':'')+'</a>').join('');
  if(!isSubpage)q('.book-links').innerHTML=data.chapters.map(c=>'<a href="#chapter-'+c.number+'" style="top:'+(52.3+((c.number-1)%5)*6.0)+'%" aria-label="第'+c.number+'章 '+esc(c.label)+'へ"></a>').join('');
 }catch(e){if(!isSubpage)q('#article').innerHTML='<section class="intro-section"><div class="section-inner"><h2>本文を読み込めませんでした。</h2><p>ページを再読み込みしてください。</p></div></section>';console.error(e);}
-function jumpToBoundary(behavior='instant'){
- const el=q('#chapter-1 .related-list');
- if(el)window.scrollTo({top:el.getBoundingClientRect().bottom+scrollY-180,behavior});
-}
-function selectVariant(v,keepPosition=true){
- const anchors=[...document.querySelectorAll('.chapter-head,.prose p,.related-list,.section-divider')];
- const anchor=keepPosition?anchors.find(e=>{const r=e.getBoundingClientRect();return r.top>30&&r.top<innerHeight;}):null;
- const top=anchor?.getBoundingClientRect().top;
- current=v;document.body.dataset.variant=v;
- document.querySelectorAll('.section-divider path').forEach(e=>e.setAttribute('d',variants[v].path));
- document.querySelectorAll('[data-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.choice===v)));
- const url=new URL(location.href);url.searchParams.set('v','revision10');history.replaceState(null,'',url);
- document.title='ZEROラボ｜LP制作の教科書';
- if(boundaryMode)jumpToBoundary();
- else if(anchor)window.scrollTo({top:scrollY+anchor.getBoundingClientRect().top-top,behavior:'instant'});
-}
-if(!isSubpage)selectVariant(current,false);
-document.querySelectorAll('[data-choice]').forEach(b=>b.addEventListener('click',()=>selectVariant(b.dataset.choice)));
-q('.jump-boundary')?.addEventListener('click',()=>{boundaryMode=true;jumpToBoundary();});
-window.addEventListener('wheel',()=>{boundaryMode=false;},{passive:true});
-window.addEventListener('touchmove',()=>{boundaryMode=false;},{passive:true});
 const menuToggle=q('.mobile-menu-toggle'),mainNav=q('#primary-navigation'),mobileNavQuery=matchMedia('(max-width: 767px)');
 function setMobileMenu(open,returnFocus=false){
  q('.site-header').classList.toggle('is-menu-open',open);
