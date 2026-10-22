@@ -12,7 +12,7 @@ html, body { background: var(--footer-blue); }
 .hero-copy {
   position: absolute;
   z-index: 1;
-  top: 11.4%;
+  top: 10%;
   left: 17%;
   width: 66%;
   text-align: center;
@@ -22,33 +22,33 @@ html, body { background: var(--footer-blue); }
 .hero-copy :is(h1, p) { margin: 0; }
 .hero-kicker {
   font-family: var(--zero-morisawa-regular);
-  font-size: clamp(15px, 1.65vw, 26px);
+  font-size: clamp(15px, 1.5vw, 24px);
   line-height: 1.5;
   letter-spacing: .12em;
 }
 .hero-copy h1 {
   font-family: var(--zero-morisawa-bold);
-  font-size: clamp(30px, 4.25vw, 68px);
+  font-size: clamp(30px, 4vw, 64px);
   font-weight: 700;
-  line-height: 1.42;
+  line-height: 1.37;
   letter-spacing: -.045em;
-  margin-top: clamp(8px, 1.1vw, 18px);
+  margin-top: clamp(8px, .9vw, 15px);
   text-wrap: balance;
 }
 .hero-copy h1 span { display: block; white-space: nowrap; }
 .hero-subcopy {
   font-family: var(--zero-morisawa-regular);
-  font-size: clamp(15px, 1.55vw, 25px);
+  font-size: clamp(15px, 1.45vw, 23px);
   line-height: 1.55;
   letter-spacing: .04em;
-  margin-top: clamp(10px, 1vw, 16px) !important;
+  margin-top: clamp(8px, .8vw, 13px) !important;
 }
 .hero-description {
   font-family: var(--zero-morisawa-regular);
-  font-size: clamp(13px, 1.4vw, 23px);
+  font-size: clamp(13px, 1.27vw, 21px);
   line-height: 1.6;
   letter-spacing: .01em;
-  margin-top: clamp(5px, .5vw, 9px) !important;
+  margin-top: clamp(4px, .4vw, 7px) !important;
 }
 .hero-chapters-link { display: none; }
 .brand-lockup, .footer-brand > .brand-lockup {
