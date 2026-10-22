@@ -1,0 +1,80 @@
+:root{--ink:#101112;--white:#f7f7f4;--yellow:#fff000;--orange:#ed7108}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--ink)}
+body{margin:0;min-width:320px;color:#fff;background:var(--ink);font-family:var(--zero-morisawa-regular)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.site-header{height:86px;position:relative;z-index:10;background:#020202;border-bottom:1px solid #ffffff24}
+.header-inner{width:min(1000px,calc(100% - 40px));height:100%;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:inline-flex;align-items:center;gap:12px;flex:none;white-space:nowrap;text-decoration:none;font-family:var(--zero-morisawa-bold);font-size:22px;font-weight:700;letter-spacing:-.05em}
+.brand-mark{display:block;width:49px;height:50px;object-fit:contain;flex:none}
+.primary-nav{display:flex;align-items:center;justify-content:flex-end;min-width:0}
+.primary-nav>a{display:inline-flex;align-items:center;justify-content:center;min-height:33px;padding:0 13px;border-left:1px solid #fff8;text-decoration:none;white-space:nowrap;font-family:var(--zero-morisawa-bold);font-size:12px;font-weight:700;letter-spacing:-.02em}
+.primary-nav>a:hover{text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:5px}
+.primary-nav .contact{gap:9px;min-height:45px;margin-left:14px;padding:7px 15px;border:0;background:#fff;color:#151515;box-shadow:4px 4px 0 var(--orange);font-size:13px}
+.contact svg{width:23px;height:18px;fill:none;stroke:currentColor;stroke-width:2;flex:none}
+.menu-toggle{display:none}
+.hero{height:551px;position:relative;isolation:isolate;overflow:hidden;background:#0a0a0b}
+.hero::before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,#0004 0%,transparent 19%,#0002 55%,#0009 100%);pointer-events:none}
+.art{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-inner{position:relative;z-index:2;width:min(1000px,calc(100% - 40px));height:100%;margin:auto}
+.dots{position:absolute;top:64px;left:40px;display:flex;gap:12px;transform:rotate(-4deg)}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--orange)}
+h1{position:relative;margin:0;font-family:var(--zero-morisawa-bold);font-weight:700;letter-spacing:-.065em;line-height:1;filter:drop-shadow(5px 6px 1px #0007)}
+h1>span{position:absolute;display:inline-block;width:max-content;max-width:calc(100% - 15px);white-space:nowrap}
+h1>span>span{position:relative;z-index:1}
+.intro{top:93px;left:17px;padding:5px 21px 9px;color:#151515;font-size:37px;transform:rotate(-3deg);background:#f7f4ed;clip-path:polygon(0 12%,100% 0,99% 92%,1% 100%)}
+.intro::before,.grow::before{content:"";position:absolute;z-index:0;inset:0;background:url(../../service/lp/images/hero-signature-ink.svg) center/100% 100% no-repeat;opacity:.45;pointer-events:none}
+.word{font-size:82px;line-height:1.15}
+.know{top:159px;left:63px;padding:0 15px 10px 8px;color:#0c0d0d;background:var(--yellow);transform:rotate(-1.7deg) skew(-3deg);box-shadow:6px 7px 0 var(--orange)}
+.make{top:245px;left:282px;color:#fff;text-shadow:3px 4px 0 #000,0 0 8px #000}
+.make::after{content:"";position:absolute;right:-14px;bottom:13px;width:165px;height:10px;background:var(--orange);transform:rotate(-4deg);z-index:-1}
+.grow{top:332px;left:560px;padding:0 15px 7px 6px;color:#121212;background:#f7f4ed;transform:rotate(2deg);clip-path:polygon(0 5%,100% 0,98% 100%,2% 93%)}
+.support{position:absolute;left:42px;right:82px;bottom:24px;min-height:68px;padding:9px 16px 9px 17px;border-left:5px solid var(--orange);background:#060707df;box-shadow:4px 6px 0 #1b4cbb80}
+.support p{margin:0}
+.sub{font-family:var(--zero-morisawa-bold);font-size:18px;font-weight:700;line-height:1.45}
+.source{margin-top:6px!important;font-family:var(--zero-morisawa-regular);font-size:13px;line-height:1.6}
+.bottom-rule{position:absolute;z-index:3;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--yellow) 0 19%,var(--orange) 19% 30%,#fff8 30% 100%)}
+@media(max-width:1050px) and (min-width:768px){
+  .primary-nav>a{padding-inline:8px;font-size:11px}
+  .primary-nav .contact{margin-left:8px;padding-inline:10px}
+  .brand{font-size:20px;gap:8px}
+  .word{font-size:clamp(62px,7.8vw,82px)}
+  .grow{left:55%}
+}
+@media(max-width:767px){
+  .site-header{height:55px}
+  .header-inner{width:calc(100% - 28px);gap:8px}
+  .brand{gap:6px;font-size:19px}
+  .brand-mark{width:33px;height:39px}
+  .menu-toggle{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;width:52px;height:50px;padding:2px;border:0;background:none;color:#fff;cursor:pointer}
+  .menu-lines{display:flex;flex-direction:column;gap:5px}
+  .menu-lines i{display:block;width:25px;height:2px;background:currentColor}
+  .menu-label{font-family:var(--zero-morisawa-regular);font-size:10px}
+  .primary-nav{display:none;position:absolute;z-index:20;top:55px;left:0;right:0;padding:7px 20px 20px;background:#050505;box-shadow:0 15px 28px #0009}
+  .primary-nav.open{display:flex;flex-direction:column;align-items:stretch}
+  .primary-nav>a{justify-content:flex-start;min-height:45px;width:100%;padding-inline:0;border:0;border-bottom:1px solid #ffffff59;font-size:15px}
+  .primary-nav .contact{justify-content:center;min-height:45px;width:100%;margin:14px 0 0;padding:0 10px;border-bottom:0}
+  .hero{height:560px}
+  .hero::before{background:linear-gradient(180deg,#0009 0%,#0005 25%,#0004 68%,#000a 100%)}
+  .art{object-position:center}
+  .hero-inner{width:calc(100% - 28px)}
+  .dots{top:35px;left:20px;gap:8px}
+  .dots i{width:5px;height:5px}
+  .intro{top:57px;left:6px;padding:5px 11px 7px;font-size:clamp(20px,5.65vw,24px)}
+  .word{font-size:clamp(53px,14.3vw,61px)}
+  .know{top:126px;left:16px;padding:1px 11px 9px 5px}
+  .make{top:220px;left:73px}
+  .grow{top:313px;left:17px;padding:2px 10px 8px 5px}
+  .make::after{right:-8px;width:120px;height:7px;bottom:7px}
+  .support{left:8px;right:8px;bottom:24px;min-height:90px;padding:9px 10px 8px 12px;border-left-width:4px}
+  .sub{font-size:14px}
+  .source{font-size:11px;line-height:1.55}
+}
+@media(max-width:350px){
+  .hero{height:550px}
+  .intro{font-size:19px}
+  .word{font-size:47px}
+  .make{left:56px}
+  .support{bottom:19px}
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>ZEROラボ｜新B案・カットペーパー</title>
+  <link rel="preconnect" href="https://morisawafonts.net" crossorigin>
+  <link rel="stylesheet" href="https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css">
+  <link rel="stylesheet" href="../../zero-labo-media/zero-morisawa-font.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../../zero-labo-media/zero-morisawa-font.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://zero-s.jp/labo/" aria-label="ZEROラボ ホーム">
+        <img class="brand-mark" src="../../service/lp/images/logo-w.svg" width="50" height="50" alt="">
+        <span data-zero-font="bold">ZEROラボ</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="primary-nav" aria-expanded="false"><span class="menu-lines" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">メニュー</span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="メインナビゲーション">
+        <a href="https://zero-s.jp/labo/">ホーム</a>
+        <a href="https://zero-s.jp/labo/?cat=2">LPO対策</a>
+        <a href="https://zero-s.jp/labo/?cat=4">SEO対策</a>
+        <a href="https://zero-s.jp/labo/?cat=3">メディア運営</a>
+        <a href="https://zero-s.jp/labo/?page_id=7796">WEB用語集</a>
+        <a class="contact" href="https://zero-s.jp/contact/"><svg viewBox="0 0 32 24" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="21" rx="1.5"/><path d="m3 4 13 10L29 4"/></svg>お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+  <main class="hero">
+    <img class="art" src="kinetic-cut-paper.jpg" width="1690" height="931" alt="" aria-hidden="true" fetchpriority="high">
+    <div class="hero-inner">
+      <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <h1 data-zero-font="bold"><span class="intro"><span>ランディングページを、</span></span><span class="word know"><span>知る。</span></span><span class="word make"><span>つくる。</span></span><span class="word grow"><span>育てる。</span></span></h1>
+      <div class="support">
+        <p class="sub" data-zero-font="bold">基礎から企画・制作・集客・改善まで。</p>
+        <p class="source" data-zero-font="regular">2013年創業、LP制作を専門とする株式会社ZEROが届ける、実践の教科書。</p>
+      </div>
+    </div>
+    <div class="bottom-rule" aria-hidden="true"></div>
+  </main>
+  <script>
+    const button=document.querySelector('.menu-toggle'),nav=document.querySelector('.primary-nav');
+    button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');nav.classList.toggle('open',open)});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&button.getAttribute('aria-expanded')==='true'){button.click();button.focus()}});
+  </script>
+</body>
+</html>
