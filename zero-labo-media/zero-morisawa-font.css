@@ -1,0 +1,12 @@
+/* Licensed web delivery only. Never bundle or rehost the Morisawa font files. */
+:root {
+  --zero-morisawa-regular: "mfw-pshingopr6n-regular", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  --zero-morisawa-bold: "mfw-pshingopr6n-bold", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: var(--zero-morisawa-regular);
+}
+.zero-article { --zero-font: var(--zero-morisawa-regular); }
+body { font-family: var(--zero-morisawa-regular); font-synthesis: none; }
+/* Semantic fallback also works with JavaScript disabled. */
+html :is(h1,h2,h3,h4,h5,h6,strong,b,th):not([data-zero-font]) { font-family: var(--zero-morisawa-bold); }
+html [data-zero-font="regular"] { font-family: var(--zero-morisawa-regular) !important; font-synthesis: none; }
+html [data-zero-font="bold"] { font-family: var(--zero-morisawa-bold) !important; font-synthesis: none; }

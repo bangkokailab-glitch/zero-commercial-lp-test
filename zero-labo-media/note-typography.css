@@ -1,0 +1,56 @@
+/* ZEROラボ: note本文を実測した文字仕様。完成サイト全体のCSSではない。 */
+.zero-article {
+  --zero-font: "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, "Noto Sans JP", Meiryo, sans-serif;
+  --zero-body-size: 1.125rem;
+  --zero-body-leading: 2;
+  --zero-paragraph-gap: 36px;
+  --zero-h2-size: 2rem;
+  --zero-h3-size: 1.5rem;
+  --zero-section-gap: 112px;
+  --zero-figure-gap: 48px;
+  font-family: var(--zero-font);
+  color: #142b3d;
+  font-size: var(--zero-body-size);
+  line-height: var(--zero-body-leading);
+  font-weight: 400;
+  letter-spacing: normal;
+  overflow-wrap: break-word;
+}
+.zero-article *, .zero-article *::before, .zero-article *::after { box-sizing: border-box; }
+.zero-article .reading-column { width: min(620px, calc(100% - 32px)); margin-inline: auto; }
+.zero-article .prose p { font: inherit; margin: var(--zero-paragraph-gap) 0; }
+.zero-article .prose > :first-child { margin-top: 0; }
+.zero-article .prose > :last-child { margin-bottom: 0; }
+.zero-article h2 { font-family: var(--zero-font); font-size: var(--zero-h2-size); line-height: 1.5; font-weight: 700; margin: 0 0 32px; }
+.zero-article h3 { font-family: var(--zero-font); font-size: var(--zero-h3-size); line-height: 1.6; font-weight: 700; margin: 56px 0 24px; }
+.zero-article .chapter { position: relative; padding-block: var(--zero-section-gap); }
+.zero-article .chapter:nth-of-type(even) { background: #f6f8fa; }
+.zero-article figure { margin: var(--zero-figure-gap) 0; }
+.zero-article figure img { display: block; width: 100%; height: auto; }
+.zero-article figcaption { font-size: 14px; line-height: 1.6; margin-top: 12px; color: #526674; }
+.zero-article .dialogue { display: flex; flex-direction: column; gap: 32px; margin-block: 48px 0; }
+.zero-article .speech { display: flex; align-items: flex-start; gap: 16px; }
+.zero-article .speech--ikeda { flex-direction: row-reverse; }
+.zero-article .avatar { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+.zero-article .speech-content { min-width: 0; flex: 1; }
+.zero-article .speaker { display: block; font-size: 14px; line-height: 1.6; font-weight: 700; margin: 0 0 8px; }
+.zero-article .speech--ikeda .speaker { text-align: right; }
+.zero-article .bubble { --bubble-fill: #eaf4fb; position: relative; padding: 16px 20px; border-radius: 10px; background: var(--bubble-fill); font: inherit; }
+.zero-article .bubble p { font: inherit; margin: 0; }
+.zero-article .bubble p + p { margin-top: var(--zero-paragraph-gap); }
+.zero-article .bubble::before { content: ""; position: absolute; top: 18px; left: -9px; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-right: 10px solid var(--bubble-fill); }
+.zero-article .speech--ikeda .bubble { --bubble-fill: #f7f2e9; }
+.zero-article .speech--ikeda .bubble::before { left: auto; right: -9px; border-right: 0; border-left: 10px solid var(--bubble-fill); }
+.zero-article .chapter-number { display: block; font-size: 48px; line-height: 1; color: #005cab; margin-bottom: 16px; font-weight: 700; }
+.zero-article .chapter-link { display: inline-block; color: #005cab; margin-top: 32px; text-underline-offset: .25em; }
+@media (max-width: 767px) {
+  .zero-article { --zero-body-size: 1rem; --zero-paragraph-gap: 30px; --zero-h2-size: 1.75rem; --zero-h3-size: 1.375rem; --zero-section-gap: 72px; --zero-figure-gap: 36px; }
+  .zero-article h2 { margin-bottom: 24px; }
+  .zero-article h3 { margin-top: 40px; margin-bottom: 20px; }
+  .zero-article .dialogue { gap: 24px; margin-top: 36px; }
+  .zero-article .speech { gap: 12px; }
+  .zero-article .avatar { flex-basis: 44px; width: 44px; height: 44px; }
+  .zero-article .speaker, .zero-article figcaption { font-size: 13px; }
+  .zero-article .bubble { padding: 12px 16px; }
+  .zero-article .chapter-number { font-size: 40px; }
+}
