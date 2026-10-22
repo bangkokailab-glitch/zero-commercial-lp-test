@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>ZEROラボ｜メインビジュアル C案</title>
+  <link rel="icon" href="../../service/lp/images/favicon.ico">
+  <link rel="preconnect" href="https://morisawafonts.net" crossorigin>
+  <link rel="stylesheet" href="https://morisawafonts.net/c/01M4BM2NTN3DGZBTPFB0NSJDMZ/mf.css">
+  <link rel="stylesheet" href="../../zero-labo-media/zero-morisawa-font.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">本文へ進む</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://zero-s.jp/labo/" aria-label="ZEROラボ ホーム"><img src="../../service/lp/images/logo-w.svg" alt="" width="75" height="71"><span data-zero-font="bold">ZEROラボ</span></a>
+      <a class="mobile-contact" href="https://zero-s.jp/contact/" aria-label="お問い合わせ"><svg viewBox="0 0 32 24" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="21" rx="1.5"/><path d="m3 4 13 10L29 4"/></svg></a>
+      <button class="menu-button" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="メニューを開く"><i></i><i></i><i></i></button>
+      <nav id="site-nav" aria-label="メインナビゲーション">
+        <a href="https://zero-s.jp/labo/">ホーム</a>
+        <a href="https://zero-s.jp/labo/?cat=2">LPO対策</a>
+        <a href="https://zero-s.jp/labo/?cat=4">SEO対策</a>
+        <a href="https://zero-s.jp/labo/?cat=3">メディア運営</a>
+        <a href="https://zero-s.jp/labo/?page_id=7796">WEB用語集</a>
+        <a class="desktop-contact" href="https://zero-s.jp/contact/"><svg viewBox="0 0 32 24" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="21" rx="1.5"/><path d="m3 4 13 10L29 4"/></svg>お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="../../service/lp/images/mv-img.jpg" aria-hidden="true"><source src="../../service/lp/images/mv.mp4" type="video/mp4"></video>
+      <div class="hero-inner">
+        <div class="hero-identity"><img class="hero-logo" src="../../service/lp/secret-cover-white-designs/legacy-logo-centered.svg" alt="ZERO" width="153" height="156"><span class="hero-logo-text" data-zero-font="bold">ZEROラボ</span></div>
+        <p class="white-band" data-copy="sub" data-zero-font="bold">基礎から企画・制作・集客・改善まで。</p>
+        <h1 id="hero-title" data-copy="main" data-zero-font="bold"><span>ランディングページを、</span><strong><em>知る。</em><em>つくる。</em><em>育てる。</em></strong></h1>
+        <div class="step-grid" aria-label="ZEROラボで学べる3つの流れ">
+          <article class="step-card"><span class="step-num">01</span><div class="step-title"><span class="step-glyph" aria-hidden="true">?</span><h2 data-zero-font="bold">知る</h2></div><p data-zero-font="regular">LPの基礎と考え方を<br>一つずつ理解する</p></article>
+          <article class="step-card"><span class="step-num">02</span><div class="step-title"><span class="step-glyph" aria-hidden="true">+</span><h2 data-zero-font="bold">つくる</h2></div><p data-zero-font="regular">企画・文章・デザインを<br>実践に変える</p></article>
+          <article class="step-card"><span class="step-num">03</span><div class="step-title"><span class="step-glyph" aria-hidden="true">↗</span><h2 data-zero-font="bold">広げる</h2></div><p data-zero-font="regular">届け方を考え<br>改善を重ねる</p></article>
+        </div>
+        <p class="source" data-copy="source" data-zero-font="regular">2013年創業、LP制作を専門とする株式会社ZEROが届ける、実践の教科書。</p>
+      </div>
+    </section>
+  </main>
+  <script>
+    const button=document.querySelector('.menu-button'),nav=document.querySelector('#site-nav');
+    button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');nav.classList.toggle('open',open)});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&button.getAttribute('aria-expanded')==='true'){button.click();button.focus()}});
+    const video=document.querySelector('.hero-video'),motion=matchMedia('(prefers-reduced-motion: reduce)');
+    const control=()=>{if(motion.matches||document.hidden){video.pause()}else{video.play().catch(()=>{})}};
+    motion.addEventListener('change',control);document.addEventListener('visibilitychange',control);
+    if('IntersectionObserver'in window){new IntersectionObserver(entries=>{if(entries[0].isIntersecting)control();else video.pause()},{threshold:0}).observe(document.querySelector('.hero'))}else control();
+  </script>
+</body>
+</html>
