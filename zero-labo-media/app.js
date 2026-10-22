@@ -63,7 +63,7 @@ out+=divider('#eaf4fb','var(--footer-blue)',12)+'<section class="share-section" 
  if(document.body.dataset.page==='news')document.querySelectorAll('a[href="/zero-commercial-lp-test/zero-labo-media/news/"]').forEach(a=>a.setAttribute('aria-current','page')); if(isAbout)document.querySelectorAll('a[href="/zero-commercial-lp-test/zero-labo-media/about/"]').forEach(a=>a.setAttribute('aria-current','page')); if(document.body.dataset.page==='glossary')document.querySelectorAll('a[href="/zero-commercial-lp-test/zero-labo-media/glossary/"]').forEach(a=>a.setAttribute('aria-current','page'));
  q('.header-chapters').innerHTML=data.chapters.map(c=>'<a href="'+chapterDestination(c,!isSubpage).url+'">第'+c.number+'章　'+esc(c.label)+'</a>').join('');
  q('.footer-chapters').innerHTML=data.chapters.map(c=>'<a href="'+chapterDestination(c,!isSubpage).url+'">第'+c.number+'章　'+esc(c.parent.title)+(isSubpage&&chapterDestination(c).introduction?'（章の紹介）':'')+'</a>').join('');
- if(!isSubpage)q('.book-links').innerHTML=data.chapters.map(c=>'<a href="#chapter-'+c.number+'" style="top:'+(52.3+((c.number-1)%5)*6.0)+'%" aria-label="第'+c.number+'章 '+esc(c.label)+'へ"></a>').join('');
+ if(!isSubpage&&q('.book-links'))q('.book-links').innerHTML=data.chapters.map(c=>'<a href="#chapter-'+c.number+'" style="top:'+(52.3+((c.number-1)%5)*6.0)+'%" aria-label="第'+c.number+'章 '+esc(c.label)+'へ"></a>').join('');
 }catch(e){if(!isSubpage)q('#article').innerHTML='<section class="intro-section"><div class="section-inner"><h2>本文を読み込めませんでした。</h2><p>ページを再読み込みしてください。</p></div></section>';console.error(e);}
 const menuToggle=q('.mobile-menu-toggle'),mainNav=q('#primary-navigation'),mobileNavQuery=matchMedia('(max-width: 767px)');
 function setMobileMenu(open,returnFocus=false){
