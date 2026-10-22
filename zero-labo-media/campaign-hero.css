@@ -264,9 +264,9 @@
   }
 }
 @media (max-width:360px) {
-  .hero--campaign { height:600px; }
-  .hero--campaign .hero-art { height:542px; }
-  .hero--campaign .hero-media > img { width:440px; right:-111px; }
+  .hero--campaign { height:568px; }
+  .hero--campaign .hero-art { height:510px; }
+  .hero--campaign .hero-media > img { width:390px; right:-90px; }
   .hero--campaign .hero-copy h1 { font-size:30px; }
   .hero--campaign .hero-copy h1 .copy-intro { font-size:22px; }
 }
