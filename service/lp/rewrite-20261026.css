@@ -33,7 +33,7 @@
 #secret .rewrite-copy .rewrite-laundry-scene { max-width:680px; margin:26px auto; }
 #secret .rewrite-copy .rewrite-laundry-scene img { display:block; width:100%; height:auto; margin:0; }
 #secret .rewrite-fv-caption .secret06-fv-caption { display:block; }
-#secret .rewrite-story .story-note-heading.rewrite-story-heading { font-family:var(--zero-shingo-bold); font-size:26px; line-height:1.65; padding:0; margin:0; }
+#secret .rewrite-story .story-note-heading.rewrite-story-heading { font-family:var(--zero-shingo-bold); font-size:26px; line-height:1.65; padding:0; margin:0; width:auto; max-width:100%; min-width:0; box-sizing:border-box; overflow-wrap:anywhere; }
 #secret .rewrite-story .story-note-takeaway { font-size:17px; line-height:1.9; }
 #secret .rewrite-text-flow { background:#f0f8f9; padding:24px; margin:28px 0; }
 #secret .rewrite-text-flow figcaption { font-family:var(--zero-shingo-bold); font-size:20px; line-height:1.6; margin-bottom:20px; }

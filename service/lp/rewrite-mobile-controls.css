@@ -1,0 +1,144 @@
+/* Editorial preview only: reuse the existing controls in a compact mobile bar. */
+@media (max-width: 768px) {
+  html.has-rewrite-mobile-controls {
+    scroll-padding-bottom: calc(var(--rewrite-mobile-controls-height, 68px) + 16px);
+  }
+
+  body[data-editorial-version="20261026"].has-rewrite-mobile-controls {
+    padding-bottom: var(--rewrite-mobile-controls-height, 68px);
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls {
+    position: fixed;
+    z-index: 1100;
+    inset: auto 0 0;
+    display: grid;
+    grid-template-columns: 98px minmax(0, 1fr);
+    align-items: stretch;
+    gap: 8px;
+    box-sizing: border-box;
+    padding: 8px max(12px, env(safe-area-inset-right, 0px))
+      calc(8px + env(safe-area-inset-bottom, 0px))
+      max(12px, env(safe-area-inset-left, 0px));
+    background: #111;
+    box-shadow: 0 -2px 12px #0005;
+    pointer-events: none;
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls > .fix-menu.pc.is-compact-ready,
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls > .sticky-consultation {
+    position: static;
+    inset: auto;
+    bottom: 0;
+    width: auto;
+    min-width: 0;
+    height: 52px;
+    min-height: 44px;
+    aspect-ratio: auto;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    pointer-events: auto;
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls .fix-menu.pc.is-compact-ready .fix-menu-toggle {
+    height: 52px;
+    min-height: 44px;
+    padding: 6px 10px;
+    border: 2px solid #fff;
+    border-radius: 14px;
+    gap: 8px;
+    font-family: var(--zero-shingo-bold, sans-serif);
+    font-size: 16px;
+    line-height: 1.25;
+    box-shadow: 0 2px 0 #08737b;
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls .fix-menu.pc.is-compact-ready .fix-menu-toggle::after {
+    content: none;
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls .sticky-consultation__link {
+    display: block;
+    width: 100%;
+    height: 52px;
+    min-height: 44px;
+    border-radius: 14px;
+    animation: none;
+    transform: none;
+    translate: none;
+    touch-action: manipulation;
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls .sticky-consultation__circle {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    gap: 12px;
+    padding: 4px 10px;
+    border: 2px solid #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 0 #950013;
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls .sticky-consultation__label {
+    font-family: var(--zero-shingo-bold, sans-serif);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.35;
+    animation: none;
+    transform: none;
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls .sticky-consultation__arrow {
+    flex: 0 0 23px;
+    width: 23px;
+    height: 18px;
+    animation: none;
+    transform: none;
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls .fix-menu.pc.is-compact-ready.is-expanded > ul {
+    position: fixed;
+    top: auto;
+    left: max(12px, env(safe-area-inset-left, 0px));
+    right: max(12px, env(safe-area-inset-right, 0px));
+    bottom: calc(var(--rewrite-mobile-controls-height, 68px) + 8px);
+    width: auto;
+    max-width: none;
+    max-height: max(44px, calc(100dvh - var(--rewrite-mobile-controls-height, 68px) - var(--rewrite-mobile-header-height, 72px) - 24px));
+    padding: 4px 12px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    pointer-events: auto;
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls .fix-menu a {
+    min-height: 44px;
+    font-family: var(--zero-shingo-regular, sans-serif);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  body[data-editorial-version="20261026"] .rewrite-mobile-controls :is(a, button):focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px #08737b;
+  }
+
+  /* The shared campaign script still hides the duplicate red CTA. Keep the
+     space stable, while letting the uncovered page show through on its right. */
+  html.gift-cta-overlaps-floating body[data-editorial-version="20261026"] .rewrite-mobile-controls {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  html.gift-cta-overlaps-floating body[data-editorial-version="20261026"] .rewrite-mobile-controls > .sticky-consultation:not(:focus-within) {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
