@@ -44,6 +44,7 @@
 #secret .rewrite-text-flow li strong { font-size:18px; line-height:1.7; }
 #secret .rewrite-text-flow .note { color:#536167; font-size:14px; line-height:1.7; margin:18px 0 0; }
 @media(max-width:768px) {
+  #secret.secrets-accordion-ready .rewrite-heading-static { padding:16px 14px; cursor:default; }
   #secret .rewrite-copy > h4 { font-size:20px; line-height:1.65; margin:30px 0 16px; padding-left:10px; }
   #secret .rewrite-copy > :is(p,ul,ol), #secret .rewrite-intro p, #secret .rewrite-closing p { font-size:17px; line-height:1.9; }
   #secret .rewrite-copy > .note { font-size:14px; }
