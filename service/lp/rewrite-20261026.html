@@ -154,6 +154,31 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
   }
 }
 </style>
+<style id="approved-subheading-design-b">
+/* Approved 2026-11-05: B / pale band, black text and cyan left rule.
+   Scoped to the AI rewrite's editorial H4s, including the story examples. */
+#secret .rewrite-copy > h4,
+#secret .rewrite-story .story-note-heading.rewrite-story-heading {
+  position:static; display:block; width:auto; min-width:0; max-width:100%;
+  height:auto; min-height:0; box-sizing:border-box; transform:none;
+  color:#181818; background:#eef6f6;
+  font-family:var(--zero-shingo-bold); font-weight:700;
+  font-size:24px; line-height:1.65; letter-spacing:0; text-align:left;
+  padding:14px 18px; border:0; border-left:4px solid #16b5c2;
+  border-radius:0; box-shadow:none; overflow-wrap:anywhere;
+}
+#secret .rewrite-copy > h4 { margin:38px 0 20px; }
+#secret .rewrite-copy > h4:first-child { margin-top:12px; }
+#secret .rewrite-story .story-note-heading.rewrite-story-heading { margin:0; }
+@media(max-width:768px) {
+  #secret .rewrite-copy > h4,
+  #secret .rewrite-story .story-note-heading.rewrite-story-heading {
+    font-size:20px; line-height:1.65; padding:12px;
+  }
+  #secret .rewrite-copy > h4 { margin:30px 0 18px; }
+  #secret .rewrite-copy > h4:first-child { margin-top:12px; }
+}
+</style>
 </head>
 <body data-editorial-version="20261026">
 <!-- Inline STEP artwork also works when this test page is opened via file://. -->
