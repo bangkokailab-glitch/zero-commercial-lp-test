@@ -185,6 +185,36 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
   #secret #secrets-box-1-panel>.secrets-closing--text>p{font-size:clamp(18px,3cqi,28px);text-wrap:nowrap}
 }
 </style>
+<style id="secret01-purpose-readable-table">
+/* Preserve the four-column comparison; separate examples from decision criteria. */
+#secret #secrets-box-44-panel>.secret01-purpose-types{font-family:var(--zero-shingo-regular);font-size:16px;line-height:1.85}
+#secret #secrets-box-44-panel>.secret01-purpose-types :is(th,td){padding:18px 16px;vertical-align:top}
+#secret #secrets-box-44-panel>.secret01-purpose-types tbody th{width:auto;background:#edf7f8;color:#176b73}
+#secret #secrets-box-44-panel>.secret01-purpose-types .purpose-type-name{display:block;font-family:var(--zero-shingo-bold);font-size:18px;line-height:1.55}
+#secret #secrets-box-44-panel>.secret01-purpose-types .purpose-type-number{display:block;margin-bottom:8px;font-size:22px;line-height:1.2}
+#secret #secrets-box-44-panel>.secret01-purpose-types .purpose-type-note{display:block;margin-top:10px;font-family:var(--zero-shingo-regular);font-size:13px;font-weight:400;line-height:1.8}
+#secret #secrets-box-44-panel>.secret01-purpose-types :is(p,ul,li){width:auto;max-width:none;min-height:0;color:#231815;font-family:var(--zero-shingo-regular);font-size:inherit;font-weight:400;line-height:inherit;text-align:left}
+#secret #secrets-box-44-panel>.secret01-purpose-types p{margin:0;padding:0}
+#secret #secrets-box-44-panel>.secret01-purpose-types p+p{margin-top:14px;padding-top:12px;border-top:1px dashed #cbd6d9}
+#secret #secrets-box-44-panel>.secret01-purpose-types b{font-family:var(--zero-shingo-bold);font-weight:700;background:transparent!important;color:inherit!important;padding:0}
+#secret #secrets-box-44-panel>.secret01-purpose-types .purpose-points{margin:0;padding:0 0 0 1.05em;list-style:disc}
+#secret #secrets-box-44-panel>.secret01-purpose-types .purpose-points>li{display:list-item;margin:0;padding:0;list-style:disc}
+#secret #secrets-box-44-panel>.secret01-purpose-types .purpose-points>li+li{margin-top:14px}
+#secret #secrets-box-44-panel>.secret01-purpose-types .purpose-points>li::marker{color:#176b73;font-size:.8em}
+@media(max-width:768px){
+ #secret #secrets-box-44-panel>.secret01-purpose-types :is(th,td){padding:16px}
+ #secret #secrets-box-44-panel>.secret01-purpose-types tbody tr{border:1px solid #cbd6d9;margin-bottom:24px}
+ #secret #secrets-box-44-panel>.secret01-purpose-types tbody th{background:#176b73;color:#fff}
+ #secret #secrets-box-44-panel>.secret01-purpose-types .purpose-type-name{font-size:20px}
+ #secret #secrets-box-44-panel>.secret01-purpose-types .purpose-type-number{display:inline;margin-right:8px;font-size:20px}
+ #secret #secrets-box-44-panel>.secret01-purpose-types .purpose-type-note{margin-top:6px;font-size:14px}
+ #secret #secrets-box-44-panel>.secret01-purpose-types td::before{margin-bottom:10px;font-size:16px}
+}
+/* Keep the original Secret 1-3 closing copy on two desktop lines. */
+@media(min-width:769px){
+ #secret #rewrite-secret01-03-panel>.secrets-closing--text>p{font-size:clamp(16px,2.45cqi,26px);text-wrap:nowrap}
+}
+</style>
 </head>
 <body data-editorial-version="20261026">
 <!-- Inline STEP artwork also works when this test page is opened via file://. -->
@@ -632,12 +662,27 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 </div>
 </section>
 <table class="secret01-purpose-types" aria-labelledby="secret01-purpose-types-heading">
-<colgroup><col style="width:20%"><col style="width:20%"><col style="width:26%"><col style="width:34%"></colgroup>
+<colgroup><col style="width:19%"><col style="width:21%"><col style="width:27%"><col style="width:33%"></colgroup>
 <thead><tr><th scope="col">LPの型</th><th scope="col">特徴</th><th scope="col">適した商材</th><th scope="col">設計の要点</th></tr></thead>
 <tbody>
-<tr><th scope="row">①直接購入型（主にBtoC向け・EC・単品通販など）</th><td data-label="特徴">LP上でそのまま決済・注文を完結させる設計。</td><td data-label="適した商材">コスメ・サプリメント・食品・アパレルなど、低〜中単価で商品の価値や利用イメージが直感的に湧く個人向け商材。</td><td data-label="設計の要点">初回購入のハードルを下げるお試し価格や返金保証、離脱（カゴ落ち）を防ぐ入力フォームの簡略化。</td></tr>
-<tr><th scope="row">②問合せ型（BtoB商材・高単価BtoCサービスなど）</th><td data-label="特徴">個別見積もり、相談、商談、対面カウンセリングなどをゴールとし、直接の営業・提案フローへ繋ぐ設計。</td><td data-label="適した商材">法人向けシステム・業務支援サービス（BtoB）、士業、住宅・リフォーム、高価格帯のパーソナルジムなど。</td><td data-label="設計の要点">導入実績や事例、他社比較による圧倒的な安心感。「まずは無料で概算見積・相談ができる」という安心感を与え、相談時の心理的抵抗を解消すること。</td></tr>
-<tr><th scope="row">③リード獲得型（主にBtoC向けサービス・検討期間の長い商材など）</th><td data-label="特徴">LINE公式アカウント登録、無料セミナー参加、資料請求、無料会員登録、簡易診断などを入口とし、見込み客の連絡先を取得する設計。</td><td data-label="適した商材">美容クリニックやエステ、スクール・習い事、金融・投資相談、転職・キャリア支援など、「いきなり申し込むには不安がある」「まずは役立つ情報や特典がほしい」ユーザー層。</td><td data-label="設計の要点">「友だち追加で限定クーポン」「1分でわかる無料肌診断」など、登録するメリット（オファー）を明確にし、ステップ配信やメルマガ等で継続的に価値を伝えて本契約・来店へと引き上げること。</td></tr>
+<tr>
+<th scope="row"><span class="purpose-type-name"><span class="purpose-type-number">①</span>直接購入型</span><span class="purpose-type-note">（主にBtoC向け・EC・単品通販など）</span></th>
+<td data-label="特徴"><p>LP上でそのまま<mark>決済・注文を完結</mark>させる設計。</p></td>
+<td data-label="適した商材"><p><b>コスメ・サプリメント・食品・アパレル</b>など。</p><p class="purpose-detail">低〜中単価で、商品の価値や利用イメージが直感的に湧く個人向け商材。</p></td>
+<td data-label="設計の要点"><ul class="purpose-points"><li>初回購入のハードルを下げる<mark>お試し価格や返金保証</mark>。</li><li>離脱（カゴ落ち）を防ぐ<mark>入力フォームの簡略化</mark>。</li></ul></td>
+</tr>
+<tr>
+<th scope="row"><span class="purpose-type-name"><span class="purpose-type-number">②</span>問合せ型</span><span class="purpose-type-note">（BtoB商材・高単価BtoCサービスなど）</span></th>
+<td data-label="特徴"><p><b>個別見積もり・相談・商談・対面カウンセリング</b>などをゴールとし、直接の<mark>営業・提案フローへ繋ぐ</mark>設計。</p></td>
+<td data-label="適した商材"><ul class="purpose-points"><li><b>法人向けシステム・業務支援サービス</b>（BtoB）</li><li><b>士業、住宅・リフォーム、高価格帯のパーソナルジム</b>など。</li></ul></td>
+<td data-label="設計の要点"><ul class="purpose-points"><li><b>導入実績や事例、他社比較</b>による圧倒的な安心感。</li><li>「<mark>まずは無料で概算見積・相談ができる</mark>」という安心感を与え、相談時の心理的抵抗を解消すること。</li></ul></td>
+</tr>
+<tr>
+<th scope="row"><span class="purpose-type-name"><span class="purpose-type-number">③</span>リード獲得型</span><span class="purpose-type-note">（主にBtoC向けサービス・検討期間の長い商材など）</span></th>
+<td data-label="特徴"><p><b>LINE公式アカウント登録・無料セミナー参加・資料請求・無料会員登録・簡易診断</b>などを入口とし、<mark>見込み客の連絡先を取得</mark>する設計。</p></td>
+<td data-label="適した商材"><p><b>美容クリニックやエステ、スクール・習い事、金融・投資相談、転職・キャリア支援</b>など。</p><p class="purpose-detail">「いきなり申し込むには不安がある」「まずは役立つ情報や特典がほしい」ユーザー層。</p></td>
+<td data-label="設計の要点"><ul class="purpose-points"><li>「友だち追加で限定クーポン」「1分でわかる無料肌診断」など、<mark>登録するメリット（オファー）を明確に</mark>する。</li><li><b>ステップ配信やメルマガ等で継続的に価値を伝えて</b>、<mark>本契約・来店へ</mark>と引き上げること。</li></ul></td>
+</tr>
 </tbody></table>
 <h4>すぐに契約しにくい人には、検討を進める一歩目を用意する</h4>
 <p>「興味はある。でも、いきなり申し込むのはためらう」。</p>
