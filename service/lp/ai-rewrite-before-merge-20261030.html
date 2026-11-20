@@ -119,6 +119,41 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 <link rel="stylesheet" href="secret03-small-edits-20261120.css">
 <link rel="stylesheet" href="secret03-mindmap-20261120.css">
 <link rel="stylesheet" href="secret03-synthesis-compact-20261120.css">
+<style id="reading-emphasis-20261120">
+/* Approved reading emphasis: scoped to Secret 2 and Secret 3. */
+#secret-02 strong.lp-reading-emphasis,
+#secret-03 strong.lp-reading-emphasis {
+  background:none !important;
+  background-image:none !important;
+  box-shadow:none !important;
+  color:#111 !important;
+  font-weight:700;
+}
+#secret-02 mark.s1-entry-highlight,
+#secret-03 mark.s1-entry-highlight {
+  color:#111 !important;
+  background:#fff100 !important;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}
+#secret-02 mark.s1-entry-highlight > strong,
+#secret-03 mark.s1-entry-highlight > strong {
+  color:#111 !important;
+}
+/* These six closing sentences were explicitly designated for yellow + black. */
+#secret-03 .s3v17-closing mark.s1-entry-highlight {
+  background:#fff100 !important;
+  background-image:none !important;
+  color:#111 !important;
+  padding:0 .08em;
+}
+#secret-03 .s3v17-closing mark.s1-entry-highlight strong,
+#secret-03 .s3v17-closing mark.s1-entry-highlight span {
+  color:#111 !important;
+  background:none !important;
+  text-shadow:none !important;
+}
+</style>
 </head>
 <body data-editorial-version="20261026">
 <!-- Inline STEP artwork also works when this test page is opened via file://. -->
@@ -833,10 +868,10 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 <h3 class="font30" id="secrets-box-195"><button class="secrets-toggle" id="secrets-box-195-toggle" type="button" aria-expanded="true" aria-controls="secrets-box-195-panel" disabled><span class="secrets-toggle-copy" data-s3-source="p05">【顧客分析】検索意図と行動心理から探る<span class="s3v17-fullwidth">「</span>深層ニーズの言語化<span class="s3v17-fullwidth">」</span></span><span class="secrets-toggle-indicator" aria-hidden="true"></span></button></h3>
 <div role="group" class="secrets-panel rewrite-copy s3v17-copy" id="secrets-box-195-panel" aria-labelledby="secrets-box-195">
 <h4 id="s3v17-customer-context" class="s3v17-heading">属性だけでなく、悩みと購入動機を理解する</h4>
-<p data-s3-source="p06">まず最初に着手する顧客分析とは、<span class="s3v17-fullwidth">「</span>自社の商品やサービスを求めている見込み客が、どんな状況でどんな悩みを抱え、何を求めて行動しているのか<span class="s3v17-fullwidth">」</span>を解き明かす作業です。</p>
+<p data-s3-source="p06">まず最初に着手する顧客分析とは、<span class="s3v17-fullwidth">「</span>自社の商品やサービスを求めている見込み客が、<strong class="lp-reading-emphasis">どんな状況でどんな悩みを抱え、何を求めて行動しているのか</strong><span class="s3v17-fullwidth">」</span>を解き明かす作業です。</p>
 <p data-s3-source="p07">年齢や性別、地域といった表面的な属性情報を集めることではなく、<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>その人がどんなきっかけで課題を感じ、どういう心理状態でお金を払ってでも解決したいと考えるのか<span class="s3v17-fullwidth">」</span></strong></mark>という感情の動きや行動パターンを深く理解することが本来の目的です。</p>
-<p data-s3-source="p08">一方、多くのLP制作では、<span class="s3v17-fullwidth">「</span>30代女性・主婦<span class="s3v17-fullwidth">」</span>といった形式的なターゲット設定だけで制作を進めてしまいますが、同じ年代・性別であっても抱えている悩みや購入動機は人それぞれです。</p>
-<p class="s3v19-example-intro">顧客・競合・自社を分析する考え方は、直接購入型LP・問い合わせ型LP・リード獲得型LPに共通します。ここでは、自宅用ホワイトニング商品を例に、分析から訴求軸を考える流れを解説します。</p>
+<p data-s3-source="p08">一方、多くのLP制作では、<span class="s3v17-fullwidth">「</span>30代女性・主婦<span class="s3v17-fullwidth">」</span>といった形式的なターゲット設定だけで制作を進めてしまいますが、<strong class="lp-reading-emphasis">同じ年代・性別であっても抱えている悩みや購入動機は人それぞれです。</strong></p>
+<p class="s3v19-example-intro">顧客・競合・自社を分析する考え方は、直接購入型LP・問い合わせ型LP・リード獲得型LPに共通します。<br><mark class="s1-entry-highlight"><strong>ここでは、自宅用ホワイトニング商品を例に、分析から訴求軸を考える流れを解説します。</strong></mark></p>
 <figure id="s3e20-entry" class="s3n19-figure s3e20-entry s3c20-compact" aria-labelledby="s3e20-entry-title">
 
 <p class="s3r20-eyebrow">ホワイトニング商品の例</p><figcaption id="s3e20-entry-title">悩みのきっかけから、<span>商品LPにたどり着くまで。</span></figcaption>
@@ -850,7 +885,7 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 </figure>
 
 <h4 data-s3-source="p09" id="s3v17-customer-needs" class="s3v17-heading">顕在ニーズの奥にある<span class="s3v17-fullwidth">「</span>深層ニーズ<span class="s3v17-fullwidth">」</span>を掘り起こす</h4>
-<p data-s3-source="p10">ユーザーが検索窓に入力するキーワード<span class="s3v17-fullwidth">（</span>顕在ニーズ<span class="s3v17-fullwidth">）</span>は、氷山の一角に過ぎません。</p>
+<p data-s3-source="p10">ユーザーが検索窓に入力する<strong class="lp-reading-emphasis">キーワード<span class="s3v17-fullwidth">（</span>顕在ニーズ<span class="s3v17-fullwidth">）</span>は、氷山の一角に過ぎません。</strong></p>
 <p data-s3-source="p11">そこでZERO式LP制作では、顕在ニーズと深層ニーズ<span class="s3v17-fullwidth">（</span>顧客インサイト<span class="s3v17-fullwidth">）</span>を分析した上で、表面的な属性の枠組みを超え、<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>その悩みが生まれた背景と感情の変化<span class="s3v17-fullwidth">（</span>カスタマージャーニー<span class="s3v17-fullwidth">）</span><span class="s3v17-fullwidth">」</span>を徹底的に解剖します。</strong></mark></p>
 <div class="s3v17-table-wrap"><table id="s3v17-needs-table" class="s3v17-table" aria-labelledby="s3v17-customer-needs">
 <colgroup><col style="width:31%"><col style="width:69%"></colgroup>
@@ -860,18 +895,18 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 </tr></thead><tbody>
 <tr>
 <th data-s3-source="p12" scope="row" data-label="ニーズの種類">顕在ニーズ<span class="s3v17-fullwidth">（</span>言葉にできる要望<span class="s3v17-fullwidth">）</span></th>
-<td data-s3-source="p13" data-label="具体例"><span class="s3v17-fullwidth">「</span>業務効率化ツールを導入したい<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>費用が安いリフォーム会社を探したい<span class="s3v17-fullwidth">」</span></td>
+<td data-s3-source="p13" data-label="具体例"><span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">業務効率化ツールを導入したい</strong><span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>費用が安いリフォーム会社を探したい<span class="s3v17-fullwidth">」</span><br><span class="s3-reading-example" data-s3-added-example="p13">ホワイトニング商品の例：<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>歯を白くしたい<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>自宅でできるケアを探したい<span class="s3v17-fullwidth">」</span></strong></mark>という要望。</span></td>
 </tr>
 <tr>
 <th data-s3-source="p14" scope="row" data-label="ニーズの種類">深層ニーズ<span class="s3v17-fullwidth">（</span>無意識の本音・恐れ<span class="s3v17-fullwidth">）</span></th>
-<td data-s3-source="p15" data-label="具体例"><span class="s3v17-fullwidth">「</span>面倒な入力ミスで部下に小言を言うストレスから解放されたい<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>安物買いの銭失いで家族に後悔されたくない、失敗の責任を負いたくない<span class="s3v17-fullwidth">」</span></td>
+<td data-s3-source="p15" data-label="具体例"><span class="s3v17-fullwidth">「</span>面倒な入力ミスで部下に小言を言う<strong class="lp-reading-emphasis">ストレスから解放されたい</strong><span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>安物買いの銭失いで家族に後悔されたくない、<strong class="lp-reading-emphasis">失敗の責任を負いたくない</strong><span class="s3v17-fullwidth">」</span><br><span class="s3-reading-example" data-s3-added-example="p15">ホワイトニング商品の例：<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>口元を気にせず自然に笑いたい<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>また続かずに終わりたくない<span class="s3v17-fullwidth">」</span></strong></mark>という本音。</span></td>
 </tr>
 </tbody></table></div>
 <figure id="s3v2-insight" class="s3n19-figure s3n19-persona s3e20-insight s3c20-compact" aria-labelledby="s3e20-insight-title"><p class="s3r20-eyebrow">ホワイトニング商品の例</p><figcaption id="s3e20-insight-title">「歯を白くしたい」の奥にある、<span>本音。</span></figcaption><p class="s3n19-common">共通する属性 <strong>30代・女性</strong><span class="s3ct20-relation">経験 → 望む未来</span></p><div class="s3n19-cases"><section class="s3n19-case"><h5>写真を見返すとき</h5><div class="s3n19-case-scene"><div class="s3n19-art"><svg class="s3rd20-scene" viewBox="0 0 803 486" preserveAspectRatio="xMidYMid slice" role="img" aria-label="スマホの写真を見返して口元を気にする女性"><image href="images/secret03-readable-20261120/persona-landscape-atlas.webp" width="1606" height="979"/></svg></div><div class="s3n19-case-voice"><p class="s3n19-trigger">友人との写真で、歯の色が気になった。写真を撮ると、つい笑顔が控えめになる。</p><p class="s3n19-speech"><strong>写真でも<br>自然に笑いたい。</strong></p></div></div></section><section class="s3n19-case"><h5>近くで話すとき</h5><div class="s3n19-case-scene"><div class="s3n19-art"><svg class="s3rd20-scene" viewBox="803 0 803 486" preserveAspectRatio="xMidYMid slice" role="img" aria-label="対面で話すとき、口元を手で隠してしまう女性"><image href="images/secret03-readable-20261120/persona-landscape-atlas.webp" width="1606" height="979"/></svg></div><div class="s3n19-case-voice"><p class="s3n19-trigger">人と近くで話す機会が増え、口元を意識するようになった。</p><p class="s3n19-speech"><strong>口元を気にせず、<br>堂々と話したい。</strong></p></div></div></section><section class="s3n19-case"><h5>同窓会を控えたとき</h5><div class="s3n19-case-scene"><div class="s3n19-art"><svg class="s3rd20-scene" viewBox="0 487 803 492" preserveAspectRatio="xMidYMid slice" role="img" aria-label="同窓会の案内を手に、友人との再会を思い浮かべる女性"><image href="images/secret03-readable-20261120/persona-landscape-atlas.webp" width="1606" height="979"/></svg></div><div class="s3n19-case-voice"><p class="s3n19-trigger">久しぶりに友人と会う予定ができ、笑顔が気になった。</p><p class="s3n19-speech"><strong>自信を持って、<br>友人と笑い合いたい。</strong></p></div></div></section><section class="s3n19-case"><h5>美意識の高い友人と<br>話すとき</h5><div class="s3n19-case-scene"><div class="s3n19-art"><svg class="s3rd20-scene" viewBox="803 487 803 492" preserveAspectRatio="xMidYMid slice" role="img" aria-label="美意識の高い友人の笑顔や口元に気づく女性"><image href="images/secret03-readable-20261120/persona-landscape-atlas.webp" width="1606" height="979"/></svg></div><div class="s3n19-case-voice"><p class="s3n19-trigger">美意識の高い友人の笑顔を見て、自分の歯の色も気になった。</p><p class="s3n19-speech"><strong>私も、<br>清潔感のある笑顔で<br>人と接したい。</strong></p></div></div></section></div><p class="s3n19-conclusion"><strong>経験の背景から、その人が望む未来をつかむ。</strong></p></figure>
 
 <h4 data-s3-source="p16" id="s3v17-customer-process" class="s3v17-heading">顧客インサイトの抽出プロセス</h4>
-<p data-s3-source="p17">ユーザーの頭の中にある<span class="s3v17-fullwidth">「</span>本音<span class="s3v17-fullwidth">」</span>は、机の上のアンケートや一般的な属性データだけでは決して見えてきません。</p>
-<p data-s3-source="p18">そこで、以下の3つのプロセスで深掘りし、精度の高い仮説を導きます。</p>
+<p data-s3-source="p17">ユーザーの頭の中にある<span class="s3v17-fullwidth">「</span>本音<span class="s3v17-fullwidth">」</span>は、<strong class="lp-reading-emphasis">机の上のアンケートや一般的な属性データだけでは決して見えてきません。</strong></p>
+<p data-s3-source="p18">そこで、以下の<mark class="s1-entry-highlight"><strong>3つのプロセスで深掘りし、精度の高い仮説を導きます。</strong></mark></p>
 <div class="s3v17-table-wrap"><table id="s3v17-process-table" class="s3v17-table" aria-labelledby="s3v17-customer-process">
 <colgroup><col style="width:31%"><col style="width:69%"></colgroup>
 <thead><tr>
@@ -880,15 +915,15 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 </tr></thead><tbody>
 <tr>
 <th data-s3-source="p19" scope="row" data-label="抽出プロセス">① 検索クエリの文脈解読</th>
-<td data-s3-source="p20" data-label="調べる内容・整理すること">単体ワードだけでなく、<span class="s3v17-fullwidth">「</span>比較<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>失敗<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>デメリット<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>相場<span class="s3v17-fullwidth">」</span>などの複合ワードを分析し、<mark class="s1-entry-highlight"><strong>購入をためらう警戒心や、他社と比較する際の迷いのポイントを特定します。</strong></mark></td>
+<td data-s3-source="p20" data-label="調べる内容・整理すること">単体ワードだけでなく、<span class="s3v17-fullwidth">「</span>比較<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>失敗<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>デメリット<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>相場<span class="s3v17-fullwidth">」</span>などの複合ワードを分析し、<mark class="s1-entry-highlight"><strong>購入をためらう警戒心や、他社と比較する際の迷いのポイントを特定します。</strong></mark><br><span class="s3-reading-example" data-s3-added-example="p20">ホワイトニング商品の例：<span class="s3v17-fullwidth">「</span>自宅 ホワイトニング 続かない<span class="s3v17-fullwidth">」</span>という検索語から、<strong class="lp-reading-emphasis">準備の手間や続けにくさへの不安を探ります。</strong></span></td>
 </tr>
 <tr>
 <th data-s3-source="p21" scope="row" data-label="抽出プロセス">② 定性データの一次情報収集</th>
-<td data-s3-source="p22" data-label="調べる内容・整理すること">既存顧客の生の声、営業商談時の<span class="s3v17-fullwidth">「</span>失注・断り文句<span class="s3v17-fullwidth">」</span>、Q&amp;Aサイトのリアルな相談履歴を収集し、表面的な希望ではなく、<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>購入直前の最後の決め手・躊躇した理由<span class="s3v17-fullwidth">」</span>を言語化します。</strong></mark></td>
+<td data-s3-source="p22" data-label="調べる内容・整理すること"><strong class="lp-reading-emphasis">既存顧客の生の声</strong>、営業商談時の<span class="s3v17-fullwidth">「</span>失注・断り文句<span class="s3v17-fullwidth">」</span>、Q&amp;Aサイトのリアルな相談履歴を収集し、表面的な希望ではなく、<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>購入直前の最後の決め手・躊躇した理由<span class="s3v17-fullwidth">」</span>を言語化します。</strong></mark><br><span class="s3-reading-example" data-s3-added-example="p22">ホワイトニング商品の例：<strong class="lp-reading-emphasis">準備が負担だった場面や、以前のケアをやめた理由を確認します。</strong></span></td>
 </tr>
 <tr>
 <th data-s3-source="p23" scope="row" data-label="抽出プロセス">③ カスタマージャーニーへの落とし込み</th>
-<td data-s3-source="p24" data-label="調べる内容・整理すること">課題の自覚から情報検索、競合比較、最終決断に至るまでのユーザーの感情変化を一本の線で整理し、<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>どの心理状態で、どんな言葉と根拠をぶつければ最も心が動くか<span class="s3v17-fullwidth">」</span>を行動マップとして可視化します。</strong></mark></td>
+<td data-s3-source="p24" data-label="調べる内容・整理すること">課題の自覚から情報検索、競合比較、最終決断に至るまでのユーザーの感情変化を一本の線で整理し、<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>どの心理状態で、どんな言葉と根拠をぶつければ最も心が動くか<span class="s3v17-fullwidth">」</span>を行動マップとして可視化します。</strong></mark><br><span class="s3-reading-example" data-s3-added-example="p24">ホワイトニング商品の例：悩みに気づき、自宅でのケアを検索し、<strong class="lp-reading-emphasis">商品LPで比較・購入を判断するまでの気持ちを整理します。</strong></span></td>
 </tr>
 </tbody></table></div>
 <figure id="s3d18-research" class="s3n19-figure s3n19-research s3r20-research s3c20-compact" aria-labelledby="s3n19-research-title"><p class="s3r20-eyebrow">ホワイトニング商品の例</p><figcaption id="s3n19-research-title">検索語とお客様の言葉から、<span>本音の仮説を立てる。</span></figcaption><p class="s3a19-research-lead">検索・聞き取りで得た手がかりを、仮説として整理する例です。</p><div class="s3n19-research-steps"><section class="s3n19-research-step"><h5>検索語を見る</h5><div class="s3n19-art"><svg class="s3rd20-scene" viewBox="0 0 803 489" preserveAspectRatio="xMidYMid slice" role="img" aria-label="自宅でできる歯のケアをスマホで調べる女性"><image href="images/secret03-readable-20261120/research-landscape-atlas.webp" width="1606" height="979"/></svg></div><div class="s3c20-copy"><p class="s3n19-query">自宅 ホワイトニング<br><strong>続かない</strong></p><p class="s3ct20-observe">「続かない」に注目。</p><p class="s3n19-short">続けられる方法を<br>探している？</p></div></section><section class="s3n19-research-step"><h5>体験を聞く</h5><div class="s3n19-art"><svg class="s3rd20-scene" viewBox="803 0 803 489" preserveAspectRatio="xMidYMid slice" role="img" aria-label="使わなくなったケア用品を見せながら、準備が負担だったことを話す女性"><image href="images/secret03-readable-20261120/research-landscape-atlas.webp" width="1606" height="979"/></svg></div><div class="s3c20-copy"><p class="s3n19-speech">「前は、準備が面倒で<br>やめてしまった。」</p><p class="s3ct20-observe">使った道具や時間も聞く。</p><p class="s3n19-short">どの手間が<br>負担になっていた？</p></div></section><section class="s3n19-research-step s3n19-hypothesis"><h5>本音の仮説を立てる</h5><div class="s3n19-art"><svg class="s3rd20-scene" viewBox="0 490 803 489" preserveAspectRatio="xMidYMid slice" role="img" aria-label="歯ブラシを手に、毎日の習慣に取り入れられるか考える女性"><image href="images/secret03-readable-20261120/research-landscape-atlas.webp" width="1606" height="979"/></svg></div><div class="s3c20-copy"><p class="s3n19-speech"><strong>きれいにしたい。<br>でも、また続かずに<br>終わりたくない。</strong></p><p class="s3n19-short">普段の歯磨きの流れなら<br>取り入れられる？</p></div></section><section class="s3n19-research-step s3r20-research-confirm"><h5>お客様に確かめる</h5><div class="s3n19-art"><svg class="s3rd20-scene" viewBox="803 490 803 489" preserveAspectRatio="xMidYMid slice" role="img" aria-label="口元の悩みについて、対面で話す女性"><image href="images/secret03-readable-20261120/research-landscape-atlas.webp" width="1606" height="979"/></svg></div><div class="s3c20-copy"><p class="s3a19-research-questions"><span>「どの準備が面倒だった？」</span><span>「どんな方法なら続けられそう？」</span></p><p class="s3a19-research-confirm">回答を踏まえ、購入をためらう理由の仮説を見直す。</p></div></section></div><p class="s3n19-conclusion s3a19-research-next"><strong>背景・気持ち・行動を、<br class="s3a19-mobile-break">次のカスタマージャーニーに整理する。</strong></p></figure>
@@ -954,11 +989,11 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 
 
 <p data-s3-source="p27">どれほど鋭いキャッチコピーであっても、<mark class="s1-entry-highlight"><strong>投げかけるタイミングや内容を誤れば、ただの押し売りに見えてしまいます。</strong></mark></p>
-<p data-s3-source="p28">例えば、<mark class="s1-entry-highlight"><strong>まだ課題に気づいたばかりの段階</strong></mark>でクロージングをかけても響かず、逆に<mark class="s1-entry-highlight"><strong>他社と比較して迷っている段階</strong></mark>で初歩的な説明を長々と並べても離脱を招くだけです。</p>
-<p data-s3-source="p29">カスタマージャーニーによって<span class="s3v17-fullwidth">「</span>どの心理状態のときに、どんな言葉と根拠を提示すれば疑念が晴れ、次の行動へ進みたくなるのか<span class="s3v17-fullwidth">」</span>という<mark class="s1-entry-highlight"><strong>感情の変化を時間軸で可視化</strong></mark>しているからこそ、ページをスクロールするごとに自然と納得が深まり、購入や問合せへと導かれる必然の導線が完成します。</p>
+<p data-s3-source="p28">例えば、<strong class="lp-reading-emphasis">まだ課題に気づいたばかりの段階でクロージングをかけても響かず</strong>、逆に他社と比較して迷っている段階で初歩的な説明を長々と並べても離脱を招くだけです。</p>
+<p data-s3-source="p29">カスタマージャーニーによって<span class="s3v17-fullwidth">「</span>どの心理状態のときに、どんな言葉と根拠を提示すれば疑念が晴れ、次の行動へ進みたくなるのか<span class="s3v17-fullwidth">」</span>という<mark class="s1-entry-highlight"><strong>感情の変化を時間軸で可視化しているからこそ</strong></mark>、<strong class="lp-reading-emphasis">ページをスクロールするごとに自然と納得が深まり、購入や問合せへと導かれる必然の導線が完成します。</strong></p>
 <div class="secrets-closing secrets-closing--text s3v17-closing">
-<p data-s3-source="p30" class="secrets-closing-yellow">顕在ニーズの奥にある<span class="s3v17-fullwidth">「</span>本音<span class="s3v17-fullwidth">」</span>を言語化することがすべての起点。</p>
-<p data-s3-source="p31" class="secrets-closing-blue">カスタマージャーニーが、売れるLPの骨格をつくる。</p>
+<p data-s3-source="p30" class="secrets-closing-yellow"><mark class="s1-entry-highlight"><strong>顕在ニーズの奥にある<span class="s3v17-fullwidth">「</span>本音<span class="s3v17-fullwidth">」</span>を言語化することがすべての起点。</strong></mark></p>
+<p data-s3-source="p31" class="secrets-closing-blue"><mark class="s1-entry-highlight"><strong>カスタマージャーニーが、売れるLPの骨格をつくる。</strong></mark></p>
 </div>
 </div>
 </section>
@@ -967,9 +1002,9 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 <div role="group" class="secrets-panel rewrite-copy s3v17-copy" id="secrets-box-244-panel" aria-labelledby="secrets-box-244">
 <h4 id="s3v17-competitor-context" class="s3v17-heading">顧客が比較する競合と、選ばれる理由を調べる</h4>
 <p data-s3-source="p33">見込み客の深層ニーズやカスタマージャーニーが明確になったら、次に着手するのが<span class="s3v17-fullwidth">「</span>競合分析<span class="s3v17-fullwidth">」</span>です。</p>
-<p data-s3-source="p34">競合分析とは、<span class="s3v17-fullwidth">「</span>見込み客が自社の商品・サービスと比較検討するライバル企業を特定し、その強み・弱み・集客手法を徹底的に調査する作業<span class="s3v17-fullwidth">」</span>です。</p>
+<p data-s3-source="p34">競合分析とは、<span class="s3v17-fullwidth">「</span>見込み客が自社の商品・サービスと<strong class="lp-reading-emphasis">比較検討するライバル企業を特定し、その強み・弱み・集客手法を徹底的に調査する作業</strong><span class="s3v17-fullwidth">」</span>です。</p>
 <p data-s3-source="p35">単にライバル企業を観察することではありません。<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>競合がどんなオファーをして選ばれているのか<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>ユーザーが競合に対してどんな不満や不安を抱えているのか<span class="s3v17-fullwidth">（</span>死角<span class="s3v17-fullwidth">）</span><span class="s3v17-fullwidth">」</span>を客観的に見極める</strong></mark>ことが本来の目的です。</p>
-<p data-s3-source="p36">検索やSNS広告から流入した見込み客は、貴社のLPだけで即決することはほぼなく、必ず検索上位や知名度のある競合と比較した上で判断を下します。だからこそ、顧客分析で掴んだニーズに対して、競合がどのようなオファーや訴求でアプローチしているかを調査する必要があるのです。</p>
+<p data-s3-source="p36">検索やSNS広告から流入した見込み客は、貴社のLPだけで即決することはほぼなく、必ず検索上位や知名度のある競合と比較した上で判断を下します。だからこそ、顧客分析で掴んだニーズに対して、<strong class="lp-reading-emphasis">競合がどのようなオファーや訴求でアプローチしているかを調査する必要がある</strong>のです。</p>
 <figure id="s3d18-search" class="s3d18-search" aria-labelledby="s3d18-search-title">
   <p class="s3r20-eyebrow">ホワイトニング商品の例</p><figcaption id="s3d18-search-title"><span>お客様と同じ入口から、</span><span>比較候補を見つける</span></figcaption>
   <p class="s3d18-note">自宅用ホワイトニング商品の調査例。商品A・B・Cは架空です。</p>
@@ -996,7 +1031,7 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
   <p class="s3edit20-search-summary">知名度だけでなく、同じ検索で出会うLPを調査対象に。</p>
 </figure>
 <h4 data-s3-source="p37" id="s3v17-competitor-frames" class="s3v17-heading">競合LPを丸裸にする<span class="s3v17-fullwidth">「</span>4つの解剖フレーム<span class="s3v17-fullwidth">」</span></h4>
-<p data-s3-source="p38">ZERO式売れるLP制作では、広告出稿量が多く自然検索でも上位に位置する強力な競合LPをピックアップし、以下の切り口で徹底的に分解・比較しています。</p>
+<p data-s3-source="p38">ZERO式売れるLP制作では、広告出稿量が多く自然検索でも上位に位置する<mark class="s1-entry-highlight"><strong>強力な競合LPをピックアップし、以下の切り口で徹底的に分解・比較しています。</strong></mark></p>
 <div class="s3v17-table-wrap"><table id="s3v17-competitor-table" class="s3v17-table" aria-labelledby="s3v17-competitor-frames">
 <colgroup><col style="width:27%"><col style="width:31%"><col style="width:42%"></colgroup>
 <thead><tr>
@@ -1006,30 +1041,30 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 </tr></thead><tbody>
 <tr>
 <th data-s3-source="p43" scope="row" data-label="リサーチ項目">① 訴求軸・ターゲット</th>
-<td data-s3-source="p44" data-label="分析の着眼点">誰に対し、どんな切り口で語りかけているか</td>
+<td data-s3-source="p44" data-label="分析の着眼点"><mark class="s1-entry-highlight"><strong>誰に対し、どんな切り口で語りかけているか</strong></mark></td>
 <td data-s3-source="p45" data-label="明らかにする要素">価格優先、スピード重視、安心・実績重視、手軽さなど</td>
 </tr>
 <tr>
 <th data-s3-source="p46" scope="row" data-label="リサーチ項目">② 提供オファー<span class="s3v17-fullwidth">（</span>CV<span class="s3v17-fullwidth">）</span></th>
-<td data-s3-source="p47" data-label="分析の着眼点">最初の接点として何を提示しているか</td>
+<td data-s3-source="p47" data-label="分析の着眼点"><mark class="s1-entry-highlight"><strong>最初の接点として何を提示しているか</strong></mark></td>
 <td data-s3-source="p48" data-label="明らかにする要素">無料見積、無料診断、資料請求、サンプル提供、返金保証など</td>
 </tr>
 <tr>
 <th data-s3-source="p49" scope="row" data-label="リサーチ項目">③ 信頼性の裏付け</th>
-<td data-s3-source="p50" data-label="分析の着眼点">顧客をどう納得させているか</td>
+<td data-s3-source="p50" data-label="分析の着眼点"><mark class="s1-entry-highlight"><strong>顧客をどう納得させているか</strong></mark></td>
 <td data-s3-source="p51" data-label="明らかにする要素">導入実績社数、業界シェア、権威者の監修、ビフォーアフター事例</td>
 </tr>
 <tr>
 <th data-s3-source="p52" scope="row" data-label="リサーチ項目">④ 競合が語っていない死角</th>
-<td data-s3-source="p53" data-label="分析の着眼点">読者が感じる不満や不安の放置箇所</td>
-<td data-s3-source="p54" data-label="明らかにする要素"><span class="s3v17-fullwidth">「</span>追加費用が不明瞭<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>大企業向けで敷居が高い<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>アフターサポートが不透明<span class="s3v17-fullwidth">」</span></td>
+<td data-s3-source="p53" data-label="分析の着眼点"><mark class="s1-entry-highlight"><strong>読者が感じる不満や不安の放置箇所</strong></mark></td>
+<td data-s3-source="p54" data-label="明らかにする要素"><span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">追加費用が不明瞭</strong><span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>大企業向けで敷居が高い<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">アフターサポートが不透明</strong><span class="s3v17-fullwidth">」</span></td>
 </tr>
 </tbody></table></div>
-<p data-s3-source="p55">競合が強く打ち出している<span class="s3v17-fullwidth">「</span>強み<span class="s3v17-fullwidth">」</span>の裏側には、必ずユーザーが感じる不満や不安<span class="s3v17-fullwidth">（</span>死角<span class="s3v17-fullwidth">）</span>が潜んでいます。</p>
-<p data-s3-source="p56">競合がアピールしている特徴や強みだけでなく、その裏返しにある<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>触れられていない弱点・ユーザーが不安に思っている死角<span class="s3v17-fullwidth">」</span>を特定すること</strong></mark>が、自社が選ばれる最大の突破口になります。</p>
+<p data-s3-source="p55">競合が強く打ち出している<span class="s3v17-fullwidth">「</span>強み<span class="s3v17-fullwidth">」</span>の裏側には、必ず<strong class="lp-reading-emphasis">ユーザーが感じる不満や不安<span class="s3v17-fullwidth">（</span>死角<span class="s3v17-fullwidth">）</span>が潜んでいます。</strong></p>
+<p data-s3-source="p56">競合がアピールしている特徴や強みだけでなく、その裏返しにある<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>触れられていない弱点・ユーザーが不安に思っている死角<span class="s3v17-fullwidth">」</span>を特定すること</strong></mark>が、<strong class="lp-reading-emphasis">自社が選ばれる最大の突破口になります。</strong></p>
 <div class="secrets-closing secrets-closing--text s3v17-closing">
-<p data-s3-source="p57" class="secrets-closing-yellow">競合の戦略を知らずしてWeb広告での勝利はない。</p>
-<p data-s3-source="p58" class="secrets-closing-blue">真似るのではなく、自社が選ばれる条件を徹底的に分析する。</p>
+<p data-s3-source="p57" class="secrets-closing-yellow"><mark class="s1-entry-highlight"><strong>競合の戦略を知らずしてWeb広告での勝利はない。</strong></mark></p>
+<p data-s3-source="p58" class="secrets-closing-blue"><mark class="s1-entry-highlight"><strong>真似るのではなく、自社が選ばれる条件を徹底的に分析する。</strong></mark></p>
 </div>
 </div>
 </section>
@@ -1038,8 +1073,8 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 <div role="group" class="secrets-panel rewrite-copy s3v17-copy" id="secrets-box-265-panel" aria-labelledby="secrets-box-265">
 <h4 id="s3v17-company-context" class="s3v17-heading">顧客ニーズと競合を踏まえ、自社の強みと裏付けを整理する</h4>
 <p data-s3-source="p60">顧客分析と競合分析の結果をもとに実施する自社分析とは、<span class="s3v17-fullwidth">「</span>顧客ニーズと競合の状況を踏まえた上で、<mark class="s1-entry-highlight"><strong>自社が提供できる独自の価値・強み・客観的な裏付け<span class="s3v17-fullwidth">（</span>エビデンス<span class="s3v17-fullwidth">）</span>を再発掘・整理する作業</strong></mark><span class="s3v17-fullwidth">」</span>です。</p>
-<p data-s3-source="p61">自社の思い込みで<span class="s3v17-fullwidth">「</span>ここが自慢の機能だ<span class="s3v17-fullwidth">」</span>と語ることではなく、<span class="s3v17-fullwidth">「</span>競合には真似できず、かつ、ユーザーの深い悩みを確実に解決できる強みは何か<span class="s3v17-fullwidth">」</span>を客観的に棚卸しし、LPで打ち出すべき勝負所<span class="s3v17-fullwidth">（</span>コンセプト<span class="s3v17-fullwidth">）</span>を定めることが本来の目的です。</p>
-<p data-s3-source="p62">ZERO式売れるLP制作では、マインドマップ等を活用して現場のこだわりや当たり前の手厚い対応を可視化し、ユーザーを納得させる客観的な裏付け<span class="s3v17-fullwidth">（</span>エビデンス<span class="s3v17-fullwidth">）</span>を徹底的に洗い出します。</p>
+<p data-s3-source="p61">自社の思い込みで<span class="s3v17-fullwidth">「</span>ここが自慢の機能だ<span class="s3v17-fullwidth">」</span>と語ることではなく、<span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">競合には真似できず、かつ、ユーザーの深い悩みを確実に解決できる強みは何か</strong><span class="s3v17-fullwidth">」</span>を客観的に棚卸しし、LPで打ち出すべき勝負所<span class="s3v17-fullwidth">（</span>コンセプト<span class="s3v17-fullwidth">）</span>を定めることが本来の目的です。</p>
+<p data-s3-source="p62">ZERO式売れるLP制作では、マインドマップ等を活用して現場のこだわりや当たり前の手厚い対応を可視化し、<strong class="lp-reading-emphasis">ユーザーを納得させる客観的な裏付け<span class="s3v17-fullwidth">（</span>エビデンス<span class="s3v17-fullwidth">）</span>を徹底的に洗い出します。</strong></p>
 <figure id="s3v2-mindmap" class="s3a19-figure s3m20-mindmap" aria-labelledby="s3a19-map-title"><p class="s3r20-eyebrow">ホワイトニング商品の例</p>
 <figcaption id="s3a19-map-title">自社の当たり前を、<span>選ばれる理由まで掘り下げる。</span></figcaption>
 <div class="s3m20-canvas"><svg class="s3m20-main-lines" viewBox="0 0 44 300" preserveAspectRatio="none" aria-hidden="true"><path d="M0 150 C25 150 15 50 44 50"/><path d="M0 150 C18 150 26 150 44 150"/><path d="M0 150 C25 150 15 250 44 250"/></svg><div class="s3m20-root"><strong>自社の<br>歯磨きジェル</strong><span>商品・販売・対応を<br>棚卸し</span></div><div class="s3m20-branches"><section class="s3m20-branch"><h5>使い方</h5><div class="s3m20-leaf-group"><svg class="s3m20-leaf-lines" viewBox="0 0 48 300" preserveAspectRatio="none" aria-hidden="true"><path d="M0 150 C18 150 12 50 32 50"/><path d="M0 150 C20 150 28 150 48 150"/><path d="M0 150 C18 150 12 250 32 250"/></svg><dl class="s3m20-leaves"><div><dt>特徴・対応</dt><dd>普段の歯ブラシで使える</dd></div><div class="s3m20-value"><dt>お客様にとっての価値</dt><dd><strong>専用器具を準備・洗浄する負担を減らせる</strong></dd></div><div><dt>裏付けとして確かめること</dt><dd>取扱説明書と、準備から片付けまでの実物の手順</dd></div></dl></div>
@@ -1052,7 +1087,7 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 
 </figure>
 <h4 id="s3v17-company-axis" class="s3v17-heading">競合と同じ基準で比べず、評価軸を再定義する</h4>
-<p data-s3-source="p63">ここで多くの企業が陥る最大の失敗は、<span class="s3v17-fullwidth">「</span>業界トップや大手競合の強みに対し、同じ土俵で真っ向から勝負してしまうこと<span class="s3v17-fullwidth">」</span>です。</p>
+<p data-s3-source="p63">ここで多くの企業が陥る最大の失敗は、<span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">業界トップや大手競合の強みに対し、同じ土俵で真っ向から勝負してしまうこと</strong><span class="s3v17-fullwidth">」</span>です。</p>
 <p data-s3-source="p64">業界トップ企業が<span class="s3v17-fullwidth">「</span>圧倒的な実績数<span class="s3v17-fullwidth">」</span>や<span class="s3v17-fullwidth">「</span>資本力を活かした安さ<span class="s3v17-fullwidth">」</span>を誇っている場合、後発の企業が同じ指標で競い合っても勝ち目はありません。</p>
 <p data-s3-source="p65">重視すべきポイントは、競合の強みを受け流し、<mark class="s1-entry-highlight"><strong>あえて自社に有利な評価軸を設定して勝つ<span class="s3v17-fullwidth">「</span>評価軸の再定義<span class="s3v17-fullwidth">」</span>によるポジショニング戦略</strong></mark>です。</p>
 
@@ -1067,31 +1102,31 @@ document.documentElement.classList.add('zero-has-deferred-backgrounds', 'zero-mo
 </tr></thead><tbody>
 <tr>
 <th data-s3-source="p68" scope="row" data-label="競合の強み">大手<span class="s3v17-fullwidth">（</span>強み 全国対応・マニュアル化<span class="s3v17-fullwidth">）</span></th>
-<td data-s3-source="p69" data-label="懸念">裏のデメリット<span class="s3v17-fullwidth">「</span>担当者が毎回変わり、たらい回しにされる<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>融通が利かない<span class="s3v17-fullwidth">」</span></td>
-<td data-s3-source="p70" data-label="自社のアプローチ">自社のアプローチ <span class="s3v17-fullwidth">「</span>地域密着で即日訪問・担当者の顔が見える柔軟対応<span class="s3v17-fullwidth">」</span></td>
+<td data-s3-source="p69" data-label="懸念">裏のデメリット<span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">担当者が毎回変わり、たらい回しにされる</strong><span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">融通が利かない</strong><span class="s3v17-fullwidth">」</span></td>
+<td data-s3-source="p70" data-label="自社のアプローチ">自社のアプローチ <span class="s3v17-fullwidth">「</span><mark class="s1-entry-highlight"><strong>地域密着で即日訪問・担当者の顔が見える柔軟対応</strong></mark><span class="s3v17-fullwidth">」</span></td>
 </tr>
 <tr>
 <th data-s3-source="p71" scope="row" data-label="競合の強み">低価格<span class="s3v17-fullwidth">（</span>強み とにかく安い<span class="s3v17-fullwidth">）</span></th>
-<td data-s3-source="p72" data-label="懸念">裏のデメリット <span class="s3v17-fullwidth">「</span>サポートが手薄<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>後から追加費用がかかるのではないか<span class="s3v17-fullwidth">」</span></td>
-<td data-s3-source="p73" data-label="自社のアプローチ">自社のアプローチ <span class="s3v17-fullwidth">「</span>安かろう悪かろうを防ぐ、手厚い専任伴走サポート<span class="s3v17-fullwidth">」</span></td>
+<td data-s3-source="p72" data-label="懸念">裏のデメリット <span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">サポートが手薄</strong><span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">後から追加費用がかかるのではないか</strong><span class="s3v17-fullwidth">」</span></td>
+<td data-s3-source="p73" data-label="自社のアプローチ">自社のアプローチ <span class="s3v17-fullwidth">「</span><mark class="s1-entry-highlight"><strong>安かろう悪かろうを防ぐ、手厚い専任伴走サポート</strong></mark><span class="s3v17-fullwidth">」</span></td>
 </tr>
 <tr>
 <th data-s3-source="p74" scope="row" data-label="競合の強み">多機能<span class="s3v17-fullwidth">（</span>強み 何でもできる<span class="s3v17-fullwidth">）</span></th>
-<td data-s3-source="p75" data-label="懸念">裏のデメリット <span class="s3v17-fullwidth">「</span>機能が複雑すぎて使いこなせない<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>設定に挫折する<span class="s3v17-fullwidth">」</span></td>
-<td data-s3-source="p76" data-label="自社のアプローチ">自社のアプローチ <span class="s3v17-fullwidth">「</span>迷わず直感的に使える、現場目線のシンプル設計<span class="s3v17-fullwidth">」</span></td>
+<td data-s3-source="p75" data-label="懸念">裏のデメリット <span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">機能が複雑すぎて使いこなせない</strong><span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span><strong class="lp-reading-emphasis">設定に挫折する</strong><span class="s3v17-fullwidth">」</span></td>
+<td data-s3-source="p76" data-label="自社のアプローチ">自社のアプローチ <span class="s3v17-fullwidth">「</span><mark class="s1-entry-highlight"><strong>迷わず直感的に使える、現場目線のシンプル設計</strong></mark><span class="s3v17-fullwidth">」</span></td>
 </tr>
 </tbody></table></div>
 <p data-s3-source="p77">※単なる言い換えに終わらせず、<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>なぜ自社ならそれが可能なのか<span class="s3v17-fullwidth">」</span>という体制や実績<span class="s3v17-fullwidth">（</span>エビデンス<span class="s3v17-fullwidth">）</span>をLP上で必ずセットで提示します。</strong></mark></p>
 <h5 data-s3-source="p78" class="s3v17-approach">②セグメントを絞り込み<span class="s3v17-fullwidth">「</span>特定の領域で1位<span class="s3v17-fullwidth">」</span>を作る</h5>
-<p data-s3-source="p79">競合が<span class="s3v17-fullwidth">「</span>全業種対応<span class="s3v17-fullwidth">」</span>と幅広く構えているなら、自社は<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>◯◯業界専用<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>年商◯億円規模の企業特化<span class="s3v17-fullwidth">」</span>とターゲットを限定します。</strong></mark><span class="s3v17-fullwidth">「</span>自社のようなケースに最も詳しい専門家<span class="s3v17-fullwidth">」</span>として第一想起を獲得します。</p>
+<p data-s3-source="p79">競合が<span class="s3v17-fullwidth">「</span>全業種対応<span class="s3v17-fullwidth">」</span>と幅広く構えているなら、自社は<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>◯◯業界専用<span class="s3v17-fullwidth">」</span><span class="s3v17-fullwidth">「</span>年商◯億円規模の企業特化<span class="s3v17-fullwidth">」</span>とターゲットを限定します。</strong></mark><strong class="lp-reading-emphasis"><span class="s3v17-fullwidth">「</span>自社のようなケースに最も詳しい専門家<span class="s3v17-fullwidth">」</span>として第一想起を獲得します。</strong></p>
 <h5 data-s3-source="p80" class="s3v17-approach">③比較表で<span class="s3v17-fullwidth">「</span>正しい選び方の新基準<span class="s3v17-fullwidth">」</span>を提示する</h5>
 <p data-s3-source="p81">LP内の他社比較表において、単に自社に◎をつけるのではなく、<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>本当に見るべき評価基準<span class="s3v17-fullwidth">」</span>そのものを提示します。</strong></mark>ユーザーに<span class="s3v17-fullwidth">「</span>そうか、安さだけで選ぶとサポートで後悔するんだ<span class="s3v17-fullwidth">」</span>と気づかせ、自社を選ばざるを得ない心理構造を作ります。</p>
-<p data-s3-source="p82">自社の特徴や商材価値を顧客ニーズ・競合他社の弱点と照らし合わせ、<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>競合の手札が出揃った後だからこそ確実に勝てる独自の切り口<span class="s3v17-fullwidth">（</span>訴求軸<span class="s3v17-fullwidth">）</span><span class="s3v17-fullwidth">」</span>を確定させます。</strong></mark>これがLP全体のブレないコンセプトとなります。</p>
+<p data-s3-source="p82">自社の特徴や商材価値を顧客ニーズ・競合他社の弱点と照らし合わせ、<mark class="s1-entry-highlight"><strong><span class="s3v17-fullwidth">「</span>競合の手札が出揃った後だからこそ確実に勝てる独自の切り口<span class="s3v17-fullwidth">（</span>訴求軸<span class="s3v17-fullwidth">）</span><span class="s3v17-fullwidth">」</span>を確定させます。</strong></mark>これが<strong class="lp-reading-emphasis">LP全体のブレないコンセプトとなります。</strong></p>
 <figure id="s3d18-synthesis" class="s3a19-figure s3a19-synthesis s3s20-compact" aria-labelledby="s3a19-synthesis-title"><p class="s3r20-eyebrow">ホワイトニング商品の例</p><figcaption id="s3a19-synthesis-title">3Cの分析結果から、<span>訴求軸を選ぶ。</span></figcaption><div class="s3a19-three-inputs"><section><h5>顧客</h5><p class="s3a19-input-tag">どんな願い・不安があるか</p><p>口元を気にせず笑いたい。<br><strong>準備が面倒なケアは<br>続かなかった。</strong></p></section><section><h5>競合</h5><p class="s3a19-input-tag">何を訴求し、どう使う商品か</p><p>価格やセット内容を訴求。<br><strong>専用器具の準備・洗浄が<br>必要な商品。</strong></p></section><section><h5>自社</h5><p class="s3a19-input-tag">その不安にどう応えられるか</p><p>普段の歯ブラシで使用。<br><strong>専用器具の準備・洗浄を<br>省ける。</strong></p></section></div><div class="s3a19-merge" aria-hidden="true"><i></i><i></i><i></i></div><div class="s3s20-result-flow"><div class="s3a19-adoption"><span>この訴求を選ぶ理由</span><strong>続かなかった理由に、<br class="s3a19-sp-break">商品の使い方で<span class="s3s20-keep">答えられるから。</span></strong></div><div class="s3s20-flow-arrow" aria-hidden="true"></div><div class="s3a19-axis-output"><span>訴求軸</span><strong>準備・片付けの負担を抑え、<br>毎日の習慣に<span class="s3a19-keep">取り入れやすいケア</span></strong><p>裏付け：競合と自社の使用手順を、同じ条件で比較する。</p></div><div class="s3a19-concept-link s3s20-flow-arrow" aria-hidden="true">↓</div><div class="s3a19-concept"><span>LP全体のコンセプト案</span><strong>毎日の歯磨きに、<br class="s3a19-sp-break">笑顔へのケアを。</strong></div></div><p class="s3a19-conclusion"><strong>顧客の不安・競合との差・自社の根拠を、ひとつの訴求へ。</strong></p></figure>
 
 <div class="secrets-closing secrets-closing--text s3v17-closing">
-<p data-s3-source="p83" class="secrets-closing-yellow">後発企業は業界トップと真っ向勝負を挑んではいけない。</p>
-<p data-s3-source="p84" class="secrets-closing-blue">評価基準を再定義するポジショニングが、独自の勝ち筋をつくる。</p>
+<p data-s3-source="p83" class="secrets-closing-yellow"><mark class="s1-entry-highlight"><strong>後発企業は業界トップと真っ向勝負を挑んではいけない。</strong></mark></p>
+<p data-s3-source="p84" class="secrets-closing-blue"><mark class="s1-entry-highlight"><strong>評価基準を再定義するポジショニングが、独自の勝ち筋をつくる。</strong></mark></p>
 </div>
 </div>
 </section>
